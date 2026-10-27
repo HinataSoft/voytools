@@ -479,8 +479,8 @@ def profile_counts(df: pd.DataFrame, key: str, pages: list[str]) -> np.ndarray:
     lid = df["locus_id"].to_numpy()
     same_prev = np.r_[False, lid[1:] == lid[:-1]]
     same_next = np.r_[lid[:-1] == lid[1:], False]
-    prev = np.where(same_prev, np.r_["", neigh[:-1]], "edge")
-    nxt = np.where(same_next, np.r_[neigh[1:], ""], "edge")
+    prev = np.where(same_prev, np.concatenate([["edge"], neigh[:-1]]), "edge")
+    nxt = np.where(same_next, np.concatenate([neigh[1:], ["edge"]]), "edge")
     elig = df["n_tokens"].to_numpy() >= 2
     rel = df["rel_pos"].to_numpy(float)
     hb = np.minimum((rel * 5).astype(int), 4)
@@ -641,23 +641,25 @@ def cmd_summarize(args) -> None:
                     for t in terms:
                         c = pre + t
                         if is_real:
-                            est, lo, hi, p = real[c], *interval(boot[c])[1:], np.nan
+                            est, lo, hi, p, q = real[c], *interval(boot[c])[1:], np.nan, np.nan
                         else:
                             est, lo, hi = interval(s[c])
                             p = (1 + (s[c] >= real[c]).sum()) / (1 + s[c].notna().sum())
+                            q = (1 + (s[c] <= real[c]).sum()) / (1 + s[c].notna().sum())
                         ols.append({**base, "source": source, "model": {"b": "spec", "h": "same_hand", "s": "spec+size"}[t[0]],
                                     "term": t.split("_", 1)[1], "estimate": est, "lo": lo, "hi": hi,
-                                    "p_null_ge_real": p})
+                                    "p_null_ge_real": p, "p_null_le_real": q})
                     for t in ("contrast", "h_contrast", "contrast_adj", "h_contrast_adj"):
                         c = pre + t
                         if is_real:
-                            est, lo, hi, p = real[c], *interval(boot[c])[1:], np.nan
+                            est, lo, hi, p, q = real[c], *interval(boot[c])[1:], np.nan, np.nan
                         else:
                             est, lo, hi = interval(s[c])
                             p = (1 + (s[c] >= real[c]).sum()) / (1 + s[c].notna().sum())
+                            q = (1 + (s[c] <= real[c]).sum()) / (1 + s[c].notna().sum())
                         contrast.append({**base, "source": source, "pairs": "same_hand" if t.startswith("h_") else "all",
                                          "size_adjusted": t.endswith("_adj"),
-                                         "estimate": est, "lo": lo, "hi": hi, "p_null_ge_real": p,
+                                         "estimate": est, "lo": lo, "hi": hi, "p_null_ge_real": p, "p_null_le_real": q,
                                          "n_reps": 1 if is_real else int(s[c].notna().sum())})
     pd.DataFrame(curve).round(5).to_csv(OUT / "curve.csv", index=False)
     pd.DataFrame(ols).round(5).to_csv(OUT / "ols.csv", index=False)
