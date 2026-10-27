@@ -211,3 +211,70 @@ def test_autocopy_like_matches_the_template_layout(df):
     # default seed: the first tokens of the template
     t4 = N.autocopy_like(df, seed=0)
     assert len(t4) == len(df)
+
+
+# ------------------------------------------------------------------ shuffle_within_position_class
+
+
+def _par_corpus(n_pars=12, seed=0):
+    """Lines with paragraph markup: paragraphs of 5 lines (two per page), 2-10 tokens per line."""
+    rng = np.random.default_rng(seed)
+    vocab = ["qokeedy", "chedy", "shedy", "daiin", "okaiin", "qokain", "ol", "or", "ar", "chol", "dar", "s"]
+    lines = []
+    for _ in range(n_pars):
+        n_lines = 5
+        for k in range(n_lines):
+            toks = rng.choice(vocab, size=int(rng.integers(2, 11))).tolist()
+            if k == 0:
+                toks[0] = "<%>" + toks[0]
+            if k == n_lines - 1:
+                toks[-1] = toks[-1] + "<$>"
+            lines.append(toks)
+    return lines
+
+
+def _default_class(t):
+    place = np.where(t["is_first"], "first", np.where(t["is_last"], "last", "mid"))
+    rel = np.clip((t["rel_pos"].to_numpy(float) * 5).astype(int), 0, 4)
+    lip = np.minimum(t["line_in_par"].to_numpy(float), 2)
+    return [f"{a}{b}{c}" for a, b, c in zip(place, rel, lip)]
+
+
+def test_shuffle_within_position_class_keeps_class_multisets_per_paragraph():
+    t = make_tokens(_par_corpus(), page_size=10)
+    assert t["par_index"].notna().all()
+    sh = N.shuffle_within_position_class(t, seed=1)
+    positional = [c for c in t.columns if c not in N._TOKEN_PROPERTY_COLUMNS]
+    pd.testing.assert_frame_equal(t[positional], sh[positional])
+    key = pd.Series(_default_class(t), index=t.index)
+    for _, a in t.groupby([t["folio"], t["par_index"], key], sort=False):
+        assert Counter(a["token"]) == Counter(sh.loc[a.index, "token"])
+    # line-first and line-last tokens stay first/last; tokens move across lines of a paragraph
+    assert set(sh.loc[t["is_first"], "token"]) <= set(t.loc[t["is_first"], "token"])
+    moved_lines = sum(Counter(a["token"]) != Counter(sh.loc[a.index, "token"]) for _, a in t.groupby("locus_id"))
+    assert moved_lines > 0
+    assert (sh["token"].to_numpy() != t["token"].to_numpy()).any()
+
+
+def test_shuffle_within_position_class_seed_scope_and_custom_classes():
+    t = make_tokens(_par_corpus(seed=2), page_size=10)
+    a = N.shuffle_within_position_class(t, seed=3)
+    pd.testing.assert_frame_equal(a, N.shuffle_within_position_class(t, seed=3))
+    assert (a["token"].to_numpy() != N.shuffle_within_position_class(t, seed=4)["token"].to_numpy()).any()
+    # one class per row: nothing can move
+    same = N.shuffle_within_position_class(t, seed=0, classes=np.arange(len(t)))
+    assert (same["token"].to_numpy() == t["token"].to_numpy()).all()
+    # a single class with scope 'page' is the page shuffle's multiset per page
+    pg = N.shuffle_within_position_class(t, seed=0, scope="page", classes=["x"] * len(t))
+    for _, g in t.groupby("folio"):
+        assert Counter(g["token"]) == Counter(pg.loc[g.index, "token"])
+    # without paragraph markup every line is its own unit
+    nopar = make_tokens(_corpus(), page_size=8)
+    s2 = N.shuffle_within_position_class(nopar, seed=0, rel_bins=1)
+    for _, g in nopar.groupby("locus_id"):
+        assert Counter(g["token"]) == Counter(s2.loc[g.index, "token"])
+    with pytest.raises(ValueError):
+        N.shuffle_within_position_class(t, scope="quire")
+    with pytest.raises(ValueError):
+        N.shuffle_within_position_class(t, classes=["x"])
+    assert len(N.shuffle_within_position_class(t.iloc[:0])) == 0
