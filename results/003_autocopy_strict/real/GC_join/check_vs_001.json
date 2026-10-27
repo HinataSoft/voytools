@@ -1,0 +1,15 @@
+{
+  "share_near": 0.0,
+  "hapax_share": 0.0,
+  "H2": -4.440892098500626e-16,
+  "n_types": 0.0,
+  "mean_len": 0.0,
+  "near_ratio": 0.0,
+  "edge_mi_excess": 2.7755575615628914e-17,
+  "token_mi_excess_share": 1.5612511283791264e-17,
+  "bpe_gap64": 0.0,
+  "pos_jsd_first_mid": 5.551115123125783e-17,
+  "cmi_excess": 1.3877787807814457e-17,
+  "frac_stems_multi_suffix": 0.0,
+  "mean_suffixes_per_stem": 0.0
+}
