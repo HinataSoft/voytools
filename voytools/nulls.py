@@ -3,8 +3,9 @@
 Shuffles
 --------
 :func:`shuffle_within_lines` and :func:`shuffle_within_pages` permute the tokens inside
-each line (locus) or page.  They preserve the vocabulary and its frequencies, the line
-lengths and all positional metadata, and destroy word order.  Everything that is a
+each line (locus) or page; :func:`shuffle_within_position_class` permutes them among the
+tokens of one position class inside a paragraph.  They preserve the vocabulary and its
+frequencies, the line lengths and all positional metadata, and destroy word order.  Everything that is a
 property of the *token itself* (``token``, ``token_raw``, ``len_chars``, ``len_glyphs``,
 the ``has_*`` quality flags and, if present, ``prefix`` / ``stem`` / ``suffix``) moves with
 the token; positional columns stay where they are.  Consequently every statistic that
@@ -69,6 +70,7 @@ __all__ = [
     "DEFAULT_EDIT_TABLE",
     "shuffle_within_lines",
     "shuffle_within_pages",
+    "shuffle_within_position_class",
     "autocopy_generate",
     "as_table",
     "autocopy_like",
@@ -125,6 +127,61 @@ def shuffle_within_lines(df: pd.DataFrame, seed: int = 0) -> pd.DataFrame:
 def shuffle_within_pages(df: pd.DataFrame, seed: int = 0) -> pd.DataFrame:
     """Copy of ``df`` with the tokens permuted inside every page (across its lines)."""
     return _permute_within(df, page_ids(df), seed)
+
+
+def shuffle_within_position_class(
+    df: pd.DataFrame,
+    seed: int = 0,
+    scope: str = "paragraph",
+    rel_bins: int = 5,
+    classes: Sequence[Any] | np.ndarray | None = None,
+) -> pd.DataFrame:
+    """Copy of ``df`` with the tokens permuted among tokens of the same position class.
+
+    The default position class of a token combines
+
+    * its place in the line: ``first`` / ``mid`` / ``last`` (as in
+      :func:`voytools.stats.positional_profile`), or ``single`` for a one-token line;
+    * ``rel_pos`` cut into ``rel_bins`` equal-width bins;
+    * ``line_in_par`` as ``0`` (paragraph-first line), ``1`` or ``2+`` (``2+`` also when unknown).
+
+    Pass ``classes`` (one label per row) to use another definition.  Tokens are exchanged only
+    inside one ``scope`` unit: ``'paragraph'`` (``folio`` + ``par_index``; a line without a
+    paragraph index is its own unit), ``'page'`` or ``'all'``.  The result keeps every positional
+    effect that the class captures (the multiset of tokens in each class of each unit is
+    unchanged) and destroys the order of tokens beyond it.  Tokens alone in their class within a
+    unit cannot move.  Token properties travel with the token as in :func:`shuffle_within_lines`.
+    Deterministic for a given ``seed``; the input must be in text order.
+    """
+    n = len(df)
+    if scope not in ("paragraph", "page", "all"):
+        raise ValueError("scope must be 'paragraph', 'page' or 'all'")
+    if classes is None:
+        if rel_bins < 1:
+            raise ValueError("rel_bins must be >= 1")
+        is_first = df["is_first"].to_numpy(dtype=bool)
+        is_last = df["is_last"].to_numpy(dtype=bool)
+        place = np.where(is_first & is_last, "single", np.where(is_first, "first", np.where(is_last, "last", "mid")))
+        rel = np.clip((df["rel_pos"].to_numpy(dtype=float) * rel_bins).astype(np.int64), 0, rel_bins - 1)
+        lip = pd.to_numeric(df["line_in_par"], errors="coerce").to_numpy(dtype=float)
+        lip_cls = np.where(lip == 0, "0", np.where(lip == 1, "1", "2+"))
+        labels = [f"{a}|{b}|{c}" for a, b, c in zip(place, rel, lip_cls)]
+    else:
+        labels = [str(c) for c in classes]
+        if len(labels) != n:
+            raise ValueError(f"classes has {len(labels)} labels for {n} rows")
+    if scope == "all":
+        unit = np.zeros(n, dtype=np.int64)
+    elif scope == "page":
+        unit = page_ids(df)
+    else:
+        par = df["par_index"].tolist() if "par_index" in df.columns else [None] * n
+        lines = line_ids(df)
+        pages = page_ids(df)
+        unit_keys = [f"p{pg}|{pi}" if not pd.isna(pi) else f"l{li}" for pg, pi, li in zip(pages, par, lines)]
+        unit = pd.factorize(pd.Series(unit_keys, dtype=object))[0]
+    groups = pd.factorize(pd.Series([f"{u}#{c}" for u, c in zip(unit, labels)], dtype=object))[0]
+    return _permute_within(df, np.asarray(groups, dtype=np.int64), seed)
 
 
 # --------------------------------------------------------------------------- #

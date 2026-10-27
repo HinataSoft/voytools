@@ -1,0 +1,45 @@
+{
+  "name": "007_position_vs_content",
+  "params": {
+    "n_sub": 200,
+    "sub_frac": 0.8,
+    "n_null": 30,
+    "interval_scale": 2.0,
+    "terms": [
+      "I_pos",
+      "I_sec",
+      "I_hand",
+      "I_lang",
+      "I_sec_g_pos",
+      "I_pos_g_sec",
+      "I_sec_g_hand",
+      "I_hand_g_sec"
+    ],
+    "units": [
+      "edge",
+      "bpe",
+      "affix",
+      "stem"
+    ],
+    "corrections": [
+      "pc",
+      "pcpage",
+      "pcfine",
+      "line"
+    ]
+  },
+  "flags": {
+    "decomp_I_gt_H": 0,
+    "decomp_corr_lt_-0.01": 0,
+    "mi_corr_lt_-0.01": 0
+  },
+  "files": [
+    "drift.csv",
+    "info_decomposition.csv",
+    "mi_distance.csv",
+    "mi_summary.csv",
+    "runs.csv"
+  ],
+  "created": "2026-10-27 19:56:54",
+  "updated": "2026-10-27 19:56:54"
+}

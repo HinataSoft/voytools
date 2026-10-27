@@ -1,0 +1,82 @@
+{
+  "name": "007_mi",
+  "params": {
+    "command": "mi",
+    "file": "ZL3b-n.txt",
+    "space_policy": "join",
+    "source": "line",
+    "prefixes": [
+      "che",
+      "cho",
+      "ol",
+      "qo",
+      "ch",
+      "d",
+      "l",
+      "o",
+      "s",
+      "sh",
+      "t",
+      "y"
+    ],
+    "suffixes": [
+      "aiin",
+      "ain",
+      "al",
+      "am",
+      "ar",
+      "chy",
+      "dy",
+      "ol",
+      "or",
+      "d",
+      "l",
+      "r",
+      "s",
+      "y"
+    ],
+    "glyph_preset_units": "extended",
+    "n_sub": 200,
+    "sub_frac": 0.8,
+    "n_null": 30,
+    "autocopy_config_003": 86,
+    "dmax": 10,
+    "top_stems": 200,
+    "min_unit": 20,
+    "bpe_merges": 64,
+    "k_bias": {
+      "point": 50,
+      "sub": 10,
+      "null": 10
+    },
+    "k_perm": 200,
+    "k_shuf": {
+      "point": 100,
+      "sub": 20,
+      "null": 20
+    },
+    "corrections": {
+      "pc": [
+        "spec",
+        "paragraph"
+      ],
+      "pcpage": [
+        "spec",
+        "page"
+      ],
+      "pcfine": [
+        "fine",
+        "page"
+      ],
+      "line": [
+        null,
+        "line"
+      ]
+    }
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 19:50:24",
+  "updated": "2026-10-27 19:51:55",
+  "n_seeds_done": 30
+}
