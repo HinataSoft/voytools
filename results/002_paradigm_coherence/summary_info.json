@@ -1,0 +1,115 @@
+{
+  "complete": {
+    "ZL_split_learned": true,
+    "ZL_split_reference": true,
+    "ZL_join_learned": true,
+    "ZL_join_reference": true,
+    "ZL_strict_learned": true,
+    "ZL_strict_reference": true,
+    "GC_split_learned": true,
+    "GC_join_learned": true,
+    "GC_strict_learned": true
+  },
+  "runs_per_combo_source": {
+    "GC_join_learned": {
+      "autocopy_536": 50,
+      "autocopy_573": 50,
+      "real": 1,
+      "real_boot": 200,
+      "shuffle_lines": 5,
+      "slot_indep": 50
+    },
+    "GC_split_learned": {
+      "autocopy_536": 50,
+      "autocopy_573": 50,
+      "real": 1,
+      "real_boot": 200,
+      "shuffle_lines": 5,
+      "slot_indep": 50
+    },
+    "GC_strict_learned": {
+      "autocopy_536": 50,
+      "autocopy_573": 50,
+      "real": 1,
+      "real_boot": 200,
+      "shuffle_lines": 5,
+      "slot_indep": 50
+    },
+    "ZL_join_learned": {
+      "autocopy_536": 50,
+      "autocopy_573": 50,
+      "real": 1,
+      "real_boot": 200,
+      "shuffle_lines": 5,
+      "slot_indep": 50
+    },
+    "ZL_join_reference": {
+      "autocopy_536": 50,
+      "autocopy_573": 50,
+      "real": 1,
+      "real_boot": 200,
+      "shuffle_lines": 5,
+      "slot_indep": 50
+    },
+    "ZL_split_learned": {
+      "autocopy_536": 50,
+      "autocopy_573": 50,
+      "real": 1,
+      "real_boot": 200,
+      "shuffle_lines": 5,
+      "slot_indep": 50
+    },
+    "ZL_split_reference": {
+      "autocopy_536": 50,
+      "autocopy_573": 50,
+      "real": 1,
+      "real_boot": 200,
+      "shuffle_lines": 5,
+      "slot_indep": 50
+    },
+    "ZL_strict_learned": {
+      "autocopy_536": 50,
+      "autocopy_573": 50,
+      "real": 1,
+      "real_boot": 200,
+      "shuffle_lines": 5,
+      "slot_indep": 50
+    },
+    "ZL_strict_reference": {
+      "autocopy_536": 50,
+      "autocopy_573": 50,
+      "real": 1,
+      "real_boot": 200,
+      "shuffle_lines": 5,
+      "slot_indep": 50
+    }
+  },
+  "suspicious_runs_by_source": {
+    "jaccard_suffix_sections == 1": {
+      "real_boot": 32,
+      "slot_indep": 203
+    },
+    "jaccard_suffix_AB == 1": {
+      "autocopy_536": 414,
+      "autocopy_573": 393,
+      "real": 9,
+      "real_boot": 1800,
+      "shuffle_lines": 45,
+      "slot_indep": 450
+    }
+  },
+  "max_abs_diff_shuffle_vs_real": {
+    "n_stems_k": 0.0,
+    "mean_suffixes_per_stem": 0.0,
+    "frac_stems_multi_suffix": 0.0,
+    "H_suffix_given_stem": 0.0,
+    "mi_prefix_suffix": 0.0,
+    "cmi_prefix_suffix_given_stem": 0.0,
+    "jaccard_suffix_sections": 0.0,
+    "jaccard_stem_sections": 0.0,
+    "jaccard_suffix_AB": 0.0,
+    "jaccard_stem_AB": 0.0,
+    "productivity_slope": 0.0,
+    "stem_dispersion": 0.007078171290061941
+  }
+}
