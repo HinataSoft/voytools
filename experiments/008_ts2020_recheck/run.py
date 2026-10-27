@@ -40,7 +40,7 @@ from voytools import load_runs, run_seeds  # noqa: E402
 from voytools._common import glyph_lists  # noqa: E402
 from voytools.experiment import write_meta  # noqa: E402
 from voytools.morphology import apply_bpe, bpe_dependence_curve, decompose_table  # noqa: E402
-from voytools.stats import edge_glyph_mi, positional_profile, vocabulary_summary  # noqa: E402
+from voytools.stats import edge_glyph_mi, jsd, positional_profile, vocabulary_summary  # noqa: E402
 
 OUT = ROOT / "results" / "008_ts2020_recheck"
 R004 = ROOT / "results" / "004_selfcitation_port"
@@ -174,6 +174,7 @@ def cmd_parser(args) -> None:
 
 AB = (("AB_all", "lang", "A", "B"), ("H3_A_vs_B", "lh", "A3", "B3"))
 MIN_CLASS = 20      # a position class enters the conditional JSD only if both groups have >= 20 tokens there
+MIN_STD = 5         # direct standardisation: classes with >= 5 tokens in each group
 N_AB_SUB, N_AB_PERM = 200, 200
 
 
@@ -193,6 +194,24 @@ def ab_values(vals: np.ndarray, key: np.ndarray, a: str, b: str, pc: np.ndarray,
                 num += (na + nb) * E5._jsd_of(vals, ma & cm, mb & cm, support)
                 den += na + nb
         out[name] = num / den if den else float("nan")
+        out[f"{name}_coverage"] = den / tot if tot else float("nan")
+    # direct standardisation: both suffix distributions reweighted to the pooled position-class mix of
+    # the classes present in both groups, then one JSD (no small cells averaged separately)
+    sidx = {v: i for i, v in enumerate(support)}
+    vi = np.asarray([sidx[v] for v in vals])
+    for name, sel in (("std", np.ones(len(vals), dtype=bool)), ("mid_std", mid)):
+        pa, pb = np.zeros(len(support)), np.zeros(len(support))
+        den = 0.0
+        tot = int(((ma | mb) & sel).sum())
+        for c in np.unique(pc[sel]):
+            cm = sel & (pc == c)
+            ia, ib = vi[ma & cm], vi[mb & cm]
+            if len(ia) >= MIN_STD and len(ib) >= MIN_STD:
+                w = len(ia) + len(ib)
+                pa += w * np.bincount(ia, minlength=len(support)) / len(ia)
+                pb += w * np.bincount(ib, minlength=len(support)) / len(ib)
+                den += w
+        out[name] = jsd(pa, pb) if den else float("nan")
         out[f"{name}_coverage"] = den / tot if tot else float("nan")
     return out
 
@@ -469,7 +488,7 @@ def ab_table() -> pd.DataFrame:
         real, sub = runs[runs["source"] == "real"].iloc[0], runs[runs["source"] == "real_sub"]
         perm = pd.read_csv(OUT / "ab" / tag / "perm.csv")
         for name, _, _, _ in AB:
-            for stat in ("all", "cond", "mid", "mid_cond", "first", "last"):
+            for stat in ("all", "cond", "std", "mid", "mid_cond", "mid_std", "first", "last"):
                 c = f"{name}__{stat}"
                 sd_real = 2 * float(sub[c].std(ddof=1))  # delete-d jackknife, as in 005
                 row = {"dataset": tag, "contrast": name, "stat": stat, "jsd": float(real[c]),
@@ -487,7 +506,8 @@ def ab_table() -> pd.DataFrame:
     # ratio conditional / unconditional (raw JSD and excess over the within-scribe permutation)
     for (tag, name), g in out.groupby(["dataset", "contrast"]):
         g = g.set_index("stat")
-        for stat, ref in (("cond", "all"), ("mid_cond", "mid"), ("mid", "all"), ("mid_cond", "all")):
+        for stat, ref in (("cond", "all"), ("std", "all"), ("mid_cond", "mid"), ("mid_std", "mid"), ("mid", "all"),
+                          ("mid_std", "all")):
             for col in ("jsd", "excess_within_hand", "excess_all_pages"):
                 out.loc[(out["dataset"] == tag) & (out["contrast"] == name) & (out["stat"] == stat),
                         f"ratio_{col}_vs_{ref}"] = g.loc[stat, col] / g.loc[ref, col]

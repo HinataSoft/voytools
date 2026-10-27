@@ -73,3 +73,16 @@
 * Vedlejší pozorování v 007 (neopraveno, mimo rozsah): `Context.autocopy` skládá vzorek `as_table(lines, real)`
   s výchozím presetem Eva i pro GC, takže cíl „délka“ u GC autocopy počítá v101 znaky po sbalení `ch/sh/…`.
   Týká se jen řádků `length` autocopy u GC v `results/007_…`.
+* Krok 4: první verze podmíněné JSD (průměr JSD uvnitř 22 tříd) je u písaře 3 (A jen 733 tokenů) silně
+  vychýlená malými buňkami (permutace uvnitř písaře dává 0,10 proti reálu 0,12, pokrytí tříd 46 %). Přidána
+  **přímá standardizace** (`std`, `mid_std`): rozdělení sufixů A i B převážená na společný mix pozičních tříd
+  (třídy s ≥ 5 tokeny v obou skupinách), pak jedna JSD. Krok 4 přepočítán celý (výstup první verze smazán).
+  Hlavní číslo kroku 4 je `std`, průměr uvnitř tříd (`cond`) je uveden pro úplnost.
+* Slepá ulička: `pkill -f "run.py ab"` a `pgrep -f "[0]08…"` zabily vlastní shell (vzor se shodoval s příkazem,
+  stejně jako v 006). Řešeno spouštěcím skriptem `scratch/008/ab.sh`. Parser a `check` tím zasaženy nebyly.
+* Kontrola reprodukce (`check_reproduction.json`): 007 rozklad i MI(d) přesně (max. rozdíl 1·10⁻¹⁶). 006 `real`:
+  matice podobností jsou totožné s `pairs.csv` (rozdíl 0), ale koeficienty se liší až o 0,0015 (K = 0),
+  0,0007 (K = 30) a 0,012 (K = 100, GC; jen R²). Příčiny: (1) 5 stránek bez jazyka (f65v, f67r2, f68v2, f68v3,
+  f70r2) dává pandas 2.3.3 jako `None`, ne `NaN` jako v session 006 → `same_language` se liší u 10 z 20 100
+  dvojic; (2) u K = 100 pořadí kmenů se shodnou četností (v GC se tím mění množina vyřazených kmenů).
+  Nully 008 se srovnávají s reálem ze souborů 006, jak je spec žádá; rozdíl je o řád menší než rozdíly reál–null.
