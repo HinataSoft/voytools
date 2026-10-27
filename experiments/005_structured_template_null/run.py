@@ -4,10 +4,15 @@ Usage (from the repository root; see ``spec.md``)::
 
     # step 1, phase A: 216 configurations x 3 reps on one text, in 4 parallel parts
     python experiments/005_structured_template_null/run.py grid --tag ZL_split --part 0 --parts 4
+    python experiments/005_structured_template_null/run.py grid --ext --tag ZL_split   # extension zipf_s > 1.3
     python experiments/005_structured_template_null/run.py rank-grid          # grid_summary.csv
     # step 1, phase B: 5 best configurations x 50 seeds (+ the best one on the join policy)
     python experiments/005_structured_template_null/run.py phase-b --tag ZL_split --part 0 --parts 2
-    # step 2: ablations / additions of the best configuration, 50 seeds each
+    # (summarize writes best_configs.csv; the join control uses its rank 1)
+    python experiments/005_structured_template_null/run.py phase-b --tag ZL_split --on ZL_join
+    # step 2: alpha x lambda sweep around the best configuration (if the grid has no candidates), then
+    # ablations / additions of the full model, 50 seeds each
+    python experiments/005_structured_template_null/run.py stage2 --tag ZL_split
     python experiments/005_structured_template_null/run.py ablation --tag ZL_split --variant no_topic
     # step 3: robustness of 002 (real 80 % page subsamples, slot null, autocopy_536)
     python experiments/005_structured_template_null/run.py robust --file ZL --source real_sub --seeds 0:100
@@ -688,7 +693,7 @@ def z_table(runs: pd.DataFrame, by: list[str], point: dict[str, pd.Series], metr
 def cmd_summarize(args) -> None:
     points = {t: real_point(t) for t in TAGS}
     runs_all = []
-    for step in ("grid", "phaseB", "ablation"):
+    for step in ("grid", "stage2", "phaseB", "ablation"):
         r = load_dir(OUT / step)
         if not r.empty:
             r.insert(0, "step", step)

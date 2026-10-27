@@ -151,12 +151,13 @@
     ],
     "min_section_tokens": 500
   },
-  "n_runs": 2708,
+  "n_runs": 3190,
   "runs_per_step": {
-    "ablation": 454,
+    "ablation": 900,
     "grid": 1404,
-    "phaseB": 850
+    "phaseB": 850,
+    "stage2": 36
   },
   "created": "2026-10-27 19:46:17",
-  "updated": "2026-10-27 20:42:11"
+  "updated": "2026-10-27 20:52:49"
 }
