@@ -1,0 +1,81 @@
+{
+  "name": "007_decomp",
+  "params": {
+    "command": "decomp",
+    "file": "GC2a-n.txt",
+    "space_policy": "join",
+    "source": "real",
+    "prefixes": [
+      "1c",
+      "1o",
+      "4o",
+      "oe",
+      "1",
+      "2",
+      "8",
+      "9",
+      "e",
+      "k",
+      "o",
+      "s"
+    ],
+    "suffixes": [
+      "79",
+      "89",
+      "ae",
+      "am",
+      "an",
+      "ap",
+      "ay",
+      "oe",
+      "oy",
+      "8",
+      "9",
+      "e",
+      "s",
+      "y"
+    ],
+    "glyph_preset_units": null,
+    "n_sub": 200,
+    "sub_frac": 0.8,
+    "n_null": 30,
+    "autocopy_config_003": 86,
+    "dmax": 10,
+    "top_stems": 200,
+    "min_unit": 20,
+    "bpe_merges": 64,
+    "k_bias": {
+      "point": 50,
+      "sub": 10,
+      "null": 10
+    },
+    "k_perm": 200,
+    "k_shuf": {
+      "point": 100,
+      "sub": 20,
+      "null": 20
+    },
+    "corrections": {
+      "pc": [
+        "spec",
+        "paragraph"
+      ],
+      "pcpage": [
+        "spec",
+        "page"
+      ],
+      "pcfine": [
+        "fine",
+        "page"
+      ],
+      "line": [
+        null,
+        "line"
+      ]
+    }
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 19:09:05",
+  "updated": "2026-10-27 19:09:05"
+}
