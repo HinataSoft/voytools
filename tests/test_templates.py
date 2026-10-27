@@ -161,3 +161,12 @@ def test_with_params_shares_learning_and_matches_learn(real, dfd):
         base.with_params(alpha=1)
     with pytest.raises(ValueError):
         base.with_params(paradigm="x")
+
+
+def test_suffix_by_language_via_with_params(real, dfd):
+    base = ParadigmTemplate.learn(dfd, n_stems=40, paradigm="free")
+    out = base.with_params(suffix_by="language").sample(real, seed=1)
+    direct = ParadigmTemplate.learn(dfd, n_stems=40, paradigm="free", suffix_by="language").sample(real, seed=1)
+    pd.testing.assert_frame_equal(out, direct)
+    with pytest.raises(ValueError):
+        base.with_params(suffix_by="no_such_column").sample(real, seed=1)

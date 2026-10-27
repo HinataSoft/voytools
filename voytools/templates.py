@@ -62,6 +62,8 @@ __all__ = ["ParadigmTemplate", "PARADIGMS", "PREFIX_DEPENDENCE"]
 PARADIGMS = ("fixed", "free")
 PREFIX_DEPENDENCE = ("none", "stem", "suffix", "stem_suffix")
 _MISSING = "?"
+SUFFIX_GROUP_COLUMNS = ("language", "hand")
+"""Columns whose per-group suffix frequencies :meth:`ParadigmTemplate.learn` always stores."""
 
 
 def _freq(values: list[str]) -> tuple[list[str], np.ndarray]:
@@ -118,7 +120,8 @@ class ParadigmTemplate:
         """Learn affix frequencies, paradigm-size distributions and the stem grammar from ``dfd``.
 
         ``dfd`` is a decomposed real table (columns ``prefix``, ``stem``, ``suffix``, plus the
-        ``suffix_by`` column if that option is used).  Unknown parameter names raise ``TypeError``.
+        ``suffix_by`` column if that option is used; per-group suffix frequencies are always stored for
+        the columns in :data:`SUFFIX_GROUP_COLUMNS` that exist, so ``with_params(suffix_by=...)`` works).  Unknown parameter names raise ``TypeError``.
         """
         unknown = set(params) - set(cls.DEFAULTS)
         if unknown:
@@ -136,14 +139,15 @@ class ParadigmTemplate:
         joint = np.zeros((len(si), len(pi)))
         np.add.at(joint, ([si[a] for a in suf], [pi[a] for a in pre]), 1.0)
         st["p_prefix_given_suffix"] = joint / joint.sum(axis=1, keepdims=True)
-        # suffix frequencies per group (suffix_by)
-        if p["suffix_by"] is not None:
-            col = dfd[p["suffix_by"]].astype(object).where(dfd[p["suffix_by"]].notna(), _MISSING).astype(str)
+        # suffix frequencies per group, for suffix_by (also for with_params(suffix_by=...) later)
+        st["suffix_w_by"] = {}
+        for by in dict.fromkeys([c for c in (*SUFFIX_GROUP_COLUMNS, p["suffix_by"]) if c is not None and c in dfd.columns]):
+            col = dfd[by].astype(object).where(dfd[by].notna(), _MISSING).astype(str)
             groups = {}
             for g, sub in pd.Series(suf).groupby(col.to_numpy()):
                 c = Counter(sub.tolist())
                 groups[str(g)] = np.asarray([c.get(a, 0) for a in st["suffixes"]], dtype=float)
-            st["suffix_w_by"] = groups
+            st["suffix_w_by"][by] = groups
         # paradigm sizes of real stems by frequency
         g = pd.DataFrame({"stem": stem, "p": pre, "s": suf}).groupby("stem")
         per = pd.DataFrame({"count": g.size(), "n_suffixes": g["s"].nunique(), "n_prefixes": g["p"].nunique()})
@@ -270,9 +274,11 @@ class ParadigmTemplate:
         suffixes, prefixes = st["suffixes"], st["prefixes"]
         # suffix weights for every token (global or per suffix_by group)
         if p["suffix_by"] is not None:
+            if p["suffix_by"] not in st["suffix_w_by"] or p["suffix_by"] not in template_df.columns:
+                raise ValueError(f"suffix_by={p['suffix_by']!r}: column not in the learning or the layout table")
             grp = template_df[p["suffix_by"]].astype(object).where(template_df[p["suffix_by"]].notna(), _MISSING)
             grp = grp.astype(str).to_numpy()
-            wby = st["suffix_w_by"]
+            wby = st["suffix_w_by"][p["suffix_by"]]
             grp_names = sorted(set(grp.tolist()))
             gw = np.stack([wby.get(g, st["suffix_w"]) for g in grp_names]) + 1e-12
             gcode = np.searchsorted(np.asarray(grp_names), grp)
