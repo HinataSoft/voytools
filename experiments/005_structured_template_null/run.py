@@ -84,11 +84,14 @@ AXES = {
     "page_locality": (0.0, 0.3, 0.6),
 }
 CONFIGS = [dict(zip(AXES, v)) for v in itertools.product(*AXES.values())]
+AXIS_COL = {"n_stems": "inventory_n_stems"}
+CFG_COLS = [AXIS_COL.get(k, k) for k in AXES]
 REPS_A, REPS_B, TOP_B = 3, 50, 5
 # loss as in 001: sum of w * ((x - t) / t) ** 2 over the target metrics
 TARGETS = {"n_types": 1.0, "hapax_share": 1.0, "mean_len": 1.0, "n_stems_k": 2.0, "mean_suffixes_per_stem": 2.0,
            "frac_stems_multi_suffix": 2.0}
 LOSS_LIMIT = 0.15
+STAGE2 = ("jsd_stem_sections", "stem_dispersion")
 # ablations (remove one ingredient) and additions (one more hand-made rule) of the best configuration;
 # ids 1000+ so that they never collide with grid configurations
 VARIANTS = {
@@ -96,6 +99,7 @@ VARIANTS = {
     "no_topic": {"topic_concentration": math.inf},
     "no_locality": {"page_locality": 0.0},
     "no_prefix_link": {"prefix_dependence": "none"},
+    "add_prefix_stem": {"prefix_dependence": "stem"},
     "free_paradigm": {"paradigm": "free"},
     "add_prefix_given_suffix": {"prefix_dependence": "suffix"},
     "add_prefix_stem_suffix": {"prefix_dependence": "stem_suffix"},
@@ -240,7 +244,9 @@ def template(tag: str) -> ParadigmTemplate:
 
 
 def config_columns(cfg: dict) -> dict:
-    return {k: (str(v) if k == "topic_concentration" else v) for k, v in cfg.items()}
+    """Configuration as row columns; ``n_stems`` is stored as ``inventory_n_stems`` because the
+    002 metrics have a column ``n_stems`` (distinct stems after decomposition)."""
+    return {AXIS_COL.get(k, k): (str(v) if k == "topic_concentration" else v) for k, v in cfg.items()}
 
 
 def template_run(tag: str, cfg: dict, config_id: int, rep: int, seed: int) -> dict:
@@ -285,7 +291,13 @@ def cmd_grid(args) -> None:
 def load_dir(path: Path) -> pd.DataFrame:
     frames = [load_runs(p.parent) for p in sorted(path.glob("**/runs.csv"))]
     frames = [f for f in frames if not f.empty]
-    return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
+    out = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
+    if not out.empty and "inventory_n_stems" not in out.columns:
+        # runs written before the column was renamed: their 'n_stems' is the metric; the
+        # parameter follows from the config id (grid and phase B rows only)
+        out.insert(out.columns.get_loc("config_id") + 1, "inventory_n_stems",
+                   [CONFIGS[int(c)]["n_stems"] for c in out["config_id"]])
+    return out
 
 
 def real_point(tag: str) -> pd.Series:
@@ -308,12 +320,12 @@ def add_loss(means: pd.DataFrame, target: pd.Series) -> pd.DataFrame:
 
 
 def config_means(runs: pd.DataFrame) -> pd.DataFrame:
-    num = [c for c in runs.columns if c not in ("tag", "seed", "rep", "config_id", *AXES, "suffix_by", "variant")
+    num = [c for c in runs.columns if c not in ("tag", "seed", "rep", "config_id", *CFG_COLS, "suffix_by", "variant")
            and pd.api.types.is_numeric_dtype(runs[c])]
     g = runs.groupby(["tag", "config_id"], sort=False)
     means = g[num].mean()
     means.insert(0, "n_seeds", g.size())
-    cfg = g[list(AXES)].first()
+    cfg = g[CFG_COLS].first()
     return cfg.join(means).reset_index()
 
 
@@ -325,12 +337,12 @@ def cmd_rank_grid(args) -> None:
         m.insert(2, "rank", np.arange(1, len(m) + 1))
         rows.append(m)
     grid = pd.concat(rows, ignore_index=True)
-    lead = ["tag", "rank", "config_id", *AXES, "n_seeds", "loss", *[f"comp_{f}" for f in TARGETS]]
+    lead = ["tag", "rank", "config_id", *CFG_COLS, "n_seeds", "loss", *[f"comp_{f}" for f in TARGETS]]
     grid = grid[lead + [c for c in grid.columns if c not in lead]]
     grid.to_csv(OUT / "grid_summary.csv", index=False, float_format="%.6g")
     for tag, sub in grid.groupby("tag", sort=False):
         print(tag, f"configs {len(sub)}, runs {int(sub['n_seeds'].sum())}")
-        print(sub.head(8)[["rank", "config_id", *AXES, "loss"] + list(TARGETS)].to_string(index=False))
+        print(sub.head(8)[["rank", "config_id", *CFG_COLS, "loss"] + list(TARGETS)].to_string(index=False))
 
 
 def top_configs(tag: str, n: int = TOP_B) -> list[int]:
@@ -342,9 +354,8 @@ def cmd_phase_b(args) -> None:
     """5 best grid configurations of ``tag`` x 50 seeds; ``--on`` evaluates them on another text."""
     on = args.on or args.tag
     ids = top_configs(args.tag)[: args.top]
-    seeds = [cid * 100 + r for cid in ids for r in range(REPS_B)]
-    seeds = [s for k, s in enumerate(seeds) if k % args.parts == args.part]
-    _warm(on, range(REPS_B))
+    # parts split the reps, so that every process builds the stem pools of its own reps only
+    seeds = [cid * 100 + r for r in range(REPS_B) if r % args.parts == args.part for cid in ids]
 
     def one_run(seed: int) -> dict:
         cid, rep = divmod(seed, 100)
@@ -364,7 +375,7 @@ def best_config(tag: str) -> tuple[int, dict]:
     """Rank 1 of phase B (loss over 50 seeds) for ``tag``."""
     pb = pd.read_csv(OUT / "best_configs.csv")
     r = pb[pb["tag"] == tag].sort_values("rank").iloc[0]
-    cfg = {k: r[k] for k in AXES}
+    cfg = {k: r[AXIS_COL.get(k, k)] for k in AXES}
     cfg["n_stems"] = int(cfg["n_stems"])
     cfg["zipf_s"] = float(cfg["zipf_s"])
     cfg["topic_concentration"] = float(cfg["topic_concentration"])
@@ -372,14 +383,33 @@ def best_config(tag: str) -> tuple[int, dict]:
     return int(r["config_id"]), cfg
 
 
+def ablation_base(tag: str) -> tuple[int, dict, dict]:
+    """Full model for the ablations: phase-B rank 1 (target loss) for the stem inventory, Zipf exponent,
+    paradigm and prefix dependence; topic α and page locality λ, which the targets do not constrain,
+    chosen in the phase-A grid (same other parameters) by the smallest squared relative error on
+    ``jsd_stem_sections`` and ``stem_dispersion`` (the metrics these two ingredients exist for)."""
+    cid0, cfg0 = best_config(tag)
+    grid = pd.read_csv(OUT / "grid_summary.csv")
+    g = grid[grid["tag"] == tag]
+    for k in ("n_stems", "zipf_s", "paradigm", "prefix_dependence"):
+        g = g[g[AXIS_COL.get(k, k)].astype(str) == str(cfg0[k])]
+    t = real_point(tag)
+    err = sum(((g[m] - float(t[m])) / float(t[m])) ** 2 for m in STAGE2)
+    r = g.loc[err.idxmin()]
+    cfg = {**cfg0, "topic_concentration": float(r["topic_concentration"]), "page_locality": float(r["page_locality"])}
+    info = {"phaseB_best_config_id": cid0, "stage2_config_id": int(r["config_id"]), "stage2_error": float(err.min()),
+            "stage2_candidates": int(len(g))}
+    return int(r["config_id"]), cfg, info
+
+
 def cmd_ablation(args) -> None:
-    cid0, cfg0 = best_config(args.tag)
-    variants = args.variant.split(",") if args.variant else list(VARIANTS)
-    _warm(args.tag, range(REPS_B))
+    cid0, cfg0, info = ablation_base(args.tag)
+    print(f"[{args.tag}] full model {cfg0} {info}", flush=True)
+    variants = args.variant.split(",") if args.variant else ablation_variants(cfg0)
     for v in variants:
         cfg = {**cfg0, "suffix_by": None, **VARIANTS[v]}
         vid = VARIANT_ID[v]
-        seeds = [vid * 100 + r for r in range(REPS_B)]
+        seeds = [vid * 100 + r for r in range(REPS_B) if r % args.parts == args.part]
         print(f"[{args.tag}] {v}: {cfg}", flush=True)
 
         def one_run(seed: int, cfg=cfg, v=v) -> dict:
@@ -387,9 +417,15 @@ def cmd_ablation(args) -> None:
             row = template_run(args.tag, cfg, cid0, rep, seed)
             return {"variant": v, **row}
 
-        run_seeds("005_structured_template_null", seeds, one_run, OUT / "ablation" / args.tag / v,
-                  params={"step": "ablation", "tag": args.tag, "variant": v, "best_config_id": cid0,
-                          "config": config_columns(cfg)}, progress=progress)
+        run_seeds("005_structured_template_null", seeds, one_run, OUT / "ablation" / args.tag / v / f"part{args.part}",
+                  params={"step": "ablation", "tag": args.tag, "variant": v, "base_config_id": cid0,
+                          "config": config_columns(cfg), **info}, progress=progress)
+
+
+def ablation_variants(cfg0: dict) -> list[str]:
+    """All variants except the one that would equal the full model (prefix link already off)."""
+    skip = "no_prefix_link" if cfg0["prefix_dependence"] == "none" else "add_prefix_stem"
+    return [v for v in VARIANTS if v != skip]
 
 
 # --------------------------------------------------------------------------- #
@@ -632,7 +668,7 @@ def cmd_summarize(args) -> None:
         best.append(m)
     best = pd.concat(best, ignore_index=True)
     best["meets_criterion1"] = best["loss"] < LOSS_LIMIT
-    lead = ["tag", "rank", "config_id", *AXES, "n_seeds", "loss", "meets_criterion1", *[f"comp_{f}" for f in TARGETS]]
+    lead = ["tag", "rank", "config_id", *CFG_COLS, "n_seeds", "loss", "meets_criterion1", *[f"comp_{f}" for f in TARGETS]]
     best = best[lead + [c for c in best.columns if c not in lead]]
     best.to_csv(OUT / "best_configs.csv", index=False, float_format="%.6g")
 
@@ -847,6 +883,8 @@ def main(argv=None) -> None:
     p.set_defaults(fn=cmd_phase_b)
     p = sub.add_parser("ablation")
     p.add_argument("--tag", required=True, choices=TAGS)
+    p.add_argument("--part", type=int, default=0)
+    p.add_argument("--parts", type=int, default=1)
     p.add_argument("--variant", default="", help="comma-separated subset of " + ",".join(VARIANTS))
     p.set_defaults(fn=cmd_ablation)
     p = sub.add_parser("robust")
