@@ -39,7 +39,7 @@ def source_class(src: str) -> str:
         return "real"
     if src.startswith("ctl:"):
         return "items" if src.endswith("_items") else "control"
-    return "null"
+    return "nullmodel"
 
 
 def load_all() -> pd.DataFrame:
@@ -117,12 +117,12 @@ def _plt():
 def _order(summ: pd.DataFrame) -> list[str]:
     srcs = summ["source"].unique().tolist()
     return ([s for s in R.REAL_TAGS if s in srcs] + sorted(s for s in srcs if s.startswith("ctl:"))
-            + sorted(s for s in srcs if source_class(s) == "null"))
+            + sorted(s for s in srcs if source_class(s) == "nullmodel"))
 
 
 def _bars(ax, summ: pd.DataFrame, metric: str, order: list[str], title: str) -> None:
     sub = summ[summ["metric"] == metric].set_index("source").loc[order]
-    colors = {"real": "#1f4e79", "control": "#7f7f7f", "items": "#c55a11", "null": "#70ad47"}
+    colors = {"real": "#1f4e79", "control": "#7f7f7f", "items": "#c55a11", "nullmodel": "#70ad47"}
     y = np.arange(len(order))
     v = sub["value"].to_numpy(dtype=float)
     err = np.vstack([v - sub["lo"].to_numpy(dtype=float), sub["hi"].to_numpy(dtype=float) - v])

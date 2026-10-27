@@ -51,3 +51,4 @@ Pravidla:
 | 006 | topic_at_distance | zadáno | sdílení kmenů mezi stránkami: sekce vs vzdálenost vs písař; popisky (ok-/ot-) a jejich stopa v textu |
 | 007 | position_vs_content | zadáno | rozklad informace o afixech/kmenech mezi pozici, sekci a písaře; reziduální MI(d) po odečtení pozice |
 | 009 | register_profile | hotovo (7 kontrol + 2 položkové varianty; Voynich nejblíž próze/ts2020, ne katalogu; Voynich-specifické: poziční/sekční vazby afixů, šíře paradigmatu, konec řádku) | registrový profil Voynichu vs skutečné texty (narativ, lékařství, botanika, herbář, katalog) a nully |
+| 010 | line_as_item | hotovo (vazba tokenů končí na konci řádku jako u položek; záhlaví, šablony a vertikální podobnost nad poziční třídu nejsou; ts2020 i posclass reprodukují „token nad“) | řádek jako položka: hranice řádku, záhlaví, šablony, vertikální kopírování |
