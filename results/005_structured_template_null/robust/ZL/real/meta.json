@@ -1,0 +1,215 @@
+{
+  "name": "005_structured_template_null",
+  "params": {
+    "step": "robustness",
+    "file": "ZL",
+    "source": "real",
+    "subsample_frac": 0.8,
+    "variants": {
+      "base": {
+        "prefixes": [
+          "che",
+          "cho",
+          "ol",
+          "qo",
+          "ch",
+          "d",
+          "l",
+          "o",
+          "s",
+          "sh",
+          "t",
+          "y"
+        ],
+        "suffixes": [
+          "aiin",
+          "ain",
+          "al",
+          "am",
+          "ar",
+          "chy",
+          "dy",
+          "ol",
+          "or",
+          "d",
+          "l",
+          "r",
+          "s",
+          "y"
+        ],
+        "order": "prefix_first"
+      },
+      "suf8": {
+        "prefixes": [
+          "che",
+          "cho",
+          "ol",
+          "qo",
+          "ch",
+          "d",
+          "l",
+          "o",
+          "s",
+          "sh",
+          "t",
+          "y"
+        ],
+        "suffixes": [
+          "aiin",
+          "al",
+          "ar",
+          "dy",
+          "l",
+          "r",
+          "s",
+          "y"
+        ],
+        "order": "prefix_first"
+      },
+      "suf20": {
+        "prefixes": [
+          "che",
+          "cho",
+          "ol",
+          "qo",
+          "ch",
+          "d",
+          "l",
+          "o",
+          "s",
+          "sh",
+          "t",
+          "y"
+        ],
+        "suffixes": [
+          "aiin",
+          "ain",
+          "chey",
+          "eey",
+          "ody",
+          "al",
+          "am",
+          "ar",
+          "chy",
+          "dy",
+          "ey",
+          "ky",
+          "ol",
+          "or",
+          "d",
+          "l",
+          "o",
+          "r",
+          "s",
+          "y"
+        ],
+        "order": "prefix_first"
+      },
+      "len3": {
+        "prefixes": [
+          "che",
+          "cho",
+          "ol",
+          "qo",
+          "ch",
+          "d",
+          "l",
+          "o",
+          "s",
+          "sh",
+          "t",
+          "y"
+        ],
+        "suffixes": [
+          "ain",
+          "al",
+          "am",
+          "ar",
+          "chy",
+          "dy",
+          "ol",
+          "or",
+          "d",
+          "l",
+          "o",
+          "r",
+          "s",
+          "y"
+        ],
+        "order": "prefix_first"
+      },
+      "suffix_first": {
+        "prefixes": [
+          "che",
+          "cho",
+          "ol",
+          "qo",
+          "ch",
+          "d",
+          "l",
+          "o",
+          "s",
+          "sh",
+          "t",
+          "y"
+        ],
+        "suffixes": [
+          "aiin",
+          "ain",
+          "al",
+          "am",
+          "ar",
+          "chy",
+          "dy",
+          "ol",
+          "or",
+          "d",
+          "l",
+          "r",
+          "s",
+          "y"
+        ],
+        "order": "suffix_first"
+      },
+      "bpe64": {
+        "bpe": 64,
+        "prefixes": [
+          "ot",
+          "ok",
+          "ch",
+          "qok",
+          "che",
+          "k",
+          "d",
+          "qot",
+          "sh",
+          "t",
+          "s",
+          "l"
+        ],
+        "suffixes": [
+          "y",
+          "ar",
+          "aiin",
+          "ol",
+          "or",
+          "eey",
+          "al",
+          "edy",
+          "ain",
+          "ey",
+          "s",
+          "ody",
+          "chedy",
+          "eedy"
+        ],
+        "order": "prefix_first"
+      }
+    }
+  },
+  "n_seeds_requested": 1,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 19:46:16",
+  "updated": "2026-10-27 19:46:20",
+  "n_seeds_done": 1
+}

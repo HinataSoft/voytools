@@ -84,6 +84,18 @@ AXES = {
     "page_locality": (0.0, 0.3, 0.6),
 }
 CONFIGS = [dict(zip(AXES, v)) for v in itertools.product(*AXES.values())]
+# extension beyond the spec grid (documented deviation): all best configurations of the spec grid
+# sit on its edge zipf_s = 1.3; ids 2000+
+EXT_AXES = {
+    "n_stems": (4000, 8000, 16000),
+    "zipf_s": (1.4, 1.5, 1.7),
+    "paradigm": ("fixed",),
+    "prefix_dependence": ("none", "stem"),
+    "topic_concentration": (math.inf,),
+    "page_locality": (0.0,),
+}
+EXT_BASE = 2000
+CONFIGS += [{}] * (EXT_BASE - len(CONFIGS)) + [dict(zip(EXT_AXES, v)) for v in itertools.product(*EXT_AXES.values())]
 AXIS_COL = {"n_stems": "inventory_n_stems"}
 CFG_COLS = [AXIS_COL.get(k, k) for k in AXES]
 REPS_A, REPS_B, TOP_B = 3, 50, 5
@@ -264,40 +276,40 @@ def progress(i: int, n: int, s: int) -> None:
         print(f"  {i}/{n} seed={s}", flush=True)
 
 
-def _warm(tag: str, reps) -> None:
-    for r in reps:
-        template(tag).stem_pool(r, max(AXES["n_stems"]))
-
-
 # --------------------------------------------------------------------------- #
 # step 1
 # --------------------------------------------------------------------------- #
 
 
 def cmd_grid(args) -> None:
-    ids = [i for i in range(len(CONFIGS)) if i % args.parts == args.part]
+    ids = [i for i in range(len(CONFIGS)) if CONFIGS[i] and (i >= EXT_BASE) == args.ext and i % args.parts == args.part]
     seeds = [i * 100 + r for i in ids for r in range(REPS_A)]
-    _warm(args.tag, range(REPS_A))
 
     def one_run(seed: int) -> dict:
         cid, rep = divmod(seed, 100)
         return template_run(args.tag, CONFIGS[cid], cid, rep, seed)
 
-    run_seeds("005_structured_template_null", seeds, one_run, OUT / "grid" / args.tag / f"part{args.part}",
-              params={"step": "grid", "tag": args.tag, "axes": {k: [str(x) for x in v] for k, v in AXES.items()},
+    sub = f"ext_part{args.part}" if args.ext else f"part{args.part}"
+    axes = EXT_AXES if args.ext else AXES
+    run_seeds("005_structured_template_null", seeds, one_run, OUT / "grid" / args.tag / sub,
+              params={"step": "grid_ext" if args.ext else "grid", "tag": args.tag,
+                      "axes": {k: [str(x) for x in v] for k, v in axes.items()},
                       "reps": REPS_A, "targets": TARGETS}, progress=progress)
 
 
 def load_dir(path: Path) -> pd.DataFrame:
-    frames = [load_runs(p.parent) for p in sorted(path.glob("**/runs.csv"))]
-    frames = [f for f in frames if not f.empty]
-    out = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
-    if not out.empty and "inventory_n_stems" not in out.columns:
-        # runs written before the column was renamed: their 'n_stems' is the metric; the
-        # parameter follows from the config id (grid and phase B rows only)
-        out.insert(out.columns.get_loc("config_id") + 1, "inventory_n_stems",
-                   [CONFIGS[int(c)]["n_stems"] for c in out["config_id"]])
-    return out
+    frames = []
+    for p in sorted(path.glob("**/runs.csv")):
+        f = load_runs(p.parent)
+        if f.empty:
+            continue
+        if "inventory_n_stems" not in f.columns:
+            # runs written before the column was renamed: their 'n_stems' is the metric; the
+            # parameter follows from the config id (grid and phase B rows only)
+            f.insert(f.columns.get_loc("config_id") + 1, "inventory_n_stems",
+                     [CONFIGS[int(c)]["n_stems"] for c in f["config_id"]])
+        frames.append(f)
+    return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
 
 
 def real_point(tag: str) -> pd.Series:
@@ -872,6 +884,7 @@ def main(argv=None) -> None:
     p.add_argument("--tag", required=True, choices=TAGS)
     p.add_argument("--part", type=int, default=0)
     p.add_argument("--parts", type=int, default=1)
+    p.add_argument("--ext", action="store_true", help="the extension grid (zipf_s > 1.3, ids 2000+)")
     p.set_defaults(fn=cmd_grid)
     sub.add_parser("rank-grid").set_defaults(fn=cmd_rank_grid)
     p = sub.add_parser("phase-b")
