@@ -1,0 +1,49 @@
+{
+  "name": "002_paradigm_coherence",
+  "params": {
+    "combo": "GC_join_learned",
+    "file": "GC2a-n.txt",
+    "space_policy": "join",
+    "decomposition": "learned",
+    "source": "real_boot",
+    "n_tokens_real": 34143,
+    "n_dropped_comma": 0,
+    "prefixes": [
+      "1c",
+      "1o",
+      "4o",
+      "oe",
+      "1",
+      "2",
+      "8",
+      "9",
+      "e",
+      "k",
+      "o",
+      "s"
+    ],
+    "suffixes": [
+      "79",
+      "89",
+      "ae",
+      "am",
+      "an",
+      "ap",
+      "ay",
+      "oe",
+      "oy",
+      "8",
+      "9",
+      "e",
+      "s",
+      "y"
+    ],
+    "min_stem_count": 5,
+    "min_inventory_count": 3,
+    "generator": {}
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 15:47:16",
+  "updated": "2026-10-27 15:47:16"
+}
