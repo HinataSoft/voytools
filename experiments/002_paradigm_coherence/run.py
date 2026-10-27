@@ -40,6 +40,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))  # make voytools importable without pip install
 
 from voytools import filter_tokens, load_runs, load_tables, run_seeds  # noqa: E402
+from voytools.experiment import write_meta  # noqa: E402
 from voytools.ivtff import UNCERTAIN_SPACE_MARK  # noqa: E402
 from voytools.morphology import (  # noqa: E402
     decompose_table,
@@ -300,6 +301,12 @@ def cmd_summarize(args) -> None:
                 inv.append(t)
     pd.concat(inv, ignore_index=True).to_csv(OUT / "inventories.csv", index=False, float_format="%.6g")
 
+    write_meta(OUT, "002_paradigm_coherence",
+               params={"combos": COMBOS, "sources": {k: len(v) for k, v in SOURCES.items()},
+                       "autocopy": {k: {a: str(b) for a, b in v.items()} for k, v in ACFG.items()},
+                       "min_stem_count": MIN_STEM, "min_inventory_count": MIN_INV,
+                       "filters": "generic_type=P, clean=True; strict: tokens with ',' dropped"},
+               n_runs=len(runs), parts="parts/<combo>/<source>/ (meta.json of each part has the affix lists)")
     info = checks(runs, effects)
     (OUT / "summary_info.json").write_text(json.dumps(info, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps(info, indent=2, ensure_ascii=False))
@@ -312,16 +319,11 @@ def checks(runs: pd.DataFrame, effects: pd.DataFrame) -> dict:
     expected = {s: len(r) for s, r in SOURCES.items()}
     complete = {c: bool(all(counts.loc[c].get(s, 0) == n for s, n in expected.items())) if c in counts.index else False
                 for c in COMBOS}
-    sus = []
-    for _, r in runs.iterrows():
-        tag = f"{r['combo']}/{r['source']}/{r['seed']}"
-        if r["cmi_excess"] > 1:
-            sus.append(f"{tag}: cmi_excess {r['cmi_excess']:.3f} > 1")
-        for m in ("jaccard_suffix_sections", "jaccard_stem_sections", "jaccard_suffix_AB", "jaccard_stem_AB"):
-            if r[m] in (0.0, 1.0):
-                sus.append(f"{tag}: {m} = {r[m]:g}")
-        if r["stem_dispersion"] > 10:
-            sus.append(f"{tag}: stem_dispersion {r['stem_dispersion']:.2f} > 10")
+    flags = {"cmi_excess > 1": runs["cmi_excess"] > 1, "stem_dispersion > 10": runs["stem_dispersion"] > 10}
+    for m in ("jaccard_suffix_sections", "jaccard_stem_sections", "jaccard_suffix_AB", "jaccard_stem_AB"):
+        flags[f"{m} == 1"] = runs[m] == 1.0
+        flags[f"{m} == 0"] = runs[m] == 0.0
+    sus = {k: runs[v].groupby("source").size().to_dict() for k, v in flags.items() if v.any()}
     real = runs[runs["source"] == "real"].set_index("combo")
     sh = runs[runs["source"] == "shuffle_lines"]
     inv = {}
@@ -329,7 +331,7 @@ def checks(runs: pd.DataFrame, effects: pd.DataFrame) -> dict:
         d = (sh.set_index("combo")[m] - real[m].reindex(sh["combo"]).to_numpy()).abs()
         inv[m] = float(d.max()) if len(d) else float("nan")
     return {"complete": complete, "runs_per_combo_source": counts.to_dict(orient="index"),
-            "n_suspicious": len(sus), "suspicious_examples": sus[:40],
+            "suspicious_runs_by_source": sus,
             "max_abs_diff_shuffle_vs_real": inv}
 
 
@@ -349,11 +351,10 @@ def plot(summary: pd.DataFrame) -> None:
     for ax, m in zip(axes, PLOT):
         for j, s in enumerate(src):
             sub = summary[(summary["metric"] == m)]
-            if s == "real":  # point estimate with the bootstrap interval
-                pt = sub[sub["source"] == "real"].set_index("combo")["mean"].reindex(COMBOS)
-                bt = sub[sub["source"] == "real_boot"].set_index("combo").reindex(COMBOS)
-                lo, hi = bt["q025"], bt["q975"]
-                y = pt
+            if s == "real":  # point estimate +- 1.96 bootstrap SD (percentiles are biased, see notes.md)
+                y = sub[sub["source"] == "real"].set_index("combo")["mean"].reindex(COMBOS)
+                sd = sub[sub["source"] == "real_boot"].set_index("combo")["sd"].reindex(COMBOS)
+                lo, hi = y - 1.96 * sd, y + 1.96 * sd
             else:
                 t = sub[sub["source"] == s].set_index("combo").reindex(COMBOS)
                 y, lo, hi = t["mean"], t["q025"], t["q975"]
@@ -365,7 +366,7 @@ def plot(summary: pd.DataFrame) -> None:
     axes[0].legend(ncol=len(src), fontsize=7, loc="upper center", bbox_to_anchor=(0.5, 1.35))
     axes[-1].set_xticks(x)
     axes[-1].set_xticklabels(COMBOS, rotation=30, ha="right", fontsize=8)
-    fig.suptitle("002: real (bootstrap 95 %) vs null models (2.5-97.5 %)", y=0.995, fontsize=10)
+    fig.suptitle("002: real (point +- 1.96 SD page bootstrap) vs null models (2.5-97.5 %)", y=0.995, fontsize=10)
     fig.tight_layout()
     fig.savefig(OUT / "paradigm.png", dpi=110)
     print(f"wrote {OUT / 'paradigm.png'}")

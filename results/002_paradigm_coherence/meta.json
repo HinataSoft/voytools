@@ -1,0 +1,49 @@
+{
+  "name": "002_paradigm_coherence",
+  "params": {
+    "combos": [
+      "ZL_split_learned",
+      "ZL_split_reference",
+      "ZL_join_learned",
+      "ZL_join_reference",
+      "ZL_strict_learned",
+      "ZL_strict_reference",
+      "GC_split_learned",
+      "GC_join_learned",
+      "GC_strict_learned"
+    ],
+    "sources": {
+      "real": 1,
+      "real_boot": 200,
+      "slot_indep": 50,
+      "autocopy_573": 50,
+      "autocopy_536": 50,
+      "shuffle_lines": 5
+    },
+    "autocopy": {
+      "autocopy_573": {
+        "window": "32",
+        "p_copy_exact": "0.5",
+        "p_new": "0.15",
+        "p_two_edits": "0.5",
+        "recency": "0.0",
+        "edit_type_probs": "(0.4, 0.3, 0.3)"
+      },
+      "autocopy_536": {
+        "window": "32",
+        "p_copy_exact": "0.35",
+        "p_new": "0.15",
+        "p_two_edits": "0.5",
+        "recency": "0.0",
+        "edit_type_probs": "(0.6, 0.2, 0.2)"
+      }
+    },
+    "min_stem_count": 5,
+    "min_inventory_count": 3,
+    "filters": "generic_type=P, clean=True; strict: tokens with ',' dropped"
+  },
+  "n_runs": 3204,
+  "parts": "parts/<combo>/<source>/ (meta.json of each part has the affix lists)",
+  "created": "2026-10-27 15:55:46",
+  "updated": "2026-10-27 15:55:46"
+}

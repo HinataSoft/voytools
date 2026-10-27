@@ -46,4 +46,6 @@
 
 * Pilot ZL strict learned (seedy 0–1): reál cmi_excess 0,078, slot 0,022, autocopy 0,18–0,24;
   stem_dispersion reál 0,46, slot 0,68, autocopy 0,006–0,03.
-* Běh: 3 bloky po 3 kombinacích paralelně (`run.py run --combo ...`), commit + push po bloku.
+* Běh: 3 bloky po 3 kombinacích paralelně (`run.py run --combo ...`), commit + push po bloku; celkem ~20 min.
+* Zjištění: naučené afixové seznamy ZL (split/join/strict) jsou množinově totožné s referenčními → `*_reference` = `*_learned`.
+* Bootstrap typových metrik silně vychýlený (cmi_excess bootstrap [0,133; 0,160] vs bod 0,088); graf i effects používají bod ± 1,96 SD.
