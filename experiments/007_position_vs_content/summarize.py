@@ -18,7 +18,8 @@ import pandas as pd
 from run import (  # noqa: E402  (same folder)
     CORRECTIONS, DMAX, DRIFT_AXES, FILES, N_NULL, N_SUB, OUT, POLICIES, SUB_FRAC, TARGETS, TERMS, UNITS,
 )
-from voytools import load_runs, write_meta  # noqa: E402
+from voytools import load_runs  # noqa: E402
+from voytools.experiment import write_meta  # noqa: E402
 
 SCALE = float(np.sqrt(SUB_FRAC / (1 - SUB_FRAC)))
 TAGS = [f"{k}_{p}" for k in FILES for p in POLICIES]
@@ -76,6 +77,8 @@ def decomposition_table() -> pd.DataFrame:
                 row.update({f"{s}_corr": ns["value"], f"{s}_corr_lo": ns["lo"], f"{s}_corr_hi": ns["hi"],
                             f"{s}_H": float(df[f"{y}__H"].mean()), f"{s}_share": ns["value"] / df[f"{y}__H"].mean(),
                             f"{s}_n": int(df[col].notna().sum())})
+            # the permutation null that can test this term: within-page for positional X, page labels otherwise
+            row["p_perm"] = row["perm_within_page_p"] if term.startswith("I_pos") else row["perm_page_labels_p"]
             row["flag_I_gt_H"] = bool(r["raw"] > r["H"] + 1e-9)
             row["flag_corr_lt_-0.01"] = bool(r["corr"] < -0.01)
             rows.append(row)
