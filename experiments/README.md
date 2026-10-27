@@ -41,5 +41,5 @@ Pravidla:
 
 | # | Název | Stav | Otázka |
 |---|---|---|---|
-| 001 | autocopy_calibration | hotovo (kritérium 1 nesplněno, viz report) | kalibrace autokopírovacího generátoru na ZL; které vlastnosti textu zůstanou nevysvětlené |
+| 001 | autocopy_calibration | zadáno | kalibrace autokopírovacího generátoru na ZL; které vlastnosti textu zůstanou nevysvětlené |
 | 002 | paradigm_coherence | zadáno | chovají se kmeny a afixy jako paradigma, nebo jako šablona? |
