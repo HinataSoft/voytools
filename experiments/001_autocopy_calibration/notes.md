@@ -35,3 +35,11 @@
 
 * Pilot (seed 0, výchozí konfigurace): share_near 0,59, n_types 11 069, H2 3,58. Rohové
   konfigurace mřížky: H2 vždy 3,5–3,65 → H2 bude pravděpodobně neslučitelné s ostatními cíli.
+* Fáze A (4 paralelní procesy, ~1 h): min loss 0,964; H2 v celé mřížce 3,52–3,69; nejlepší
+  konfigurace všechny na okraji mřížky (window 32, p_new 0,15).
+* Diagnostika mimo mřížku (`diag`): bez editací H2 ≈ reál → přebytek H2 tvoří editace; p_new 0,5
+  dá loss ~0,20 s jedinou netrefenou složkou H2. Doplněn `diagfull` (50 seedů, všechny metriky,
+  všechny 4 sady), aby šlo oddělit vliv nekalibrace na necílové metriky: BPE žlab se na ZL srovná,
+  paradigmata a MI/poziční metriky ne.
+* Čekací smyčka `pgrep -f "run.py grid"` našla sama sebe a doběhla až na časový limit (bez vlivu
+  na výpočet); příště čekat na PID.

@@ -12,6 +12,7 @@ Usage (from the repository root; see ``spec.md``)::
     python experiments/001_autocopy_calibration/run.py shuffle --file ZL3b-n.txt --space-policy split
     # outside the grid: p_new / seed vocabulary / no-edit diagnostic for the best config
     python experiments/001_autocopy_calibration/run.py diag
+    python experiments/001_autocopy_calibration/run.py diagfull --file ZL3b-n.txt --space-policy split
     # tables, profile, plot
     python experiments/001_autocopy_calibration/run.py summarize
 
@@ -246,6 +247,26 @@ def cmd_diag(args) -> None:
     print(means.to_string(float_format=lambda x: f"{x:.4g}"))
 
 
+DIAG_FULL = DIAG.index(("first100", 0.5, 0.5))  # best diagnostic point (lowest loss outside the grid)
+
+
+def cmd_diag_full(args) -> None:
+    """All metrics for the best diagnostic point: are non-target misses due to the miscalibration?"""
+    ctx = Context(args.file, args.space_policy)
+    vocab, p_new, pce = DIAG[DIAG_FULL]
+    params = {**config_params(DIAG_BASE), "p_new": p_new, "p_copy_exact": pce}
+
+    def one_run(seed: int) -> dict:
+        df = autocopy_like(ctx.real, allowed_from=ctx.allowed_from, seed=seed, **params)
+        return {"file": ctx.file, "space_policy": ctx.policy, "source": "autocopy_diag", "base_config": DIAG_BASE,
+                "seed_vocab": vocab, "p_new": p_new, "p_copy_exact": pce, **stats_for(df, ctx, seed, True)}
+
+    seeds = [DIAG_FULL * 100 + r for r in range(args.reps)]
+    run_seeds("001_diag_full", seeds, one_run, OUT / "diag_full" / tag_of(args.file, args.space_policy),
+              params={"file": args.file, "space_policy": args.space_policy, **{k: str(v) for k, v in params.items()}},
+              progress=progress)
+
+
 def cmd_shuffle(args) -> None:
     ctx = Context(args.file, args.space_policy)
 
@@ -325,6 +346,7 @@ def cmd_summarize(args) -> None:
         zl_best = int(best_rows[0].iloc[0]["config_id"])
         boot = load_runs(OUT / "real" / tag / "bootstrap")
         shuf = load_runs(OUT / "shuffle" / tag) if (OUT / "shuffle" / tag / "runs.csv").exists() else pd.DataFrame()
+        diag = load_runs(OUT / "diag_full" / tag) if (OUT / "diag_full" / tag / "runs.csv").exists() else pd.DataFrame()
         for m in metrics_b:
             x = float(target[m])
             row = {"dataset": tag, "metric": m, "kind": "target" if m in TARGETS else ("extra" if m in EXTRA else "nontarget")}
@@ -337,6 +359,8 @@ def cmd_summarize(args) -> None:
             sources = [("autocopy_best", runs_b[runs_b["config_id"] == best], best)]
             if best != zl_best:
                 sources.append(("autocopy_zlbest", runs_b[runs_b["config_id"] == zl_best], zl_best))
+            if not diag.empty:
+                sources.append(("autocopy_diag", diag, f"diag:{DIAG_BASE}/p_new={DIAG[DIAG_FULL][1]}"))
             if not shuf.empty:
                 sources.append(("shuffle_lines", shuf, ""))
             for name, r, cid in sources:
@@ -345,7 +369,7 @@ def cmd_summarize(args) -> None:
                 prof.append({**row, "source": name, "config_id": cid, "n": len(v), "mean": v.mean(),
                              "lo": v.quantile(0.025), "hi": v.quantile(0.975), "sd": sd,
                              "interval": "2.5/97.5 % over seeds", "diff_real": x - v.mean(),
-                             "z_real": (x - v.mean()) / sd if sd > 0 else np.nan})
+                             "z_real": (x - v.mean()) / sd if sd > 1e-9 * max(abs(x), 1) else np.nan})
             profile_rows += prof
         summ = runs_b[runs_b["config_id"] == best][metrics_b].describe(percentiles=[0.025, 0.5, 0.975]).T
         summ.insert(0, "dataset", tag)
@@ -379,7 +403,8 @@ def plot_profile(profile: pd.DataFrame) -> None:
         return
     metrics = list(dict.fromkeys(profile["metric"]))
     datasets = list(dict.fromkeys(profile["dataset"]))
-    colors = {"real": "#222222", "autocopy_best": "#d0622c", "autocopy_zlbest": "#e8a33d", "shuffle_lines": "#3a78b5"}
+    colors = {"real": "#222222", "autocopy_best": "#d0622c", "autocopy_zlbest": "#e8a33d",
+              "autocopy_diag": "#8a4fb0", "shuffle_lines": "#3a78b5"}
     ncol = 4
     nrow = int(np.ceil(len(metrics) / ncol))
     fig, axes = plt.subplots(nrow, ncol, figsize=(4 * ncol, 2.6 * nrow))
@@ -389,11 +414,11 @@ def plot_profile(profile: pd.DataFrame) -> None:
         for di, ds in enumerate(datasets):
             d = sub[sub["dataset"] == ds]
             for si, (_, r) in enumerate(d.iterrows()):
-                y = di + 0.18 * si - 0.25
+                y = di + 0.15 * si - 0.3
                 lo, hi = r["lo"], r["hi"]
-                xerr = None if pd.isna(lo) else [[r["mean"] - lo], [hi - r["mean"]]]
+                xerr = None if pd.isna(lo) else [[max(r["mean"] - lo, 0)], [max(hi - r["mean"], 0)]]
                 ax.errorbar(r["mean"], y, xerr=xerr, fmt="o", ms=4, color=colors.get(r["source"], "grey"),
-                            label=r["source"] if (di == 0) else None, capsize=2)
+                            label=r["source"], capsize=2)
         ax.set_yticks(range(len(datasets)))
         ax.set_yticklabels(datasets, fontsize=8)
         ax.set_title(f"{m} ({kind})", fontsize=9, color="#000000" if kind == "target" else "#7a2a00")
@@ -401,9 +426,14 @@ def plot_profile(profile: pd.DataFrame) -> None:
         ax.grid(axis="x", alpha=0.3)
     for ax in list(axes.flat)[len(metrics):]:
         ax.axis("off")
-    handles, labels = axes.flat[0].get_legend_handles_labels()
+    handles, labels = [], []
+    for ax in axes.flat:
+        for h, lab in zip(*ax.get_legend_handles_labels()):
+            if lab not in labels:
+                handles.append(h)
+                labels.append(lab)
     fig.legend(handles, labels, loc="lower right", fontsize=8, frameon=False)
-    fig.suptitle("001: real text vs best auto-copy config vs within-line shuffle (95 % intervals)", fontsize=10)
+    fig.suptitle("001: real text vs auto-copy (best grid config, ZL-best config, diagnostic point) vs within-line shuffle (95 % intervals)", fontsize=10)
     fig.tight_layout()
     fig.savefig(OUT / "profile.png", dpi=110)
     plt.close(fig)
@@ -411,7 +441,7 @@ def plot_profile(profile: pd.DataFrame) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["real", "grid", "phaseB", "shuffle", "diag", "summarize"])
+    ap.add_argument("command", choices=["real", "grid", "phaseB", "shuffle", "diag", "diagfull", "summarize"])
     ap.add_argument("--file", default="ZL3b-n.txt")
     ap.add_argument("--space-policy", default="split", choices=["split", "join", "strict"])
     ap.add_argument("--seeds", default=None, help="encoded seeds config_id*100+rep: 'a:b', 'a:b/chunks:k' or list")
@@ -432,6 +462,9 @@ def main() -> None:
     elif args.command == "diag":
         args.reps = args.reps or 3
         cmd_diag(args)
+    elif args.command == "diagfull":
+        args.reps = args.reps or 50
+        cmd_diag_full(args)
     elif args.command == "real":
         cmd_real(args)
     else:
