@@ -84,16 +84,20 @@ POS_AFFIXES = {
            "suffixes": ["p", "P", "*", "ap", "op"]},
 }
 EVA_POS = {"pre": ["p", "f", "t", "k", "cph", "cfh", "cth", "ckh"], "suf": ["m", "g", "am", "om"]}
-VARIANTS = ("default", "positional", "bpe_mid")
+VARIANTS = ("default", "positional", "bpe_mid", "bpe_mid3")  # bpe_mid3: only tokens with >= 3 BPE units
 PARSER_TERMS = E7.TERMS + (("I_place", "place", None),)
 N_SUB_PARSER = 100
 
 
-def stem_codes(ctx, df: pd.DataFrame, variant: str) -> tuple[dict, dict]:
-    """Stem class (top 200 + <other>) of ``variant`` and descriptive numbers."""
-    if variant == "bpe_mid":
+def stem_codes(ctx, df: pd.DataFrame, variant: str) -> tuple[tuple, dict, np.ndarray | None]:
+    """Stem class (top 200 + <other>) of ``variant``, descriptive numbers and the token mask (bpe_mid3)."""
+    mask = None
+    if variant.startswith("bpe_mid"):
         units = apply_bpe(glyph_lists(df, ctx.gpreset), ctx.merges)
         stem = np.asarray(["".join(u[1:-1]) for u in units], dtype=object)
+        if variant == "bpe_mid3":
+            mask = np.asarray([len(u) >= 3 for u in units])
+            stem = stem[mask]
     else:
         pre, suf = list(ctx.prefixes), list(ctx.suffixes)
         if variant == "positional":
@@ -104,8 +108,9 @@ def stem_codes(ctx, df: pd.DataFrame, variant: str) -> tuple[dict, dict]:
     sc = pd.Series(stem).value_counts()
     top = set(sc.index[:E7.TOP_STEMS])
     info = {"n_stem_types": int(len(sc)), "share_empty_stem": float((stem == "").mean()),
-            "share_top200": float(np.isin(stem, list(top)).mean())}
-    return E7.codes([s if s in top else "<other>" for s in stem]), info
+            "share_top200": float(np.isin(stem, list(top)).mean()),
+            "n_tokens": int(len(stem))}
+    return E7.codes([s if s in top else "<other>" for s in stem]), info, mask
 
 
 def place_codes(df: pd.DataFrame) -> tuple[np.ndarray, int]:
@@ -113,18 +118,21 @@ def place_codes(df: pd.DataFrame) -> tuple[np.ndarray, int]:
     return E7.codes(np.where(f & last, "single", np.where(f, "first", np.where(last, "last", "mid"))))
 
 
-def parser_terms(ys: dict, X: dict, n: int, k_bias: int, seed: int) -> dict:
-    """``E7.decomposition`` for several stem variants (same estimator, shuffle-corrected plug-in MI)."""
+def parser_terms(ys: dict, X: dict, k_bias: int, seed: int) -> dict:
+    """``E7.decomposition`` for several stem variants (same estimator, shuffle-corrected plug-in MI).
+
+    ``ys``: variant -> (stem codes, token mask or None); the mask restricts X to the variant's tokens."""
     rng = np.random.default_rng(seed)
-    zero = np.zeros(n, dtype=np.int64)
-    sh = {z: E7.Shuffler(zero if z is None else X[z]) for z in {t[2] for t in PARSER_TERMS}}
     out = {}
-    for v, y in ys.items():
+    for v, (y, mask) in ys.items():
+        Xv = X if mask is None else {k: x[mask] for k, x in X.items()}
+        zero = np.zeros(len(y), dtype=np.int64)
+        sh = {z: E7.Shuffler(zero if z is None else Xv[z]) for z in {t[2] for t in PARSER_TERMS}}
         out[f"{v}__H"] = E7.H(y)
         for name, xn, zn in PARSER_TERMS:
-            z = None if zn is None else X[zn]
-            raw = E7.cmi(y, X[xn], z)
-            bias = float(np.mean([E7.cmi(y[sh[zn].src(rng)], X[xn], z) for _ in range(k_bias)]))
+            z = None if zn is None else Xv[zn]
+            raw = E7.cmi(y, Xv[xn], z)
+            bias = float(np.mean([E7.cmi(y[sh[zn].src(rng)], Xv[xn], z) for _ in range(k_bias)]))
             out[f"{v}__{name}__corr"] = raw - bias
     return out
 
@@ -132,15 +140,15 @@ def parser_terms(ys: dict, X: dict, n: int, k_bias: int, seed: int) -> dict:
 def cmd_parser(args) -> None:
     ctx = E7.Context(FILES[args.key], "split")
     enc = ctx.encode(ctx.real)
-    ys, info = {}, {}
+    ys, info, masks = {}, {}, {}
     for v in VARIANTS:
-        ys[v], info[v] = stem_codes(ctx, ctx.real, v)
+        ys[v], info[v], masks[v] = stem_codes(ctx, ctx.real, v)
     X = {k: v[0] for k, v in enc["X"].items()}
     X["place"] = place_codes(ctx.real)[0]
     base = OUT / "parser" / ctx.tag
     base.mkdir(parents=True, exist_ok=True)
     if not (base / "point.csv").exists():
-        pt = parser_terms({v: c[0] for v, c in ys.items()}, X, enc["n"], E7.K_BIAS["point"], seed=0)
+        pt = parser_terms({v: (c[0], masks[v]) for v, c in ys.items()}, X, E7.K_BIAS["point"], seed=0)
         pd.DataFrame([{"tag": ctx.tag, "source": "real", **pt,
                        **{f"{v}__{k}": x for v, d in info.items() for k, x in d.items()}}]).to_csv(
             base / "point.csv", index=False)
@@ -148,8 +156,11 @@ def cmd_parser(args) -> None:
     def one(seed: int) -> dict:
         m = E7.page_subsample(enc, seed)
         Xs = {k: v[m] for k, v in X.items()}
-        return {"tag": ctx.tag, "source": "real_sub",
-                **parser_terms({v: c[0][m] for v, c in ys.items()}, Xs, int(m.sum()), E7.K_BIAS["sub"], seed)}
+        sub = {}
+        for v, c in ys.items():  # stem codes of a masked variant are indexed by its own tokens
+            mv = masks[v]
+            sub[v] = (c[0][m], None) if mv is None else (c[0][m[mv]], mv[m])
+        return {"tag": ctx.tag, "source": "real_sub", **parser_terms(sub, Xs, E7.K_BIAS["sub"], seed)}
 
     run_seeds("008_parser", list(range(N_SUB_PARSER)), one, base / "real_sub",
               params={"tag": ctx.tag, "variants": VARIANTS, "positional_affixes": POS_AFFIXES[args.key],
@@ -439,7 +450,8 @@ def parser_table() -> pd.DataFrame:
                              "H": float(point[f"{v}__H"]), "share": float(point[col]) / float(point[f"{v}__H"]),
                              "n_sub": int(sub[col].notna().sum()), "n_stem_types": int(point[f"{v}__n_stem_types"]),
                              "share_empty_stem": float(point[f"{v}__share_empty_stem"]),
-                             "share_top200": float(point[f"{v}__share_top200"])})
+                             "share_top200": float(point[f"{v}__share_top200"]),
+                             "n_tokens": int(point[f"{v}__n_tokens"])})
             # paired differences (same subsample): position minus section, position minus section | hand
             for a, b in (("I_pos", "I_sec"), ("I_pos", "I_sec_g_hand"), ("I_pos_g_sec", "I_sec_g_pos"),
                          ("I_place", "I_sec")):

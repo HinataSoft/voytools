@@ -240,7 +240,7 @@ class Context:
         path = CACHE / self.tag / f"ts_{seed}.txt"
         if path.exists():
             lines = [ln.split(" ") if ln else [] for ln in path.read_text(encoding="utf-8").split("\n")]
-            return as_table(lines, self.real)
+            return as_table(lines, self.real, glyph_preset=self.real.attrs.get("glyph_preset"))
         x = selfcitation_like(self.real, seed=seed, **selfcitation_params())
         lines = x.groupby(line_ids(x), sort=True)["token"].apply(list).tolist()
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -248,10 +248,18 @@ class Context:
         return x
 
     def template(self, seed: int) -> pd.DataFrame:
+        path = CACHE / self.tag / f"tpl_{seed}.txt"
+        if path.exists():
+            lines = [ln.split(" ") if ln else [] for ln in path.read_text(encoding="utf-8").split("\n")]
+            return as_table(lines, self.real, glyph_preset=self.real.attrs.get("glyph_preset"))
         if self._tpl is None:
             dfd = decompose_table(self.real, prefixes=self.prefixes, suffixes=self.suffixes)
             self._tpl = ParadigmTemplate.learn(dfd, **template_config(self.tag.split("_")[0]))
-        return self._tpl.sample(self.real, seed=seed, pool_seed=seed - TPL_SEED0)
+        x = self._tpl.sample(self.real, seed=seed, pool_seed=seed - TPL_SEED0)
+        lines = x.groupby(line_ids(x), sort=True)["token"].apply(list).tolist()
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("\n".join(" ".join(ln) for ln in lines), encoding="utf-8")
+        return x
 
     def corpus(self, source: str, seed: int) -> pd.DataFrame:
         if source == "real":
