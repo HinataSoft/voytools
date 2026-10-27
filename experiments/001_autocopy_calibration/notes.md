@@ -29,7 +29,8 @@
   posunutý.
 * **Rozanova & Temerev tab. 7:** hodnoty nejsou v repu a spec nedovoluje stahovat; v `profile.csv`
   chybí (uvedeno v reportu).
-* **Push:** repo v této session nemá nastavený `origin`; commity jsou jen lokální.
+* **Push:** session dostala repo jako lokální bundle (`clone: from /home/user/.seed.bundle`) bez `origin`;
+  origin doplněn dodatečně (`https://github.com/HinataSoft/voytools`) a větev pushnuta na konci.
 
 ## Průběh
 
