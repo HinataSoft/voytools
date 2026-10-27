@@ -11,6 +11,8 @@ Usage (from the repository root; see ``spec.md``)::
     python experiments/003_autocopy_strict/run.py phaseB --file ZL3b-n.txt --space-policy split
     # grammaticality of the 001 bigram generator (same seeds as 001, so the same samples)
     python experiments/003_autocopy_strict/run.py bigramgram --file ZL3b-n.txt --space-policy split
+    # outside the spec: decomposition of the H2 excess (ZL split)
+    python experiments/003_autocopy_strict/run.py diag
     # tables, profile, plot
     python experiments/003_autocopy_strict/run.py summarize
 
@@ -263,6 +265,40 @@ def cmd_bigramgram(args) -> None:
               params={"file": args.file, "space_policy": args.space_policy, "config_id_001": best}, progress=progress)
 
 
+DIAG = [  # outside the grid: where does the H2 excess come from? (base = best trigram/slot config of phase B)
+    ("no_edits", {"p_copy_exact": 1.0}),
+    ("grammar_words_only", {"p_new": 1.0, "p_copy_exact": 1.0, "new_token_source": "grammar"}),
+    ("seed_vocab_only", {"p_new": 1.0, "p_copy_exact": 1.0, "new_token_source": "seed"}),
+    ("base", {}),
+    ("edits_only_no_copy", {"window": 1, "p_copy_exact": 0.0, "p_new": 1.0, "new_token_source": "seed"}),
+]
+
+
+def cmd_diag(args) -> None:
+    """Out of spec: H2 / types of decomposed generator variants around the phase-B choice (ZL split)."""
+    ctx = Context(args.file, args.space_policy)
+    pb = pd.read_csv(OUT / "phaseB_configs.csv").query("dataset == 'ZL_split'")
+    bases = [int(pb[pb["edit_model"] == em].iloc[0]["config_id"]) for em in AXES["edit_model"]]
+
+    def one_run(seed: int) -> dict:
+        bi, di = divmod(seed // 100, len(DIAG))
+        name, over = DIAG[di]
+        params = {**config_params(bases[bi]), **over}
+        res = stats_for(ctx.generate(params, seed), ctx, seed, False)
+        return {"file": ctx.file, "space_policy": ctx.policy, "base_config": bases[bi], "variant": name,
+                **{k: str(v) for k, v in params.items()}, **res}
+
+    seeds = [i * 100 + r for i in range(len(bases) * len(DIAG)) for r in range(args.reps)]
+    run_seeds("003_diag", seeds, one_run, OUT / "diag" / tag_of(args.file, args.space_policy),
+              params={"bases": bases, "variants": [d[0] for d in DIAG], "reps": args.reps}, progress=progress)
+    runs = load_runs(OUT / "diag" / tag_of(args.file, args.space_policy))
+    keys = ["base_config", "edit_model", "variant"]
+    means = runs.groupby(keys, sort=False)[list(TARGETS) + ["gram_slot", "gram_trigram", "p_unchanged"]].mean()
+    means = add_loss(means, real_point(tag_of(args.file, args.space_policy)))
+    means.to_csv(OUT / "diag_summary.csv", float_format="%.6g")
+    print(means.to_string(float_format=lambda x: f"{x:.4g}"))
+
+
 # --------------------------------------------------------------------------- #
 # summaries
 # --------------------------------------------------------------------------- #
@@ -499,7 +535,7 @@ def plot_profile(profile: pd.DataFrame) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["real", "grid", "rankA", "phaseB", "bigramgram", "summarize"])
+    ap.add_argument("command", choices=["real", "grid", "rankA", "phaseB", "bigramgram", "diag", "summarize"])
     ap.add_argument("--file", default="ZL3b-n.txt")
     ap.add_argument("--space-policy", default="split", choices=["split", "join", "strict"])
     ap.add_argument("--seeds", default=None, help="encoded seeds config_id*100+rep: 'a:b', 'a:b/chunks:k' or list")
@@ -516,6 +552,9 @@ def main() -> None:
     elif args.command == "bigramgram":
         args.reps = args.reps or 5
         cmd_bigramgram(args)
+    elif args.command == "diag":
+        args.reps = args.reps or 3
+        cmd_diag(args)
     elif args.command == "real":
         cmd_real(args)
     elif args.command == "rankA":
