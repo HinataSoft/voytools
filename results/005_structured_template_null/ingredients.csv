@@ -1,0 +1,17 @@
+metric,z_best_ZL_split,z_best_GC_split,best_reproduces,broken_by,fixed_by,absz_max_best,absz_max_no_topic,absz_max_no_locality,absz_max_no_prefix_link,absz_max_add_prefix_stem,absz_max_free_paradigm,absz_max_add_prefix_given_suffix,absz_max_add_prefix_stem_suffix,absz_max_add_suffix_by_language,absz_max_add_all
+n_types,-3.76,-4.73,False,,,4.73,4.81,6.19,,10.76,16.41,2.09,14.89,4.64,14.89
+hapax_share,18.24,12.42,False,,,18.24,12.49,12.83,,32.92,0.35,15.54,36.36,15.33,34.7
+mean_len,0.26,-0.9,True,,,0.9,0.87,0.91,,0.68,1.14,0.91,0.68,0.91,0.68
+n_stems_k,0.3,1.34,True,,,1.34,2.4,4.0,,1.61,0.87,1.44,1.7,1.34,1.84
+mean_suffixes_per_stem,17.13,3.94,False,,,17.13,5.05,3.27,,5.21,20.44,4.59,5.0,4.47,3.95
+frac_stems_multi_suffix,1.38,-0.27,True,,,1.38,0.18,0.86,,0.34,61.83,0.05,0.4,0.03,0.24
+cmi_excess,8.06,2.31,False,,,8.06,2.25,2.14,,0.97,2.58,3.87,4.47,2.28,3.84
+mi_prefix_suffix,106.28,22.59,False,,,106.28,22.11,21.55,,16.96,21.93,2.55,4.35,23.48,3.64
+frac_multi_suffix_5to9,0.49,1.02,True,,,1.02,1.57,0.8,,1.41,39.08,1.53,1.4,0.94,1.66
+H_suffix_given_stem,-23.47,-8.63,False,,,23.47,9.27,9.82,,8.94,13.66,9.21,8.64,10.14,9.36
+stem_dispersion,-1.35,-0.59,True,,,1.35,2.63,18.38,,0.67,1.04,0.57,0.79,0.65,0.67
+jsd_stem_sections,-0.78,-0.89,True,,,0.89,25.62,0.06,,0.31,0.37,0.41,0.28,0.61,0.66
+jsd_suffix_sections,15.78,9.45,False,,,15.78,28.76,9.51,,10.01,9.69,6.63,7.71,2.97,2.89
+jsd_suffix_AB,571.37,164.84,False,,,571.37,428.61,160.73,,154.54,399.96,171.85,225.64,7.14,7.21
+jaccard_stem_sections,5.12,2.16,False,,,5.12,0.04,0.44,,2.43,3.07,2.67,2.14,2.34,2.47
+productivity_slope,-14.09,-6.16,False,,,14.09,6.54,6.57,,6.25,0.23,6.29,6.24,7.03,7.33

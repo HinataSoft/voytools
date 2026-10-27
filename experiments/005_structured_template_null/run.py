@@ -748,8 +748,9 @@ def ingredient_table(abl: pd.DataFrame) -> pd.DataFrame:
                 row[f"z_best_{tag}"] = round(float(piv.loc["best", tag]), 2)
         both = lambda v: all(abs(piv.loc[v, t]) < 3 for t in MAIN_TAGS if t in piv.columns)  # noqa: E731
         row["best_reproduces"] = both("best")
-        row["broken_by"] = ",".join(v for v in VARIANTS if v.startswith(("no_", "free_")) and both("best") and not both(v))
-        row["fixed_by"] = ",".join(v for v in VARIANTS if v.startswith("add_") and not both("best") and both(v))
+        present = [v for v in VARIANTS if v in piv.index and piv.loc[v].notna().all()]
+        row["broken_by"] = ",".join(v for v in present if v.startswith(("no_", "free_")) and both("best") and not both(v))
+        row["fixed_by"] = ",".join(v for v in present if v.startswith("add_") and not both("best") and both(v))
         for v in VARIANTS:
             row[f"absz_max_{v}"] = round(float(piv.loc[v].abs().max()), 2) if v in piv.index else float("nan")
         rows.append(row)
