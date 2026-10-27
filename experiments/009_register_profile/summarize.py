@@ -38,7 +38,7 @@ def source_class(src: str) -> str:
     if src.startswith("ctl:"):
         n = src[4:]
         return "prose" if n in PROSE else "items" if n in ITEMS else "catalogue_prose"
-    return "null"
+    return "shuffle" if src.startswith("line:") else "generator"
 
 
 def group_of(metric: str) -> str:
@@ -50,7 +50,9 @@ def load_all() -> pd.DataFrame:
     for d in sorted((OUT / "runs").iterdir()):
         if (d / "runs.csv").exists():
             frames.append(load_runs(d))
-    return pd.concat(frames, ignore_index=True)
+    runs = pd.concat(frames, ignore_index=True)
+    runs["kind"] = runs["kind"].fillna("null")  # read_csv parses the label 'null' as NA
+    return runs
 
 
 def summarize_source(runs: pd.DataFrame) -> pd.DataFrame:
@@ -134,7 +136,12 @@ def distances(prof: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
 
 
 def lists(prof: pd.DataFrame) -> pd.DataFrame:
-    """(a) inside the range of the real texts, (b) outside real texts and all nulls, (c) outside real, inside a null."""
+    """(a) inside the range of the real texts, (b) outside real texts and all generators, (c) outside real, inside
+    a generator (ts2020, template, auto-copy).
+
+    The within-line shuffle is reported (``in_shuffle``) but does not decide (b)/(c): it is the real text with
+    the token order changed, so every type-level or page-level metric equals the real value by construction.
+    """
     P = prof.set_index(["source", "metric"])
     ctl = [s for s in prof["source"].unique() if s.startswith("ctl:")]
     rows = []
@@ -150,12 +157,14 @@ def lists(prof: pd.DataFrame) -> pd.DataFrame:
             vhi = max(P.loc[(c, m)]["value"] for c in ctl)
             inside_real = lo <= v["value"] <= hi
             in_nulls = [n for n in nulls if P.loc[(n, m)]["lo"] <= v["value"] <= P.loc[(n, m)]["hi"]]
-            lab = "a" if inside_real else ("c" if in_nulls else "b")
+            in_gen = [n for n in in_nulls if not n.startswith("line:")]
+            lab = "a" if inside_real else ("c" if in_gen else "b")
             side = "" if inside_real else ("above" if v["value"] > hi else "below")
             rows.append({"voynich": tag, "metric": m, "group": group_of(m), "value": v["value"], "lo": v["lo"],
                          "hi": v["hi"], "real_min": vlo, "real_max": vhi, "real_lo": lo, "real_hi": hi,
-                         "list": lab, "side": side, "outside_all_nulls": not in_nulls,
-                         "nulls_containing": " ".join(n.split(":")[0] for n in in_nulls)})
+                         "list": lab, "side": side, "outside_all_generators": not in_gen,
+                         "in_shuffle": any(n.startswith("line:") for n in in_nulls),
+                         "generators_containing": " ".join(n.split(":")[0] for n in in_gen)})
     out = pd.DataFrame(rows)
     main = out[out["voynich"].isin(["ZL_split", "GC_split"])].groupby("metric")["list"].agg(
         lambda s: s.iloc[0] if s.nunique() == 1 else "mixed")

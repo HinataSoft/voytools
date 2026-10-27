@@ -1,0 +1,38 @@
+check,source,metric,value,voynich_ZL_split,flag
+hapax_share > 0.9,ctl:caesar_prose,hapax_share,0.5934,0.67599,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:caesar_prose,prefix__I_pos,0.00023216,0.13372,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:caesar_prose,suffix__I_pos,0.00049418,0.047844,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:caesar_prose,stem__I_pos,-0.00069002,0.19147,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:caesar_prose,length__I_pos,-0.00077574,0.023899,False
+hapax_share > 0.9,ctl:celsus_prose,hapax_share,0.56674,0.67599,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:celsus_prose,prefix__I_pos,0.00052108,0.13372,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:celsus_prose,suffix__I_pos,0.00049584,0.047844,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:celsus_prose,stem__I_pos,0.0029156,0.19147,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:celsus_prose,length__I_pos,0.0015913,0.023899,False
+hapax_share > 0.9,ctl:culpeper_items,hapax_share,0.44253,0.67599,False
+hapax_share > 0.9,ctl:culpeper_prose,hapax_share,0.42568,0.67599,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:culpeper_prose,prefix__I_pos,-0.00038578,0.13372,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:culpeper_prose,suffix__I_pos,2.5298e-05,0.047844,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:culpeper_prose,stem__I_pos,0.0013685,0.19147,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:culpeper_prose,length__I_pos,-0.0004657,0.023899,False
+hapax_share > 0.9,ctl:italian_prose,hapax_share,0.59844,0.67599,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:italian_prose,prefix__I_pos,-2.8539e-05,0.13372,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:italian_prose,suffix__I_pos,0.0002236,0.047844,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:italian_prose,stem__I_pos,0.0018791,0.19147,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:italian_prose,length__I_pos,0.00036895,0.023899,False
+hapax_share > 0.9,ctl:linnaeus_items,hapax_share,0.49513,0.67599,False
+hapax_share > 0.9,ctl:linnaeus_prose,hapax_share,0.49641,0.67599,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:linnaeus_prose,prefix__I_pos,0.00047597,0.13372,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:linnaeus_prose,suffix__I_pos,0.00053377,0.047844,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:linnaeus_prose,stem__I_pos,0.0027994,0.19147,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:linnaeus_prose,length__I_pos,0.00048569,0.023899,False
+hapax_share > 0.9,ctl:plinyP_prose,hapax_share,0.66905,0.67599,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:plinyP_prose,prefix__I_pos,0.00069112,0.13372,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:plinyP_prose,suffix__I_pos,-0.0010439,0.047844,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:plinyP_prose,stem__I_pos,-0.002746,0.19147,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:plinyP_prose,length__I_pos,-0.00043404,0.023899,False
+hapax_share > 0.9,ctl:pliny_prose,hapax_share,0.66916,0.67599,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:pliny_prose,prefix__I_pos,0.0002063,0.13372,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:pliny_prose,suffix__I_pos,-0.00019907,0.047844,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:pliny_prose,stem__I_pos,-0.0019674,0.19147,False
+I(Y;pos) of mechanically broken prose > Voynich,ctl:pliny_prose,length__I_pos,0.0003087,0.023899,False
