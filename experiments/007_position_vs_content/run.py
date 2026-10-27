@@ -15,17 +15,28 @@ Usage (from the repository root; see ``spec.md`` and ``notes.md``)::
     python experiments/007_position_vs_content/run.py drift --file ZL3b-n.txt --space-policy split --source real
     # tables, plots
     python experiments/007_position_vs_content/run.py summarize
+    # experiment 008: the canonical copying null (004, config 21) and the 005 template, written elsewhere
+    python experiments/007_position_vs_content/run.py decomp --source selfcitation --out-root results/008_ts2020_recheck/007
 
 Seeds: real subsamples 0..199 (80 % of pages without replacement; the full-text point estimate is
 written separately); null sources 30 seeds.  The auto-copy null is config 86 of experiment 003
 (trigram edits) with the seeds 8600..8629 of 003 phase B, so the samples are the ones of 003; they
 are cached as token lists under ``scratch/`` (gitignored).  Every command is resumable.
+
+Sources added for experiment 008 (``--out-root`` sends their runs elsewhere; the outputs of the
+sources above do not change): ``selfcitation`` = ``selfcitation_like`` with config 21 of 004
+(row ``ts2020_calB`` of ``results/004_selfcitation_port/best_configs.csv``), seeds 2100..2129 (the 004
+phase-B seeds, so the samples are the ones of 004; Eva only, cached like the auto-copy samples);
+``template`` = the full model of 005 (``ParadigmTemplate``, configuration of the ablation ``best``
+of ``{ZL,GC}_split`` in ``results/005_structured_template_null/ablation/``), seeds 100000..100029 with
+``pool_seed = seed - 100000`` (the 005 ablation seeds), learned on the decomposed real text of the set.
 """
 
 from __future__ import annotations
 
 import argparse
 import importlib.util
+import json
 import sys
 import time
 from pathlib import Path
@@ -40,6 +51,8 @@ from voytools import filter_tokens, load_tables, run_seeds, seed_range  # noqa: 
 from voytools._common import glyph_lists, line_ids, page_ids  # noqa: E402
 from voytools.morphology import apply_bpe, decompose_table, learn_bpe  # noqa: E402
 from voytools.nulls import as_table, shuffle_within_lines, shuffle_within_position_class  # noqa: E402
+from voytools.selfcitation import selfcitation_like  # noqa: E402
+from voytools.templates import ParadigmTemplate  # noqa: E402
 
 DATA = ROOT / "data"
 OUT = ROOT / "results" / "007_position_vs_content"
@@ -52,6 +65,12 @@ SUB_FRAC = 0.8         # share of pages per subsample (without replacement)
 N_NULL = 30            # seeds per null source
 AC_CONFIG = 86         # experiment 003, trigram edits
 AC_SEED0 = 8600        # 003 phase-B seeds of config 86: 8600..8649
+TS_BEST = ROOT / "results" / "004_selfcitation_port" / "best_configs.csv"
+TS_ROW = "ts2020_calB"  # config 21, the canonical copying null since 004
+TS_SEED0 = 2100         # 004 phase-B seeds of config 21: 2100..2149
+TPL_ABLATION = ROOT / "results" / "005_structured_template_null" / "ablation"
+TPL_SEED0 = 100_000     # 005 ablation 'best': seed = 1000 * 100 + rep, pool_seed = rep
+NEW_SOURCES = ("selfcitation", "template")  # experiment 008
 DMAX = 10
 TOP_STEMS = 200        # decomposition: stem class = top 200 stems + <other>
 MIN_UNIT = 20          # MI: stems / affix frames with >= 20 occurrences + <other>
@@ -100,6 +119,22 @@ def _load_003():
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
+
+
+def selfcitation_params() -> dict:
+    """``selfcitation_like`` keyword arguments of config 21 (row ``ts2020_calB`` of 004's best_configs.csv)."""
+    r = pd.read_csv(TS_BEST).set_index("source").loc[TS_ROW]
+    return {"p_copy": float(r["p_copy"]), "replace_weights": tuple(float(x) for x in str(r["replace_weights"]).split("/")),
+            "p_same_position": float(r["p_same_position"])}
+
+
+def template_config(key: str) -> dict:
+    """Full 005 template model of the file ``key`` ('ZL'/'GC'): configuration of the split ablation ``best``."""
+    meta = json.loads((TPL_ABLATION / f"{key}_split" / "best" / "part0" / "meta.json").read_text())
+    c = meta["params"]["config"]
+    return {"n_stems": int(c["inventory_n_stems"]), "zipf_s": float(c["zipf_s"]), "paradigm": c["paradigm"],
+            "prefix_dependence": c["prefix_dependence"], "topic_concentration": float(c["topic_concentration"]),
+            "page_locality": float(c["page_locality"]), "suffix_by": c["suffix_by"]}
 
 
 # --------------------------------------------------------------------------- #
@@ -177,6 +212,7 @@ class Context:
         self.prefixes, self.suffixes = d.attrs["prefixes"], d.attrs["suffixes"]
         self.merges = learn_bpe(glyph_lists(self.real, self.gpreset), BPE_MERGES)
         self._ac = None
+        self._tpl = None
 
     # ---- null corpora
     def autocopy(self, seed: int) -> pd.DataFrame:
@@ -198,11 +234,34 @@ class Context:
             pos += n
         return as_table(lines, self.real)
 
+    def selfcitation(self, seed: int) -> pd.DataFrame:
+        if self.gpreset is None:
+            raise ValueError("selfcitation_like generates basic Eva; no null for a non-Eva file")
+        path = CACHE / self.tag / f"ts_{seed}.txt"
+        if path.exists():
+            lines = [ln.split(" ") if ln else [] for ln in path.read_text(encoding="utf-8").split("\n")]
+            return as_table(lines, self.real)
+        x = selfcitation_like(self.real, seed=seed, **selfcitation_params())
+        lines = x.groupby(line_ids(x), sort=True)["token"].apply(list).tolist()
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("\n".join(" ".join(ln) for ln in lines), encoding="utf-8")
+        return x
+
+    def template(self, seed: int) -> pd.DataFrame:
+        if self._tpl is None:
+            dfd = decompose_table(self.real, prefixes=self.prefixes, suffixes=self.suffixes)
+            self._tpl = ParadigmTemplate.learn(dfd, **template_config(self.tag.split("_")[0]))
+        return self._tpl.sample(self.real, seed=seed, pool_seed=seed - TPL_SEED0)
+
     def corpus(self, source: str, seed: int) -> pd.DataFrame:
         if source == "real":
             return self.real
         if source == "autocopy":
             return self.autocopy(seed)
+        if source == "selfcitation":
+            return self.selfcitation(seed)
+        if source == "template":
+            return self.template(seed)
         if source == "posclass":
             return shuffle_within_position_class(self.real, seed=seed)
         if source == "line":
@@ -561,10 +620,16 @@ def cmd_drift(args) -> None:
 
 
 def null_seeds(source: str) -> list[int]:
-    return list(range(AC_SEED0, AC_SEED0 + N_NULL)) if source == "autocopy" else list(range(N_NULL))
+    seed0 = {"autocopy": AC_SEED0, "selfcitation": TS_SEED0, "template": TPL_SEED0}.get(source, 0)
+    return list(range(seed0, seed0 + N_NULL))
 
 
 def params_of(args, ctx: Context, **extra) -> dict:
+    if args.source == "selfcitation":
+        extra = {**extra, "selfcitation_004": {"row": TS_ROW, **{k: (list(v) if isinstance(v, tuple) else v)
+                                                                  for k, v in selfcitation_params().items()}}}
+    if args.source == "template":
+        extra = {**extra, "template_005": template_config(ctx.tag.split("_")[0]), "pool_seed": f"seed - {TPL_SEED0}"}
     return {"command": args.cmd, "file": ctx.file, "space_policy": ctx.policy, "source": args.source,
             "prefixes": ctx.prefixes, "suffixes": ctx.suffixes, "glyph_preset_units": ctx.gpreset,
             "n_sub": N_SUB, "sub_frac": SUB_FRAC, "n_null": N_NULL, "autocopy_config_003": AC_CONFIG,
@@ -585,10 +650,14 @@ def main(argv=None) -> None:
         p = sub.add_parser(name)
         p.add_argument("--file", default="ZL3b-n.txt")
         p.add_argument("--space-policy", default="split", choices=POLICIES)
-        p.add_argument("--source", default="real", choices=("real", "autocopy", "posclass", "line"))
+        p.add_argument("--source", default="real", choices=("real", "autocopy", "posclass", "line") + NEW_SOURCES)
         p.add_argument("--seeds", default=None)
+        p.add_argument("--out-root", default=None, help="write under this folder instead of results/007_...")
     sub.add_parser("summarize")
     args = ap.parse_args(argv)
+    global OUT
+    if getattr(args, "out_root", None):
+        OUT = Path(args.out_root).resolve()
     if args.cmd == "summarize":
         from summarize import summarize  # noqa: E402  (experiments/007_position_vs_content/summarize.py)
 
