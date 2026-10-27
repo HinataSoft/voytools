@@ -49,4 +49,4 @@ Pravidla:
 | 004 | selfcitation_port | zadáno | port generátoru Timm & Schinner (R&T 2026, MIT) jako kanonický kopírovací null; validace proti tab. 7; velikost slovníku jako konfound |
 | 005 | structured_template_null | zadáno | null „strukturovaný umělý jazyk“ s paradigmaty a tématem z konstrukce; kolik ingrediencí potřebuje k napodobení 002; robustnost afixů/parseru; A/B vs písař |
 | 006 | topic_at_distance | zadáno | sdílení kmenů mezi stránkami: sekce vs vzdálenost vs písař; popisky (ok-/ot-) a jejich stopa v textu |
-| 007 | position_vs_content | zadáno | rozklad informace o afixech/kmenech mezi pozici, sekci a písaře; reziduální MI(d) po odečtení pozice |
+| 007 | position_vs_content | hotovo (pozice > sekce i u kmene; sufix nejvíc písař; po odečtení pozice závislost jen d = 1–2, zbytek = složení řádku; nully 004/005 chyběly) | rozklad informace o afixech/kmenech mezi pozici, sekci a písaře; reziduální MI(d) po odečtení pozice |

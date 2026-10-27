@@ -44,3 +44,14 @@
   `line_in_par` (0..4, 5+); I(glyf; bin) korigovaná permutací binů mezi tokeny.
 
 ## Průběh
+* Fáze 0: `shuffle_within_position_class` + test, push (ce3323b). `main` se během session nezměnil
+  (ověřeno `git fetch` při fázi 0 a před PR), rebase nebyl potřeba.
+* Fáze 1 (rozklad): 4 sady × (bod + 200 subsamplů + 30 autocopy), ~25 min na 4 procesech.
+* Fáze 2 (MI(d)): 4 sady × (bod + 200 subsamplů + 3 nully × 30), ~20 min.
+* Fáze 3 (drift): ~3 min. `summarize` → tabulky, `runs.csv` (index běhů), grafy.
+* Slepá ulička: hlídací smyčka `pgrep -f "phase.sh …"` našla sama sebe; opraveno vzorem `[p]hase.sh`.
+* Kontrola konzistence: `cmd_mi` ověřuje (assert), že skupiny míchání v `run.py` dávají přesně
+  `nulls.shuffle_within_position_class` (stejný seed → stejná permutace).
+* Pozorování mimo spec: s korekcí na celé stránce (`pcpage`) vychází „posloupnost“ i u textu
+  míchaného v řádku (plocha 0,06–0,11) – stránková korekce měří i shlukování řádků, proto je
+  primární korekce ze spec (odstavec) a `line`.
