@@ -77,6 +77,18 @@ def _k_by_bin(per_stem: pd.DataFrame, column: str) -> dict[int, np.ndarray]:
     return {int(v): k[b == v] for v in np.unique(b)}
 
 
+def _validate(p: dict[str, Any]) -> None:
+    if p["paradigm"] not in PARADIGMS:
+        raise ValueError(f"paradigm must be one of {PARADIGMS}")
+    if p["prefix_dependence"] not in PREFIX_DEPENDENCE:
+        raise ValueError(f"prefix_dependence must be one of {PREFIX_DEPENDENCE}")
+    if not (0.0 <= float(p["page_locality"]) <= 1.0):
+        raise ValueError("page_locality must be in [0, 1]")
+    if float(p["topic_concentration"]) <= 0:
+        raise ValueError("topic_concentration must be > 0 (inf = no topic)")
+    p["n_stems"] = int(p["n_stems"])
+
+
 class ParadigmTemplate:
     """Generator of a meaningless structured text (see the module docstring).
 
@@ -112,15 +124,7 @@ class ParadigmTemplate:
         if unknown:
             raise TypeError(f"unknown template parameters {sorted(unknown)}")
         p = {**cls.DEFAULTS, **params}
-        if p["paradigm"] not in PARADIGMS:
-            raise ValueError(f"paradigm must be one of {PARADIGMS}")
-        if p["prefix_dependence"] not in PREFIX_DEPENDENCE:
-            raise ValueError(f"prefix_dependence must be one of {PREFIX_DEPENDENCE}")
-        if not (0.0 <= float(p["page_locality"]) <= 1.0):
-            raise ValueError("page_locality must be in [0, 1]")
-        if float(p["topic_concentration"]) <= 0:
-            raise ValueError("topic_concentration must be > 0 (inf = no topic)")
-        p["n_stems"] = int(p["n_stems"])
+        _validate(p)
         preset = resolve_preset(dfd, "auto")
         pre, stem, suf = (dfd[c].astype(str).tolist() for c in ("prefix", "stem", "suffix"))
         st: dict[str, Any] = {"preset": preset}
@@ -150,6 +154,18 @@ class ParadigmTemplate:
         g_tok = learn_word_grammar(stem, preset)
         g_type = learn_word_grammar(sorted(set(stem)), preset)
         return cls(st, (g_tok, g_type), p)
+
+    def with_params(self, **params: Any) -> "ParadigmTemplate":
+        """A copy with some parameters changed, sharing the learned statistics, the grammars and
+        the stem-pool cache (cheap; used to run a parameter grid on one learned template)."""
+        unknown = set(params) - set(self.DEFAULTS)
+        if unknown:
+            raise TypeError(f"unknown template parameters {sorted(unknown)}")
+        p = {**self.params, **params}
+        _validate(p)
+        out = ParadigmTemplate(self.stats, self.grammars, p)
+        out._pools = self._pools
+        return out
 
     # ------------------------------------------------------------------ artificial stems
 

@@ -149,3 +149,15 @@ def test_free_paradigm_cmi_excess_like_slot_null(zl_tables):
     cm_r = paradigm_metrics(dfd, seed=0).summary
     assert abs(cm_t["cmi_excess"] - cm_s["cmi_excess"]) < 0.025
     assert cm_t["cmi_excess"] < cm_r["cmi_excess"] - 0.03
+
+
+def test_with_params_shares_learning_and_matches_learn(real, dfd):
+    base = ParadigmTemplate.learn(dfd, n_stems=40)
+    t = base.with_params(page_locality=0.5, prefix_dependence="suffix")
+    direct = ParadigmTemplate.learn(dfd, n_stems=40, page_locality=0.5, prefix_dependence="suffix")
+    pd.testing.assert_frame_equal(t.sample(real, seed=11), direct.sample(real, seed=11))
+    assert base.params["page_locality"] == 0.0 and t.stats is base.stats
+    with pytest.raises(TypeError):
+        base.with_params(alpha=1)
+    with pytest.raises(ValueError):
+        base.with_params(paradigm="x")
