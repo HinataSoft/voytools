@@ -11,6 +11,10 @@ Usage (from the repository root; see ``spec.md``)::
     python experiments/006_topic_at_distance/run.py okot --combo ZL_split
     # merge, curve.csv, ols.csv, contrast.csv, curve.png, labels.png
     python experiments/006_topic_at_distance/run.py summarize
+    # outside the spec: pairs.csv, v101 initial classes, sensitivity to the T / C / A pages
+    python experiments/006_topic_at_distance/run.py pairs
+    python experiments/006_topic_at_distance/run.py initials
+    python experiments/006_topic_at_distance/run.py sections
 
 Combinations: {ZL3b, GC2a} x {split, join}.  Sources of the page part (``seed`` = repetition):
 
@@ -141,7 +145,7 @@ BIN_NAMES = [col(b) for b in distance_bins(np.asarray(DISTANCE_BIN_EDGES))]
 class Context:
     """Real text of one combination, page metadata, pair arrays and affix lists."""
 
-    def __init__(self, combo: str, with_grammar: bool = False):
+    def __init__(self, combo: str, with_grammar: bool = False, drop_sections: tuple = ()):
         self.combo = combo
         self.key, self.policy = combo.split("_")
         self.file = FILES[self.key]
@@ -154,7 +158,9 @@ class Context:
         order = pd.unique(tables.tokens["folio"].to_numpy())
         rank = {p: i for i, p in enumerate(order)}
         size = self.real.groupby("folio", sort=False).size()
-        self.pages = [p for p in pd.unique(self.real["folio"].to_numpy()) if size[p] >= MIN_TOKENS]
+        sec_of = self.real.groupby("folio", sort=False)["illustration"].first().astype(str)
+        self.pages = [p for p in pd.unique(self.real["folio"].to_numpy())
+                      if size[p] >= MIN_TOKENS and sec_of[p] not in drop_sections]
         meta = self.real.groupby("folio", sort=False)[["illustration", "language", "hand"]].first().loc[self.pages]
         self.meta = meta.assign(rank=[rank[p] for p in self.pages])
         n = len(self.pages)
@@ -326,6 +332,55 @@ def cmd_pages(args) -> None:
             params["seed_offset"] = 10_000
         run_seeds(f"006_{args.combo}_{source}", seeds, make_runner(ctx, source, real_sims, ac),
                   parts / source, params=params, progress=progress)
+
+
+SECTION_DROPS = {"none": (), "T": ("T",), "T_C_A": ("T", "C", "A")}
+SENS_TERMS = ["contrast", "contrast_adj", "h_contrast", "s_log_dist", "s_same_section", "s_same_language",
+              "s_same_hand"]
+
+
+def cmd_sections(args) -> None:
+    """sensitivity_sections.csv: key numbers without the text-only (T) or also C/A pages (outside the spec).
+
+    Pages whose illustration code is ``T`` lie inside other sections (e.g. f76r in the bio quires), so
+    they inflate "other section, near" pairs.  Real text with page bootstrap, the three permutation
+    nulls and the auto-copy null (same samples as ``pages``: seeds 10000+); cosine and Jaccard, all K.
+    """
+    rows = []
+    srcs = ("real", "real_boot", "perm_global", "perm_section", "perm_hand", "autocopy_86")
+    ac = autocopy_params()
+    combos = COMBOS if args.combo == "all" else [args.combo]
+    for combo in combos:
+        for name, drop in SECTION_DROPS.items():
+            ctx = Context(combo, with_grammar=True, drop_sections=drop)
+            sims = ctx.similarity(ctx.real_d)
+            res = {src: [make_runner(ctx, src, sims, ac)(sd) for sd in SOURCES[src]] for src in srcs}
+            for m in METRICS:
+                for k in KS:
+                    for t in SENS_TERMS:
+                        c = f"{m}_k{k}_{t}"
+                        real = res["real"][0][c]
+                        boot = pd.Series([r[c] for r in res["real_boot"]], dtype=float)
+                        row = {**ctx.columns(), "dropped": name, "n_pages": ctx.n, "metric": m, "K": k, "term": t,
+                               "real": real, "lo": boot.quantile(0.025), "hi": boot.quantile(0.975)}
+                        for src in srcs[2:]:
+                            v = pd.Series([r[c] for r in res[src]], dtype=float)
+                            row[f"{src}_mean"] = v.mean()
+                            row[f"{src}_p_le"] = (1 + (v <= real).sum()) / (1 + v.notna().sum())
+                            row[f"{src}_p_ge"] = (1 + (v >= real).sum()) / (1 + v.notna().sum())
+                        rows.append(row)
+            print(f"sections {combo} {name}: {ctx.n} pages", flush=True)
+    out = pd.DataFrame(rows).round(5)
+    for combo, sub in out.groupby("combo", sort=False):
+        sub.to_csv(OUT / "parts" / combo / "sensitivity_sections.csv", index=False)
+    merge_sections()
+
+
+def merge_sections() -> None:
+    parts = [OUT / "parts" / c / "sensitivity_sections.csv" for c in COMBOS]
+    frames = [pd.read_csv(p) for p in parts if p.exists()]
+    if frames:
+        pd.concat(frames, ignore_index=True).to_csv(OUT / "sensitivity_sections.csv", index=False)
 
 
 def cmd_pairs(args) -> None:
@@ -671,6 +726,7 @@ def cmd_summarize(args) -> None:
             stems.append(pd.read_csv(p).assign(combo=combo))
     if stems:
         pd.concat(stems, ignore_index=True).to_csv(OUT / "function_stems.csv", index=False)
+    merge_sections()
     plot_curve(pd.DataFrame(curve))
     if (OUT / "labels.csv").exists():
         plot_labels(pd.read_csv(OUT / "labels.csv"))
@@ -738,7 +794,7 @@ def plot_labels(lab: pd.DataFrame) -> None:
         ax.grid(axis="y", alpha=0.3)
         ax.spines[["top", "right"]].set_visible(False)
     for ax in axes[:, 0]:
-        ax.set_ylabel(f"share of label stems in P text of same page (K={MAIN_K})")
+        ax.set_ylabel(f"label stem in P text of same page, K={MAIN_K}")
     h, lab_ = axes[0, 0].get_legend_handles_labels()
     fig.legend(h, lab_, loc="lower center", ncol=2, fontsize=8, frameon=False)
     fig.tight_layout(rect=(0, 0.06, 1, 1))
@@ -757,11 +813,14 @@ def main(argv=None) -> None:
         q = sub.add_parser(name)
         q.add_argument("--combo", default="all", choices=COMBOS + ["all"])
     sub.add_parser("pairs")
+    q = sub.add_parser("sections")
+    q.add_argument("--combo", default="all", choices=COMBOS + ["all"])
     sub.add_parser("initials")
     sub.add_parser("summarize")
     args = ap.parse_args(argv)
     {"pages": cmd_pages, "pairs": cmd_pairs, "labels": cmd_labels, "okot": cmd_okot,
-     "initials": cmd_initials, "summarize": cmd_summarize}[args.cmd](args)
+     "initials": cmd_initials, "summarize": cmd_summarize,
+     "sections": cmd_sections}[args.cmd](args)
 
 
 if __name__ == "__main__":
