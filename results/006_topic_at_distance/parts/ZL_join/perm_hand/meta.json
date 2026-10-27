@@ -1,0 +1,49 @@
+{
+  "name": "006_ZL_join_perm_hand",
+  "params": {
+    "combo": "ZL_join",
+    "source": "perm_hand",
+    "min_tokens": 40,
+    "Ks": [
+      0,
+      30,
+      100
+    ],
+    "prefixes": [
+      "che",
+      "cho",
+      "ol",
+      "qo",
+      "ch",
+      "d",
+      "l",
+      "o",
+      "s",
+      "sh",
+      "t",
+      "y"
+    ],
+    "suffixes": [
+      "aiin",
+      "ain",
+      "al",
+      "am",
+      "ar",
+      "chy",
+      "dy",
+      "ol",
+      "or",
+      "d",
+      "l",
+      "r",
+      "s",
+      "y"
+    ],
+    "n_pages": 200
+  },
+  "n_seeds_requested": 100,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 19:05:54",
+  "updated": "2026-10-27 19:06:03",
+  "n_seeds_done": 100
+}
