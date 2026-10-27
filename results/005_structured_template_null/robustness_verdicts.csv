@@ -1,0 +1,13 @@
+file,variant,i_cmi_between_slot_and_autocopy,i_paradigm_between,i_mi_above_both,ii_jaccard_gap_positive,ii_jsd_stem_between,ii_jsd_suffix_above_slot,iii_dispersion_between
+ZL,base,True,True,True,True,True,True,True
+ZL,suf8,True,True,True,True,True,True,True
+ZL,suf20,True,True,True,True,True,True,True
+ZL,len3,True,True,True,True,True,True,True
+ZL,suffix_first,True,True,True,True,True,True,True
+ZL,bpe64,True,True,True,True,True,True,True
+GC,base,True,True,True,True,True,True,True
+GC,suf8,True,True,True,True,True,True,True
+GC,suf20,True,True,True,True,True,True,True
+GC,len3,True,True,True,True,True,True,True
+GC,suffix_first,True,True,True,True,True,True,True
+GC,bpe64,True,True,True,True,True,True,True

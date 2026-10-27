@@ -13,6 +13,7 @@ Quick start::
 Modules: :mod:`~voytools.ivtff` (parser), :mod:`~voytools.table` (DataFrames),
 :mod:`~voytools.glyphs` (Eva composites), :mod:`~voytools.stats`, :mod:`~voytools.morphology`,
 :mod:`~voytools.nulls`, :mod:`~voytools.selfcitation` (Timm & Schinner generator), :mod:`~voytools.wordgrammar`,
+:mod:`~voytools.templates` (structured-template null),
 :mod:`~voytools.experiment` (checkpointed many-seed runs),
 :mod:`~voytools.plots` (optional, needs matplotlib), :mod:`~voytools.cli`.
 """
