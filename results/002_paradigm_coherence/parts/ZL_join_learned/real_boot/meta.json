@@ -1,0 +1,50 @@
+{
+  "name": "002_paradigm_coherence",
+  "params": {
+    "combo": "ZL_join_learned",
+    "file": "ZL3b-n.txt",
+    "space_policy": "join",
+    "decomposition": "learned",
+    "source": "real_boot",
+    "n_tokens_real": 31808,
+    "n_dropped_comma": 0,
+    "prefixes": [
+      "che",
+      "cho",
+      "ol",
+      "qo",
+      "ch",
+      "d",
+      "l",
+      "o",
+      "s",
+      "sh",
+      "t",
+      "y"
+    ],
+    "suffixes": [
+      "aiin",
+      "ain",
+      "al",
+      "am",
+      "ar",
+      "chy",
+      "dy",
+      "ol",
+      "or",
+      "d",
+      "l",
+      "r",
+      "s",
+      "y"
+    ],
+    "min_stem_count": 5,
+    "min_inventory_count": 3,
+    "generator": {}
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 15:34:57",
+  "updated": "2026-10-27 15:37:02",
+  "n_seeds_done": 200
+}
