@@ -151,11 +151,11 @@
     ],
     "min_section_tokens": 500
   },
-  "n_runs": 1796,
+  "n_runs": 2084,
   "runs_per_step": {
-    "grid": 1296,
-    "phaseB": 500
+    "grid": 1404,
+    "phaseB": 680
   },
   "created": "2026-10-27 19:46:17",
-  "updated": "2026-10-27 19:46:17"
+  "updated": "2026-10-27 20:09:04"
 }

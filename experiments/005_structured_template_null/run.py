@@ -366,6 +366,8 @@ def cmd_phase_b(args) -> None:
     """5 best grid configurations of ``tag`` x 50 seeds; ``--on`` evaluates them on another text."""
     on = args.on or args.tag
     ids = top_configs(args.tag)[: args.top]
+    if args.on and (OUT / "best_configs.csv").exists():  # control on another text: phase-B rank 1
+        ids = [best_config(args.tag)[0]]
     # parts split the reps, so that every process builds the stem pools of its own reps only
     seeds = [cid * 100 + r for r in range(REPS_B) if r % args.parts == args.part for cid in ids]
 
