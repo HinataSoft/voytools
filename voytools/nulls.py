@@ -37,6 +37,17 @@ new token
    word-internal glyph pairs attested while leaving all *sequence* effects to the copying.
    If no legal edit is found in ``max_tries`` attempts the token stays an exact copy.
 
+Grammar-bound edits (experiment 003): ``edit_model='trigram'`` additionally requires every
+glyph trigram of the edited token (with boundary marks) to be attested in the reference words,
+``edit_model='slot'`` requires the edited token to be admitted by a slot grammar learned from them
+(see :mod:`voytools.wordgrammar`).  The candidate glyph of a substitution or insertion is drawn
+only among the candidates that give an admitted token; a position/edit type without any such
+candidate (or an inadmissible deletion) counts as a failed try, and after ``max_tries`` failures
+the token stays an exact copy.  ``new_token_source='grammar'`` replaces the draw of a "new" token
+from the seed vocabulary by a word sampled from the grammar (random walk over attested trigrams,
+slot-grammatical, real length distribution; :meth:`voytools.wordgrammar.WordGrammar.sample`).
+The defaults (``'bigram'``, ``'seed'``) reproduce the original generator exactly.
+
 Lines are filled with token counts taken from a given list of real line lengths.  It is a
 baseline for "how far do copy-and-modify dynamics alone get", not a reimplementation of the
 published algorithm, whose rules are far more detailed.
@@ -52,6 +63,7 @@ import pandas as pd
 from ._common import line_ids, page_ids
 from .glyphs import collapse_eva, default_preset
 from .table import TOKEN_COLUMNS
+from .wordgrammar import WordGrammar, learn_word_grammar
 
 __all__ = [
     "DEFAULT_EDIT_TABLE",
@@ -139,6 +151,10 @@ def autocopy_generate(
     layout: str = "sample",
     preset: Any = "basic",
     seed: int = 0,
+    edit_model: str = "bigram",
+    new_token_source: str = "seed",
+    word_grammar: WordGrammar | None = None,
+    info: dict | None = None,
 ) -> list[list[str]]:
     """Generate ``n_tokens`` tokens by copying and modifying recent tokens.
 
@@ -179,6 +195,22 @@ def autocopy_generate(
         Glyph preset for splitting tokens into glyphs (``'basic'``, ``'extended'`` or ``None``).
     seed:
         Random seed (the output is deterministic for a given seed).
+    edit_model:
+        ``'bigram'`` (default, original behaviour), ``'trigram'`` or ``'slot'``: which word
+        grammar an edited token must satisfy (see the module docstring).  ``'trigram'`` and
+        ``'slot'`` require ``constrain_bigrams=True``.
+    new_token_source:
+        ``'seed'`` (default): a "new" token is drawn from ``seed_tokens``; ``'grammar'``: it is
+        sampled from the slot/trigram grammar (falls back to a seed token if the sampler fails).
+    word_grammar:
+        A fitted :class:`~voytools.wordgrammar.WordGrammar` (same ``preset``) to use instead of
+        learning one from the reference words; saves time when many samples share a reference.
+    info:
+        Optional dict that is filled with realised counts: ``n_tokens``, ``n_new``,
+        ``n_edit_attempted`` (tokens drawn for editing), ``n_unchanged`` (output token equal to
+        its source token, whether by ``p_copy_exact`` or by failed edits), ``n_edit_failed``
+        (edit attempted but the token stayed unchanged), ``n_grammar_fallback`` and the shares
+        ``p_unchanged`` = ``n_unchanged / n_tokens``, ``p_new_realised``.
 
     Returns
     -------
@@ -192,6 +224,12 @@ def autocopy_generate(
     if probs.shape != (3,) or probs.sum() <= 0:
         raise ValueError("edit_type_probs must be three non-negative numbers")
     probs = probs / probs.sum()
+    if edit_model not in ("bigram", "trigram", "slot"):
+        raise ValueError("edit_model must be 'bigram', 'trigram' or 'slot'")
+    if new_token_source not in ("seed", "grammar"):
+        raise ValueError("new_token_source must be 'seed' or 'grammar'")
+    if edit_model != "bigram" and not constrain_bigrams:
+        raise ValueError("edit_model 'trigram'/'slot' requires constrain_bigrams=True")
     rng = np.random.default_rng(seed)
     seeds = list(seed_tokens)
     glyph_cache: dict[str, tuple[str, ...]] = {}
@@ -222,14 +260,29 @@ def autocopy_generate(
             if b != "$":
                 successors.setdefault(a, {})[b] = successors.get(a, {}).get(b, 0) + 1
     limit = max_len if max_len is not None else longest
+    grammar = word_grammar
+    if grammar is None and (edit_model != "bigram" or new_token_source == "grammar"):
+        grammar = learn_word_grammar(ref_tokens, preset)
+    admits = None
+    if edit_model != "bigram":
+        def admits(seq: Sequence[str]) -> bool:
+            return grammar.accepts(seq, edit_model)
 
-    def draw(left: str, right: str, exclude: str | None, prefer: Sequence[str] | None) -> str | None:
-        """A glyph that may stand between ``left`` and ``right`` (None if there is none)."""
+    def draw(
+        left: str, right: str, exclude: str | None, prefer: Sequence[str] | None, build=None
+    ) -> str | None:
+        """A glyph that may stand between ``left`` and ``right`` (None if there is none).
+
+        With a grammar-bound ``edit_model``, ``build(g)`` gives the edited token and only
+        candidates whose token the grammar admits are kept.
+        """
         if not constrain_bigrams:
             if prefer:
                 return str(prefer[int(rng.integers(len(prefer)))])
             return str(rng.choice(uniq_glyphs, p=g_p))
         cands = [(g, c) for g, c in successors.get(left, {}).items() if g != exclude and (g, right) in pairs]
+        if admits is not None:
+            cands = [(g, c) for g, c in cands if admits(build(g))]
         if prefer:
             pref = [(g, c) for g, c in cands if g in prefer]
             cands = pref or cands
@@ -250,7 +303,7 @@ def autocopy_generate(
                     pos = int(rng.integers(len(seq) + 1))
                     left = seq[pos - 1] if pos > 0 else "^"
                     right = seq[pos] if pos < len(seq) else "$"
-                    g = draw(left, right, None, None)
+                    g = draw(left, right, None, None, lambda g, s=seq, i=pos: s[:i] + [g] + s[i:])
                     if g is not None:
                         return seq[:pos] + [g] + seq[pos:]
                     continue
@@ -259,12 +312,13 @@ def autocopy_generate(
                 left = seq[pos - 1] if pos > 0 else "^"
                 right = seq[pos + 1] if pos + 1 < len(seq) else "$"
                 if not constrain_bigrams or (left, right) in pairs:
-                    return seq[:pos] + seq[pos + 1 :]
+                    if admits is None or admits(seq[:pos] + seq[pos + 1 :]):
+                        return seq[:pos] + seq[pos + 1 :]
                 continue
             pos = int(rng.integers(len(seq)))
             left = seq[pos - 1] if pos > 0 else "^"
             right = seq[pos + 1] if pos + 1 < len(seq) else "$"
-            g = draw(left, right, seq[pos], table.get(seq[pos]))
+            g = draw(left, right, seq[pos], table.get(seq[pos]), lambda g, s=seq, i=pos: s[:i] + [g] + s[i + 1 :])
             if g is not None and g != seq[pos]:
                 return seq[:pos] + [g] + seq[pos + 1 :]
         return seq
@@ -272,9 +326,17 @@ def autocopy_generate(
     history: list[str] = list(seeds[-max(window, 1):])
     out: list[str] = []
     w = np.exp(-recency * np.arange(window)) if recency > 0 else None
+    n_new = n_attempted = n_unchanged = n_failed = n_fallback = 0
     for _ in range(n_tokens):
         if rng.random() < p_new:
-            src = seeds[int(rng.integers(len(seeds)))]
+            n_new += 1
+            sampled = grammar.sample(rng) if new_token_source == "grammar" else None
+            if sampled is not None:
+                src = "".join(sampled)
+                glyph_cache.setdefault(src, sampled)
+            else:
+                n_fallback += new_token_source == "grammar"
+                src = seeds[int(rng.integers(len(seeds)))]
         else:
             recent = history[-window:][::-1]  # index 0 = previous token
             if w is None:
@@ -283,17 +345,31 @@ def autocopy_generate(
                 ww = w[: len(recent)]
                 src = recent[int(rng.choice(len(recent), p=ww / ww.sum()))]
         seq = list(glyphs(src))
+        edited = False
         if rng.random() >= p_copy_exact:
+            edited = True
             seq = edit_once(seq)
             if rng.random() < p_two_edits:
                 seq = edit_once(seq)
         tok = "".join(seq)
         if not tok:
             tok = src
+        n_attempted += edited
+        if tok == src:
+            n_unchanged += 1
+            n_failed += edited
         out.append(tok)
         history.append(tok)
         if len(history) > 4 * max(window, 1):
             history = history[-window:]
+
+    if info is not None:
+        n = max(n_tokens, 1)
+        info.update({
+            "n_tokens": n_tokens, "n_new": n_new, "n_edit_attempted": n_attempted,
+            "n_unchanged": n_unchanged, "n_edit_failed": n_failed, "n_grammar_fallback": n_fallback,
+            "p_unchanged": n_unchanged / n, "p_new_realised": n_new / n,
+        })
 
     # lay out into lines
     lines: list[list[str]] = []
@@ -395,13 +471,18 @@ def autocopy_like(
     Generates ``len(template)`` tokens with the template's line lengths (in order), seeded
     with ``seed_tokens`` (default: the first 100 tokens of the template), and returns
     :func:`as_table` of the result.  ``params`` go to :func:`autocopy_generate`
-    (``window``, ``p_copy_exact``, ``seed`` ...).
+    (``window``, ``p_copy_exact``, ``seed``, ``edit_model`` ...).  The realised counts of
+    ``info`` (see :func:`autocopy_generate`) are stored in ``attrs['autocopy_info']``.
     """
     if seed_tokens is None:
         seed_tokens = template["token"].tolist()[:100]
     lengths = np.bincount(line_ids(template)).tolist()
     params.setdefault("preset", template.attrs.get("glyph_preset", "basic"))
+    info = params.pop("info", None)
+    info = {} if info is None else info
     lines = autocopy_generate(
-        seed_tokens, len(template), line_lengths=lengths, layout="exact", **params
+        seed_tokens, len(template), line_lengths=lengths, layout="exact", info=info, **params
     )
-    return as_table(lines, template)
+    out = as_table(lines, template)
+    out.attrs["autocopy_info"] = dict(info)
+    return out

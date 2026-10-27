@@ -290,6 +290,15 @@ Výchozí seznamy `'reference'` (`REFERENCE_PREFIXES`, `REFERENCE_SUFFIXES`) vzn
 **`voytools.nulls`** – `shuffle_within_lines(df, seed)`, `shuffle_within_pages(df, seed)` (vlastnosti tokenu
 cestují s tokenem, polohové sloupce zůstávají), `autocopy_generate(seed_tokens, n_tokens, window, ...)`,
 `as_table(lines, template=None)`, `autocopy_like(template, ...)`.
+Parametry `edit_model='bigram'|'trigram'|'slot'` (editace se přijme jen do tokenu, který připouští trigramový
+nebo slotový model slova) a `new_token_source='seed'|'grammar'` (nové slovo z gramatiky místo ze seed slovníku);
+výchozí hodnoty dávají přesně původní výstup. `info={}` vrátí skutečné počty (např. `p_unchanged`, podíl
+nezměněných kopií), `autocopy_like` je ukládá do `attrs['autocopy_info']`.
+
+**`voytools.wordgrammar`** – `learn_word_grammar(tokens, preset)` (bigramy, trigramy a slotová gramatika slova
+naučené z reálných tokenů; `WordGrammar.accepts(glyphs, model)`, `WordGrammar.sample(rng)`),
+`grammaticality(df_or_tokens, model='slot', grammar=None, reference=None, weight='token')` – podíl tokenů,
+které model připouští.
 Zamíchání zachovává slovník, četnosti, délky řádků a vše, co závisí jen na slovech samotných (afixy, paradigmata,
 vnitroslovní statistiky): **ty se na zamíchané kopii nezmění**, takže slouží jako nulový model pouze pro efekty
 pořadí (MI sousedů, MI krajních glyfů, podobnost sousedů, polohové profily a entropie glyfů textu bez mezer,
