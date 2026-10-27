@@ -1,0 +1,4 @@
+seed,lines_theirs,lines_port,lines_identical,tokens_theirs,identical,params
+1,4653,4653,4653,37502,1,"{""p_copy"": 0.0, ""replace_weights"": [0, 0, 100], ""p_same_position"": 28}"
+2,4653,4653,4653,37502,1,"{""p_copy"": 0.0, ""replace_weights"": [0, 0, 100], ""p_same_position"": 28}"
+3,4653,4653,4653,37502,1,"{""p_copy"": 0.0, ""replace_weights"": [0, 0, 100], ""p_same_position"": 28}"

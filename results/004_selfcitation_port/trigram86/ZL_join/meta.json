@@ -1,0 +1,19 @@
+{
+  "name": "004_trigram86",
+  "params": {
+    "config_003": 86,
+    "edit_model": "trigram",
+    "new_token_source": "seed",
+    "p_new": "0.3",
+    "window": "32",
+    "p_copy_exact": "0.35",
+    "p_two_edits": "0.5",
+    "recency": "0.0",
+    "edit_type_probs": "(0.6, 0.2, 0.2)"
+  },
+  "n_seeds_requested": 50,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 19:45:15",
+  "updated": "2026-10-27 19:50:16",
+  "n_seeds_done": 50
+}
