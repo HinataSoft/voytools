@@ -67,6 +67,8 @@ __all__ = [
     "within_edit_distance",
     "adjacent_token_mi",
     "edge_glyph_mi",
+    "line_boundary_mi",
+    "vertical_similarity",
     "PositionalProfile",
     "positional_profile",
     "neighbor_similarity",
@@ -613,6 +615,179 @@ def edge_glyph_mi(
         order = ["n_pairs", "mi_obs", "mi_shuffled_mean", "mi_shuffled_sd", "excess_bits", "z"]
         rows.append((key, {c: res.get(c, float("nan")) for c in order}))
     return assemble(rows, by)
+
+
+def _pair_kinds(df: pd.DataFrame) -> np.ndarray:
+    """Kind of every pair of consecutive rows (t, t+1): 'inside' (same line), 'line' (next line of the same
+    paragraph on the same page), 'paragraph' (next line, other paragraph, same page) or '' (page break)."""
+    n = len(df)
+    if n < 2:
+        return np.zeros(0, dtype=object)
+    line = line_ids(df)
+    page = page_ids(df)
+    par = pd.to_numeric(df["par_index"], errors="coerce").to_numpy(dtype=float) if "par_index" in df.columns \
+        else np.full(n, np.nan)
+    same_line = line[:-1] == line[1:]
+    same_page = page[:-1] == page[1:]
+    same_par = (par[:-1] == par[1:]) & ~np.isnan(par[:-1])
+    return np.where(same_line, "inside", np.where(~same_page, "", np.where(same_par, "line", "paragraph"))).astype(object)
+
+
+def line_boundary_mi(
+    df: pd.DataFrame,
+    left: Sequence[Any] | None = None,
+    right: Sequence[Any] | None = None,
+    shuffles: int = 50,
+    seed: int = 0,
+    preset: Any = "auto",
+) -> pd.DataFrame:
+    """MI between consecutive tokens inside a line versus across a line or paragraph boundary.
+
+    ``left[t]`` and ``right[t]`` are labels of token ``t`` (default: its last and first glyph, i.e.
+    the edge-glyph pair of :func:`edge_glyph_mi`; pass e.g. affix classes or capped stems for both).
+    Every pair of consecutive rows of ``df`` (text order) is classified by :func:`_pair_kinds`:
+    ``inside`` the line, across a ``line`` boundary inside a paragraph, across a ``paragraph``
+    boundary on the same page (pairs across a page break are dropped).  For each kind the plug-in
+    MI ``I(left_t; right_{t+1})`` is corrected by its mean under ``shuffles`` permutations of the
+    right labels among the pairs of that kind (independence with the same marginals and the same
+    number of pairs, which removes the sample-size bias that differs between kinds).
+
+    Columns: ``kind``, ``n_pairs``, ``mi_obs``, ``mi_shuffled_mean``, ``excess_bits``, and
+    ``ratio_to_inside`` (excess of the kind / excess inside the line).
+    """
+    if left is None or right is None:
+        gl = glyph_lists(df, resolve_preset(df, preset))
+        left = [g[-1] if g else "" for g in gl] if left is None else left
+        right = [g[0] if g else "" for g in gl] if right is None else right
+    lc, lu = pd.factorize(pd.Series(list(left), dtype=object))
+    rc, ru = pd.factorize(pd.Series(list(right), dtype=object))
+    kinds = _pair_kinds(df)
+    rng = np.random.default_rng(seed)
+    rows = []
+    for kind in ("inside", "line", "paragraph"):
+        m = np.flatnonzero(kinds == kind)
+        x, y = lc[m].astype(np.int64), rc[m + 1].astype(np.int64)
+        if len(m) == 0:
+            rows.append({"kind": kind, "n_pairs": 0, "mi_obs": float("nan"), "mi_shuffled_mean": float("nan"),
+                         "excess_bits": float("nan")})
+            continue
+        obs = _mi_from_pairs(x, y, len(lu), len(ru))
+        sims = [_mi_from_pairs(x, y[rng.permutation(len(y))], len(lu), len(ru)) for _ in range(shuffles)]
+        mean = float(np.mean(sims)) if shuffles else float("nan")
+        rows.append({"kind": kind, "n_pairs": int(len(m)), "mi_obs": obs, "mi_shuffled_mean": mean,
+                     "excess_bits": obs - mean})
+    out = pd.DataFrame(rows)
+    inside = out.loc[out["kind"] == "inside", "excess_bits"].iloc[0]
+    out["ratio_to_inside"] = out["excess_bits"] / inside if inside and inside == inside else float("nan")
+    return out
+
+
+def _consecutive_line_pairs(df: pd.DataFrame, column: str) -> list[tuple[list[str], list[str]]]:
+    """(line above, line) for every line whose predecessor in the table is the previous line of the
+    same paragraph on the same page."""
+    line = line_ids(df)
+    kinds = _pair_kinds(df)
+    toks = df[column].tolist()
+    starts = np.flatnonzero(np.r_[True, line[1:] != line[:-1]])
+    ends = np.r_[starts[1:], len(df)]
+    out = []
+    for a in range(1, len(starts)):
+        if kinds[starts[a] - 1] == "line":
+            out.append((toks[starts[a - 1]: ends[a - 1]], toks[starts[a]: ends[a]]))
+    return out
+
+
+def vertical_similarity(
+    df: pd.DataFrame,
+    k: int = 1,
+    shuffles: int = 200,
+    seed: int = 0,
+    column: str = "token",
+) -> dict[str, float]:
+    """Similarity of a token to the token directly above it versus elsewhere in the line above.
+
+    For every token at index ``i`` of a line whose previous line ``l-1`` belongs to the same
+    paragraph (and page), a *match* is an edit distance <= ``k`` (:func:`within_edit_distance`).
+    Returned rates (all over tokens that have a token above, i.e. ``i < len(l-1)``):
+
+    * ``above`` - match with token ``(l-1, i)``; ``above_left`` / ``above_right`` - with
+      ``(l-1, i-1)`` / ``(l-1, i+1)`` (over tokens where that position exists);
+    * ``else_above`` - per-pair match rate with the other tokens ``(l-1, j)``, ``j != i``;
+    * ``expected_above`` - match rate with a random position of the line above (the exact
+      expectation of ``above`` under permutation of the line above);
+    * ``left_same`` - per-pair match rate with the earlier tokens of the token's own line
+      (all tokens with ``i > 0``);
+    * ``perm_mean``, ``perm_sd``, ``p_perm`` - ``above`` under ``shuffles`` permutations of the order
+      of every line above (one-sided p, ``above`` >= permuted);
+    * ``excess_above`` = ``above - expected_above``, ``ratio_above`` = ``above / else_above``;
+      ``n_tokens`` (with a token above), ``n_line_pairs``.
+    """
+    cache: dict[tuple[str, str], bool] = {}
+
+    def match(a: str, b: str) -> bool:
+        key = (a, b) if a <= b else (b, a)
+        v = cache.get(key)
+        if v is None:
+            v = within_edit_distance(a, b, k)
+            cache[key] = v
+        return v
+
+    pairs = _consecutive_line_pairs(df, column)
+    mats = []
+    above = above_l = above_r = n_l = n_r = 0
+    else_hits = else_n = exp_sum = 0.0
+    left_hits = left_n = 0
+    n_tok = 0
+    for prev, cur in pairs:
+        M = np.array([[match(a, b) for b in prev] for a in cur], dtype=bool)
+        m = min(len(cur), len(prev))
+        if m == 0:
+            continue
+        mats.append((M, m))
+        d = np.diag(M[:m, :m])
+        above += int(d.sum())
+        n_tok += m
+        row = M[:m].sum(axis=1)
+        exp_sum += float((row / len(prev)).sum())
+        if len(prev) > 1:
+            else_hits += float((row - d).sum())
+            else_n += m * (len(prev) - 1)
+        for i in range(m):
+            if i - 1 >= 0:
+                above_l += int(M[i, i - 1])
+                n_l += 1
+            if i + 1 < len(prev):
+                above_r += int(M[i, i + 1])
+                n_r += 1
+        for i in range(1, len(cur)):
+            left_hits += sum(match(cur[i], cur[j]) for j in range(i))
+            left_n += i
+    nan = float("nan")
+    out = {"n_tokens": n_tok, "n_line_pairs": len(mats),
+           "above": above / n_tok if n_tok else nan,
+           "above_left": above_l / n_l if n_l else nan,
+           "above_right": above_r / n_r if n_r else nan,
+           "else_above": else_hits / else_n if else_n else nan,
+           "expected_above": exp_sum / n_tok if n_tok else nan,
+           "left_same": left_hits / left_n if left_n else nan}
+    rng = np.random.default_rng(seed)
+    sims = []
+    for _ in range(shuffles):
+        hit = 0
+        for M, m in mats:
+            perm = rng.permutation(M.shape[1])
+            hit += int(M[np.arange(m), perm[:m]].sum())
+        sims.append(hit / n_tok if n_tok else nan)
+    if sims:
+        sims_a = np.asarray(sims)
+        out["perm_mean"] = float(sims_a.mean())
+        out["perm_sd"] = float(sims_a.std(ddof=1)) if len(sims_a) > 1 else nan
+        out["p_perm"] = float((1 + (sims_a >= out["above"]).sum()) / (1 + len(sims_a)))
+    else:
+        out["perm_mean"] = out["perm_sd"] = out["p_perm"] = nan
+    out["excess_above"] = out["above"] - out["expected_above"]
+    out["ratio_above"] = out["above"] / out["else_above"] if out["else_above"] else nan
+    return out
 
 
 # --------------------------------------------------------------------------- #
