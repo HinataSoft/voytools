@@ -10,6 +10,8 @@ Usage (from the repository root; see ``spec.md``)::
     python experiments/001_autocopy_calibration/run.py phaseB --file ZL3b-n.txt --space-policy split
     # pure within-line shuffle, all metrics
     python experiments/001_autocopy_calibration/run.py shuffle --file ZL3b-n.txt --space-policy split
+    # outside the grid: p_new / seed vocabulary / no-edit diagnostic for the best config
+    python experiments/001_autocopy_calibration/run.py diag
     # tables, profile, plot
     python experiments/001_autocopy_calibration/run.py summarize
 
@@ -218,6 +220,32 @@ def cmd_phase_b(args) -> None:
               progress=progress)
 
 
+DIAG_BASE = 573  # best phase-A config; the diagnostic varies p_new, p_copy_exact and the seed vocabulary
+DIAG = list(itertools.product(("first100", "all"), (0.15, 0.3, 0.5, 0.8), (0.5, 1.0)))
+
+
+def cmd_diag(args) -> None:
+    """Outside the spec grid: which knob brings H2 / n_types / share_near down together?"""
+    ctx = Context(args.file, args.space_policy)
+
+    def one_run(seed: int) -> dict:
+        vocab, p_new, pce = DIAG[seed // 100]
+        params = {**config_params(DIAG_BASE), "p_new": p_new, "p_copy_exact": pce}
+        seeds = ctx.allowed_from if vocab == "all" else None
+        df = autocopy_like(ctx.real, seed_tokens=seeds, allowed_from=ctx.allowed_from, seed=seed, **params)
+        return {"file": ctx.file, "space_policy": ctx.policy, "base_config": DIAG_BASE, "seed_vocab": vocab,
+                "p_new": p_new, "p_copy_exact": pce, **stats_for(df, ctx, seed, False)}
+
+    seeds = [i * 100 + r for i in range(len(DIAG)) for r in range(args.reps)]
+    run_seeds("001_diag", seeds, one_run, OUT / "diag", params={"base_config": DIAG_BASE, "reps": args.reps},
+              progress=progress)
+    runs = load_runs(OUT / "diag")
+    means = runs.groupby(["seed_vocab", "p_new", "p_copy_exact"])[list(TARGETS) + EXTRA + ["edge_mi_excess", "token_mi_excess_share"]].mean()
+    means = add_loss(means, real_point(tag_of(args.file, args.space_policy)))
+    means.to_csv(OUT / "diag_summary.csv", float_format="%.6g")
+    print(means.to_string(float_format=lambda x: f"{x:.4g}"))
+
+
 def cmd_shuffle(args) -> None:
     ctx = Context(args.file, args.space_policy)
 
@@ -383,7 +411,7 @@ def plot_profile(profile: pd.DataFrame) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["real", "grid", "phaseB", "shuffle", "summarize"])
+    ap.add_argument("command", choices=["real", "grid", "phaseB", "shuffle", "diag", "summarize"])
     ap.add_argument("--file", default="ZL3b-n.txt")
     ap.add_argument("--space-policy", default="split", choices=["split", "join", "strict"])
     ap.add_argument("--seeds", default=None, help="encoded seeds config_id*100+rep: 'a:b', 'a:b/chunks:k' or list")
@@ -401,6 +429,9 @@ def main() -> None:
     elif args.command == "shuffle":
         args.reps = args.reps or 50
         cmd_shuffle(args)
+    elif args.command == "diag":
+        args.reps = args.reps or 3
+        cmd_diag(args)
     elif args.command == "real":
         cmd_real(args)
     else:
