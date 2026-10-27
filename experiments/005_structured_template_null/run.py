@@ -397,6 +397,29 @@ def best_config(tag: str) -> tuple[int, dict]:
     return int(r["config_id"]), cfg
 
 
+STAGE2_BASE = 3000  # ids of the (alpha, lambda) sweep around the phase-B best configuration
+
+
+def stage2_configs(tag: str) -> list[tuple[int, dict]]:
+    _, cfg0 = best_config(tag)
+    grid = itertools.product(AXES["topic_concentration"], AXES["page_locality"])
+    return [(STAGE2_BASE + k, {**cfg0, "topic_concentration": a, "page_locality": lam}) for k, (a, lam) in enumerate(grid)]
+
+
+def cmd_stage2(args) -> None:
+    """α x λ sweep (spec grid values, 3 reps) around the phase-B best configuration of ``tag``."""
+    cfgs = dict(stage2_configs(args.tag))
+    seeds = [cid * 100 + r for r in range(REPS_A) if r % args.parts == args.part for cid in cfgs]
+
+    def one_run(seed: int) -> dict:
+        cid, rep = divmod(seed, 100)
+        return template_run(args.tag, cfgs[cid], cid, rep, seed)
+
+    run_seeds("005_structured_template_null", seeds, one_run, OUT / "stage2" / args.tag / f"part{args.part}",
+              params={"step": "stage2", "tag": args.tag, "configs": {k: config_columns(c) for k, c in cfgs.items()}},
+              progress=progress)
+
+
 def ablation_base(tag: str) -> tuple[int, dict, dict]:
     """Full model for the ablations: phase-B rank 1 (target loss) for the stem inventory, Zipf exponent,
     paradigm and prefix dependence; topic α and page locality λ, which the targets do not constrain,
@@ -407,6 +430,9 @@ def ablation_base(tag: str) -> tuple[int, dict, dict]:
     g = grid[grid["tag"] == tag]
     for k in ("n_stems", "zipf_s", "paradigm", "prefix_dependence"):
         g = g[g[AXIS_COL.get(k, k)].astype(str) == str(cfg0[k])]
+    s2 = load_dir(OUT / "stage2" / tag)
+    if not s2.empty:  # the explicit sweep replaces whatever the grid offers
+        g = config_means(s2)
     t = real_point(tag)
     err = sum(((g[m] - float(t[m])) / float(t[m])) ** 2 for m in STAGE2)
     r = g.loc[err.idxmin()]
@@ -889,6 +915,11 @@ def main(argv=None) -> None:
     p.add_argument("--ext", action="store_true", help="the extension grid (zipf_s > 1.3, ids 2000+)")
     p.set_defaults(fn=cmd_grid)
     sub.add_parser("rank-grid").set_defaults(fn=cmd_rank_grid)
+    p = sub.add_parser("stage2")
+    p.add_argument("--tag", required=True, choices=TAGS)
+    p.add_argument("--part", type=int, default=0)
+    p.add_argument("--parts", type=int, default=1)
+    p.set_defaults(fn=cmd_stage2)
     p = sub.add_parser("phase-b")
     p.add_argument("--tag", required=True, choices=TAGS, help="text whose grid ranking is used")
     p.add_argument("--on", default="", help="evaluate on this text instead (e.g. the join policy)")
