@@ -107,6 +107,24 @@ def test_decompose_table_reassembles_tokens_and_stores_lists():
     assert (row["prefix"], row["stem"], row["suffix"]) == ("", "d", "aiin")
 
 
+def test_decompose_suffix_first_order():
+    # default unchanged; mirrored order takes the longest suffix first
+    assert M.decompose("olor", ["ol"], ["lor", "r"]) == ("ol", "o", "r")
+    assert M.decompose("olor", ["ol"], ["lor", "r"], order="suffix_first") == ("", "o", "lor")
+    assert M.decompose("qokeedy", ["qo", "o"], ["edy", "dy", "y"], order="suffix_first") == ("qo", "ke", "edy")
+    assert M.decompose("dy", ["d"], ["dy", "y"], order="suffix_first") == ("", "d", "y")  # stem keeps >= 1 glyph
+    with pytest.raises(ValueError):
+        M.decompose("dy", ["d"], ["y"], order="middle")
+    df = make_tokens([TOY * 2, ["olor", "olor", "chedy"]])
+    a = M.decompose_table(df, prefixes=["qo", "o", "ol"], suffixes=["edy", "dy", "lor", "r"])
+    b = M.decompose_table(df, prefixes=["qo", "o", "ol"], suffixes=["edy", "dy", "lor", "r"], order="prefix_first")
+    assert a[["prefix", "stem", "suffix"]].equals(b[["prefix", "stem", "suffix"]])
+    c = M.decompose_table(df, prefixes=["qo", "o", "ol"], suffixes=["edy", "dy", "lor", "r"], order="suffix_first")
+    assert ((c["prefix"] + c["stem"] + c["suffix"]) == c["token"]).all()
+    row = c[c["token"] == "olor"].iloc[0]
+    assert (row["prefix"], row["stem"], row["suffix"]) == ("", "o", "lor")
+
+
 def test_decompose_table_learns_and_reference_lists():
     df = make_tokens([TOY * 20])
     learned = M.decompose_table(df, min_count=5, max_len=2, n_prefixes=3, n_suffixes=3)

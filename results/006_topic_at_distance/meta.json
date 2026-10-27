@@ -1,0 +1,24 @@
+{
+  "name": "006_topic_at_distance",
+  "params": {
+    "sources": {
+      "real": 1,
+      "real_boot": 200,
+      "perm_global": 100,
+      "perm_section": 100,
+      "perm_hand": 100,
+      "autocopy_86": 50
+    },
+    "Ks": [
+      0,
+      30,
+      100
+    ],
+    "min_tokens": 40,
+    "far": 16,
+    "near": 3
+  },
+  "n_rows": 2204,
+  "created": "2026-10-27 19:08:35",
+  "updated": "2026-10-27 19:30:18"
+}

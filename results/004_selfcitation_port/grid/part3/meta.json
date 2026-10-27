@@ -1,0 +1,58 @@
+{
+  "name": "004_grid",
+  "params": {
+    "file": "ZL3b-n.txt",
+    "space_policy": "split",
+    "seeds": "0:6000/4:3",
+    "axes": {
+      "p_copy": [
+        0.0,
+        0.1,
+        0.2,
+        0.3
+      ],
+      "replace_weights": [
+        [
+          30,
+          50,
+          20
+        ],
+        [
+          50,
+          35,
+          15
+        ],
+        [
+          20,
+          50,
+          30
+        ],
+        [
+          60,
+          30,
+          10
+        ],
+        [
+          0,
+          0,
+          100
+        ]
+      ],
+      "p_same_position": [
+        14,
+        28,
+        42
+      ]
+    },
+    "reps": {
+      "p_same_position == 28": 5,
+      "other": 3
+    },
+    "metrics": "targets + R&T loss inputs + edge/token MI"
+  },
+  "n_seeds_requested": 55,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 19:14:14",
+  "updated": "2026-10-27 19:17:06",
+  "n_seeds_done": 55
+}

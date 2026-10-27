@@ -7,7 +7,8 @@ tools in that spirit; none of them claims to identify true morphemes.
 * :func:`affix_inventory` lists initial/final glyph n-grams with their productivity
   (how many different remainders they combine with).
 * :func:`decompose` / :func:`decompose_table` split a word greedily into
-  ``prefix + stem + suffix`` (longest match first, prefix before suffix, stem never empty)
+  ``prefix + stem + suffix`` (longest match first, prefix before suffix unless ``order='suffix_first'``,
+  stem never empty)
   using an affix list that is either given or learned from the data
   (:func:`learn_affixes`: the most productive initial/final n-grams).
 * :func:`paradigm_table` and :func:`paradigm_metrics` summarise how freely stems combine with
@@ -234,7 +235,11 @@ def _prep_affixes(affixes: Iterable[str | Sequence[str]], preset: Any) -> list[t
     return sorted(set(out), key=lambda g: (-len(g), g))
 
 
-def _decompose(g: tuple[str, ...], pre: list[tuple[str, ...]], suf: list[tuple[str, ...]], min_stem: int):
+def _decompose(g: tuple[str, ...], pre: list[tuple[str, ...]], suf: list[tuple[str, ...]], min_stem: int,
+               order: str = "prefix_first"):
+    if order == "suffix_first":  # mirror image: longest suffix first, then the prefix of the rest
+        s_, stem_, p_ = _decompose(g[::-1], [a[::-1] for a in suf], [a[::-1] for a in pre], min_stem)
+        return p_[::-1], stem_[::-1], s_[::-1]
     p: tuple[str, ...] = ()
     for a in pre:
         if len(g) - len(a) >= min_stem and g[: len(a)] == a:
@@ -250,17 +255,24 @@ def _decompose(g: tuple[str, ...], pre: list[tuple[str, ...]], suf: list[tuple[s
     return p, stem, s
 
 
+def _check_order(order: str) -> None:
+    if order not in ("prefix_first", "suffix_first"):
+        raise ValueError("order must be 'prefix_first' or 'suffix_first'")
+
+
 def decompose(
     token_glyphs: Sequence[str] | str,
     prefixes: Iterable[str | Sequence[str]],
     suffixes: Iterable[str | Sequence[str]],
     preset: Any = "basic",
     min_stem: int = 1,
+    order: str = "prefix_first",
 ) -> tuple[str, str, str]:
     """Greedy longest-match split of one word into ``(prefix, stem, suffix)``.
 
     The prefix is chosen first (longest matching prefix that leaves at least ``min_stem``
-    glyphs), then the suffix from what remains.  Affixes given as strings are converted to
+    glyphs), then the suffix from what remains.  ``order='suffix_first'`` is the mirror image:
+    the longest matching suffix first, then the prefix of what remains.  Affixes given as strings are converted to
     glyphs with ``preset`` so that ``'ch'`` is one glyph; ``token_glyphs`` may be a glyph
     sequence or a plain string (collapsed with ``preset``).  Empty prefix/suffix are ``''``.
 
@@ -270,9 +282,12 @@ def decompose(
     ('', 'd', 'aiin')
     >>> decompose("or", ["o"], ["or", "r"])
     ('o', 'r', '')
+    >>> decompose("olor", ["ol"], ["lor", "r"], order="suffix_first")
+    ('', 'o', 'lor')
     """
+    _check_order(order)
     g = collapse_eva(token_glyphs, preset) if isinstance(token_glyphs, str) else tuple(token_glyphs)
-    p, stem, s = _decompose(g, _prep_affixes(prefixes, preset), _prep_affixes(suffixes, preset), min_stem)
+    p, stem, s = _decompose(g, _prep_affixes(prefixes, preset), _prep_affixes(suffixes, preset), min_stem, order)
     return "".join(p), "".join(stem), "".join(s)
 
 
@@ -288,6 +303,7 @@ def decompose_table(
     min_count: int = 50,
     min_stem: int = 1,
     learn_on: pd.DataFrame | None = None,
+    order: str = "prefix_first",
 ) -> pd.DataFrame:
     """Return a copy of the token table with the columns ``prefix``, ``stem``, ``suffix``.
 
@@ -301,10 +317,13 @@ def decompose_table(
         Parameters of the learning step.
     min_stem:
         Minimum number of glyphs left for the stem.
+    order:
+        ``'prefix_first'`` (default) or ``'suffix_first'`` (see :func:`decompose`).
 
     The lists actually used are stored in ``result.attrs['prefixes']`` / ``['suffixes']``
     so that a null corpus can be decomposed with exactly the same lists.
     """
+    _check_order(order)
     preset = resolve_preset(df, preset)
     src = df if learn_on is None else learn_on
 
@@ -327,7 +346,7 @@ def decompose_table(
     for g in glyphs:
         r = cache.get(g)
         if r is None:
-            p, stem, s = _decompose(g, pre, suf, min_stem)
+            p, stem, s = _decompose(g, pre, suf, min_stem, order)
             r = cache[g] = ("".join(p), "".join(stem), "".join(s))
         P.append(r[0])
         S.append(r[1])

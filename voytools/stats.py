@@ -74,6 +74,10 @@ __all__ = [
     "labels_vs_text",
     "keyness",
     "top_keyness",
+    "page_term_counts",
+    "page_similarity",
+    "distance_bins",
+    "ols_fit",
 ]
 
 
@@ -1042,3 +1046,115 @@ def top_keyness(result: pd.DataFrame, k: int = 15, direction: str = "positive") 
     if not parts:
         return result.iloc[0:0].copy()
     return pd.concat(parts, ignore_index=True)
+
+
+# --------------------------------------------------------------------------- #
+# page similarity (topic at a distance)
+# --------------------------------------------------------------------------- #
+
+
+def page_term_counts(
+    df: pd.DataFrame,
+    column: str = "stem",
+    *,
+    page_col: str = "folio",
+    exclude: Iterable[str] = (),
+    min_tokens: int = 0,
+) -> pd.DataFrame:
+    """Page x term count matrix: rows = pages in text order, columns = values of ``column``.
+
+    ``exclude`` lists terms that are dropped (e.g. the most frequent "function" stems);
+    ``min_tokens`` keeps only pages with at least that many tokens *before* the exclusion,
+    so the page set does not depend on the excluded list.  Empty strings (e.g. tokens
+    without a stem) count towards ``min_tokens`` but are not terms.
+    """
+    pages = pd.unique(df[page_col].to_numpy())
+    size = df.groupby(page_col, sort=False).size()
+    keep_pages = [p for p in pages if size.get(p, 0) >= min_tokens]
+    ex = set(exclude)
+    terms = df[column].astype(str).to_numpy()
+    mask = df[page_col].isin(keep_pages).to_numpy(dtype=bool) & (terms != "")
+    if ex:
+        mask &= ~np.isin(terms, list(ex))
+    sub_p = df[page_col].to_numpy()[mask]
+    sub_t = terms[mask]
+    vocab, t_code = np.unique(sub_t, return_inverse=True)
+    p_index = {p: i for i, p in enumerate(keep_pages)}
+    p_code = np.fromiter((p_index[p] for p in sub_p), dtype=np.int64, count=len(sub_p))
+    counts = np.zeros((len(keep_pages), len(vocab)), dtype=np.int64)
+    np.add.at(counts, (p_code, t_code.reshape(-1)), 1)
+    return pd.DataFrame(counts, index=pd.Index(keep_pages, name=page_col), columns=vocab)
+
+
+def page_similarity(counts: Any, metric: str = "cosine", *, min_count: int = 2) -> np.ndarray:
+    """Square matrix of pairwise similarities between the rows of a page x term count matrix.
+
+    ``metric='cosine'``: cosine similarity of the ``log(1 + f)`` vectors;
+    ``metric='jaccard'``: Jaccard index of the sets of terms with at least ``min_count``
+    occurrences on the page.  Rows without any (qualifying) term have similarity 0 with
+    every page.  The diagonal is 1 for non-empty rows.
+    """
+    c = np.asarray(counts, dtype=float)
+    if metric == "cosine":
+        v = np.log1p(c)
+        norm = np.sqrt((v * v).sum(axis=1))
+        norm[norm == 0] = np.inf
+        u = v / norm[:, None]
+        return u @ u.T
+    if metric == "jaccard":
+        b = (c >= min_count).astype(float)
+        inter = b @ b.T
+        n = b.sum(axis=1)
+        union = n[:, None] + n[None, :] - inter
+        with np.errstate(invalid="ignore", divide="ignore"):
+            out = np.where(union > 0, inter / union, 0.0)
+        return out
+    raise ValueError("metric must be 'cosine' or 'jaccard'")
+
+
+DISTANCE_BIN_EDGES = (1, 2, 4, 8, 16, 32)
+
+
+def distance_bins(dist: Any, edges: Sequence[int] = DISTANCE_BIN_EDGES) -> np.ndarray:
+    """Label distances with the bins ``[e_k, e_{k+1})`` of ``edges`` (default 1, 2-3, 4-7, 8-15, 16-31, 32+).
+
+    Labels are strings such as ``'1'``, ``'2-3'``, ``'32+'``; distances below the first edge get ``''``.
+    """
+    d = np.asarray(dist)
+    names = []
+    for k, e in enumerate(edges):
+        if k + 1 < len(edges):
+            hi = edges[k + 1] - 1
+            names.append(str(e) if hi == e else f"{e}-{hi}")
+        else:
+            names.append(f"{e}+")
+    idx = np.searchsorted(np.asarray(edges), d, side="right") - 1
+    lab = np.asarray(names + [""], dtype=object)
+    return lab[np.where(idx < 0, len(names), idx)]
+
+
+def ols_fit(y: Any, X: Any, names: Sequence[str] | None = None, *, intercept: bool = True) -> pd.Series:
+    """Ordinary least squares (numpy ``lstsq``): coefficients plus ``r2`` and ``n``.
+
+    ``X`` is an ``n x k`` array (or a DataFrame, whose column names are used);
+    ``intercept=True`` adds a constant column named ``'intercept'``.  Rank-deficient designs
+    return the minimum-norm solution (``lstsq``), so check the design when a covariate can be
+    constant in a subset.
+    """
+    if isinstance(X, pd.DataFrame):
+        names = list(X.columns) if names is None else list(names)
+        X = X.to_numpy(dtype=float)
+    X = np.asarray(X, dtype=float)
+    if X.ndim == 1:
+        X = X[:, None]
+    yv = np.asarray(y, dtype=float)
+    if names is None:
+        names = [f"x{i}" for i in range(X.shape[1])]
+    if intercept:
+        X = np.column_stack([np.ones(len(yv)), X])
+        names = ["intercept"] + list(names)
+    beta, *_ = np.linalg.lstsq(X, yv, rcond=None)
+    resid = yv - X @ beta
+    ss_tot = float(((yv - yv.mean()) ** 2).sum()) if len(yv) else 0.0
+    r2 = 1.0 - float((resid**2).sum()) / ss_tot if ss_tot > 0 else float("nan")
+    return pd.Series([*beta.tolist(), r2, float(len(yv))], index=list(names) + ["r2", "n"])

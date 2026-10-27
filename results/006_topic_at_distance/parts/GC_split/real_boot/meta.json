@@ -1,0 +1,49 @@
+{
+  "name": "006_GC_split_real_boot",
+  "params": {
+    "combo": "GC_split",
+    "source": "real_boot",
+    "min_tokens": 40,
+    "Ks": [
+      0,
+      30,
+      100
+    ],
+    "prefixes": [
+      "1c",
+      "1o",
+      "4o",
+      "oe",
+      "ok",
+      "1",
+      "2",
+      "8",
+      "9",
+      "e",
+      "k",
+      "o"
+    ],
+    "suffixes": [
+      "79",
+      "89",
+      "ae",
+      "am",
+      "an",
+      "ay",
+      "oe",
+      "oy",
+      "8",
+      "9",
+      "e",
+      "o",
+      "s",
+      "y"
+    ],
+    "n_pages": 201
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 19:04:56",
+  "updated": "2026-10-27 19:05:25",
+  "n_seeds_done": 200
+}

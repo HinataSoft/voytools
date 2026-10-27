@@ -1,0 +1,11 @@
+tag,contrast,perm_mean,perm_sd,perm_q975,n_perm
+ZL_join,ab_suffix_AB_all,0.00194543,0.00123686,0.00596017,200
+ZL_join,ab_suffix_A1_vs_B2,0.00349529,0.00203088,0.00749487,200
+ZL_join,ab_suffix_A1_vs_B3,0.00508317,0.00329145,0.0131899,200
+ZL_join,ab_suffix_B2_vs_B3,0.00263519,0.00153095,0.0056589,200
+ZL_join,ab_suffix_B2_vs_B5,0.0086083,0.00482269,0.0218527,200
+ZL_join,ab_suffix_B3_vs_B5,0.00709762,0.00353202,0.0158297,200
+ZL_join,ab_suffix_H3_A_vs_B,0.020752,0.0118857,0.0531732,200
+ZL_join,ab_suffix_sections_within_A1,0.0048765,0.00216496,0.00987827,200
+ZL_join,ab_suffix_sections_within_B2,0.0105351,0.00404083,0.0212323,200
+ZL_join,ab_suffix_sections_within_B3,,,,200

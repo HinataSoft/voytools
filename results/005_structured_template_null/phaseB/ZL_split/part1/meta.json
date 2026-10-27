@@ -1,0 +1,21 @@
+{
+  "name": "005_structured_template_null",
+  "params": {
+    "step": "phaseB",
+    "tag": "ZL_split",
+    "calibrated_on": "ZL_split",
+    "configs": [
+      2012,
+      2006,
+      2000,
+      2013,
+      2007
+    ],
+    "reps": 50
+  },
+  "n_seeds_requested": 125,
+  "n_seeds_done_before": 125,
+  "created": "2026-10-27 19:34:45",
+  "updated": "2026-10-27 20:29:42",
+  "n_seeds_done": 250
+}

@@ -1,0 +1,36 @@
+{
+  "runs_per_step_tag": {
+    "ablation/GC_split": 450,
+    "ablation/ZL_split": 450,
+    "grid/GC_split": 702,
+    "grid/ZL_split": 702,
+    "phaseB/GC_join": 50,
+    "phaseB/GC_split": 250,
+    "phaseB/ZL_join": 50,
+    "phaseB/ZL_split": 500,
+    "stage2/ZL_split": 36
+  },
+  "suspicious_runs_by_step": {
+    "jaccard_suffix_sections == 1": {
+      "ablation": 193,
+      "grid": 235,
+      "phaseB": 120,
+      "stage2": 3
+    },
+    "jaccard_suffix_AB == 1": {
+      "ablation": 900,
+      "grid": 1404,
+      "phaseB": 850,
+      "stage2": 36
+    }
+  },
+  "share_stems_real_mean": 0.4486492547700751,
+  "check_002": {
+    "max_abs_diff_vs_002_real": {
+      "ZL_split": 3.7414934637158836e-06,
+      "GC_split": 3.323238286334629e-06,
+      "ZL_join": 2.835820895441543e-06,
+      "GC_join": 3.004694836050703e-06
+    }
+  }
+}

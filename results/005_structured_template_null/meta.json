@@ -1,0 +1,163 @@
+{
+  "name": "005_structured_template_null",
+  "params": {
+    "tags": [
+      "ZL_split",
+      "GC_split",
+      "ZL_join",
+      "GC_join"
+    ],
+    "axes": {
+      "n_stems": [
+        "2000",
+        "4000",
+        "8000"
+      ],
+      "zipf_s": [
+        "0.9",
+        "1.1",
+        "1.3"
+      ],
+      "paradigm": [
+        "fixed"
+      ],
+      "prefix_dependence": [
+        "none",
+        "stem"
+      ],
+      "topic_concentration": [
+        "inf",
+        "5.0",
+        "1.0",
+        "0.2"
+      ],
+      "page_locality": [
+        "0.0",
+        "0.3",
+        "0.6"
+      ]
+    },
+    "targets": {
+      "n_types": 1.0,
+      "hapax_share": 1.0,
+      "mean_len": 1.0,
+      "n_stems_k": 2.0,
+      "mean_suffixes_per_stem": 2.0,
+      "frac_stems_multi_suffix": 2.0
+    },
+    "variants": {
+      "best": {},
+      "no_topic": {
+        "topic_concentration": "inf"
+      },
+      "no_locality": {
+        "page_locality": "0.0"
+      },
+      "no_prefix_link": {
+        "prefix_dependence": "none"
+      },
+      "add_prefix_stem": {
+        "prefix_dependence": "stem"
+      },
+      "free_paradigm": {
+        "paradigm": "free"
+      },
+      "add_prefix_given_suffix": {
+        "prefix_dependence": "suffix"
+      },
+      "add_prefix_stem_suffix": {
+        "prefix_dependence": "stem_suffix"
+      },
+      "add_suffix_by_language": {
+        "suffix_by": "language"
+      },
+      "add_all": {
+        "prefix_dependence": "stem_suffix",
+        "suffix_by": "language"
+      }
+    },
+    "robust_variants": {
+      "base": {},
+      "suf8": {
+        "n_suffixes": 8
+      },
+      "suf20": {
+        "n_suffixes": 20
+      },
+      "len3": {
+        "max_len": 3
+      },
+      "suffix_first": {
+        "order": "suffix_first"
+      },
+      "bpe64": {
+        "bpe": 64
+      }
+    },
+    "robust_sources": {
+      "real": 1,
+      "real_sub": 200,
+      "slot_indep": 50,
+      "autocopy_536": 50
+    },
+    "ab_pairs": [
+      [
+        "AB_all",
+        "language",
+        "A",
+        "B"
+      ],
+      [
+        "A1_vs_B2",
+        "between_language",
+        "A1",
+        "B2"
+      ],
+      [
+        "A1_vs_B3",
+        "between_language",
+        "A1",
+        "B3"
+      ],
+      [
+        "B2_vs_B3",
+        "within_language_B",
+        "B2",
+        "B3"
+      ],
+      [
+        "B2_vs_B5",
+        "within_language_B",
+        "B2",
+        "B5"
+      ],
+      [
+        "B3_vs_B5",
+        "within_language_B",
+        "B3",
+        "B5"
+      ],
+      [
+        "H3_A_vs_B",
+        "within_hand_3",
+        "A3",
+        "B3"
+      ]
+    ],
+    "section_hands": [
+      "A1",
+      "B2",
+      "B3"
+    ],
+    "min_section_tokens": 500
+  },
+  "n_runs": 3190,
+  "runs_per_step": {
+    "ablation": 900,
+    "grid": 1404,
+    "phaseB": 850,
+    "stage2": 36
+  },
+  "created": "2026-10-27 19:46:17",
+  "updated": "2026-10-27 20:52:49"
+}

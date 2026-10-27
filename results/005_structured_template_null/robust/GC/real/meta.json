@@ -1,0 +1,215 @@
+{
+  "name": "005_structured_template_null",
+  "params": {
+    "step": "robustness",
+    "file": "GC",
+    "source": "real",
+    "subsample_frac": 0.8,
+    "variants": {
+      "base": {
+        "prefixes": [
+          "1c",
+          "1o",
+          "4o",
+          "oe",
+          "ok",
+          "1",
+          "2",
+          "8",
+          "9",
+          "e",
+          "k",
+          "o"
+        ],
+        "suffixes": [
+          "79",
+          "89",
+          "ae",
+          "am",
+          "an",
+          "ay",
+          "oe",
+          "oy",
+          "8",
+          "9",
+          "e",
+          "o",
+          "s",
+          "y"
+        ],
+        "order": "prefix_first"
+      },
+      "suf8": {
+        "prefixes": [
+          "1c",
+          "1o",
+          "4o",
+          "oe",
+          "ok",
+          "1",
+          "2",
+          "8",
+          "9",
+          "e",
+          "k",
+          "o"
+        ],
+        "suffixes": [
+          "89",
+          "am",
+          "ay",
+          "8",
+          "9",
+          "e",
+          "s",
+          "y"
+        ],
+        "order": "prefix_first"
+      },
+      "suf20": {
+        "prefixes": [
+          "1c",
+          "1o",
+          "4o",
+          "oe",
+          "ok",
+          "1",
+          "2",
+          "8",
+          "9",
+          "e",
+          "k",
+          "o"
+        ],
+        "suffixes": [
+          "8am",
+          "o89",
+          "19",
+          "79",
+          "89",
+          "ae",
+          "am",
+          "an",
+          "ap",
+          "ay",
+          "c9",
+          "oe",
+          "oy",
+          "(",
+          "8",
+          "9",
+          "e",
+          "o",
+          "s",
+          "y"
+        ],
+        "order": "prefix_first"
+      },
+      "len3": {
+        "prefixes": [
+          "1c",
+          "1o",
+          "4o",
+          "oe",
+          "ok",
+          "1",
+          "2",
+          "8",
+          "9",
+          "e",
+          "k",
+          "o"
+        ],
+        "suffixes": [
+          "79",
+          "89",
+          "ae",
+          "am",
+          "an",
+          "ay",
+          "oe",
+          "oy",
+          "8",
+          "9",
+          "e",
+          "o",
+          "s",
+          "y"
+        ],
+        "order": "prefix_first"
+      },
+      "suffix_first": {
+        "prefixes": [
+          "1c",
+          "1o",
+          "4o",
+          "oe",
+          "ok",
+          "1",
+          "2",
+          "8",
+          "9",
+          "e",
+          "k",
+          "o"
+        ],
+        "suffixes": [
+          "79",
+          "89",
+          "ae",
+          "am",
+          "an",
+          "ay",
+          "oe",
+          "oy",
+          "8",
+          "9",
+          "e",
+          "o",
+          "s",
+          "y"
+        ],
+        "order": "suffix_first"
+      },
+      "bpe64": {
+        "bpe": 64,
+        "prefixes": [
+          "1",
+          "ok",
+          "4oh",
+          "oh",
+          "4ok",
+          "1c",
+          "h",
+          "o",
+          "k",
+          "8",
+          "e",
+          "2"
+        ],
+        "suffixes": [
+          "9",
+          "oe",
+          "ay",
+          "am",
+          "c9",
+          "oy",
+          "c89",
+          "ae",
+          "79",
+          "an",
+          "s",
+          "C9",
+          "19",
+          "89"
+        ],
+        "order": "prefix_first"
+      }
+    }
+  },
+  "n_seeds_requested": 1,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 19:46:16",
+  "updated": "2026-10-27 19:46:20",
+  "n_seeds_done": 1
+}
