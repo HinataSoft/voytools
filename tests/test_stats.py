@@ -341,3 +341,51 @@ def test_keyness_three_groups_and_stem_requirement():
     assert k[(k["group"] == "x") & (k["item"] == "a")]["sign"].iloc[0] == 1
     with pytest.raises(ValueError):
         S.keyness(df, "g", unit="stem")
+
+
+# ------------------------------------------------------------------ page similarity
+
+
+def _stem_table():
+    return pd.DataFrame({
+        "folio": ["p1"] * 4 + ["p2"] * 3 + ["p3"] * 2,
+        "stem": ["a", "a", "b", "", "a", "c", "c", "d", "d"],
+    })
+
+
+def test_page_term_counts():
+    m = S.page_term_counts(_stem_table())
+    assert list(m.index) == ["p1", "p2", "p3"] and list(m.columns) == ["a", "b", "c", "d"]
+    assert m.loc["p1"].tolist() == [2, 1, 0, 0] and m.loc["p2"].tolist() == [1, 0, 2, 0]
+    m2 = S.page_term_counts(_stem_table(), exclude=["a"], min_tokens=3)
+    assert list(m2.index) == ["p1", "p2"] and list(m2.columns) == ["b", "c"]
+
+
+def test_page_similarity_cosine_and_jaccard():
+    c = np.array([[2, 1, 0], [2, 1, 0], [0, 0, 3], [0, 0, 0]])
+    cos = S.page_similarity(c)
+    assert cos[0, 1] == pytest.approx(1.0) and cos[0, 2] == pytest.approx(0.0)
+    assert cos[3].tolist() == [0.0] * 4
+    v0 = np.log1p([2.0, 1.0, 0.0]); v1 = np.log1p([1.0, 0.0, 1.0])
+    want = v0 @ v1 / np.linalg.norm(v0) / np.linalg.norm(v1)
+    assert S.page_similarity(np.array([[2, 1, 0], [1, 0, 1]]))[0, 1] == pytest.approx(want)
+    j = S.page_similarity(np.array([[2, 2, 0], [2, 0, 2], [1, 1, 1]]), "jaccard")
+    assert j[0, 1] == pytest.approx(1 / 3) and j[0, 2] == 0.0 and j[0, 0] == 1.0
+    with pytest.raises(ValueError):
+        S.page_similarity(c, "dice")
+
+
+def test_distance_bins():
+    lab = S.distance_bins([1, 2, 3, 4, 7, 8, 15, 16, 31, 32, 200, 0])
+    assert lab.tolist() == ["1", "2-3", "2-3", "4-7", "4-7", "8-15", "8-15", "16-31", "16-31", "32+", "32+", ""]
+
+
+def test_ols_fit_recovers_coefficients():
+    rng = np.random.default_rng(0)
+    X = rng.normal(size=(200, 2))
+    y = 1.5 + 2.0 * X[:, 0] - 0.5 * X[:, 1]
+    r = S.ols_fit(y, X, ["u", "v"])
+    assert r["intercept"] == pytest.approx(1.5) and r["u"] == pytest.approx(2.0) and r["v"] == pytest.approx(-0.5)
+    assert r["r2"] == pytest.approx(1.0) and r["n"] == 200
+    r2 = S.ols_fit(y, pd.DataFrame(X, columns=["a", "b"]), intercept=True)
+    assert list(r2.index) == ["intercept", "a", "b", "r2", "n"]

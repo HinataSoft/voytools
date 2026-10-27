@@ -1,0 +1,49 @@
+{
+  "name": "006_GC_join_perm_hand",
+  "params": {
+    "combo": "GC_join",
+    "source": "perm_hand",
+    "min_tokens": 40,
+    "Ks": [
+      0,
+      30,
+      100
+    ],
+    "prefixes": [
+      "1c",
+      "1o",
+      "4o",
+      "oe",
+      "1",
+      "2",
+      "8",
+      "9",
+      "e",
+      "k",
+      "o",
+      "s"
+    ],
+    "suffixes": [
+      "79",
+      "89",
+      "ae",
+      "am",
+      "an",
+      "ap",
+      "ay",
+      "oe",
+      "oy",
+      "8",
+      "9",
+      "e",
+      "s",
+      "y"
+    ],
+    "n_pages": 201
+  },
+  "n_seeds_requested": 100,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 19:05:45",
+  "updated": "2026-10-27 19:05:56",
+  "n_seeds_done": 100
+}
