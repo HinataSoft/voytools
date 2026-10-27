@@ -1,0 +1,12 @@
+{
+  "name": "001_diag",
+  "params": {
+    "base_config": 573,
+    "reps": 3
+  },
+  "n_seeds_requested": 48,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 13:03:23",
+  "updated": "2026-10-27 13:05:03",
+  "n_seeds_done": 48
+}

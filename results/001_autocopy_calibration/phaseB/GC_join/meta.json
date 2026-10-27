@@ -1,0 +1,25 @@
+{
+  "name": "001_phaseB",
+  "params": {
+    "file": "GC2a-n.txt",
+    "space_policy": "join",
+    "configs": [
+      573,
+      536,
+      572,
+      537,
+      532,
+      533,
+      529,
+      528,
+      569,
+      492
+    ],
+    "reps": 50
+  },
+  "n_seeds_requested": 500,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 13:02:55",
+  "updated": "2026-10-27 13:42:46",
+  "n_seeds_done": 500
+}

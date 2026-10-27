@@ -1,0 +1,13 @@
+{
+  "phaseA_runs": 1728,
+  "phaseA_configs": 576,
+  "phaseA_suspicious_runs": 18,
+  "phaseB_ZL_split_runs": 500,
+  "phaseB_ZL_split_suspicious_runs": 0,
+  "phaseB_GC_join_runs": 500,
+  "phaseB_GC_join_suspicious_runs": 0,
+  "phaseB_GC_split_runs": 500,
+  "phaseB_GC_split_suspicious_runs": 0,
+  "phaseB_ZL_join_runs": 500,
+  "phaseB_ZL_join_suspicious_runs": 0
+}
