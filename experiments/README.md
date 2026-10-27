@@ -48,5 +48,5 @@ Pravidla:
 | 003 | autocopy_strict | hotovo (krit. 1 nesplněno: loss 0,27, H2 3,3; žádná necílová vlastnost nereprodukována) | editace vázané gramatikou slova (trigram/slot): trefí generátor H2, a které necílové vlastnosti tím začne reprodukovat? |
 | 004 | selfcitation_port | zadáno | port generátoru Timm & Schinner (R&T 2026, MIT) jako kanonický kopírovací null; validace proti tab. 7; velikost slovníku jako konfound |
 | 005 | structured_template_null | zadáno | null „strukturovaný umělý jazyk“ s paradigmaty a tématem z konstrukce; kolik ingrediencí potřebuje k napodobení 002; robustnost afixů/parseru; A/B vs písař |
-| 006 | topic_at_distance | zadáno | sdílení kmenů mezi stránkami: sekce vs vzdálenost vs písař; popisky (ok-/ot-) a jejich stopa v textu |
+| 006 | topic_at_distance | hotovo (sdílení řídí vzdálenost, 3–4× strměji než nully; sekce nad vzdálenost jen slabě bez T/C/A; kontrast „sekce daleko vs. jiná blízko“ záporný; popisky bez robustní stopy; ok-/ot- poziční profil odlišný, ale ne specifický) | sdílení kmenů mezi stránkami: sekce vs vzdálenost vs písař; popisky (ok-/ot-) a jejich stopa v textu |
 | 007 | position_vs_content | zadáno | rozklad informace o afixech/kmenech mezi pozici, sekci a písaře; reziduální MI(d) po odečtení pozice |
