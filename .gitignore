@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# scratch
+*.tmp
+*.log
+scratch/
+
+# large intermediate outputs (keep results/ small: CSV, MD, PNG only)
+results/**/*.parquet
+results/**/*.pkl
+results/**/*.npy
+results/**/*.npz
