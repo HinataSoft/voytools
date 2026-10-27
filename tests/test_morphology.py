@@ -196,6 +196,97 @@ def test_paradigm_metrics_is_invariant_under_token_reordering():
         assert a[k] == pytest.approx(b[k])
 
 
+# ------------------------------------------------------------------ inventories, productivity, dispersion
+
+
+def _with_groups(tokens, groups, prefixes, suffixes):
+    dfd = _decomposed(tokens, prefixes, suffixes)
+    dfd["illustration"] = groups
+    return dfd
+
+
+def test_inventory_jaccard_hand_computed():
+    toks = ["kedy"] * 3 + ["ky"] * 3 + ["tedy"] * 3 + ["kedy"] * 3 + ["py"] * 2
+    grp = ["H"] * 9 + ["B"] * 5
+    dfd = _with_groups(toks, grp, [], ["edy", "y"])
+    st = M.inventory_jaccard(dfd, "illustration", column="stem", min_count=3)
+    assert st.shape[0] == 1 and (st.loc[0, "group_a"], st.loc[0, "group_b"]) == ("B", "H")
+    # H stems {k, t}; B stems with >= 3: {k} ('p' occurs twice)
+    assert st.loc[0, "n_inv_a"] == 1 and st.loc[0, "n_inv_b"] == 2 and st.loc[0, "jaccard"] == pytest.approx(0.5)
+    su = M.inventory_jaccard(dfd, "illustration", column="suffix", min_count=2)
+    assert su.loc[0, "jaccard"] == pytest.approx(1.0)  # {edy, y} in both
+    assert 0 < su.loc[0, "jsd"] < 1
+    same = M.inventory_jaccard(_with_groups(["ky"] * 6, ["H"] * 3 + ["B"] * 3, [], ["y"]), "illustration", "stem", 3)
+    assert same.loc[0, "jaccard"] == 1.0 and same.loc[0, "jsd"] == pytest.approx(0.0)
+    empty = M.inventory_jaccard(dfd, "illustration", column="stem", min_count=50)
+    assert np.isnan(empty.loc[0, "jaccard"])
+
+
+def test_inventory_jaccard_drops_missing_groups_and_respects_order():
+    dfd = _with_groups(["ky", "ky", "ty"], ["H", None, "B"], [], ["y"])
+    out = M.inventory_jaccard(dfd, "illustration", "stem", min_count=1, groups=["H", "B", "Z"])
+    assert out[["group_a", "group_b"]].values.tolist() == [["H", "B"]]
+    assert out.loc[0, "n_tokens_a"] == 1 and out.loc[0, "jaccard"] == 0.0
+
+
+def test_productivity_slope():
+    # stem with frequency f takes exactly f distinct suffixes -> slope 1, intercept 0
+    sufs = ["a", "b", "c", "d", "e", "f", "g", "h"]
+    toks = ["k" + s for s in sufs[:5]] + ["t" + s for s in sufs[:8]]
+    dfd = M.decompose_table(make_tokens([toks]), prefixes=[], suffixes=sufs)
+    r = M.productivity_slope(dfd, min_stem_count=5)
+    assert r["n_stems"] == 2 and r["slope"] == pytest.approx(1.0) and r["intercept"] == pytest.approx(0.0, abs=1e-9)
+    # saturated paradigm: both stems use the same 2 suffixes -> slope 0
+    toks = ["ka", "kb"] * 3 + ["ta", "tb"] * 10
+    r = M.productivity_slope(M.decompose_table(make_tokens([toks]), prefixes=[], suffixes=["a", "b"]), 5)
+    assert r["slope"] == pytest.approx(0.0, abs=1e-12)
+    assert np.isnan(M.productivity_slope(dfd, min_stem_count=100)["slope"])
+    with pytest.raises(ValueError):
+        M.productivity_slope(dfd, axis="stem")
+
+
+def test_stem_dispersion_even_random_and_clustered():
+    # 'k' every 4th token in a 40-token text: ratio exactly 1
+    toks = (["kdy"] + ["tdy", "pdy", "fdy"]) * 10
+    dfd = M.decompose_table(make_tokens([toks]), prefixes=[], suffixes=["dy"])
+    per = M.stem_dispersion(dfd, min_stem_count=5, per_stem=True)
+    assert set(per["stem"]) == {"k", "t", "p", "f"} and (per["ratio"] == 1.0).all()
+    assert M.stem_dispersion(dfd, min_stem_count=5) == 1.0
+    # all occurrences in one burst at the start -> ratio 1/(N/k) = 10/40
+    toks = ["kdy"] * 10 + ["tdy", "pdy", "fdy"] * 10
+    dfd = M.decompose_table(make_tokens([toks]), prefixes=[], suffixes=["dy"])
+    per = M.stem_dispersion(dfd, per_stem=True).set_index("stem")
+    assert per.loc["k", "ratio"] == pytest.approx(1 / (40 / 10))
+    # independent random positions: about ln 2
+    rng = np.random.default_rng(0)
+    toks = [f"{c}dy" for c in rng.choice(list("ktpf"), size=4000)]
+    dfd = M.decompose_table(make_tokens([toks]), prefixes=[], suffixes=["dy"])
+    assert abs(M.stem_dispersion(dfd) - np.log(2)) < 0.1
+    assert np.isnan(M.stem_dispersion(dfd, min_stem_count=10**6))
+
+
+def test_slot_independent_sample_keeps_marginals_and_layout():
+    from voytools.nulls import shuffle_within_lines  # noqa: F401  (same table contract)
+
+    rng = np.random.default_rng(1)
+    pre = rng.choice(["qo", "o"], size=300)
+    suf = np.where(pre == "qo", "dy", "y")  # suffix determined by prefix
+    toks = [p + "k" + s for p, s in zip(pre, suf)]
+    df = make_tokens([toks[i : i + 10] for i in range(0, 300, 10)])
+    dfd = M.decompose_table(df, prefixes=["qo", "o"], suffixes=["dy", "y"])
+    a = M.slot_independent_sample(dfd, seed=3)
+    b = M.slot_independent_sample(dfd, seed=3)
+    assert a["token"].tolist() == b["token"].tolist()
+    assert len(a) == len(dfd) and a["locus_id"].tolist() == dfd["locus_id"].tolist()
+    assert "stem" not in a.columns and a.attrs["source"] == "slot_independent"
+    assert (a["len_glyphs"] == a["token"].map(len)).all()
+    re = M.decompose_table(a, prefixes=["qo", "o"], suffixes=["dy", "y"])
+    assert abs((re["prefix"] == "qo").mean() - (dfd["prefix"] == "qo").mean()) < 0.12
+    real = M.paradigm_metrics(dfd, min_stem_count=5, shuffles=20, seed=0).summary
+    null = M.paradigm_metrics(re, min_stem_count=5, shuffles=20, seed=0).summary
+    assert real["cmi_excess"] > 0.5 and abs(null["cmi_excess"]) < 0.05
+
+
 # ------------------------------------------------------------------ BPE
 
 

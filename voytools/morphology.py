@@ -39,7 +39,7 @@ import pandas as pd
 
 from ._common import glyph_lists, iter_groups, resolve_preset
 from .glyphs import collapse_eva
-from .stats import conditional_entropy, entropy
+from .stats import conditional_entropy, entropy, jsd
 
 __all__ = [
     "REFERENCE_PREFIXES",
@@ -52,6 +52,10 @@ __all__ = [
     "paradigm_table",
     "ParadigmMetrics",
     "paradigm_metrics",
+    "inventory_jaccard",
+    "productivity_slope",
+    "stem_dispersion",
+    "slot_independent_sample",
     "learn_bpe",
     "apply_bpe",
     "bpe_dependence_curve",
@@ -531,6 +535,147 @@ def paradigm_metrics(
         "cmi_excess": float(cmi - cmi_sh) if shuffles else float("nan"),
     }
     return ParadigmMetrics(per, summary)
+
+
+def inventory_jaccard(
+    dfd: pd.DataFrame,
+    by: str,
+    column: str = "suffix",
+    min_count: int = 3,
+    groups: Sequence[str] | None = None,
+) -> pd.DataFrame:
+    """Pairwise similarity of the inventories of ``column`` between groups of a decomposed table.
+
+    For every group of ``by`` (e.g. ``'illustration'`` or ``'language'``; rows with a missing
+    value are dropped) the inventory is the set of values of ``column`` (``'stem'``,
+    ``'suffix'``, ``'prefix'`` ...; the empty affix counts as a value) that occur at least
+    ``min_count`` times in that group.  Returns one row per unordered pair of groups with
+    ``group_a``, ``group_b``, ``n_tokens_a/b``, ``n_inv_a/b`` (inventory sizes), ``n_shared``,
+    ``jaccard`` (|A & B| / |A | B|, NaN if both are empty) and ``jsd`` (Jensen-Shannon
+    divergence in bits of the full frequency distributions, no ``min_count`` threshold).
+    ``groups`` restricts and orders the groups (default: all, sorted).
+    """
+    sub = dfd[dfd[by].notna()]
+    values = sub[column].astype(str).to_numpy()
+    keys = sub[by].astype(str).to_numpy()
+    names = sorted(set(keys.tolist())) if groups is None else [g for g in groups if g in set(keys.tolist())]
+    counts = {g: Counter(values[keys == g].tolist()) for g in names}
+    support = sorted(set(values.tolist()))
+    rows = []
+    for i, a in enumerate(names):
+        for b in names[i + 1 :]:
+            ca, cb = counts[a], counts[b]
+            ia = {v for v, c in ca.items() if c >= min_count}
+            ib = {v for v, c in cb.items() if c >= min_count}
+            union = ia | ib
+            rows.append(
+                {
+                    "group_a": a,
+                    "group_b": b,
+                    "n_tokens_a": int(sum(ca.values())),
+                    "n_tokens_b": int(sum(cb.values())),
+                    "n_inv_a": len(ia),
+                    "n_inv_b": len(ib),
+                    "n_shared": len(ia & ib),
+                    "jaccard": len(ia & ib) / len(union) if union else float("nan"),
+                    "jsd": jsd([ca.get(v, 0) for v in support], [cb.get(v, 0) for v in support]),
+                }
+            )
+    cols = ["group_a", "group_b", "n_tokens_a", "n_tokens_b", "n_inv_a", "n_inv_b", "n_shared", "jaccard", "jsd"]
+    return pd.DataFrame(rows, columns=cols)
+
+
+def productivity_slope(dfd: pd.DataFrame, min_stem_count: int = 5, axis: str = "suffix") -> dict[str, float]:
+    """OLS fit of ``log(number of distinct affixes of a stem)`` on ``log(stem frequency)``.
+
+    Uses stems with at least ``min_stem_count`` tokens; ``axis`` is ``'suffix'`` or
+    ``'prefix'``.  Returns ``slope``, ``intercept`` (natural logs), ``r2`` and ``n_stems``.
+    A stem that takes affixes freely gains new ones as it gets more frequent (slope near the
+    value of a random pairing); a closed paradigm saturates (smaller slope).  NaN when fewer
+    than two distinct frequencies remain.
+    """
+    if axis not in ("suffix", "prefix"):
+        raise ValueError("axis must be 'suffix' or 'prefix'")
+    g = pd.DataFrame({"stem": dfd["stem"].to_numpy(), "a": dfd[axis].to_numpy()}).groupby("stem")["a"]
+    freq = g.size()
+    n_aff = g.nunique()
+    keep = freq >= min_stem_count
+    x = np.log(freq[keep].to_numpy(dtype=float))
+    y = np.log(n_aff[keep].to_numpy(dtype=float))
+    out = {"slope": float("nan"), "intercept": float("nan"), "r2": float("nan"), "n_stems": int(keep.sum())}
+    if len(np.unique(x)) < 2:
+        return out
+    A = np.column_stack([x, np.ones_like(x)])
+    (slope, intercept), *_ = np.linalg.lstsq(A, y, rcond=None)
+    resid = y - (slope * x + intercept)
+    ss_tot = float(((y - y.mean()) ** 2).sum())
+    out.update(slope=float(slope), intercept=float(intercept),
+               r2=1.0 - float((resid**2).sum()) / ss_tot if ss_tot > 0 else float("nan"))
+    return out
+
+
+def stem_dispersion(dfd: pd.DataFrame, min_stem_count: int = 5, per_stem: bool = False) -> Any:
+    """How evenly the occurrences of a stem are spread through the text.
+
+    For every stem with at least ``min_stem_count`` tokens, the median distance (in tokens,
+    in the row order of ``dfd``, which must be text order) between consecutive occurrences
+    is divided by ``N / k`` (``N`` tokens in the table, ``k`` occurrences of the stem), the
+    gap expected if the occurrences were evenly spaced.  Returns the median of this ratio over
+    stems (``per_stem=True``: a DataFrame with ``stem``, ``count``, ``median_gap``, ``ratio``).
+
+    Evenly spaced occurrences give 1; occurrences at independent random positions give gaps
+    that are roughly geometric, so the ratio is about ``ln 2 ~ 0.69``; occurrences clustered in
+    bursts (local copying, topic runs) give much smaller values.
+    """
+    stems = dfd["stem"].to_numpy()
+    n = len(stems)
+    codes, k = _codes(stems) if n else (np.zeros(0, dtype=np.int64), 0)
+    cnt = np.bincount(codes, minlength=k)
+    names = np.unique(np.asarray(stems, dtype=object)) if n else np.zeros(0, dtype=object)
+    order = np.argsort(codes, kind="stable")  # positions grouped by stem, ascending within stem
+    starts = np.concatenate([[0], np.cumsum(cnt)])
+    rows = []
+    for z in np.flatnonzero(cnt >= max(min_stem_count, 2)):
+        pos = order[starts[z] : starts[z + 1]]
+        gap = float(np.median(np.diff(pos)))
+        rows.append({"stem": names[z], "count": int(cnt[z]), "median_gap": gap, "ratio": gap / (n / cnt[z])})
+    per = pd.DataFrame(rows, columns=["stem", "count", "median_gap", "ratio"])
+    if per_stem:
+        return per.sort_values(["count", "stem"], ascending=[False, True], kind="stable").reset_index(drop=True)
+    return float(per["ratio"].median()) if len(per) else float("nan")
+
+
+def slot_independent_sample(dfd: pd.DataFrame, seed: int = 0, preset: Any = "auto") -> pd.DataFrame:
+    """Slot-independence null: prefix, stem and suffix of every token drawn independently.
+
+    For each row of the decomposed table ``dfd`` a prefix, a stem and a suffix are drawn
+    independently and with replacement from the real token-level marginals (i.e. each slot
+    value with probability proportional to its frequency) and concatenated into ``token``.
+    Token count, line layout and all positional metadata are kept.  The ``prefix`` /
+    ``stem`` / ``suffix`` columns are removed so that the sample goes through the same
+    :func:`decompose_table` call (with the real affix lists) as the real text; the greedy
+    re-parse may split a concatenation differently from the draw.
+    """
+    preset = resolve_preset(dfd, preset)
+    rng = np.random.default_rng(seed)
+    n = len(dfd)
+    parts = [dfd[c].astype(str).to_numpy()[rng.integers(0, n, size=n)] if n else np.zeros(0, dtype=object)
+             for c in ("prefix", "stem", "suffix")]
+    toks = [p + s + x for p, s, x in zip(*parts)]
+    out = dfd.drop(columns=["prefix", "stem", "suffix"]).copy()
+    out["token"] = toks
+    if "token_raw" in out.columns:
+        out["token_raw"] = toks
+    if "len_chars" in out.columns:
+        out["len_chars"] = [len(t) for t in toks]
+    if "len_glyphs" in out.columns:
+        out["len_glyphs"] = [len(collapse_eva(t, preset)) for t in toks]
+    out.attrs.update(dfd.attrs)
+    for key in ("prefixes", "suffixes"):
+        out.attrs.pop(key, None)
+    out.attrs["source"] = "slot_independent"
+    return out
+
 
 
 # --------------------------------------------------------------------------- #
