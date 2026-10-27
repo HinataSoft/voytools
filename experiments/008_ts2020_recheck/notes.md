@@ -86,3 +86,8 @@
   f70r2) dává pandas 2.3.3 jako `None`, ne `NaN` jako v session 006 → `same_language` se liší u 10 z 20 100
   dvojic; (2) u K = 100 pořadí kmenů se shodnou četností (v GC se tím mění množina vyřazených kmenů).
   Nully 008 se srovnávají s reálem ze souborů 006, jak je spec žádá; rozdíl je o řád menší než rozdíly reál–null.
+* Souhrny: `run.py summarize` → `decomp_ts2020.csv`, `mi_distance_ts2020.csv`, `pages_ts2020.csv`,
+  `parser_variants.csv`, `ab_by_position.csv`, `synthesis_update.csv`. Řádky 7–9 syntézy mají po několika
+  metrikách (verdikt po řádku × metrice × nullu); u řádku 9 je primární plocha s korekcí `line` a MI při d = 3,
+  plocha s korekcí `pc` měří podle 007 hlavně složení řádku.
+* `results/SYNTHESIS.md` neupravuji (udržuje Cowork); podklad je `synthesis_update.csv` a report.
