@@ -1,0 +1,129 @@
+{
+  "configs": {
+    "ts2020_default": 1,
+    "ts2020_calA": 1,
+    "ts2020_calB": 21,
+    "ts2020_RT": 13
+  },
+  "phaseB_ZL_split_runs": 150,
+  "phaseB_ZL_split_suspicious_runs": 0,
+  "phaseB_ZL_join_runs": 150,
+  "phaseB_ZL_join_suspicious_runs": 0,
+  "recommended": "ts2020_calB",
+  "recommended_provisional": 0,
+  "lists": {
+    "ts2020_calB": {
+      "reproduced": [
+        "token_mi_excess_share",
+        "cmi_excess",
+        "H_suffix_given_stem",
+        "mi_prefix_suffix",
+        "productivity_slope",
+        "stem_dispersion",
+        "jsd_stem_sections"
+      ],
+      "not_reproduced": [
+        "edge_mi_excess",
+        "bpe_gap64",
+        "pos_jsd_first_mid",
+        "mean_suffixes_per_stem",
+        "jsd_suffix_AB"
+      ],
+      "inconsistent": [
+        "frac_stems_multi_suffix",
+        "frac_multi_suffix_5to9",
+        "jaccard_stem_sections"
+      ]
+    },
+    "ts2020_calA": {
+      "reproduced": [
+        "token_mi_excess_share",
+        "cmi_excess",
+        "frac_stems_multi_suffix",
+        "frac_multi_suffix_5to9",
+        "H_suffix_given_stem",
+        "mi_prefix_suffix",
+        "productivity_slope",
+        "stem_dispersion",
+        "jsd_stem_sections"
+      ],
+      "not_reproduced": [
+        "edge_mi_excess",
+        "bpe_gap64",
+        "pos_jsd_first_mid",
+        "mean_suffixes_per_stem",
+        "jsd_suffix_AB"
+      ],
+      "inconsistent": [
+        "jaccard_stem_sections"
+      ]
+    },
+    "ts2020_default": {
+      "reproduced": [
+        "token_mi_excess_share",
+        "cmi_excess",
+        "frac_stems_multi_suffix",
+        "frac_multi_suffix_5to9",
+        "H_suffix_given_stem",
+        "mi_prefix_suffix",
+        "productivity_slope",
+        "stem_dispersion",
+        "jsd_stem_sections"
+      ],
+      "not_reproduced": [
+        "edge_mi_excess",
+        "bpe_gap64",
+        "pos_jsd_first_mid",
+        "mean_suffixes_per_stem",
+        "jsd_suffix_AB"
+      ],
+      "inconsistent": [
+        "jaccard_stem_sections"
+      ]
+    },
+    "ts2020_RT": {
+      "reproduced": [
+        "token_mi_excess_share",
+        "cmi_excess",
+        "frac_multi_suffix_5to9",
+        "mi_prefix_suffix",
+        "productivity_slope",
+        "stem_dispersion",
+        "jaccard_stem_sections",
+        "jsd_stem_sections"
+      ],
+      "not_reproduced": [
+        "edge_mi_excess",
+        "bpe_gap64",
+        "pos_jsd_first_mid",
+        "frac_stems_multi_suffix",
+        "mean_suffixes_per_stem",
+        "jsd_suffix_AB"
+      ],
+      "inconsistent": [
+        "H_suffix_given_stem"
+      ]
+    },
+    "trigram_86": {
+      "reproduced": [],
+      "not_reproduced": [
+        "edge_mi_excess",
+        "token_mi_excess_share",
+        "bpe_gap64",
+        "pos_jsd_first_mid",
+        "cmi_excess",
+        "frac_stems_multi_suffix",
+        "mean_suffixes_per_stem",
+        "frac_multi_suffix_5to9",
+        "H_suffix_given_stem",
+        "mi_prefix_suffix",
+        "productivity_slope",
+        "stem_dispersion",
+        "jaccard_stem_sections",
+        "jsd_stem_sections",
+        "jsd_suffix_AB"
+      ],
+      "inconsistent": []
+    }
+  }
+}

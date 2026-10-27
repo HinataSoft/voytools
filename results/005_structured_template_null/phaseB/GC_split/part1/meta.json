@@ -1,0 +1,21 @@
+{
+  "name": "005_structured_template_null",
+  "params": {
+    "step": "phaseB",
+    "tag": "GC_split",
+    "calibrated_on": "GC_split",
+    "configs": [
+      194,
+      128,
+      57,
+      122,
+      56
+    ],
+    "reps": 50
+  },
+  "n_seeds_requested": 125,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 19:34:45",
+  "updated": "2026-10-27 19:44:03",
+  "n_seeds_done": 125
+}
