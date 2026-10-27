@@ -1,0 +1,81 @@
+{
+  "name": "009_register_profile",
+  "params": {
+    "source": "ctl:italian_prose",
+    "prefixes": [
+      "con",
+      "de",
+      "di",
+      "in",
+      "ri",
+      "c",
+      "d",
+      "e",
+      "m",
+      "n",
+      "p",
+      "s"
+    ],
+    "suffixes": [
+      "ndo",
+      "nte",
+      "no",
+      "re",
+      "ta",
+      "te",
+      "ti",
+      "to",
+      "va",
+      "a",
+      "e",
+      "i",
+      "o",
+      "s"
+    ],
+    "glyph_units": null,
+    "shuffles": {
+      "point": {
+        "adj": 50,
+        "edge": 50,
+        "bias": 50,
+        "mi": 50,
+        "line": 50
+      },
+      "sub": {
+        "adj": 50,
+        "edge": 50,
+        "bias": 10,
+        "mi": 10,
+        "line": 20
+      }
+    },
+    "sub_frac": 0.8,
+    "n_sub": 100,
+    "n_null": 30,
+    "ts2020_config": 21,
+    "ac_seed0": 8600,
+    "tmpl_seed0": 9000,
+    "control": {
+      "name": "italian_prose",
+      "mode": "prose",
+      "strategy": "balanced",
+      "sections": [
+        "b2",
+        "b4",
+        "b6",
+        "b8",
+        "b10",
+        "b12",
+        "b14"
+      ],
+      "source_tokens": 102755,
+      "files": [
+        "voynich-units/data/voynich-units/italian/27608.txt"
+      ]
+    }
+  },
+  "n_seeds_requested": 101,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 21:27:56",
+  "updated": "2026-10-27 21:27:56"
+}
