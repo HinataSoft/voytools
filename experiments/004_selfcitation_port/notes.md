@@ -41,3 +41,23 @@
 * Mimo spec přidána váha (0, 0, 100) – R&T bod. V tabulkách `in_spec_grid = 0`, do výběru calA/calB nevstupuje.
 * Cíle obou ztrát = reálný ZL split (34 268 tokenů), generátor na stejné šabloně (stejný počet tokenů).
   R&T kalibrovali na 32 747 tokenech; délka tokenu je v obou případech ve znacích Eva.
+
+## Kalibrace a fáze B
+
+* calA (ztráta R&T) = config 1 = Java výchozí parametry; ve fázi B jde o tytéž běhy jako `ts2020_default`.
+  Ztráta A je ve všech bodech velká kvůli hapaxu (generátor dává ≤ ~0,59, reál 0,676 na 34 268 tokenech).
+* calB = config 21 (p_copy 0,1; 20/50/30; p_same_position 14). Fáze B běží pro unikátní konfigurace {1, 13, 21}
+  × 50 seedů × split/join; `ts2020_RT` = config 13 (mimo spec mřížku, jen srovnání).
+* Join: generátor na šabloně ZL join (jiné počty tokenů na řádek), parametry vybrané na split, afixy naučené na
+  join reálu (stejné seznamy jako split).
+* trigram 86 z 003 dopočítán s plnou sadou metrik (seedy 8600–8649 jako v 003); bigram 573: metriky 001 doplněné
+  paradigmatickými metrikami z 002 (jiné seedy téže konfigurace). Míchání v řádcích: 001 + 002.
+* SD reálu v `profile.csv`: page bootstrap z 001 (cílové metriky) a 002 (paradigmata), jen pro intervaly v grafu.
+
+## Velikost slovníku
+
+* Generátor má víc kmenů s ≥ 5 tokeny (503) než reál (308), takže varianta (a) spec (podvzorkovat reál na
+  n_stems_k generátoru) není proveditelná – podvzorkování n_stems_k jen snižuje. Provedena varianta (b) obráceně:
+  šablona = prvních ~46 % stránek reálu (bisekce na 3 seedech), 20 seedů.
+* Zkrácení na první stránky mění skladbu sekcí (převážně herbář A), sekční metriky ve `vocab_matching.csv`
+  proto nejsou srovnatelné; typové metriky ano.

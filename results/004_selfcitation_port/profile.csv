@@ -1,0 +1,381 @@
+dataset,metric,kind,source,config_id,n,mean,lo,hi,sd,interval,z_real,diff_real
+ZL_split,share_near,target,real,,1,0.172602,0.164184,0.181021,0.00429511,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,share_near,target,ts2020_default,1,50,0.176948,0.143363,0.226559,0.049679,2.5/97.5 % over seeds,-0.0874762,-0.00434573
+ZL_split,share_near,target,ts2020_calA,1,50,0.176948,0.143363,0.226559,0.049679,2.5/97.5 % over seeds,-0.0874762,-0.00434573
+ZL_split,share_near,target,ts2020_calB,21,50,0.178559,0.148961,0.2588,0.0330371,2.5/97.5 % over seeds,-0.180311,-0.00595696
+ZL_split,share_near,target,ts2020_RT,13,50,0.172701,0.142312,0.214586,0.0222814,2.5/97.5 % over seeds,-0.00445365,-9.92337e-05
+ZL_split,share_near,target,trigram_86,003:86,50,0.183417,0.177819,0.188337,0.00310332,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-3.48507,-0.0108153
+ZL_split,share_near,target,bigram_573,001:573,50,0.25595,0.249371,0.26671,0.00476339,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-17.4977,-0.0833481
+ZL_split,share_near,target,shuffle_lines,,50,0.168182,0.166287,0.17005,0.00113143,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),3.90631,0.00441972
+ZL_split,hapax_share,target,real,,1,0.675986,0.606414,0.745558,0.0354958,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,hapax_share,target,ts2020_default,1,50,0.579643,0.555304,0.600082,0.0122232,2.5/97.5 % over seeds,7.88196,0.0963424
+ZL_split,hapax_share,target,ts2020_calA,1,50,0.579643,0.555304,0.600082,0.0122232,2.5/97.5 % over seeds,7.88196,0.0963424
+ZL_split,hapax_share,target,ts2020_calB,21,50,0.579349,0.552954,0.599077,0.0116171,2.5/97.5 % over seeds,8.31847,0.0966367
+ZL_split,hapax_share,target,ts2020_RT,13,50,0.588472,0.566507,0.602382,0.0104359,2.5/97.5 % over seeds,8.38585,0.0875141
+ZL_split,hapax_share,target,trigram_86,003:86,50,0.557383,0.549445,0.565265,0.00483116,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,24.5495,0.118603
+ZL_split,hapax_share,target,bigram_573,001:573,50,0.534185,0.526081,0.544866,0.00505336,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,28.0608,0.141801
+ZL_split,hapax_share,target,shuffle_lines,,50,0.675986,0.675986,0.675986,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_split,hapax_share,target,ref_RT2026_voynich,,,0.7,0.7,0.7,,docs/reference_values.md (range if given),,-0.0240141
+ZL_split,hapax_share,target,ref_RT2026_selfcitation,,,0.595,0.59,0.6,,docs/reference_values.md (range if given),,0.0809859
+ZL_split,H2,target,real,,1,2.68944,2.6455,2.73339,0.0224215,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,H2,target,ts2020_default,1,50,2.63478,2.49228,2.71221,0.0592718,2.5/97.5 % over seeds,0.92221,0.0546611
+ZL_split,H2,target,ts2020_calA,1,50,2.63478,2.49228,2.71221,0.0592718,2.5/97.5 % over seeds,0.92221,0.0546611
+ZL_split,H2,target,ts2020_calB,21,50,2.61814,2.45629,2.71536,0.0726088,2.5/97.5 % over seeds,0.981981,0.0713005
+ZL_split,H2,target,ts2020_RT,13,50,2.67176,2.58695,2.74724,0.0422266,2.5/97.5 % over seeds,0.418732,0.0176816
+ZL_split,H2,target,trigram_86,003:86,50,3.32858,3.31347,3.34373,0.00770283,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-82.9744,-0.639138
+ZL_split,H2,target,bigram_573,001:573,50,3.60946,3.58567,3.63058,0.0134014,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-68.6507,-0.920013
+ZL_split,H2,target,shuffle_lines,,50,2.75489,2.75368,2.75624,0.000774944,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),-84.4475,-0.0654421
+ZL_split,H2,target,ref_RT2026_voynich,,,2.69,2.69,2.69,,docs/reference_values.md (range if given),,-0.000555897
+ZL_split,H2,target,ref_RT2026_selfcitation,,,2.65,2.6,2.7,,docs/reference_values.md (range if given),,0.0394441
+ZL_split,n_types,target,real,,1,6796,6421.82,7170.18,190.907,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,n_types,target,ts2020_default,1,50,6237.9,4492.6,7516.1,890.138,2.5/97.5 % over seeds,0.626982,558.1
+ZL_split,n_types,target,ts2020_calA,1,50,6237.9,4492.6,7516.1,890.138,2.5/97.5 % over seeds,0.626982,558.1
+ZL_split,n_types,target,ts2020_calB,21,50,6529.6,4247,7738.75,862.002,2.5/97.5 % over seeds,0.309048,266.4
+ZL_split,n_types,target,ts2020_RT,13,50,6183.06,4197.43,7542.05,998.125,2.5/97.5 % over seeds,0.614091,612.94
+ZL_split,n_types,target,trigram_86,003:86,50,8785.48,8628.92,9036.3,116.28,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-17.1094,-1989.48
+ZL_split,n_types,target,bigram_573,001:573,50,9753.12,9450.95,10145,189.754,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-15.584,-2957.12
+ZL_split,n_types,target,shuffle_lines,,50,6796,6796,6796,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_split,mean_len,target,real,,1,4.98827,4.93789,5.03864,0.0257013,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,mean_len,target,ts2020_default,1,50,5.29291,4.88451,5.72488,0.365021,2.5/97.5 % over seeds,-0.834582,-0.30464
+ZL_split,mean_len,target,ts2020_calA,1,50,5.29291,4.88451,5.72488,0.365021,2.5/97.5 % over seeds,-0.834582,-0.30464
+ZL_split,mean_len,target,ts2020_calB,21,50,5.35536,4.91057,5.69156,0.199079,2.5/97.5 % over seeds,-1.84393,-0.367088
+ZL_split,mean_len,target,ts2020_RT,13,50,5.24056,4.89227,5.54626,0.2082,2.5/97.5 % over seeds,-1.21179,-0.252295
+ZL_split,mean_len,target,trigram_86,003:86,50,4.8592,4.80041,4.92004,0.0340708,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,3.78821,0.129067
+ZL_split,mean_len,target,bigram_573,001:573,50,4.90321,4.79496,5.04766,0.0716161,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,1.18765,0.0850549
+ZL_split,mean_len,target,shuffle_lines,,50,4.98827,4.98827,4.98827,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_split,near_ratio,extra,real,,1,1.18349,1.15887,1.20812,0.0125626,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,near_ratio,extra,ts2020_default,1,50,1.00639,0.984047,1.03692,0.0135807,2.5/97.5 % over seeds,13.0407,0.177102
+ZL_split,near_ratio,extra,ts2020_calA,1,50,1.00639,0.984047,1.03692,0.0135807,2.5/97.5 % over seeds,13.0407,0.177102
+ZL_split,near_ratio,extra,ts2020_calB,21,50,0.998343,0.97889,1.0217,0.0115207,2.5/97.5 % over seeds,16.071,0.185149
+ZL_split,near_ratio,extra,ts2020_RT,13,50,1.01067,0.987183,1.03133,0.0125744,2.5/97.5 % over seeds,13.744,0.172822
+ZL_split,near_ratio,extra,trigram_86,003:86,50,1.59264,1.55807,1.63562,0.0243498,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-16.8028,-0.409144
+ZL_split,near_ratio,extra,bigram_573,001:573,50,1.66343,1.6204,1.72213,0.0292152,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-16.4277,-0.479938
+ZL_split,near_ratio,extra,shuffle_lines,,50,1.15378,1.13895,1.16786,0.00847277,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),3.50738,0.0297172
+ZL_split,near_ratio,extra,ref_RT2026_voynich,,,1.12,1.12,1.12,,docs/reference_values.md (range if given),,0.0634927
+ZL_split,near_ratio,extra,ref_RT2026_selfcitation,,,1.145,1.06,1.23,,docs/reference_values.md (range if given),,0.0384927
+ZL_split,edge_mi_excess,nontarget,real,,1,0.184609,,,,,,
+ZL_split,edge_mi_excess,nontarget,ts2020_default,1,50,0.00682409,0.00275005,0.0114145,0.00311078,2.5/97.5 % over seeds,57.1514,0.177785
+ZL_split,edge_mi_excess,nontarget,ts2020_calA,1,50,0.00682409,0.00275005,0.0114145,0.00311078,2.5/97.5 % over seeds,57.1514,0.177785
+ZL_split,edge_mi_excess,nontarget,ts2020_calB,21,50,0.00734987,0.00301924,0.0136406,0.00447911,2.5/97.5 % over seeds,39.5747,0.177259
+ZL_split,edge_mi_excess,nontarget,ts2020_RT,13,50,0.0065119,0.00254601,0.0108247,0.00232568,2.5/97.5 % over seeds,76.5787,0.178097
+ZL_split,edge_mi_excess,nontarget,trigram_86,003:86,50,-3.91979e-05,-0.00149383,0.00119887,0.000701885,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,263.075,0.184648
+ZL_split,edge_mi_excess,nontarget,bigram_573,001:573,50,-0.000137469,-0.0018047,0.00135378,0.000810445,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,227.957,0.184747
+ZL_split,edge_mi_excess,nontarget,shuffle_lines,,50,-0.00027045,-0.00253939,0.00159313,0.00116988,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),158.033,0.18488
+ZL_split,edge_mi_excess,nontarget,ref_RT2026_voynich,,,0.197,0.197,0.197,,docs/reference_values.md (range if given),,-0.0123907
+ZL_split,edge_mi_excess,nontarget,ref_RT2026_selfcitation,,,0.0075,0.006,0.009,,docs/reference_values.md (range if given),,0.177109
+ZL_split,token_mi_excess_share,nontarget,real,,1,0.00893495,,,,,,
+ZL_split,token_mi_excess_share,nontarget,ts2020_default,1,50,0.00485406,0.00156519,0.00738138,0.00153016,2.5/97.5 % over seeds,2.66697,0.00408089
+ZL_split,token_mi_excess_share,nontarget,ts2020_calA,1,50,0.00485406,0.00156519,0.00738138,0.00153016,2.5/97.5 % over seeds,2.66697,0.00408089
+ZL_split,token_mi_excess_share,nontarget,ts2020_calB,21,50,0.00442172,0.00122451,0.00770711,0.0017808,2.5/97.5 % over seeds,2.53439,0.00451323
+ZL_split,token_mi_excess_share,nontarget,ts2020_RT,13,50,0.00495699,0.00236726,0.00748276,0.00145508,2.5/97.5 % over seeds,2.73385,0.00397796
+ZL_split,token_mi_excess_share,nontarget,trigram_86,003:86,50,8.10868e-05,-0.0021882,0.00169981,0.0010028,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,8.82917,0.00885387
+ZL_split,token_mi_excess_share,nontarget,bigram_573,001:573,50,-0.000257203,-0.00257264,0.00195567,0.00120734,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,7.61353,0.00919216
+ZL_split,token_mi_excess_share,nontarget,shuffle_lines,,50,0.000136055,-0.00140498,0.00146461,0.000744588,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),11.8171,0.0087989
+ZL_split,token_mi_excess_share,nontarget,ref_RT2026_voynich,,,0.0079,0.0079,0.0079,,docs/reference_values.md (range if given),,0.00103495
+ZL_split,token_mi_excess_share,nontarget,ref_RT2026_selfcitation,,,0.0055,0.005,0.006,,docs/reference_values.md (range if given),,0.00343495
+ZL_split,bpe_gap64,nontarget,real,,1,1.05794,,,,,,
+ZL_split,bpe_gap64,nontarget,ts2020_default,1,50,0.731455,0.614736,0.881785,0.0688606,2.5/97.5 % over seeds,4.74131,0.32649
+ZL_split,bpe_gap64,nontarget,ts2020_calA,1,50,0.731455,0.614736,0.881785,0.0688606,2.5/97.5 % over seeds,4.74131,0.32649
+ZL_split,bpe_gap64,nontarget,ts2020_calB,21,50,0.692216,0.608779,0.814679,0.0637121,2.5/97.5 % over seeds,5.74034,0.365729
+ZL_split,bpe_gap64,nontarget,ts2020_RT,13,50,0.741794,0.640766,0.946703,0.0837867,2.5/97.5 % over seeds,3.77328,0.31615
+ZL_split,bpe_gap64,nontarget,trigram_86,003:86,50,0.75888,0.711351,0.792394,0.0227273,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,13.1589,0.299065
+ZL_split,bpe_gap64,nontarget,bigram_573,001:573,50,0.600557,0.573743,0.62342,0.0123055,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,37.1694,0.457388
+ZL_split,bpe_gap64,nontarget,shuffle_lines,,50,0.92329,0.919593,0.926274,0.0018208,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),73.9538,0.134655
+ZL_split,bpe_gap64,nontarget,ref_RT2026_voynich,,,1.05,1.05,1.05,,docs/reference_values.md (range if given),,0.00794477
+ZL_split,bpe_gap64,nontarget,ref_RT2026_selfcitation,,,0.755,0.65,0.86,,docs/reference_values.md (range if given),,0.302945
+ZL_split,pos_jsd_first_mid,nontarget,real,,1,0.185608,,,,,,
+ZL_split,pos_jsd_first_mid,nontarget,ts2020_default,1,50,0.0447281,0.0336138,0.0559416,0.00642101,2.5/97.5 % over seeds,21.9405,0.14088
+ZL_split,pos_jsd_first_mid,nontarget,ts2020_calA,1,50,0.0447281,0.0336138,0.0559416,0.00642101,2.5/97.5 % over seeds,21.9405,0.14088
+ZL_split,pos_jsd_first_mid,nontarget,ts2020_calB,21,50,0.044487,0.0346567,0.0563464,0.00635852,2.5/97.5 % over seeds,22.1941,0.141121
+ZL_split,pos_jsd_first_mid,nontarget,ts2020_RT,13,50,0.0434416,0.0330023,0.0539624,0.00656635,2.5/97.5 % over seeds,21.6508,0.142167
+ZL_split,pos_jsd_first_mid,nontarget,trigram_86,003:86,50,0.00143282,0.000743136,0.00241013,0.000433684,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,424.678,0.184176
+ZL_split,pos_jsd_first_mid,nontarget,bigram_573,001:573,50,0.00149152,0.000707035,0.00229156,0.000456495,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,403.328,0.184117
+ZL_split,pos_jsd_first_mid,nontarget,shuffle_lines,,50,0.00301533,0.00164704,0.00432179,0.000696682,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),262.09,0.182593
+ZL_split,cmi_excess,nontarget,real,,1,0.0876381,0.0739087,0.101367,0.00700475,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,cmi_excess,nontarget,ts2020_default,1,50,0.10918,0.0724797,0.140287,0.0225281,2.5/97.5 % over seeds,-0.956214,-0.0215417
+ZL_split,cmi_excess,nontarget,ts2020_calA,1,50,0.10918,0.0724797,0.140287,0.0225281,2.5/97.5 % over seeds,-0.956214,-0.0215417
+ZL_split,cmi_excess,nontarget,ts2020_calB,21,50,0.11523,0.0760069,0.142031,0.0200974,2.5/97.5 % over seeds,-1.37292,-0.0275921
+ZL_split,cmi_excess,nontarget,ts2020_RT,13,50,0.111514,0.0795517,0.150478,0.0197055,2.5/97.5 % over seeds,-1.21162,-0.0238756
+ZL_split,cmi_excess,nontarget,trigram_86,003:86,50,0.208546,0.198822,0.218801,0.00591129,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-20.4537,-0.120907
+ZL_split,cmi_excess,nontarget,bigram_573,001:573,50,0.228587,0.215377,0.242082,0.00688843,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-20.4616,-0.140949
+ZL_split,cmi_excess,nontarget,shuffle_lines,,50,0.0871845,0.0865403,0.0878933,0.000408796,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),1.10957,0.000453589
+ZL_split,frac_stems_multi_suffix,nontarget,real,,1,0.912338,0.8533,0.971375,0.030121,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,frac_stems_multi_suffix,nontarget,ts2020_default,1,50,0.804093,0.72782,0.880166,0.0441247,2.5/97.5 % over seeds,2.45317,0.108245
+ZL_split,frac_stems_multi_suffix,nontarget,ts2020_calA,1,50,0.804093,0.72782,0.880166,0.0441247,2.5/97.5 % over seeds,2.45317,0.108245
+ZL_split,frac_stems_multi_suffix,nontarget,ts2020_calB,21,50,0.815057,0.745568,0.868455,0.0326301,2.5/97.5 % over seeds,2.98133,0.0972811
+ZL_split,frac_stems_multi_suffix,nontarget,ts2020_RT,13,50,0.81644,0.754241,0.859049,0.0287261,2.5/97.5 % over seeds,3.33835,0.0958976
+ZL_split,frac_stems_multi_suffix,nontarget,trigram_86,003:86,50,0.619488,0.590803,0.648932,0.0162515,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,18.0198,0.292849
+ZL_split,frac_stems_multi_suffix,nontarget,bigram_573,001:573,50,0.506825,0.472071,0.537791,0.0169337,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,23.947,0.405513
+ZL_split,frac_stems_multi_suffix,nontarget,shuffle_lines,,50,0.912338,0.912338,0.912338,1.12149e-16,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,-1.11022e-16
+ZL_split,mean_suffixes_per_stem,nontarget,real,,1,5.25,4.94801,5.55199,0.154079,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,mean_suffixes_per_stem,nontarget,ts2020_default,1,50,3.79711,3.44405,4.12078,0.208408,2.5/97.5 % over seeds,6.97136,1.45289
+ZL_split,mean_suffixes_per_stem,nontarget,ts2020_calA,1,50,3.79711,3.44405,4.12078,0.208408,2.5/97.5 % over seeds,6.97136,1.45289
+ZL_split,mean_suffixes_per_stem,nontarget,ts2020_calB,21,50,3.79396,3.53457,4.04938,0.142881,2.5/97.5 % over seeds,10.1906,1.45604
+ZL_split,mean_suffixes_per_stem,nontarget,ts2020_RT,13,50,3.8604,3.53773,4.09505,0.137782,2.5/97.5 % over seeds,10.0855,1.3896
+ZL_split,mean_suffixes_per_stem,nontarget,trigram_86,003:86,50,2.70502,2.63201,2.78574,0.0393979,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,64.5969,2.54498
+ZL_split,mean_suffixes_per_stem,nontarget,bigram_573,001:573,50,2.2822,2.20218,2.34681,0.0385194,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,77.047,2.9678
+ZL_split,mean_suffixes_per_stem,nontarget,shuffle_lines,,50,5.25,5.25,5.25,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_split,frac_multi_suffix_5to9,nontarget,real,,1,0.831858,0.715066,0.948651,0.059588,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,frac_multi_suffix_5to9,nontarget,ts2020_default,1,50,0.701393,0.613351,0.801534,0.0556716,2.5/97.5 % over seeds,2.34348,0.130466
+ZL_split,frac_multi_suffix_5to9,nontarget,ts2020_calA,1,50,0.701393,0.613351,0.801534,0.0556716,2.5/97.5 % over seeds,2.34348,0.130466
+ZL_split,frac_multi_suffix_5to9,nontarget,ts2020_calB,21,50,0.711321,0.634888,0.786056,0.0441393,2.5/97.5 % over seeds,2.73084,0.120537
+ZL_split,frac_multi_suffix_5to9,nontarget,ts2020_RT,13,50,0.708448,0.633769,0.800379,0.0444939,2.5/97.5 % over seeds,2.77366,0.123411
+ZL_split,frac_multi_suffix_5to9,nontarget,trigram_86,003:86,50,0.479395,0.433873,0.524801,0.0261643,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,13.4711,0.352464
+ZL_split,frac_multi_suffix_5to9,nontarget,bigram_573,001:573,50,0.349326,0.312213,0.390573,0.0203388,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,23.7247,0.482532
+ZL_split,frac_multi_suffix_5to9,nontarget,shuffle_lines,,5,0.831858,0.831858,0.831858,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_split,H_suffix_given_stem,nontarget,real,,1,1.81699,1.77925,1.85474,0.019257,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,H_suffix_given_stem,nontarget,ts2020_default,1,50,1.64443,1.19761,1.8266,0.145557,2.5/97.5 % over seeds,1.18552,0.172561
+ZL_split,H_suffix_given_stem,nontarget,ts2020_calA,1,50,1.64443,1.19761,1.8266,0.145557,2.5/97.5 % over seeds,1.18552,0.172561
+ZL_split,H_suffix_given_stem,nontarget,ts2020_calB,21,50,1.64911,1.47193,1.80509,0.0880452,2.5/97.5 % over seeds,1.90684,0.167888
+ZL_split,H_suffix_given_stem,nontarget,ts2020_RT,13,50,1.6536,1.54138,1.79705,0.0686354,2.5/97.5 % over seeds,2.38058,0.163392
+ZL_split,H_suffix_given_stem,nontarget,trigram_86,003:86,50,1.4903,1.45768,1.52985,0.0180053,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,18.1441,0.32669
+ZL_split,H_suffix_given_stem,nontarget,bigram_573,001:573,50,1.36252,1.31962,1.42266,0.0302806,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,15.0087,0.454471
+ZL_split,H_suffix_given_stem,nontarget,shuffle_lines,,5,1.81699,1.81699,1.81699,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_split,mi_prefix_suffix,nontarget,real,,1,0.20518,0.193484,0.216875,0.00596718,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,mi_prefix_suffix,nontarget,ts2020_default,1,50,0.204332,0.151309,0.277161,0.0428121,2.5/97.5 % over seeds,0.0197933,0.000847393
+ZL_split,mi_prefix_suffix,nontarget,ts2020_calA,1,50,0.204332,0.151309,0.277161,0.0428121,2.5/97.5 % over seeds,0.0197933,0.000847393
+ZL_split,mi_prefix_suffix,nontarget,ts2020_calB,21,50,0.187291,0.144113,0.253382,0.0270734,2.5/97.5 % over seeds,0.660735,0.0178883
+ZL_split,mi_prefix_suffix,nontarget,ts2020_RT,13,50,0.212851,0.153427,0.298969,0.0400608,2.5/97.5 % over seeds,-0.191499,-0.0076716
+ZL_split,mi_prefix_suffix,nontarget,trigram_86,003:86,50,0.105619,0.0946313,0.112452,0.00474304,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,20.9909,0.0995609
+ZL_split,mi_prefix_suffix,nontarget,bigram_573,001:573,50,0.0881142,0.0758202,0.0987821,0.00618398,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,18.9304,0.117065
+ZL_split,mi_prefix_suffix,nontarget,shuffle_lines,,5,0.20518,0.20518,0.20518,3.10317e-17,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,2.77556e-17
+ZL_split,productivity_slope,nontarget,real,,1,0.308976,0.276245,0.341708,0.0166996,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,productivity_slope,nontarget,ts2020_default,1,50,0.298842,0.262359,0.330174,0.0194961,2.5/97.5 % over seeds,0.519833,0.0101347
+ZL_split,productivity_slope,nontarget,ts2020_calA,1,50,0.298842,0.262359,0.330174,0.0194961,2.5/97.5 % over seeds,0.519833,0.0101347
+ZL_split,productivity_slope,nontarget,ts2020_calB,21,50,0.305021,0.267409,0.339237,0.0194006,2.5/97.5 % over seeds,0.203875,0.0039553
+ZL_split,productivity_slope,nontarget,ts2020_RT,13,50,0.302874,0.259841,0.337357,0.0213891,2.5/97.5 % over seeds,0.285314,0.00610261
+ZL_split,productivity_slope,nontarget,trigram_86,003:86,50,0.410865,0.391856,0.429936,0.0107358,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-9.49051,-0.101888
+ZL_split,productivity_slope,nontarget,bigram_573,001:573,50,0.480442,0.460066,0.501342,0.0112439,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-15.2496,-0.171465
+ZL_split,productivity_slope,nontarget,shuffle_lines,,5,0.308976,0.308976,0.308976,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_split,stem_dispersion,nontarget,real,,1,0.458649,0.419425,0.497874,0.0200125,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,stem_dispersion,nontarget,ts2020_default,1,50,0.38838,0.332677,0.4856,0.0391985,2.5/97.5 % over seeds,1.79266,0.0702695
+ZL_split,stem_dispersion,nontarget,ts2020_calA,1,50,0.38838,0.332677,0.4856,0.0391985,2.5/97.5 % over seeds,1.79266,0.0702695
+ZL_split,stem_dispersion,nontarget,ts2020_calB,21,50,0.331056,0.267619,0.455918,0.0475987,2.5/97.5 % over seeds,2.68062,0.127594
+ZL_split,stem_dispersion,nontarget,ts2020_RT,13,50,0.435175,0.377488,0.538327,0.0434172,2.5/97.5 % over seeds,0.540684,0.023475
+ZL_split,stem_dispersion,nontarget,trigram_86,003:86,50,0.308538,0.280972,0.342059,0.0155512,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,9.65268,0.150111
+ZL_split,stem_dispersion,nontarget,bigram_573,001:573,50,0.00461918,0.00408544,0.00513599,0.000298644,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,1520.31,0.45403
+ZL_split,stem_dispersion,nontarget,shuffle_lines,,5,0.458445,0.458159,0.458676,0.000212321,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),0.962091,0.000204272
+ZL_split,jaccard_stem_sections,nontarget,real,,1,0.325381,0.273297,0.377464,0.0265734,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,jaccard_stem_sections,nontarget,ts2020_default,1,50,0.254406,0.22686,0.293351,0.018699,2.5/97.5 % over seeds,3.79565,0.0709746
+ZL_split,jaccard_stem_sections,nontarget,ts2020_calA,1,50,0.254406,0.22686,0.293351,0.018699,2.5/97.5 % over seeds,3.79565,0.0709746
+ZL_split,jaccard_stem_sections,nontarget,ts2020_calB,21,50,0.240803,0.217914,0.278169,0.0188769,2.5/97.5 % over seeds,4.4805,0.0845778
+ZL_split,jaccard_stem_sections,nontarget,ts2020_RT,13,50,0.267134,0.23252,0.333779,0.0269869,2.5/97.5 % over seeds,2.15834,0.0582469
+ZL_split,jaccard_stem_sections,nontarget,trigram_86,003:86,50,0.183764,0.172132,0.193835,0.00607536,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,23.31,0.141617
+ZL_split,jaccard_stem_sections,nontarget,bigram_573,001:573,50,0.114646,0.10564,0.127837,0.00575569,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,36.6132,0.210734
+ZL_split,jaccard_stem_sections,nontarget,shuffle_lines,,5,0.325381,0.325381,0.325381,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_split,jsd_stem_sections,nontarget,real,,1,0.227124,0.1867,0.267548,0.0206245,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,jsd_stem_sections,nontarget,ts2020_default,1,50,0.22284,0.140071,0.274893,0.037032,2.5/97.5 % over seeds,0.115669,0.00428347
+ZL_split,jsd_stem_sections,nontarget,ts2020_calA,1,50,0.22284,0.140071,0.274893,0.037032,2.5/97.5 % over seeds,0.115669,0.00428347
+ZL_split,jsd_stem_sections,nontarget,ts2020_calB,21,50,0.24248,0.160376,0.295562,0.0369387,2.5/97.5 % over seeds,-0.415715,-0.015356
+ZL_split,jsd_stem_sections,nontarget,ts2020_RT,13,50,0.211782,0.125027,0.26359,0.0389718,2.5/97.5 % over seeds,0.393655,0.0153415
+ZL_split,jsd_stem_sections,nontarget,trigram_86,003:86,50,0.359521,0.340664,0.385741,0.0119153,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-11.1115,-0.132397
+ZL_split,jsd_stem_sections,nontarget,bigram_573,001:573,50,0.493136,0.44252,0.530508,0.0216672,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-12.2772,-0.266012
+ZL_split,jsd_stem_sections,nontarget,shuffle_lines,,5,0.227124,0.227124,0.227124,3.10317e-17,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,2.77556e-17
+ZL_split,jsd_suffix_AB,nontarget,real,,1,0.0882815,0.0747033,0.10186,0.00692768,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,jsd_suffix_AB,nontarget,ts2020_default,1,50,0.0047544,0.00135951,0.0151063,0.00387557,2.5/97.5 % over seeds,21.5522,0.0835271
+ZL_split,jsd_suffix_AB,nontarget,ts2020_calA,1,50,0.0047544,0.00135951,0.0151063,0.00387557,2.5/97.5 % over seeds,21.5522,0.0835271
+ZL_split,jsd_suffix_AB,nontarget,ts2020_calB,21,50,0.00421888,0.00160803,0.0102271,0.00258515,2.5/97.5 % over seeds,32.5176,0.0840626
+ZL_split,jsd_suffix_AB,nontarget,ts2020_RT,13,50,0.00548039,0.0009408,0.0194573,0.00506391,2.5/97.5 % over seeds,16.3512,0.0828011
+ZL_split,jsd_suffix_AB,nontarget,trigram_86,003:86,50,0.00126566,0.000582789,0.00261033,0.000603786,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,144.117,0.0870159
+ZL_split,jsd_suffix_AB,nontarget,bigram_573,001:573,50,0.00251206,0.000801067,0.00495584,0.00106505,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,80.5308,0.0857695
+ZL_split,jsd_suffix_AB,nontarget,shuffle_lines,,5,0.0882815,0.0882815,0.0882815,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_split,n_stems_k,check,real,,1,308,271.065,344.935,18.8446,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_split,n_stems_k,check,ts2020_default,1,50,479.12,335.975,559.975,65.5394,2.5/97.5 % over seeds,-2.61095,-171.12
+ZL_split,n_stems_k,check,ts2020_calA,1,50,479.12,335.975,559.975,65.5394,2.5/97.5 % over seeds,-2.61095,-171.12
+ZL_split,n_stems_k,check,ts2020_calB,21,50,503.14,363.35,592.425,62.1144,2.5/97.5 % over seeds,-3.14162,-195.14
+ZL_split,n_stems_k,check,ts2020_RT,13,50,460.5,318.8,554.875,69.5561,2.5/97.5 % over seeds,-2.19247,-152.5
+ZL_split,n_stems_k,check,trigram_86,003:86,50,736.18,701.675,775.425,18.4321,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-23.2301,-428.18
+ZL_split,n_stems_k,check,bigram_573,001:573,50,947.1,887.45,1009.95,29.9225,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-21.3585,-639.1
+ZL_split,n_stems_k,check,shuffle_lines,,5,308,308,308,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_split,top50_coverage,check,real,,1,0.339092,,,,,,
+ZL_split,top50_coverage,check,ts2020_default,1,50,0.370076,0.312709,0.47098,0.0624683,2.5/97.5 % over seeds,-0.495996,-0.030984
+ZL_split,top50_coverage,check,ts2020_calA,1,50,0.370076,0.312709,0.47098,0.0624683,2.5/97.5 % over seeds,-0.495996,-0.030984
+ZL_split,top50_coverage,check,ts2020_calB,21,50,0.364762,0.296493,0.517316,0.0607866,2.5/97.5 % over seeds,-0.422307,-0.0256706
+ZL_split,top50_coverage,check,ts2020_RT,13,50,0.378811,0.303109,0.482418,0.0555134,2.5/97.5 % over seeds,-0.715479,-0.0397187
+ZL_split,top50_coverage,check,trigram_86,003:86,50,0.199133,0.192501,0.205259,0.00417559,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,33.5183,0.139959
+ZL_split,top50_coverage,check,bigram_573,001:573,0,,,,,not computed,,
+ZL_split,top50_coverage,check,shuffle_lines,,0,,,,,not computed,,
+ZL_join,share_near,target,real,,1,0.152369,0.144383,0.160354,0.00407405,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,share_near,target,ts2020_default,1,50,0.175806,0.146772,0.225456,0.0270489,2.5/97.5 % over seeds,-0.866499,-0.0234379
+ZL_join,share_near,target,ts2020_calA,1,50,0.175806,0.146772,0.225456,0.0270489,2.5/97.5 % over seeds,-0.866499,-0.0234379
+ZL_join,share_near,target,ts2020_calB,21,50,0.190795,0.149064,0.310974,0.0605927,2.5/97.5 % over seeds,-0.634169,-0.038426
+ZL_join,share_near,target,ts2020_RT,13,50,0.174794,0.144192,0.214532,0.0230546,2.5/97.5 % over seeds,-0.972728,-0.0224259
+ZL_join,share_near,target,trigram_86,003:86,50,0.169901,0.164745,0.174874,0.00320263,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-5.47436,-0.0175324
+ZL_join,share_near,target,bigram_573,001:573,50,0.246729,0.236816,0.254165,0.00469544,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-20.0961,-0.0943603
+ZL_join,share_near,target,shuffle_lines,,50,0.14888,0.146986,0.150909,0.00101044,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),3.45247,0.0034885
+ZL_join,hapax_share,target,real,,1,0.711088,0.638778,0.783398,0.0368928,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,hapax_share,target,ts2020_default,1,50,0.583652,0.563069,0.603158,0.0109833,2.5/97.5 % over seeds,11.6027,0.127436
+ZL_join,hapax_share,target,ts2020_calA,1,50,0.583652,0.563069,0.603158,0.0109833,2.5/97.5 % over seeds,11.6027,0.127436
+ZL_join,hapax_share,target,ts2020_calB,21,50,0.576845,0.557929,0.594381,0.0107547,2.5/97.5 % over seeds,12.4823,0.134243
+ZL_join,hapax_share,target,ts2020_RT,13,50,0.590602,0.560305,0.618888,0.0151042,2.5/97.5 % over seeds,7.97702,0.120486
+ZL_join,hapax_share,target,trigram_86,003:86,50,0.565693,0.557273,0.572662,0.00477009,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,30.4806,0.145395
+ZL_join,hapax_share,target,bigram_573,001:573,50,0.53748,0.527405,0.545684,0.0049866,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,34.815,0.173609
+ZL_join,hapax_share,target,shuffle_lines,,50,0.711088,0.711088,0.711088,1.12149e-16,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,1.11022e-16
+ZL_join,H2,target,real,,1,2.68836,2.64434,2.73237,0.0224562,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,H2,target,ts2020_default,1,50,2.6496,2.48651,2.75081,0.0788117,2.5/97.5 % over seeds,0.49183,0.038762
+ZL_join,H2,target,ts2020_calA,1,50,2.6496,2.48651,2.75081,0.0788117,2.5/97.5 % over seeds,0.49183,0.038762
+ZL_join,H2,target,ts2020_calB,21,50,2.61505,2.37134,2.70744,0.0794622,2.5/97.5 % over seeds,0.922501,0.0733039
+ZL_join,H2,target,ts2020_RT,13,50,2.67492,2.60149,2.77862,0.0553365,2.5/97.5 % over seeds,0.242772,0.0134342
+ZL_join,H2,target,trigram_86,003:86,50,3.33543,3.3245,3.34801,0.00666225,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-97.1254,-0.647074
+ZL_join,H2,target,bigram_573,001:573,50,3.62162,3.60865,3.63645,0.00896767,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-104.07,-0.933261
+ZL_join,H2,target,shuffle_lines,,50,2.73649,2.73542,2.73825,0.000757525,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),-63.5374,-0.0481312
+ZL_join,n_types,target,real,,1,7729,7288.81,8169.19,224.587,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,n_types,target,ts2020_default,1,50,6057.02,4313.35,7264.95,890.058,2.5/97.5 % over seeds,1.87851,1671.98
+ZL_join,n_types,target,ts2020_calA,1,50,6057.02,4313.35,7264.95,890.058,2.5/97.5 % over seeds,1.87851,1671.98
+ZL_join,n_types,target,ts2020_calB,21,50,6040.38,3581.88,7174.88,1071.89,2.5/97.5 % over seeds,1.57536,1688.62
+ZL_join,n_types,target,ts2020_RT,13,50,5955.22,3974.12,7492.35,1026.4,2.5/97.5 % over seeds,1.72816,1773.78
+ZL_join,n_types,target,trigram_86,003:86,50,8873.74,8567.6,9104.98,160.755,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-7.121,-1144.74
+ZL_join,n_types,target,bigram_573,001:573,50,9495.72,9145.98,9822.62,181.913,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-9.7119,-1766.72
+ZL_join,n_types,target,shuffle_lines,,50,7729,7729,7729,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_join,mean_len,target,real,,1,5.36299,5.30733,5.41866,0.0284004,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,mean_len,target,ts2020_default,1,50,5.33916,4.90466,5.62659,0.213358,2.5/97.5 % over seeds,0.111684,0.0238286
+ZL_join,mean_len,target,ts2020_calA,1,50,5.33916,4.90466,5.62659,0.213358,2.5/97.5 % over seeds,0.111684,0.0238286
+ZL_join,mean_len,target,ts2020_calB,21,50,5.31933,4.76653,5.72634,0.393208,2.5/97.5 % over seeds,0.111031,0.0436582
+ZL_join,mean_len,target,ts2020_RT,13,50,5.25257,4.89148,5.53097,0.20015,2.5/97.5 % over seeds,0.55169,0.110421
+ZL_join,mean_len,target,trigram_86,003:86,50,5.09333,4.9854,5.17528,0.0541986,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,4.97542,0.26966
+ZL_join,mean_len,target,bigram_573,001:573,50,5.09166,4.97701,5.24927,0.0765022,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,3.54674,0.271334
+ZL_join,mean_len,target,shuffle_lines,,50,5.36299,5.36299,5.36299,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_join,near_ratio,extra,real,,1,1.19715,1.16732,1.22698,0.0152192,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,near_ratio,extra,ts2020_default,1,50,1.00616,0.972851,1.03111,0.0160625,2.5/97.5 % over seeds,11.8902,0.190986
+ZL_join,near_ratio,extra,ts2020_calA,1,50,1.00616,0.972851,1.03111,0.0160625,2.5/97.5 % over seeds,11.8902,0.190986
+ZL_join,near_ratio,extra,ts2020_calB,21,50,0.998666,0.98221,1.01899,0.0114636,2.5/97.5 % over seeds,17.3144,0.198485
+ZL_join,near_ratio,extra,ts2020_RT,13,50,1.01024,0.988523,1.03602,0.0136126,2.5/97.5 % over seeds,13.7305,0.186908
+ZL_join,near_ratio,extra,trigram_86,003:86,50,1.6426,1.59928,1.69094,0.0261158,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-17.0566,-0.445448
+ZL_join,near_ratio,extra,bigram_573,001:573,50,1.66167,1.61569,1.7002,0.0242462,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-19.1584,-0.464518
+ZL_join,near_ratio,extra,shuffle_lines,,50,1.17003,1.15371,1.18632,0.00836187,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),3.24349,0.0271216
+ZL_join,edge_mi_excess,nontarget,real,,1,0.151549,,,,,,
+ZL_join,edge_mi_excess,nontarget,ts2020_default,1,50,0.00673148,0.00210443,0.0122826,0.00442157,2.5/97.5 % over seeds,32.7525,0.144817
+ZL_join,edge_mi_excess,nontarget,ts2020_calA,1,50,0.00673148,0.00210443,0.0122826,0.00442157,2.5/97.5 % over seeds,32.7525,0.144817
+ZL_join,edge_mi_excess,nontarget,ts2020_calB,21,50,0.00865596,0.00216841,0.0293464,0.00608474,2.5/97.5 % over seeds,23.4838,0.142893
+ZL_join,edge_mi_excess,nontarget,ts2020_RT,13,50,0.00701732,0.00321702,0.0113179,0.00219805,2.5/97.5 % over seeds,65.7546,0.144532
+ZL_join,edge_mi_excess,nontarget,trigram_86,003:86,50,3.00976e-05,-0.00120374,0.0016067,0.000718362,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,210.923,0.151519
+ZL_join,edge_mi_excess,nontarget,bigram_573,001:573,50,-5.33472e-06,-0.00172734,0.00200235,0.00100078,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,151.436,0.151554
+ZL_join,edge_mi_excess,nontarget,shuffle_lines,,50,-2.71492e-05,-0.00221245,0.00168622,0.00102572,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),147.775,0.151576
+ZL_join,token_mi_excess_share,nontarget,real,,1,0.00712968,,,,,,
+ZL_join,token_mi_excess_share,nontarget,ts2020_default,1,50,0.0042889,0.0018737,0.00658006,0.00148157,2.5/97.5 % over seeds,1.91741,0.00284078
+ZL_join,token_mi_excess_share,nontarget,ts2020_calA,1,50,0.0042889,0.0018737,0.00658006,0.00148157,2.5/97.5 % over seeds,1.91741,0.00284078
+ZL_join,token_mi_excess_share,nontarget,ts2020_calB,21,50,0.0038698,-0.000323985,0.0067124,0.002331,2.5/97.5 % over seeds,1.39849,0.00325987
+ZL_join,token_mi_excess_share,nontarget,ts2020_RT,13,50,0.00422288,0.00196009,0.00691825,0.00140195,2.5/97.5 % over seeds,2.0734,0.0029068
+ZL_join,token_mi_excess_share,nontarget,trigram_86,003:86,50,0.000137833,-0.00193702,0.0028435,0.00127346,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,5.49041,0.00699184
+ZL_join,token_mi_excess_share,nontarget,bigram_573,001:573,50,0.000125495,-0.00305394,0.00288326,0.00143976,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,4.86482,0.00700418
+ZL_join,token_mi_excess_share,nontarget,shuffle_lines,,50,-0.000193499,-0.00217817,0.00202149,0.00112862,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),6.48861,0.00732318
+ZL_join,bpe_gap64,nontarget,real,,1,1.06508,,,,,,
+ZL_join,bpe_gap64,nontarget,ts2020_default,1,50,0.750482,0.64097,0.914343,0.0769846,2.5/97.5 % over seeds,4.08647,0.314595
+ZL_join,bpe_gap64,nontarget,ts2020_calA,1,50,0.750482,0.64097,0.914343,0.0769846,2.5/97.5 % over seeds,4.08647,0.314595
+ZL_join,bpe_gap64,nontarget,ts2020_calB,21,50,0.713843,0.605799,0.879916,0.0689712,2.5/97.5 % over seeds,5.09248,0.351234
+ZL_join,bpe_gap64,nontarget,ts2020_RT,13,50,0.748407,0.628916,0.928566,0.0876918,2.5/97.5 % over seeds,3.61117,0.31667
+ZL_join,bpe_gap64,nontarget,trigram_86,003:86,50,0.830368,0.780841,0.870678,0.029138,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,8.05509,0.234709
+ZL_join,bpe_gap64,nontarget,bigram_573,001:573,50,0.633881,0.608432,0.658449,0.0147576,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,29.2186,0.431196
+ZL_join,bpe_gap64,nontarget,shuffle_lines,,50,0.954154,0.951729,0.957972,0.00168467,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),65.8427,0.110923
+ZL_join,pos_jsd_first_mid,nontarget,real,,1,0.182961,,,,,,
+ZL_join,pos_jsd_first_mid,nontarget,ts2020_default,1,50,0.0456663,0.0331432,0.0594151,0.00778612,2.5/97.5 % over seeds,17.6332,0.137294
+ZL_join,pos_jsd_first_mid,nontarget,ts2020_calA,1,50,0.0456663,0.0331432,0.0594151,0.00778612,2.5/97.5 % over seeds,17.6332,0.137294
+ZL_join,pos_jsd_first_mid,nontarget,ts2020_calB,21,50,0.0438123,0.0297869,0.0630523,0.00782558,2.5/97.5 % over seeds,17.7812,0.139148
+ZL_join,pos_jsd_first_mid,nontarget,ts2020_RT,13,50,0.0418446,0.0311211,0.0517234,0.00607894,2.5/97.5 % over seeds,23.2139,0.141116
+ZL_join,pos_jsd_first_mid,nontarget,trigram_86,003:86,50,0.00136154,0.000586671,0.00226971,0.00044314,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,409.801,0.181599
+ZL_join,pos_jsd_first_mid,nontarget,bigram_573,001:573,50,0.00150308,0.000695113,0.00249211,0.000562236,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,322.743,0.181457
+ZL_join,pos_jsd_first_mid,nontarget,shuffle_lines,,50,0.00300052,0.00186526,0.00492868,0.000724313,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),248.456,0.17996
+ZL_join,cmi_excess,nontarget,real,,1,0.0776305,0.0618705,0.0933906,0.00804086,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,cmi_excess,nontarget,ts2020_default,1,50,0.108585,0.0800979,0.151969,0.0209199,2.5/97.5 % over seeds,-1.47968,-0.0309547
+ZL_join,cmi_excess,nontarget,ts2020_calA,1,50,0.108585,0.0800979,0.151969,0.0209199,2.5/97.5 % over seeds,-1.47968,-0.0309547
+ZL_join,cmi_excess,nontarget,ts2020_calB,21,50,0.11233,0.0483762,0.156598,0.0296455,2.5/97.5 % over seeds,-1.17047,-0.0346991
+ZL_join,cmi_excess,nontarget,ts2020_RT,13,50,0.110716,0.084714,0.142841,0.017136,2.5/97.5 % over seeds,-1.93077,-0.0330857
+ZL_join,cmi_excess,nontarget,trigram_86,003:86,50,0.213057,0.20172,0.22582,0.00671451,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-20.1692,-0.135426
+ZL_join,cmi_excess,nontarget,bigram_573,001:573,50,0.233762,0.220776,0.249414,0.00845151,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-18.4738,-0.156132
+ZL_join,cmi_excess,nontarget,shuffle_lines,,50,0.0776871,0.0767208,0.0784956,0.000468763,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),-0.120737,-5.65969e-05
+ZL_join,frac_stems_multi_suffix,nontarget,real,,1,0.907463,0.841355,0.973571,0.0337286,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,frac_stems_multi_suffix,nontarget,ts2020_default,1,50,0.806757,0.730817,0.861152,0.0372321,2.5/97.5 % over seeds,2.70482,0.100706
+ZL_join,frac_stems_multi_suffix,nontarget,ts2020_calA,1,50,0.806757,0.730817,0.861152,0.0372321,2.5/97.5 % over seeds,2.70482,0.100706
+ZL_join,frac_stems_multi_suffix,nontarget,ts2020_calB,21,50,0.794863,0.73285,0.849432,0.032018,2.5/97.5 % over seeds,3.51676,0.112599
+ZL_join,frac_stems_multi_suffix,nontarget,ts2020_RT,13,50,0.821582,0.774515,0.864348,0.0260446,2.5/97.5 % over seeds,3.29747,0.0858811
+ZL_join,frac_stems_multi_suffix,nontarget,trigram_86,003:86,50,0.625103,0.596393,0.653345,0.0146688,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,19.249,0.28236
+ZL_join,frac_stems_multi_suffix,nontarget,bigram_573,001:573,50,0.497405,0.472006,0.525973,0.01639,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,25.0187,0.410057
+ZL_join,frac_stems_multi_suffix,nontarget,shuffle_lines,,50,0.907463,0.907463,0.907463,1.12149e-16,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,-1.11022e-16
+ZL_join,mean_suffixes_per_stem,nontarget,real,,1,5.08657,4.76503,5.40811,0.164051,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,mean_suffixes_per_stem,nontarget,ts2020_default,1,50,3.80716,3.53003,4.12232,0.184206,2.5/97.5 % over seeds,6.94552,1.2794
+ZL_join,mean_suffixes_per_stem,nontarget,ts2020_calA,1,50,3.80716,3.53003,4.12232,0.184206,2.5/97.5 % over seeds,6.94552,1.2794
+ZL_join,mean_suffixes_per_stem,nontarget,ts2020_calB,21,50,3.7197,3.51586,3.94111,0.127986,2.5/97.5 % over seeds,10.6798,1.36687
+ZL_join,mean_suffixes_per_stem,nontarget,ts2020_RT,13,50,3.89423,3.61337,4.14487,0.143003,2.5/97.5 % over seeds,8.33781,1.19233
+ZL_join,mean_suffixes_per_stem,nontarget,trigram_86,003:86,50,2.69045,2.62144,2.76846,0.0394547,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,60.7309,2.39612
+ZL_join,mean_suffixes_per_stem,nontarget,bigram_573,001:573,50,2.23138,2.14425,2.31713,0.0481129,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,59.3436,2.85519
+ZL_join,mean_suffixes_per_stem,nontarget,shuffle_lines,,50,5.08657,5.08657,5.08657,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_join,frac_multi_suffix_5to9,nontarget,real,,1,0.832061,0.708585,0.955538,0.0629982,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,frac_multi_suffix_5to9,nontarget,ts2020_default,1,50,0.699114,0.605517,0.788176,0.0464805,2.5/97.5 % over seeds,2.86027,0.132947
+ZL_join,frac_multi_suffix_5to9,nontarget,ts2020_calA,1,50,0.699114,0.605517,0.788176,0.0464805,2.5/97.5 % over seeds,2.86027,0.132947
+ZL_join,frac_multi_suffix_5to9,nontarget,ts2020_calB,21,50,0.685137,0.60537,0.760847,0.0436391,2.5/97.5 % over seeds,3.3668,0.146924
+ZL_join,frac_multi_suffix_5to9,nontarget,ts2020_RT,13,50,0.721532,0.664846,0.790019,0.039932,2.5/97.5 % over seeds,2.76792,0.110529
+ZL_join,frac_multi_suffix_5to9,nontarget,trigram_86,003:86,50,0.482474,0.435348,0.528438,0.0266496,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,13.1179,0.349587
+ZL_join,frac_multi_suffix_5to9,nontarget,bigram_573,001:573,50,0.344046,0.306416,0.368541,0.0166307,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,29.3442,0.488015
+ZL_join,frac_multi_suffix_5to9,nontarget,shuffle_lines,,5,0.832061,0.832061,0.832061,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_join,H_suffix_given_stem,nontarget,real,,1,1.88808,1.84636,1.92981,0.0212887,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,H_suffix_given_stem,nontarget,ts2020_default,1,50,1.65084,1.52438,1.81337,0.0883527,2.5/97.5 % over seeds,2.68517,0.237242
+ZL_join,H_suffix_given_stem,nontarget,ts2020_calA,1,50,1.65084,1.52438,1.81337,0.0883527,2.5/97.5 % over seeds,2.68517,0.237242
+ZL_join,H_suffix_given_stem,nontarget,ts2020_calB,21,50,1.59547,1.42006,1.76508,0.129282,2.5/97.5 % over seeds,2.2634,0.292616
+ZL_join,H_suffix_given_stem,nontarget,ts2020_RT,13,50,1.65197,1.55177,1.78822,0.068285,2.5/97.5 % over seeds,3.4577,0.236109
+ZL_join,H_suffix_given_stem,nontarget,trigram_86,003:86,50,1.50209,1.46627,1.5418,0.0204787,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,18.8486,0.385994
+ZL_join,H_suffix_given_stem,nontarget,bigram_573,001:573,50,1.36312,1.31374,1.40723,0.0261602,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,20.0671,0.52496
+ZL_join,H_suffix_given_stem,nontarget,shuffle_lines,,5,1.88808,1.88808,1.88808,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_join,mi_prefix_suffix,nontarget,real,,1,0.18302,0.172023,0.194017,0.00561071,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,mi_prefix_suffix,nontarget,ts2020_default,1,50,0.192925,0.157145,0.254724,0.0303147,2.5/97.5 % over seeds,-0.326721,-0.00990446
+ZL_join,mi_prefix_suffix,nontarget,ts2020_calA,1,50,0.192925,0.157145,0.254724,0.0303147,2.5/97.5 % over seeds,-0.326721,-0.00990446
+ZL_join,mi_prefix_suffix,nontarget,ts2020_calB,21,50,0.197153,0.156689,0.242167,0.0319908,2.5/97.5 % over seeds,-0.441764,-0.0141324
+ZL_join,mi_prefix_suffix,nontarget,ts2020_RT,13,50,0.213416,0.146977,0.300707,0.041784,2.5/97.5 % over seeds,-0.727442,-0.0303954
+ZL_join,mi_prefix_suffix,nontarget,trigram_86,003:86,50,0.102264,0.0906597,0.109744,0.00518084,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,15.5874,0.0807558
+ZL_join,mi_prefix_suffix,nontarget,bigram_573,001:573,50,0.0911719,0.0828736,0.10161,0.0050832,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,18.069,0.0918483
+ZL_join,mi_prefix_suffix,nontarget,shuffle_lines,,5,0.18302,0.18302,0.18302,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_join,productivity_slope,nontarget,real,,1,0.328373,0.292084,0.364663,0.0185152,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,productivity_slope,nontarget,ts2020_default,1,50,0.30596,0.273111,0.339392,0.0179297,2.5/97.5 % over seeds,1.25006,0.0224131
+ZL_join,productivity_slope,nontarget,ts2020_calA,1,50,0.30596,0.273111,0.339392,0.0179297,2.5/97.5 % over seeds,1.25006,0.0224131
+ZL_join,productivity_slope,nontarget,ts2020_calB,21,50,0.310024,0.260427,0.334643,0.0199044,2.5/97.5 % over seeds,0.921886,0.0183496
+ZL_join,productivity_slope,nontarget,ts2020_RT,13,50,0.300507,0.250951,0.335728,0.0241832,2.5/97.5 % over seeds,1.15231,0.0278665
+ZL_join,productivity_slope,nontarget,trigram_86,003:86,50,0.424847,0.407184,0.441887,0.00986256,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-9.7818,-0.0964735
+ZL_join,productivity_slope,nontarget,bigram_573,001:573,50,0.482377,0.468361,0.500397,0.00873983,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-17.6209,-0.154004
+ZL_join,productivity_slope,nontarget,shuffle_lines,,5,0.328373,0.328373,0.328373,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_join,stem_dispersion,nontarget,real,,1,0.474173,0.430658,0.517688,0.0222015,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,stem_dispersion,nontarget,ts2020_default,1,50,0.390062,0.313687,0.509805,0.0554382,2.5/97.5 % over seeds,1.5172,0.0841108
+ZL_join,stem_dispersion,nontarget,ts2020_calA,1,50,0.390062,0.313687,0.509805,0.0554382,2.5/97.5 % over seeds,1.5172,0.0841108
+ZL_join,stem_dispersion,nontarget,ts2020_calB,21,50,0.338929,0.260328,0.509723,0.0674439,2.5/97.5 % over seeds,2.00528,0.135244
+ZL_join,stem_dispersion,nontarget,ts2020_RT,13,50,0.431459,0.367032,0.520966,0.0438167,2.5/97.5 % over seeds,0.974833,0.0427139
+ZL_join,stem_dispersion,nontarget,trigram_86,003:86,50,0.29896,0.270455,0.326846,0.0180284,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,9.71873,0.175213
+ZL_join,stem_dispersion,nontarget,bigram_573,001:573,50,0.00481907,0.00449572,0.00541609,0.00027228,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,1723.79,0.469354
+ZL_join,stem_dispersion,nontarget,shuffle_lines,,5,0.475402,0.473801,0.476091,0.00106268,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),-1.15675,-0.00122925
+ZL_join,jaccard_stem_sections,nontarget,real,,1,0.296408,0.246012,0.346805,0.0257125,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,jaccard_stem_sections,nontarget,ts2020_default,1,50,0.255952,0.227765,0.309132,0.022596,2.5/97.5 % over seeds,1.79041,0.040456
+ZL_join,jaccard_stem_sections,nontarget,ts2020_calA,1,50,0.255952,0.227765,0.309132,0.022596,2.5/97.5 % over seeds,1.79041,0.040456
+ZL_join,jaccard_stem_sections,nontarget,ts2020_calB,21,50,0.245688,0.209491,0.315524,0.0263442,2.5/97.5 % over seeds,1.9253,0.0507205
+ZL_join,jaccard_stem_sections,nontarget,ts2020_RT,13,50,0.266465,0.230971,0.329076,0.0287706,2.5/97.5 % over seeds,1.04078,0.0299437
+ZL_join,jaccard_stem_sections,nontarget,trigram_86,003:86,50,0.178422,0.169262,0.18843,0.0059014,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,19.993,0.117987
+ZL_join,jaccard_stem_sections,nontarget,bigram_573,001:573,50,0.110747,0.100701,0.120206,0.00517192,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,35.898,0.185662
+ZL_join,jaccard_stem_sections,nontarget,shuffle_lines,,5,0.296408,0.296408,0.296408,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_join,jsd_stem_sections,nontarget,real,,1,0.262547,0.2207,0.304394,0.0213505,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,jsd_stem_sections,nontarget,ts2020_default,1,50,0.234701,0.160082,0.28893,0.036865,2.5/97.5 % over seeds,0.755351,0.027846
+ZL_join,jsd_stem_sections,nontarget,ts2020_calA,1,50,0.234701,0.160082,0.28893,0.036865,2.5/97.5 % over seeds,0.755351,0.027846
+ZL_join,jsd_stem_sections,nontarget,ts2020_calB,21,50,0.243595,0.13199,0.302643,0.045808,2.5/97.5 % over seeds,0.413729,0.0189521
+ZL_join,jsd_stem_sections,nontarget,ts2020_RT,13,50,0.217177,0.138536,0.276811,0.0420424,2.5/97.5 % over seeds,1.07916,0.0453704
+ZL_join,jsd_stem_sections,nontarget,trigram_86,003:86,50,0.384562,0.356985,0.41136,0.0146248,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-8.34298,-0.122015
+ZL_join,jsd_stem_sections,nontarget,bigram_573,001:573,50,0.516135,0.485271,0.551703,0.0187693,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-13.5108,-0.253587
+ZL_join,jsd_stem_sections,nontarget,shuffle_lines,,5,0.262547,0.262547,0.262547,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_join,jsd_suffix_AB,nontarget,real,,1,0.092834,0.0787264,0.106942,0.00719774,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,jsd_suffix_AB,nontarget,ts2020_default,1,50,0.00506829,0.000953405,0.0146218,0.00376394,2.5/97.5 % over seeds,23.3175,0.0877657
+ZL_join,jsd_suffix_AB,nontarget,ts2020_calA,1,50,0.00506829,0.000953405,0.0146218,0.00376394,2.5/97.5 % over seeds,23.3175,0.0877657
+ZL_join,jsd_suffix_AB,nontarget,ts2020_calB,21,50,0.00420239,0.00122998,0.00872737,0.00256604,2.5/97.5 % over seeds,34.5402,0.0886316
+ZL_join,jsd_suffix_AB,nontarget,ts2020_RT,13,50,0.00540598,0.000848104,0.0150954,0.0045177,2.5/97.5 % over seeds,19.3524,0.087428
+ZL_join,jsd_suffix_AB,nontarget,trigram_86,003:86,50,0.00134756,0.000763086,0.00209949,0.000418907,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,218.393,0.0914865
+ZL_join,jsd_suffix_AB,nontarget,bigram_573,001:573,50,0.00274456,0.000777623,0.00431957,0.00103311,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,87.2019,0.0900894
+ZL_join,jsd_suffix_AB,nontarget,shuffle_lines,,5,0.092834,0.092834,0.092834,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_join,n_stems_k,check,real,,1,335,288.469,381.531,23.7405,"page bootstrap of 001/002, normal (x +- 1.96 SD)",,
+ZL_join,n_stems_k,check,ts2020_default,1,50,459.4,335.675,544.975,62.1098,2.5/97.5 % over seeds,-2.0029,-124.4
+ZL_join,n_stems_k,check,ts2020_calA,1,50,459.4,335.675,544.975,62.1098,2.5/97.5 % over seeds,-2.0029,-124.4
+ZL_join,n_stems_k,check,ts2020_calB,21,50,472.3,274.9,557.875,79.5257,2.5/97.5 % over seeds,-1.72649,-137.3
+ZL_join,n_stems_k,check,ts2020_RT,13,50,438.3,303.45,530.975,72.5099,2.5/97.5 % over seeds,-1.42463,-103.3
+ZL_join,n_stems_k,check,trigram_86,003:86,50,724.9,693.225,759,18.5211,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,-21.0517,-389.9
+ZL_join,n_stems_k,check,bigram_573,001:573,50,908.74,865.225,967,26.2623,2.5/97.5 % over seeds; metrics of 002 on other seeds of the same config,-21.8466,-573.74
+ZL_join,n_stems_k,check,shuffle_lines,,5,335,335,335,0,2.5/97.5 % over seeds; 001 (order metrics) + 002 (paradigms),,0
+ZL_join,top50_coverage,check,real,,1,0.306621,,,,,,
+ZL_join,top50_coverage,check,ts2020_default,1,50,0.362978,0.298861,0.473578,0.0568507,2.5/97.5 % over seeds,-0.991314,-0.0563569
+ZL_join,top50_coverage,check,ts2020_calA,1,50,0.362978,0.298861,0.473578,0.0568507,2.5/97.5 % over seeds,-0.991314,-0.0563569
+ZL_join,top50_coverage,check,ts2020_calB,21,50,0.376112,0.304053,0.597518,0.0871407,2.5/97.5 % over seeds,-0.797461,-0.0694913
+ZL_join,top50_coverage,check,ts2020_RT,13,50,0.378446,0.314466,0.480766,0.0565067,2.5/97.5 % over seeds,-1.2711,-0.0718253
+ZL_join,top50_coverage,check,trigram_86,003:86,50,0.176485,0.168528,0.184946,0.00480451,2.5/97.5 % over seeds; seeds 8600..8649 as in 003,27.0863,0.130136
+ZL_join,top50_coverage,check,bigram_573,001:573,0,,,,,not computed,,
+ZL_join,top50_coverage,check,shuffle_lines,,0,,,,,not computed,,
