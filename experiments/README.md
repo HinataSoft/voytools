@@ -18,6 +18,8 @@ Výsledky jdou do `results/NNN_short_name/` (stejné číslo a jméno):
 | `*.png` | grafy (matplotlib), malé |
 | `meta.json` | parametry, časy, počet seedů (zapisuje `run_seeds`) |
 
+Souhrn stavu napříč experimenty: `results/SYNTHESIS.md` (udržuje Cowork po každém experimentu).
+
 Pravidla:
 
 1. **Nulové modely ve stejném běhu.** Každá metrika se počítá pro reálný text i pro každý nulový
@@ -41,6 +43,10 @@ Pravidla:
 
 | # | Název | Stav | Otázka |
 |---|---|---|---|
-| 001 | autocopy_calibration | hotovo (001-autocopy-calibration) | kalibrace autokopírovacího generátoru na ZL; které vlastnosti textu zůstanou nevysvětlené |
-| 002 | paradigm_coherence | hotovo (větev exp/002-paradigm-coherence) | chovají se kmeny a afixy jako paradigma, nebo jako šablona? |
-| 003 | autocopy_strict | hotovo (provisional) | stačí vázat editace gramatikou slova (trigram/slot), aby generátor trefil cíle, a co tím vysvětlí? |
+| 001 | autocopy_calibration | hotovo (krit. 1 nesplněno: H2 nedosažitelné bigramovými editacemi; provizorní null p_new 0,5, loss 0,20) | kalibrace autokopírovacího generátoru na ZL; které vlastnosti textu zůstanou nevysvětlené |
+| 002 | paradigm_coherence | hotovo (kmeny: paradigma užší než šablona, širší než kopírování; varianty rozptýlené; cmi_excess sám nerozlišuje) | chovají se kmeny a afixy jako paradigma, nebo jako šablona? |
+| 003 | autocopy_strict | hotovo (krit. 1 nesplněno: loss 0,27, H2 3,3; žádná necílová vlastnost nereprodukována) | editace vázané gramatikou slova (trigram/slot): trefí generátor H2, a které necílové vlastnosti tím začne reprodukovat? |
+| 004 | selfcitation_port | zadáno | port generátoru Timm & Schinner (R&T 2026, MIT) jako kanonický kopírovací null; validace proti tab. 7; velikost slovníku jako konfound |
+| 005 | structured_template_null | zadáno | null „strukturovaný umělý jazyk“ s paradigmaty a tématem z konstrukce; kolik ingrediencí potřebuje k napodobení 002; robustnost afixů/parseru; A/B vs písař |
+| 006 | topic_at_distance | zadáno | sdílení kmenů mezi stránkami: sekce vs vzdálenost vs písař; popisky (ok-/ot-) a jejich stopa v textu |
+| 007 | position_vs_content | zadáno | rozklad informace o afixech/kmenech mezi pozici, sekci a písaře; reziduální MI(d) po odečtení pozice |
