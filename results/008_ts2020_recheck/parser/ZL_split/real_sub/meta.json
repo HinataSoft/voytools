@@ -1,0 +1,71 @@
+{
+  "name": "008_parser",
+  "params": {
+    "tag": "ZL_split",
+    "variants": [
+      "default",
+      "positional",
+      "bpe_mid",
+      "bpe_mid3"
+    ],
+    "positional_affixes": {
+      "prefixes": [
+        "p",
+        "f",
+        "t",
+        "k",
+        "cph",
+        "cfh",
+        "cth",
+        "ckh"
+      ],
+      "suffixes": [
+        "m",
+        "g",
+        "am",
+        "om"
+      ]
+    },
+    "prefixes": [
+      "che",
+      "cho",
+      "ol",
+      "qo",
+      "ch",
+      "d",
+      "l",
+      "o",
+      "s",
+      "sh",
+      "t",
+      "y"
+    ],
+    "suffixes": [
+      "aiin",
+      "ain",
+      "al",
+      "am",
+      "ar",
+      "chy",
+      "dy",
+      "ol",
+      "or",
+      "d",
+      "l",
+      "r",
+      "s",
+      "y"
+    ],
+    "bpe_merges": 64,
+    "k_bias": {
+      "point": 50,
+      "sub": 10,
+      "null": 10
+    },
+    "top_stems": 200
+  },
+  "n_seeds_requested": 100,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 21:43:35",
+  "updated": "2026-10-27 21:43:35"
+}
