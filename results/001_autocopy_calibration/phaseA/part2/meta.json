@@ -1,0 +1,55 @@
+{
+  "name": "001_phaseA",
+  "params": {
+    "file": "ZL3b-n.txt",
+    "space_policy": "split",
+    "seeds": "0:57600/4:2",
+    "reps": 3,
+    "metrics": "target+edge/token MI",
+    "axes": {
+      "window": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "p_copy_exact": [
+        0.1,
+        0.2,
+        0.35,
+        0.5
+      ],
+      "p_new": [
+        0.02,
+        0.05,
+        0.15
+      ],
+      "p_two_edits": [
+        0.1,
+        0.25,
+        0.5
+      ],
+      "recency": [
+        0.0,
+        0.3
+      ],
+      "edit_type_probs": [
+        [
+          0.6,
+          0.2,
+          0.2
+        ],
+        [
+          0.4,
+          0.3,
+          0.3
+        ]
+      ]
+    }
+  },
+  "n_seeds_requested": 432,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 11:59:18",
+  "updated": "2026-10-27 12:28:03",
+  "n_seeds_done": 432
+}

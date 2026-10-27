@@ -1,0 +1,13 @@
+{
+  "name": "001_real_bootstrap",
+  "params": {
+    "file": "GC2a-n.txt",
+    "space_policy": "join",
+    "unit": "page"
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 12:59:42",
+  "updated": "2026-10-27 13:02:41",
+  "n_seeds_done": 200
+}
