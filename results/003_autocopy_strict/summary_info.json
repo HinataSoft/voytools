@@ -1,0 +1,26 @@
+{
+  "phaseA_runs": 1296,
+  "phaseA_configs": 432,
+  "phaseA_suspicious_runs": 0,
+  "phaseA_min_gram_trigram_trigram_model": 1.0,
+  "phaseA_min_gram_slot_slot_model": 0.98678067001284,
+  "phaseA_grammar_fallbacks": 0,
+  "phaseB_ZL_split_runs": 500,
+  "phaseB_ZL_split_suspicious_runs": 0,
+  "phaseB_ZL_split_grammar_fallbacks": 0,
+  "phaseB_GC_join_runs": 500,
+  "phaseB_GC_join_suspicious_runs": 0,
+  "phaseB_GC_join_grammar_fallbacks": 0,
+  "phaseB_GC_split_runs": 500,
+  "phaseB_GC_split_suspicious_runs": 0,
+  "phaseB_GC_split_grammar_fallbacks": 0,
+  "phaseB_ZL_join_runs": 500,
+  "phaseB_ZL_join_suspicious_runs": 0,
+  "phaseB_ZL_join_grammar_fallbacks": 0,
+  "choice_on_ZL_split": {
+    "trigram": 86,
+    "slot": 316,
+    "recommended": 86
+  },
+  "criterion1_met": false
+}

@@ -1,0 +1,22 @@
+{
+  "name": "003_diag",
+  "params": {
+    "bases": [
+      86,
+      316
+    ],
+    "variants": [
+      "no_edits",
+      "grammar_words_only",
+      "seed_vocab_only",
+      "base",
+      "edits_only_no_copy"
+    ],
+    "reps": 3
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 17:37:41",
+  "updated": "2026-10-27 17:40:07",
+  "n_seeds_done": 30
+}
