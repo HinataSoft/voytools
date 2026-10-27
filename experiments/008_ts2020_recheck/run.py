@@ -523,9 +523,15 @@ SYN_ROWS = [  # (row, property, metric, where the real value and the null values
     (4, "Sufixů na kmen (≥5 tok.)", "mean_suffixes_per_stem", "paradigm"),
     (5, "Hapax (podíl typů)", "hapax_share", "profile"),
     (6, "jsd_suffix_AB (frekvence sufixů A vs B)", "jsd_suffix_AB", "paradigm"),
-    (7, "Sekční informace kmenů nezávislá na písaři I(kmen; sekce | písař)", "stem__I_sec_g_hand", "decomp"),
-    (8, "Strmý pokles sdílení kmenů se vzdáleností (cos, K=30, spec+size, log_dist)", "cos_k30_s_log_dist", "pages"),
-    (9, "Žádná reziduální MI za d = 2 (plocha d=2..10, kmen, korekce pc)", "stem_area_2_10_pc", "mi"),
+    (7, "Sekční informace kmenů nezávislá na písaři (007)", "stem__I_sec_g_hand", "decomp"),
+    (7, "Sekční informace kmenů nezávislá na písaři (007)", "stem__I_sec_g_pos", "decomp"),
+    (7, "Sekční informace kmenů nezávislá na písaři (007)", "stem__I_sec", "decomp"),
+    (8, "Strmý pokles sdílení kmenů se vzdáleností (006; cos, K=30)", "cos_k30_s_log_dist", "pages"),
+    (8, "Strmý pokles sdílení kmenů se vzdáleností (006; cos, K=30)", "cos_k30_contrast_adj", "pages"),
+    (9, "Žádná reziduální MI za d = 2 (007; kmen)", "stem_area_2_10_pc", "mi"),
+    (9, "Žádná reziduální MI za d = 2 (007; kmen)", "stem_area_2_10_line", "mi"),
+    (9, "Žádná reziduální MI za d = 2 (007; kmen)", "stem_mi_d3_pc", "mi"),
+    (9, "Žádná reziduální MI za d = 2 (007; kmen)", "stem_mi_d1_pc", "mi"),
 ]
 
 
@@ -571,7 +577,7 @@ def synthesis_table(dec: pd.DataFrame, mi: pd.DataFrame, pages: pd.DataFrame) ->
                     f"results/008_ts2020_recheck/007/decomp/{r['dataset']}/{r['null']}",
                     "" if not df.empty else "no null: ts2020 generates Eva only")
         elif kind == "pages":
-            for _, r in pages[(pages["metric"] == "cos") & (pages["K"] == 30) & (pages["term"] == "s_log_dist")
+            for _, r in pages[(pages["metric"] == "cos") & (pages["K"] == 30) & (pages["term"] == metric[8:])
                               & pages["null"].isin(["selfcitation_21", "template_005"])].iterrows():
                 null = "ts2020" if r["null"] == "selfcitation_21" else "tmpl"
                 df = load_runs(OUT / "006" / "parts" / r["combo"] / r["null"])
@@ -579,19 +585,22 @@ def synthesis_table(dec: pd.DataFrame, mi: pd.DataFrame, pages: pd.DataFrame) ->
                     f"results/008_ts2020_recheck/006/parts/{r['combo']}/{r['null']}",
                     "" if not df.empty else "no null: ts2020 generates Eva only")
         elif kind == "mi":
+            u, rest = metric.split("_", 1)
+            stat, corr = rest.rsplit("_", 1)
             for tag in TAGS:
                 point = load_runs(R007 / "mi" / tag / "real_point")
-                real = float(S7.curve_scalars(S7.corrected(point, "stem", "pc")).iloc[0]["area_2_10"])
+                real = float(S7.curve_scalars(S7.corrected(point, u, corr)).iloc[0][stat])
                 for s, null in (("selfcitation", "ts2020"), ("template", "tmpl")):
                     df = load_runs(OUT / "007" / "mi" / tag / s)
-                    vals = S7.curve_scalars(S7.corrected(df, "stem", "pc"))["area_2_10"] if not df.empty else None
+                    vals = S7.curve_scalars(S7.corrected(df, u, corr))[stat] if not df.empty else None
                     add(tag, null, real, vals, f"results/008_ts2020_recheck/007/mi/{tag}/{s}",
                         "" if vals is not None else "no null: ts2020 generates Eva only")
     out = pd.DataFrame(rows)
     # verdict per row and null: reproduces in every set that has the null (ts2020: ZL split and join)
-    v = out[out["n_seeds"] > 0].groupby(["row", "null"])["reproduces"].agg(["all", "any", "size"])
-    out["verdict"] = [("ano" if v.loc[(r, n), "all"] else ("částečně" if v.loc[(r, n), "any"] else "ne"))
-                      if (r, n) in v.index else "" for r, n in zip(out["row"], out["null"])]
+    key = ["row", "metric", "null"]
+    v = out[out["n_seeds"] > 0].groupby(key)["reproduces"].agg(["all", "any", "size"])
+    out["verdict"] = [("ano" if v.loc[k, "all"] else ("částečně" if v.loc[k, "any"] else "ne"))
+                      if k in v.index else "" for k in zip(out["row"], out["metric"], out["null"])]
     return out
 
 
@@ -614,7 +623,7 @@ def cmd_summarize(args) -> None:
     n = {"decomp": len(dec), "mi": len(mi), "pages": len(pages), "synthesis": len(syn)}
     write_meta(OUT, "008_ts2020_recheck", {"z_limit": Z_LIMIT, "n_null": N_NULL, "nulls_007": list(NULLS7),
                                            "nulls_006": list(NULLS6)}, n_rows=n)
-    print(syn[["row", "dataset", "null", "real", "null_mean", "z", "reproduces", "verdict"]].to_string())
+    print(syn[["row", "metric", "dataset", "null", "real", "null_mean", "z", "reproduces", "verdict"]].to_string())
 
 
 def main(argv=None) -> None:
