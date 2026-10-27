@@ -1,0 +1,101 @@
+source,length,rank,count,share,n_lines,signature
+ctl:italian_prose,4,1,3,0.012048,249,<other> | <other> <other>
+ctl:italian_prose,4,2,2,0.0080321,249,| <other> | |to
+ctl:italian_prose,4,3,2,0.0080321,249,<other> |a <other> |
+ctl:italian_prose,4,4,2,0.0080321,249,|to <other> | <other>
+ctl:italian_prose,4,5,2,0.0080321,249,<other> | |a de|
+ctl:italian_prose,4,6,2,0.0080321,249,c|e <other> <other> d|
+ctl:italian_prose,4,7,2,0.0080321,249,<other> <other> |a |a
+ctl:italian_prose,4,8,2,0.0080321,249,<other> | <other> |
+ctl:italian_prose,4,9,2,0.0080321,249,<other> <other> <other> |a
+ctl:italian_prose,4,10,1,0.0040161,249,|ti |a |e <other>
+ctl:italian_prose,4,11,1,0.0040161,249,|a s|a d| |no
+ctl:italian_prose,4,12,1,0.0040161,249,|a de| | <other>
+ctl:italian_prose,4,13,1,0.0040161,249,de|a s|e d| <other>
+ctl:italian_prose,4,14,1,0.0040161,249,| |i |ti c|
+ctl:italian_prose,4,15,1,0.0040161,249,d| |a | <other>
+ctl:italian_prose,4,16,1,0.0040161,249,c|e |a <other> |i
+ctl:italian_prose,4,17,1,0.0040161,249,| <other> |i s|a
+ctl:italian_prose,4,18,1,0.0040161,249,<other> s| | <other>
+ctl:italian_prose,4,19,1,0.0040161,249,|a c|e |o <other>
+ctl:italian_prose,4,20,1,0.0040161,249,<other> |o d| <other>
+ctl:italian_prose,5,1,3,0.0092593,324,<other> <other> | <other> <other>
+ctl:italian_prose,5,2,2,0.0061728,324,s| |no <other> | <other>
+ctl:italian_prose,5,3,1,0.0030864,324,| <other> |no | n|
+ctl:italian_prose,5,4,1,0.0030864,324,<other> |i | s| <other>
+ctl:italian_prose,5,5,1,0.0030864,324,s| c|e de| <other> n|
+ctl:italian_prose,5,6,1,0.0030864,324,de| | |a de| c|
+ctl:italian_prose,5,7,1,0.0030864,324,|no <other> d| c|a <other>
+ctl:italian_prose,5,8,1,0.0030864,324,<other> de| | <other> c|
+ctl:italian_prose,5,9,1,0.0030864,324,d| | <other> <other> d|
+ctl:italian_prose,5,10,1,0.0030864,324,s| |e d| <other> <other>
+ctl:italian_prose,5,11,1,0.0030864,324,de| <other> <other> <other> d|
+ctl:italian_prose,5,12,1,0.0030864,324,<other> |i | s| |o
+ctl:italian_prose,5,13,1,0.0030864,324,|i |a s|a <other> |ta
+ctl:italian_prose,5,14,1,0.0030864,324,| <other> <other> <other> |no
+ctl:italian_prose,5,15,1,0.0030864,324,<other> c|e <other> <other> c|
+ctl:italian_prose,5,16,1,0.0030864,324,p| | <other> s| |a
+ctl:italian_prose,5,17,1,0.0030864,324,s|a <other> <other> n| |e
+ctl:italian_prose,5,18,1,0.0030864,324,<other> c| | |o |i
+ctl:italian_prose,5,19,1,0.0030864,324,|e |e <other> s|e <other>
+ctl:italian_prose,5,20,1,0.0030864,324,d| p| s|e |ta <other>
+ctl:italian_prose,6,1,1,0.0030303,330,d| |e <other> d| |no |
+ctl:italian_prose,6,2,1,0.0030303,330,| <other> c| |o <other> |
+ctl:italian_prose,6,3,1,0.0030303,330,de| | |a |e c| <other>
+ctl:italian_prose,6,4,1,0.0030303,330,|to | <other> c|e |a s|e
+ctl:italian_prose,6,5,1,0.0030303,330,c|e <other> |ti |i |i |no
+ctl:italian_prose,6,6,1,0.0030303,330,| <other> <other> |i <other> |
+ctl:italian_prose,6,7,1,0.0030303,330,<other> |i c| | | <other>
+ctl:italian_prose,6,8,1,0.0030303,330,|a <other> p| |a d| |ta
+ctl:italian_prose,6,9,1,0.0030303,330,|a s|a <other> <other> <other> |ta
+ctl:italian_prose,6,10,1,0.0030303,330,<other> n| |ta |a c|a |a
+ctl:italian_prose,6,11,1,0.0030303,330,d| <other> <other> <other> | <other>
+ctl:italian_prose,6,12,1,0.0030303,330,c|e p| <other> c|e n| <other>
+ctl:italian_prose,6,13,1,0.0030303,330,|a |e |e s|e <other> |no
+ctl:italian_prose,6,14,1,0.0030303,330,| <other> |i <other> |to |
+ctl:italian_prose,6,15,1,0.0030303,330,| |to <other> |e s| <other>
+ctl:italian_prose,6,16,1,0.0030303,330,|no <other> <other> c|a |a <other>
+ctl:italian_prose,6,17,1,0.0030303,330,|o s|e <other> n| |to |
+ctl:italian_prose,6,18,1,0.0030303,330,<other> <other> |e s| c|e |
+ctl:italian_prose,6,19,1,0.0030303,330,<other> |a <other> <other> <other> |
+ctl:italian_prose,6,20,1,0.0030303,330,|e <other> | <other> |i d|
+ctl:italian_prose,7,1,1,0.0026042,384,|a | <other> |a s|a <other> <other>
+ctl:italian_prose,7,2,1,0.0026042,384,<other> |a <other> d| |a p| <other>
+ctl:italian_prose,7,3,1,0.0026042,384,| |a | | |a <other> |e
+ctl:italian_prose,7,4,1,0.0026042,384,de| <other> <other> | <other> |e c|e
+ctl:italian_prose,7,5,1,0.0026042,384,|no <other> |no | <other> d| <other>
+ctl:italian_prose,7,6,1,0.0026042,384,|e <other> <other> s| |to <other> |
+ctl:italian_prose,7,7,1,0.0026042,384,de|a s| |a |a de|a s| |a
+ctl:italian_prose,7,8,1,0.0026042,384,<other> | |a |ta |i | <other>
+ctl:italian_prose,7,9,1,0.0026042,384,d| <other> <other> | |o d| |o
+ctl:italian_prose,7,10,1,0.0026042,384,<other> <other> |a | <other> |to |
+ctl:italian_prose,7,11,1,0.0026042,384,<other> <other> <other> | <other> <other> <other>
+ctl:italian_prose,7,12,1,0.0026042,384,| |o <other> |o | <other> <other>
+ctl:italian_prose,7,13,1,0.0026042,384,<other> <other> | | |to | |no
+ctl:italian_prose,7,14,1,0.0026042,384,s|a | | |o |i | |
+ctl:italian_prose,7,15,1,0.0026042,384,|ti | <other> s|a |a d| |i
+ctl:italian_prose,7,16,1,0.0026042,384,|o | | <other> <other> |ti c|
+ctl:italian_prose,7,17,1,0.0026042,384,<other> de|a |e | |ta <other> |e
+ctl:italian_prose,7,18,1,0.0026042,384,| | <other> p| | |a |e
+ctl:italian_prose,7,19,1,0.0026042,384,|e | <other> |e <other> p| <other>
+ctl:italian_prose,7,20,1,0.0026042,384,c| |a <other> d| |a <other> |
+ctl:italian_prose,8,1,1,0.0020747,482,|a | <other> | <other> | |no |
+ctl:italian_prose,8,2,1,0.0020747,482,s|a d| |a d| <other> |a c|e de|
+ctl:italian_prose,8,3,1,0.0020747,482,<other> <other> s| <other> |a | |o |
+ctl:italian_prose,8,4,1,0.0020747,482,|e <other> <other> <other> |e <other> s|e <other>
+ctl:italian_prose,8,5,1,0.0020747,482,<other> <other> s| p| <other> |ti <other> <other>
+ctl:italian_prose,8,6,1,0.0020747,482,|a | |no |e <other> | | <other>
+ctl:italian_prose,8,7,1,0.0020747,482,|no | |e de| <other> |i | |no
+ctl:italian_prose,8,8,1,0.0020747,482,de| | |o |a <other> |e | n|
+ctl:italian_prose,8,9,1,0.0020747,482,|ti | <other> |i <other> <other> |i c|e
+ctl:italian_prose,8,10,1,0.0020747,482,n| <other> d| <other> <other> d| <other> |
+ctl:italian_prose,8,11,1,0.0020747,482,<other> <other> |e <other> de| |o d| <other>
+ctl:italian_prose,8,12,1,0.0020747,482,<other> |e s|e <other> n| <other> <other> |
+ctl:italian_prose,8,13,1,0.0020747,482,<other> <other> |ti <other> d| <other> n| p|
+ctl:italian_prose,8,14,1,0.0020747,482,de|a s|a |a c|a s|a |a | c|e
+ctl:italian_prose,8,15,1,0.0020747,482,<other> |i |i |i de| |ti | <other>
+ctl:italian_prose,8,16,1,0.0020747,482,|i <other> | <other> |ti | <other> |ti
+ctl:italian_prose,8,17,1,0.0020747,482,<other> |o <other> |a |ti |i |ti |
+ctl:italian_prose,8,18,1,0.0020747,482,|e <other> | |o c|e <other> <other> |e
+ctl:italian_prose,8,19,1,0.0020747,482,| n| <other> <other> <other> |o <other> de|a
+ctl:italian_prose,8,20,1,0.0020747,482,|o | |e s|e |e |e <other> |a

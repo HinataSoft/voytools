@@ -1,0 +1,101 @@
+source,length,rank,count,share,n_lines,signature
+ctl:culpeper_prose,4,1,6,0.024096,249,<other> <other> <other> <other>
+ctl:culpeper_prose,4,2,4,0.016064,249,th| <other> <other> <other>
+ctl:culpeper_prose,4,3,3,0.012048,249,<other> th| <other> |
+ctl:culpeper_prose,4,4,3,0.012048,249,| | <other> th|
+ctl:culpeper_prose,4,5,2,0.0080321,249,<other> <other> | th|
+ctl:culpeper_prose,4,6,2,0.0080321,249,<other> | <other> <other>
+ctl:culpeper_prose,4,7,2,0.0080321,249,<other> th| <other> a|d
+ctl:culpeper_prose,4,8,2,0.0080321,249,<other> th| <other> <other>
+ctl:culpeper_prose,4,9,2,0.0080321,249,<other> <other> <other> th|
+ctl:culpeper_prose,4,10,2,0.0080321,249,<other> th| th|t a|
+ctl:culpeper_prose,4,11,1,0.0040161,249,<other> a| |s s|
+ctl:culpeper_prose,4,12,1,0.0040161,249,s| s| h| <other>
+ctl:culpeper_prose,4,13,1,0.0040161,249,<other> t| th| <other>
+ctl:culpeper_prose,4,14,1,0.0040161,249,<other> a| | <other>
+ctl:culpeper_prose,4,15,1,0.0040161,249,a|d <other> t| |t
+ctl:culpeper_prose,4,16,1,0.0040161,249,h| <other> | a|
+ctl:culpeper_prose,4,17,1,0.0040161,249,| <other> <other> |t
+ctl:culpeper_prose,4,18,1,0.0040161,249,f| <other> <other> h|
+ctl:culpeper_prose,4,19,1,0.0040161,249,<other> a| <other> <other>
+ctl:culpeper_prose,4,20,1,0.0040161,249,<other> th| |er |
+ctl:culpeper_prose,5,1,2,0.0061728,324,<other> w| <other> | <other>
+ctl:culpeper_prose,5,2,2,0.0061728,324,<other> w| <other> a| |
+ctl:culpeper_prose,5,3,2,0.0061728,324,|n th| <other> | th|
+ctl:culpeper_prose,5,4,1,0.0030864,324,<other> |n <other> |s |t
+ctl:culpeper_prose,5,5,1,0.0030864,324,| | h| | <other>
+ctl:culpeper_prose,5,6,1,0.0030864,324,th|t |s th| |n a|
+ctl:culpeper_prose,5,7,1,0.0030864,324,| | th| h| w|
+ctl:culpeper_prose,5,8,1,0.0030864,324,s| s| | <other> |r
+ctl:culpeper_prose,5,9,1,0.0030864,324,t| | th| | a|d
+ctl:culpeper_prose,5,10,1,0.0030864,324,s| <other> t| | |t
+ctl:culpeper_prose,5,11,1,0.0030864,324,| |y s| <other> a|
+ctl:culpeper_prose,5,12,1,0.0030864,324,a| th| t| | <other>
+ctl:culpeper_prose,5,13,1,0.0030864,324,| th| <other> a|d |es
+ctl:culpeper_prose,5,14,1,0.0030864,324,<other> b| th| <other> w|
+ctl:culpeper_prose,5,15,1,0.0030864,324,<other> | <other> |t |s
+ctl:culpeper_prose,5,16,1,0.0030864,324,|t s| <other> a| |
+ctl:culpeper_prose,5,17,1,0.0030864,324,| <other> |er | <other>
+ctl:culpeper_prose,5,18,1,0.0030864,324,<other> | |y | |
+ctl:culpeper_prose,5,19,1,0.0030864,324,|er | | <other> |
+ctl:culpeper_prose,5,20,1,0.0030864,324,th| |n |y <other> |t
+ctl:culpeper_prose,6,1,2,0.0060606,330,th| <other> <other> th| |t |s
+ctl:culpeper_prose,6,2,1,0.0030303,330,<other> t| <other> |n a| th|
+ctl:culpeper_prose,6,3,1,0.0030303,330,|y s| |es w| <other> <other>
+ctl:culpeper_prose,6,4,1,0.0030303,330,|s a|d <other> <other> |y |
+ctl:culpeper_prose,6,5,1,0.0030303,330,<other> |t <other> th| |er <other>
+ctl:culpeper_prose,6,6,1,0.0030303,330,| | | th| t| |
+ctl:culpeper_prose,6,7,1,0.0030303,330,|s | | h| a|d th|
+ctl:culpeper_prose,6,8,1,0.0030303,330,<other> <other> |t |n | <other>
+ctl:culpeper_prose,6,9,1,0.0030303,330,<other> a|d <other> | <other> <other>
+ctl:culpeper_prose,6,10,1,0.0030303,330,b| <other> |er | <other> th|t
+ctl:culpeper_prose,6,11,1,0.0030303,330,th| th| | | th| |es
+ctl:culpeper_prose,6,12,1,0.0030303,330,|s t| b| |t |s <other>
+ctl:culpeper_prose,6,13,1,0.0030303,330,a| h| |t |s <other> a|
+ctl:culpeper_prose,6,14,1,0.0030303,330,<other> a|d |s | <other> |t
+ctl:culpeper_prose,6,15,1,0.0030303,330,| | <other> | f| |r
+ctl:culpeper_prose,6,16,1,0.0030303,330,s| <other> | s| <other> <other>
+ctl:culpeper_prose,6,17,1,0.0030303,330,<other> s|s <other> <other> <other> |
+ctl:culpeper_prose,6,18,1,0.0030303,330,| | |er a| th| b|
+ctl:culpeper_prose,6,19,1,0.0030303,330,|n <other> <other> |n f| <other>
+ctl:culpeper_prose,6,20,1,0.0030303,330,|n th| |s a|d <other> |t
+ctl:culpeper_prose,7,1,1,0.0026042,384,b| a|d <other> | p| |n th|
+ctl:culpeper_prose,7,2,1,0.0026042,384,a| th| |s |y | th| h|
+ctl:culpeper_prose,7,3,1,0.0026042,384,|t a|d <other> <other> t| th| |es
+ctl:culpeper_prose,7,4,1,0.0026042,384,th| <other> b| |y |t <other> |n
+ctl:culpeper_prose,7,5,1,0.0026042,384,<other> a|d th| s|s a| | <other>
+ctl:culpeper_prose,7,6,1,0.0026042,384,<other> <other> |n th| |t | <other>
+ctl:culpeper_prose,7,7,1,0.0026042,384,w| h| | <other> | th| |
+ctl:culpeper_prose,7,8,1,0.0026042,384,f| t| <other> <other> <other> |t |t
+ctl:culpeper_prose,7,9,1,0.0026042,384,|n <other> <other> | th| <other> |t
+ctl:culpeper_prose,7,10,1,0.0026042,384,<other> th| | | th| |y a|d
+ctl:culpeper_prose,7,11,1,0.0026042,384,|n s|s a|d p| <other> th| <other>
+ctl:culpeper_prose,7,12,1,0.0026042,384,| a|d <other> <other> | a| t|
+ctl:culpeper_prose,7,13,1,0.0026042,384,| |y t| th| <other> | |er
+ctl:culpeper_prose,7,14,1,0.0026042,384,| <other> th| th|t | |t |n
+ctl:culpeper_prose,7,15,1,0.0026042,384,| th| <other> a|d s|s |s s|s
+ctl:culpeper_prose,7,16,1,0.0026042,384,<other> a| |t <other> |t <other> a|
+ctl:culpeper_prose,7,17,1,0.0026042,384,<other> | th| s|s | s| a|d
+ctl:culpeper_prose,7,18,1,0.0026042,384,<other> |t a|d <other> <other> a|d b|
+ctl:culpeper_prose,7,19,1,0.0026042,384,t| <other> <other> |n <other> |n |
+ctl:culpeper_prose,7,20,1,0.0026042,384,<other> |n <other> a|d th| <other> |
+ctl:culpeper_prose,8,1,1,0.0020747,482,|t |n |n <other> | s| t| th|
+ctl:culpeper_prose,8,2,1,0.0020747,482,|s <other> <other> s| <other> |t s| a|d
+ctl:culpeper_prose,8,3,1,0.0020747,482,|s <other> <other> |t |t <other> | w|
+ctl:culpeper_prose,8,4,1,0.0020747,482,<other> <other> th| |es f| | a| th|
+ctl:culpeper_prose,8,5,1,0.0020747,482,<other> <other> th| <other> a| | | p|
+ctl:culpeper_prose,8,6,1,0.0020747,482,<other> |r | | <other> b| | t|
+ctl:culpeper_prose,8,7,1,0.0020747,482,<other> s| th| p| |n <other> <other> h|
+ctl:culpeper_prose,8,8,1,0.0020747,482,<other> s| | h| <other> th| <other> p|
+ctl:culpeper_prose,8,9,1,0.0020747,482,th| <other> | w| w| <other> |n th|
+ctl:culpeper_prose,8,10,1,0.0020747,482,| b| <other> a|d <other> a|d <other> <other>
+ctl:culpeper_prose,8,11,1,0.0020747,482,| th| |t |n | |s |s |s
+ctl:culpeper_prose,8,12,1,0.0020747,482,|s |t |s | th| a|d <other> f|
+ctl:culpeper_prose,8,13,1,0.0020747,482,| | | | <other> a|d <other> t|
+ctl:culpeper_prose,8,14,1,0.0020747,482,<other> th| <other> | | th| |es |s
+ctl:culpeper_prose,8,15,1,0.0020747,482,| <other> t| <other> <other> |n th| |
+ctl:culpeper_prose,8,16,1,0.0020747,482,f| a| th| |es | | s| <other>
+ctl:culpeper_prose,8,17,1,0.0020747,482,a|d s| |n | f| |r s| <other>
+ctl:culpeper_prose,8,18,1,0.0020747,482,| |y <other> <other> | <other> <other> s|s
+ctl:culpeper_prose,8,19,1,0.0020747,482,| t| t| | th|t th| a| |er
+ctl:culpeper_prose,8,20,1,0.0020747,482,| <other> <other> th| |n | <other> w|

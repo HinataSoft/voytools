@@ -1,0 +1,101 @@
+source,length,rank,count,share,n_lines,signature
+GC_join,4,1,23,0.083942,274,<other> <other> <other> <other>
+GC_join,4,2,7,0.025547,274,<other> <other> <other> 8|
+GC_join,4,3,5,0.018248,274,<other> 1o| <other> <other>
+GC_join,4,4,4,0.014599,274,8| <other> <other> <other>
+GC_join,4,5,4,0.014599,274,<other> |9 <other> <other>
+GC_join,4,6,3,0.010949,274,<other> <other> o| <other>
+GC_join,4,7,3,0.010949,274,<other> <other> <other> |9
+GC_join,4,8,3,0.010949,274,<other> <other> <other> o|
+GC_join,4,9,3,0.010949,274,<other> <other> <other> |
+GC_join,4,10,2,0.0072993,274,<other> <other> o| |89
+GC_join,4,11,2,0.0072993,274,4o|9 <other> <other> <other>
+GC_join,4,12,2,0.0072993,274,|am <other> <other> o|9
+GC_join,4,13,2,0.0072993,274,4o| <other> |oe 8|
+GC_join,4,14,2,0.0072993,274,<other> o| | o|9
+GC_join,4,15,2,0.0072993,274,<other> o|9 |9 <other>
+GC_join,4,16,2,0.0072993,274,<other> <other> 2|9 <other>
+GC_join,4,17,2,0.0072993,274,<other> <other> 8| <other>
+GC_join,4,18,2,0.0072993,274,<other> <other> o|9 <other>
+GC_join,4,19,2,0.0072993,274,<other> | <other> <other>
+GC_join,4,20,2,0.0072993,274,<other> <other> 1c|9 <other>
+GC_join,5,1,10,0.031153,321,<other> <other> <other> <other> <other>
+GC_join,5,2,2,0.0062305,321,<other> <other> 1o| <other> |
+GC_join,5,3,2,0.0062305,321,<other> <other> <other> <other> |am
+GC_join,5,4,2,0.0062305,321,<other> |9 <other> 4o|9 <other>
+GC_join,5,5,2,0.0062305,321,<other> <other> <other> 8| <other>
+GC_join,5,6,2,0.0062305,321,8| <other> 1o| <other> <other>
+GC_join,5,7,2,0.0062305,321,<other> <other> <other> <other> |
+GC_join,5,8,1,0.0031153,321,<other> <other> |am <other> |am
+GC_join,5,9,1,0.0031153,321,<other> |am o|9 <other> 8|
+GC_join,5,10,1,0.0031153,321,<other> 1o| 1c| 8| |9
+GC_join,5,11,1,0.0031153,321,<other> <other> | <other> |9
+GC_join,5,12,1,0.0031153,321,<other> |9 <other> <other> |
+GC_join,5,13,1,0.0031153,321,<other> |9 <other> 1o| 8|
+GC_join,5,14,1,0.0031153,321,<other> <other> 1c| 8| 1|9
+GC_join,5,15,1,0.0031153,321,1o| 1o| <other> 1o| <other>
+GC_join,5,16,1,0.0031153,321,<other> <other> 1o| |oe 8|
+GC_join,5,17,1,0.0031153,321,<other> 1o| 8| <other> 1|
+GC_join,5,18,1,0.0031153,321,<other> <other> 1o| 8| |9
+GC_join,5,19,1,0.0031153,321,<other> <other> | 1| |oe
+GC_join,5,20,1,0.0031153,321,<other> 4o|am 1o| <other> |
+GC_join,6,1,3,0.0087719,342,<other> <other> <other> <other> <other> <other>
+GC_join,6,2,2,0.005848,342,<other> <other> |9 <other> <other> <other>
+GC_join,6,3,2,0.005848,342,<other> o|am <other> <other> <other> <other>
+GC_join,6,4,2,0.005848,342,<other> <other> <other> <other> 8| |
+GC_join,6,5,2,0.005848,342,o| <other> <other> <other> <other> <other>
+GC_join,6,6,2,0.005848,342,<other> <other> <other> 8| <other> <other>
+GC_join,6,7,1,0.002924,342,<other> |oe |9 <other> |am |9
+GC_join,6,8,1,0.002924,342,<other> <other> <other> |oe <other> |9
+GC_join,6,9,1,0.002924,342,|9 <other> 8| <other> <other> |9
+GC_join,6,10,1,0.002924,342,| <other> <other> 1o| 8| 2|9
+GC_join,6,11,1,0.002924,342,<other> 1o| <other> 1| 1| 1|
+GC_join,6,12,1,0.002924,342,<other> 8| <other> 8| 1o| o|9
+GC_join,6,13,1,0.002924,342,<other> <other> |9 <other> <other> 1o|
+GC_join,6,14,1,0.002924,342,o| 1o| <other> <other> <other> |
+GC_join,6,15,1,0.002924,342,<other> <other> 4o| <other> <other> 1|9
+GC_join,6,16,1,0.002924,342,<other> 1| <other> 8| o|am |9
+GC_join,6,17,1,0.002924,342,| | |9 <other> <other> <other>
+GC_join,6,18,1,0.002924,342,<other> 2|9 o| |9 4o| <other>
+GC_join,6,19,1,0.002924,342,<other> 1o| |oe <other> <other> |9
+GC_join,6,20,1,0.002924,342,<other> | <other> <other> |am 4o|
+GC_join,7,1,3,0.0083333,360,<other> <other> <other> <other> <other> <other> <other>
+GC_join,7,2,2,0.0055556,360,<other> | <other> <other> <other> <other> <other>
+GC_join,7,3,1,0.0027778,360,|am <other> <other> 8| |oe 8| <other>
+GC_join,7,4,1,0.0027778,360,|9 <other> o| <other> <other> | |
+GC_join,7,5,1,0.0027778,360,<other> 1o| 8| 8| <other> 1| |89
+GC_join,7,6,1,0.0027778,360,4o|am |9 | 1o| 1| <other> 1|
+GC_join,7,7,1,0.0027778,360,<other> <other> <other> 1o| 8| <other> 8|
+GC_join,7,8,1,0.0027778,360,<other> <other> 2|9 8| |9 |oe <other>
+GC_join,7,9,1,0.0027778,360,<other> <other> 8| <other> <other> 1o| 8|
+GC_join,7,10,1,0.0027778,360,8| <other> 4o|9 <other> <other> 1| 1c|
+GC_join,7,11,1,0.0027778,360,<other> 1o| o|am 1o| | | <other>
+GC_join,7,12,1,0.0027778,360,o| 1o| <other> <other> 1o| <other> o|
+GC_join,7,13,1,0.0027778,360,<other> <other> |oe 2|9 1| <other> 1o|
+GC_join,7,14,1,0.0027778,360,<other> 1o| 1| 1| 4o|am 8| <other>
+GC_join,7,15,1,0.0027778,360,<other> <other> 1| <other> 8| 4o|am o|
+GC_join,7,16,1,0.0027778,360,4o|9 <other> <other> <other> <other> <other> o|9
+GC_join,7,17,1,0.0027778,360,<other> 1o| o|am <other> <other> 1o| <other>
+GC_join,7,18,1,0.0027778,360,o| <other> |am <other> o| |am <other>
+GC_join,7,19,1,0.0027778,360,8| <other> <other> 8| <other> o|9 8|
+GC_join,7,20,1,0.0027778,360,<other> | o| 1| | | <other>
+GC_join,8,1,2,0.0041494,482,<other> <other> 8| <other> <other> <other> <other> <other>
+GC_join,8,2,1,0.0020747,482,8| o|9 <other> |9 8| o|am o| o|
+GC_join,8,3,1,0.0020747,482,<other> |am <other> |9 <other> 2|9 <other> <other>
+GC_join,8,4,1,0.0020747,482,o| |9 o| <other> o| <other> <other> 8|
+GC_join,8,5,1,0.0020747,482,<other> o|9 o|9 8| o|9 |am |9 <other>
+GC_join,8,6,1,0.0020747,482,8| <other> |9 o|9 |9 |9 <other> <other>
+GC_join,8,7,1,0.0020747,482,<other> <other> o| o|9 8| <other> <other> <other>
+GC_join,8,8,1,0.0020747,482,8| |9 |9 |9 <other> |9 |89 <other>
+GC_join,8,9,1,0.0020747,482,<other> <other> <other> <other> <other> <other> <other> |9
+GC_join,8,10,1,0.0020747,482,|9 <other> |oe 4o| <other> 4o|9 1o| 8|
+GC_join,8,11,1,0.0020747,482,o|9 1o| <other> 1o| <other> <other> 1|9 8|
+GC_join,8,12,1,0.0020747,482,<other> <other> o| 1o| <other> 1o| o| <other>
+GC_join,8,13,1,0.0020747,482,|am <other> 4o|9 <other> |oe <other> | <other>
+GC_join,8,14,1,0.0020747,482,<other> 1| 1| |oe <other> 8| | 1c|
+GC_join,8,15,1,0.0020747,482,o| 1c| 1| |9 <other> <other> 1c|9 <other>
+GC_join,8,16,1,0.0020747,482,o|9 o|9 |am | |9 |9 1c| <other>
+GC_join,8,17,1,0.0020747,482,4o| o| 1| 8| o| <other> o|9 4o|89
+GC_join,8,18,1,0.0020747,482,<other> <other> 4o| <other> <other> 4o| 8| <other>
+GC_join,8,19,1,0.0020747,482,<other> 1c|9 4o|9 4o|9 <other> |9 2|9 8|
+GC_join,8,20,1,0.0020747,482,<other> 1o| |9 <other> <other> <other> <other> 8|
