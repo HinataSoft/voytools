@@ -39,3 +39,16 @@
   p_new = 0,5 (jen horní mez), míchání v řádcích, page bootstrap reálného textu. Bodové hodnoty reálného textu
   přepočteny a shodují se s 001 na 1e-15 (`real/*/check_vs_001.json`). Gramatičnost bigramových vzorků 001
   dopočtena na týchž vzorcích (stejné seedy, stejné volání, 5 seedů; `bigram001/`).
+
+## Průběh
+
+* Pilot (ZL split, window 32, p_new 0,15, p_copy_exact 0,5): trigram sníží H2 z 3,56 (bigram) na ~3,35,
+  slot téměř vůbec (3,57). Generování 4–7 s na vzorek, s cílovými metrikami ~7 s na běh.
+* Fáze A (4 procesy, ~45 min): min loss 0,267 (config 86, trigram); H2 v mřížce ≥ 3,17; recency 0,3 vždy
+  špatně (share_near až 0,82).
+* Fáze B (4 procesy po sadách, ~70 min): pořadí na ZL split se proti fázi A téměř nezměnilo; config 86
+  nejlepší na 3 ze 4 sad.
+* `bigramgram`: gramatičnost vzorků 001 na týchž seedech; shodu vzorků potvrzuje H2 = H2 z 001 (rozdíl 0).
+* Mimo spec `diag` (ZL split, 3 seedy): rozklad přebytku H2 – kopie bez editací ≈ reálné H2, slova
+  z gramatiky 2,99, editace seed slov 3,25–3,35.
+* Kontrola kompatibility: celá sada testů prošla i v Python 3.10 / pandas 2.3.

@@ -43,3 +43,4 @@ Pravidla:
 |---|---|---|---|
 | 001 | autocopy_calibration | zadáno | kalibrace autokopírovacího generátoru na ZL; které vlastnosti textu zůstanou nevysvětlené |
 | 002 | paradigm_coherence | zadáno | chovají se kmeny a afixy jako paradigma, nebo jako šablona? |
+| 003 | autocopy_strict | hotovo (provisional) | stačí vázat editace gramatikou slova (trigram/slot), aby generátor trefil cíle, a co tím vysvětlí? |
