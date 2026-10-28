@@ -1,0 +1,24 @@
+{
+  "name": "018_memory_winner",
+  "params": {
+    "memory": {
+      "p_prev_page": 0.3,
+      "page_memory": 8.0
+    },
+    "config21": {
+      "p_copy": 0.1,
+      "replace_weights": [
+        20.0,
+        50.0,
+        30.0
+      ],
+      "p_same_position": 14.0
+    },
+    "seed_offset": 2300
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 19:06:32",
+  "updated": "2026-10-28 19:09:25",
+  "n_seeds_done": 30
+}

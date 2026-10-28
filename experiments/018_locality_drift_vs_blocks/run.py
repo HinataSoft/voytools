@@ -378,6 +378,9 @@ def cmd_memory(args) -> None:
     parts.mkdir(parents=True, exist_ok=True)
     params21 = M6.selfcitation_params()
     real = recurrence_ratios(ctx, ctx.real)
+    if args.phase == "table":
+        write_calibration(parts, real)
+        return
     pd.DataFrame([{"source": "real", **real}]).to_csv(parts / "real_profile.csv", index=False)
     if args.phase == "grid":
         grid = mem_grid()
@@ -447,6 +450,11 @@ def write_calibration(parts: Path, real: dict) -> None:
             row[f"ratio_{b}_lo"], row[f"ratio_{b}_hi"] = lo[f"ratio_{b}"], hi[f"ratio_{b}"]
         if "loss_B" in m:
             row["loss_B_lo"], row["loss_B_hi"] = lo["loss_B"], hi["loss_B"]
+            # 004 computes the loss on the seed means of the targets (not the mean of per-seed losses)
+            M4 = _load("exp004", "004_selfcitation_port")
+            target = M4.real_point("split")
+            row["loss_B_of_means"] = float(sum(
+                wgt * ((m[f"t_{f}"] - float(target[f])) / float(target[f])) ** 2 for f, wgt in M4.TARGETS.items()))
             row["far_section_excess_lo"], row["far_section_excess_hi"] = lo["far_section_excess"], hi["far_section_excess"]
         rows.append(pd.DataFrame([row]))
     rows.append(pd.DataFrame([{"config": -2, "p_prev_page": np.nan, "page_memory": np.nan, **real, "n_seeds": 1,
@@ -539,7 +547,7 @@ def main(argv=None) -> None:
     p.add_argument("--seeds", default=None, help="'0:30', '0:200/4:1' or '3,5'")
     p.set_defaults(func=cmd_run)
     p = sub.add_parser("memory")
-    p.add_argument("--phase", default="grid", choices=["grid", "winner"])
+    p.add_argument("--phase", default="grid", choices=["grid", "winner", "table"])
     p.set_defaults(func=cmd_memory)
     p = sub.add_parser("extras")
     p.add_argument("--combo", required=True)
