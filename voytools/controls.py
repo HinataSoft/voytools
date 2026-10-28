@@ -658,3 +658,176 @@ def stream_control(
     out.attrs["control"] = {"name": name, "mode": "prose", "strategy": "stream",
                             "sections": list(dict.fromkeys(labels)), "source_tokens": n_tokens(divisions)}
     return out
+
+
+# --------------------------------------------------------------------------- #
+# experiment 020: controls with their *own* paragraphs in the template's lines and pages
+# --------------------------------------------------------------------------- #
+
+
+def tess_paragraphs(text: str, level: int = 1, target: int | None = None, min_tail: float = 0.5) -> list[Division]:
+    """Perseus/Tesserae ``.tess`` text as divisions whose items are the source's own paragraphs.
+
+    The division label is the first ``level`` components of the citation (``1``: the book); with
+    ``target=None`` every ``.tess`` line (a chapter) is one item.  With ``target`` the sentences of a chapter
+    (:func:`sentences`) are grouped in order until a group has at least ``target`` tokens (a chapter's last
+    group shorter than ``min_tail * target`` joins the previous one) – the weak "sentence boundaries every
+    ~ target tokens" paragraphs of spec 020; groups never cross a chapter.
+
+    >>> tess_paragraphs("<c. m. 1.1> Aa bb. Cc dd. Ee ff.\\n<c. m. 2.1> Gg.", target=4)
+    [('1', [['aa', 'bb', 'cc', 'dd'], ['ee', 'ff']]), ('2', [['gg']])]
+    """
+    pairs = []
+    for ln in text.split("\n"):
+        m = re.match(r"\s*<([^>]*)>\s*(.*)$", ln)
+        if not m:
+            continue
+        ref = m.group(1).split()[-1]
+        label = ".".join(ref.split(".")[:level])
+        if target is None:
+            pairs.append((label, words(m.group(2))))
+            continue
+        groups: list[list[str]] = []
+        cur: list[str] = []
+        for sent in sentences(m.group(2)):
+            cur.extend(words(sent))
+            if len(cur) >= target:
+                groups.append(cur)
+                cur = []
+        if cur:
+            if groups and len(cur) < min_tail * target:
+                groups[-1].extend(cur)
+            else:
+                groups.append(cur)
+        pairs.extend((label, g) for g in groups)
+    return _group(pairs)
+
+
+def merge_short_items(divisions: Sequence[Division], min_item: int) -> list[Division]:
+    """Items shorter than ``min_item`` tokens are joined to the following item of their division (the last to the previous).
+
+    >>> merge_short_items([("d", [["a"], ["b", "c"], ["d"]])], 2)
+    [('d', [['a', 'b', 'c', 'd']])]
+    """
+    out: list[Division] = []
+    for label, items in divisions:
+        merged: list[list[str]] = []
+        carry: list[str] = []
+        for it in items:
+            carry = carry + list(it)
+            if len(carry) >= min_item:
+                merged.append(carry)
+                carry = []
+        if carry:
+            if merged:
+                merged[-1].extend(carry)
+            else:
+                merged.append(carry)
+        out.append((label, merged))
+    return out
+
+
+def layout_paragraphs(
+    items: Sequence[Sequence[str]], line_lengths: Sequence[int]
+) -> tuple[list[list[str]], list[bool], list[int]]:
+    """Fill the template lines with the items in order; an item's end closes the line (shorter) and the next item
+    starts on the next line (the paragraph layout of a manuscript: lines and pages of the template, paragraphs
+    of the source).
+
+    Returns the lines, a flag per line (``True`` = first line of an item) and the item index of every line.
+    Empty items are skipped.  Raises ``ValueError`` if the items run out before the lines do.
+
+    >>> layout_paragraphs([list("abcde"), list("fg")], [3, 3, 3])
+    ([['a', 'b', 'c'], ['d', 'e'], ['f', 'g']], [True, False, True], [0, 0, 1])
+    """
+    lines, firsts, owner = [], [], []
+    k, pos = 0, 0
+    while k < len(items) and not items[k]:
+        k += 1
+    for n in line_lengths:
+        if k >= len(items):
+            raise ValueError(f"items run out after {len(lines)} of {len(line_lengths)} lines")
+        it = items[k]
+        take = it[pos: pos + n]
+        lines.append(list(take))
+        firsts.append(pos == 0)
+        owner.append(k)
+        pos += len(take)
+        if pos >= len(it):
+            k, pos = k + 1, 0
+            while k < len(items) and not items[k]:
+                k += 1
+    return lines, firsts, owner
+
+
+def paragraph_control(
+    divisions: Sequence[Division], template: pd.DataFrame, name: str = "control", min_item: int = 1
+) -> pd.DataFrame:
+    """Token table of a control laid out with :func:`layout_paragraphs`: the template's lines and pages (lines
+    cut short where a paragraph ends), paragraphs = the source's items.
+
+    Items shorter than ``min_item`` tokens are merged first (:func:`merge_short_items`).  Paragraph columns
+    (``par_index``, ``line_in_par``, ``is_par_first_line``, ``is_par_last_line``) are recomputed per page as in
+    the manuscript tables (a page always starts a paragraph index 0); ``par_continues`` marks the tokens of a
+    page whose last paragraph goes on on the next page (the "no end mark" case of spec 020), ``control_item``
+    is the source item of the token.  ``illustration`` = majority division of the page, ``control_division``
+    the line's division, as in :func:`control_table`.  ``attrs['control']`` records the layout.
+    """
+    from .nulls import as_table
+
+    divs = merge_short_items(divisions, min_item) if min_item > 1 else list(divisions)
+    items = [it for _, its in divs for it in its]
+    labels = [lab for lab, its in divs for _ in its]
+    lens = template_lines(template)
+    lines, firsts, owner = layout_paragraphs(items, lens)
+    # crop the template to the realised line lengths (first len(line) tokens of every locus)
+    tok_in_line = template.groupby("locus_id", sort=False).cumcount().to_numpy()
+    want = np.repeat([len(x) for x in lines], lens)
+    tpl = template[tok_in_line < want].reset_index(drop=True)
+    out = as_table(lines, tpl, alphabet="latin", glyph_preset=None)
+    out.attrs.update({"alphabet": "latin", "glyph_preset": None, "source": name})
+    n_tok = np.array([len(x) for x in lines])
+    rep = np.repeat(np.arange(len(lines)), n_tok)
+    first_a = np.asarray(firsts)
+    folio_line = template.groupby("locus_id", sort=False)["folio"].first().to_numpy()
+    page_start = np.ones(len(lines), dtype=bool)
+    page_start[1:] = folio_line[1:] != folio_line[:-1]
+    par_start = first_a | page_start
+    par_idx = np.zeros(len(lines), dtype=int)
+    cur = -1
+    for i in range(len(lines)):
+        cur = 0 if page_start[i] else (cur + 1 if par_start[i] else cur)
+        par_idx[i] = cur
+    page_end = np.ones(len(lines), dtype=bool)
+    page_end[:-1] = page_start[1:]
+    par_end = page_end.copy()
+    par_end[:-1] |= par_start[1:]
+    lip = np.zeros(len(lines), dtype=int)
+    for i in range(1, len(lines)):
+        lip[i] = 0 if par_start[i] else lip[i - 1] + 1
+    continues = np.zeros(len(lines), dtype=bool)
+    continues[:-1] = page_start[1:] & ~first_a[1:]
+    cont_page = pd.Series(continues).groupby(folio_line).transform("any").to_numpy()
+    out["par_index"] = par_idx[rep]
+    out["line_in_par"] = lip[rep]
+    out["is_par_first_line"] = par_start[rep]
+    out["is_par_last_line"] = par_end[rep]
+    out["locator"] = np.where(par_start[rep], "@", "+")
+    out["par_continues"] = cont_page[rep]
+    out["control_item"] = np.asarray(owner)[rep]
+    tidx = out.groupby("locus_id", sort=False).cumcount().to_numpy()
+    out["token_index"] = tidx
+    out["n_tokens"] = n_tok[rep]
+    out["pos_from_end"] = n_tok[rep] - 1 - tidx
+    out["rel_pos"] = np.where(n_tok[rep] > 1, tidx / np.maximum(n_tok[rep] - 1, 1), 0.0)
+    out["is_first"] = tidx == 0
+    out["is_last"] = tidx == n_tok[rep] - 1
+    lab = np.asarray([labels[k] for k in owner], dtype=object)[rep]
+    out["control_division"] = lab
+    major = pd.Series(lab, index=out.index).groupby(out["folio"].to_numpy()).agg(lambda s: s.value_counts().index[0])
+    out["illustration"] = out["folio"].map(major).to_numpy()
+    out.attrs["control"] = {"name": name, "mode": "paragraphs", "strategy": "own paragraphs in template lines",
+                            "sections": list(dict.fromkeys(labels)), "source_tokens": n_tokens(divisions),
+                            "n_items_used": int(max(owner) + 1), "min_item": min_item,
+                            "tokens_laid": int(n_tok.sum()), "template_tokens": int(sum(lens))}
+    return out
