@@ -69,6 +69,11 @@ def test_match_by_count_keeps_counts():
     got = sorted(counts[m] for m in matched)
     assert got in ([2, 3, 5, 9], [2, 5, 5, 9])  # 4 -> nearest 3 or 5
     assert B.match_by_count(df, "hapax", np.random.default_rng(0)) == ([], [])
+    df2 = pd.DataFrame([{"form": ("s",), "n_x": 1, "cls": "shared"}, {"form": ("h1",), "n_x": 1, "cls": "hapax"},
+                        {"form": ("h2",), "n_x": 1, "cls": "hapax"}, {"form": ("n",), "n_x": 40, "cls": "no_counterpart"}])
+    f, m = B.match_by_count(df2, "hapax", np.random.default_rng(0))
+    assert len(f) == len(m) == 1 and m == [("s",)]  # pool exhausted: second hapax dropped, no count-2+ substitute
+    assert B.match_by_count(df2, "no_counterpart", np.random.default_rng(0)) == ([], [])  # 1 is too far from 40
 
 
 def test_gries_dp_and_entropy():

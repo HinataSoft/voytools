@@ -204,12 +204,15 @@ def composition(classes: pd.DataFrame) -> dict:
     return out
 
 
-def match_by_count(classes: pd.DataFrame, cls: str, rng: np.random.Generator, pool_cls: str = "shared") -> tuple[list, list]:
+def match_by_count(classes: pd.DataFrame, cls: str, rng: np.random.Generator, pool_cls: str = "shared",
+                   tol: float = 0.25) -> tuple[list, list]:
     """Forms of ``cls`` and shared forms matched to them by token count (without replacement).
 
-    For every form of the class a shared form with the same ``n_x`` is drawn; when none is left, the
-    shared form with the nearest count (then random).  Returns ``(class_forms, matched_forms)`` as
-    lists of tuples of equal length.
+    For every form of the class (random order) a shared form with the same ``n_x`` is drawn; when none
+    is left, the shared form with the nearest count, accepted only if it differs by at most
+    ``tol * n_x`` (exact for counts up to 3 with the default); forms without a match are dropped, so
+    the two lists are shorter than the class when the pool runs out (hapaxes: shared forms with one
+    token).  Returns ``(class_forms, matched_forms)`` as lists of tuples of equal length.
     """
     target = classes.loc[classes["cls"] == cls, ["form", "n_x"]]
     pool = classes.loc[classes["cls"] == pool_cls, ["form", "n_x"]]
@@ -231,6 +234,8 @@ def match_by_count(classes: pd.DataFrame, cls: str, rng: np.random.Generator, po
             k = c
         else:
             k = min(counts, key=lambda v: (abs(v - c), rng.random()))
+            if abs(k - c) > tol * c:
+                continue
         chosen.append(by_count[k].pop())
         forms.append(f)
         if not by_count[k]:

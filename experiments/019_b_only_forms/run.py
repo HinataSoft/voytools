@@ -616,7 +616,7 @@ def make_plots(comp: pd.DataFrame, prof: pd.DataFrame) -> None:
                     if g.empty or not np.isfinite(g["diff_mean"].iloc[0]):
                         continue
                     r = g.iloc[0]
-                    ax.errorbar(k, r["diff_mean"], yerr=[[r["diff_mean"] - r["diff_lo"]], [r["diff_hi"] - r["diff_mean"]]],
+                    ax.errorbar(k, r["diff_mean"], yerr=[[max(r["diff_mean"] - r["diff_lo"], 0)], [max(r["diff_hi"] - r["diff_mean"], 0)]],
                                 fmt=mk, color=col, ms=4, capsize=2)
                     labels.append(f"{st[:2]}{src[0]}:{cmp}:{cls[:4]}")
                     k += 1
