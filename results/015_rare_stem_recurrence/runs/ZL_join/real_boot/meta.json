@@ -1,0 +1,103 @@
+{
+  "name": "015_ZL_join_real_boot",
+  "params": {
+    "combo": "ZL_join",
+    "source": "real_boot",
+    "bands": {
+      "r": [
+        2,
+        5
+      ],
+      "c": [
+        6,
+        20
+      ]
+    },
+    "variants": {
+      "a": [
+        [
+          "che",
+          "cho",
+          "ol",
+          "qo",
+          "ch",
+          "d",
+          "l",
+          "o",
+          "s",
+          "sh",
+          "t",
+          "y"
+        ],
+        [
+          "aiin",
+          "ain",
+          "al",
+          "am",
+          "ar",
+          "chy",
+          "dy",
+          "ol",
+          "or",
+          "d",
+          "l",
+          "r",
+          "s",
+          "y"
+        ]
+      ],
+      "b": [
+        [
+          "che",
+          "cho",
+          "ol",
+          "qo",
+          "ch",
+          "d",
+          "l",
+          "o",
+          "s",
+          "sh",
+          "t",
+          "y",
+          "p",
+          "f",
+          "k",
+          "cph",
+          "cfh",
+          "cth",
+          "ckh"
+        ],
+        [
+          "aiin",
+          "ain",
+          "al",
+          "am",
+          "ar",
+          "chy",
+          "dy",
+          "ol",
+          "or",
+          "d",
+          "l",
+          "r",
+          "s",
+          "y",
+          "m",
+          "g",
+          "om"
+        ]
+      ]
+    },
+    "n_label_stems": {
+      "a": 339,
+      "b": 330
+    },
+    "n_pages": 207
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 16:58:35",
+  "updated": "2026-10-28 17:01:09",
+  "n_seeds_done": 200
+}

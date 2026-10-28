@@ -1,0 +1,78 @@
+{
+  "name": "015_ctl:celsus_prose_perm_tokens",
+  "params": {
+    "combo": "ctl:celsus_prose",
+    "source": "perm_tokens",
+    "bands": {
+      "r": [
+        2,
+        5
+      ],
+      "c": [
+        6,
+        20
+      ]
+    },
+    "variants": {
+      "a": [
+        [
+          "ali",
+          "con",
+          "sub",
+          "ad",
+          "de",
+          "in",
+          "re",
+          "a",
+          "e",
+          "m",
+          "p",
+          "s"
+        ],
+        [
+          "sque",
+          "bus",
+          "que",
+          "rum",
+          "tur",
+          "is",
+          "um",
+          "us",
+          "a",
+          "e",
+          "i",
+          "m",
+          "s",
+          "t"
+        ]
+      ]
+    },
+    "n_label_stems": {},
+    "n_pages": 207,
+    "control": {
+      "name": "celsus_prose",
+      "mode": "prose",
+      "strategy": "balanced",
+      "sections": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "source_tokens": 62410,
+      "files": [
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.1.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.2.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.3.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.4.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.5.tess"
+      ]
+    }
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 17:09:03",
+  "updated": "2026-10-28 17:09:20",
+  "n_seeds_done": 200
+}
