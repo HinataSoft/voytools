@@ -1,0 +1,101 @@
+{
+  "name": "017_augment",
+  "params": {
+    "set": "R12pA3L",
+    "rules": [
+      "R1",
+      "R2p",
+      "R3a",
+      "R3pp"
+    ],
+    "licence": true,
+    "min_cell": 5,
+    "min_context": 20,
+    "end_ratio": 5.0,
+    "end_glyphs": [
+      "g",
+      "m"
+    ],
+    "licence_min_count": 2,
+    "max_tries": 5,
+    "ts2020_config": 21,
+    "n_null": 30,
+    "rule_lists": {
+      "prefixes": [
+        "che",
+        "cho",
+        "ol",
+        "qo",
+        "ch",
+        "d",
+        "l",
+        "o",
+        "s",
+        "sh",
+        "t",
+        "y",
+        "p",
+        "f",
+        "k",
+        "cph",
+        "cfh",
+        "cth",
+        "ckh"
+      ],
+      "suffixes": [
+        "aiin",
+        "ain",
+        "al",
+        "am",
+        "ar",
+        "chy",
+        "dy",
+        "ol",
+        "or",
+        "d",
+        "l",
+        "r",
+        "s",
+        "y",
+        "m",
+        "g",
+        "om"
+      ]
+    },
+    "profile_prefixes": [
+      "che",
+      "cho",
+      "ol",
+      "qo",
+      "ch",
+      "d",
+      "l",
+      "o",
+      "s",
+      "sh",
+      "t",
+      "y"
+    ],
+    "profile_suffixes": [
+      "aiin",
+      "ain",
+      "al",
+      "am",
+      "ar",
+      "chy",
+      "dy",
+      "ol",
+      "or",
+      "d",
+      "l",
+      "r",
+      "s",
+      "y"
+    ],
+    "generator": "ts2020"
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 19:22:06",
+  "updated": "2026-10-28 19:22:06"
+}
