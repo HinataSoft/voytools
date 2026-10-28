@@ -1,0 +1,61 @@
+{
+  "name": "020_ctl:celsus_sent40_perm_lines",
+  "params": {
+    "combo": "ctl:celsus_sent40",
+    "source": "perm_lines",
+    "variants": {
+      "st": {
+        "unit": "stem",
+        "min_count": 2
+      },
+      "st50": {
+        "unit": "stem",
+        "min_count": 2,
+        "drop_top": 50
+      },
+      "tok": {
+        "unit": "token",
+        "min_count": 2
+      },
+      "ng": {
+        "unit": "stem",
+        "min_count": 2,
+        "gallows": true
+      }
+    },
+    "n_pages": 207,
+    "n_lines": 4128,
+    "n_pars": 831,
+    "n_pages_2pars": 201,
+    "n_open_end": 184,
+    "control": {
+      "name": "celsus_sent40",
+      "mode": "paragraphs",
+      "strategy": "own paragraphs in template lines",
+      "sections": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "source_tokens": 62410,
+      "n_items_used": 647,
+      "min_item": 1,
+      "tokens_laid": 31562,
+      "template_tokens": 34268,
+      "files": [
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.1.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.2.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.3.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.4.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.5.tess"
+      ]
+    }
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 20:16:59",
+  "updated": "2026-10-28 20:23:37",
+  "n_seeds_done": 200
+}

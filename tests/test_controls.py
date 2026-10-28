@@ -269,3 +269,48 @@ def test_crop_and_stream_control():
     assert set(out["illustration"]) <= {"w1", "w2"} and (out["hand"] == out["illustration"]).all()
     with pytest.raises(ValueError):
         C.stream_control([("w1", [["a"] * 5])], crop)
+
+
+# --------------------------------------------------------------------------- #
+# experiment 020: own paragraphs
+# --------------------------------------------------------------------------- #
+
+
+def test_tess_paragraphs_and_merge_short():
+    txt = "<c. m. 1.pr> Aa bb. Cc dd. Ee ff.\n<c. m. 1.1> Gg hh; ii.\n<c. m. 2.1> Jj."
+    assert C.tess_paragraphs(txt) == [("1", [["aa", "bb", "cc", "dd", "ee", "ff"], ["gg", "hh", "ii"]]), ("2", [["jj"]])]
+    assert C.tess_paragraphs(txt, target=4) == [("1", [["aa", "bb", "cc", "dd"], ["ee", "ff"], ["gg", "hh", "ii"]]),
+                                                ("2", [["jj"]])]
+    assert C.tess_paragraphs(txt, target=4, min_tail=1.0) == [("1", [["aa", "bb", "cc", "dd", "ee", "ff"], ["gg", "hh", "ii"]]),
+                                                              ("2", [["jj"]])]
+    assert C.merge_short_items([("d", [["a"], ["b", "c"], ["d"]])], 2) == [("d", [["a", "b", "c", "d"]])]
+
+
+def test_layout_paragraphs():
+    lines, firsts, owner = C.layout_paragraphs([list("abcde"), [], list("fg"), list("hij")], [3, 3, 3, 2])
+    assert lines == [["a", "b", "c"], ["d", "e"], ["f", "g"], ["h", "i"]]
+    assert firsts == [True, False, True, True] and owner == [0, 0, 2, 3]
+    with pytest.raises(ValueError):
+        C.layout_paragraphs([list("ab")], [3, 3])
+
+
+def test_paragraph_control_table():
+    tpl = _template(n_lines=12, page_size=4, seed=2)
+    lens = C.template_lines(tpl)
+    # items: a long one spanning pages, then short ones
+    items = [[f"x{i}" for i in range(sum(lens[:5]) - 1)], ["y1", "y2"], [f"z{i}" for i in range(sum(lens[6:]))]]
+    out = C.paragraph_control([("D1", items[:2]), ("D2", items[2:])], tpl, "test", min_item=1)
+    n_lines = out["locus_id"].nunique()
+    assert n_lines == 12 and len(out) <= len(tpl)
+    per_line = out.groupby("locus_id", sort=False).agg(n=("token", "size"), first=("is_par_first_line", "first"),
+                                                       last=("is_par_last_line", "first"), par=("par_index", "first"),
+                                                       folio=("folio", "first"), cont=("par_continues", "first"))
+    assert (per_line["n"].to_numpy() <= np.asarray(lens)).all()
+    assert per_line["n"].iloc[4] == lens[4] - 1          # item 1 ends one token short of line 5
+    assert per_line["first"].tolist()[:7] == [True, False, False, False, True, True, True]  # page starts + item starts
+    assert per_line["par"].tolist()[:8] == [0, 0, 0, 0, 0, 1, 2, 2]
+    assert per_line["cont"].iloc[0] and per_line["cont"].iloc[5] and not per_line["cont"].iloc[8]  # item z runs to the end
+    assert per_line["last"].iloc[3] and per_line["last"].iloc[4] and not per_line["last"].iloc[6]
+    assert set(out["control_division"]) == {"D1", "D2"} and out.attrs["control"]["mode"] == "paragraphs"
+    assert (out.groupby("locus_id", sort=False)["token_index"].max().to_numpy() == per_line["n"].to_numpy() - 1).all()
+    assert out["rel_pos"].between(0, 1).all()
