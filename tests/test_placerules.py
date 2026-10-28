@@ -191,3 +191,172 @@ def test_apply_rules_r3_conditions_on_previous_last_glyph(df, flat):
     assert (a["token"] == out["token"]).all() and (a["token"] != b["token"]).any()
     with pytest.raises(ValueError):
         PR.apply_place_rules(flat, rules, ("R4",))
+
+
+# ------------------------------------------------------------------ conditional post-processor (017)
+
+
+def _coupled_corpus(n_lines=150, seed=2):
+    """Prefix depends on the suffix (qo- with -dy, d- with -aiin, ch- with -ol) and on the last glyph of
+    the token before (y -> qo, n -> ch); no-prefix tokens start with k after y and t after n."""
+    rng = np.random.default_rng(seed)
+    stems = ["ke", "ka", "te", "ko", "ee", "ol"]
+    lines = []
+    for _ in range(n_lines):
+        n = int(rng.integers(3, 9))
+        toks, prev_last = [], None
+        for i in range(n):
+            s = rng.choice(["dy", "aiin", "ol"])
+            if rng.random() < 0.3 and i > 0:
+                p = ""
+                first = "k" if prev_last == "y" else "t"
+                tok = p + first + rng.choice(stems) + s
+            else:
+                p = {"dy": "qo", "aiin": "d", "ol": "ch"}[s]
+                if prev_last == "y" and rng.random() < 0.6:
+                    p = "qo"
+                tok = p + rng.choice(stems) + s
+            if i == n - 1 and rng.random() < 0.5:
+                tok = tok + "m"
+            toks.append(tok)
+            prev_last = tok[-1]
+        lines.append(toks)
+    return lines
+
+
+PRE2 = ["qo", "o", "ch", "d", "y", "s", "p"]
+SUF2 = ["dy", "aiin", "ol", "m"]
+
+
+def _flat2_corpus(n_lines=150, seed=7):
+    """Random prefix (or none), stem starting with k/t, random suffix (-m everywhere): no rule at all."""
+    rng = np.random.default_rng(seed)
+    stems = ["ke", "ka", "te", "ko", "kee", "tee"]
+    lines = []
+    for _ in range(n_lines):
+        n = int(rng.integers(3, 9))
+        lines.append([rng.choice(PRE2 + [""]) + rng.choice(stems) + rng.choice(SUF2) for _ in range(n)])
+    return lines
+
+
+@pytest.fixture(scope="module")
+def coupled():
+    return make_tokens(_coupled_corpus(), page_size=10)
+
+
+@pytest.fixture(scope="module")
+def flat2():
+    return make_tokens(_flat2_corpus(), page_size=10)
+
+
+@pytest.fixture(scope="module")
+def crules(coupled):
+    return PR.learn_conditional_rules(coupled, PRE2, SUF2, "basic", min_cell=5, min_context=5)
+
+
+def test_learn_conditional_rules_tables_and_support(coupled, crules):
+    assert set(crules.tables) == {"R3", "R3a", "R3b", "R3c", "R3pp"}
+    assert set(crules.uncond) == {"R3", "R3pp"}
+    sup = crules.support().set_index("table")
+    assert (sup["n_contexts_supported"] <= sup["n_contexts"]).all()
+    assert sup.loc["R3", "share_tokens_supported"] > 0.9
+    # the keys of R3a are (last glyph before, suffix): the prefix is determined by the suffix here
+    t = crules.table("R3a")
+    assert set(t.columns) == {"rule", "context", "item", "n", "p"}
+    assert t.groupby("context")["p"].sum().round(9).eq(1.0).all()
+    assert "m" in crules.end_glyphs and crules.r2_inner.sum() == pytest.approx(1.0)
+    assert crules.vocab[coupled["token"].iloc[0]] >= 1
+    assert crules.base.r2["m"] > 0.3
+    with pytest.raises(ValueError):
+        PR.apply_conditional_rules(coupled, crules, ("R3a", "R3b"))
+    with pytest.raises(ValueError):
+        PR.apply_conditional_rules(coupled, crules, ("R9",))
+
+
+def test_identity_tables_change_nothing(coupled):
+    rules = PR.learn_conditional_rules(coupled, PRE2, SUF2, "basic", min_cell=1, min_context=1)
+    out = PR.apply_conditional_rules(coupled, rules, ("R1", "R2p", "R3a", "R3pp"), seed=0)
+    assert out.attrs["n_tokens_changed"] == 0
+    assert out.attrs["rewrite_report"]["R3a"]["support"]["R3a"] == out.attrs["rewrite_report"]["R3a"]["n_candidates"]
+
+
+def test_r3a_keeps_prefix_suffix_coupling_where_r3_breaks_it(flat2, crules):
+    """``flat2`` has random prefixes: R3 (prefix | last glyph before) adds the seam but not the prefix-suffix
+    coupling; R3a (prefix | last glyph before, suffix) adds both."""
+    out3 = PR.apply_conditional_rules(flat2, crules, ("R3",), seed=0)
+    out3a = PR.apply_conditional_rules(flat2, crules, ("R3a",), seed=0)
+    lab0 = PR.token_labels(flat2, PRE2, SUF2, "basic")
+    lab3 = PR.token_labels(out3, PRE2, SUF2, "basic")
+    lab3a = PR.token_labels(out3a, PRE2, SUF2, "basic")
+    assert (lab3a["stem"] == lab0["stem"]).all() and (lab3a["suffix"] == lab0["suffix"]).all()
+    mi0 = PR.mutual_information(lab0["prefix"], lab0["suffix"])
+    mi3 = PR.mutual_information(lab3["prefix"], lab3["suffix"])
+    mi3a = PR.mutual_information(lab3a["prefix"], lab3a["suffix"])
+    assert mi3a > mi3 + 0.2 and mi3a > mi0 + 0.2
+    for out, lab in ((out3, lab3), (out3a, lab3a)):
+        L, R, _ = PR.seam_pairs(out, lab["last_glyph"], lab["prefix"])
+        L0, R0, _ = PR.seam_pairs(flat2, lab0["last_glyph"], lab0["prefix"])
+        assert PR.mutual_information(L, R) > PR.mutual_information(L0, R0)
+    rep = out3a.attrs["rewrite_report"]["R3a"]
+    assert sum(rep["support"].values()) == rep["n_candidates"] and rep["n_changed"] > 0
+    assert out3a.attrs["place_rules_changed"]["R3a"] == rep["n_changed"]
+    assert out3a.attrs["source"].endswith("+R3a")
+
+
+def test_r3c_backs_off_to_r3a_and_r3(flat2, crules):
+    out = PR.apply_conditional_rules(flat2, crules, ("R3c",), seed=1)
+    sup = out.attrs["rewrite_report"]["R3c"]["support"]
+    assert set(sup) == {"R3c", "R3a", "R3", "uncond:R3"}
+    assert sup["R3c"] > 0 and sum(sup.values()) == out.attrs["rewrite_report"]["R3c"]["n_candidates"]
+    strict = PR.learn_conditional_rules(flat2, PRE2, SUF2, "basic", min_cell=10 ** 6, min_context=5)
+    strict.tables, strict.uncond = crules.tables, crules.uncond  # real tables, impossible threshold
+    out2 = PR.apply_conditional_rules(flat2, strict, ("R3a",), seed=1)
+    sup2 = out2.attrs["rewrite_report"]["R3a"]["support"]
+    assert sup2["R3a"] == 0 and sup2["R3"] == 0 and sup2["uncond:R3"] == out2.attrs["rewrite_report"]["R3a"]["n_candidates"]
+
+
+def test_r3pp_rewrites_first_stem_glyph_of_prefixless_tokens_only(flat2, crules):
+    out = PR.apply_conditional_rules(flat2, crules, ("R3pp",), seed=0)
+    lab0 = PR.token_labels(flat2, PRE2, SUF2, "basic")
+    lab1 = PR.token_labels(out, PRE2, SUF2, "basic")
+    changed = out["token"].to_numpy() != flat2["token"].to_numpy()
+    assert changed.any() and (lab0["prefix"][changed] == "").all()
+    assert (lab0["suffix"][changed] == lab1["suffix"][changed]).all()
+    s0, s1 = lab0["stem"][changed], lab1["stem"][changed]
+    assert all(a[1:] == b[1:] and a[0] != b[0] for a, b in zip(s0, s1))
+    first = flat2["is_first"].to_numpy(dtype=bool)
+    assert not changed[first].any()
+
+
+def test_r2p_removes_line_end_glyphs_inside_the_line(flat2, crules):
+    """``flat2`` has -m on 1/6 of all tokens; after R2' the inner tokens carry it about as rarely as the
+    learned corpus, the line-last tokens about as often."""
+    out = PR.apply_conditional_rules(flat2, crules, ("R2p",), seed=0)
+    lab0 = PR.token_labels(flat2, PRE2, SUF2, "basic")
+    lab1 = PR.token_labels(out, PRE2, SUF2, "basic")
+    last = flat2["is_last"].to_numpy(dtype=bool)
+    m0 = (lab0["last_glyph"] == "m")
+    m1 = (lab1["last_glyph"] == "m")
+    assert m0[~last].mean() > 0.1 and m1[~last].mean() < 0.03
+    assert m1[last].mean() > 0.3 and m1[last].mean() > m0[last].mean()
+    rep = out.attrs["rewrite_report"]
+    assert rep["R2p"]["end_glyphs"] == list(crules.end_glyphs) and rep["R2p"]["n_changed"] > 0
+    assert "R2" in rep  # R2' includes R2
+    changed = out["token"].to_numpy() != flat2["token"].to_numpy()
+    assert (lab0["stem"] == lab1["stem"])[~changed].all() and changed[~last].sum() >= m0[~last].sum() * 0.9
+
+
+def test_type_licence_keeps_tokens_in_vocabulary(flat2, crules):
+    out = PR.apply_conditional_rules(flat2, crules, ("R1", "R2p", "R3a", "R3pp"), seed=0, licence=True)
+    changed = out["token"].to_numpy() != flat2["token"].to_numpy()
+    assert changed.any()
+    assert all(crules.vocab.get(t, 0) >= crules.licence_min_count for t in out["token"].to_numpy()[changed])
+    rep = out.attrs["rewrite_report"]
+    assert sum(r["n_rejected"] for r in rep.values()) > 0
+    free = PR.apply_conditional_rules(flat2, crules, ("R1", "R2p", "R3a", "R3pp"), seed=0, licence=False)
+    assert free.attrs["n_tokens_changed"] > out.attrs["n_tokens_changed"]
+    assert all(r["n_rejected"] == 0 for r in free.attrs["rewrite_report"].values())
+    assert out.attrs["licence"] and out.attrs["source"].endswith("+L")
+    a = PR.apply_conditional_rules(flat2, crules, ("R1", "R2p", "R3a"), seed=4)
+    b = PR.apply_conditional_rules(flat2, crules, ("R1", "R2p", "R3a"), seed=4)
+    assert (a["token"] == b["token"]).all()
