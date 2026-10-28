@@ -64,9 +64,10 @@ Join v závorce, kde se liší.
 | typy (calib) | 6 796 | 6 500 (0,3; 1,8) | 8 927 (−1,6; −13) | 9 029 (−1,7; −13) | 8 658 (−1,4; −11) | 9 160 (−1,7; −14) | 9 337 (−1,9; −15) | **6 657 (0,1; 0,8)** |
 | hapax | 0,676 | 0,578 (9,0; 2,8) | 0,645 (2,0; 0,9) | 0,656 (1,1; 0,6) | 0,656 | 0,661 | 0,661 (0,8; 0,4) | 0,569 (7,7; 3,0) |
 
-Počty metrik (65 × sada, kombinovaný verdikt split & join; `metric_lists.csv`): podle z_seed dožene R12pA 6 (+8 jen
-v jedné politice), pokazí 4; R12pA3 dožene 8 (+8), pokazí 4; R123 dožene 4 (+8), pokazí 3; R12pA3L dožene 2 (+2),
-pokazí 2. Podle z_strict: R12pA 8 (+4), R12pA3 9 (+6), R123 2 (+6). Bootstrap reálu je u typových a délkových metrik
+Počty metrik (65 × sada, kombinovaný verdikt split & join; `metric_lists.csv`): podle z_seed dožene R12pA 6 (+10 jen
+v jedné politice), pokazí 5, zhorší 4; R12pA3 dožene 8 (+11), pokazí 7, zhorší 4; R123 dožene 4 (+10), pokazí 4,
+zhorší 4; R12pA3L dožene 2 (+5), pokazí 4. Podle z_strict: R12pA dožene 8 (+7), pokazí 8; R12pA3 9 (+9), pokazí 8;
+R123 2 (+10), pokazí 9. Bootstrap reálu je u typových a délkových metrik
 přísnější (SD typů 168 proti SD seedů 1 126: +2 400 typů je z_boot −13, z_seed −1,7); u švu a pozice naopak přísnější
 SD seedů.
 
