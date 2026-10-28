@@ -173,7 +173,7 @@ def plot(dec: pd.DataFrame) -> None:
 
 def summarize() -> None:
     runs = load_all()
-    runs.to_csv(OUT / "runs.csv", index=False)
+    runs.to_csv(OUT / "runs.csv", index=False, float_format="%.6g")  # all rows, kept < 5 MB
     dec = decomposition_table(runs)
     dec.round(5).to_csv(OUT / "decomposition.csv", index=False)
     residual_table(runs).round(5).to_csv(OUT / "residual_structure.csv", index=False)

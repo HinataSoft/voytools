@@ -5,9 +5,21 @@
       "GC_join",
       "GC_split",
       "ZL_join",
-      "ZL_split"
+      "ZL_split",
+      "ac86:GC_split",
+      "ac86:ZL_split",
+      "ctl:caesar_prose",
+      "ctl:celsus_prose",
+      "ctl:culpeper_prose",
+      "ctl:linnaeus_items",
+      "ctl:linnaeus_prose",
+      "ctl:pliny_prose",
+      "tmpl:GC_split",
+      "tmpl:ZL_split",
+      "ts2020:ZL_join",
+      "ts2020:ZL_split"
     ],
-    "n_rows": 5,
+    "n_rows": 770,
     "by": {
       "pos": "cv_pos",
       "relpos": "cv_relpos",
@@ -59,5 +71,5 @@
     "interval": "point + 2 x quantiles of 80 % page-subsample deviations; nulls: seed quantiles"
   },
   "created": "2026-10-28 07:13:36",
-  "updated": "2026-10-28 07:13:36"
+  "updated": "2026-10-28 07:51:22"
 }
