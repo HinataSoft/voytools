@@ -125,7 +125,7 @@ def plot(scores: pd.DataFrame) -> None:
 
 def summarize() -> None:
     runs = load_all()
-    runs.to_csv(OUT / "runs.csv", index=False)
+    runs.to_csv(OUT / "runs.csv", index=False, float_format="%.6g")  # kept < 5 MB
     long_table(runs, "share", R.SHARE_F).round(5).to_csv(OUT / "stem_sharing.csv", index=False)
     fits = pd.concat([long_table(runs, t, R.MAP_F).assign(target=t) for t in R.TARGETS], ignore_index=True)
     fits.round(5).to_csv(OUT / "mapping_fit.csv", index=False)

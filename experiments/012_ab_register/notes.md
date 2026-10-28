@@ -37,3 +37,14 @@
 
 * První spuštění: bodový řádek (seed −1) měl jiné sloupce než losy → `run_seeds` odmítl; bod se teď píše do
   `runs/point__<sada>/`, losy do `runs/real__<sada>/`.
+* Řídicí skript prvního spuštění (`run012.sh`) ukončil omylem `pkill`; nully v něm doběhly (30/30), značku
+  dokončení jsem doplnil ručně. Tracebacky v logech `012_measure_set_*.log` jsou z prvního (opraveného) pokusu.
+* Šablona 005 na ZL je pomalá (~1–2 min na seed při plném vytížení); celkem ~45 min.
+
+## Výsledek a uzavření
+
+* Report: `results/012_ab_register/report.md`. Hlavní nález: A/B sdílí méně kmenů než poloviny téhož jazyka
+  (i v herbáři), posun sufixů je difúzní (víc tvarů A → `-dy`), přechod skokový, A/B v sufixech ≫ sekce uvnitř B.
+* Nečekané: obě A stránky písaře 3 (f58r, f58v) leží na ose A–B na straně B.
+* Částečné: výřez „písař 3" nerozhodný (A = 2 stránky) – omezení dat, ne kódu.
+* Stav: **hotovo**.
