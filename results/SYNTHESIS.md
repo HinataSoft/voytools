@@ -1,69 +1,70 @@
 # SYNTHESIS – co která vlastnost textu vysvětluje a co ne
 
 Průběžná tabulka: pro každou měřenou vlastnost, který nulový model ji reprodukuje a který ne.
-Aktualizuje se po každém experimentu; čísla jsou z `results/NNN_*/`. **Stav po 001–004** (27. 10. 2026).
+Aktualizuje se po každém experimentu; čísla jsou z `results/NNN_*/`. **Stav po 001–010** (28. 10. 2026).
 
-Nully: **shuf** = míchání tokenů v řádcích; **ac-bi** = autokopírování s bigramovými editacemi (001,
-config 573); **ac-tri** = s trigramovými editacemi (003, config 86); **slot** = slotová nezávislost
-prefix/kmen/sufix (002); **ts2020** = port generátoru Timm & Schinner (004, config 21 „calB“ –
-**kanonický kopírovací null od 004**); **tmpl** = strukturovaná šablona s paradigmaty (005, zatím –).
-„Reprodukuje“ = |z| < 3 vůči SD generátoru přes 50 seedů, v obou sadách (ZL i GC, u ts2020 split i join).
-Pozor: ts2020 má velký rozptyl mezi seedy, takže |z| < 3 někdy znamená jen „reál leží v rozptylu běhů“,
-ne „průměr sedí“ – u takových řádků je uveden i průměr.
+Nully: **ts2020** = port generátoru Timm & Schinner (004, config 21; kanonický kopírovací null; Eva-only →
+jen ZL, split i join); **tmpl** = šablona s paradigmaty, tématem a lokalitou z konstrukce (005); **ac-tri** =
+starší autokopírování (003); **slot**, **perm**, **pos-shuf** (míchání uvnitř poziční třídy), **line-shuf**.
+Kladné kontroly (009): latinská próza (Caesar), lékařská (Celsus) a botanická (Plinius) latina, anglický herbář
+(Culpeper), italská próza, Linnéův katalog – vysázené do layoutu ZL.
+„Reprodukuje“ = |z| < 3 vůči SD nullu; u ts2020 pozor na velký rozptyl mezi seedy (uváděn i průměr).
 
-## 1. Vlastnosti, které zatím **žádný** null nereprodukuje
+## 1. Vlastnosti mimo dosah všech nullů (a zda je mají skutečné texty)
 
-| Vlastnost | Reál (ZL split) | shuf | ac-bi | ac-tri | slot | ts2020 | Poznámka |
-|---|---|---|---|---|---|---|---|
-| Okrajová MI (poslední→první glyf) | 0,185 bit | 0 | 0 | 0 | – | 0,007 (z 40) | žádný null nemá mezislovní mechanismus; R&T: polovinu dělá pár y→q, celý token nepředpoví lépe než poslední glyf → spíš povrchový/ortografický jev; nutný rozklad (008) |
-| Poziční JSD (první glyf řádku vs. střed) | 0,19 | – | 0,002 | 0,001 | – | 0,045 (z 22) | ts2020 má pravidla jen pro začátky řádků; zbytek = rozložení v řádku (Feaster) – spíš písařská/layoutová konvence než obsah |
-| BPE žlab @64 | 1,06 | 0,92 | 0,60 | 0,76–0,88 | – | 0,69 (z 5,7) | i shuf dává 0,92 → část závisí na pořadí tokenů; ts2020 odpovídá R&T (0,65–0,86) |
-| Sufixů na kmen (≥5 tok.) | 5,25 | = reál | 2,3 | 2,7 | 7,8 | 3,8 (z 10) | reál **mezi** kopírováním a nezávislou šablonou; nejde o velikost slovníku (004 krok 3) – **nejsilnější zbývající paradigmatický signál** |
-| Hapax (podíl typů) | 0,676 | = reál | 0,53 | 0,56 | – | 0,58 (z 8) | žádný generátor nedá dost hapaxů; R&T totéž (59–60 %) |
-| `jsd_suffix_AB` (frekvence sufixů A vs B) | 0,088 | = reál | 0,002 | – | 0,0003 | 0,004 (z 33) | **zaměněno s písařem** – kontrola `hand` v 005; generátor A/B nerozlišuje z konstrukce |
+| Vlastnost | Reál ZL split | ts2020 | tmpl | skutečné texty (009) | Poznámka |
+|---|---|---|---|---|---|
+| Síla pozičních vazeb afixů: I(prefix; pozice) | 0,134 bit | 0,063 (47 %, z 17) | 0 | próza ≈ 0, položky ≤ 0,042 | **mimo všechny texty i nully**; ts2020 dává polovinu z pravidel pro začátky řádků |
+| Sekční vazby afixů I(prefix/sufix; sekce \| pozice) | 0,104 / 0,080 | 0,013 / 0,013 | ≈ 0 | ≤ 0,011 / ≤ 0,025 | mimo vše; sekce ≈ A/B ≈ písař – viz A/B níže |
+| Posun sufixů A/B **uvnitř písaře 3, po podmínění pozicí** | 0,047 (95 % neподmíněného), p 0,005 | 0 z konstrukce | 0 | – | dva registry/„jazyky“, ne dvě ruce, ne pozice (005, 008) |
+| Šířka paradigmatu: sufixů na kmen; H(sufix \| kmen) | 5,25; 1,82 bit | 3,8; 1,65 | 4,4; 2,8 | ≤ 2,4; ≤ 0,88 | **mimo všechny texty i nully**: v jazycích jeden tvar převažuje, zde jsou varianty kmene četné a vyrovnané; není velikost slovníku (004) |
+| Hapax (podíl typů) | 0,676 | 0,58 | 0,61 | 0,47–0,67 (Plinius 0,669) | nad všemi generátory; GC 0,70 nad vším |
+| Okrajová MI (d = 1, uvnitř řádku) | 0,185 | 0,007 | 0 | próza 0,02–0,07; katalog 0,30 | uvnitř rozpětí textů; žádný generátor; R&T: půl dělá y→q |
+| Konec řádku: `-m/-g` na posledním místě | 17,5× obohaceno | 7× | 1× | 1,1–2,4× | ortografická konvence konce řádku; `jsd_last_mid` 0,107 mimo všechny texty |
+| Pokles sdílení kmenů se vzdáleností stránek | −0,0099 | −0,0028 (z −2,9 / −3,2, p 0,065) | −0,0009 | próza má také pokles | **na hraně**; kontrast „stejná sekce daleko vs jiná blízko“ nereprodukuje žádný null |
+| BPE žlab @64 | 1,06 | 0,69 (z 5,7) | 0,76 | – | – |
+| **Pod** všemi texty: pořadí tokenů; MI kmenů na d = 1 | 0,9 %; 0,051 | 0,44 %; 0,013 | 0; 0 | ≥ 2,2 %; ≥ 0,091 | Voynich má méně posloupnostní vazby než každá próza i katalog – ale víc než každý generátor |
 
-## 2. Vlastnosti, které ts2020 reprodukuje (vyřazeny jako samostatné indicie smyslu)
+## 2. Vlastnosti, které některý null reprodukuje (vyřazeny jako samostatné indicie)
 
-| Vlastnost | Reál | ts2020 (průměr, z) | Co ji vysvětlilo |
+| Vlastnost | Reál | Reprodukuje | Co ji vysvětlilo |
 |---|---|---|---|
-| `cmi_excess` I(P;S\|kmen) | 0,088 | 0,115 (−1,4) | náhrady podobných glyfů uvnitř slova; ac-bi/ac-tri dávaly dokonce 2–3× víc |
-| `mi_prefix_suffix` (nepodmíněná) | 0,205 | 0,187 (0,7) | dtto – v 002 vypadala jako nejsilnější paradigmatický signál |
-| sklon produktivity sufixů | 0,31 | 0,31 (0,2) | |
-| `jsd_stem_sections` (kmeny podle sekce) | 0,23 | 0,24 (−0,4) | lokální kopírování + sekce jako souvislé bloky stačí |
-| `stem_dispersion` | 0,46 | 0,33 (2,7) | **jen v rozptylu seedů**; průměr pořád pod reálem; ac-bi 0,005 |
-| pořadí tokenů (excess/H) | 0,9 % | 0,44 % (2,5) | dtto, průměr poloviční |
-| `H_suffix_given_stem` | 1,82 | 1,65 (1,9) | |
-| podíl kmenů s >1 sufixem | 0,91 | 0,82 (3,0 / 3,5) | na hraně prahu (nekonzistentní split/join) |
-| Zipf, délky, počet typů, podíl blízkých sousedů, H2 glyfů | – | trefeno kalibrací | cíle kalibrace (loss 0,05) |
-| Jaccard inventáře sufixů mezi sekcemi | 0,96–0,98 | všechny nully | strukturální (uzavřený inventář) |
+| `cmi_excess`, `mi_prefix_suffix`, produktivita, `jsd_stem_sections`, disperze kmenů | – | ts2020; tmpl (3–5 pravidel) | náhrady podobných glyfů v kopírování; paradigma/téma/lokalita jako parametry (004, 005) |
+| Sekční informace kmenů nezávislá na písaři I(kmen; sekce \| písař) | 0,055 | ts2020 0,043 (80 %, z 1,6); tmpl | kopírování v souvislých blocích téhož písaře (008) |
+| Tvar MI(d): vrchol při d = 1, pak nic | – | všechny nully | sdílená vlastnost, ne rozdíl; liší se jen výška vrcholu (008) |
+| Polovina poziční informace tvaru slova | – | ts2020 (pravidla začátků řádků, stejná pozice nad) | 008 |
+| Vertikální podobnost (token nad, 1,15×) | 0,005 přebytek | ts2020 1,14×; **pos-shuf 1,16×** | čistě poziční; Timmův mechanismus „stejná pozice nad“ není potřeba (010) |
+| Záhlaví řádku, šablony řádků | 0,012; +0,007 | pos-shuf, line-shuf; próza | žádná položková struktura nad poziční profil (010) |
+| Sekční složka sdílení nad vzdálenost; stopa popisků v textu | ≈ 0 | – | není co reprodukovat (006) |
+| Zipf, délky, typy, H2, blízcí sousedé, Jaccard inventářů | – | ts2020 / všechny | cíle kalibrace / strukturální |
 
-## 3. Co nully nedokážou trefit kalibrací (cíle)
+## 3. Registrový profil (009) a řádek (010)
 
-| Cíl | Reál | ts2020 calB | ac-tri | Poznámka |
-|---|---|---|---|---|
-| H2 glyfů | 2,69 | 2,62 | 3,33 | **vyřešeno** v 004 (náhrady podobných glyfů, ne libovolné editace) |
-| Hapax | 0,676 | 0,58 | 0,56 | otevřené; snad jiné parametry / delší šablona |
-| loss (5 cílů) | – | 0,052 | 0,269 | kritérium 1 poprvé splněno |
+* Celkově je Voynich nejblíž **próze** (Celsus) a ze všech zdrojů **ts2020**; katalog je dál. Slovník, posloupnost
+  a lokalita = próza ≈ generátor; paradigma = generátor; jediná „položková“ vlastnost = chování začátku a konce
+  řádku. Pozice vzdaluje Voynich ode všeho.
+* Řádek je uzavřená jednotka: mezitokenová vazba (hrana, třídy) **končí na konci řádku** (poměr ≈ 0 proti
+  0,6–1,3 u lámané prózy), ale uvnitř řádku nejsou záhlaví, šablony ani vertikální paralely nad to, co dá pozice.
 
-## 4. Co z toho zatím plyne (opatrně)
+## 4. Co z toho plyne (stav po deseti experimentech)
 
-* Po 004 se obraz změnil: většina „paradigmatických“ nálezů z 002 (vazba prefix–sufix, produktivita,
-  tematické rozdělení kmenů) vzniká i kopírováním s náhradami podobných glyfů a pravidly pro začátky
-  řádků. **Nejsou to indicie smyslu.**
-* Zbývající nevysvětlené vlastnosti se dělí na dvě skupiny. (a) Takové, pro něž generátor nemá
-  mechanismus a přidat ho je levné: okrajová MI (jeden parametr „začátek slova podle konce předchozího“),
-  poziční profil (Feasterův drift), A/B rozdíl (dva startovní řádky). Tyhle samy o sobě smysl neprokážou;
-  stanou se indicií, až se ukáže, že mají **strukturu závislou na obsahu** (na kmeni/třídě slova, ne jen
-  na posledním glyfu). (b) Takové, které generátor měl vytvořit a nevytvořil: **šířka paradigmat**
-  (5,3 vs 3,8 sufixu na kmen při stejné velikosti slovníku), hloubka BPE žlabu, hapaxy. To jsou
-  kandidáti pro další práci.
-* Varování k ts2020: tabulky podobnosti glyfů a pravidla „curve/line“ jsou ručně odvozené z rukopisu,
-  generátor tedy zná tvary slov Voynichu; je to silný null, ne slabý.
+* **Variabilita textu je převážně formální:** pozice v řádku, registr A/B (uvnitř písaře), konec řádku a
+  vnitroslovní obměna (mnoho vyrovnaných variant kmene). Posloupnostní vazby jsou slabší než v každém
+  skutečném textu, položková struktura chybí, téma na dálku chybí. Jako **próza** se text nechová a jako
+  **katalog** také ne.
+* **Co žádný model nevysvětlil** a co by mohlo nést informaci: (a) šířka a vyrovnanost paradigmat, (b) síla
+  pozičních a registrových vazeb afixů, (c) A/B jako registr uvnitř písaře, (d) hapaxy, (e) okrajová vazba a
+  konec řádku. Všechno jsou vlastnosti *tvaru slov*, ne pořadí slov. Pokud text nese význam, nese ho spíš
+  volba tvaru (afixů) než syntax – nebo je afixová variace řízena pozicí a registrem a význam v ní není.
+* **Rozhodující otázka pro další kolo:** je vnitroslovní variace (sufixy daného kmene) vysvětlitelná pozicí
+  v řádku + registrem + písařem? Pokud ano, „paradigma“ je poziční jev a zbývá jen hapax a A/B. Pokud ne,
+  je to první kandidát na obsahovou volbu.
+* Chybí dva nully, na které se otázka smyslu nejvíc odvolává: **lidský blábol** (Gaskell & Bowern, data na
+  GitHubu) a **šifra skutečného textu** (Naibbe v klonu R&T) jako referenční body na registrovém profilu.
 
 ## 5. Otevřené body
 
-005 strukturovaná šablona (kolik ingrediencí potřebuje umělý systém na řádek 1), robustnost afixů,
-A/B vs písař · 006 téma na dálku, popisky · 007 pozice vs obsah, MI(d) · **nové:** 008 struktura
-paradigmat – jsou sady sufixů kmenů sdílené (flexivní třídy), nebo idiosynkratické (historie kopírování)?
-Rozklad okrajové MI na páry a její závislost na třídě slova/sekci/A-B · později: A/B a poziční
-mechanismus v ts2020, lidský blábol (Gaskell), dobové jazyky z Boxerova repa jako kladné kontroly.
+011 rozklad vnitroslovní variace (H(sufix | kmen) vs pozice, registr, písař; totéž pro latinu a ts2020) ·
+012 A/B jako registr: systematické mapování sufixů, sdílené kmeny, pozvolnost podle pořadí psaní, písař 3 ·
+013 lidský blábol (Gaskell) a Naibbe šifra na registrovém profilu 009/010 · rozklad okrajové MI na páry ·
+ts2020 s delší pamětí přes stránky · fyzické pořadí bifolií (Layfield & Davis 2026) · dvojice herbář–farmacie.
