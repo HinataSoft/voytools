@@ -1,0 +1,68 @@
+{
+  "name": "020_ctl:pliny_sent40_real_boot",
+  "params": {
+    "combo": "ctl:pliny_sent40",
+    "source": "real_boot",
+    "variants": {
+      "st": {
+        "unit": "stem",
+        "min_count": 2
+      },
+      "st50": {
+        "unit": "stem",
+        "min_count": 2,
+        "drop_top": 50
+      },
+      "tok": {
+        "unit": "token",
+        "min_count": 2
+      },
+      "ng": {
+        "unit": "stem",
+        "min_count": 2,
+        "gallows": true
+      }
+    },
+    "n_pages": 207,
+    "n_lines": 4128,
+    "n_pars": 850,
+    "n_pages_2pars": 203,
+    "n_open_end": 193,
+    "control": {
+      "name": "pliny_sent40",
+      "mode": "paragraphs",
+      "strategy": "own paragraphs in template lines",
+      "sections": [
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30"
+      ],
+      "source_tokens": 164848,
+      "n_items_used": 657,
+      "min_item": 1,
+      "tokens_laid": 31563,
+      "template_tokens": 34268,
+      "files": [
+        "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.4.books_16-20.tess",
+        "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.5.books_21-25.tess",
+        "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.6.books_26-30.tess"
+      ]
+    }
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 19:42:13",
+  "updated": "2026-10-28 19:42:13"
+}
