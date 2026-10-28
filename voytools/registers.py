@@ -207,7 +207,7 @@ def mapping_fit(M: pd.DataFrame, count_x: pd.Series, count_y: pd.Series) -> dict
     (``count_x``, ``count_y``, indexed like M) before and after relabelling X by the assignment.
     The assignment itself is returned under ``matching`` (dict a -> b).
     """
-    w = M.to_numpy(dtype=float)
+    w = M.to_numpy(dtype=float, copy=True)
     tot = w.sum()
     labels = list(M.index)
     if tot <= 0:
@@ -255,11 +255,11 @@ def page_scores(
     pages = list(pd.unique(d["page"]))
     tab = tab.reindex(pages)
     lab = lab.reindex(pages)
-    ca = tab[lab == a].sum(axis=0).to_numpy(dtype=float)
-    cb = tab[lab == b].sum(axis=0).to_numpy(dtype=float)
+    ca = tab[lab == a].sum(axis=0).to_numpy(dtype=float, copy=True)
+    cb = tab[lab == b].sum(axis=0).to_numpy(dtype=float, copy=True)
     rows = []
     for p in pages:
-        c = tab.loc[p].to_numpy(dtype=float)
+        c = tab.loc[p].to_numpy(dtype=float, copy=True)
         n = c.sum()
         if n < min_tokens:
             continue
