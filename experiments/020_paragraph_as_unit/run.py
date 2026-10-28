@@ -220,6 +220,9 @@ def cmd_run(args) -> None:
     L = real_lines["st"][0]
     L[P.LINE_COLS + ["n", "locus_id"]].to_csv(parts / "lines.csv", index=False)
     for source in sources:
+        if source == "selfcitation_21" and (ctx.key != "ZL" or ctx.is_control):
+            print(f"{args.combo} {source}: skipped (ts2020 generates Eva only)", flush=True)
+            continue
         seeds = M6.parse_seeds(args.seeds) if args.seeds else list(SOURCES[source])
         print(f"{args.combo} {source}: {len(seeds)} seeds", flush=True)
         params = {"combo": args.combo, "source": source, "variants": VARIANTS, "n_pages": len(ctx.pages),
