@@ -489,7 +489,7 @@ def _diff_rows(runs: pd.DataFrame, metric: str) -> pd.DataFrame:
             for rep in reps:
                 for dname in ("x_only", "y_only"):
                     ab = g.get(f"{scope}__AB__{rep}__{dname}__{metric}")
-                    if ab is None:
+                    if ab is None or ab.isna().all():
                         continue
                     halves = pd.concat([g[f"{scope}__{c}__{rep}__{d}__{metric}"] for c in ("AA", "BB")
                                         for d in ("x_only", "y_only")], axis=1).mean(axis=1)

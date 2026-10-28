@@ -56,3 +56,4 @@ Pravidla:
 | 011 | suffix_variation | zadáno | kolik z H(sufix \| kmen) vysvětlí pozice, registr A/B, písař, sekce; má zbytek strukturu (shoda, konzistence)? latina a ts2020 jako srovnání |
 | 012 | ab_register | zadáno | A/B: sdílení kmenů, mapování sufixů (řídké = zápis, difúzní = obsah), pozvolnost podle pořadí psaní, písař 3, A/B vs sekce |
 | 013 | gibberish_and_cipher_controls | zadáno | lidský blábol (Gaskell & Bowern) a Naibbe šifra latiny na profilu 009/010/011: které Voynich-specifické vlastnosti mají |
+| 016 | ab_stem_variants | hotovo (B-only tvary mají v A *méně* blízkých protějšků než poloviny téhož jazyka; `ins d` nese 27–46 % protějšků, k ≤ 10 editací sdílení nevrátí; kmeny příliš krátké pro ≤ 1; latina ukazuje totéž) | jsou kmeny jen v B (jen v A) glyfové varianty kmenů druhého jazyka, nebo nový slovník? |

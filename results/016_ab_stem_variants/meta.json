@@ -6,13 +6,14 @@
     "ts2020"
   ],
   "sets": [
+    "GC_join",
     "GC_split",
     "ZL_join",
     "ZL_split",
     "caesar_celsus",
     "pliny"
   ],
-  "n_runs": 535,
+  "n_runs": 1320,
   "min_count": 2,
   "max_dist": 2,
   "ks": [

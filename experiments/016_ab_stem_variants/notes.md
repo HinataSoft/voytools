@@ -57,3 +57,17 @@
   Všechny sady, nully i kontroly běžely paralelně na pozadí (`nohup`), výstupy v `results/016_ab_stem_variants/runs/`.
 * Prostředí: Python 3.13 / pandas 3.0.5 (cloud); kód drží 3.10 / pandas 2.3 (žádná nová syntaxe, `copy=True`
   u `to_numpy`).
+
+## Výsledek a uzavření
+
+* Report: `results/016_ab_stem_variants/report.md`. Hlavní nález: B-only tvary (celé tokeny) mají v A *méně*
+  protějšků ≤ 1 než tvary jedné poloviny jazyka v druhé (0,81–0,85 vs 0,90–0,94, ZL i GC, split i join, herbář
+  ještě víc); jedna operace `ins d` uvnitř slova nese 28–46 % protějšků (Currier `-edy`), ale substituce ani se
+  všemi operacemi nevrátí sdílení na poloviny. Latina (téma, registr) ukazuje stejný vzorec; ts2020 a šablona nulu.
+* Krit. 3 spec nastalo u kmenů dekompozice (poloviny ≤ 1 > 0,9: kmeny 1–3 glyfy) – uvedeno, závěry stojí na
+  celých tokenech a BPE. Sekční test (iv) nemá sílu ani u sdílených kmenů – odpověď „nelze rozhodnout".
+* Soubory: `runs/<zdroj>__<sada>/runs.csv` (po sadách, 0,3–3,4 MB; neslučují se do jednoho `runs.csv`, aby soubor
+  zůstal < 5 MB), `summary.csv` (velikosti), agregace `counterpart_rates.csv`, `counterpart_excess.csv`,
+  `substitution_sharing.csv`, `whole_tokens.csv`, `counterparts.csv` (plný text), `edit_inventory.csv` (top 60
+  operací na buňku), `edit_coverage.csv`, `section_check.csv`, `meta.json`, tři grafy.
+* Stav: **hotovo**.
