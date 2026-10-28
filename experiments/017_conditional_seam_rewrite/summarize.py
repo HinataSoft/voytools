@@ -198,7 +198,7 @@ def combine(v_split: str, v_join: str) -> str:
     return "stale_ne" if "stale_ne" in s else "nelze"
 
 
-def metric_lists(prof: pd.DataFrame, generator: str, sets: list[str], tags: tuple) -> pd.DataFrame:
+def metric_lists(prof: pd.DataFrame, generator: str, sets: list[str], tags: tuple, zcol: str = "z_strict") -> pd.DataFrame:
     P = prof[prof["kind"] == "null"].set_index(["null", "tag", "family", "metric"])
     base_null = generator
     rows = []
@@ -207,7 +207,7 @@ def metric_lists(prof: pd.DataFrame, generator: str, sets: list[str], tags: tupl
             for s in sets:
                 if s == "base":
                     continue
-                row = {"generator": generator, "family": fam, "metric": m, "role": ROLE.get((fam, m), "other"), "set": s}
+                row = {"generator": generator, "z_basis": zcol, "family": fam, "metric": m, "role": ROLE.get((fam, m), "other"), "set": s}
                 vs = {}
                 for tag in tags:
                     try:
@@ -219,11 +219,11 @@ def metric_lists(prof: pd.DataFrame, generator: str, sets: list[str], tags: tupl
                     row[f"voynich_{tag}"] = ref["voynich_value"]
                     row[f"base_{tag}"] = ref["value"]
                     row[f"aug_{tag}"] = new["value"]
-                    row[f"z_base_{tag}"] = ref["z_strict"]
-                    row[f"z_aug_{tag}"] = new["z_strict"]
+                    row[f"z_base_{tag}"] = ref[zcol]
+                    row[f"z_aug_{tag}"] = new[zcol]
                     row[f"z_aug_seed_{tag}"] = new["z_seed"]
                     row[f"z_aug_boot_{tag}"] = new["z_boot"]
-                    vs[tag] = verdict(ref["z_strict"], new["z_strict"])
+                    vs[tag] = verdict(ref[zcol], new[zcol])
                     row[f"verdict_{tag}"] = vs[tag]
                 row["verdict"] = combine(vs.get(tags[0], "nelze"), vs.get(tags[-1], "nelze")) if len(tags) > 1 \
                     else vs.get(tags[0], "nelze")
@@ -231,22 +231,23 @@ def metric_lists(prof: pd.DataFrame, generator: str, sets: list[str], tags: tupl
     return pd.DataFrame(rows)
 
 
-def property_lists(prof: pd.DataFrame, generator: str, sets: list[str], tags: tuple) -> pd.DataFrame:
-    """Property x set: reached (all metrics |z_strict| < 3 in every tag), verdict against the plain generator."""
+def property_lists(prof: pd.DataFrame, generator: str, sets: list[str], tags: tuple, zcol: str = "z_strict") -> pd.DataFrame:
+    """Property x set: reached (all metrics |z| < 3 in every tag, ``zcol`` = ``z_strict`` or ``z_seed``), verdict
+    against the plain generator."""
     P = prof[prof["kind"] == "null"].set_index(["null", "tag", "family", "metric"])
     rows = []
     for prop, metrics in PROPERTIES.items():
         for s in sets:
             null = generator if s == "base" else f"{generator}+{s}"
-            row = {"generator": generator, "property": prop, "group": "specific" if prop in SPECIFIC else
+            row = {"generator": generator, "z_basis": zcol, "property": prop, "group": "specific" if prop in SPECIFIC else
                    ("cohesion" if prop in COHESION else "calibration"), "set": s, "n_metrics": len(metrics)}
             vs, reached = {}, True
             for tag in tags:
                 z0, z1, worst = [], [], ""
                 for fam, m in metrics:
                     try:
-                        z1.append(float(P.loc[(null, tag, fam, m), "z_strict"]))
-                        z0.append(float(P.loc[(generator, tag, fam, m), "z_strict"]))
+                        z1.append(float(P.loc[(null, tag, fam, m), zcol]))
+                        z0.append(float(P.loc[(generator, tag, fam, m), zcol]))
                     except KeyError:
                         z1.append(np.nan)
                         z0.append(np.nan)
@@ -277,7 +278,8 @@ def minimal_unreachable(plist: pd.DataFrame, sets: list[str], max_size: int = 4)
     """Smallest combinations of target properties that no set reaches at once (every proper subset is
     reached by some set), plus one row per set with the properties it reaches."""
     reached = {s: set(plist.loc[(plist["set"] == s) & plist["reached"], "property"]) for s in sets}
-    rows = [{"kind": "reached_by_set", "set": s, "size": len(reached[s] & set(TARGET_PROPERTIES)),
+    basis = str(plist["z_basis"].iloc[0]) if len(plist) else ""
+    rows = [{"kind": "reached_by_set", "z_basis": basis, "set": s, "size": len(reached[s] & set(TARGET_PROPERTIES)),
              "combination": " + ".join(p for p in TARGET_PROPERTIES if p in reached[s]),
              "not_reached": " + ".join(p for p in TARGET_PROPERTIES if p not in reached[s])} for s in sets]
     props = [p for p in TARGET_PROPERTIES if p in set(plist["property"])]
@@ -297,7 +299,7 @@ def minimal_unreachable(plist: pd.DataFrame, sets: list[str], max_size: int = 4)
             break  # the smallest sizes are enough for the report
     for comb in found:
         subs = {" + ".join(sub): ",".join(covered(sub)) for sub in itertools.combinations(comb, len(comb) - 1)} if len(comb) > 1 else {}
-        rows.append({"kind": "minimal_unreachable", "set": "", "size": len(comb), "combination": " + ".join(comb),
+        rows.append({"kind": "minimal_unreachable", "z_basis": basis, "set": "", "size": len(comb), "combination": " + ".join(comb),
                      "not_reached": "", "subsets_reached_by": " | ".join(f"{a}: {b}" for a, b in subs.items())})
     return pd.DataFrame(rows)
 
@@ -428,7 +430,7 @@ def cost_plot(cost: pd.DataFrame, prof: pd.DataFrame) -> None:
     plt = _plt()
     if plt is None or cost.empty:
         return
-    c = cost[cost["generator"] == "ts2020"]
+    c = cost[(cost["generator"] == "ts2020") & cost["source"].str.startswith("ts2020")]
     sets = [s for s in SETS if s in set(c["set"])]
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.5))
     w = 0.38
@@ -472,22 +474,25 @@ def summarize() -> None:
     prof = build_profile(runs)
     prof.to_csv(OUT / "augmented_profile.csv", index=False, float_format="%.6g")
     ts_sets = [s for s in SETS if (prof["null"] == ("ts2020" if s == "base" else f"ts2020+{s}")).any()]
-    ml = metric_lists(prof, "ts2020", ts_sets, R.TAGS)
+    ml = pd.concat([metric_lists(prof, "ts2020", ts_sets, R.TAGS, z) for z in ("z_strict", "z_seed")], ignore_index=True)
     ml.to_csv(OUT / "metric_lists.csv", index=False, float_format="%.5g")
-    pl = property_lists(prof, "ts2020", ts_sets, R.TAGS)
+    pls = {z: property_lists(prof, "ts2020", ts_sets, R.TAGS, z) for z in ("z_strict", "z_seed")}
+    pl = pd.concat(pls.values(), ignore_index=True)
     pl.to_csv(OUT / "augmented_lists.csv", index=False, float_format="%.5g")
-    mu = minimal_unreachable(pl, ts_sets)
+    mu = pd.concat([minimal_unreachable(v, ts_sets) for v in pls.values()], ignore_index=True)
     mu.to_csv(OUT / "minimal_unreachable.csv", index=False)
     cost = rewrite_cost(runs)
     cost.to_csv(OUT / "rewrite_cost.csv", index=False, float_format="%.5g")
     tm_sets = [s for s in R.TEMPLATE_SETS if (prof["null"] == ("tmpl" if s == "base" else f"tmpl+{s}")).any()]
     if tm_sets:
-        tl = property_lists(prof, "tmpl", tm_sets, R.TEMPLATE_TAGS)
-        tm = metric_lists(prof, "tmpl", tm_sets, R.TEMPLATE_TAGS)
+        tls = {z: property_lists(prof, "tmpl", tm_sets, R.TEMPLATE_TAGS, z) for z in ("z_strict", "z_seed")}
+        tl = pd.concat(tls.values(), ignore_index=True)
+        tm = pd.concat([metric_lists(prof, "tmpl", tm_sets, R.TEMPLATE_TAGS, z) for z in ("z_strict", "z_seed")], ignore_index=True)
         tl["level"] = "property"
         tm["level"] = "metric"
         pd.concat([tl, tm], ignore_index=True).to_csv(OUT / "template_check.csv", index=False, float_format="%.5g")
-        minimal_unreachable(tl, tm_sets).to_csv(OUT / "template_minimal_unreachable.csv", index=False)
+        pd.concat([minimal_unreachable(v, tm_sets) for v in tls.values()], ignore_index=True).to_csv(
+            OUT / "template_minimal_unreachable.csv", index=False)
     sc = selfcheck(prof, runs)
     sc.to_csv(OUT / "selfcheck.csv", index=False, float_format="%.5g")
     augmented_plot(prof)
@@ -502,10 +507,11 @@ def summarize() -> None:
         "verdict_rule": "z_strict = larger |z| of z_seed (SD over seeds) and z_boot (page-bootstrap SD of the real text); "
                         "property reached = all its metrics |z_strict| < 3 in split and join"})
     print("written:", ", ".join(p.name for p in sorted(OUT.glob("*.*"))))
-    if len(pl):
-        print(pl.pivot(index="property", columns="set", values="verdict").reindex(columns=ts_sets).to_string())
+    for z, v in pls.items():
+        print(f"--- property verdicts ({z})")
+        print(v.pivot(index="property", columns="set", values="verdict").reindex(columns=ts_sets).to_string())
     if len(mu):
-        print(mu.to_string())
+        print(mu[mu["kind"] == "minimal_unreachable"][["z_basis", "size", "combination"]].to_string())
     if len(sc):
         bad = sc[(sc["role"] != "cost") & (sc["z_mean"].abs() >= 1)]
         print(f"selfcheck: {len(bad)} metrics with |z_mean| >= 1 of {int((sc['role'] != 'cost').sum())}")

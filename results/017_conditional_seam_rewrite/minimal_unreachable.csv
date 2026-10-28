@@ -1,25 +1,49 @@
-kind,set,size,combination,not_reached,subsets_reached_by
-reached_by_set,base,0,,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + konec_radku_17x + sev_glyfovy + sev_sufix_prefix + uzavreny_radek + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
-reached_by_set,R12,1,zahlavi_radku,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + konec_radku_17x + sev_glyfovy + sev_sufix_prefix + uzavreny_radek + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
-reached_by_set,R123,1,sev_sufix_prefix,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + konec_radku_17x + sev_glyfovy + uzavreny_radek + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
-reached_by_set,R12pA,3,zacatek_radku + konec_radku_17x + uzavreny_radek,pozicni_vazba_prefixu + pozicni_vazba_sufixu + konec_radku + sev_glyfovy + sev_sufix_prefix + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
-reached_by_set,R12pB,2,konec_radku_17x + sev_sufix_prefix,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + sev_glyfovy + uzavreny_radek + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
-reached_by_set,R12pC,2,zacatek_radku + konec_radku_17x,pozicni_vazba_prefixu + pozicni_vazba_sufixu + konec_radku + sev_glyfovy + sev_sufix_prefix + uzavreny_radek + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
-reached_by_set,R12pA3,2,zacatek_radku + konec_radku_17x,pozicni_vazba_prefixu + pozicni_vazba_sufixu + konec_radku + sev_glyfovy + sev_sufix_prefix + uzavreny_radek + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
-reached_by_set,R12pA3L,0,,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + konec_radku_17x + sev_glyfovy + sev_sufix_prefix + uzavreny_radek + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
-minimal_unreachable,,1,pozicni_vazba_prefixu,,
-minimal_unreachable,,1,pozicni_vazba_sufixu,,
-minimal_unreachable,,1,konec_radku,,
-minimal_unreachable,,1,sev_glyfovy,,
-minimal_unreachable,,1,vazba_prefix_sufix,,
-minimal_unreachable,,1,sekcni_vazba_prefixu,,
-minimal_unreachable,,1,sirka_paradigmatu,,
-minimal_unreachable,,1,H_sufix_kmen_vysvetleno,,
-minimal_unreachable,,1,typy,,
-minimal_unreachable,,1,hapax,,
-minimal_unreachable,,2,zacatek_radku + sev_sufix_prefix,,"zacatek_radku: R12pA,R12pC,R12pA3 | sev_sufix_prefix: R123,R12pB"
-minimal_unreachable,,2,zacatek_radku + zahlavi_radku,,"zacatek_radku: R12pA,R12pC,R12pA3 | zahlavi_radku: R12"
-minimal_unreachable,,2,konec_radku_17x + zahlavi_radku,,"konec_radku_17x: R12pA,R12pB,R12pC,R12pA3 | zahlavi_radku: R12"
-minimal_unreachable,,2,sev_sufix_prefix + uzavreny_radek,,"sev_sufix_prefix: R123,R12pB | uzavreny_radek: R12pA"
-minimal_unreachable,,2,sev_sufix_prefix + zahlavi_radku,,"sev_sufix_prefix: R123,R12pB | zahlavi_radku: R12"
-minimal_unreachable,,2,uzavreny_radek + zahlavi_radku,,uzavreny_radek: R12pA | zahlavi_radku: R12
+kind,z_basis,set,size,combination,not_reached,subsets_reached_by
+reached_by_set,z_strict,base,0,,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + konec_radku_17x + sev_glyfovy + sev_sufix_prefix + uzavreny_radek + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
+reached_by_set,z_strict,R12,1,zahlavi_radku,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + konec_radku_17x + sev_glyfovy + sev_sufix_prefix + uzavreny_radek + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
+reached_by_set,z_strict,R123,2,sev_sufix_prefix + uzavreny_radek,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + konec_radku_17x + sev_glyfovy + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
+reached_by_set,z_strict,R12pA,3,zacatek_radku + konec_radku_17x + uzavreny_radek,pozicni_vazba_prefixu + pozicni_vazba_sufixu + konec_radku + sev_glyfovy + sev_sufix_prefix + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
+reached_by_set,z_strict,R12pB,3,konec_radku_17x + sev_sufix_prefix + uzavreny_radek,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + sev_glyfovy + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
+reached_by_set,z_strict,R12pC,3,zacatek_radku + konec_radku_17x + uzavreny_radek,pozicni_vazba_prefixu + pozicni_vazba_sufixu + konec_radku + sev_glyfovy + sev_sufix_prefix + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
+reached_by_set,z_strict,R12pA3,3,zacatek_radku + konec_radku_17x + uzavreny_radek,pozicni_vazba_prefixu + pozicni_vazba_sufixu + konec_radku + sev_glyfovy + sev_sufix_prefix + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
+reached_by_set,z_strict,R12pA3L,1,uzavreny_radek,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + konec_radku_17x + sev_glyfovy + sev_sufix_prefix + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + typy + hapax,
+minimal_unreachable,z_strict,,1,pozicni_vazba_prefixu,,
+minimal_unreachable,z_strict,,1,pozicni_vazba_sufixu,,
+minimal_unreachable,z_strict,,1,konec_radku,,
+minimal_unreachable,z_strict,,1,sev_glyfovy,,
+minimal_unreachable,z_strict,,1,vazba_prefix_sufix,,
+minimal_unreachable,z_strict,,1,sekcni_vazba_prefixu,,
+minimal_unreachable,z_strict,,1,sirka_paradigmatu,,
+minimal_unreachable,z_strict,,1,H_sufix_kmen_vysvetleno,,
+minimal_unreachable,z_strict,,1,typy,,
+minimal_unreachable,z_strict,,1,hapax,,
+minimal_unreachable,z_strict,,2,zacatek_radku + sev_sufix_prefix,,"zacatek_radku: R12pA,R12pC,R12pA3 | sev_sufix_prefix: R123,R12pB"
+minimal_unreachable,z_strict,,2,zacatek_radku + zahlavi_radku,,"zacatek_radku: R12pA,R12pC,R12pA3 | zahlavi_radku: R12"
+minimal_unreachable,z_strict,,2,konec_radku_17x + zahlavi_radku,,"konec_radku_17x: R12pA,R12pB,R12pC,R12pA3 | zahlavi_radku: R12"
+minimal_unreachable,z_strict,,2,sev_sufix_prefix + zahlavi_radku,,"sev_sufix_prefix: R123,R12pB | zahlavi_radku: R12"
+minimal_unreachable,z_strict,,2,uzavreny_radek + zahlavi_radku,,"uzavreny_radek: R123,R12pA,R12pB,R12pC,R12pA3,R12pA3L | zahlavi_radku: R12"
+reached_by_set,z_seed,base,3,uzavreny_radek + vazba_prefix_sufix + typy,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + konec_radku_17x + sev_glyfovy + sev_sufix_prefix + zahlavi_radku + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + hapax,
+reached_by_set,z_seed,R12,4,zacatek_radku + uzavreny_radek + zahlavi_radku + typy,pozicni_vazba_prefixu + pozicni_vazba_sufixu + konec_radku + konec_radku_17x + sev_glyfovy + sev_sufix_prefix + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + hapax,
+reached_by_set,z_seed,R123,3,sev_sufix_prefix + uzavreny_radek + typy,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + konec_radku_17x + sev_glyfovy + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + hapax,
+reached_by_set,z_seed,R12pA,4,zacatek_radku + konec_radku_17x + uzavreny_radek + typy,pozicni_vazba_prefixu + pozicni_vazba_sufixu + konec_radku + sev_glyfovy + sev_sufix_prefix + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + hapax,
+reached_by_set,z_seed,R12pB,4,konec_radku_17x + sev_sufix_prefix + uzavreny_radek + typy,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + sev_glyfovy + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + hapax,
+reached_by_set,z_seed,R12pC,4,zacatek_radku + konec_radku_17x + uzavreny_radek + typy,pozicni_vazba_prefixu + pozicni_vazba_sufixu + konec_radku + sev_glyfovy + sev_sufix_prefix + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + hapax,
+reached_by_set,z_seed,R12pA3,5,zacatek_radku + konec_radku_17x + sev_glyfovy + uzavreny_radek + typy,pozicni_vazba_prefixu + pozicni_vazba_sufixu + konec_radku + sev_sufix_prefix + zahlavi_radku + vazba_prefix_sufix + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + hapax,
+reached_by_set,z_seed,R12pA3L,3,uzavreny_radek + vazba_prefix_sufix + typy,pozicni_vazba_prefixu + pozicni_vazba_sufixu + zacatek_radku + konec_radku + konec_radku_17x + sev_glyfovy + sev_sufix_prefix + zahlavi_radku + sekcni_vazba_prefixu + sirka_paradigmatu + H_sufix_kmen_vysvetleno + hapax,
+minimal_unreachable,z_seed,,1,pozicni_vazba_prefixu,,
+minimal_unreachable,z_seed,,1,pozicni_vazba_sufixu,,
+minimal_unreachable,z_seed,,1,konec_radku,,
+minimal_unreachable,z_seed,,1,sekcni_vazba_prefixu,,
+minimal_unreachable,z_seed,,1,sirka_paradigmatu,,
+minimal_unreachable,z_seed,,1,H_sufix_kmen_vysvetleno,,
+minimal_unreachable,z_seed,,1,hapax,,
+minimal_unreachable,z_seed,,2,zacatek_radku + sev_sufix_prefix,,"zacatek_radku: R12,R12pA,R12pC,R12pA3 | sev_sufix_prefix: R123,R12pB"
+minimal_unreachable,z_seed,,2,zacatek_radku + vazba_prefix_sufix,,"zacatek_radku: R12,R12pA,R12pC,R12pA3 | vazba_prefix_sufix: base,R12pA3L"
+minimal_unreachable,z_seed,,2,konec_radku_17x + zahlavi_radku,,"konec_radku_17x: R12pA,R12pB,R12pC,R12pA3 | zahlavi_radku: R12"
+minimal_unreachable,z_seed,,2,konec_radku_17x + vazba_prefix_sufix,,"konec_radku_17x: R12pA,R12pB,R12pC,R12pA3 | vazba_prefix_sufix: base,R12pA3L"
+minimal_unreachable,z_seed,,2,sev_glyfovy + sev_sufix_prefix,,"sev_glyfovy: R12pA3 | sev_sufix_prefix: R123,R12pB"
+minimal_unreachable,z_seed,,2,sev_glyfovy + zahlavi_radku,,sev_glyfovy: R12pA3 | zahlavi_radku: R12
+minimal_unreachable,z_seed,,2,sev_glyfovy + vazba_prefix_sufix,,"sev_glyfovy: R12pA3 | vazba_prefix_sufix: base,R12pA3L"
+minimal_unreachable,z_seed,,2,sev_sufix_prefix + zahlavi_radku,,"sev_sufix_prefix: R123,R12pB | zahlavi_radku: R12"
+minimal_unreachable,z_seed,,2,sev_sufix_prefix + vazba_prefix_sufix,,"sev_sufix_prefix: R123,R12pB | vazba_prefix_sufix: base,R12pA3L"
+minimal_unreachable,z_seed,,2,zahlavi_radku + vazba_prefix_sufix,,"zahlavi_radku: R12 | vazba_prefix_sufix: base,R12pA3L"
