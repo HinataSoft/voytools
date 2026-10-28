@@ -58,3 +58,22 @@
   ~25 min při čtyřech paralelních bězích. Latina 200 losů, generátory 30 seedů; vše `nohup` na pozadí, logy
   `scratch/019_logs/`.
 * Prostředí: Python 3.13 / pandas 3.0.5 (cloud); kód drží 3.10 / pandas 2.3.
+
+## Slepá ulička
+
+* První běh vyrovnával hapaxy nejbližším počtem (sdílených tvarů s 1 tokenem je v losu jen ~180 na ~1 070 hapaxů),
+  takže „vyrovnaná základna“ hapaxů měla 2–5 tokenů a bigramový model se učil z prázdné množiny. Opraveno:
+  `match_by_count(tol=0.25)` – přesná shoda do 3 tokenů, do ±25 % výš, nespárované tvary se vynechají (profil
+  hapaxů tedy stojí na ~190–210 hapaxech na los). Všechny losy spočítány znovu.
+
+## Výsledek a uzavření
+
+* Report: `results/019_b_only_forms/report.md`. Pětina B = 59–63 % d-variant, 25–27 % `l`-variant (jiný protějšek ≤ 1),
+  12–15 % bez protějšku (kombinace obou); nové kmeny 6,5–7,7 % tokenů pětiny, pod polovinami B (7,6–10,9 %). Profil
+  nových tvarů = sdílené (disperze, sekce, popisky, kraje, souvýskyt, bigramy v intervalech přes nulu), liší se jen šev
+  (+0,04–0,075) a konec řádku u d-variant (−0,04); latina (téma i registr) dává shluky, cizí bigramy a souvýskyt.
+  `-ey`/`-edy` v B je volba tvaru (P 0,3–0,8, redukce 0,02–0,05 bitu, 79–80 % kmenů s oběma tvary), v A neexistuje.
+* Soubory: `runs/<zdroj>__<sada>/runs.csv` (0,6–1,9 MB), `composition.csv`, `class_profiles.csv`, `latin_reference.csv`,
+  `edy_rule.csv`, `edy_contexts.csv`, `classes.csv`, `top_new_stems.csv`, `new_stems_ed.csv`, `summary.csv`, `meta.json`,
+  tři grafy; `extras/<zdroj>__<sada>/` po sadách.
+* Stav: **hotovo**.

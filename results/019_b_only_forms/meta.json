@@ -13,7 +13,7 @@
     "caesar_celsus",
     "pliny"
   ],
-  "n_runs": 1130,
+  "n_runs": 1320,
   "min_count": 2,
   "max_dist": 2,
   "n_shuf": 20,
