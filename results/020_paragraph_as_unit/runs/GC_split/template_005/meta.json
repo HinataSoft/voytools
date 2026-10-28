@@ -1,0 +1,47 @@
+{
+  "name": "020_GC_split_template_005",
+  "params": {
+    "combo": "GC_split",
+    "source": "template_005",
+    "variants": {
+      "st": {
+        "unit": "stem",
+        "min_count": 2
+      },
+      "st50": {
+        "unit": "stem",
+        "min_count": 2,
+        "drop_top": 50
+      },
+      "tok": {
+        "unit": "token",
+        "min_count": 2
+      },
+      "ng": {
+        "unit": "stem",
+        "min_count": 2,
+        "gallows": true
+      }
+    },
+    "n_pages": 207,
+    "n_lines": 4128,
+    "n_pars": 775,
+    "n_pages_2pars": 159,
+    "n_open_end": 0,
+    "template_005": {
+      "n_stems": 4000,
+      "zipf_s": 1.3,
+      "paradigm": "fixed",
+      "prefix_dependence": "none",
+      "topic_concentration": 5.0,
+      "page_locality": 0.3,
+      "suffix_by": null
+    },
+    "seed_offset": 100000,
+    "pool_seed": "repetition"
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 19:21:20",
+  "updated": "2026-10-28 19:21:20"
+}
