@@ -1,0 +1,104 @@
+{
+  "name": "012_ab_register",
+  "params": {
+    "set": "GC_join",
+    "source": "real",
+    "variants": {
+      "a": {
+        "prefixes": [
+          "1c",
+          "1o",
+          "4o",
+          "oe",
+          "1",
+          "2",
+          "8",
+          "9",
+          "e",
+          "k",
+          "o",
+          "s"
+        ],
+        "suffixes": [
+          "79",
+          "89",
+          "ae",
+          "am",
+          "an",
+          "ap",
+          "ay",
+          "oe",
+          "oy",
+          "8",
+          "9",
+          "e",
+          "s",
+          "y"
+        ]
+      },
+      "b": {
+        "prefixes": [
+          "1c",
+          "1o",
+          "4o",
+          "oe",
+          "1",
+          "2",
+          "8",
+          "9",
+          "e",
+          "k",
+          "o",
+          "s",
+          "g",
+          "j",
+          "f",
+          "u",
+          "h",
+          "G",
+          "J",
+          "F",
+          "U",
+          "K",
+          "H"
+        ],
+        "suffixes": [
+          "79",
+          "89",
+          "ae",
+          "am",
+          "an",
+          "ap",
+          "ay",
+          "oe",
+          "oy",
+          "8",
+          "9",
+          "e",
+          "s",
+          "y",
+          "p",
+          "P",
+          "*",
+          "op"
+        ]
+      }
+    },
+    "scopes": [
+      "all",
+      "hand3",
+      "herbal"
+    ],
+    "n_draw": 200,
+    "n_null": 30,
+    "min_share": 3,
+    "min_map": 5,
+    "ts2020_config": 21,
+    "tmpl_seed0": 9000
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 07:53:48",
+  "updated": "2026-10-28 08:05:21",
+  "n_seeds_done": 200
+}

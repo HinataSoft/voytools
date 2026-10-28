@@ -1,0 +1,59 @@
+{
+  "name": "013_p011",
+  "params": {
+    "source": "voynich_crop",
+    "kind": "p011",
+    "prefixes": [
+      "che",
+      "cho",
+      "ol",
+      "qo",
+      "ch",
+      "d",
+      "l",
+      "o",
+      "s",
+      "sh",
+      "t",
+      "y"
+    ],
+    "suffixes": [
+      "aiin",
+      "ain",
+      "al",
+      "am",
+      "ar",
+      "chy",
+      "dy",
+      "ol",
+      "or",
+      "d",
+      "l",
+      "r",
+      "s",
+      "y"
+    ],
+    "glyph_units": "extended",
+    "control": {
+      "name": "voynich_crop",
+      "mode": "real",
+      "strategy": "evenly spaced pages",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "H",
+        "P",
+        "S",
+        "T"
+      ],
+      "source_tokens": 34268
+    },
+    "writer_seed": 13
+  },
+  "n_seeds_requested": 31,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 08:32:21",
+  "updated": "2026-10-28 08:33:07",
+  "n_seeds_done": 31
+}

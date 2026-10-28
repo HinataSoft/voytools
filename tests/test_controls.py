@@ -221,3 +221,51 @@ def test_layout_sequential_and_build_control():
         C.build_control(divs, tpl, k=3, strategy="random")
     with pytest.raises(ValueError):
         C.layout_sequential(_divs([10]), lens, "prose")
+
+
+# --------------------------------------------------------------------------- #
+# experiment 013: gibberish, own-layout tables, cropping, stream layout
+# --------------------------------------------------------------------------- #
+
+
+def test_gibberish_parsing(tmp_path):
+    import zipfile
+
+    text = "-glorb biga, nu-ba\r\n* sinja 12\r\n__________\r\n\r\nmorja hoppa\r\n"
+    assert C.gibberish_words("Co-nallol it's 2x") == ["conallol", "its", "x"]
+    pages = C.parse_gibberish(text.replace("\r\n", "\n"))
+    assert pages == [[["glorb", "biga", "nuba"], ["sinja"]], [["morja", "hoppa"]]]
+    (tmp_path / "Gibberish - DC_02.txt").write_bytes(text.encode("utf-8"))
+    (tmp_path / "Gibberish - DA_01.txt").write_bytes(b"ab cd\r\n")
+    (tmp_path / "Other - x.txt").write_bytes(b"zz\r\n")
+    got = C.read_gibberish(tmp_path)
+    assert list(got) == ["DA_01", "DC_02"] and got["DC_02"] == pages
+    zp = tmp_path / "g.zip"
+    with zipfile.ZipFile(zp, "w") as z:
+        z.write(tmp_path / "Gibberish - DC_02.txt", "gib/Gibberish - DC_02.txt")
+    assert C.read_gibberish(zp) == {"DC_02": pages}
+
+
+def test_lines_table_layout():
+    t = C.lines_table([("w1.1", "w1", "w1", [["a", "bb"], ["c"]]), ("w2.1", "w2", "w2", [["dd", "e", "f"]])])
+    assert t["token"].tolist() == ["a", "bb", "c", "dd", "e", "f"]
+    assert t["folio"].tolist() == ["w1.1"] * 3 + ["w2.1"] * 3
+    assert t["line_in_par"].tolist() == [0, 0, 1, 0, 0, 0]
+    assert t["is_first"].tolist() == [True, False, True, True, False, False]
+    assert t["is_last"].tolist() == [False, True, True, False, False, True]
+    assert t["hand"].tolist()[-1] == "w2" and t.attrs["glyph_preset"] is None
+    assert t.groupby("locus_id", sort=False).size().tolist() == [2, 1, 3]
+
+
+def test_crop_and_stream_control():
+    words = ["daiin", "chol", "shedy", "okar", "qokeey"]
+    tpl = make_tokens([[words[(i + j) % 5] for j in range(5)] for i in range(40)], page_size=4)
+    crop = C.crop_template(tpl, 70)
+    assert len(crop) <= 70 and len(crop) >= 60
+    assert crop["folio"].nunique() >= 3  # spread over the pages, not the first ones only
+    divs = [("w1", [["a"] * 30]), ("w2", [["b"] * 50])]
+    out = C.stream_control(divs, crop, name="gib", writer_as_hand=True)
+    assert len(out) == len(crop)
+    assert set(out["illustration"]) <= {"w1", "w2"} and (out["hand"] == out["illustration"]).all()
+    with pytest.raises(ValueError):
+        C.stream_control([("w1", [["a"] * 5])], crop)

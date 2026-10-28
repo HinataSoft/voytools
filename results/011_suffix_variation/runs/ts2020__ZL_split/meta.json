@@ -1,0 +1,149 @@
+{
+  "name": "011_suffix_variation",
+  "params": {
+    "source": "ts2020:ZL_split",
+    "variants": {
+      "a": {
+        "prefixes": [
+          "che",
+          "cho",
+          "ol",
+          "qo",
+          "ch",
+          "d",
+          "l",
+          "o",
+          "s",
+          "sh",
+          "t",
+          "y"
+        ],
+        "suffixes": [
+          "aiin",
+          "ain",
+          "al",
+          "am",
+          "ar",
+          "chy",
+          "dy",
+          "ol",
+          "or",
+          "d",
+          "l",
+          "r",
+          "s",
+          "y"
+        ]
+      },
+      "b": {
+        "prefixes": [
+          "che",
+          "cho",
+          "ol",
+          "qo",
+          "ch",
+          "d",
+          "l",
+          "o",
+          "s",
+          "sh",
+          "t",
+          "y",
+          "p",
+          "f",
+          "k",
+          "cph",
+          "cfh",
+          "cth",
+          "ckh"
+        ],
+        "suffixes": [
+          "aiin",
+          "ain",
+          "al",
+          "am",
+          "ar",
+          "chy",
+          "dy",
+          "ol",
+          "or",
+          "d",
+          "l",
+          "r",
+          "s",
+          "y",
+          "m",
+          "g",
+          "om"
+        ]
+      }
+    },
+    "by": {
+      "pos": "cv_pos",
+      "relpos": "cv_relpos",
+      "place": "cv_place",
+      "lip": "cv_lip",
+      "lang": "cv_lang",
+      "hand": "cv_hand",
+      "sec": "cv_sec",
+      "page": "cv_page",
+      "pos+lang": [
+        "cv_pos",
+        "cv_lang"
+      ],
+      "pos+hand": [
+        "cv_pos",
+        "cv_hand"
+      ],
+      "pos+lang+sec": [
+        "cv_pos",
+        "cv_lang",
+        "cv_sec"
+      ],
+      "all-page": [
+        "cv_pos",
+        "cv_relpos",
+        "cv_place",
+        "cv_lip",
+        "cv_lang",
+        "cv_hand",
+        "cv_sec"
+      ],
+      "all": [
+        "cv_pos",
+        "cv_relpos",
+        "cv_place",
+        "cv_lip",
+        "cv_lang",
+        "cv_hand",
+        "cv_sec",
+        "cv_page"
+      ]
+    },
+    "cond_residual": [
+      "cv_pos",
+      "cv_lang",
+      "cv_hand"
+    ],
+    "n_perm": {
+      "point": 100,
+      "sub": 20,
+      "null": 20
+    },
+    "min_stem": 20,
+    "min_stem_check": 5,
+    "sub_frac": 0.8,
+    "n_sub": 100,
+    "n_sub_ctl": 30,
+    "n_null": 30,
+    "ts2020_config": 21,
+    "ac_seed0": 8600,
+    "tmpl_seed0": 9000,
+    "control": null
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 07:27:35",
+  "updated": "2026-10-28 07:33:52",
+  "n_seeds_done": 30
+}

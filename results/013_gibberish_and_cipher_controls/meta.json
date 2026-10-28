@@ -1,0 +1,323 @@
+{
+  "name": "013_gibberish_and_cipher_controls",
+  "params": {
+    "sources": [
+      "gibberish_pooled",
+      "gibberish_native",
+      "voynich_crop",
+      "caesar_crop",
+      "celsus_crop",
+      "naibbe_caesar",
+      "naibbe_pliny",
+      "naibbe_plaintext"
+    ],
+    "reference_sources": [
+      "ZL_split",
+      "GC_split",
+      "ts2020:ZL_split",
+      "tmpl:ZL_split",
+      "ac86:ZL_split",
+      "ctl:caesar_prose",
+      "ctl:celsus_prose",
+      "ctl:pliny_prose",
+      "ctl:culpeper_prose",
+      "ctl:linnaeus_items",
+      "ctl:linnaeus_prose",
+      "ctl:italian_prose"
+    ],
+    "writer_seed": 13,
+    "feature_rule": "f = (source - prose mean) / (Voynich - prose mean); ano >= 0.5, castecne >= 0.2",
+    "runs": [
+      {
+        "family": "009",
+        "source": "ctl:caesar_crop",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "009",
+        "source": "ctl:caesar_crop",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "009",
+        "source": "ctl:celsus_crop",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "009",
+        "source": "ctl:celsus_crop",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "009",
+        "source": "ctl:gibberish_native",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "009",
+        "source": "ctl:gibberish_native",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "009",
+        "source": "ctl:gibberish_pooled",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "009",
+        "source": "ctl:gibberish_pooled",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "009",
+        "source": "ctl:naibbe_caesar",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "009",
+        "source": "ctl:naibbe_caesar",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "009",
+        "source": "ctl:naibbe_plaintext",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "009",
+        "source": "ctl:naibbe_plaintext",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "009",
+        "source": "ctl:naibbe_pliny",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "009",
+        "source": "ctl:naibbe_pliny",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "009",
+        "source": "ctl:voynich_crop",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "009",
+        "source": "ctl:voynich_crop",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "010",
+        "source": "ctl:caesar_crop",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "010",
+        "source": "ctl:caesar_crop",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "010",
+        "source": "ctl:celsus_crop",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "010",
+        "source": "ctl:celsus_crop",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "010",
+        "source": "ctl:gibberish_native",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "010",
+        "source": "ctl:gibberish_native",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "010",
+        "source": "ctl:gibberish_pooled",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "010",
+        "source": "ctl:gibberish_pooled",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "010",
+        "source": "ctl:naibbe_caesar",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "010",
+        "source": "ctl:naibbe_caesar",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "010",
+        "source": "ctl:naibbe_plaintext",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "010",
+        "source": "ctl:naibbe_plaintext",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "010",
+        "source": "ctl:naibbe_pliny",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "010",
+        "source": "ctl:naibbe_pliny",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "010",
+        "source": "ctl:voynich_crop",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "010",
+        "source": "ctl:voynich_crop",
+        "kind": "sub",
+        "n": 100
+      },
+      {
+        "family": "011",
+        "source": "ctl:caesar_crop",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "011",
+        "source": "ctl:caesar_crop",
+        "kind": "sub",
+        "n": 30
+      },
+      {
+        "family": "011",
+        "source": "ctl:celsus_crop",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "011",
+        "source": "ctl:celsus_crop",
+        "kind": "sub",
+        "n": 30
+      },
+      {
+        "family": "011",
+        "source": "ctl:gibberish_native",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "011",
+        "source": "ctl:gibberish_native",
+        "kind": "sub",
+        "n": 30
+      },
+      {
+        "family": "011",
+        "source": "ctl:gibberish_pooled",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "011",
+        "source": "ctl:gibberish_pooled",
+        "kind": "sub",
+        "n": 30
+      },
+      {
+        "family": "011",
+        "source": "ctl:naibbe_caesar",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "011",
+        "source": "ctl:naibbe_caesar",
+        "kind": "sub",
+        "n": 30
+      },
+      {
+        "family": "011",
+        "source": "ctl:naibbe_plaintext",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "011",
+        "source": "ctl:naibbe_plaintext",
+        "kind": "sub",
+        "n": 30
+      },
+      {
+        "family": "011",
+        "source": "ctl:naibbe_pliny",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "011",
+        "source": "ctl:naibbe_pliny",
+        "kind": "sub",
+        "n": 30
+      },
+      {
+        "family": "011",
+        "source": "ctl:voynich_crop",
+        "kind": "point",
+        "n": 1
+      },
+      {
+        "family": "011",
+        "source": "ctl:voynich_crop",
+        "kind": "sub",
+        "n": 30
+      }
+    ]
+  },
+  "created": "2026-10-28 08:24:52",
+  "updated": "2026-10-28 08:35:58"
+}

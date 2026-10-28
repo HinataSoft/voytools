@@ -476,3 +476,185 @@ def build_control(
     out.attrs["control"] = {"name": name, "mode": mode, "strategy": used,
                             "sections": list(dict.fromkeys(labels)), "source_tokens": n_tokens(divisions)}
     return out
+
+
+# --------------------------------------------------------------------------- #
+# experiment 013: human gibberish (Gaskell & Bowern 2022) and Naibbe ciphertext (Greshko 2025)
+# --------------------------------------------------------------------------- #
+
+_PUNCT = re.compile(r"[^\w\s]|[\d_]")
+PAGE_MARK = "__________"
+
+
+def gibberish_words(line: str) -> list[str]:
+    """Tokens of one line as cleaned by Gaskell & Bowern (2022): lower case, punctuation and digits deleted.
+
+    Punctuation is deleted *inside* tokens (``co-nallol`` -> ``conallol``), as in their ``stats.py``.
+
+    >>> gibberish_words("Co-nallol ningelritaid, ab2usem * nron")
+    ['conallol', 'ningelritaid', 'abusem', 'nron']
+    """
+    return [w for w in (_PUNCT.sub("", t.lower()) for t in line.split()) if w]
+
+
+def parse_gibberish(text: str) -> list[list[list[str]]]:
+    """One writer's transcription as pages of lines of tokens.
+
+    Lines are the writer's own lines; a line ``__________`` separates pages (Gaskell & Bowern's page
+    marker).  Lines that are empty after cleaning are dropped, and so are empty pages.
+
+    >>> parse_gibberish("ab cd\\nef\\n__________\\n* gh\\n")
+    [[['ab', 'cd'], ['ef']], [['gh']]]
+    """
+    pages: list[list[list[str]]] = [[]]
+    for ln in text.split("\n"):
+        if ln.strip() == PAGE_MARK:
+            pages.append([])
+            continue
+        toks = gibberish_words(ln)
+        if toks:
+            pages[-1].append(toks)
+    return [p for p in pages if p]
+
+
+def read_gibberish(path: str | Path) -> dict[str, list[list[list[str]]]]:
+    """All writers of the Gaskell & Bowern gibberish data: writer id -> pages -> lines -> tokens.
+
+    ``path`` is the folder of ``Gibberish - <id>.txt`` files or the zip archive
+    ``data/gibberish_transcriptions.zip`` of github.com/danielgaskell/voynich.  Writers are sorted by id.
+    """
+    import zipfile
+
+    path = Path(path)
+    texts: dict[str, str] = {}
+    if path.suffix == ".zip":
+        with zipfile.ZipFile(path) as z:
+            for name in z.namelist():
+                base = Path(name).name
+                if base.startswith("Gibberish - ") and base.endswith(".txt"):
+                    raw = z.read(name)
+                    try:
+                        texts[base[12:-4]] = raw.decode("utf-8-sig")
+                    except UnicodeDecodeError:
+                        texts[base[12:-4]] = raw.decode("latin-1")
+    else:
+        for p in sorted(path.glob("Gibberish - *.txt")):
+            texts[p.name[12:-4]] = read_text(p)
+    return {k: parse_gibberish(texts[k].replace("\r\n", "\n").replace("\r", "\n")) for k in sorted(texts)}
+
+
+def read_lines(path: str | Path) -> list[list[str]]:
+    """Whitespace-tokenised non-empty lines of a plain text file (no case or character changes)."""
+    return [ln.split() for ln in read_text(path).split("\n") if ln.split()]
+
+
+def lines_table(
+    pages: Sequence[tuple[str, str, str, Sequence[Sequence[str]]]],
+    alphabet: str = "latin",
+    glyph_preset=None,
+    name: str = "lines",
+) -> pd.DataFrame:
+    """Token table of a text in its *own* line and page layout.
+
+    ``pages``: (folio, section, hand, lines) per page; every page is one paragraph, ``language`` is
+    empty.  The columns are those of :func:`voytools.nulls.as_table` (all statistics accept the table).
+    """
+    from .nulls import as_table
+
+    all_lines = [list(ln) for _, _, _, lines in pages for ln in lines]
+    out = as_table(all_lines, lines_per_page=max(1, len(all_lines)), alphabet=alphabet, glyph_preset=glyph_preset)
+    folio, sec, hand, lip, nlines = [], [], [], [], []
+    for f, s, h, lines in pages:
+        for i, ln in enumerate(lines):
+            k = len(ln)
+            folio += [f] * k
+            sec += [s] * k
+            hand += [h] * k
+            lip += [i] * k
+            nlines += [len(lines)] * k
+    lip_a, n_a = np.asarray(lip), np.asarray(nlines)
+    out["folio"] = folio
+    out["illustration"] = sec
+    out["hand"] = hand
+    out["language"] = "?"
+    out["line_in_par"] = lip_a
+    out["line_index"] = lip_a
+    out["locus_num"] = lip_a + 1
+    out["locus_id"] = [f"{f}.{i + 1}" for f, i in zip(folio, lip)]
+    out["is_par_first_line"] = lip_a == 0
+    out["is_par_last_line"] = lip_a == n_a - 1
+    out["locator"] = np.where(lip_a == 0, "@", "+")
+    out["par_index"] = 0
+    out.attrs.update({"alphabet": alphabet, "glyph_preset": glyph_preset, "source": name})
+    return out
+
+
+def crop_template(template: pd.DataFrame, n_tokens: int) -> pd.DataFrame:
+    """Evenly spaced whole pages of a token table (in table order) with at most ``n_tokens`` tokens.
+
+    Pages are taken with a constant stride (as many as fit), so every part of the manuscript is
+    represented; then whole lines are dropped from the end until the size is at most ``n_tokens``.
+    """
+    pages = list(pd.unique(template["folio"]))
+    sizes = template.groupby("folio", sort=False).size().reindex(pages).to_numpy()
+    share = min(1.0, n_tokens / sizes.sum())
+    keep, acc = [], 0.0
+    for p, n in zip(pages, sizes):
+        acc += share
+        if acc >= 1 - 1e-9:
+            keep.append(p)
+            acc -= 1
+    out = template[template["folio"].isin(keep)]
+    if len(out) > n_tokens:
+        lens = out.groupby("locus_id", sort=False).size()
+        cum = lens.cumsum()
+        ok = set(cum.index[cum <= n_tokens])
+        out = out[out["locus_id"].isin(ok)]
+    out = out.reset_index(drop=True)
+    out.attrs.update(template.attrs)
+    return out
+
+
+def layout_stream(divisions: Sequence[Division], line_lengths: Sequence[int]) -> tuple[list[list[str]], list[str]]:
+    """Fill the template lines with the divisions in order as one running text (prose, lines broken mechanically).
+
+    The label of a line is the division of its first token.  The text is cut where the lines end;
+    raises ``ValueError`` if it is too short.
+    """
+    items = [it for _, its in divisions for it in its]
+    owner = np.repeat([lab for lab, its in divisions for it in its], [len(it) for _, its in divisions for it in its])
+    lines = _fill(items, line_lengths, "prose")
+    if lines is None:
+        raise ValueError(f"text too short for {sum(line_lengths)} tokens")
+    starts = np.concatenate([[0], np.cumsum(line_lengths)[:-1]]).astype(np.int64)
+    return lines, [str(owner[i]) for i in starts]
+
+
+def stream_control(
+    divisions: Sequence[Division],
+    template: pd.DataFrame,
+    name: str = "control",
+    writer_as_hand: bool = False,
+    alphabet: str = "latin",
+    glyph_preset=None,
+) -> pd.DataFrame:
+    """Control laid out as one running text in the template (:func:`layout_stream`), divisions kept as they are.
+
+    ``illustration`` = majority division of the page (as :func:`control_table`); with
+    ``writer_as_hand`` also ``hand`` = majority division (a division is a writer).  ``alphabet`` and
+    ``glyph_preset`` set the glyph units (``'Eva-'`` / ``'extended'`` for an Eva ciphertext).
+    """
+    from .nulls import as_table
+
+    lines, labels = layout_stream(divisions, template_lines(template))
+    out = as_table(lines, template, alphabet=alphabet, glyph_preset=glyph_preset)
+    out.attrs.update({"alphabet": alphabet, "glyph_preset": glyph_preset, "source": name})
+    lab = np.repeat(np.asarray(labels, dtype=object), [len(x) for x in lines])
+    out["control_division"] = lab
+    major = pd.Series(lab, index=out.index).groupby(out["folio"].to_numpy()).agg(lambda s: s.value_counts().index[0])
+    out["illustration"] = out["folio"].map(major).to_numpy()
+    if writer_as_hand:
+        out["hand"] = out["illustration"].to_numpy()
+    out.attrs["control"] = {"name": name, "mode": "prose", "strategy": "stream",
+                            "sections": list(dict.fromkeys(labels)), "source_tokens": n_tokens(divisions)}
+    return out

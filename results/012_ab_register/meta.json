@@ -1,0 +1,25 @@
+{
+  "name": "012_ab_register",
+  "params": {
+    "sets": [
+      "GC_join",
+      "GC_split",
+      "ZL_join",
+      "ZL_split"
+    ],
+    "sources": [
+      "real",
+      "tmpl",
+      "ts2020"
+    ],
+    "n_rows": 924,
+    "n_draw": 200,
+    "n_null": 30,
+    "min_share": 3,
+    "min_map": 5,
+    "sec_n": 1500,
+    "sec_reps": 100
+  },
+  "created": "2026-10-28 07:57:27",
+  "updated": "2026-10-28 08:18:45"
+}
