@@ -103,3 +103,51 @@ def test_selfcitation_like_on_real_file(zl_path):
 def test_autocopy_generate_is_untouched():
     """The port must not change the existing auto-copy generator (fingerprints from test_wordgrammar)."""
     assert _digest(N.autocopy_generate(SEED, 2000, seed=11)) == "a14bc553fde69ca0"
+
+
+# --------------------------------------------------------------------------- #
+# experiment 018: memory across pages (p_prev_page / page_memory)
+# --------------------------------------------------------------------------- #
+
+_PAGED = [(f"p{p}", n, i == 0, False) for p in range(6) for i, n in enumerate([7, 9, 8, 6, 10])]
+
+
+def test_memory_defaults_are_bit_identical():
+    """``p_prev_page=0`` must not touch the random stream: output identical to the unextended generator."""
+    for seed in (0, 1, 7):
+        base = SC.selfcitation_generate(_PAGED, seed=seed)
+        same = SC.selfcitation_generate(_PAGED, seed=seed, p_prev_page=0.0, page_memory=8)
+        assert same == base
+
+
+def test_memory_changes_output_and_keeps_layout():
+    base = SC.selfcitation_generate(_PAGED, seed=3)
+    mem = SC.selfcitation_generate(_PAGED, seed=3, p_prev_page=0.5, page_memory=2)
+    assert [len(l) for l in mem] == [len(l) for l in base]
+    assert mem != base
+    assert mem == SC.selfcitation_generate(_PAGED, seed=3, p_prev_page=0.5, page_memory=2)
+    # the first page has no earlier page: identical to the base run
+    assert mem[:5] == base[:5]
+
+
+def test_memory_parameter_validation():
+
+    with pytest.raises(ValueError):
+        SC.selfcitation_generate(_PAGED, seed=0, p_prev_page=1.5)
+    with pytest.raises(ValueError):
+        SC.selfcitation_generate(_PAGED, seed=0, p_prev_page=0.2, page_memory=0.5)
+
+
+def test_page_offset_is_geometric_and_clamped():
+    from voytools.selfcitation import SelfCitation
+
+    gen = SelfCitation(seed=0, p_prev_page=0.5, page_memory=4)
+    gen.prev_pages = [[]] * 3
+    ks = [gen.page_offset() for _ in range(2000)]
+    assert min(ks) == 1 and max(ks) == 3
+    gen.prev_pages = [[]] * 1000
+    ks = [gen.page_offset() for _ in range(4000)]
+    assert 3.5 < sum(ks) / len(ks) < 4.5
+    gen1 = SelfCitation(seed=0, p_prev_page=0.5, page_memory=1)
+    gen1.prev_pages = [[]] * 5
+    assert {gen1.page_offset() for _ in range(50)} == {1}

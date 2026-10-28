@@ -43,6 +43,7 @@ Public API: :func:`selfcitation_generate`, :func:`selfcitation_template`, :func:
 
 from __future__ import annotations
 
+import math
 import random
 from collections import Counter
 from typing import Any, Sequence
@@ -357,14 +358,28 @@ class SelfCitation:
                       line-final substitution ol->om etc. (Java applies it only
                       when a token does not fit into the 55-character line; we
                       generate to a token-count template, so this is a
-                      simplification).
+                      simplification);
+      p_prev_page     (experiment 018, voytools extension) probability that the
+                      source line of the "local" mode is taken from an earlier
+                      page instead of the current one; 0 = original behaviour
+                      (sources only from the current page, bit-identical output);
+      page_memory     mean of the geometric distribution (in pages back, >= 1) of
+                      the earlier page when ``p_prev_page`` fires; an offset past
+                      the first page is clamped to the first page.
     """
 
     def __init__(self, seed: int, p_copy=0.0, replace_weights=(30, 50, 20),
                  p_add_remove=20, p_combine_split=30, p_same_position=28,
                  p_reuse_last=10, p_line_final=0.35, p_suggest=40,
-                 max_repeat=3, seed_line=DEFAULT_SEED_LINE):
+                 max_repeat=3, seed_line=DEFAULT_SEED_LINE,
+                 p_prev_page=0.0, page_memory=1.0):
+        if not 0.0 <= float(p_prev_page) <= 1.0:
+            raise ValueError("p_prev_page must be in [0, 1]")
+        if float(page_memory) < 1.0:
+            raise ValueError("page_memory must be >= 1 (mean number of pages back)")
         self.rng = random.Random(seed)
+        self.p_prev_page = float(p_prev_page)
+        self.page_memory = float(page_memory)
         self.p_copy = p_copy
         self.replace_weights = tuple(replace_weights)
         self.p_add_remove = p_add_remove
@@ -378,6 +393,7 @@ class SelfCitation:
         # state
         self.lines: list[list[G]] = []
         self.page_lines: list[list[G]] = []
+        self.prev_pages: list[list[list[G]]] = []   # finished pages (018 memory extension)
         self.par_initial_lines: list[list[G]] = []
         self.freq: Counter = Counter()
         self.n_tokens = 0
@@ -452,6 +468,8 @@ class SelfCitation:
             # one of the previous lines on this page (or the last line of the
             # previous page at a page top)
             candidates = self.page_lines if self.page_lines else self.lines[-1:]
+            if self.p_prev_page > 0 and self.prev_pages and self.rng.random() < self.p_prev_page:
+                candidates = self.prev_pages[-self.page_offset()]
             source_line = candidates[self.rand(len(candidates))]
             probability = self.p_same_position / 2 if is_line_initial else self.p_same_position
             if self.rand(100) <= probability:
@@ -467,6 +485,16 @@ class SelfCitation:
             else:
                 out.append(g)
         return out
+
+    def page_offset(self) -> int:
+        """Pages back (>= 1) of the memory source: geometric with mean ``page_memory``, clamped to the first page."""
+        q = 1.0 / self.page_memory
+        if q >= 1.0:
+            k = 1
+        else:
+            u = self.rng.random()
+            k = 1 + int(math.log(max(u, 1e-300)) / math.log(1.0 - q))
+        return min(max(k, 1), len(self.prev_pages))
 
     @staticmethod
     def _pair(line: list[G], pos: int) -> list[G]:
@@ -916,6 +944,8 @@ class SelfCitation:
         for page, n_tokens, is_par_initial, is_par_final in template:
             if page != current_page:
                 current_page = page
+                if self.page_lines:
+                    self.prev_pages.append(self.page_lines)
                 self.page_lines = []
             line = self.generate_line(n_tokens, is_par_initial, is_par_final)
             self.lines.append(line)
@@ -1024,6 +1054,8 @@ def selfcitation_generate(
     p_suggest: float = 40,
     max_repeat: int = 3,
     seed_line: str = DEFAULT_SEED_LINE,
+    p_prev_page: float = 0.0,
+    page_memory: float = 1.0,
 ) -> list[list[str]]:
     """Generate text with the Timm & Schinner self-citation mechanism (port, see module docstring).
 
@@ -1057,6 +1089,11 @@ def selfcitation_generate(
         Maximum run of tokens of the same type (i / dy / ol / other).
     seed_line:
         Initial line the generator starts copying from (Timm's default: f103v.P.9).
+    p_prev_page, page_memory:
+        Memory across pages (experiment 018; not in Timm & Schinner): with probability
+        ``p_prev_page`` (0-1) the "local" source line is taken from an earlier page, the number of
+        pages back being geometric with mean ``page_memory`` (>= 1; clamped to the first page).
+        The defaults (0, 1) give exactly the original output for every seed.
 
     Returns
     -------
@@ -1067,7 +1104,7 @@ def selfcitation_generate(
                        p_add_remove=p_add_remove, p_combine_split=p_combine_split,
                        p_same_position=p_same_position, p_reuse_last=p_reuse_last,
                        p_line_final=p_line_final, p_suggest=p_suggest, max_repeat=max_repeat,
-                       seed_line=seed_line)
+                       seed_line=seed_line, p_prev_page=p_prev_page, page_memory=page_memory)
     return gen.generate(rows)
 
 
