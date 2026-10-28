@@ -1,0 +1,36 @@
+{
+  "name": "018_memory_grid",
+  "params": {
+    "grid": {
+      "p_prev_page": [
+        0.1,
+        0.2,
+        0.3,
+        0.5
+      ],
+      "page_memory": [
+        2,
+        4,
+        8,
+        16
+      ]
+    },
+    "config21": {
+      "p_copy": 0.1,
+      "replace_weights": [
+        20.0,
+        50.0,
+        30.0
+      ],
+      "p_same_position": 14.0
+    },
+    "seeds_per_config": 5,
+    "seed_offset": 2400,
+    "loss": "sum of squared deviations of the bin ratios 1/2-3/4-7/8-15 from the real ZL split"
+  },
+  "n_seeds_requested": 80,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 18:57:08",
+  "updated": "2026-10-28 19:06:30",
+  "n_seeds_done": 80
+}
