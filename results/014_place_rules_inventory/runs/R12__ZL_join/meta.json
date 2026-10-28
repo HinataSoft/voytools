@@ -85,5 +85,6 @@
   "n_seeds_requested": 30,
   "n_seeds_done_before": 0,
   "created": "2026-10-28 16:47:43",
-  "updated": "2026-10-28 16:47:43"
+  "updated": "2026-10-28 16:54:43",
+  "n_seeds_done": 30
 }
