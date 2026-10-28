@@ -622,3 +622,423 @@ def apply_place_rules(df: pd.DataFrame, rules: PlaceRules, which: Sequence[str] 
     out.attrs["place_rules"] = list(which)
     out.attrs["place_rules_changed"] = n_changed
     return out
+
+
+# --------------------------------------------------------------------------- #
+# conditional post-processor (experiment 017): R2', R3'a/b/c, R3'', type licence
+# --------------------------------------------------------------------------- #
+
+__all__ += ["ConditionalRules", "learn_conditional_rules", "apply_conditional_rules", "CONDITIONAL_RULES"]
+
+CONDITIONAL_RULES = ("R1", "R2", "R2p", "R3", "R3a", "R3b", "R3c", "R3pp")
+_SEP = "\t"
+_PREFIX_RULES = ("R3", "R3a", "R3b", "R3c")
+
+
+def _key(*parts: np.ndarray) -> np.ndarray:
+    """One string key per row from several object arrays (``'\\t'``-joined)."""
+    out = np.asarray(parts[0], dtype=object).astype(str).astype(object)
+    for p in parts[1:]:
+        out = out + _SEP + np.asarray(p, dtype=object).astype(str).astype(object)
+    return out
+
+
+def _glyphs_cached(strings, preset: Any) -> list[tuple[str, ...]]:
+    cache: dict = {}
+    out = []
+    for s in strings:
+        g = cache.get(s)
+        if g is None:
+            g = collapse_eva(s, preset) if s else ()
+            cache[s] = g
+        out.append(g)
+    return out
+
+
+def _first_glyphs(strings, preset: Any) -> np.ndarray:
+    return np.asarray([g[0] if g else "" for g in _glyphs_cached(strings, preset)], dtype=object)
+
+
+def _last_glyphs(strings, preset: Any) -> np.ndarray:
+    return np.asarray([g[-1] if g else "" for g in _glyphs_cached(strings, preset)], dtype=object)
+
+
+def _coarse_position(df: pd.DataFrame) -> np.ndarray:
+    """Coarse position class of R3'c: ``first`` / ``inner`` / ``last`` token x ``pf`` / ``np``
+    (paragraph-first line or not)."""
+    first = df["is_first"].to_numpy(dtype=bool)
+    last = df["is_last"].to_numpy(dtype=bool)
+    place = np.where(first, "first", np.where(last, "last", "inner")).astype(object)
+    pf = np.where(_lip(df) == 0, "pf", "np").astype(object)
+    return place + "." + pf
+
+
+def _count_table(keys: np.ndarray, values: np.ndarray, mask: np.ndarray | None = None) -> dict:
+    """``key -> Series of counts of value`` (long table grouped by key)."""
+    if mask is not None:
+        keys, values = keys[mask], values[mask]
+    if len(keys) == 0:
+        return {}
+    t = pd.DataFrame({"k": list(keys), "v": list(values)}).groupby(["k", "v"], sort=False).size()
+    out: dict = {}
+    for (k, v), n in t.items():
+        out.setdefault(k, {})[v] = int(n)
+    return {k: pd.Series(d, dtype=float) for k, d in out.items()}
+
+
+def _counts(values: np.ndarray) -> pd.Series:
+    s = pd.Series(list(values), dtype=object).value_counts()
+    return s.astype(float)
+
+
+@dataclass
+class ConditionalRules:
+    """Learned place tables of experiment 017 (see :func:`learn_conditional_rules`).
+
+    ``base`` holds R1-R3 of 014 (:class:`PlaceRules`, used unchanged for the sets ``+R1+R2`` and
+    ``+R1+R2+R3``).  ``tables`` are count tables ``name -> {context key -> Series of counts}`` of the
+    conditional prefix rules of inner tokens (tokens with a predecessor in the line): ``'R3'`` prefix |
+    last glyph of the previous token, ``'R3a'`` prefix | (last glyph before, suffix), ``'R3b'`` prefix |
+    (last glyph before, first glyph of the stem), ``'R3c'`` prefix | (last glyph before, suffix, coarse
+    position), and of ``'R3pp'`` first glyph of the stem | last glyph before, learned on tokens without
+    prefix.  ``uncond`` holds the unconditional fallbacks (``'R3'``: prefixes of inner tokens, ``'R3pp'``:
+    first stem glyphs of inner tokens without prefix).  A context cell is used only with at least
+    ``min_cell`` observations; otherwise the rewrite backs off along ``R3c -> R3a -> R3 -> uncond``
+    (``R3b -> R3 -> uncond``, ``R3pp -> uncond``).  ``r2_inner`` is the last-glyph distribution of the tokens
+    that are not last in their line and ``end_glyphs`` the glyphs enriched at the line end more than
+    ``end_ratio`` times (R2').  ``vocab`` (token -> count of the real text) serves the type licence.
+    """
+
+    prefixes: list = field(default_factory=list)
+    suffixes: list = field(default_factory=list)
+    preset: Any = None
+    base: PlaceRules = field(default_factory=PlaceRules)
+    min_cell: int = 5
+    tables: dict = field(default_factory=dict)
+    uncond: dict = field(default_factory=dict)
+    r2_inner: pd.Series = field(default_factory=lambda: pd.Series(dtype=float))
+    end_glyphs: list = field(default_factory=list)
+    end_ratio: float = 5.0
+    vocab: dict = field(default_factory=dict)
+    licence_min_count: int = 2
+    n_tokens: int = 0
+
+    def supported(self, name: str, key: str) -> bool:
+        """Does the cell ``key`` of table ``name`` have at least ``min_cell`` observations?"""
+        s = self.tables.get(name, {}).get(key)
+        return s is not None and float(s.sum()) >= self.min_cell
+
+    def support(self) -> pd.DataFrame:
+        """One row per table: number of contexts, contexts with >= ``min_cell`` observations and the share
+        of the (real) tokens that sit in supported cells."""
+        rows = []
+        for name, tab in self.tables.items():
+            ns = np.asarray([float(s.sum()) for s in tab.values()])
+            ok = ns >= self.min_cell
+            rows.append({"table": name, "n_contexts": int(len(ns)), "n_contexts_supported": int(ok.sum()),
+                         "n_tokens": int(ns.sum()), "share_tokens_supported": float(ns[ok].sum() / ns.sum()) if ns.sum() else np.nan,
+                         "min_cell": self.min_cell})
+        return pd.DataFrame(rows)
+
+    def table(self, name: str) -> pd.DataFrame:
+        """Long table ``(rule, context, item, n, p)`` of one conditional table."""
+        rows = []
+        for c, s in self.tables.get(name, {}).items():
+            tot = float(s.sum())
+            for k, v in s.items():
+                rows.append({"rule": name, "context": c.replace(_SEP, "|"), "item": k, "n": int(v), "p": float(v) / tot})
+        return pd.DataFrame(rows, columns=["rule", "context", "item", "n", "p"])
+
+
+def learn_conditional_rules(df: pd.DataFrame, prefixes: Sequence[str] | None = None,
+                            suffixes: Sequence[str] | None = None, preset: Any = "auto", min_cell: int = 5,
+                            min_context: int = 20, end_ratio: float = 5.0, end_min_count: int = 20,
+                            licence_min_count: int = 2) -> ConditionalRules:
+    """Read the conditional place tables of experiment 017 from a token table in text order.
+
+    ``min_context`` is the R3 threshold of the 014 tables (``base``); ``min_cell`` the backoff threshold of
+    the conditional tables.  ``end_ratio`` / ``end_min_count``: a glyph belongs to the line-end set when it
+    occurs at least ``end_min_count`` times as the last glyph of a line-last token and its share there is
+    more than ``end_ratio`` times its share among the other tokens.
+    """
+    preset = resolve_preset(df, preset)
+    base = learn_place_rules(df, prefixes, suffixes, preset, min_context)
+    lab = token_labels(df, base.prefixes, base.suffixes, preset)
+    pre, stem, suf, lg = lab["prefix"], lab["stem"], lab["suffix"], lab["last_glyph"]
+    sfg = _first_glyphs(stem, preset)
+    ctx3 = _r3_context(df, lg)
+    inner = ctx3 != ""
+    pos = _coarse_position(df)
+    tables = {
+        "R3": _count_table(_key(ctx3), pre, inner),
+        "R3a": _count_table(_key(ctx3, suf), pre, inner),
+        "R3b": _count_table(_key(ctx3, sfg), pre, inner),
+        "R3c": _count_table(_key(ctx3, suf, pos), pre, inner),
+    }
+    nopre = inner & (pre == "") & (stem != "")
+    tables["R3pp"] = _count_table(_key(ctx3), sfg, nopre)
+    uncond = {"R3": _counts(pre[inner]), "R3pp": _counts(sfg[nopre])}
+    last = _r2_mask(df)
+    not_last = ~df["is_last"].to_numpy(dtype=bool)
+    r2_inner = _dist(lg[not_last]) if not_last.any() else pd.Series(dtype=float)
+    pl_n = pd.Series(list(lg[last]), dtype=object).value_counts()
+    pl = pl_n / pl_n.sum() if pl_n.sum() else pl_n
+    end_glyphs = []
+    for g, n in pl_n.items():
+        if n < end_min_count:
+            continue
+        po = float(r2_inner.get(g, 0.0))
+        if po == 0.0 or pl[g] / po > end_ratio:
+            end_glyphs.append(g)
+    vocab = {k: int(v) for k, v in df["token"].value_counts().items()}
+    return ConditionalRules(prefixes=list(base.prefixes), suffixes=list(base.suffixes), preset=preset, base=base,
+                            min_cell=min_cell, tables=tables, uncond=uncond, r2_inner=r2_inner,
+                            end_glyphs=sorted(end_glyphs), end_ratio=end_ratio, vocab=vocab,
+                            licence_min_count=licence_min_count, n_tokens=len(df))
+
+
+def _minimal_rewrite_ex(current: np.ndarray, target: pd.Series, rng: np.random.Generator,
+                        left: Sequence[str] | None = None, right: Sequence[str] | None = None,
+                        accept=None, max_tries: int = 5) -> tuple[np.ndarray, int]:
+    """:func:`_minimal_rewrite` with an optional type licence.
+
+    When ``accept`` is given, a replacement label ``a`` of token ``i`` is accepted only if
+    ``accept(left[i] + a + right[i])`` is true; otherwise it is drawn again (at most ``max_tries`` draws),
+    and the original label is kept when every draw fails.  Returns ``(labels, n_rejected)``.
+    """
+    n = len(current)
+    if n == 0 or len(target) == 0 or float(target.sum()) <= 0:
+        return current.copy(), 0
+    p = _dist(current)
+    q = target / target.sum()
+    items = sorted(set(p.index) | set(q.index))
+    pv = np.asarray([p.get(k, 0.0) for k in items])
+    qv = np.asarray([q.get(k, 0.0) for k in items])
+    keep_p = np.where(pv > 0, np.minimum(1.0, qv / np.where(pv > 0, pv, 1.0)), 0.0)
+    excess = np.maximum(qv - pv, 0.0)
+    out = current.copy()
+    if excess.sum() <= 0:
+        return out, 0
+    code = {k: i for i, k in enumerate(items)}
+    idx = np.asarray([code[a] for a in current])
+    keep = rng.random(n) < keep_p[idx]
+    pending = np.flatnonzero(~keep)
+    arr = np.asarray(items, dtype=object)
+    pe = excess / excess.sum()
+    tries = 1 if accept is None else max(1, int(max_tries))
+    for _ in range(tries):
+        if not len(pending):
+            break
+        draw = arr[rng.choice(len(items), size=len(pending), p=pe)]
+        if accept is None:
+            out[pending] = draw
+            pending = pending[:0]
+            break
+        ok = np.asarray([accept(left[i] + a + right[i]) for i, a in zip(pending, draw)], dtype=bool)
+        out[pending[ok]] = draw[ok]
+        pending = pending[~ok]
+    return out, int(len(pending))
+
+
+def _backoff_levels(rules: ConditionalRules, rule: str, keys: Mapping[str, np.ndarray]) -> list[tuple[str, np.ndarray | None]]:
+    """Backoff chain of a conditional rule: ``[(table name, key array), ..., ('uncond:<name>', None)]``."""
+    chains = {"R3": ["R3"], "R3a": ["R3a", "R3"], "R3b": ["R3b", "R3"], "R3c": ["R3c", "R3a", "R3"], "R3pp": ["R3pp"]}
+    out: list = [(name, keys[name]) for name in chains[rule]]
+    out.append(("uncond:" + ("R3pp" if rule == "R3pp" else "R3"), None))
+    return out
+
+
+def _rewrite_with_backoff(rules: ConditionalRules, rule: str, idx: np.ndarray, current: np.ndarray,
+                          keys: Mapping[str, np.ndarray], rng: np.random.Generator, left, right, accept,
+                          max_tries: int) -> tuple[np.ndarray, dict]:
+    """Rewrite ``current[idx]`` towards the most specific supported table of ``rule``; returns the new labels
+    of the whole array and a report ``{'n_candidates', 'n_changed', 'n_rejected', 'support': {level: n}}``."""
+    out = current.copy()
+    level_of = np.full(len(idx), -1, dtype=np.int64)
+    level_key = np.empty(len(idx), dtype=object)
+    levels = _backoff_levels(rules, rule, keys)
+    pending = np.arange(len(idx))
+    for li, (name, karr) in enumerate(levels):
+        if not len(pending):
+            break
+        if karr is None:
+            level_of[pending] = li
+            level_key[pending] = ""
+            pending = pending[:0]
+            break
+        kk = karr[idx[pending]]
+        ok = np.asarray([rules.supported(name, k) for k in kk], dtype=bool)
+        level_of[pending[ok]] = li
+        level_key[pending[ok]] = kk[ok]
+        pending = pending[~ok]
+    support = {}
+    n_rej = 0
+    for li, (name, karr) in enumerate(levels):
+        sel = np.flatnonzero(level_of == li)
+        support[name] = int(len(sel))
+        if not len(sel):
+            continue
+        if karr is None:
+            groups = {"": sel}
+        else:
+            groups = {}
+            for j in sel:
+                groups.setdefault(level_key[j], []).append(j)
+            groups = {k: np.asarray(v, dtype=np.int64) for k, v in groups.items()}
+        for k, g in groups.items():
+            rows = idx[g]
+            target = rules.uncond[name.split(":")[1]] if karr is None else rules.tables[name][k]
+            new, rej = _minimal_rewrite_ex(out[rows], target, rng, [left[r] for r in rows] if accept else None,
+                                           [right[r] for r in rows] if accept else None, accept, max_tries)
+            out[rows] = new
+            n_rej += rej
+    return out, {"n_candidates": int(len(idx)), "n_changed": int((out[idx] != current[idx]).sum()),
+                 "n_rejected": n_rej, "support": support}
+
+
+def apply_conditional_rules(df: pd.DataFrame, rules: ConditionalRules, which: Sequence[str] = ("R1", "R2p", "R3a"),
+                            seed: int = 0, licence: bool = False, max_tries: int = 5) -> pd.DataFrame:
+    """Copy of ``df`` (a generated or real corpus in text order) with the conditional place rules imposed.
+
+    ``which`` is a subset of :data:`CONDITIONAL_RULES`: ``'R1'`` and ``'R2'`` as in :func:`apply_place_rules`
+    (tables of ``rules.base``); ``'R2p'`` = R2 plus, for the tokens that are not last in their line, the last
+    glyph is rewritten when it belongs to ``rules.end_glyphs`` (kept with probability
+    min(1, q(g) / p(g)), ``q`` = real share among non-last tokens, otherwise replaced by a draw from the real
+    non-last distribution over the other glyphs; the glyph is changed in the suffix when the token has one,
+    else in the stem); ``'R3'``, ``'R3a'``, ``'R3b'``, ``'R3c'`` (at most one) rewrite the prefix of every inner
+    token towards the most specific supported table with backoff (see :class:`ConditionalRules`), per
+    context the minimal coupling of :func:`_minimal_rewrite`; ``'R3pp'`` rewrites the first glyph of the
+    stem of inner tokens without prefix (after the prefix rule).  Contexts (last glyph of the token before,
+    own suffix, first glyph of the stem, coarse position) are read after R1 / R2 / R2' from the rewritten
+    parts, so the prefix rules see the suffixes they condition on; the previous token's last glyph is read
+    once before the prefix rules (a prefix rewrite changes it only for tokens with empty stem and suffix).
+
+    With ``licence=True`` every rewrite is accepted only when the resulting token occurs at least
+    ``rules.licence_min_count`` times in ``rules.vocab``; a rejected draw is repeated at most ``max_tries``
+    times, then the original part is kept.  The result has the layout of ``df``; ``attrs['place_rules']``
+    lists the rules, ``attrs['place_rules_changed']`` the number of changed tokens per rule,
+    ``attrs['rewrite_report']`` per rule ``n_candidates`` / ``n_changed`` / ``n_rejected`` and the backoff
+    ``support`` (tokens per table level), ``attrs['licence']`` the switch.  Deterministic for a given ``seed``.
+    """
+    which = tuple(which)
+    bad = [w for w in which if w not in CONDITIONAL_RULES]
+    if bad:
+        raise ValueError(f"unknown rules {bad}; use {CONDITIONAL_RULES}")
+    pr = [w for w in which if w in _PREFIX_RULES]
+    if len(pr) > 1:
+        raise ValueError(f"at most one prefix rule of {_PREFIX_RULES}, got {pr}")
+    preset = rules.preset
+    lab = token_labels(df, rules.prefixes, rules.suffixes, preset)
+    pre, stem, suf = lab["prefix"].copy(), lab["stem"].copy(), lab["suffix"].copy()
+    n = len(df)
+    rng = np.random.default_rng(seed)
+    accept = (lambda tok: rules.vocab.get(tok, 0) >= rules.licence_min_count) if licence else None
+    report: dict = {}
+    changed: dict = {}
+
+    def tokens_now() -> list:
+        return [p + s + x for p, s, x in zip(pre, stem, suf)]
+
+    if "R1" in which:
+        ctx = _r1_context(df)
+        before = pre.copy()
+        rej = 0
+        for c, target in rules.base.r1.items():
+            m = np.flatnonzero(ctx == c)
+            if len(m):
+                new, r = _minimal_rewrite_ex(pre[m], target, rng, [""] * len(m) if accept else None,
+                                             [stem[i] + suf[i] for i in m] if accept else None, accept, max_tries)
+                pre[m] = new
+                rej += r
+        changed["R1"] = int((pre != before).sum())
+        report["R1"] = {"n_candidates": int((ctx != "").sum()), "n_changed": changed["R1"], "n_rejected": rej}
+    if ("R2" in which or "R2p" in which) and len(rules.base.r2):
+        m = np.flatnonzero(_r2_mask(df))
+        before = suf.copy()
+        rej = 0
+        if len(m):
+            new, rej = _minimal_rewrite_ex(suf[m], rules.base.r2, rng, [pre[i] + stem[i] for i in m] if accept else None,
+                                           [""] * len(m) if accept else None, accept, max_tries)
+            suf[m] = new
+        changed["R2"] = int((suf != before).sum())
+        report["R2"] = {"n_candidates": int(len(m)), "n_changed": changed["R2"], "n_rejected": rej}
+    if "R2p" in which and len(rules.end_glyphs) and len(rules.r2_inner):
+        toks = tokens_now()
+        gl = _glyphs_cached(toks, preset)
+        lg = np.asarray([g[-1] if g else "" for g in gl], dtype=object)
+        not_last = ~df["is_last"].to_numpy(dtype=bool)
+        E = list(rules.end_glyphs)
+        cand = np.flatnonzero(not_last & np.isin(lg, E))
+        p_all = _dist(lg[not_last]) if not_last.any() else pd.Series(dtype=float)
+        keep_p = {g: min(1.0, float(rules.r2_inner.get(g, 0.0)) / float(p_all.get(g, 1.0))) if p_all.get(g, 0.0) > 0 else 0.0
+                  for g in E}
+        q_rest = rules.r2_inner.drop([g for g in E if g in rules.r2_inner.index])
+        n_ch = rej = 0
+        if len(cand) and len(q_rest) and float(q_rest.sum()) > 0:
+            q_rest = q_rest / q_rest.sum()
+            items = np.asarray(list(q_rest.index), dtype=object)
+            keep = rng.random(len(cand)) < np.asarray([keep_p[g] for g in lg[cand]])
+            for i in cand[~keep]:
+                g_tok = gl[i]
+                sg = collapse_eva(suf[i], preset) if suf[i] else ()
+                in_suffix = bool(sg) and sg[-1] == g_tok[-1]
+                base_part = suf[i] if in_suffix else stem[i]
+                if not base_part:
+                    continue
+                parts = collapse_eva(base_part, preset)
+                head = "".join(parts[:-1])
+                left = (pre[i] + stem[i] + head) if in_suffix else (pre[i] + head)
+                right = "" if in_suffix else suf[i]
+                done = False
+                for _ in range(max(1, max_tries) if accept else 1):
+                    g_new = items[rng.choice(len(items), p=q_rest.to_numpy())]
+                    if accept is None or accept(left + g_new + right):
+                        done = True
+                        break
+                if not done:
+                    rej += 1
+                    continue
+                if in_suffix:
+                    suf[i] = head + g_new
+                else:
+                    stem[i] = head + g_new
+                n_ch += 1
+        changed["R2p"] = n_ch
+        report["R2p"] = {"n_candidates": int(len(cand)), "n_changed": n_ch, "n_rejected": rej,
+                         "end_glyphs": list(E)}
+    if pr or "R3pp" in which:
+        toks = tokens_now()
+        lg = _last_glyphs(toks, preset)
+        ctx3 = _r3_context(df, lg)
+        inner = np.flatnonzero(ctx3 != "")
+        sfg = _first_glyphs(stem, preset)
+        keys = {"R3": _key(ctx3), "R3a": _key(ctx3, suf), "R3b": _key(ctx3, sfg), "R3c": _key(ctx3, suf, _coarse_position(df)),
+                "R3pp": _key(ctx3)}
+        if pr:
+            rule = pr[0]
+            left = [""] * n
+            right = [stem[i] + suf[i] for i in range(n)] if accept else None
+            new, rep = _rewrite_with_backoff(rules, rule, inner, pre, keys, rng, left, right, accept, max_tries)
+            pre = new
+            changed[rule] = rep["n_changed"]
+            report[rule] = rep
+        if "R3pp" in which:
+            nopre = inner[(pre[inner] == "") & (stem[inner] != "")]
+            sg = _glyphs_cached(stem, preset)
+            tails = ["".join(g[1:]) for g in sg]
+            left = [pre[i] for i in range(n)]
+            right = [tails[i] + suf[i] for i in range(n)] if accept else None
+            new, rep = _rewrite_with_backoff(rules, "R3pp", nopre, sfg, keys, rng, left, right, accept, max_tries)
+            ch = np.flatnonzero(new != sfg)
+            for i in ch:
+                stem[i] = new[i] + tails[i]
+            changed["R3pp"] = rep["n_changed"]
+            report["R3pp"] = rep
+    tokens = tokens_now()
+    out = _replace_tokens(df, tokens, preset, f"{df.attrs.get('source', 'corpus')}+{'+'.join(which)}" + ("+L" if licence else ""))
+    out.attrs["place_rules"] = list(which)
+    out.attrs["place_rules_changed"] = changed
+    out.attrs["rewrite_report"] = report
+    out.attrs["licence"] = bool(licence)
+    out.attrs["n_tokens_changed"] = int(sum(t != o for t, o in zip(tokens, df["token"].tolist())))
+    return out

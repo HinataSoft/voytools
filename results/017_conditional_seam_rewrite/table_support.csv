@@ -1,0 +1,11 @@
+source,table,n_contexts,n_contexts_supported,n_tokens,share_tokens_supported,min_cell,end_glyphs,n_vocab_types_ge2
+ZL_split,R3,29,23,30140,0.99947,5,g m,2202
+ZL_split,R3a,304,171,30140,0.99184,5,g m,2202
+ZL_split,R3b,413,204,30140,0.98762,5,g m,2202
+ZL_split,R3c,768,368,30140,0.97575,5,g m,2202
+ZL_split,R3pp,25,16,3383,0.99379,5,g m,2202
+ZL_join,R3,28,23,27680,0.99953,5,g m,2233
+ZL_join,R3a,288,165,27680,0.99238,5,g m,2233
+ZL_join,R3b,378,183,27680,0.98663,5,g m,2233
+ZL_join,R3c,730,365,27680,0.97605,5,g m,2233
+ZL_join,R3pp,20,12,2249,0.99244,5,g m,2233

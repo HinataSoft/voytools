@@ -1,0 +1,185 @@
+{
+  "name": "017_conditional_seam_rewrite",
+  "params": {
+    "sets": {
+      "base": {
+        "rules": [],
+        "licence": false
+      },
+      "R12": {
+        "rules": [
+          "R1",
+          "R2"
+        ],
+        "licence": false
+      },
+      "R123": {
+        "rules": [
+          "R1",
+          "R2",
+          "R3"
+        ],
+        "licence": false
+      },
+      "R12pA": {
+        "rules": [
+          "R1",
+          "R2p",
+          "R3a"
+        ],
+        "licence": false
+      },
+      "R12pB": {
+        "rules": [
+          "R1",
+          "R2p",
+          "R3b"
+        ],
+        "licence": false
+      },
+      "R12pC": {
+        "rules": [
+          "R1",
+          "R2p",
+          "R3c"
+        ],
+        "licence": false
+      },
+      "R12pA3": {
+        "rules": [
+          "R1",
+          "R2p",
+          "R3a",
+          "R3pp"
+        ],
+        "licence": false
+      },
+      "R12pA3L": {
+        "rules": [
+          "R1",
+          "R2p",
+          "R3a",
+          "R3pp"
+        ],
+        "licence": true
+      }
+    },
+    "tags": [
+      "ZL_split",
+      "ZL_join"
+    ],
+    "template_tags": [
+      "ZL_split"
+    ],
+    "n_null": 30,
+    "n_boot": 100,
+    "min_cell": 5,
+    "min_context": 20,
+    "end_ratio": 5.0,
+    "licence_min_count": 2,
+    "max_tries": 5,
+    "ts2020_config": 21,
+    "z_ok": 3.0,
+    "runs": {
+      "ZL_join": 101,
+      "ZL_split": 101,
+      "selfcheck+R12pA:ZL_join": 30,
+      "selfcheck+R12pA:ZL_split": 30,
+      "tmpl+R12pA3:ZL_split": 30,
+      "tmpl+R12pA:ZL_split": 30,
+      "tmpl:ZL_split": 30,
+      "ts2020+R123:ZL_join": 30,
+      "ts2020+R123:ZL_split": 30,
+      "ts2020+R12:ZL_join": 30,
+      "ts2020+R12:ZL_split": 30,
+      "ts2020+R12pA3:ZL_join": 30,
+      "ts2020+R12pA3:ZL_split": 30,
+      "ts2020+R12pA3L:ZL_join": 30,
+      "ts2020+R12pA3L:ZL_split": 30,
+      "ts2020+R12pA:ZL_join": 30,
+      "ts2020+R12pA:ZL_split": 30,
+      "ts2020+R12pB:ZL_join": 30,
+      "ts2020+R12pB:ZL_split": 30,
+      "ts2020+R12pC:ZL_join": 30,
+      "ts2020+R12pC:ZL_split": 30,
+      "ts2020:ZL_join": 30,
+      "ts2020:ZL_split": 30
+    },
+    "properties": {
+      "pozicni_vazba_prefixu": [
+        "009:prefix__I_pos",
+        "011:a__prefix__pos__explained"
+      ],
+      "pozicni_vazba_sufixu": [
+        "009:suffix__I_pos",
+        "011:a__suffix__pos__explained"
+      ],
+      "zacatek_radku": [
+        "009:jsd_first_mid",
+        "009:first_top5_excess"
+      ],
+      "konec_radku": [
+        "009:jsd_last_mid",
+        "009:last_top5_excess",
+        "010:end_mg_last",
+        "010:end_len_diff"
+      ],
+      "konec_radku_17x": [
+        "010:end_enrich_max"
+      ],
+      "sev_glyfovy": [
+        "009:edge_mi_excess",
+        "010:bnd_edge_in"
+      ],
+      "sev_sufix_prefix": [
+        "011:a__nb_next_prefix__mi",
+        "011:a__nb_prev_suffix__mi"
+      ],
+      "uzavreny_radek": [
+        "010:bnd_edge_ratio_line",
+        "010:bnd_affix_ratio_line",
+        "010:bnd_stem_ratio_line"
+      ],
+      "zahlavi_radku": [
+        "009:I_first_rest",
+        "010:head_rest"
+      ],
+      "vazba_prefix_sufix": [
+        "009:mi_prefix_suffix"
+      ],
+      "sekcni_vazba_prefixu": [
+        "009:prefix__I_sec",
+        "009:prefix__I_sec_g_pos"
+      ],
+      "sirka_paradigmatu": [
+        "009:mean_suffixes_per_stem",
+        "009:H_suffix_given_stem",
+        "009:frac_stems_multi_suffix"
+      ],
+      "H_sufix_kmen_vysvetleno": [
+        "011:a__suffix__all-page__explained"
+      ],
+      "cmi_excess": [
+        "009:cmi_excess"
+      ],
+      "typy": [
+        "calib:calib__n_types"
+      ],
+      "hapax": [
+        "calib:calib__hapax_share"
+      ],
+      "H2_glyfu": [
+        "calib:calib__H2_glyph"
+      ],
+      "delka": [
+        "calib:calib__mean_len"
+      ],
+      "zipf": [
+        "009:zipf_slope"
+      ]
+    },
+    "verdict_rule": "z_strict = larger |z| of z_seed (SD over seeds) and z_boot (page-bootstrap SD of the real text); property reached = all its metrics |z_strict| < 3 in split and join"
+  },
+  "created": "2026-10-28 18:54:42",
+  "updated": "2026-10-28 20:22:09"
+}
