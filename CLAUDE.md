@@ -34,6 +34,20 @@ Three research directions (details in the owner's notes; summary here):
    share content (same plant in herbal and pharma sections, zodiac vs astronomical pages); label
    stems (`ok-`/`ot-` labels) reappearing in running text.
 
+## Status after experiments 001–007 (read `results/SYNTHESIS.md` for the table)
+
+* Canonical copying null = `voytools.selfcitation.selfcitation_like` with config 21 from
+  `results/004_selfcitation_port/best_configs.csv` (Timm & Schinner port, calibrated: loss 0.05).
+  The older `autocopy_like` config 86 (003) stays only for continuity.
+* Paradigm-level findings (002) are reproduced by copying (004) and by a structured template (005):
+  they are evidence of a *system*, not of meaning. Text structure is dominated by line/paragraph
+  position and by proximity; no sequential dependence beyond the immediate neighbour (007); stem
+  sharing between pages follows distance, not section (006).
+* Working frame for the next round: if the text carries meaning, the profile (hapax-rich, low token
+  order, line as unit, strong positional conventions) points to a **catalogue / register / recipe**
+  kind of text (names and formulaic entries), not continuous prose. Tests target that frame
+  (008 recheck with ts2020, 009 register profile vs real genres, 010 line as item).
+
 ## Conventions that every analysis follows
 
 * **Primary file `data/ZL3b-n.txt` (Eva), control `data/GC2a-n.txt` (v101).** A result counts
