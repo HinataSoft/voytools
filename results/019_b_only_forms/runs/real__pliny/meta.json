@@ -1,0 +1,60 @@
+{
+  "name": "019_b_only_forms",
+  "params": {
+    "set": "pliny",
+    "source": "real",
+    "n_draw": 200,
+    "n_null": 30,
+    "min_count": 2,
+    "max_dist": 2,
+    "n_shuf": 20,
+    "classes": [
+      "shared",
+      "d_variant",
+      "other_le1",
+      "no_counterpart",
+      "hapax"
+    ],
+    "d_ops": {
+      "extended": {
+        "units": [
+          "d",
+          "e",
+          "ee",
+          "q"
+        ],
+        "subs": [
+          [
+            "ch",
+            "sh"
+          ]
+        ]
+      },
+      "v101": {
+        "units": [
+          "4",
+          "7",
+          "8",
+          "C",
+          "c"
+        ],
+        "subs": [
+          [
+            "1",
+            "2"
+          ]
+        ]
+      }
+    },
+    "pliny_A": [
+      "16",
+      "18",
+      "21"
+    ]
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 19:19:20",
+  "updated": "2026-10-28 19:34:34",
+  "n_seeds_done": 200
+}
