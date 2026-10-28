@@ -1,0 +1,47 @@
+{
+  "name": "020_ZL_join_selfcitation_21",
+  "params": {
+    "combo": "ZL_join",
+    "source": "selfcitation_21",
+    "variants": {
+      "st": {
+        "unit": "stem",
+        "min_count": 2
+      },
+      "st50": {
+        "unit": "stem",
+        "min_count": 2,
+        "drop_top": 50
+      },
+      "tok": {
+        "unit": "token",
+        "min_count": 2
+      },
+      "ng": {
+        "unit": "stem",
+        "min_count": 2,
+        "gallows": true
+      }
+    },
+    "n_pages": 207,
+    "n_lines": 4128,
+    "n_pars": 741,
+    "n_pages_2pars": 159,
+    "n_open_end": 2,
+    "selfcitation_004": {
+      "row": "ts2020_calB",
+      "p_copy": 0.1,
+      "replace_weights": [
+        20.0,
+        50.0,
+        30.0
+      ],
+      "p_same_position": 14.0
+    },
+    "seed_offset": 2100
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 19:19:57",
+  "updated": "2026-10-28 19:19:57"
+}
