@@ -59,3 +59,12 @@
 * Externí kontroly: `lrozanova/voynich-units` → `../lrozanova/voynich-units`, `danielgaskell/voynich` → `../ext/gaskell`
   (cesty jako v 009/013).
 * Časy: reál (1 rozdělení) 1,8 s; permutace stránek (5 rozdělení) 3 s; ts2020 vzorek 3 s + metriky; šablona 18 s.
+* Běhy: 4–6 procesů najednou s `OMP_NUM_THREADS=1` (bez toho se vlákna BLAS přetahovala, 8 s na řádek místo 3 s).
+  Jeden řetězec úloh přežil ukončení a počítal Celsa/Linnaea souběžně s frontou – duplicitní seedy v `runs.csv`
+  (identické hodnoty, ověřeno) byly odstraněny (`drop_duplicates('seed')`); žádný poškozený řádek.
+* Nejistota zisku (a): po polovinách kmenů je na d = 1 jen ~7 dvojic, proto biny v f(d) a hodnocení proti
+  binovanému profilu poloviny 2; intervaly přes rozdělení jsou široké, `se` průměru 0,02–0,06.
+* Kosinus/Jaccard: zisk bloků roste s K stejně u všech zdrojů v témž layoutu (velikost stránek, jazyk podle pozice) –
+  pro bloky nepoužitelné, pro fyzické pořadí (bifolio) ano, protože permutace dávají přesně 0.
+* `neighbours_list.csv`: u surového poměru (a) mají malé stránky poměry 0 / 20 / 40 a mnoho remíz (`f1r f1v f2r`),
+  seznam anomálií proto podle surového kosinu.

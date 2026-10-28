@@ -256,7 +256,7 @@ def plots(prof: pd.DataFrame, gain: pd.DataFrame, qm: pd.DataFrame) -> None:
     fig, axes = plt.subplots(2, 3, figsize=(14, 7.5))
     for row, measure in enumerate(("rare", "cos")):
         for ax, (combo, cut) in zip(axes[row], (("ZL_split", "all"), ("ZL_split", "herbalA"), ("GC_split", "all"))):
-            for src in PLOT_SOURCES:
+            for src in [x for x in PLOT_SOURCES if x != "ctl:gibberish_pooled"]:   # 60 pages: K up to 30 is meaningless
                 dd = _series(gain[(gain["measure"] == measure) & (gain["cut"] == cut)], combo, src).sort_values("K")
                 if dd.empty:
                     continue
