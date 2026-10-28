@@ -1,0 +1,101 @@
+source,length,rank,count,share,n_lines,signature
+ZL_split,4,1,21,0.084337,249,<other> <other> <other> <other>
+ZL_split,4,2,6,0.024096,249,<other> <other> <other> d|
+ZL_split,4,3,6,0.024096,249,<other> <other> che|y <other>
+ZL_split,4,4,4,0.016064,249,<other> <other> <other> |
+ZL_split,4,5,4,0.016064,249,<other> <other> o|y <other>
+ZL_split,4,6,3,0.012048,249,<other> <other> d| <other>
+ZL_split,4,7,3,0.012048,249,<other> cho| <other> <other>
+ZL_split,4,8,3,0.012048,249,<other> <other> <other> |y
+ZL_split,4,9,3,0.012048,249,<other> |y <other> <other>
+ZL_split,4,10,2,0.0080321,249,<other> <other> o| <other>
+ZL_split,4,11,2,0.0080321,249,<other> <other> cho| |y
+ZL_split,4,12,2,0.0080321,249,d| <other> <other> <other>
+ZL_split,4,13,2,0.0080321,249,cho| <other> <other> <other>
+ZL_split,4,14,2,0.0080321,249,<other> <other> d|r <other>
+ZL_split,4,15,2,0.0080321,249,<other> o|y | |
+ZL_split,4,16,2,0.0080321,249,<other> <other> |y <other>
+ZL_split,4,17,2,0.0080321,249,<other> <other> <other> o|y
+ZL_split,4,18,2,0.0080321,249,<other> <other> <other> ch|y
+ZL_split,4,19,2,0.0080321,249,<other> <other> qo|aiin <other>
+ZL_split,4,20,2,0.0080321,249,| cho| <other> <other>
+ZL_split,5,1,10,0.030864,324,<other> <other> <other> <other> <other>
+ZL_split,5,2,4,0.012346,324,<other> <other> d| <other> <other>
+ZL_split,5,3,3,0.0092593,324,o| <other> <other> <other> <other>
+ZL_split,5,4,3,0.0092593,324,<other> <other> <other> <other> |
+ZL_split,5,5,3,0.0092593,324,<other> <other> <other> <other> |y
+ZL_split,5,6,2,0.0061728,324,<other> <other> | <other> <other>
+ZL_split,5,7,2,0.0061728,324,| <other> <other> <other> d|
+ZL_split,5,8,2,0.0061728,324,<other> d| <other> <other> <other>
+ZL_split,5,9,2,0.0061728,324,<other> <other> <other> d| <other>
+ZL_split,5,10,2,0.0061728,324,<other> <other> <other> <other> o|y
+ZL_split,5,11,2,0.0061728,324,<other> <other> <other> <other> o|
+ZL_split,5,12,2,0.0061728,324,<other> <other> <other> <other> d|r
+ZL_split,5,13,2,0.0061728,324,d| <other> cho| <other> <other>
+ZL_split,5,14,2,0.0061728,324,<other> | <other> <other> <other>
+ZL_split,5,15,2,0.0061728,324,<other> <other> <other> <other> d|
+ZL_split,5,16,2,0.0061728,324,qo|dy <other> qo|y <other> <other>
+ZL_split,5,17,2,0.0061728,324,<other> |y <other> <other> o|aiin
+ZL_split,5,18,1,0.0030864,324,sh| cho| che| d| |y
+ZL_split,5,19,1,0.0030864,324,<other> |y <other> cho| d|
+ZL_split,5,20,1,0.0030864,324,sh| <other> che| d| ch|y
+ZL_split,6,1,7,0.021212,330,<other> <other> <other> <other> <other> <other>
+ZL_split,6,2,3,0.0090909,330,<other> | <other> <other> <other> <other>
+ZL_split,6,3,3,0.0090909,330,<other> <other> <other> | <other> <other>
+ZL_split,6,4,2,0.0060606,330,<other> <other> <other> <other> <other> ch|y
+ZL_split,6,5,2,0.0060606,330,<other> <other> <other> <other> <other> d|
+ZL_split,6,6,2,0.0060606,330,<other> <other> sh| <other> <other> <other>
+ZL_split,6,7,2,0.0060606,330,<other> |dy <other> <other> <other> <other>
+ZL_split,6,8,2,0.0060606,330,<other> che| <other> <other> <other> <other>
+ZL_split,6,9,2,0.0060606,330,<other> qo|y <other> <other> <other> <other>
+ZL_split,6,10,1,0.0030303,330,<other> <other> <other> che| <other> d|
+ZL_split,6,11,1,0.0030303,330,<other> cho| d|r d| <other> <other>
+ZL_split,6,12,1,0.0030303,330,|y <other> d| <other> <other> |y
+ZL_split,6,13,1,0.0030303,330,<other> <other> | <other> |y |
+ZL_split,6,14,1,0.0030303,330,<other> cho| <other> <other> <other> <other>
+ZL_split,6,15,1,0.0030303,330,qo|y <other> sh|y qo|dy qo|y <other>
+ZL_split,6,16,1,0.0030303,330,<other> d| <other> d| cho| o|y
+ZL_split,6,17,1,0.0030303,330,sh| sh| |y <other> <other> cho|
+ZL_split,6,18,1,0.0030303,330,o| <other> <other> <other> <other> |
+ZL_split,6,19,1,0.0030303,330,<other> <other> <other> d| o|aiin |y
+ZL_split,6,20,1,0.0030303,330,| | |y <other> <other> <other>
+ZL_split,7,1,8,0.020833,384,<other> <other> <other> <other> <other> <other> <other>
+ZL_split,7,2,2,0.0052083,384,<other> <other> <other> <other> <other> | |
+ZL_split,7,3,2,0.0052083,384,<other> |y cho| <other> <other> <other> <other>
+ZL_split,7,4,2,0.0052083,384,<other> cho| <other> <other> <other> <other> <other>
+ZL_split,7,5,2,0.0052083,384,<other> <other> <other> |y <other> | <other>
+ZL_split,7,6,2,0.0052083,384,<other> <other> qo|aiin <other> <other> <other> <other>
+ZL_split,7,7,1,0.0026042,384,<other> <other> <other> sh| <other> <other> |y
+ZL_split,7,8,1,0.0026042,384,<other> o|y o|y d| o|y <other> <other>
+ZL_split,7,9,1,0.0026042,384,qo|aiin |y | cho| <other> <other> <other>
+ZL_split,7,10,1,0.0026042,384,|dy <other> d| |y <other> <other> |
+ZL_split,7,11,1,0.0026042,384,<other> <other> <other> cho| d| <other> d|
+ZL_split,7,12,1,0.0026042,384,d| <other> qo|y <other> <other> <other> che|
+ZL_split,7,13,1,0.0026042,384,| <other> <other> <other> <other> qo|y o|
+ZL_split,7,14,1,0.0026042,384,<other> <other> <other> <other> <other> <other> d|r
+ZL_split,7,15,1,0.0026042,384,o| cho| <other> <other> cho| <other> o|
+ZL_split,7,16,1,0.0026042,384,<other> cho| <other> <other> qo|aiin d| sh|
+ZL_split,7,17,1,0.0026042,384,<other> sh|y | o| sh|y <other> <other>
+ZL_split,7,18,1,0.0026042,384,o| <other> d| <other> o| <other> <other>
+ZL_split,7,19,1,0.0026042,384,d| qo|aiin <other> | cho| o|aiin |
+ZL_split,7,20,1,0.0026042,384,<other> <other> <other> <other> o| sh| o|
+ZL_split,8,1,3,0.0062241,482,<other> <other> d| <other> <other> <other> <other> <other>
+ZL_split,8,2,2,0.0041494,482,<other> <other> <other> <other> o|dy <other> <other> <other>
+ZL_split,8,3,1,0.0020747,482,<other> o|y |y <other> d| o|aiin o| o|
+ZL_split,8,4,1,0.0020747,482,<other> <other> <other> |y <other> sh|y <other> <other>
+ZL_split,8,5,1,0.0020747,482,o| |y o| <other> o| <other> <other> d|
+ZL_split,8,6,1,0.0020747,482,d| o| cho| o|aiin <other> ch|y |y <other>
+ZL_split,8,7,1,0.0020747,482,<other> <other> o| o|y d| <other> <other> <other>
+ZL_split,8,8,1,0.0020747,482,d| |y |y sh| <other> |y |dy <other>
+ZL_split,8,9,1,0.0020747,482,| che| <other> o|aiin <other> cho| d|r sh|y
+ZL_split,8,10,1,0.0020747,482,<other> cho| <other> cho| <other> <other> ch|y d|
+ZL_split,8,11,1,0.0020747,482,<other> <other> o| cho| <other> cho| o| <other>
+ZL_split,8,12,1,0.0020747,482,<other> <other> qo|y sh| <other> <other> | <other>
+ZL_split,8,13,1,0.0020747,482,<other> <other> <other> <other> <other> <other> <other> cho|
+ZL_split,8,14,1,0.0020747,482,o| che| <other> |y <other> sh| che|y <other>
+ZL_split,8,15,1,0.0020747,482,sh| sh| <other> sh| d| qo|aiin | <other>
+ZL_split,8,16,1,0.0020747,482,qo|y sh| <other> | |y <other> <other> o|y
+ZL_split,8,17,1,0.0020747,482,o|y o|y qo|aiin sh| |y |y che| <other>
+ZL_split,8,18,1,0.0020747,482,<other> o| <other> d| o| <other> <other> qo|dy
+ZL_split,8,19,1,0.0020747,482,<other> sh|dy <other> <other> sh| <other> d| <other>
+ZL_split,8,20,1,0.0020747,482,<other> |y cho| o|aiin d| <other> <other> <other>

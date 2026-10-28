@@ -1,0 +1,101 @@
+source,length,rank,count,share,n_lines,signature
+ctl:linnaeus_prose,4,1,10,0.040161,249,| | | |
+ctl:linnaeus_prose,4,2,3,0.012048,249,<other> |tis | |
+ctl:linnaeus_prose,4,3,3,0.012048,249,<other> | | |
+ctl:linnaeus_prose,4,4,3,0.012048,249,| p| | |
+ctl:linnaeus_prose,4,5,3,0.012048,249,| | s| |
+ctl:linnaeus_prose,4,6,2,0.0080321,249,|um <other> <other> <other>
+ctl:linnaeus_prose,4,7,2,0.0080321,249,| | <other> <other>
+ctl:linnaeus_prose,4,8,2,0.0080321,249,| p| <other> |
+ctl:linnaeus_prose,4,9,2,0.0080321,249,| | | <other>
+ctl:linnaeus_prose,4,10,2,0.0080321,249,<other> <other> | |
+ctl:linnaeus_prose,4,11,2,0.0080321,249,|a |ibus <other> |is
+ctl:linnaeus_prose,4,12,2,0.0080321,249,|um |is |is |tis
+ctl:linnaeus_prose,4,13,2,0.0080321,249,|is <other> |tis |is
+ctl:linnaeus_prose,4,14,1,0.0040161,249,<other> | | |a
+ctl:linnaeus_prose,4,15,1,0.0040161,249,| <other> <other> <other>
+ctl:linnaeus_prose,4,16,1,0.0040161,249,|a |s |ia |e
+ctl:linnaeus_prose,4,17,1,0.0040161,249,<other> <other> <other> <other>
+ctl:linnaeus_prose,4,18,1,0.0040161,249,| a| s|is <other>
+ctl:linnaeus_prose,4,19,1,0.0040161,249,| | |ia |ia
+ctl:linnaeus_prose,4,20,1,0.0040161,249,<other> | <other> a|
+ctl:linnaeus_prose,5,1,7,0.021605,324,| | | | |
+ctl:linnaeus_prose,5,2,4,0.012346,324,| | | | |a
+ctl:linnaeus_prose,5,3,4,0.012346,324,| | | | <other>
+ctl:linnaeus_prose,5,4,3,0.0092593,324,<other> | p| | |
+ctl:linnaeus_prose,5,5,2,0.0061728,324,|s <other> m| |ia |
+ctl:linnaeus_prose,5,6,2,0.0061728,324,| | <other> |ia |i
+ctl:linnaeus_prose,5,7,2,0.0061728,324,|tis | | | |
+ctl:linnaeus_prose,5,8,2,0.0061728,324,| | <other> a| |
+ctl:linnaeus_prose,5,9,2,0.0061728,324,<other> | | | |s
+ctl:linnaeus_prose,5,10,2,0.0061728,324,p| <other> | | |
+ctl:linnaeus_prose,5,11,2,0.0061728,324,| <other> | | <other>
+ctl:linnaeus_prose,5,12,2,0.0061728,324,| <other> | | |
+ctl:linnaeus_prose,5,13,2,0.0061728,324,<other> | | | |
+ctl:linnaeus_prose,5,14,1,0.0030864,324,| | m| m| <other>
+ctl:linnaeus_prose,5,15,1,0.0030864,324,| | <other> |ia <other>
+ctl:linnaeus_prose,5,16,1,0.0030864,324,p| <other> | | |a
+ctl:linnaeus_prose,5,17,1,0.0030864,324,m| <other> |a | s|
+ctl:linnaeus_prose,5,18,1,0.0030864,324,<other> <other> s| m| <other>
+ctl:linnaeus_prose,5,19,1,0.0030864,324,| <other> <other> s| m|
+ctl:linnaeus_prose,5,20,1,0.0030864,324,| e| |ibus <other> <other>
+ctl:linnaeus_prose,6,1,2,0.0060606,330,| | p| <other> | |
+ctl:linnaeus_prose,6,2,2,0.0060606,330,| | | | <other> |
+ctl:linnaeus_prose,6,3,2,0.0060606,330,| | | | | <other>
+ctl:linnaeus_prose,6,4,2,0.0060606,330,<other> <other> <other> | | |
+ctl:linnaeus_prose,6,5,2,0.0060606,330,| | s| | | |
+ctl:linnaeus_prose,6,6,2,0.0060606,330,| | | a| | |
+ctl:linnaeus_prose,6,7,2,0.0060606,330,<other> | | | | |
+ctl:linnaeus_prose,6,8,2,0.0060606,330,| p| | | | |
+ctl:linnaeus_prose,6,9,1,0.0030303,330,|is |tis <other> | | a|
+ctl:linnaeus_prose,6,10,1,0.0030303,330,s| |is <other> |is |e |e
+ctl:linnaeus_prose,6,11,1,0.0030303,330,<other> <other> |i | <other> |
+ctl:linnaeus_prose,6,12,1,0.0030303,330,<other> | | | | <other>
+ctl:linnaeus_prose,6,13,1,0.0030303,330,|ia |a |ia |is |tis <other>
+ctl:linnaeus_prose,6,14,1,0.0030303,330,|i |um <other> | p| |
+ctl:linnaeus_prose,6,15,1,0.0030303,330,<other> <other> |is <other> <other> <other>
+ctl:linnaeus_prose,6,16,1,0.0030303,330,<other> |um |um |um |is <other>
+ctl:linnaeus_prose,6,17,1,0.0030303,330,|ibus | |s |um |is <other>
+ctl:linnaeus_prose,6,18,1,0.0030303,330,|tis |ibus |tis |is s|is |is
+ctl:linnaeus_prose,6,19,1,0.0030303,330,| | | | |um |is
+ctl:linnaeus_prose,6,20,1,0.0030303,330,|is s|is |is | | |
+ctl:linnaeus_prose,7,1,2,0.0052083,384,<other> | | | | | |
+ctl:linnaeus_prose,7,2,2,0.0052083,384,| | | | | <other> |
+ctl:linnaeus_prose,7,3,2,0.0052083,384,| | | | | p|is s|
+ctl:linnaeus_prose,7,4,2,0.0052083,384,| | | s| | | |
+ctl:linnaeus_prose,7,5,1,0.0026042,384,|s | | | | | |um
+ctl:linnaeus_prose,7,6,1,0.0026042,384,| | |s | | m| m|
+ctl:linnaeus_prose,7,7,1,0.0026042,384,| | m| m| |a |e |a
+ctl:linnaeus_prose,7,8,1,0.0026042,384,| | m| m| |ia | |
+ctl:linnaeus_prose,7,9,1,0.0026042,384,| | | <other> | a| |
+ctl:linnaeus_prose,7,10,1,0.0026042,384,| | <other> |a |ia |is |tis
+ctl:linnaeus_prose,7,11,1,0.0026042,384,|a <other> <other> <other> |ibus |is m|
+ctl:linnaeus_prose,7,12,1,0.0026042,384,| | | s|is <other> |i m|
+ctl:linnaeus_prose,7,13,1,0.0026042,384,|um |ibus |ibus | |s |um |ibus
+ctl:linnaeus_prose,7,14,1,0.0026042,384,|s |um |is <other> |tis |ibus |tis
+ctl:linnaeus_prose,7,15,1,0.0026042,384,|is |tis <other> p|is <other> |is |
+ctl:linnaeus_prose,7,16,1,0.0026042,384,<other> <other> |e |um |is <other> |tis
+ctl:linnaeus_prose,7,17,1,0.0026042,384,<other> |is <other> | |s |um |is
+ctl:linnaeus_prose,7,18,1,0.0026042,384,| p| | <other> |um |is <other>
+ctl:linnaeus_prose,7,19,1,0.0026042,384,|s p|a |is <other> |tis | |tis
+ctl:linnaeus_prose,7,20,1,0.0026042,384,s|a | p| p|a | | <other>
+ctl:linnaeus_prose,8,1,1,0.0020747,482,a| a| |a |is |tis <other> |is |a
+ctl:linnaeus_prose,8,2,1,0.0020747,482,| |s | | |a <other> |s <other>
+ctl:linnaeus_prose,8,3,1,0.0020747,482,|e |is p|is |e | e| | |
+ctl:linnaeus_prose,8,4,1,0.0020747,482,|ta | | | |s | | m|
+ctl:linnaeus_prose,8,5,1,0.0020747,482,| p| s|a m| |s | | <other>
+ctl:linnaeus_prose,8,6,1,0.0020747,482,|e <other> <other> <other> | | | |
+ctl:linnaeus_prose,8,7,1,0.0020747,482,<other> | <other> s| | | | |
+ctl:linnaeus_prose,8,8,1,0.0020747,482,| | |a a| <other> | |e |a
+ctl:linnaeus_prose,8,9,1,0.0020747,482,<other> | | | | |ia a| <other>
+ctl:linnaeus_prose,8,10,1,0.0020747,482,| p| | | e| |ibus |um |
+ctl:linnaeus_prose,8,11,1,0.0020747,482,| |i |um |um |is s|is |ibus |
+ctl:linnaeus_prose,8,12,1,0.0020747,482,p| <other> <other> <other> <other> <other> | <other>
+ctl:linnaeus_prose,8,13,1,0.0020747,482,<other> |a | <other> <other> | <other> |s
+ctl:linnaeus_prose,8,14,1,0.0020747,482,|is <other> <other> | | | |s |
+ctl:linnaeus_prose,8,15,1,0.0020747,482,|tis |is |ibus |um <other> |e p| e|
+ctl:linnaeus_prose,8,16,1,0.0020747,482,| <other> | | <other> <other> | m|
+ctl:linnaeus_prose,8,17,1,0.0020747,482,|s p|is <other> |is |a p| | m|
+ctl:linnaeus_prose,8,18,1,0.0020747,482,| | | | | m| <other> |um
+ctl:linnaeus_prose,8,19,1,0.0020747,482,| | <other> <other> |um |is |tis |tis
+ctl:linnaeus_prose,8,20,1,0.0020747,482,| | | <other> |s |um |is <other>

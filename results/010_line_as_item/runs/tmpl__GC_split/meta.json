@@ -1,0 +1,71 @@
+{
+  "name": "010_line_as_item",
+  "params": {
+    "source": "tmpl:GC_split",
+    "prefixes": [
+      "1c",
+      "1o",
+      "4o",
+      "oe",
+      "ok",
+      "1",
+      "2",
+      "8",
+      "9",
+      "e",
+      "k",
+      "o"
+    ],
+    "suffixes": [
+      "79",
+      "89",
+      "ae",
+      "am",
+      "an",
+      "ay",
+      "oe",
+      "oy",
+      "8",
+      "9",
+      "e",
+      "o",
+      "s",
+      "y"
+    ],
+    "glyph_units": null,
+    "n_classes": 20,
+    "top_stems": 200,
+    "shuffles": {
+      "point": {
+        "bnd": 50,
+        "head": 200,
+        "comp": 5,
+        "jac": 5,
+        "vert": 200
+      },
+      "sub": {
+        "bnd": 10,
+        "head": 20,
+        "comp": 2,
+        "jac": 2,
+        "vert": 20
+      }
+    },
+    "n_sub": 100,
+    "n_null": 30,
+    "sig_lengths": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "n_jaccard_pairs": 20000,
+    "control": null
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 21:49:20",
+  "updated": "2026-10-27 21:51:51",
+  "n_seeds_done": 30
+}

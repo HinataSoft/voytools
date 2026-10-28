@@ -1,0 +1,86 @@
+{
+  "name": "010_line_as_item",
+  "params": {
+    "source": "ctl:caesar_prose",
+    "prefixes": [
+      "prae",
+      "com",
+      "con",
+      "per",
+      "pro",
+      "ad",
+      "de",
+      "di",
+      "in",
+      "re",
+      "a",
+      "e"
+    ],
+    "suffixes": [
+      "mque",
+      "sque",
+      "bus",
+      "que",
+      "rum",
+      "tur",
+      "is",
+      "nt",
+      "um",
+      "e",
+      "i",
+      "m",
+      "s",
+      "t"
+    ],
+    "glyph_units": null,
+    "n_classes": 20,
+    "top_stems": 200,
+    "shuffles": {
+      "point": {
+        "bnd": 50,
+        "head": 200,
+        "comp": 5,
+        "jac": 5,
+        "vert": 200
+      },
+      "sub": {
+        "bnd": 10,
+        "head": 20,
+        "comp": 2,
+        "jac": 2,
+        "vert": 20
+      }
+    },
+    "n_sub": 100,
+    "n_null": 30,
+    "sig_lengths": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "n_jaccard_pairs": 20000,
+    "control": {
+      "name": "caesar_prose",
+      "mode": "prose",
+      "strategy": "sequential",
+      "sections": [
+        "PRIMUS",
+        "SECUNDUS+TERTIUS",
+        "QUARTUS+V",
+        "VI+VII+VIII"
+      ],
+      "source_tokens": 51370,
+      "files": [
+        "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/caesar_la.txt",
+        "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/caesar_la2.txt"
+      ]
+    }
+  },
+  "n_seeds_requested": 101,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 21:46:50",
+  "updated": "2026-10-27 21:48:08",
+  "n_seeds_done": 101
+}

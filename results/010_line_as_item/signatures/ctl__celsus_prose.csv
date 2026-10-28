@@ -1,0 +1,101 @@
+source,length,rank,count,share,n_lines,signature
+ctl:celsus_prose,4,1,2,0.0080321,249,| <other> <other> |um
+ctl:celsus_prose,4,2,2,0.0080321,249,<other> <other> e| |
+ctl:celsus_prose,4,3,2,0.0080321,249,|m <other> <other> <other>
+ctl:celsus_prose,4,4,2,0.0080321,249,|us e|t <other> <other>
+ctl:celsus_prose,4,5,2,0.0080321,249,<other> |e s|t <other>
+ctl:celsus_prose,4,6,2,0.0080321,249,<other> <other> |um <other>
+ctl:celsus_prose,4,7,2,0.0080321,249,|m <other> <other> |
+ctl:celsus_prose,4,8,2,0.0080321,249,<other> |a <other> e|t
+ctl:celsus_prose,4,9,2,0.0080321,249,<other> <other> <other> <other>
+ctl:celsus_prose,4,10,2,0.0080321,249,|s |s <other> <other>
+ctl:celsus_prose,4,11,1,0.0040161,249,e| |m | <other>
+ctl:celsus_prose,4,12,1,0.0040161,249,<other> p|t e| e|m
+ctl:celsus_prose,4,13,1,0.0040161,249,|i <other> e| |a
+ctl:celsus_prose,4,14,1,0.0040161,249,|s |m <other> |s
+ctl:celsus_prose,4,15,1,0.0040161,249,e|t | <other> <other>
+ctl:celsus_prose,4,16,1,0.0040161,249,e|t <other> s| |
+ctl:celsus_prose,4,17,1,0.0040161,249,e|t |t e| p|t
+ctl:celsus_prose,4,18,1,0.0040161,249,|a <other> <other> |a
+ctl:celsus_prose,4,19,1,0.0040161,249,|m <other> | |e
+ctl:celsus_prose,4,20,1,0.0040161,249,|que <other> a| |
+ctl:celsus_prose,5,1,2,0.0061728,324,<other> <other> |a <other> |
+ctl:celsus_prose,5,2,1,0.0030864,324,|m <other> <other> |que <other>
+ctl:celsus_prose,5,3,1,0.0030864,324,|t |a e|t |e |
+ctl:celsus_prose,5,4,1,0.0030864,324,<other> |um | | |m
+ctl:celsus_prose,5,5,1,0.0030864,324,p|t <other> |i <other> |i
+ctl:celsus_prose,5,6,1,0.0030864,324,s|t <other> |i | a|t
+ctl:celsus_prose,5,7,1,0.0030864,324,| <other> <other> |m e|
+ctl:celsus_prose,5,8,1,0.0030864,324,<other> <other> <other> e| |us
+ctl:celsus_prose,5,9,1,0.0030864,324,| <other> <other> e| <other>
+ctl:celsus_prose,5,10,1,0.0030864,324,<other> |a |is <other> <other>
+ctl:celsus_prose,5,11,1,0.0030864,324,|m <other> e| |bus <other>
+ctl:celsus_prose,5,12,1,0.0030864,324,<other> |t |a s| e|m
+ctl:celsus_prose,5,13,1,0.0030864,324,e| |e <other> <other> <other>
+ctl:celsus_prose,5,14,1,0.0030864,324,|a |e | |um e|t
+ctl:celsus_prose,5,15,1,0.0030864,324,p|t <other> e|t |e <other>
+ctl:celsus_prose,5,16,1,0.0030864,324,e|m |t <other> e|m <other>
+ctl:celsus_prose,5,17,1,0.0030864,324,| <other> |e <other> |i
+ctl:celsus_prose,5,18,1,0.0030864,324,|e s|t |t |que <other>
+ctl:celsus_prose,5,19,1,0.0030864,324,|um | <other> |e |us
+ctl:celsus_prose,5,20,1,0.0030864,324,s|t s| e| | <other>
+ctl:celsus_prose,6,1,1,0.0030303,330,<other> e|t a| |e a| |s
+ctl:celsus_prose,6,2,1,0.0030303,330,<other> <other> <other> e| a| |m
+ctl:celsus_prose,6,3,1,0.0030303,330,e|t <other> <other> <other> <other> <other>
+ctl:celsus_prose,6,4,1,0.0030303,330,s| <other> |m | s|t |
+ctl:celsus_prose,6,5,1,0.0030303,330,e| <other> e| |a <other> p|t
+ctl:celsus_prose,6,6,1,0.0030303,330,<other> | | |e |que |m
+ctl:celsus_prose,6,7,1,0.0030303,330,e| |a <other> | e| |
+ctl:celsus_prose,6,8,1,0.0030303,330,| <other> <other> | <other> <other>
+ctl:celsus_prose,6,9,1,0.0030303,330,|m |t |t |m e| <other>
+ctl:celsus_prose,6,10,1,0.0030303,330,<other> |t <other> s| | |is
+ctl:celsus_prose,6,11,1,0.0030303,330,|e |um e|t |t | |um
+ctl:celsus_prose,6,12,1,0.0030303,330,|m <other> e|t |is | |e
+ctl:celsus_prose,6,13,1,0.0030303,330,<other> |a s| |e a| |
+ctl:celsus_prose,6,14,1,0.0030303,330,|m <other> <other> s|t s| |
+ctl:celsus_prose,6,15,1,0.0030303,330,<other> | |t e| | |m
+ctl:celsus_prose,6,16,1,0.0030303,330,<other> | e|m |a <other> |a
+ctl:celsus_prose,6,17,1,0.0030303,330,| |um s|t <other> |e e|
+ctl:celsus_prose,6,18,1,0.0030303,330,<other> <other> | a|t a| |us
+ctl:celsus_prose,6,19,1,0.0030303,330,p|t <other> | |um | <other>
+ctl:celsus_prose,6,20,1,0.0030303,330,e| <other> |a |a <other> |m
+ctl:celsus_prose,7,1,1,0.0026042,384,|is <other> |s <other> <other> |s e|m
+ctl:celsus_prose,7,2,1,0.0026042,384,|que <other> |a <other> |que |m |que
+ctl:celsus_prose,7,3,1,0.0026042,384,|us <other> e| |bus <other> |us |
+ctl:celsus_prose,7,4,1,0.0026042,384,|m |s |us <other> <other> e| |us
+ctl:celsus_prose,7,5,1,0.0026042,384,|um |us e| <other> s| <other> |
+ctl:celsus_prose,7,6,1,0.0026042,384,e|t |t e|m | |s |i |s
+ctl:celsus_prose,7,7,1,0.0026042,384,|um |um <other> |bus | | |m
+ctl:celsus_prose,7,8,1,0.0026042,384,e| |que <other> <other> | |us |a
+ctl:celsus_prose,7,9,1,0.0026042,384,<other> |e <other> <other> <other> |s |t
+ctl:celsus_prose,7,10,1,0.0026042,384,| |bus <other> e| |bus <other> |a
+ctl:celsus_prose,7,11,1,0.0026042,384,|i | | |t e|t <other> <other>
+ctl:celsus_prose,7,12,1,0.0026042,384,e| | | <other> a| | <other>
+ctl:celsus_prose,7,13,1,0.0026042,384,<other> <other> |i |a |a |a e|
+ctl:celsus_prose,7,14,1,0.0026042,384,<other> <other> p|t | e|m <other> s|
+ctl:celsus_prose,7,15,1,0.0026042,384,| |m <other> <other> <other> <other> |
+ctl:celsus_prose,7,16,1,0.0026042,384,<other> |e <other> <other> |a <other> s|t
+ctl:celsus_prose,7,17,1,0.0026042,384,<other> |i |s |t e| |um <other>
+ctl:celsus_prose,7,18,1,0.0026042,384,|s <other> <other> <other> s| <other> e|
+ctl:celsus_prose,7,19,1,0.0026042,384,<other> <other> e| <other> e| <other> |
+ctl:celsus_prose,7,20,1,0.0026042,384,|e |que <other> |e s|t <other> p|t
+ctl:celsus_prose,8,1,1,0.0020747,482,a| |s <other> <other> |m | |is |bus
+ctl:celsus_prose,8,2,1,0.0020747,482,| <other> <other> <other> e|t |us <other> |
+ctl:celsus_prose,8,3,1,0.0020747,482,|i <other> e| <other> | | |m <other>
+ctl:celsus_prose,8,4,1,0.0020747,482,|us | | <other> |que | |is |bus
+ctl:celsus_prose,8,5,1,0.0020747,482,| <other> s| <other> |a <other> |t |e
+ctl:celsus_prose,8,6,1,0.0020747,482,|t a| <other> |um |a s| |i <other>
+ctl:celsus_prose,8,7,1,0.0020747,482,|m <other> a| <other> <other> | | |um
+ctl:celsus_prose,8,8,1,0.0020747,482,<other> p|t |s |us e| <other> | <other>
+ctl:celsus_prose,8,9,1,0.0020747,482,<other> | |m |m <other> <other> <other> |i
+ctl:celsus_prose,8,10,1,0.0020747,482,<other> |m <other> <other> p|t | e|m |um
+ctl:celsus_prose,8,11,1,0.0020747,482,|e <other> <other> s|t <other> e| <other> |m
+ctl:celsus_prose,8,12,1,0.0020747,482,|m <other> |i <other> |i a| <other> |e
+ctl:celsus_prose,8,13,1,0.0020747,482,<other> | e|m |t <other> |s <other> <other>
+ctl:celsus_prose,8,14,1,0.0020747,482,<other> | |bus | <other> |us |t e|
+ctl:celsus_prose,8,15,1,0.0020747,482,e| | | |m | | <other> |s
+ctl:celsus_prose,8,16,1,0.0020747,482,<other> <other> | |s a|t | |bus |t
+ctl:celsus_prose,8,17,1,0.0020747,482,|s a| <other> e| |e <other> s|t <other>
+ctl:celsus_prose,8,18,1,0.0020747,482,<other> |que <other> |s e|m | | |s
+ctl:celsus_prose,8,19,1,0.0020747,482,s|t <other> <other> |a |m p|t | |e
+ctl:celsus_prose,8,20,1,0.0020747,482,a| <other> <other> <other> | <other> <other> e|

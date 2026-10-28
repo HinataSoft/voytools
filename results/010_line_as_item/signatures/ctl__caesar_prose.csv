@@ -1,0 +1,101 @@
+source,length,rank,count,share,n_lines,signature
+ctl:caesar_prose,4,1,3,0.012048,249,<other> e| <other> <other>
+ctl:caesar_prose,4,2,2,0.0080321,249,<other> <other> <other> |m
+ctl:caesar_prose,4,3,1,0.0040161,249,a| e|s <other> <other>
+ctl:caesar_prose,4,4,1,0.0040161,249,|t e| |i <other>
+ctl:caesar_prose,4,5,1,0.0040161,249,|i <other> |i e|
+ctl:caesar_prose,4,6,1,0.0040161,249,|m e| |s |um
+ctl:caesar_prose,4,7,1,0.0040161,249,|i |t |t |i
+ctl:caesar_prose,4,8,1,0.0040161,249,| |i <other> |
+ctl:caesar_prose,4,9,1,0.0040161,249,|nt <other> |nt <other>
+ctl:caesar_prose,4,10,1,0.0040161,249,|i <other> <other> |
+ctl:caesar_prose,4,11,1,0.0040161,249,| |tur <other> |um
+ctl:caesar_prose,4,12,1,0.0040161,249,<other> a| <other> <other>
+ctl:caesar_prose,4,13,1,0.0040161,249,<other> |e a| <other>
+ctl:caesar_prose,4,14,1,0.0040161,249,<other> <other> e| |e
+ctl:caesar_prose,4,15,1,0.0040161,249,|s |i |e <other>
+ctl:caesar_prose,4,16,1,0.0040161,249,e| <other> |m <other>
+ctl:caesar_prose,4,17,1,0.0040161,249,|m |e <other> <other>
+ctl:caesar_prose,4,18,1,0.0040161,249,| |m <other> |s
+ctl:caesar_prose,4,19,1,0.0040161,249,| |i <other> |nt
+ctl:caesar_prose,4,20,1,0.0040161,249,|e | e| <other>
+ctl:caesar_prose,5,1,2,0.0061728,324,<other> |e |um |e |
+ctl:caesar_prose,5,2,1,0.0030864,324,<other> |m |is |i |nt
+ctl:caesar_prose,5,3,1,0.0030864,324,|um |rum |e |s |m
+ctl:caesar_prose,5,4,1,0.0030864,324,| |s | <other> |
+ctl:caesar_prose,5,5,1,0.0030864,324,<other> | |e |e |is
+ctl:caesar_prose,5,6,1,0.0030864,324,|um |s e|t | <other>
+ctl:caesar_prose,5,7,1,0.0030864,324,|um | |s |e |um
+ctl:caesar_prose,5,8,1,0.0030864,324,|i |nt |e |is |is
+ctl:caesar_prose,5,9,1,0.0030864,324,| |e <other> <other> |e
+ctl:caesar_prose,5,10,1,0.0030864,324,|nt e| <other> | |
+ctl:caesar_prose,5,11,1,0.0030864,324,|s |s a| |s |s
+ctl:caesar_prose,5,12,1,0.0030864,324,|s |e |e |i |e
+ctl:caesar_prose,5,13,1,0.0030864,324,<other> e|t |is | <other>
+ctl:caesar_prose,5,14,1,0.0030864,324,e| |bus |is |m e|
+ctl:caesar_prose,5,15,1,0.0030864,324,e| |s |s |sque |s
+ctl:caesar_prose,5,16,1,0.0030864,324,| |bus |is <other> |i
+ctl:caesar_prose,5,17,1,0.0030864,324,|m |e a| e|m <other>
+ctl:caesar_prose,5,18,1,0.0030864,324,|s <other> <other> |nt |
+ctl:caesar_prose,5,19,1,0.0030864,324,| | | a| |m
+ctl:caesar_prose,5,20,1,0.0030864,324,|s a| |s <other> |
+ctl:caesar_prose,6,1,1,0.0030303,330,e| | <other> |rum |um |i
+ctl:caesar_prose,6,2,1,0.0030303,330,<other> |e |bus |tur <other> a|
+ctl:caesar_prose,6,3,1,0.0030303,330,| |i <other> | e| |e
+ctl:caesar_prose,6,4,1,0.0030303,330,|e <other> |um e| | |
+ctl:caesar_prose,6,5,1,0.0030303,330,|i a|que |is <other> |e |s
+ctl:caesar_prose,6,6,1,0.0030303,330,|que e| |is <other> <other> <other>
+ctl:caesar_prose,6,7,1,0.0030303,330,|is |m <other> |nt |um |m
+ctl:caesar_prose,6,8,1,0.0030303,330,a| <other> |um |e <other> |
+ctl:caesar_prose,6,9,1,0.0030303,330,|um |i <other> <other> |t |um
+ctl:caesar_prose,6,10,1,0.0030303,330,<other> |e | |s a| |
+ctl:caesar_prose,6,11,1,0.0030303,330,<other> | <other> |um |um |
+ctl:caesar_prose,6,12,1,0.0030303,330,|um <other> e| | <other> |um
+ctl:caesar_prose,6,13,1,0.0030303,330,|i |i |tur |s <other> <other>
+ctl:caesar_prose,6,14,1,0.0030303,330,<other> e|t <other> |rum |bus |
+ctl:caesar_prose,6,15,1,0.0030303,330,e| e| | |s a| |s
+ctl:caesar_prose,6,16,1,0.0030303,330,| |um | a| | |um
+ctl:caesar_prose,6,17,1,0.0030303,330,|s |s e|s |e |tur |bus
+ctl:caesar_prose,6,18,1,0.0030303,330,|um e|t e|s | <other> |m
+ctl:caesar_prose,6,19,1,0.0030303,330,|t |e |e e| e| |i
+ctl:caesar_prose,6,20,1,0.0030303,330,|i | <other> |e e| |i
+ctl:caesar_prose,7,1,1,0.0026042,384,| |bus |rum <other> e|m a| |is
+ctl:caesar_prose,7,2,1,0.0026042,384,|t e| <other> | |s | |
+ctl:caesar_prose,7,3,1,0.0026042,384,|s |i |i | |e <other> |
+ctl:caesar_prose,7,4,1,0.0026042,384,|e <other> |i | |m | |um
+ctl:caesar_prose,7,5,1,0.0026042,384,| | |m | |nt |is <other>
+ctl:caesar_prose,7,6,1,0.0026042,384,<other> e| <other> |is <other> <other> e|
+ctl:caesar_prose,7,7,1,0.0026042,384,<other> | <other> |is <other> <other> <other>
+ctl:caesar_prose,7,8,1,0.0026042,384,|rum |um |rum |t e|m <other> |
+ctl:caesar_prose,7,9,1,0.0026042,384,|que <other> | |t |i <other> |
+ctl:caesar_prose,7,10,1,0.0026042,384,|e |i |m <other> |t e|s |m
+ctl:caesar_prose,7,11,1,0.0026042,384,| |um |is <other> |sque |i |s
+ctl:caesar_prose,7,12,1,0.0026042,384,|i | |i <other> |s |t |sque
+ctl:caesar_prose,7,13,1,0.0026042,384,<other> | |t |que |s <other> a|
+ctl:caesar_prose,7,14,1,0.0026042,384,| |e | <other> |is |i |s
+ctl:caesar_prose,7,15,1,0.0026042,384,|um |s |s |t <other> |is <other>
+ctl:caesar_prose,7,16,1,0.0026042,384,|e <other> <other> <other> | <other> |
+ctl:caesar_prose,7,17,1,0.0026042,384,|t |i e| |e <other> |bus |is
+ctl:caesar_prose,7,18,1,0.0026042,384,e| |um <other> e| |is <other> |
+ctl:caesar_prose,7,19,1,0.0026042,384,|is |um | |e <other> | |nt
+ctl:caesar_prose,7,20,1,0.0026042,384,|rum e| |rum | | |um |s
+ctl:caesar_prose,8,1,1,0.0020747,482,|s a| <other> | | | |is |
+ctl:caesar_prose,8,2,1,0.0020747,482,|is |i |s |um <other> |um <other> |um
+ctl:caesar_prose,8,3,1,0.0020747,482,|nt | |e | |i |que <other> |s
+ctl:caesar_prose,8,4,1,0.0020747,482,|um <other> |is |bus e|s <other> <other> |i
+ctl:caesar_prose,8,5,1,0.0020747,482,|um |e |bus <other> |s |e | |i
+ctl:caesar_prose,8,6,1,0.0020747,482,| | |s |is <other> | |que |i
+ctl:caesar_prose,8,7,1,0.0020747,482,|is |s <other> |t e| | | |i
+ctl:caesar_prose,8,8,1,0.0020747,482,|t | | <other> |t <other> |i |
+ctl:caesar_prose,8,9,1,0.0020747,482,|tur <other> <other> |e <other> | a| |um
+ctl:caesar_prose,8,10,1,0.0020747,482,|um e| <other> |s |nt | |s e|t
+ctl:caesar_prose,8,11,1,0.0020747,482,|i e|m |i <other> |is |is |sque <other>
+ctl:caesar_prose,8,12,1,0.0020747,482,|t |t |e <other> <other> |nt <other> |
+ctl:caesar_prose,8,13,1,0.0020747,482,<other> |m | |s a|que e|s <other> |
+ctl:caesar_prose,8,14,1,0.0020747,482,|um |tur <other> | |i |s |t |
+ctl:caesar_prose,8,15,1,0.0020747,482,|s <other> e|t | | | | a|
+ctl:caesar_prose,8,16,1,0.0020747,482,| |e | | <other> |i |um |
+ctl:caesar_prose,8,17,1,0.0020747,482,| |e <other> |t a| |e <other> e|
+ctl:caesar_prose,8,18,1,0.0020747,482,|e | | |m |i e|t a| |m
+ctl:caesar_prose,8,19,1,0.0020747,482,e| |s |m |um |nt |i <other> |i
+ctl:caesar_prose,8,20,1,0.0020747,482,a| | |nt |um |e |t e|s |e

@@ -1,0 +1,1201 @@
+source,length,rank,count,share,n_lines,signature
+GC_join,4,1,23,0.083942,274,<other> <other> <other> <other>
+GC_join,4,2,7,0.025547,274,<other> <other> <other> 8|
+GC_join,4,3,5,0.018248,274,<other> 1o| <other> <other>
+GC_join,4,4,4,0.014599,274,8| <other> <other> <other>
+GC_join,4,5,4,0.014599,274,<other> |9 <other> <other>
+GC_join,4,6,3,0.010949,274,<other> <other> o| <other>
+GC_join,4,7,3,0.010949,274,<other> <other> <other> |9
+GC_join,4,8,3,0.010949,274,<other> <other> <other> o|
+GC_join,4,9,3,0.010949,274,<other> <other> <other> |
+GC_join,4,10,2,0.0072993,274,<other> <other> o| |89
+GC_join,4,11,2,0.0072993,274,4o|9 <other> <other> <other>
+GC_join,4,12,2,0.0072993,274,|am <other> <other> o|9
+GC_join,4,13,2,0.0072993,274,4o| <other> |oe 8|
+GC_join,4,14,2,0.0072993,274,<other> o| | o|9
+GC_join,4,15,2,0.0072993,274,<other> o|9 |9 <other>
+GC_join,4,16,2,0.0072993,274,<other> <other> 2|9 <other>
+GC_join,4,17,2,0.0072993,274,<other> <other> 8| <other>
+GC_join,4,18,2,0.0072993,274,<other> <other> o|9 <other>
+GC_join,4,19,2,0.0072993,274,<other> | <other> <other>
+GC_join,4,20,2,0.0072993,274,<other> <other> 1c|9 <other>
+GC_join,5,1,10,0.031153,321,<other> <other> <other> <other> <other>
+GC_join,5,2,2,0.0062305,321,<other> <other> 1o| <other> |
+GC_join,5,3,2,0.0062305,321,<other> <other> <other> <other> |am
+GC_join,5,4,2,0.0062305,321,<other> |9 <other> 4o|9 <other>
+GC_join,5,5,2,0.0062305,321,<other> <other> <other> 8| <other>
+GC_join,5,6,2,0.0062305,321,8| <other> 1o| <other> <other>
+GC_join,5,7,2,0.0062305,321,<other> <other> <other> <other> |
+GC_join,5,8,1,0.0031153,321,<other> <other> |am <other> |am
+GC_join,5,9,1,0.0031153,321,<other> |am o|9 <other> 8|
+GC_join,5,10,1,0.0031153,321,<other> 1o| 1c| 8| |9
+GC_join,5,11,1,0.0031153,321,<other> <other> | <other> |9
+GC_join,5,12,1,0.0031153,321,<other> |9 <other> <other> |
+GC_join,5,13,1,0.0031153,321,<other> |9 <other> 1o| 8|
+GC_join,5,14,1,0.0031153,321,<other> <other> 1c| 8| 1|9
+GC_join,5,15,1,0.0031153,321,1o| 1o| <other> 1o| <other>
+GC_join,5,16,1,0.0031153,321,<other> <other> 1o| |oe 8|
+GC_join,5,17,1,0.0031153,321,<other> 1o| 8| <other> 1|
+GC_join,5,18,1,0.0031153,321,<other> <other> 1o| 8| |9
+GC_join,5,19,1,0.0031153,321,<other> <other> | 1| |oe
+GC_join,5,20,1,0.0031153,321,<other> 4o|am 1o| <other> |
+GC_join,6,1,3,0.0087719,342,<other> <other> <other> <other> <other> <other>
+GC_join,6,2,2,0.005848,342,<other> <other> |9 <other> <other> <other>
+GC_join,6,3,2,0.005848,342,<other> o|am <other> <other> <other> <other>
+GC_join,6,4,2,0.005848,342,<other> <other> <other> <other> 8| |
+GC_join,6,5,2,0.005848,342,o| <other> <other> <other> <other> <other>
+GC_join,6,6,2,0.005848,342,<other> <other> <other> 8| <other> <other>
+GC_join,6,7,1,0.002924,342,<other> |oe |9 <other> |am |9
+GC_join,6,8,1,0.002924,342,<other> <other> <other> |oe <other> |9
+GC_join,6,9,1,0.002924,342,|9 <other> 8| <other> <other> |9
+GC_join,6,10,1,0.002924,342,| <other> <other> 1o| 8| 2|9
+GC_join,6,11,1,0.002924,342,<other> 1o| <other> 1| 1| 1|
+GC_join,6,12,1,0.002924,342,<other> 8| <other> 8| 1o| o|9
+GC_join,6,13,1,0.002924,342,<other> <other> |9 <other> <other> 1o|
+GC_join,6,14,1,0.002924,342,o| 1o| <other> <other> <other> |
+GC_join,6,15,1,0.002924,342,<other> <other> 4o| <other> <other> 1|9
+GC_join,6,16,1,0.002924,342,<other> 1| <other> 8| o|am |9
+GC_join,6,17,1,0.002924,342,| | |9 <other> <other> <other>
+GC_join,6,18,1,0.002924,342,<other> 2|9 o| |9 4o| <other>
+GC_join,6,19,1,0.002924,342,<other> 1o| |oe <other> <other> |9
+GC_join,6,20,1,0.002924,342,<other> | <other> <other> |am 4o|
+GC_join,7,1,3,0.0083333,360,<other> <other> <other> <other> <other> <other> <other>
+GC_join,7,2,2,0.0055556,360,<other> | <other> <other> <other> <other> <other>
+GC_join,7,3,1,0.0027778,360,|am <other> <other> 8| |oe 8| <other>
+GC_join,7,4,1,0.0027778,360,|9 <other> o| <other> <other> | |
+GC_join,7,5,1,0.0027778,360,<other> 1o| 8| 8| <other> 1| |89
+GC_join,7,6,1,0.0027778,360,4o|am |9 | 1o| 1| <other> 1|
+GC_join,7,7,1,0.0027778,360,<other> <other> <other> 1o| 8| <other> 8|
+GC_join,7,8,1,0.0027778,360,<other> <other> 2|9 8| |9 |oe <other>
+GC_join,7,9,1,0.0027778,360,<other> <other> 8| <other> <other> 1o| 8|
+GC_join,7,10,1,0.0027778,360,8| <other> 4o|9 <other> <other> 1| 1c|
+GC_join,7,11,1,0.0027778,360,<other> 1o| o|am 1o| | | <other>
+GC_join,7,12,1,0.0027778,360,o| 1o| <other> <other> 1o| <other> o|
+GC_join,7,13,1,0.0027778,360,<other> <other> |oe 2|9 1| <other> 1o|
+GC_join,7,14,1,0.0027778,360,<other> 1o| 1| 1| 4o|am 8| <other>
+GC_join,7,15,1,0.0027778,360,<other> <other> 1| <other> 8| 4o|am o|
+GC_join,7,16,1,0.0027778,360,4o|9 <other> <other> <other> <other> <other> o|9
+GC_join,7,17,1,0.0027778,360,<other> 1o| o|am <other> <other> 1o| <other>
+GC_join,7,18,1,0.0027778,360,o| <other> |am <other> o| |am <other>
+GC_join,7,19,1,0.0027778,360,8| <other> <other> 8| <other> o|9 8|
+GC_join,7,20,1,0.0027778,360,<other> | o| 1| | | <other>
+GC_join,8,1,2,0.0041494,482,<other> <other> 8| <other> <other> <other> <other> <other>
+GC_join,8,2,1,0.0020747,482,8| o|9 <other> |9 8| o|am o| o|
+GC_join,8,3,1,0.0020747,482,<other> |am <other> |9 <other> 2|9 <other> <other>
+GC_join,8,4,1,0.0020747,482,o| |9 o| <other> o| <other> <other> 8|
+GC_join,8,5,1,0.0020747,482,<other> o|9 o|9 8| o|9 |am |9 <other>
+GC_join,8,6,1,0.0020747,482,8| <other> |9 o|9 |9 |9 <other> <other>
+GC_join,8,7,1,0.0020747,482,<other> <other> o| o|9 8| <other> <other> <other>
+GC_join,8,8,1,0.0020747,482,8| |9 |9 |9 <other> |9 |89 <other>
+GC_join,8,9,1,0.0020747,482,<other> <other> <other> <other> <other> <other> <other> |9
+GC_join,8,10,1,0.0020747,482,|9 <other> |oe 4o| <other> 4o|9 1o| 8|
+GC_join,8,11,1,0.0020747,482,o|9 1o| <other> 1o| <other> <other> 1|9 8|
+GC_join,8,12,1,0.0020747,482,<other> <other> o| 1o| <other> 1o| o| <other>
+GC_join,8,13,1,0.0020747,482,|am <other> 4o|9 <other> |oe <other> | <other>
+GC_join,8,14,1,0.0020747,482,<other> 1| 1| |oe <other> 8| | 1c|
+GC_join,8,15,1,0.0020747,482,o| 1c| 1| |9 <other> <other> 1c|9 <other>
+GC_join,8,16,1,0.0020747,482,o|9 o|9 |am | |9 |9 1c| <other>
+GC_join,8,17,1,0.0020747,482,4o| o| 1| 8| o| <other> o|9 4o|89
+GC_join,8,18,1,0.0020747,482,<other> <other> 4o| <other> <other> 4o| 8| <other>
+GC_join,8,19,1,0.0020747,482,<other> 1c|9 4o|9 4o|9 <other> |9 2|9 8|
+GC_join,8,20,1,0.0020747,482,<other> 1o| |9 <other> <other> <other> <other> 8|
+GC_split,4,1,14,0.061135,229,<other> <other> <other> <other>
+GC_split,4,2,5,0.021834,229,<other> <other> <other> 8|
+GC_split,4,3,4,0.017467,229,<other> | <other> <other>
+GC_split,4,4,3,0.0131,229,<other> <other> o| <other>
+GC_split,4,5,3,0.0131,229,8| <other> <other> <other>
+GC_split,4,6,3,0.0131,229,<other> o| <other> <other>
+GC_split,4,7,3,0.0131,229,<other> <other> <other> o|
+GC_split,4,8,3,0.0131,229,<other> <other> <other> |
+GC_split,4,9,2,0.0087336,229,<other> | <other> |89
+GC_split,4,10,2,0.0087336,229,<other> | <other> 8|
+GC_split,4,11,2,0.0087336,229,<other> o| | <other>
+GC_split,4,12,2,0.0087336,229,<other> 1o| <other> <other>
+GC_split,4,13,2,0.0087336,229,4o| <other> |oe 8|
+GC_split,4,14,2,0.0087336,229,<other> <other> 2|9 <other>
+GC_split,4,15,2,0.0087336,229,<other> <other> o|9 <other>
+GC_split,4,16,2,0.0087336,229,<other> |9 <other> <other>
+GC_split,4,17,2,0.0087336,229,|oe <other> <other> <other>
+GC_split,4,18,2,0.0087336,229,<other> 2|9 <other> <other>
+GC_split,4,19,2,0.0087336,229,|9 <other> <other> <other>
+GC_split,4,20,2,0.0087336,229,<other> 4o|9 <other> o|9
+GC_split,5,1,7,0.023256,301,<other> <other> <other> <other> <other>
+GC_split,5,2,3,0.0099668,301,<other> <other> <other> <other> |am
+GC_split,5,3,3,0.0099668,301,| <other> <other> <other> <other>
+GC_split,5,4,3,0.0099668,301,<other> <other> <other> <other> |
+GC_split,5,5,2,0.0066445,301,<other> |9 <other> 4o|9 <other>
+GC_split,5,6,2,0.0066445,301,<other> <other> <other> 8| <other>
+GC_split,5,7,2,0.0066445,301,8| <other> 1o| <other> <other>
+GC_split,5,8,2,0.0066445,301,| | <other> <other> <other>
+GC_split,5,9,2,0.0066445,301,<other> |oe <other> <other> <other>
+GC_split,5,10,2,0.0066445,301,<other> <other> |9 <other> <other>
+GC_split,5,11,1,0.0033223,301,|9 <other> |am <other> |am
+GC_split,5,12,1,0.0033223,301,<other> 1o| 1c| 8| |9
+GC_split,5,13,1,0.0033223,301,<other> <other> | <other> |9
+GC_split,5,14,1,0.0033223,301,<other> |9 <other> 1o| 8|
+GC_split,5,15,1,0.0033223,301,<other> <other> 1c| 8| 1|9
+GC_split,5,16,1,0.0033223,301,1o| 1o| <other> 1o| <other>
+GC_split,5,17,1,0.0033223,301,<other> <other> 1o| |oe 8|
+GC_split,5,18,1,0.0033223,301,<other> 1o| 8| 4o| 1|
+GC_split,5,19,1,0.0033223,301,<other> <other> 1o| 8| |9
+GC_split,5,20,1,0.0033223,301,<other> <other> | 1| |oe
+GC_split,6,1,4,0.013201,303,<other> <other> <other> <other> <other> <other>
+GC_split,6,2,3,0.009901,303,<other> 4o|9 <other> <other> <other> <other>
+GC_split,6,3,2,0.0066007,303,<other> <other> |9 <other> <other> <other>
+GC_split,6,4,2,0.0066007,303,<other> <other> <other> <other> 8| |
+GC_split,6,5,2,0.0066007,303,| <other> <other> <other> <other> |9
+GC_split,6,6,2,0.0066007,303,<other> <other> <other> 8| 8| <other>
+GC_split,6,7,2,0.0066007,303,<other> <other> <other> 8| <other> <other>
+GC_split,6,8,1,0.0033003,303,<other> |oe |9 <other> |am |9
+GC_split,6,9,1,0.0033003,303,<other> <other> <other> |oe <other> |9
+GC_split,6,10,1,0.0033003,303,<other> |am o| 1c| <other> <other>
+GC_split,6,11,1,0.0033003,303,<other> <other> <other> <other> |89 <other>
+GC_split,6,12,1,0.0033003,303,|9 <other> 8| <other> <other> |9
+GC_split,6,13,1,0.0033003,303,|9 1o| <other> 1| 1| 1|
+GC_split,6,14,1,0.0033003,303,|oe |oe | <other> |oe 2|9
+GC_split,6,15,1,0.0033003,303,4o|9 4o| 2|9 4o|89 4o|9 <other>
+GC_split,6,16,1,0.0033003,303,| o| <other> <other> <other> |
+GC_split,6,17,1,0.0033003,303,<other> <other> 1| | <other> |o
+GC_split,6,18,1,0.0033003,303,<other> |y <other> |9 1o| |9
+GC_split,6,19,1,0.0033003,303,<other> 8| <other> 8| 1o| o|9
+GC_split,6,20,1,0.0033003,303,<other> <other> |9 <other> <other> 1o|
+GC_split,7,1,5,0.014577,343,<other> <other> <other> <other> <other> <other> <other>
+GC_split,7,2,2,0.0058309,343,<other> <other> <other> <other> <other> <other> 4o|89
+GC_split,7,3,2,0.0058309,343,<other> <other> ok| <other> <other> <other> <other>
+GC_split,7,4,1,0.0029155,343,|am <other> <other> 8| |oe 8| <other>
+GC_split,7,5,1,0.0029155,343,|9 <other> o| <other> <other> | |
+GC_split,7,6,1,0.0029155,343,<other> <other> 8| 8| |9 1| |89
+GC_split,7,7,1,0.0029155,343,<other> |9 | 1o| 1| <other> 1|
+GC_split,7,8,1,0.0029155,343,<other> 8| |9 <other> | ok| |
+GC_split,7,9,1,0.0029155,343,<other> <other> <other> 1o| 8| <other> 8|
+GC_split,7,10,1,0.0029155,343,| <other> ok| <other> 1o| 8| 2|9
+GC_split,7,11,1,0.0029155,343,<other> <other> 8| |9 <other> 1o| 8|
+GC_split,7,12,1,0.0029155,343,8| <other> 4o|9 <other> <other> 1| 1c|
+GC_split,7,13,1,0.0029155,343,| <other> <other> <other> <other> 4o|9 ok|
+GC_split,7,14,1,0.0029155,343,o| 1o| <other> <other> 1o| 1| o|
+GC_split,7,15,1,0.0029155,343,| | 1o| <other> <other> | |
+GC_split,7,16,1,0.0029155,343,<other> 1o| 1| 1| <other> 8| <other>
+GC_split,7,17,1,0.0029155,343,<other> <other> 1| <other> 8| <other> o|
+GC_split,7,18,1,0.0029155,343,<other> | 2|9 ok| |9 4o| <other>
+GC_split,7,19,1,0.0029155,343,<other> 1o| ok| <other> <other> 1o| <other>
+GC_split,7,20,1,0.0029155,343,<other> | <other> <other> ok| <other> 1|
+GC_split,8,1,2,0.0050378,397,|am <other> <other> <other> <other> <other> <other> |9
+GC_split,8,2,2,0.0050378,397,<other> <other> <other> 4o|9 <other> <other> <other> <other>
+GC_split,8,3,2,0.0050378,397,<other> <other> 8| <other> <other> <other> <other> <other>
+GC_split,8,4,1,0.0025189,397,<other> |am <other> |9 <other> 2|9 <other> <other>
+GC_split,8,5,1,0.0025189,397,<other> <other> o| o|9 <other> <other> <other> <other>
+GC_split,8,6,1,0.0025189,397,8| |9 |9 |9 <other> |9 |89 <other>
+GC_split,8,7,1,0.0025189,397,<other> <other> 2|9 8| |9 |oe | |
+GC_split,8,8,1,0.0025189,397,<other> 1o| <other> 1o| <other> <other> 1|9 8|
+GC_split,8,9,1,0.0025189,397,<other> <other> o| 1o| <other> 1o| ok| <other>
+GC_split,8,10,1,0.0025189,397,|am <other> 4o|9 <other> |oe <other> | <other>
+GC_split,8,11,1,0.0025189,397,<other> <other> |oe |oe 2|9 1| <other> 1o|
+GC_split,8,12,1,0.0025189,397,o| 1c| 1| |9 <other> <other> 1c|9 <other>
+GC_split,8,13,1,0.0025189,397,4o|9 <other> <other> | |9 <other> <other> o|9
+GC_split,8,14,1,0.0025189,397,o|9 o|9 |am |o |9 |9 1c| <other>
+GC_split,8,15,1,0.0025189,397,4o| ok| 1| 8| ok| <other> <other> 4o|89
+GC_split,8,16,1,0.0025189,397,<other> <other> 4o| <other> <other> <other> 8| <other>
+GC_split,8,17,1,0.0025189,397,<other> 1o| |9 <other> <other> <other> <other> 8|
+GC_split,8,18,1,0.0025189,397,<other> <other> <other> <other> |oe 8| <other> <other>
+GC_split,8,19,1,0.0025189,397,4o| |9 1o| o|9 1c|9 |9 <other> <other>
+GC_split,8,20,1,0.0025189,397,|am 2|9 |o 2|9 |o o| 2|9 1|9
+ZL_join,4,1,33,0.1162,284,<other> <other> <other> <other>
+ZL_join,4,2,7,0.024648,284,<other> <other> <other> d|
+ZL_join,4,3,5,0.017606,284,<other> <other> d| <other>
+ZL_join,4,4,4,0.014085,284,<other> cho| <other> <other>
+ZL_join,4,5,4,0.014085,284,<other> <other> che|y <other>
+ZL_join,4,6,4,0.014085,284,<other> <other> <other> o|y
+ZL_join,4,7,3,0.010563,284,d| <other> <other> <other>
+ZL_join,4,8,3,0.010563,284,cho| <other> <other> <other>
+ZL_join,4,9,3,0.010563,284,<other> <other> |y <other>
+ZL_join,4,10,3,0.010563,284,<other> <other> <other> |y
+ZL_join,4,11,3,0.010563,284,<other> <other> o|y <other>
+ZL_join,4,12,3,0.010563,284,<other> |y <other> <other>
+ZL_join,4,13,2,0.0070423,284,<other> <other> cho| <other>
+ZL_join,4,14,2,0.0070423,284,<other> <other> o| <other>
+ZL_join,4,15,2,0.0070423,284,<other> <other> <other> |
+ZL_join,4,16,2,0.0070423,284,<other> <other> <other> |dy
+ZL_join,4,17,2,0.0070423,284,<other> <other> |y d|
+ZL_join,4,18,2,0.0070423,284,<other> <other> <other> che|
+ZL_join,4,19,2,0.0070423,284,<other> <other> | <other>
+ZL_join,4,20,2,0.0070423,284,<other> <other> <other> sh|
+ZL_join,5,1,16,0.043716,366,<other> <other> <other> <other> <other>
+ZL_join,5,2,4,0.010929,366,<other> <other> <other> <other> |
+ZL_join,5,3,4,0.010929,366,<other> <other> <other> <other> d|
+ZL_join,5,4,3,0.0081967,366,<other> <other> | <other> <other>
+ZL_join,5,5,3,0.0081967,366,o| <other> <other> <other> <other>
+ZL_join,5,6,3,0.0081967,366,<other> <other> <other> <other> o|y
+ZL_join,5,7,3,0.0081967,366,<other> <other> <other> <other> o|
+ZL_join,5,8,3,0.0081967,366,<other> <other> <other> <other> |y
+ZL_join,5,9,2,0.0054645,366,<other> <other> cho| d| |y
+ZL_join,5,10,2,0.0054645,366,<other> <other> <other> <other> sh|y
+ZL_join,5,11,2,0.0054645,366,<other> <other> d| <other> <other>
+ZL_join,5,12,2,0.0054645,366,<other> <other> |y <other> <other>
+ZL_join,5,13,2,0.0054645,366,<other> <other> <other> d| <other>
+ZL_join,5,14,2,0.0054645,366,<other> <other> ch|y <other> <other>
+ZL_join,5,15,2,0.0054645,366,<other> <other> <other> o|dy <other>
+ZL_join,5,16,2,0.0054645,366,d| <other> cho| <other> <other>
+ZL_join,5,17,2,0.0054645,366,<other> che|y <other> <other> <other>
+ZL_join,5,18,2,0.0054645,366,<other> o|aiin <other> <other> <other>
+ZL_join,5,19,2,0.0054645,366,<other> cho| <other> <other> d|
+ZL_join,5,20,2,0.0054645,366,<other> che|y <other> <other> che|y
+ZL_join,6,1,12,0.030691,391,<other> <other> <other> <other> <other> <other>
+ZL_join,6,2,3,0.0076726,391,<other> <other> <other> <other> <other> d|
+ZL_join,6,3,3,0.0076726,391,<other> <other> qo|y <other> <other> <other>
+ZL_join,6,4,2,0.0051151,391,<other> <other> <other> <other> <other> ch|y
+ZL_join,6,5,2,0.0051151,391,<other> <other> <other> ch|y <other> <other>
+ZL_join,6,6,2,0.0051151,391,<other> o|aiin <other> <other> <other> <other>
+ZL_join,6,7,2,0.0051151,391,<other> | <other> <other> <other> <other>
+ZL_join,6,8,2,0.0051151,391,<other> <other> sh| <other> <other> <other>
+ZL_join,6,9,2,0.0051151,391,<other> che| che| <other> <other> <other>
+ZL_join,6,10,2,0.0051151,391,<other> <other> o| <other> <other> <other>
+ZL_join,6,11,2,0.0051151,391,<other> <other> <other> d| <other> <other>
+ZL_join,6,12,1,0.0025575,391,<other> o|y <other> o|aiin o| o|
+ZL_join,6,13,1,0.0025575,391,<other> <other> <other> <other> <other> |y
+ZL_join,6,14,1,0.0025575,391,<other> <other> <other> che| <other> d|
+ZL_join,6,15,1,0.0025575,391,|y <other> o| <other> <other> <other>
+ZL_join,6,16,1,0.0025575,391,<other> cho| d|r d| <other> <other>
+ZL_join,6,17,1,0.0025575,391,|y <other> d| <other> <other> |y
+ZL_join,6,18,1,0.0025575,391,<other> <other> | <other> |y |
+ZL_join,6,19,1,0.0025575,391,|dy <other> |y <other> <other> |
+ZL_join,6,20,1,0.0025575,391,<other> <other> <other> cho| <other> d|
+ZL_join,7,1,9,0.020595,437,<other> <other> <other> <other> <other> <other> <other>
+ZL_join,7,2,3,0.006865,437,<other> <other> o|aiin <other> <other> <other> <other>
+ZL_join,7,3,2,0.0045767,437,<other> d| <other> <other> <other> <other> <other>
+ZL_join,7,4,2,0.0045767,437,<other> | <other> <other> <other> <other> <other>
+ZL_join,7,5,2,0.0045767,437,<other> <other> o|y <other> <other> <other> <other>
+ZL_join,7,6,2,0.0045767,437,<other> <other> qo|aiin <other> <other> <other> <other>
+ZL_join,7,7,1,0.0022883,437,<other> <other> <other> |y <other> sh|y <other>
+ZL_join,7,8,1,0.0022883,437,<other> o|y o|y d| o|y <other> <other>
+ZL_join,7,9,1,0.0022883,437,<other> |y sh| <other> |y |dy <other>
+ZL_join,7,10,1,0.0022883,437,qo|aiin |y | cho| <other> <other> <other>
+ZL_join,7,11,1,0.0022883,437,d| <other> qo|y <other> <other> <other> che|
+ZL_join,7,12,1,0.0022883,437,o| cho| <other> <other> cho| <other> o|
+ZL_join,7,13,1,0.0022883,437,<other> cho| <other> <other> qo|aiin d| sh|
+ZL_join,7,14,1,0.0022883,437,sh| sh| <other> sh| d| qo|aiin <other>
+ZL_join,7,15,1,0.0022883,437,<other> sh|y | o| sh|y <other> <other>
+ZL_join,7,16,1,0.0022883,437,|dy |y ch|y o| o|y <other> <other>
+ZL_join,7,17,1,0.0022883,437,<other> <other> d| o| <other> <other> qo|dy
+ZL_join,7,18,1,0.0022883,437,<other> <other> <other> <other> <other> <other> o|aiin
+ZL_join,7,19,1,0.0022883,437,<other> cho| <other> <other> d| <other> <other>
+ZL_join,7,20,1,0.0022883,437,d|r cho| <other> <other> <other> <other> <other>
+ZL_join,8,1,3,0.0051546,582,<other> <other> <other> <other> <other> <other> <other> <other>
+ZL_join,8,2,2,0.0034364,582,<other> <other> <other> <other> o| <other> <other> <other>
+ZL_join,8,3,2,0.0034364,582,<other> <other> <other> <other> <other> <other> <other> qo|y
+ZL_join,8,4,2,0.0034364,582,<other> <other> o|dy d|r <other> <other> <other> <other>
+ZL_join,8,5,2,0.0034364,582,<other> <other> d| <other> <other> <other> <other> <other>
+ZL_join,8,6,2,0.0034364,582,<other> <other> <other> <other> <other> <other> |dy <other>
+ZL_join,8,7,2,0.0034364,582,<other> <other> <other> <other> o|dy <other> <other> <other>
+ZL_join,8,8,1,0.0017182,582,o| |y o| <other> o| <other> <other> d|
+ZL_join,8,9,1,0.0017182,582,d| o| cho| o|aiin <other> ch|y |y <other>
+ZL_join,8,10,1,0.0017182,582,<other> <other> sh| |y |y <other> d| <other>
+ZL_join,8,11,1,0.0017182,582,d| sh|dy |y |y o|y |y <other> <other>
+ZL_join,8,12,1,0.0017182,582,<other> <other> o| o|y d| <other> <other> <other>
+ZL_join,8,13,1,0.0017182,582,<other> <other> <other> <other> <other> <other> <other> |y
+ZL_join,8,14,1,0.0017182,582,<other> sh| <other> <other> <other> qo|y cho| d|
+ZL_join,8,15,1,0.0017182,582,<other> cho| <other> cho| <other> <other> ch|y d|
+ZL_join,8,16,1,0.0017182,582,<other> <other> o| cho| <other> cho| o| <other>
+ZL_join,8,17,1,0.0017182,582,<other> <other> <other> d|r <other> qo|aiin cho| |y
+ZL_join,8,18,1,0.0017182,582,<other> cho| o|aiin cho| | | <other> |
+ZL_join,8,19,1,0.0017182,582,<other> <other> qo|y sh| <other> <other> | <other>
+ZL_join,8,20,1,0.0017182,582,<other> <other> |y <other> <other> d| | che|
+ZL_split,4,1,21,0.084337,249,<other> <other> <other> <other>
+ZL_split,4,2,6,0.024096,249,<other> <other> <other> d|
+ZL_split,4,3,6,0.024096,249,<other> <other> che|y <other>
+ZL_split,4,4,4,0.016064,249,<other> <other> <other> |
+ZL_split,4,5,4,0.016064,249,<other> <other> o|y <other>
+ZL_split,4,6,3,0.012048,249,<other> <other> d| <other>
+ZL_split,4,7,3,0.012048,249,<other> cho| <other> <other>
+ZL_split,4,8,3,0.012048,249,<other> <other> <other> |y
+ZL_split,4,9,3,0.012048,249,<other> |y <other> <other>
+ZL_split,4,10,2,0.0080321,249,<other> <other> o| <other>
+ZL_split,4,11,2,0.0080321,249,<other> <other> cho| |y
+ZL_split,4,12,2,0.0080321,249,d| <other> <other> <other>
+ZL_split,4,13,2,0.0080321,249,cho| <other> <other> <other>
+ZL_split,4,14,2,0.0080321,249,<other> <other> d|r <other>
+ZL_split,4,15,2,0.0080321,249,<other> o|y | |
+ZL_split,4,16,2,0.0080321,249,<other> <other> |y <other>
+ZL_split,4,17,2,0.0080321,249,<other> <other> <other> o|y
+ZL_split,4,18,2,0.0080321,249,<other> <other> <other> ch|y
+ZL_split,4,19,2,0.0080321,249,<other> <other> qo|aiin <other>
+ZL_split,4,20,2,0.0080321,249,| cho| <other> <other>
+ZL_split,5,1,10,0.030864,324,<other> <other> <other> <other> <other>
+ZL_split,5,2,4,0.012346,324,<other> <other> d| <other> <other>
+ZL_split,5,3,3,0.0092593,324,o| <other> <other> <other> <other>
+ZL_split,5,4,3,0.0092593,324,<other> <other> <other> <other> |
+ZL_split,5,5,3,0.0092593,324,<other> <other> <other> <other> |y
+ZL_split,5,6,2,0.0061728,324,<other> <other> | <other> <other>
+ZL_split,5,7,2,0.0061728,324,| <other> <other> <other> d|
+ZL_split,5,8,2,0.0061728,324,<other> d| <other> <other> <other>
+ZL_split,5,9,2,0.0061728,324,<other> <other> <other> d| <other>
+ZL_split,5,10,2,0.0061728,324,<other> <other> <other> <other> o|y
+ZL_split,5,11,2,0.0061728,324,<other> <other> <other> <other> o|
+ZL_split,5,12,2,0.0061728,324,<other> <other> <other> <other> d|r
+ZL_split,5,13,2,0.0061728,324,d| <other> cho| <other> <other>
+ZL_split,5,14,2,0.0061728,324,<other> | <other> <other> <other>
+ZL_split,5,15,2,0.0061728,324,<other> <other> <other> <other> d|
+ZL_split,5,16,2,0.0061728,324,qo|dy <other> qo|y <other> <other>
+ZL_split,5,17,2,0.0061728,324,<other> |y <other> <other> o|aiin
+ZL_split,5,18,1,0.0030864,324,sh| cho| che| d| |y
+ZL_split,5,19,1,0.0030864,324,<other> |y <other> cho| d|
+ZL_split,5,20,1,0.0030864,324,sh| <other> che| d| ch|y
+ZL_split,6,1,7,0.021212,330,<other> <other> <other> <other> <other> <other>
+ZL_split,6,2,3,0.0090909,330,<other> | <other> <other> <other> <other>
+ZL_split,6,3,3,0.0090909,330,<other> <other> <other> | <other> <other>
+ZL_split,6,4,2,0.0060606,330,<other> <other> <other> <other> <other> ch|y
+ZL_split,6,5,2,0.0060606,330,<other> <other> <other> <other> <other> d|
+ZL_split,6,6,2,0.0060606,330,<other> <other> sh| <other> <other> <other>
+ZL_split,6,7,2,0.0060606,330,<other> |dy <other> <other> <other> <other>
+ZL_split,6,8,2,0.0060606,330,<other> che| <other> <other> <other> <other>
+ZL_split,6,9,2,0.0060606,330,<other> qo|y <other> <other> <other> <other>
+ZL_split,6,10,1,0.0030303,330,<other> <other> <other> che| <other> d|
+ZL_split,6,11,1,0.0030303,330,<other> cho| d|r d| <other> <other>
+ZL_split,6,12,1,0.0030303,330,|y <other> d| <other> <other> |y
+ZL_split,6,13,1,0.0030303,330,<other> <other> | <other> |y |
+ZL_split,6,14,1,0.0030303,330,<other> cho| <other> <other> <other> <other>
+ZL_split,6,15,1,0.0030303,330,qo|y <other> sh|y qo|dy qo|y <other>
+ZL_split,6,16,1,0.0030303,330,<other> d| <other> d| cho| o|y
+ZL_split,6,17,1,0.0030303,330,sh| sh| |y <other> <other> cho|
+ZL_split,6,18,1,0.0030303,330,o| <other> <other> <other> <other> |
+ZL_split,6,19,1,0.0030303,330,<other> <other> <other> d| o|aiin |y
+ZL_split,6,20,1,0.0030303,330,| | |y <other> <other> <other>
+ZL_split,7,1,8,0.020833,384,<other> <other> <other> <other> <other> <other> <other>
+ZL_split,7,2,2,0.0052083,384,<other> <other> <other> <other> <other> | |
+ZL_split,7,3,2,0.0052083,384,<other> |y cho| <other> <other> <other> <other>
+ZL_split,7,4,2,0.0052083,384,<other> cho| <other> <other> <other> <other> <other>
+ZL_split,7,5,2,0.0052083,384,<other> <other> <other> |y <other> | <other>
+ZL_split,7,6,2,0.0052083,384,<other> <other> qo|aiin <other> <other> <other> <other>
+ZL_split,7,7,1,0.0026042,384,<other> <other> <other> sh| <other> <other> |y
+ZL_split,7,8,1,0.0026042,384,<other> o|y o|y d| o|y <other> <other>
+ZL_split,7,9,1,0.0026042,384,qo|aiin |y | cho| <other> <other> <other>
+ZL_split,7,10,1,0.0026042,384,|dy <other> d| |y <other> <other> |
+ZL_split,7,11,1,0.0026042,384,<other> <other> <other> cho| d| <other> d|
+ZL_split,7,12,1,0.0026042,384,d| <other> qo|y <other> <other> <other> che|
+ZL_split,7,13,1,0.0026042,384,| <other> <other> <other> <other> qo|y o|
+ZL_split,7,14,1,0.0026042,384,<other> <other> <other> <other> <other> <other> d|r
+ZL_split,7,15,1,0.0026042,384,o| cho| <other> <other> cho| <other> o|
+ZL_split,7,16,1,0.0026042,384,<other> cho| <other> <other> qo|aiin d| sh|
+ZL_split,7,17,1,0.0026042,384,<other> sh|y | o| sh|y <other> <other>
+ZL_split,7,18,1,0.0026042,384,o| <other> d| <other> o| <other> <other>
+ZL_split,7,19,1,0.0026042,384,d| qo|aiin <other> | cho| o|aiin |
+ZL_split,7,20,1,0.0026042,384,<other> <other> <other> <other> o| sh| o|
+ZL_split,8,1,3,0.0062241,482,<other> <other> d| <other> <other> <other> <other> <other>
+ZL_split,8,2,2,0.0041494,482,<other> <other> <other> <other> o|dy <other> <other> <other>
+ZL_split,8,3,1,0.0020747,482,<other> o|y |y <other> d| o|aiin o| o|
+ZL_split,8,4,1,0.0020747,482,<other> <other> <other> |y <other> sh|y <other> <other>
+ZL_split,8,5,1,0.0020747,482,o| |y o| <other> o| <other> <other> d|
+ZL_split,8,6,1,0.0020747,482,d| o| cho| o|aiin <other> ch|y |y <other>
+ZL_split,8,7,1,0.0020747,482,<other> <other> o| o|y d| <other> <other> <other>
+ZL_split,8,8,1,0.0020747,482,d| |y |y sh| <other> |y |dy <other>
+ZL_split,8,9,1,0.0020747,482,| che| <other> o|aiin <other> cho| d|r sh|y
+ZL_split,8,10,1,0.0020747,482,<other> cho| <other> cho| <other> <other> ch|y d|
+ZL_split,8,11,1,0.0020747,482,<other> <other> o| cho| <other> cho| o| <other>
+ZL_split,8,12,1,0.0020747,482,<other> <other> qo|y sh| <other> <other> | <other>
+ZL_split,8,13,1,0.0020747,482,<other> <other> <other> <other> <other> <other> <other> cho|
+ZL_split,8,14,1,0.0020747,482,o| che| <other> |y <other> sh| che|y <other>
+ZL_split,8,15,1,0.0020747,482,sh| sh| <other> sh| d| qo|aiin | <other>
+ZL_split,8,16,1,0.0020747,482,qo|y sh| <other> | |y <other> <other> o|y
+ZL_split,8,17,1,0.0020747,482,o|y o|y qo|aiin sh| |y |y che| <other>
+ZL_split,8,18,1,0.0020747,482,<other> o| <other> d| o| <other> <other> qo|dy
+ZL_split,8,19,1,0.0020747,482,<other> sh|dy <other> <other> sh| <other> d| <other>
+ZL_split,8,20,1,0.0020747,482,<other> |y cho| o|aiin d| <other> <other> <other>
+ctl:caesar_prose,4,1,3,0.012048,249,<other> e| <other> <other>
+ctl:caesar_prose,4,2,2,0.0080321,249,<other> <other> <other> |m
+ctl:caesar_prose,4,3,1,0.0040161,249,a| e|s <other> <other>
+ctl:caesar_prose,4,4,1,0.0040161,249,|t e| |i <other>
+ctl:caesar_prose,4,5,1,0.0040161,249,|i <other> |i e|
+ctl:caesar_prose,4,6,1,0.0040161,249,|m e| |s |um
+ctl:caesar_prose,4,7,1,0.0040161,249,|i |t |t |i
+ctl:caesar_prose,4,8,1,0.0040161,249,| |i <other> |
+ctl:caesar_prose,4,9,1,0.0040161,249,|nt <other> |nt <other>
+ctl:caesar_prose,4,10,1,0.0040161,249,|i <other> <other> |
+ctl:caesar_prose,4,11,1,0.0040161,249,| |tur <other> |um
+ctl:caesar_prose,4,12,1,0.0040161,249,<other> a| <other> <other>
+ctl:caesar_prose,4,13,1,0.0040161,249,<other> |e a| <other>
+ctl:caesar_prose,4,14,1,0.0040161,249,<other> <other> e| |e
+ctl:caesar_prose,4,15,1,0.0040161,249,|s |i |e <other>
+ctl:caesar_prose,4,16,1,0.0040161,249,e| <other> |m <other>
+ctl:caesar_prose,4,17,1,0.0040161,249,|m |e <other> <other>
+ctl:caesar_prose,4,18,1,0.0040161,249,| |m <other> |s
+ctl:caesar_prose,4,19,1,0.0040161,249,| |i <other> |nt
+ctl:caesar_prose,4,20,1,0.0040161,249,|e | e| <other>
+ctl:caesar_prose,5,1,2,0.0061728,324,<other> |e |um |e |
+ctl:caesar_prose,5,2,1,0.0030864,324,<other> |m |is |i |nt
+ctl:caesar_prose,5,3,1,0.0030864,324,|um |rum |e |s |m
+ctl:caesar_prose,5,4,1,0.0030864,324,| |s | <other> |
+ctl:caesar_prose,5,5,1,0.0030864,324,<other> | |e |e |is
+ctl:caesar_prose,5,6,1,0.0030864,324,|um |s e|t | <other>
+ctl:caesar_prose,5,7,1,0.0030864,324,|um | |s |e |um
+ctl:caesar_prose,5,8,1,0.0030864,324,|i |nt |e |is |is
+ctl:caesar_prose,5,9,1,0.0030864,324,| |e <other> <other> |e
+ctl:caesar_prose,5,10,1,0.0030864,324,|nt e| <other> | |
+ctl:caesar_prose,5,11,1,0.0030864,324,|s |s a| |s |s
+ctl:caesar_prose,5,12,1,0.0030864,324,|s |e |e |i |e
+ctl:caesar_prose,5,13,1,0.0030864,324,<other> e|t |is | <other>
+ctl:caesar_prose,5,14,1,0.0030864,324,e| |bus |is |m e|
+ctl:caesar_prose,5,15,1,0.0030864,324,e| |s |s |sque |s
+ctl:caesar_prose,5,16,1,0.0030864,324,| |bus |is <other> |i
+ctl:caesar_prose,5,17,1,0.0030864,324,|m |e a| e|m <other>
+ctl:caesar_prose,5,18,1,0.0030864,324,|s <other> <other> |nt |
+ctl:caesar_prose,5,19,1,0.0030864,324,| | | a| |m
+ctl:caesar_prose,5,20,1,0.0030864,324,|s a| |s <other> |
+ctl:caesar_prose,6,1,1,0.0030303,330,e| | <other> |rum |um |i
+ctl:caesar_prose,6,2,1,0.0030303,330,<other> |e |bus |tur <other> a|
+ctl:caesar_prose,6,3,1,0.0030303,330,| |i <other> | e| |e
+ctl:caesar_prose,6,4,1,0.0030303,330,|e <other> |um e| | |
+ctl:caesar_prose,6,5,1,0.0030303,330,|i a|que |is <other> |e |s
+ctl:caesar_prose,6,6,1,0.0030303,330,|que e| |is <other> <other> <other>
+ctl:caesar_prose,6,7,1,0.0030303,330,|is |m <other> |nt |um |m
+ctl:caesar_prose,6,8,1,0.0030303,330,a| <other> |um |e <other> |
+ctl:caesar_prose,6,9,1,0.0030303,330,|um |i <other> <other> |t |um
+ctl:caesar_prose,6,10,1,0.0030303,330,<other> |e | |s a| |
+ctl:caesar_prose,6,11,1,0.0030303,330,<other> | <other> |um |um |
+ctl:caesar_prose,6,12,1,0.0030303,330,|um <other> e| | <other> |um
+ctl:caesar_prose,6,13,1,0.0030303,330,|i |i |tur |s <other> <other>
+ctl:caesar_prose,6,14,1,0.0030303,330,<other> e|t <other> |rum |bus |
+ctl:caesar_prose,6,15,1,0.0030303,330,e| e| | |s a| |s
+ctl:caesar_prose,6,16,1,0.0030303,330,| |um | a| | |um
+ctl:caesar_prose,6,17,1,0.0030303,330,|s |s e|s |e |tur |bus
+ctl:caesar_prose,6,18,1,0.0030303,330,|um e|t e|s | <other> |m
+ctl:caesar_prose,6,19,1,0.0030303,330,|t |e |e e| e| |i
+ctl:caesar_prose,6,20,1,0.0030303,330,|i | <other> |e e| |i
+ctl:caesar_prose,7,1,1,0.0026042,384,| |bus |rum <other> e|m a| |is
+ctl:caesar_prose,7,2,1,0.0026042,384,|t e| <other> | |s | |
+ctl:caesar_prose,7,3,1,0.0026042,384,|s |i |i | |e <other> |
+ctl:caesar_prose,7,4,1,0.0026042,384,|e <other> |i | |m | |um
+ctl:caesar_prose,7,5,1,0.0026042,384,| | |m | |nt |is <other>
+ctl:caesar_prose,7,6,1,0.0026042,384,<other> e| <other> |is <other> <other> e|
+ctl:caesar_prose,7,7,1,0.0026042,384,<other> | <other> |is <other> <other> <other>
+ctl:caesar_prose,7,8,1,0.0026042,384,|rum |um |rum |t e|m <other> |
+ctl:caesar_prose,7,9,1,0.0026042,384,|que <other> | |t |i <other> |
+ctl:caesar_prose,7,10,1,0.0026042,384,|e |i |m <other> |t e|s |m
+ctl:caesar_prose,7,11,1,0.0026042,384,| |um |is <other> |sque |i |s
+ctl:caesar_prose,7,12,1,0.0026042,384,|i | |i <other> |s |t |sque
+ctl:caesar_prose,7,13,1,0.0026042,384,<other> | |t |que |s <other> a|
+ctl:caesar_prose,7,14,1,0.0026042,384,| |e | <other> |is |i |s
+ctl:caesar_prose,7,15,1,0.0026042,384,|um |s |s |t <other> |is <other>
+ctl:caesar_prose,7,16,1,0.0026042,384,|e <other> <other> <other> | <other> |
+ctl:caesar_prose,7,17,1,0.0026042,384,|t |i e| |e <other> |bus |is
+ctl:caesar_prose,7,18,1,0.0026042,384,e| |um <other> e| |is <other> |
+ctl:caesar_prose,7,19,1,0.0026042,384,|is |um | |e <other> | |nt
+ctl:caesar_prose,7,20,1,0.0026042,384,|rum e| |rum | | |um |s
+ctl:caesar_prose,8,1,1,0.0020747,482,|s a| <other> | | | |is |
+ctl:caesar_prose,8,2,1,0.0020747,482,|is |i |s |um <other> |um <other> |um
+ctl:caesar_prose,8,3,1,0.0020747,482,|nt | |e | |i |que <other> |s
+ctl:caesar_prose,8,4,1,0.0020747,482,|um <other> |is |bus e|s <other> <other> |i
+ctl:caesar_prose,8,5,1,0.0020747,482,|um |e |bus <other> |s |e | |i
+ctl:caesar_prose,8,6,1,0.0020747,482,| | |s |is <other> | |que |i
+ctl:caesar_prose,8,7,1,0.0020747,482,|is |s <other> |t e| | | |i
+ctl:caesar_prose,8,8,1,0.0020747,482,|t | | <other> |t <other> |i |
+ctl:caesar_prose,8,9,1,0.0020747,482,|tur <other> <other> |e <other> | a| |um
+ctl:caesar_prose,8,10,1,0.0020747,482,|um e| <other> |s |nt | |s e|t
+ctl:caesar_prose,8,11,1,0.0020747,482,|i e|m |i <other> |is |is |sque <other>
+ctl:caesar_prose,8,12,1,0.0020747,482,|t |t |e <other> <other> |nt <other> |
+ctl:caesar_prose,8,13,1,0.0020747,482,<other> |m | |s a|que e|s <other> |
+ctl:caesar_prose,8,14,1,0.0020747,482,|um |tur <other> | |i |s |t |
+ctl:caesar_prose,8,15,1,0.0020747,482,|s <other> e|t | | | | a|
+ctl:caesar_prose,8,16,1,0.0020747,482,| |e | | <other> |i |um |
+ctl:caesar_prose,8,17,1,0.0020747,482,| |e <other> |t a| |e <other> e|
+ctl:caesar_prose,8,18,1,0.0020747,482,|e | | |m |i e|t a| |m
+ctl:caesar_prose,8,19,1,0.0020747,482,e| |s |m |um |nt |i <other> |i
+ctl:caesar_prose,8,20,1,0.0020747,482,a| | |nt |um |e |t e|s |e
+ctl:celsus_prose,4,1,2,0.0080321,249,| <other> <other> |um
+ctl:celsus_prose,4,2,2,0.0080321,249,<other> <other> e| |
+ctl:celsus_prose,4,3,2,0.0080321,249,|m <other> <other> <other>
+ctl:celsus_prose,4,4,2,0.0080321,249,|us e|t <other> <other>
+ctl:celsus_prose,4,5,2,0.0080321,249,<other> |e s|t <other>
+ctl:celsus_prose,4,6,2,0.0080321,249,<other> <other> |um <other>
+ctl:celsus_prose,4,7,2,0.0080321,249,|m <other> <other> |
+ctl:celsus_prose,4,8,2,0.0080321,249,<other> |a <other> e|t
+ctl:celsus_prose,4,9,2,0.0080321,249,<other> <other> <other> <other>
+ctl:celsus_prose,4,10,2,0.0080321,249,|s |s <other> <other>
+ctl:celsus_prose,4,11,1,0.0040161,249,e| |m | <other>
+ctl:celsus_prose,4,12,1,0.0040161,249,<other> p|t e| e|m
+ctl:celsus_prose,4,13,1,0.0040161,249,|i <other> e| |a
+ctl:celsus_prose,4,14,1,0.0040161,249,|s |m <other> |s
+ctl:celsus_prose,4,15,1,0.0040161,249,e|t | <other> <other>
+ctl:celsus_prose,4,16,1,0.0040161,249,e|t <other> s| |
+ctl:celsus_prose,4,17,1,0.0040161,249,e|t |t e| p|t
+ctl:celsus_prose,4,18,1,0.0040161,249,|a <other> <other> |a
+ctl:celsus_prose,4,19,1,0.0040161,249,|m <other> | |e
+ctl:celsus_prose,4,20,1,0.0040161,249,|que <other> a| |
+ctl:celsus_prose,5,1,2,0.0061728,324,<other> <other> |a <other> |
+ctl:celsus_prose,5,2,1,0.0030864,324,|m <other> <other> |que <other>
+ctl:celsus_prose,5,3,1,0.0030864,324,|t |a e|t |e |
+ctl:celsus_prose,5,4,1,0.0030864,324,<other> |um | | |m
+ctl:celsus_prose,5,5,1,0.0030864,324,p|t <other> |i <other> |i
+ctl:celsus_prose,5,6,1,0.0030864,324,s|t <other> |i | a|t
+ctl:celsus_prose,5,7,1,0.0030864,324,| <other> <other> |m e|
+ctl:celsus_prose,5,8,1,0.0030864,324,<other> <other> <other> e| |us
+ctl:celsus_prose,5,9,1,0.0030864,324,| <other> <other> e| <other>
+ctl:celsus_prose,5,10,1,0.0030864,324,<other> |a |is <other> <other>
+ctl:celsus_prose,5,11,1,0.0030864,324,|m <other> e| |bus <other>
+ctl:celsus_prose,5,12,1,0.0030864,324,<other> |t |a s| e|m
+ctl:celsus_prose,5,13,1,0.0030864,324,e| |e <other> <other> <other>
+ctl:celsus_prose,5,14,1,0.0030864,324,|a |e | |um e|t
+ctl:celsus_prose,5,15,1,0.0030864,324,p|t <other> e|t |e <other>
+ctl:celsus_prose,5,16,1,0.0030864,324,e|m |t <other> e|m <other>
+ctl:celsus_prose,5,17,1,0.0030864,324,| <other> |e <other> |i
+ctl:celsus_prose,5,18,1,0.0030864,324,|e s|t |t |que <other>
+ctl:celsus_prose,5,19,1,0.0030864,324,|um | <other> |e |us
+ctl:celsus_prose,5,20,1,0.0030864,324,s|t s| e| | <other>
+ctl:celsus_prose,6,1,1,0.0030303,330,<other> e|t a| |e a| |s
+ctl:celsus_prose,6,2,1,0.0030303,330,<other> <other> <other> e| a| |m
+ctl:celsus_prose,6,3,1,0.0030303,330,e|t <other> <other> <other> <other> <other>
+ctl:celsus_prose,6,4,1,0.0030303,330,s| <other> |m | s|t |
+ctl:celsus_prose,6,5,1,0.0030303,330,e| <other> e| |a <other> p|t
+ctl:celsus_prose,6,6,1,0.0030303,330,<other> | | |e |que |m
+ctl:celsus_prose,6,7,1,0.0030303,330,e| |a <other> | e| |
+ctl:celsus_prose,6,8,1,0.0030303,330,| <other> <other> | <other> <other>
+ctl:celsus_prose,6,9,1,0.0030303,330,|m |t |t |m e| <other>
+ctl:celsus_prose,6,10,1,0.0030303,330,<other> |t <other> s| | |is
+ctl:celsus_prose,6,11,1,0.0030303,330,|e |um e|t |t | |um
+ctl:celsus_prose,6,12,1,0.0030303,330,|m <other> e|t |is | |e
+ctl:celsus_prose,6,13,1,0.0030303,330,<other> |a s| |e a| |
+ctl:celsus_prose,6,14,1,0.0030303,330,|m <other> <other> s|t s| |
+ctl:celsus_prose,6,15,1,0.0030303,330,<other> | |t e| | |m
+ctl:celsus_prose,6,16,1,0.0030303,330,<other> | e|m |a <other> |a
+ctl:celsus_prose,6,17,1,0.0030303,330,| |um s|t <other> |e e|
+ctl:celsus_prose,6,18,1,0.0030303,330,<other> <other> | a|t a| |us
+ctl:celsus_prose,6,19,1,0.0030303,330,p|t <other> | |um | <other>
+ctl:celsus_prose,6,20,1,0.0030303,330,e| <other> |a |a <other> |m
+ctl:celsus_prose,7,1,1,0.0026042,384,|is <other> |s <other> <other> |s e|m
+ctl:celsus_prose,7,2,1,0.0026042,384,|que <other> |a <other> |que |m |que
+ctl:celsus_prose,7,3,1,0.0026042,384,|us <other> e| |bus <other> |us |
+ctl:celsus_prose,7,4,1,0.0026042,384,|m |s |us <other> <other> e| |us
+ctl:celsus_prose,7,5,1,0.0026042,384,|um |us e| <other> s| <other> |
+ctl:celsus_prose,7,6,1,0.0026042,384,e|t |t e|m | |s |i |s
+ctl:celsus_prose,7,7,1,0.0026042,384,|um |um <other> |bus | | |m
+ctl:celsus_prose,7,8,1,0.0026042,384,e| |que <other> <other> | |us |a
+ctl:celsus_prose,7,9,1,0.0026042,384,<other> |e <other> <other> <other> |s |t
+ctl:celsus_prose,7,10,1,0.0026042,384,| |bus <other> e| |bus <other> |a
+ctl:celsus_prose,7,11,1,0.0026042,384,|i | | |t e|t <other> <other>
+ctl:celsus_prose,7,12,1,0.0026042,384,e| | | <other> a| | <other>
+ctl:celsus_prose,7,13,1,0.0026042,384,<other> <other> |i |a |a |a e|
+ctl:celsus_prose,7,14,1,0.0026042,384,<other> <other> p|t | e|m <other> s|
+ctl:celsus_prose,7,15,1,0.0026042,384,| |m <other> <other> <other> <other> |
+ctl:celsus_prose,7,16,1,0.0026042,384,<other> |e <other> <other> |a <other> s|t
+ctl:celsus_prose,7,17,1,0.0026042,384,<other> |i |s |t e| |um <other>
+ctl:celsus_prose,7,18,1,0.0026042,384,|s <other> <other> <other> s| <other> e|
+ctl:celsus_prose,7,19,1,0.0026042,384,<other> <other> e| <other> e| <other> |
+ctl:celsus_prose,7,20,1,0.0026042,384,|e |que <other> |e s|t <other> p|t
+ctl:celsus_prose,8,1,1,0.0020747,482,a| |s <other> <other> |m | |is |bus
+ctl:celsus_prose,8,2,1,0.0020747,482,| <other> <other> <other> e|t |us <other> |
+ctl:celsus_prose,8,3,1,0.0020747,482,|i <other> e| <other> | | |m <other>
+ctl:celsus_prose,8,4,1,0.0020747,482,|us | | <other> |que | |is |bus
+ctl:celsus_prose,8,5,1,0.0020747,482,| <other> s| <other> |a <other> |t |e
+ctl:celsus_prose,8,6,1,0.0020747,482,|t a| <other> |um |a s| |i <other>
+ctl:celsus_prose,8,7,1,0.0020747,482,|m <other> a| <other> <other> | | |um
+ctl:celsus_prose,8,8,1,0.0020747,482,<other> p|t |s |us e| <other> | <other>
+ctl:celsus_prose,8,9,1,0.0020747,482,<other> | |m |m <other> <other> <other> |i
+ctl:celsus_prose,8,10,1,0.0020747,482,<other> |m <other> <other> p|t | e|m |um
+ctl:celsus_prose,8,11,1,0.0020747,482,|e <other> <other> s|t <other> e| <other> |m
+ctl:celsus_prose,8,12,1,0.0020747,482,|m <other> |i <other> |i a| <other> |e
+ctl:celsus_prose,8,13,1,0.0020747,482,<other> | e|m |t <other> |s <other> <other>
+ctl:celsus_prose,8,14,1,0.0020747,482,<other> | |bus | <other> |us |t e|
+ctl:celsus_prose,8,15,1,0.0020747,482,e| | | |m | | <other> |s
+ctl:celsus_prose,8,16,1,0.0020747,482,<other> <other> | |s a|t | |bus |t
+ctl:celsus_prose,8,17,1,0.0020747,482,|s a| <other> e| |e <other> s|t <other>
+ctl:celsus_prose,8,18,1,0.0020747,482,<other> |que <other> |s e|m | | |s
+ctl:celsus_prose,8,19,1,0.0020747,482,s|t <other> <other> |a |m p|t | |e
+ctl:celsus_prose,8,20,1,0.0020747,482,a| <other> <other> <other> | <other> <other> e|
+ctl:culpeper_items,4,1,8,0.032129,249,|t a|d |es |t
+ctl:culpeper_items,4,2,7,0.028112,249,p|e |t |s |n
+ctl:culpeper_items,4,3,6,0.024096,249,th| <other> <other> <other>
+ctl:culpeper_items,4,4,5,0.02008,249,th| <other> | th|
+ctl:culpeper_items,4,5,4,0.016064,249,th| |e | th|
+ctl:culpeper_items,4,6,4,0.016064,249,t|e <other> <other> |n
+ctl:culpeper_items,4,7,4,0.016064,249,p|e |t |s <other>
+ctl:culpeper_items,4,8,3,0.012048,249,|t a|d |es <other>
+ctl:culpeper_items,4,9,2,0.0080321,249,t|e |t <other> |n
+ctl:culpeper_items,4,10,2,0.0080321,249,th| <other> <other> |
+ctl:culpeper_items,4,11,2,0.0080321,249,t|e <other> <other> <other>
+ctl:culpeper_items,4,12,2,0.0080321,249,|t |s s| <other>
+ctl:culpeper_items,4,13,2,0.0080321,249,<other> <other> <other> |s
+ctl:culpeper_items,4,14,2,0.0080321,249,th| |t |s |
+ctl:culpeper_items,4,15,2,0.0080321,249,|t |s |d t|
+ctl:culpeper_items,4,16,2,0.0080321,249,th| |es al| <other>
+ctl:culpeper_items,4,17,2,0.0080321,249,<other> a|e <other> <other>
+ctl:culpeper_items,4,18,2,0.0080321,249,p|e <other> | |n
+ctl:culpeper_items,4,19,2,0.0080321,249,th| |es <other> |r
+ctl:culpeper_items,4,20,2,0.0080321,249,|t h|s th| <other>
+ctl:culpeper_items,5,1,9,0.027778,324,|t a|d |es |t |s
+ctl:culpeper_items,5,2,4,0.012346,324,<other> <other> <other> <other> <other>
+ctl:culpeper_items,5,3,4,0.012346,324,t|e <other> <other> a|d <other>
+ctl:culpeper_items,5,4,4,0.012346,324,th| <other> <other> | th|
+ctl:culpeper_items,5,5,3,0.0092593,324,<other> th| <other> | <other>
+ctl:culpeper_items,5,6,3,0.0092593,324,th| |e <other> | th|
+ctl:culpeper_items,5,7,3,0.0092593,324,<other> |s <other> <other> |
+ctl:culpeper_items,5,8,3,0.0092593,324,t|e |t <other> |n |e
+ctl:culpeper_items,5,9,3,0.0092593,324,th| <other> | th| <other>
+ctl:culpeper_items,5,10,2,0.0061728,324,|t <other> th| <other> |
+ctl:culpeper_items,5,11,2,0.0061728,324,a| th| |s |e <other>
+ctl:culpeper_items,5,12,2,0.0061728,324,t|e <other> <other> <other> th|
+ctl:culpeper_items,5,13,2,0.0061728,324,|t <other> th| <other> <other>
+ctl:culpeper_items,5,14,2,0.0061728,324,th| <other> |s | <other>
+ctl:culpeper_items,5,15,2,0.0061728,324,t|e <other> <other> |n <other>
+ctl:culpeper_items,5,16,2,0.0061728,324,th| h| <other> a|d <other>
+ctl:culpeper_items,5,17,2,0.0061728,324,th| <other> <other> <other> th|
+ctl:culpeper_items,5,18,2,0.0061728,324,| <other> | th| <other>
+ctl:culpeper_items,5,19,2,0.0061728,324,th| <other> a|e <other> a|d
+ctl:culpeper_items,5,20,2,0.0061728,324,th| <other> <other> <other> |
+ctl:culpeper_items,6,1,4,0.012121,330,|t a|d |es th| <other> |s
+ctl:culpeper_items,6,2,3,0.0090909,330,|t a|d |es |t |s <other>
+ctl:culpeper_items,6,3,3,0.0090909,330,th| <other> <other> | th| h|
+ctl:culpeper_items,6,4,3,0.0090909,330,th| <other> <other> <other> <other> <other>
+ctl:culpeper_items,6,5,2,0.0060606,330,th| <other> <other> | <other> |s
+ctl:culpeper_items,6,6,2,0.0060606,330,|t a|d |es <other> a|e <other>
+ctl:culpeper_items,6,7,2,0.0060606,330,<other> | <other> | s| <other>
+ctl:culpeper_items,6,8,2,0.0060606,330,|t a|d |es |t |s a|
+ctl:culpeper_items,6,9,2,0.0060606,330,th| <other> | th| <other> <other>
+ctl:culpeper_items,6,10,2,0.0060606,330,t|e |t <other> |n |e a|d
+ctl:culpeper_items,6,11,2,0.0060606,330,p|e <other> | |n <other> <other>
+ctl:culpeper_items,6,12,2,0.0060606,330,|t al| h|s th| <other> <other>
+ctl:culpeper_items,6,13,2,0.0060606,330,th| <other> a|d <other> <other> <other>
+ctl:culpeper_items,6,14,2,0.0060606,330,th| |e | th| h| |r
+ctl:culpeper_items,6,15,2,0.0060606,330,th| |t |s <other> <other> a|d
+ctl:culpeper_items,6,16,2,0.0060606,330,p|e |t |s <other> <other> |n
+ctl:culpeper_items,6,17,1,0.0030303,330,<other> <other> |t <other> a|d |s
+ctl:culpeper_items,6,18,1,0.0030303,330,|t <other> |n <other> a|d th|
+ctl:culpeper_items,6,19,1,0.0030303,330,a|d <other> | <other> |d b|
+ctl:culpeper_items,6,20,1,0.0030303,330,<other> a| <other> |es | |
+ctl:culpeper_items,7,1,4,0.010417,384,|t a|d |es |t |s | <other>
+ctl:culpeper_items,7,2,3,0.0078125,384,th| |e | th| h| <other> |
+ctl:culpeper_items,7,3,3,0.0078125,384,|t a|d |es |t |s <other> th|
+ctl:culpeper_items,7,4,3,0.0078125,384,|t a|d |es |t |s a| h|
+ctl:culpeper_items,7,5,2,0.0052083,384,th| |es a|e <other> <other> <other> <other>
+ctl:culpeper_items,7,6,2,0.0052083,384,th| |t | <other> |s <other> <other>
+ctl:culpeper_items,7,7,2,0.0052083,384,|t a|d |es <other> a|e <other> th|
+ctl:culpeper_items,7,8,1,0.0026042,384,p|e <other> | <other> <other> <other> |d
+ctl:culpeper_items,7,9,1,0.0026042,384,<other> <other> | <other> | th| |
+ctl:culpeper_items,7,10,1,0.0026042,384,<other> a|e | | b| t|e <other>
+ctl:culpeper_items,7,11,1,0.0026042,384,p|e <other> |n | | <other> |
+ctl:culpeper_items,7,12,1,0.0026042,384,<other> <other> <other> a|e <other> |n |d
+ctl:culpeper_items,7,13,1,0.0026042,384,t|e al| |d <other> <other> <other> <other>
+ctl:culpeper_items,7,14,1,0.0026042,384,|t h|s |d |s <other> |s <other>
+ctl:culpeper_items,7,15,1,0.0026042,384,|t |es <other> <other> <other> <other> |n
+ctl:culpeper_items,7,16,1,0.0026042,384,|t h|s <other> |es | th| |es
+ctl:culpeper_items,7,17,1,0.0026042,384,|t al| <other> a|d |es al| |s
+ctl:culpeper_items,7,18,1,0.0026042,384,<other> <other> |e | h|s | <other>
+ctl:culpeper_items,7,19,1,0.0026042,384,|t h|s t| <other> th| <other> <other>
+ctl:culpeper_items,7,20,1,0.0026042,384,|t |s <other> |t | <other> |d
+ctl:culpeper_items,8,1,4,0.0082988,482,|t a|d |es |t |s <other> th| <other>
+ctl:culpeper_items,8,2,2,0.0041494,482,t|e <other> <other> |n |e a|d <other> a|d
+ctl:culpeper_items,8,3,2,0.0041494,482,th| |t |s s| a|d <other> <other> <other>
+ctl:culpeper_items,8,4,2,0.0041494,482,th| <other> a|e <other> s| a|d | <other>
+ctl:culpeper_items,8,5,2,0.0041494,482,p|e |t |s |n <other> <other> | <other>
+ctl:culpeper_items,8,6,1,0.0020747,482,<other> a| <other> <other> | |t <other> |s
+ctl:culpeper_items,8,7,1,0.0020747,482,th| |es a|e | th| <other> <other> a|d
+ctl:culpeper_items,8,8,1,0.0020747,482,<other> | th| <other> t| |e |es <other>
+ctl:culpeper_items,8,9,1,0.0020747,482,th| <other> a|e | | p|e |r |r
+ctl:culpeper_items,8,10,1,0.0020747,482,| <other> <other> | <other> | | <other>
+ctl:culpeper_items,8,11,1,0.0020747,482,|t <other> th| <other> <other> <other> a|d |t
+ctl:culpeper_items,8,12,1,0.0020747,482,|t <other> | |t a|d th| |t |
+ctl:culpeper_items,8,13,1,0.0020747,482,<other> a|e <other> a|d <other> th| <other> a|e
+ctl:culpeper_items,8,14,1,0.0020747,482,th| |s |e al| th| |r p|e |t
+ctl:culpeper_items,8,15,1,0.0020747,482,th| <other> |e |n |n th| <other> <other>
+ctl:culpeper_items,8,16,1,0.0020747,482,a| th| t| th| | <other> s| |
+ctl:culpeper_items,8,17,1,0.0020747,482,| <other> | th| <other> <other> <other> <other>
+ctl:culpeper_items,8,18,1,0.0020747,482,th| |es a|d <other> <other> |n <other> <other>
+ctl:culpeper_items,8,19,1,0.0020747,482,<other> <other> |t |s <other> |n <other> |es
+ctl:culpeper_items,8,20,1,0.0020747,482,th| |es a|e <other> a|d <other> <other> a|
+ctl:culpeper_prose,4,1,6,0.024096,249,<other> <other> <other> <other>
+ctl:culpeper_prose,4,2,4,0.016064,249,th| <other> <other> <other>
+ctl:culpeper_prose,4,3,3,0.012048,249,<other> th| <other> |
+ctl:culpeper_prose,4,4,3,0.012048,249,| | <other> th|
+ctl:culpeper_prose,4,5,2,0.0080321,249,<other> <other> | th|
+ctl:culpeper_prose,4,6,2,0.0080321,249,<other> | <other> <other>
+ctl:culpeper_prose,4,7,2,0.0080321,249,<other> th| <other> a|d
+ctl:culpeper_prose,4,8,2,0.0080321,249,<other> th| <other> <other>
+ctl:culpeper_prose,4,9,2,0.0080321,249,<other> <other> <other> th|
+ctl:culpeper_prose,4,10,2,0.0080321,249,<other> th| th|t a|
+ctl:culpeper_prose,4,11,1,0.0040161,249,<other> a| |s s|
+ctl:culpeper_prose,4,12,1,0.0040161,249,s| s| h| <other>
+ctl:culpeper_prose,4,13,1,0.0040161,249,<other> t| th| <other>
+ctl:culpeper_prose,4,14,1,0.0040161,249,<other> a| | <other>
+ctl:culpeper_prose,4,15,1,0.0040161,249,a|d <other> t| |t
+ctl:culpeper_prose,4,16,1,0.0040161,249,h| <other> | a|
+ctl:culpeper_prose,4,17,1,0.0040161,249,| <other> <other> |t
+ctl:culpeper_prose,4,18,1,0.0040161,249,f| <other> <other> h|
+ctl:culpeper_prose,4,19,1,0.0040161,249,<other> a| <other> <other>
+ctl:culpeper_prose,4,20,1,0.0040161,249,<other> th| |er |
+ctl:culpeper_prose,5,1,2,0.0061728,324,<other> w| <other> | <other>
+ctl:culpeper_prose,5,2,2,0.0061728,324,<other> w| <other> a| |
+ctl:culpeper_prose,5,3,2,0.0061728,324,|n th| <other> | th|
+ctl:culpeper_prose,5,4,1,0.0030864,324,<other> |n <other> |s |t
+ctl:culpeper_prose,5,5,1,0.0030864,324,| | h| | <other>
+ctl:culpeper_prose,5,6,1,0.0030864,324,th|t |s th| |n a|
+ctl:culpeper_prose,5,7,1,0.0030864,324,| | th| h| w|
+ctl:culpeper_prose,5,8,1,0.0030864,324,s| s| | <other> |r
+ctl:culpeper_prose,5,9,1,0.0030864,324,t| | th| | a|d
+ctl:culpeper_prose,5,10,1,0.0030864,324,s| <other> t| | |t
+ctl:culpeper_prose,5,11,1,0.0030864,324,| |y s| <other> a|
+ctl:culpeper_prose,5,12,1,0.0030864,324,a| th| t| | <other>
+ctl:culpeper_prose,5,13,1,0.0030864,324,| th| <other> a|d |es
+ctl:culpeper_prose,5,14,1,0.0030864,324,<other> b| th| <other> w|
+ctl:culpeper_prose,5,15,1,0.0030864,324,<other> | <other> |t |s
+ctl:culpeper_prose,5,16,1,0.0030864,324,|t s| <other> a| |
+ctl:culpeper_prose,5,17,1,0.0030864,324,| <other> |er | <other>
+ctl:culpeper_prose,5,18,1,0.0030864,324,<other> | |y | |
+ctl:culpeper_prose,5,19,1,0.0030864,324,|er | | <other> |
+ctl:culpeper_prose,5,20,1,0.0030864,324,th| |n |y <other> |t
+ctl:culpeper_prose,6,1,2,0.0060606,330,th| <other> <other> th| |t |s
+ctl:culpeper_prose,6,2,1,0.0030303,330,<other> t| <other> |n a| th|
+ctl:culpeper_prose,6,3,1,0.0030303,330,|y s| |es w| <other> <other>
+ctl:culpeper_prose,6,4,1,0.0030303,330,|s a|d <other> <other> |y |
+ctl:culpeper_prose,6,5,1,0.0030303,330,<other> |t <other> th| |er <other>
+ctl:culpeper_prose,6,6,1,0.0030303,330,| | | th| t| |
+ctl:culpeper_prose,6,7,1,0.0030303,330,|s | | h| a|d th|
+ctl:culpeper_prose,6,8,1,0.0030303,330,<other> <other> |t |n | <other>
+ctl:culpeper_prose,6,9,1,0.0030303,330,<other> a|d <other> | <other> <other>
+ctl:culpeper_prose,6,10,1,0.0030303,330,b| <other> |er | <other> th|t
+ctl:culpeper_prose,6,11,1,0.0030303,330,th| th| | | th| |es
+ctl:culpeper_prose,6,12,1,0.0030303,330,|s t| b| |t |s <other>
+ctl:culpeper_prose,6,13,1,0.0030303,330,a| h| |t |s <other> a|
+ctl:culpeper_prose,6,14,1,0.0030303,330,<other> a|d |s | <other> |t
+ctl:culpeper_prose,6,15,1,0.0030303,330,| | <other> | f| |r
+ctl:culpeper_prose,6,16,1,0.0030303,330,s| <other> | s| <other> <other>
+ctl:culpeper_prose,6,17,1,0.0030303,330,<other> s|s <other> <other> <other> |
+ctl:culpeper_prose,6,18,1,0.0030303,330,| | |er a| th| b|
+ctl:culpeper_prose,6,19,1,0.0030303,330,|n <other> <other> |n f| <other>
+ctl:culpeper_prose,6,20,1,0.0030303,330,|n th| |s a|d <other> |t
+ctl:culpeper_prose,7,1,1,0.0026042,384,b| a|d <other> | p| |n th|
+ctl:culpeper_prose,7,2,1,0.0026042,384,a| th| |s |y | th| h|
+ctl:culpeper_prose,7,3,1,0.0026042,384,|t a|d <other> <other> t| th| |es
+ctl:culpeper_prose,7,4,1,0.0026042,384,th| <other> b| |y |t <other> |n
+ctl:culpeper_prose,7,5,1,0.0026042,384,<other> a|d th| s|s a| | <other>
+ctl:culpeper_prose,7,6,1,0.0026042,384,<other> <other> |n th| |t | <other>
+ctl:culpeper_prose,7,7,1,0.0026042,384,w| h| | <other> | th| |
+ctl:culpeper_prose,7,8,1,0.0026042,384,f| t| <other> <other> <other> |t |t
+ctl:culpeper_prose,7,9,1,0.0026042,384,|n <other> <other> | th| <other> |t
+ctl:culpeper_prose,7,10,1,0.0026042,384,<other> th| | | th| |y a|d
+ctl:culpeper_prose,7,11,1,0.0026042,384,|n s|s a|d p| <other> th| <other>
+ctl:culpeper_prose,7,12,1,0.0026042,384,| a|d <other> <other> | a| t|
+ctl:culpeper_prose,7,13,1,0.0026042,384,| |y t| th| <other> | |er
+ctl:culpeper_prose,7,14,1,0.0026042,384,| <other> th| th|t | |t |n
+ctl:culpeper_prose,7,15,1,0.0026042,384,| th| <other> a|d s|s |s s|s
+ctl:culpeper_prose,7,16,1,0.0026042,384,<other> a| |t <other> |t <other> a|
+ctl:culpeper_prose,7,17,1,0.0026042,384,<other> | th| s|s | s| a|d
+ctl:culpeper_prose,7,18,1,0.0026042,384,<other> |t a|d <other> <other> a|d b|
+ctl:culpeper_prose,7,19,1,0.0026042,384,t| <other> <other> |n <other> |n |
+ctl:culpeper_prose,7,20,1,0.0026042,384,<other> |n <other> a|d th| <other> |
+ctl:culpeper_prose,8,1,1,0.0020747,482,|t |n |n <other> | s| t| th|
+ctl:culpeper_prose,8,2,1,0.0020747,482,|s <other> <other> s| <other> |t s| a|d
+ctl:culpeper_prose,8,3,1,0.0020747,482,|s <other> <other> |t |t <other> | w|
+ctl:culpeper_prose,8,4,1,0.0020747,482,<other> <other> th| |es f| | a| th|
+ctl:culpeper_prose,8,5,1,0.0020747,482,<other> <other> th| <other> a| | | p|
+ctl:culpeper_prose,8,6,1,0.0020747,482,<other> |r | | <other> b| | t|
+ctl:culpeper_prose,8,7,1,0.0020747,482,<other> s| th| p| |n <other> <other> h|
+ctl:culpeper_prose,8,8,1,0.0020747,482,<other> s| | h| <other> th| <other> p|
+ctl:culpeper_prose,8,9,1,0.0020747,482,th| <other> | w| w| <other> |n th|
+ctl:culpeper_prose,8,10,1,0.0020747,482,| b| <other> a|d <other> a|d <other> <other>
+ctl:culpeper_prose,8,11,1,0.0020747,482,| th| |t |n | |s |s |s
+ctl:culpeper_prose,8,12,1,0.0020747,482,|s |t |s | th| a|d <other> f|
+ctl:culpeper_prose,8,13,1,0.0020747,482,| | | | <other> a|d <other> t|
+ctl:culpeper_prose,8,14,1,0.0020747,482,<other> th| <other> | | th| |es |s
+ctl:culpeper_prose,8,15,1,0.0020747,482,| <other> t| <other> <other> |n th| |
+ctl:culpeper_prose,8,16,1,0.0020747,482,f| a| th| |es | | s| <other>
+ctl:culpeper_prose,8,17,1,0.0020747,482,a|d s| |n | f| |r s| <other>
+ctl:culpeper_prose,8,18,1,0.0020747,482,| |y <other> <other> | <other> <other> s|s
+ctl:culpeper_prose,8,19,1,0.0020747,482,| t| t| | th|t th| a| |er
+ctl:culpeper_prose,8,20,1,0.0020747,482,| <other> <other> th| |n | <other> w|
+ctl:italian_prose,4,1,3,0.012048,249,<other> | <other> <other>
+ctl:italian_prose,4,2,2,0.0080321,249,| <other> | |to
+ctl:italian_prose,4,3,2,0.0080321,249,<other> |a <other> |
+ctl:italian_prose,4,4,2,0.0080321,249,|to <other> | <other>
+ctl:italian_prose,4,5,2,0.0080321,249,<other> | |a de|
+ctl:italian_prose,4,6,2,0.0080321,249,c|e <other> <other> d|
+ctl:italian_prose,4,7,2,0.0080321,249,<other> <other> |a |a
+ctl:italian_prose,4,8,2,0.0080321,249,<other> | <other> |
+ctl:italian_prose,4,9,2,0.0080321,249,<other> <other> <other> |a
+ctl:italian_prose,4,10,1,0.0040161,249,|ti |a |e <other>
+ctl:italian_prose,4,11,1,0.0040161,249,|a s|a d| |no
+ctl:italian_prose,4,12,1,0.0040161,249,|a de| | <other>
+ctl:italian_prose,4,13,1,0.0040161,249,de|a s|e d| <other>
+ctl:italian_prose,4,14,1,0.0040161,249,| |i |ti c|
+ctl:italian_prose,4,15,1,0.0040161,249,d| |a | <other>
+ctl:italian_prose,4,16,1,0.0040161,249,c|e |a <other> |i
+ctl:italian_prose,4,17,1,0.0040161,249,| <other> |i s|a
+ctl:italian_prose,4,18,1,0.0040161,249,<other> s| | <other>
+ctl:italian_prose,4,19,1,0.0040161,249,|a c|e |o <other>
+ctl:italian_prose,4,20,1,0.0040161,249,<other> |o d| <other>
+ctl:italian_prose,5,1,3,0.0092593,324,<other> <other> | <other> <other>
+ctl:italian_prose,5,2,2,0.0061728,324,s| |no <other> | <other>
+ctl:italian_prose,5,3,1,0.0030864,324,| <other> |no | n|
+ctl:italian_prose,5,4,1,0.0030864,324,<other> |i | s| <other>
+ctl:italian_prose,5,5,1,0.0030864,324,s| c|e de| <other> n|
+ctl:italian_prose,5,6,1,0.0030864,324,de| | |a de| c|
+ctl:italian_prose,5,7,1,0.0030864,324,|no <other> d| c|a <other>
+ctl:italian_prose,5,8,1,0.0030864,324,<other> de| | <other> c|
+ctl:italian_prose,5,9,1,0.0030864,324,d| | <other> <other> d|
+ctl:italian_prose,5,10,1,0.0030864,324,s| |e d| <other> <other>
+ctl:italian_prose,5,11,1,0.0030864,324,de| <other> <other> <other> d|
+ctl:italian_prose,5,12,1,0.0030864,324,<other> |i | s| |o
+ctl:italian_prose,5,13,1,0.0030864,324,|i |a s|a <other> |ta
+ctl:italian_prose,5,14,1,0.0030864,324,| <other> <other> <other> |no
+ctl:italian_prose,5,15,1,0.0030864,324,<other> c|e <other> <other> c|
+ctl:italian_prose,5,16,1,0.0030864,324,p| | <other> s| |a
+ctl:italian_prose,5,17,1,0.0030864,324,s|a <other> <other> n| |e
+ctl:italian_prose,5,18,1,0.0030864,324,<other> c| | |o |i
+ctl:italian_prose,5,19,1,0.0030864,324,|e |e <other> s|e <other>
+ctl:italian_prose,5,20,1,0.0030864,324,d| p| s|e |ta <other>
+ctl:italian_prose,6,1,1,0.0030303,330,d| |e <other> d| |no |
+ctl:italian_prose,6,2,1,0.0030303,330,| <other> c| |o <other> |
+ctl:italian_prose,6,3,1,0.0030303,330,de| | |a |e c| <other>
+ctl:italian_prose,6,4,1,0.0030303,330,|to | <other> c|e |a s|e
+ctl:italian_prose,6,5,1,0.0030303,330,c|e <other> |ti |i |i |no
+ctl:italian_prose,6,6,1,0.0030303,330,| <other> <other> |i <other> |
+ctl:italian_prose,6,7,1,0.0030303,330,<other> |i c| | | <other>
+ctl:italian_prose,6,8,1,0.0030303,330,|a <other> p| |a d| |ta
+ctl:italian_prose,6,9,1,0.0030303,330,|a s|a <other> <other> <other> |ta
+ctl:italian_prose,6,10,1,0.0030303,330,<other> n| |ta |a c|a |a
+ctl:italian_prose,6,11,1,0.0030303,330,d| <other> <other> <other> | <other>
+ctl:italian_prose,6,12,1,0.0030303,330,c|e p| <other> c|e n| <other>
+ctl:italian_prose,6,13,1,0.0030303,330,|a |e |e s|e <other> |no
+ctl:italian_prose,6,14,1,0.0030303,330,| <other> |i <other> |to |
+ctl:italian_prose,6,15,1,0.0030303,330,| |to <other> |e s| <other>
+ctl:italian_prose,6,16,1,0.0030303,330,|no <other> <other> c|a |a <other>
+ctl:italian_prose,6,17,1,0.0030303,330,|o s|e <other> n| |to |
+ctl:italian_prose,6,18,1,0.0030303,330,<other> <other> |e s| c|e |
+ctl:italian_prose,6,19,1,0.0030303,330,<other> |a <other> <other> <other> |
+ctl:italian_prose,6,20,1,0.0030303,330,|e <other> | <other> |i d|
+ctl:italian_prose,7,1,1,0.0026042,384,|a | <other> |a s|a <other> <other>
+ctl:italian_prose,7,2,1,0.0026042,384,<other> |a <other> d| |a p| <other>
+ctl:italian_prose,7,3,1,0.0026042,384,| |a | | |a <other> |e
+ctl:italian_prose,7,4,1,0.0026042,384,de| <other> <other> | <other> |e c|e
+ctl:italian_prose,7,5,1,0.0026042,384,|no <other> |no | <other> d| <other>
+ctl:italian_prose,7,6,1,0.0026042,384,|e <other> <other> s| |to <other> |
+ctl:italian_prose,7,7,1,0.0026042,384,de|a s| |a |a de|a s| |a
+ctl:italian_prose,7,8,1,0.0026042,384,<other> | |a |ta |i | <other>
+ctl:italian_prose,7,9,1,0.0026042,384,d| <other> <other> | |o d| |o
+ctl:italian_prose,7,10,1,0.0026042,384,<other> <other> |a | <other> |to |
+ctl:italian_prose,7,11,1,0.0026042,384,<other> <other> <other> | <other> <other> <other>
+ctl:italian_prose,7,12,1,0.0026042,384,| |o <other> |o | <other> <other>
+ctl:italian_prose,7,13,1,0.0026042,384,<other> <other> | | |to | |no
+ctl:italian_prose,7,14,1,0.0026042,384,s|a | | |o |i | |
+ctl:italian_prose,7,15,1,0.0026042,384,|ti | <other> s|a |a d| |i
+ctl:italian_prose,7,16,1,0.0026042,384,|o | | <other> <other> |ti c|
+ctl:italian_prose,7,17,1,0.0026042,384,<other> de|a |e | |ta <other> |e
+ctl:italian_prose,7,18,1,0.0026042,384,| | <other> p| | |a |e
+ctl:italian_prose,7,19,1,0.0026042,384,|e | <other> |e <other> p| <other>
+ctl:italian_prose,7,20,1,0.0026042,384,c| |a <other> d| |a <other> |
+ctl:italian_prose,8,1,1,0.0020747,482,|a | <other> | <other> | |no |
+ctl:italian_prose,8,2,1,0.0020747,482,s|a d| |a d| <other> |a c|e de|
+ctl:italian_prose,8,3,1,0.0020747,482,<other> <other> s| <other> |a | |o |
+ctl:italian_prose,8,4,1,0.0020747,482,|e <other> <other> <other> |e <other> s|e <other>
+ctl:italian_prose,8,5,1,0.0020747,482,<other> <other> s| p| <other> |ti <other> <other>
+ctl:italian_prose,8,6,1,0.0020747,482,|a | |no |e <other> | | <other>
+ctl:italian_prose,8,7,1,0.0020747,482,|no | |e de| <other> |i | |no
+ctl:italian_prose,8,8,1,0.0020747,482,de| | |o |a <other> |e | n|
+ctl:italian_prose,8,9,1,0.0020747,482,|ti | <other> |i <other> <other> |i c|e
+ctl:italian_prose,8,10,1,0.0020747,482,n| <other> d| <other> <other> d| <other> |
+ctl:italian_prose,8,11,1,0.0020747,482,<other> <other> |e <other> de| |o d| <other>
+ctl:italian_prose,8,12,1,0.0020747,482,<other> |e s|e <other> n| <other> <other> |
+ctl:italian_prose,8,13,1,0.0020747,482,<other> <other> |ti <other> d| <other> n| p|
+ctl:italian_prose,8,14,1,0.0020747,482,de|a s|a |a c|a s|a |a | c|e
+ctl:italian_prose,8,15,1,0.0020747,482,<other> |i |i |i de| |ti | <other>
+ctl:italian_prose,8,16,1,0.0020747,482,|i <other> | <other> |ti | <other> |ti
+ctl:italian_prose,8,17,1,0.0020747,482,<other> |o <other> |a |ti |i |ti |
+ctl:italian_prose,8,18,1,0.0020747,482,|e <other> | |o c|e <other> <other> |e
+ctl:italian_prose,8,19,1,0.0020747,482,| n| <other> <other> <other> |o <other> de|a
+ctl:italian_prose,8,20,1,0.0020747,482,|o | |e s|e |e |e <other> |a
+ctl:linnaeus_items,4,1,7,0.028112,249,| | <other> <other>
+ctl:linnaeus_items,4,2,3,0.012048,249,| | <other> |
+ctl:linnaeus_items,4,3,3,0.012048,249,| | | |
+ctl:linnaeus_items,4,4,3,0.012048,249,| | <other> |ia
+ctl:linnaeus_items,4,5,3,0.012048,249,| | <other> |is
+ctl:linnaeus_items,4,6,3,0.012048,249,| | |ia s|
+ctl:linnaeus_items,4,7,2,0.0080321,249,| | <other> s|
+ctl:linnaeus_items,4,8,2,0.0080321,249,|a <other> | |
+ctl:linnaeus_items,4,9,2,0.0080321,249,|a |ibus <other> |is
+ctl:linnaeus_items,4,10,2,0.0080321,249,|a |is |tis |ibus
+ctl:linnaeus_items,4,11,2,0.0080321,249,|a |is c|is |ibus
+ctl:linnaeus_items,4,12,2,0.0080321,249,| | |ia <other>
+ctl:linnaeus_items,4,13,2,0.0080321,249,|s <other> <other> |i
+ctl:linnaeus_items,4,14,2,0.0080321,249,| <other> <other> |is
+ctl:linnaeus_items,4,15,2,0.0080321,249,<other> <other> <other> <other>
+ctl:linnaeus_items,4,16,2,0.0080321,249,| | |o |e
+ctl:linnaeus_items,4,17,2,0.0080321,249,<other> |um |is |tis
+ctl:linnaeus_items,4,18,2,0.0080321,249,| <other> <other> |a
+ctl:linnaeus_items,4,19,2,0.0080321,249,|a |a <other> <other>
+ctl:linnaeus_items,4,20,2,0.0080321,249,| | |ia |ia
+ctl:linnaeus_items,5,1,5,0.015432,324,| | <other> |is <other>
+ctl:linnaeus_items,5,2,4,0.012346,324,| | <other> <other> |
+ctl:linnaeus_items,5,3,3,0.0092593,324,<other> |is <other> |tis <other>
+ctl:linnaeus_items,5,4,3,0.0092593,324,| | |ia <other> <other>
+ctl:linnaeus_items,5,5,3,0.0092593,324,| | <other> <other> <other>
+ctl:linnaeus_items,5,6,2,0.0061728,324,|a | | | |
+ctl:linnaeus_items,5,7,2,0.0061728,324,| | <other> |ibus |is
+ctl:linnaeus_items,5,8,2,0.0061728,324,|um |is |ibus |tis <other>
+ctl:linnaeus_items,5,9,2,0.0061728,324,| | <other> <other> s|
+ctl:linnaeus_items,5,10,2,0.0061728,324,|ia <other> |ia | c|
+ctl:linnaeus_items,5,11,1,0.0030864,324,|o <other> | |s |
+ctl:linnaeus_items,5,12,1,0.0030864,324,|i <other> |s | |
+ctl:linnaeus_items,5,13,1,0.0030864,324,| | s|is |is <other>
+ctl:linnaeus_items,5,14,1,0.0030864,324,<other> <other> <other> c|is <other>
+ctl:linnaeus_items,5,15,1,0.0030864,324,<other> |is <other> |tis |
+ctl:linnaeus_items,5,16,1,0.0030864,324,<other> |a | | |
+ctl:linnaeus_items,5,17,1,0.0030864,324,| | |ia |ia c|a
+ctl:linnaeus_items,5,18,1,0.0030864,324,a|a c|a | | c|a
+ctl:linnaeus_items,5,19,1,0.0030864,324,| |e <other> s| |ia
+ctl:linnaeus_items,5,20,1,0.0030864,324,|s c|e |o |is |tis
+ctl:linnaeus_items,6,1,2,0.0060606,330,|a |is <other> <other> |tis <other>
+ctl:linnaeus_items,6,2,2,0.0060606,330,|is <other> |is <other> <other> <other>
+ctl:linnaeus_items,6,3,2,0.0060606,330,| | <other> | | s|
+ctl:linnaeus_items,6,4,2,0.0060606,330,| | <other> <other> <other> |is
+ctl:linnaeus_items,6,5,1,0.0030303,330,| <other> |s <other> |is s|is
+ctl:linnaeus_items,6,6,1,0.0030303,330,<other> |a <other> | | <other>
+ctl:linnaeus_items,6,7,1,0.0030303,330,|ia |a | | | |
+ctl:linnaeus_items,6,8,1,0.0030303,330,|s |ia c|e |e |ia |a
+ctl:linnaeus_items,6,9,1,0.0030303,330,| |ia |a |a | <other>
+ctl:linnaeus_items,6,10,1,0.0030303,330,<other> <other> c|is s|is |ibus |
+ctl:linnaeus_items,6,11,1,0.0030303,330,|a <other> | | | |
+ctl:linnaeus_items,6,12,1,0.0030303,330,| | <other> |s |um |is
+ctl:linnaeus_items,6,13,1,0.0030303,330,|um |um |o <other> |um |
+ctl:linnaeus_items,6,14,1,0.0030303,330,| | <other> <other> |e |um
+ctl:linnaeus_items,6,15,1,0.0030303,330,|um |is <other> |tis <other> |
+ctl:linnaeus_items,6,16,1,0.0030303,330,|um |e |um | c| |
+ctl:linnaeus_items,6,17,1,0.0030303,330,|a |o | <other> | |
+ctl:linnaeus_items,6,18,1,0.0030303,330,|um c|e <other> |o <other> <other>
+ctl:linnaeus_items,6,19,1,0.0030303,330,| <other> c| | <other> <other>
+ctl:linnaeus_items,6,20,1,0.0030303,330,<other> | c| | | |
+ctl:linnaeus_items,7,1,2,0.0052083,384,| | | | | | |
+ctl:linnaeus_items,7,2,2,0.0052083,384,a|a |is <other> |s |is | |
+ctl:linnaeus_items,7,3,1,0.0026042,384,| | | |a <other> <other> <other>
+ctl:linnaeus_items,7,4,1,0.0026042,384,|a |a | | | | |
+ctl:linnaeus_items,7,5,1,0.0026042,384,| | |a <other> <other> |o |e
+ctl:linnaeus_items,7,6,1,0.0026042,384,| | |ia <other> |o |s <other>
+ctl:linnaeus_items,7,7,1,0.0026042,384,<other> |a <other> <other> <other> <other> <other>
+ctl:linnaeus_items,7,8,1,0.0026042,384,<other> |a | s| <other> a|a s|
+ctl:linnaeus_items,7,9,1,0.0026042,384,| <other> <other> | <other> |tis <other>
+ctl:linnaeus_items,7,10,1,0.0026042,384,| | <other> |ta |s |is |tis
+ctl:linnaeus_items,7,11,1,0.0026042,384,| | <other> <other> |s |is <other>
+ctl:linnaeus_items,7,12,1,0.0026042,384,|um <other> <other> | |o | <other>
+ctl:linnaeus_items,7,13,1,0.0026042,384,|um <other> |um |um | c| |
+ctl:linnaeus_items,7,14,1,0.0026042,384,|a s|is |o |o <other> <other> |
+ctl:linnaeus_items,7,15,1,0.0026042,384,|a <other> <other> | | |a |s
+ctl:linnaeus_items,7,16,1,0.0026042,384,| | <other> <other> <other> |a |a
+ctl:linnaeus_items,7,17,1,0.0026042,384,|a c|e <other> s|is |ibus |is |tis
+ctl:linnaeus_items,7,18,1,0.0026042,384,<other> |a s|a |i |is |tis <other>
+ctl:linnaeus_items,7,19,1,0.0026042,384,|a |ibus <other> |is |tis c|e |e
+ctl:linnaeus_items,7,20,1,0.0026042,384,|a |a s|is c|is |is | <other>
+ctl:linnaeus_items,8,1,2,0.0041494,482,|is c|is |ibus |ibus <other> c|e |i |is
+ctl:linnaeus_items,8,2,1,0.0020747,482,<other> <other> |a <other> |is | | |
+ctl:linnaeus_items,8,3,1,0.0020747,482,| | | | | <other> <other> |s
+ctl:linnaeus_items,8,4,1,0.0020747,482,| <other> <other> |o s|a <other> <other> |
+ctl:linnaeus_items,8,5,1,0.0020747,482,<other> <other> <other> |is <other> |is c|e |e
+ctl:linnaeus_items,8,6,1,0.0020747,482,|ia | c| | | | <other> |
+ctl:linnaeus_items,8,7,1,0.0020747,482,| | <other> |a |ia |is |tis |tis
+ctl:linnaeus_items,8,8,1,0.0020747,482,|is |is |is | | | s| |
+ctl:linnaeus_items,8,9,1,0.0020747,482,<other> | <other> |ibus |ibus | |s <other>
+ctl:linnaeus_items,8,10,1,0.0020747,482,|s |is <other> <other> <other> <other> |tis <other>
+ctl:linnaeus_items,8,11,1,0.0020747,482,|ta |s |is <other> |is |a | |
+ctl:linnaeus_items,8,12,1,0.0020747,482,|um |is <other> |tis <other> | c| |
+ctl:linnaeus_items,8,13,1,0.0020747,482,| | <other> <other> |a <other> |a |is
+ctl:linnaeus_items,8,14,1,0.0020747,482,|a |is |tis |is |is | c| |
+ctl:linnaeus_items,8,15,1,0.0020747,482,<other> |a |i |o | <other> c| c|
+ctl:linnaeus_items,8,16,1,0.0020747,482,s|a c|a | | | |s <other> |a
+ctl:linnaeus_items,8,17,1,0.0020747,482,s|a |is |tis | s|a |is |tis <other>
+ctl:linnaeus_items,8,18,1,0.0020747,482,|um |is |tis | | | | |ia
+ctl:linnaeus_items,8,19,1,0.0020747,482,<other> c|a |ta | | | | |
+ctl:linnaeus_items,8,20,1,0.0020747,482,<other> c|a c|e <other> |o |o c|a c|e
+ctl:linnaeus_prose,4,1,10,0.040161,249,| | | |
+ctl:linnaeus_prose,4,2,3,0.012048,249,<other> |tis | |
+ctl:linnaeus_prose,4,3,3,0.012048,249,<other> | | |
+ctl:linnaeus_prose,4,4,3,0.012048,249,| p| | |
+ctl:linnaeus_prose,4,5,3,0.012048,249,| | s| |
+ctl:linnaeus_prose,4,6,2,0.0080321,249,|um <other> <other> <other>
+ctl:linnaeus_prose,4,7,2,0.0080321,249,| | <other> <other>
+ctl:linnaeus_prose,4,8,2,0.0080321,249,| p| <other> |
+ctl:linnaeus_prose,4,9,2,0.0080321,249,| | | <other>
+ctl:linnaeus_prose,4,10,2,0.0080321,249,<other> <other> | |
+ctl:linnaeus_prose,4,11,2,0.0080321,249,|a |ibus <other> |is
+ctl:linnaeus_prose,4,12,2,0.0080321,249,|um |is |is |tis
+ctl:linnaeus_prose,4,13,2,0.0080321,249,|is <other> |tis |is
+ctl:linnaeus_prose,4,14,1,0.0040161,249,<other> | | |a
+ctl:linnaeus_prose,4,15,1,0.0040161,249,| <other> <other> <other>
+ctl:linnaeus_prose,4,16,1,0.0040161,249,|a |s |ia |e
+ctl:linnaeus_prose,4,17,1,0.0040161,249,<other> <other> <other> <other>
+ctl:linnaeus_prose,4,18,1,0.0040161,249,| a| s|is <other>
+ctl:linnaeus_prose,4,19,1,0.0040161,249,| | |ia |ia
+ctl:linnaeus_prose,4,20,1,0.0040161,249,<other> | <other> a|
+ctl:linnaeus_prose,5,1,7,0.021605,324,| | | | |
+ctl:linnaeus_prose,5,2,4,0.012346,324,| | | | |a
+ctl:linnaeus_prose,5,3,4,0.012346,324,| | | | <other>
+ctl:linnaeus_prose,5,4,3,0.0092593,324,<other> | p| | |
+ctl:linnaeus_prose,5,5,2,0.0061728,324,|s <other> m| |ia |
+ctl:linnaeus_prose,5,6,2,0.0061728,324,| | <other> |ia |i
+ctl:linnaeus_prose,5,7,2,0.0061728,324,|tis | | | |
+ctl:linnaeus_prose,5,8,2,0.0061728,324,| | <other> a| |
+ctl:linnaeus_prose,5,9,2,0.0061728,324,<other> | | | |s
+ctl:linnaeus_prose,5,10,2,0.0061728,324,p| <other> | | |
+ctl:linnaeus_prose,5,11,2,0.0061728,324,| <other> | | <other>
+ctl:linnaeus_prose,5,12,2,0.0061728,324,| <other> | | |
+ctl:linnaeus_prose,5,13,2,0.0061728,324,<other> | | | |
+ctl:linnaeus_prose,5,14,1,0.0030864,324,| | m| m| <other>
+ctl:linnaeus_prose,5,15,1,0.0030864,324,| | <other> |ia <other>
+ctl:linnaeus_prose,5,16,1,0.0030864,324,p| <other> | | |a
+ctl:linnaeus_prose,5,17,1,0.0030864,324,m| <other> |a | s|
+ctl:linnaeus_prose,5,18,1,0.0030864,324,<other> <other> s| m| <other>
+ctl:linnaeus_prose,5,19,1,0.0030864,324,| <other> <other> s| m|
+ctl:linnaeus_prose,5,20,1,0.0030864,324,| e| |ibus <other> <other>
+ctl:linnaeus_prose,6,1,2,0.0060606,330,| | p| <other> | |
+ctl:linnaeus_prose,6,2,2,0.0060606,330,| | | | <other> |
+ctl:linnaeus_prose,6,3,2,0.0060606,330,| | | | | <other>
+ctl:linnaeus_prose,6,4,2,0.0060606,330,<other> <other> <other> | | |
+ctl:linnaeus_prose,6,5,2,0.0060606,330,| | s| | | |
+ctl:linnaeus_prose,6,6,2,0.0060606,330,| | | a| | |
+ctl:linnaeus_prose,6,7,2,0.0060606,330,<other> | | | | |
+ctl:linnaeus_prose,6,8,2,0.0060606,330,| p| | | | |
+ctl:linnaeus_prose,6,9,1,0.0030303,330,|is |tis <other> | | a|
+ctl:linnaeus_prose,6,10,1,0.0030303,330,s| |is <other> |is |e |e
+ctl:linnaeus_prose,6,11,1,0.0030303,330,<other> <other> |i | <other> |
+ctl:linnaeus_prose,6,12,1,0.0030303,330,<other> | | | | <other>
+ctl:linnaeus_prose,6,13,1,0.0030303,330,|ia |a |ia |is |tis <other>
+ctl:linnaeus_prose,6,14,1,0.0030303,330,|i |um <other> | p| |
+ctl:linnaeus_prose,6,15,1,0.0030303,330,<other> <other> |is <other> <other> <other>
+ctl:linnaeus_prose,6,16,1,0.0030303,330,<other> |um |um |um |is <other>
+ctl:linnaeus_prose,6,17,1,0.0030303,330,|ibus | |s |um |is <other>
+ctl:linnaeus_prose,6,18,1,0.0030303,330,|tis |ibus |tis |is s|is |is
+ctl:linnaeus_prose,6,19,1,0.0030303,330,| | | | |um |is
+ctl:linnaeus_prose,6,20,1,0.0030303,330,|is s|is |is | | |
+ctl:linnaeus_prose,7,1,2,0.0052083,384,<other> | | | | | |
+ctl:linnaeus_prose,7,2,2,0.0052083,384,| | | | | <other> |
+ctl:linnaeus_prose,7,3,2,0.0052083,384,| | | | | p|is s|
+ctl:linnaeus_prose,7,4,2,0.0052083,384,| | | s| | | |
+ctl:linnaeus_prose,7,5,1,0.0026042,384,|s | | | | | |um
+ctl:linnaeus_prose,7,6,1,0.0026042,384,| | |s | | m| m|
+ctl:linnaeus_prose,7,7,1,0.0026042,384,| | m| m| |a |e |a
+ctl:linnaeus_prose,7,8,1,0.0026042,384,| | m| m| |ia | |
+ctl:linnaeus_prose,7,9,1,0.0026042,384,| | | <other> | a| |
+ctl:linnaeus_prose,7,10,1,0.0026042,384,| | <other> |a |ia |is |tis
+ctl:linnaeus_prose,7,11,1,0.0026042,384,|a <other> <other> <other> |ibus |is m|
+ctl:linnaeus_prose,7,12,1,0.0026042,384,| | | s|is <other> |i m|
+ctl:linnaeus_prose,7,13,1,0.0026042,384,|um |ibus |ibus | |s |um |ibus
+ctl:linnaeus_prose,7,14,1,0.0026042,384,|s |um |is <other> |tis |ibus |tis
+ctl:linnaeus_prose,7,15,1,0.0026042,384,|is |tis <other> p|is <other> |is |
+ctl:linnaeus_prose,7,16,1,0.0026042,384,<other> <other> |e |um |is <other> |tis
+ctl:linnaeus_prose,7,17,1,0.0026042,384,<other> |is <other> | |s |um |is
+ctl:linnaeus_prose,7,18,1,0.0026042,384,| p| | <other> |um |is <other>
+ctl:linnaeus_prose,7,19,1,0.0026042,384,|s p|a |is <other> |tis | |tis
+ctl:linnaeus_prose,7,20,1,0.0026042,384,s|a | p| p|a | | <other>
+ctl:linnaeus_prose,8,1,1,0.0020747,482,a| a| |a |is |tis <other> |is |a
+ctl:linnaeus_prose,8,2,1,0.0020747,482,| |s | | |a <other> |s <other>
+ctl:linnaeus_prose,8,3,1,0.0020747,482,|e |is p|is |e | e| | |
+ctl:linnaeus_prose,8,4,1,0.0020747,482,|ta | | | |s | | m|
+ctl:linnaeus_prose,8,5,1,0.0020747,482,| p| s|a m| |s | | <other>
+ctl:linnaeus_prose,8,6,1,0.0020747,482,|e <other> <other> <other> | | | |
+ctl:linnaeus_prose,8,7,1,0.0020747,482,<other> | <other> s| | | | |
+ctl:linnaeus_prose,8,8,1,0.0020747,482,| | |a a| <other> | |e |a
+ctl:linnaeus_prose,8,9,1,0.0020747,482,<other> | | | | |ia a| <other>
+ctl:linnaeus_prose,8,10,1,0.0020747,482,| p| | | e| |ibus |um |
+ctl:linnaeus_prose,8,11,1,0.0020747,482,| |i |um |um |is s|is |ibus |
+ctl:linnaeus_prose,8,12,1,0.0020747,482,p| <other> <other> <other> <other> <other> | <other>
+ctl:linnaeus_prose,8,13,1,0.0020747,482,<other> |a | <other> <other> | <other> |s
+ctl:linnaeus_prose,8,14,1,0.0020747,482,|is <other> <other> | | | |s |
+ctl:linnaeus_prose,8,15,1,0.0020747,482,|tis |is |ibus |um <other> |e p| e|
+ctl:linnaeus_prose,8,16,1,0.0020747,482,| <other> | | <other> <other> | m|
+ctl:linnaeus_prose,8,17,1,0.0020747,482,|s p|is <other> |is |a p| | m|
+ctl:linnaeus_prose,8,18,1,0.0020747,482,| | | | | m| <other> |um
+ctl:linnaeus_prose,8,19,1,0.0020747,482,| | <other> <other> |um |is |tis |tis
+ctl:linnaeus_prose,8,20,1,0.0020747,482,| | | <other> |s |um |is <other>
+ctl:pliny_prose,4,1,3,0.012048,249,| | <other> <other>
+ctl:pliny_prose,4,2,2,0.0080321,249,| <other> <other> |i
+ctl:pliny_prose,4,3,2,0.0080321,249,e| <other> | <other>
+ctl:pliny_prose,4,4,2,0.0080321,249,<other> | |a |
+ctl:pliny_prose,4,5,2,0.0080321,249,<other> |m <other> |
+ctl:pliny_prose,4,6,1,0.0040161,249,|e |um |us e|
+ctl:pliny_prose,4,7,1,0.0040161,249,| | |us e|
+ctl:pliny_prose,4,8,1,0.0040161,249,|i <other> |i <other>
+ctl:pliny_prose,4,9,1,0.0040161,249,| |us | |um
+ctl:pliny_prose,4,10,1,0.0040161,249,<other> |us |e |
+ctl:pliny_prose,4,11,1,0.0040161,249,|tur |que <other> |a
+ctl:pliny_prose,4,12,1,0.0040161,249,s| <other> | |t
+ctl:pliny_prose,4,13,1,0.0040161,249,|m |e <other> |m
+ctl:pliny_prose,4,14,1,0.0040161,249,| |is <other> s|
+ctl:pliny_prose,4,15,1,0.0040161,249,| | e| <other>
+ctl:pliny_prose,4,16,1,0.0040161,249,|um e|t e| |
+ctl:pliny_prose,4,17,1,0.0040161,249,<other> e| |is <other>
+ctl:pliny_prose,4,18,1,0.0040161,249,|a | |a |is
+ctl:pliny_prose,4,19,1,0.0040161,249,|a | | <other>
+ctl:pliny_prose,4,20,1,0.0040161,249,|e | |e |t
+ctl:pliny_prose,5,1,2,0.0061728,324,<other> <other> <other> e| |
+ctl:pliny_prose,5,2,1,0.0030864,324,|tur | |m |is |e
+ctl:pliny_prose,5,3,1,0.0030864,324,|es |i |rum |um <other>
+ctl:pliny_prose,5,4,1,0.0030864,324,| |us <other> a| |
+ctl:pliny_prose,5,5,1,0.0030864,324,|a |a |e |um |
+ctl:pliny_prose,5,6,1,0.0030864,324,|us <other> <other> | |a
+ctl:pliny_prose,5,7,1,0.0030864,324,|um |a <other> | <other>
+ctl:pliny_prose,5,8,1,0.0030864,324,|m <other> s| |m |
+ctl:pliny_prose,5,9,1,0.0030864,324,|a |i <other> |tur |
+ctl:pliny_prose,5,10,1,0.0030864,324,e|m e| | | |t
+ctl:pliny_prose,5,11,1,0.0030864,324,|m | |e | |e
+ctl:pliny_prose,5,12,1,0.0030864,324,|m |i |que |um |um
+ctl:pliny_prose,5,13,1,0.0030864,324,<other> |i s| e| |a
+ctl:pliny_prose,5,14,1,0.0030864,324,|a <other> |i <other> <other>
+ctl:pliny_prose,5,15,1,0.0030864,324,| |is |e <other> |t
+ctl:pliny_prose,5,16,1,0.0030864,324,<other> |e | | |s
+ctl:pliny_prose,5,17,1,0.0030864,324,<other> | |a |a |
+ctl:pliny_prose,5,18,1,0.0030864,324,|t |a <other> |t e|
+ctl:pliny_prose,5,19,1,0.0030864,324,a| |i <other> |que e|
+ctl:pliny_prose,5,20,1,0.0030864,324,|um | e|t a| |a
+ctl:pliny_prose,6,1,1,0.0030303,330,|e |s |e |e |um <other>
+ctl:pliny_prose,6,2,1,0.0030303,330,<other> |um <other> |es |a |a
+ctl:pliny_prose,6,3,1,0.0030303,330,|t <other> |i |s <other> |
+ctl:pliny_prose,6,4,1,0.0030303,330,|a |e <other> |rum |s <other>
+ctl:pliny_prose,6,5,1,0.0030303,330,<other> e| <other> <other> |e <other>
+ctl:pliny_prose,6,6,1,0.0030303,330,|e | <other> |e <other> |m
+ctl:pliny_prose,6,7,1,0.0030303,330,|is s| |is |e e| |
+ctl:pliny_prose,6,8,1,0.0030303,330,|que |e |t | |um |e
+ctl:pliny_prose,6,9,1,0.0030303,330,|is <other> |es <other> e| |
+ctl:pliny_prose,6,10,1,0.0030303,330,<other> <other> <other> |t |um |a
+ctl:pliny_prose,6,11,1,0.0030303,330,|rum <other> |e s| | |e
+ctl:pliny_prose,6,12,1,0.0030303,330,|t |is |t <other> |is <other>
+ctl:pliny_prose,6,13,1,0.0030303,330,<other> |us | | <other> |
+ctl:pliny_prose,6,14,1,0.0030303,330,|a |a |e s| |t e|
+ctl:pliny_prose,6,15,1,0.0030303,330,|um <other> |s a| |t <other>
+ctl:pliny_prose,6,16,1,0.0030303,330,|e |i |e <other> |m |m
+ctl:pliny_prose,6,17,1,0.0030303,330,<other> |um e|m |e |um <other>
+ctl:pliny_prose,6,18,1,0.0030303,330,|e |i |rum |t |m |
+ctl:pliny_prose,6,19,1,0.0030303,330,| |is <other> s|t |es |s
+ctl:pliny_prose,6,20,1,0.0030303,330,| |m |us a| <other> <other>
+ctl:pliny_prose,7,1,1,0.0026042,384,<other> <other> <other> |is |a <other> |us
+ctl:pliny_prose,7,2,1,0.0026042,384,<other> <other> |a |s e| |a <other>
+ctl:pliny_prose,7,3,1,0.0026042,384,|e <other> <other> <other> | e|m <other>
+ctl:pliny_prose,7,4,1,0.0026042,384,<other> <other> <other> |t <other> |tur |e
+ctl:pliny_prose,7,5,1,0.0026042,384,|a <other> <other> |es |um <other> s|
+ctl:pliny_prose,7,6,1,0.0026042,384,|um <other> <other> |i <other> |us |
+ctl:pliny_prose,7,7,1,0.0026042,384,|um <other> <other> |um |i e| <other>
+ctl:pliny_prose,7,8,1,0.0026042,384,e| |is |tur |um e|t | <other>
+ctl:pliny_prose,7,9,1,0.0026042,384,|t |um |um | |m |us <other>
+ctl:pliny_prose,7,10,1,0.0026042,384,<other> | |i |i <other> |t |
+ctl:pliny_prose,7,11,1,0.0026042,384,|t <other> |tur <other> |es | |t
+ctl:pliny_prose,7,12,1,0.0026042,384,|e |e s| <other> |e |e <other>
+ctl:pliny_prose,7,13,1,0.0026042,384,|is |us |i |s |is <other> |a
+ctl:pliny_prose,7,14,1,0.0026042,384,|e <other> |um |e <other> | |is
+ctl:pliny_prose,7,15,1,0.0026042,384,|m |m |m |e <other> |um <other>
+ctl:pliny_prose,7,16,1,0.0026042,384,|t |a |t |i | |a |rum
+ctl:pliny_prose,7,17,1,0.0026042,384,<other> |es |t |e |s |a |
+ctl:pliny_prose,7,18,1,0.0026042,384,|e <other> s| <other> <other> |tur |e
+ctl:pliny_prose,7,19,1,0.0026042,384,|e <other> <other> |us |um |us |tur
+ctl:pliny_prose,7,20,1,0.0026042,384,| |a |e |s s| <other> |is
+ctl:pliny_prose,8,1,1,0.0020747,482,|is <other> <other> <other> <other> <other> |um e|t
+ctl:pliny_prose,8,2,1,0.0020747,482,|a |um |es e| | |e |es s|t
+ctl:pliny_prose,8,3,1,0.0020747,482,| e| | <other> |e |is |rum |i
+ctl:pliny_prose,8,4,1,0.0020747,482,<other> <other> <other> | <other> <other> |us |s
+ctl:pliny_prose,8,5,1,0.0020747,482,|t |a e|t | <other> |a |t |
+ctl:pliny_prose,8,6,1,0.0020747,482,|m <other> | <other> <other> |m <other> |m
+ctl:pliny_prose,8,7,1,0.0020747,482,<other> |es | |e | |is |is |e
+ctl:pliny_prose,8,8,1,0.0020747,482,|e e| |a |a |e <other> |a |um
+ctl:pliny_prose,8,9,1,0.0020747,482,|us |que | |i |tur s| |m a|
+ctl:pliny_prose,8,10,1,0.0020747,482,| |a s|t |a |m |is |us |a
+ctl:pliny_prose,8,11,1,0.0020747,482,| | s|t <other> |is |t e| |e
+ctl:pliny_prose,8,12,1,0.0020747,482,<other> |um |i |que e| a| | |i
+ctl:pliny_prose,8,13,1,0.0020747,482,<other> <other> <other> <other> |t <other> s| |
+ctl:pliny_prose,8,14,1,0.0020747,482,|s <other> |i |a |e |es | |que
+ctl:pliny_prose,8,15,1,0.0020747,482,e| |que | |s <other> <other> |s <other>
+ctl:pliny_prose,8,16,1,0.0020747,482,| e|m | |e |a |um e|t <other>
+ctl:pliny_prose,8,17,1,0.0020747,482,<other> |um |m |t |e |a <other> <other>
+ctl:pliny_prose,8,18,1,0.0020747,482,<other> <other> |es |e |a |t |m <other>
+ctl:pliny_prose,8,19,1,0.0020747,482,| | | |t |us a| |a |e
+ctl:pliny_prose,8,20,1,0.0020747,482,|i |us <other> | |que |m | |is

@@ -1,0 +1,101 @@
+source,length,rank,count,share,n_lines,signature
+ctl:pliny_prose,4,1,3,0.012048,249,| | <other> <other>
+ctl:pliny_prose,4,2,2,0.0080321,249,| <other> <other> |i
+ctl:pliny_prose,4,3,2,0.0080321,249,e| <other> | <other>
+ctl:pliny_prose,4,4,2,0.0080321,249,<other> | |a |
+ctl:pliny_prose,4,5,2,0.0080321,249,<other> |m <other> |
+ctl:pliny_prose,4,6,1,0.0040161,249,|e |um |us e|
+ctl:pliny_prose,4,7,1,0.0040161,249,| | |us e|
+ctl:pliny_prose,4,8,1,0.0040161,249,|i <other> |i <other>
+ctl:pliny_prose,4,9,1,0.0040161,249,| |us | |um
+ctl:pliny_prose,4,10,1,0.0040161,249,<other> |us |e |
+ctl:pliny_prose,4,11,1,0.0040161,249,|tur |que <other> |a
+ctl:pliny_prose,4,12,1,0.0040161,249,s| <other> | |t
+ctl:pliny_prose,4,13,1,0.0040161,249,|m |e <other> |m
+ctl:pliny_prose,4,14,1,0.0040161,249,| |is <other> s|
+ctl:pliny_prose,4,15,1,0.0040161,249,| | e| <other>
+ctl:pliny_prose,4,16,1,0.0040161,249,|um e|t e| |
+ctl:pliny_prose,4,17,1,0.0040161,249,<other> e| |is <other>
+ctl:pliny_prose,4,18,1,0.0040161,249,|a | |a |is
+ctl:pliny_prose,4,19,1,0.0040161,249,|a | | <other>
+ctl:pliny_prose,4,20,1,0.0040161,249,|e | |e |t
+ctl:pliny_prose,5,1,2,0.0061728,324,<other> <other> <other> e| |
+ctl:pliny_prose,5,2,1,0.0030864,324,|tur | |m |is |e
+ctl:pliny_prose,5,3,1,0.0030864,324,|es |i |rum |um <other>
+ctl:pliny_prose,5,4,1,0.0030864,324,| |us <other> a| |
+ctl:pliny_prose,5,5,1,0.0030864,324,|a |a |e |um |
+ctl:pliny_prose,5,6,1,0.0030864,324,|us <other> <other> | |a
+ctl:pliny_prose,5,7,1,0.0030864,324,|um |a <other> | <other>
+ctl:pliny_prose,5,8,1,0.0030864,324,|m <other> s| |m |
+ctl:pliny_prose,5,9,1,0.0030864,324,|a |i <other> |tur |
+ctl:pliny_prose,5,10,1,0.0030864,324,e|m e| | | |t
+ctl:pliny_prose,5,11,1,0.0030864,324,|m | |e | |e
+ctl:pliny_prose,5,12,1,0.0030864,324,|m |i |que |um |um
+ctl:pliny_prose,5,13,1,0.0030864,324,<other> |i s| e| |a
+ctl:pliny_prose,5,14,1,0.0030864,324,|a <other> |i <other> <other>
+ctl:pliny_prose,5,15,1,0.0030864,324,| |is |e <other> |t
+ctl:pliny_prose,5,16,1,0.0030864,324,<other> |e | | |s
+ctl:pliny_prose,5,17,1,0.0030864,324,<other> | |a |a |
+ctl:pliny_prose,5,18,1,0.0030864,324,|t |a <other> |t e|
+ctl:pliny_prose,5,19,1,0.0030864,324,a| |i <other> |que e|
+ctl:pliny_prose,5,20,1,0.0030864,324,|um | e|t a| |a
+ctl:pliny_prose,6,1,1,0.0030303,330,|e |s |e |e |um <other>
+ctl:pliny_prose,6,2,1,0.0030303,330,<other> |um <other> |es |a |a
+ctl:pliny_prose,6,3,1,0.0030303,330,|t <other> |i |s <other> |
+ctl:pliny_prose,6,4,1,0.0030303,330,|a |e <other> |rum |s <other>
+ctl:pliny_prose,6,5,1,0.0030303,330,<other> e| <other> <other> |e <other>
+ctl:pliny_prose,6,6,1,0.0030303,330,|e | <other> |e <other> |m
+ctl:pliny_prose,6,7,1,0.0030303,330,|is s| |is |e e| |
+ctl:pliny_prose,6,8,1,0.0030303,330,|que |e |t | |um |e
+ctl:pliny_prose,6,9,1,0.0030303,330,|is <other> |es <other> e| |
+ctl:pliny_prose,6,10,1,0.0030303,330,<other> <other> <other> |t |um |a
+ctl:pliny_prose,6,11,1,0.0030303,330,|rum <other> |e s| | |e
+ctl:pliny_prose,6,12,1,0.0030303,330,|t |is |t <other> |is <other>
+ctl:pliny_prose,6,13,1,0.0030303,330,<other> |us | | <other> |
+ctl:pliny_prose,6,14,1,0.0030303,330,|a |a |e s| |t e|
+ctl:pliny_prose,6,15,1,0.0030303,330,|um <other> |s a| |t <other>
+ctl:pliny_prose,6,16,1,0.0030303,330,|e |i |e <other> |m |m
+ctl:pliny_prose,6,17,1,0.0030303,330,<other> |um e|m |e |um <other>
+ctl:pliny_prose,6,18,1,0.0030303,330,|e |i |rum |t |m |
+ctl:pliny_prose,6,19,1,0.0030303,330,| |is <other> s|t |es |s
+ctl:pliny_prose,6,20,1,0.0030303,330,| |m |us a| <other> <other>
+ctl:pliny_prose,7,1,1,0.0026042,384,<other> <other> <other> |is |a <other> |us
+ctl:pliny_prose,7,2,1,0.0026042,384,<other> <other> |a |s e| |a <other>
+ctl:pliny_prose,7,3,1,0.0026042,384,|e <other> <other> <other> | e|m <other>
+ctl:pliny_prose,7,4,1,0.0026042,384,<other> <other> <other> |t <other> |tur |e
+ctl:pliny_prose,7,5,1,0.0026042,384,|a <other> <other> |es |um <other> s|
+ctl:pliny_prose,7,6,1,0.0026042,384,|um <other> <other> |i <other> |us |
+ctl:pliny_prose,7,7,1,0.0026042,384,|um <other> <other> |um |i e| <other>
+ctl:pliny_prose,7,8,1,0.0026042,384,e| |is |tur |um e|t | <other>
+ctl:pliny_prose,7,9,1,0.0026042,384,|t |um |um | |m |us <other>
+ctl:pliny_prose,7,10,1,0.0026042,384,<other> | |i |i <other> |t |
+ctl:pliny_prose,7,11,1,0.0026042,384,|t <other> |tur <other> |es | |t
+ctl:pliny_prose,7,12,1,0.0026042,384,|e |e s| <other> |e |e <other>
+ctl:pliny_prose,7,13,1,0.0026042,384,|is |us |i |s |is <other> |a
+ctl:pliny_prose,7,14,1,0.0026042,384,|e <other> |um |e <other> | |is
+ctl:pliny_prose,7,15,1,0.0026042,384,|m |m |m |e <other> |um <other>
+ctl:pliny_prose,7,16,1,0.0026042,384,|t |a |t |i | |a |rum
+ctl:pliny_prose,7,17,1,0.0026042,384,<other> |es |t |e |s |a |
+ctl:pliny_prose,7,18,1,0.0026042,384,|e <other> s| <other> <other> |tur |e
+ctl:pliny_prose,7,19,1,0.0026042,384,|e <other> <other> |us |um |us |tur
+ctl:pliny_prose,7,20,1,0.0026042,384,| |a |e |s s| <other> |is
+ctl:pliny_prose,8,1,1,0.0020747,482,|is <other> <other> <other> <other> <other> |um e|t
+ctl:pliny_prose,8,2,1,0.0020747,482,|a |um |es e| | |e |es s|t
+ctl:pliny_prose,8,3,1,0.0020747,482,| e| | <other> |e |is |rum |i
+ctl:pliny_prose,8,4,1,0.0020747,482,<other> <other> <other> | <other> <other> |us |s
+ctl:pliny_prose,8,5,1,0.0020747,482,|t |a e|t | <other> |a |t |
+ctl:pliny_prose,8,6,1,0.0020747,482,|m <other> | <other> <other> |m <other> |m
+ctl:pliny_prose,8,7,1,0.0020747,482,<other> |es | |e | |is |is |e
+ctl:pliny_prose,8,8,1,0.0020747,482,|e e| |a |a |e <other> |a |um
+ctl:pliny_prose,8,9,1,0.0020747,482,|us |que | |i |tur s| |m a|
+ctl:pliny_prose,8,10,1,0.0020747,482,| |a s|t |a |m |is |us |a
+ctl:pliny_prose,8,11,1,0.0020747,482,| | s|t <other> |is |t e| |e
+ctl:pliny_prose,8,12,1,0.0020747,482,<other> |um |i |que e| a| | |i
+ctl:pliny_prose,8,13,1,0.0020747,482,<other> <other> <other> <other> |t <other> s| |
+ctl:pliny_prose,8,14,1,0.0020747,482,|s <other> |i |a |e |es | |que
+ctl:pliny_prose,8,15,1,0.0020747,482,e| |que | |s <other> <other> |s <other>
+ctl:pliny_prose,8,16,1,0.0020747,482,| e|m | |e |a |um e|t <other>
+ctl:pliny_prose,8,17,1,0.0020747,482,<other> |um |m |t |e |a <other> <other>
+ctl:pliny_prose,8,18,1,0.0020747,482,<other> <other> |es |e |a |t |m <other>
+ctl:pliny_prose,8,19,1,0.0020747,482,| | | |t |us a| |a |e
+ctl:pliny_prose,8,20,1,0.0020747,482,|i |us <other> | |que |m | |is

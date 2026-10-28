@@ -1,0 +1,88 @@
+{
+  "name": "010_line_as_item",
+  "params": {
+    "source": "ctl:italian_prose",
+    "prefixes": [
+      "con",
+      "de",
+      "di",
+      "in",
+      "ri",
+      "c",
+      "d",
+      "e",
+      "m",
+      "n",
+      "p",
+      "s"
+    ],
+    "suffixes": [
+      "ndo",
+      "nte",
+      "no",
+      "re",
+      "ta",
+      "te",
+      "ti",
+      "to",
+      "va",
+      "a",
+      "e",
+      "i",
+      "o",
+      "s"
+    ],
+    "glyph_units": null,
+    "n_classes": 20,
+    "top_stems": 200,
+    "shuffles": {
+      "point": {
+        "bnd": 50,
+        "head": 200,
+        "comp": 5,
+        "jac": 5,
+        "vert": 200
+      },
+      "sub": {
+        "bnd": 10,
+        "head": 20,
+        "comp": 2,
+        "jac": 2,
+        "vert": 20
+      }
+    },
+    "n_sub": 100,
+    "n_null": 30,
+    "sig_lengths": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "n_jaccard_pairs": 20000,
+    "control": {
+      "name": "italian_prose",
+      "mode": "prose",
+      "strategy": "balanced",
+      "sections": [
+        "b2",
+        "b4",
+        "b6",
+        "b8",
+        "b10",
+        "b12",
+        "b14"
+      ],
+      "source_tokens": 102755,
+      "files": [
+        "voynich-units/data/voynich-units/italian/27608.txt"
+      ]
+    }
+  },
+  "n_seeds_requested": 101,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 21:48:09",
+  "updated": "2026-10-27 21:49:24",
+  "n_seeds_done": 101
+}

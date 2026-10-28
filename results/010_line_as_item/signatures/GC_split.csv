@@ -1,0 +1,101 @@
+source,length,rank,count,share,n_lines,signature
+GC_split,4,1,14,0.061135,229,<other> <other> <other> <other>
+GC_split,4,2,5,0.021834,229,<other> <other> <other> 8|
+GC_split,4,3,4,0.017467,229,<other> | <other> <other>
+GC_split,4,4,3,0.0131,229,<other> <other> o| <other>
+GC_split,4,5,3,0.0131,229,8| <other> <other> <other>
+GC_split,4,6,3,0.0131,229,<other> o| <other> <other>
+GC_split,4,7,3,0.0131,229,<other> <other> <other> o|
+GC_split,4,8,3,0.0131,229,<other> <other> <other> |
+GC_split,4,9,2,0.0087336,229,<other> | <other> |89
+GC_split,4,10,2,0.0087336,229,<other> | <other> 8|
+GC_split,4,11,2,0.0087336,229,<other> o| | <other>
+GC_split,4,12,2,0.0087336,229,<other> 1o| <other> <other>
+GC_split,4,13,2,0.0087336,229,4o| <other> |oe 8|
+GC_split,4,14,2,0.0087336,229,<other> <other> 2|9 <other>
+GC_split,4,15,2,0.0087336,229,<other> <other> o|9 <other>
+GC_split,4,16,2,0.0087336,229,<other> |9 <other> <other>
+GC_split,4,17,2,0.0087336,229,|oe <other> <other> <other>
+GC_split,4,18,2,0.0087336,229,<other> 2|9 <other> <other>
+GC_split,4,19,2,0.0087336,229,|9 <other> <other> <other>
+GC_split,4,20,2,0.0087336,229,<other> 4o|9 <other> o|9
+GC_split,5,1,7,0.023256,301,<other> <other> <other> <other> <other>
+GC_split,5,2,3,0.0099668,301,<other> <other> <other> <other> |am
+GC_split,5,3,3,0.0099668,301,| <other> <other> <other> <other>
+GC_split,5,4,3,0.0099668,301,<other> <other> <other> <other> |
+GC_split,5,5,2,0.0066445,301,<other> |9 <other> 4o|9 <other>
+GC_split,5,6,2,0.0066445,301,<other> <other> <other> 8| <other>
+GC_split,5,7,2,0.0066445,301,8| <other> 1o| <other> <other>
+GC_split,5,8,2,0.0066445,301,| | <other> <other> <other>
+GC_split,5,9,2,0.0066445,301,<other> |oe <other> <other> <other>
+GC_split,5,10,2,0.0066445,301,<other> <other> |9 <other> <other>
+GC_split,5,11,1,0.0033223,301,|9 <other> |am <other> |am
+GC_split,5,12,1,0.0033223,301,<other> 1o| 1c| 8| |9
+GC_split,5,13,1,0.0033223,301,<other> <other> | <other> |9
+GC_split,5,14,1,0.0033223,301,<other> |9 <other> 1o| 8|
+GC_split,5,15,1,0.0033223,301,<other> <other> 1c| 8| 1|9
+GC_split,5,16,1,0.0033223,301,1o| 1o| <other> 1o| <other>
+GC_split,5,17,1,0.0033223,301,<other> <other> 1o| |oe 8|
+GC_split,5,18,1,0.0033223,301,<other> 1o| 8| 4o| 1|
+GC_split,5,19,1,0.0033223,301,<other> <other> 1o| 8| |9
+GC_split,5,20,1,0.0033223,301,<other> <other> | 1| |oe
+GC_split,6,1,4,0.013201,303,<other> <other> <other> <other> <other> <other>
+GC_split,6,2,3,0.009901,303,<other> 4o|9 <other> <other> <other> <other>
+GC_split,6,3,2,0.0066007,303,<other> <other> |9 <other> <other> <other>
+GC_split,6,4,2,0.0066007,303,<other> <other> <other> <other> 8| |
+GC_split,6,5,2,0.0066007,303,| <other> <other> <other> <other> |9
+GC_split,6,6,2,0.0066007,303,<other> <other> <other> 8| 8| <other>
+GC_split,6,7,2,0.0066007,303,<other> <other> <other> 8| <other> <other>
+GC_split,6,8,1,0.0033003,303,<other> |oe |9 <other> |am |9
+GC_split,6,9,1,0.0033003,303,<other> <other> <other> |oe <other> |9
+GC_split,6,10,1,0.0033003,303,<other> |am o| 1c| <other> <other>
+GC_split,6,11,1,0.0033003,303,<other> <other> <other> <other> |89 <other>
+GC_split,6,12,1,0.0033003,303,|9 <other> 8| <other> <other> |9
+GC_split,6,13,1,0.0033003,303,|9 1o| <other> 1| 1| 1|
+GC_split,6,14,1,0.0033003,303,|oe |oe | <other> |oe 2|9
+GC_split,6,15,1,0.0033003,303,4o|9 4o| 2|9 4o|89 4o|9 <other>
+GC_split,6,16,1,0.0033003,303,| o| <other> <other> <other> |
+GC_split,6,17,1,0.0033003,303,<other> <other> 1| | <other> |o
+GC_split,6,18,1,0.0033003,303,<other> |y <other> |9 1o| |9
+GC_split,6,19,1,0.0033003,303,<other> 8| <other> 8| 1o| o|9
+GC_split,6,20,1,0.0033003,303,<other> <other> |9 <other> <other> 1o|
+GC_split,7,1,5,0.014577,343,<other> <other> <other> <other> <other> <other> <other>
+GC_split,7,2,2,0.0058309,343,<other> <other> <other> <other> <other> <other> 4o|89
+GC_split,7,3,2,0.0058309,343,<other> <other> ok| <other> <other> <other> <other>
+GC_split,7,4,1,0.0029155,343,|am <other> <other> 8| |oe 8| <other>
+GC_split,7,5,1,0.0029155,343,|9 <other> o| <other> <other> | |
+GC_split,7,6,1,0.0029155,343,<other> <other> 8| 8| |9 1| |89
+GC_split,7,7,1,0.0029155,343,<other> |9 | 1o| 1| <other> 1|
+GC_split,7,8,1,0.0029155,343,<other> 8| |9 <other> | ok| |
+GC_split,7,9,1,0.0029155,343,<other> <other> <other> 1o| 8| <other> 8|
+GC_split,7,10,1,0.0029155,343,| <other> ok| <other> 1o| 8| 2|9
+GC_split,7,11,1,0.0029155,343,<other> <other> 8| |9 <other> 1o| 8|
+GC_split,7,12,1,0.0029155,343,8| <other> 4o|9 <other> <other> 1| 1c|
+GC_split,7,13,1,0.0029155,343,| <other> <other> <other> <other> 4o|9 ok|
+GC_split,7,14,1,0.0029155,343,o| 1o| <other> <other> 1o| 1| o|
+GC_split,7,15,1,0.0029155,343,| | 1o| <other> <other> | |
+GC_split,7,16,1,0.0029155,343,<other> 1o| 1| 1| <other> 8| <other>
+GC_split,7,17,1,0.0029155,343,<other> <other> 1| <other> 8| <other> o|
+GC_split,7,18,1,0.0029155,343,<other> | 2|9 ok| |9 4o| <other>
+GC_split,7,19,1,0.0029155,343,<other> 1o| ok| <other> <other> 1o| <other>
+GC_split,7,20,1,0.0029155,343,<other> | <other> <other> ok| <other> 1|
+GC_split,8,1,2,0.0050378,397,|am <other> <other> <other> <other> <other> <other> |9
+GC_split,8,2,2,0.0050378,397,<other> <other> <other> 4o|9 <other> <other> <other> <other>
+GC_split,8,3,2,0.0050378,397,<other> <other> 8| <other> <other> <other> <other> <other>
+GC_split,8,4,1,0.0025189,397,<other> |am <other> |9 <other> 2|9 <other> <other>
+GC_split,8,5,1,0.0025189,397,<other> <other> o| o|9 <other> <other> <other> <other>
+GC_split,8,6,1,0.0025189,397,8| |9 |9 |9 <other> |9 |89 <other>
+GC_split,8,7,1,0.0025189,397,<other> <other> 2|9 8| |9 |oe | |
+GC_split,8,8,1,0.0025189,397,<other> 1o| <other> 1o| <other> <other> 1|9 8|
+GC_split,8,9,1,0.0025189,397,<other> <other> o| 1o| <other> 1o| ok| <other>
+GC_split,8,10,1,0.0025189,397,|am <other> 4o|9 <other> |oe <other> | <other>
+GC_split,8,11,1,0.0025189,397,<other> <other> |oe |oe 2|9 1| <other> 1o|
+GC_split,8,12,1,0.0025189,397,o| 1c| 1| |9 <other> <other> 1c|9 <other>
+GC_split,8,13,1,0.0025189,397,4o|9 <other> <other> | |9 <other> <other> o|9
+GC_split,8,14,1,0.0025189,397,o|9 o|9 |am |o |9 |9 1c| <other>
+GC_split,8,15,1,0.0025189,397,4o| ok| 1| 8| ok| <other> <other> 4o|89
+GC_split,8,16,1,0.0025189,397,<other> <other> 4o| <other> <other> <other> 8| <other>
+GC_split,8,17,1,0.0025189,397,<other> 1o| |9 <other> <other> <other> <other> 8|
+GC_split,8,18,1,0.0025189,397,<other> <other> <other> <other> |oe 8| <other> <other>
+GC_split,8,19,1,0.0025189,397,4o| |9 1o| o|9 1c|9 |9 <other> <other>
+GC_split,8,20,1,0.0025189,397,|am 2|9 |o 2|9 |o o| 2|9 1|9

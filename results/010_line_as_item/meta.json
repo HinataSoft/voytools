@@ -1,0 +1,246 @@
+{
+  "name": "010_line_as_item",
+  "params": {
+    "n_classes": 20,
+    "top_stems": 200,
+    "shuffles": {
+      "point": {
+        "bnd": 50,
+        "head": 200,
+        "comp": 5,
+        "jac": 5,
+        "vert": 200
+      },
+      "sub": {
+        "bnd": 10,
+        "head": 20,
+        "comp": 2,
+        "jac": 2,
+        "vert": 20
+      }
+    },
+    "n_sub": 100,
+    "n_null": 30,
+    "nulls": {
+      "ts2020": [
+        "ZL_split",
+        "ZL_join"
+      ],
+      "tmpl": [
+        "ZL_split",
+        "GC_split"
+      ],
+      "ac86": [
+        "ZL_split",
+        "GC_split"
+      ],
+      "line": [
+        "ZL_split",
+        "GC_split"
+      ],
+      "posclass": [
+        "ZL_split",
+        "GC_split"
+      ],
+      "samelen": [
+        "ZL_split",
+        "GC_split"
+      ]
+    },
+    "controls": [
+      "caesar_prose",
+      "pliny_prose",
+      "celsus_prose",
+      "italian_prose",
+      "culpeper_prose",
+      "culpeper_items",
+      "linnaeus_prose",
+      "linnaeus_items"
+    ],
+    "interval": "real/controls: point + 2 x subsample quantile deviations; nulls: 2.5-97.5 % over seeds"
+  },
+  "runs": [
+    {
+      "source": "GC_join",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "GC_join",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "GC_split",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "GC_split",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ZL_join",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ZL_join",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ZL_split",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ZL_split",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ac86:GC_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "ac86:ZL_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "ctl:caesar_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:caesar_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:celsus_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:celsus_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:culpeper_items",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:culpeper_items",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:culpeper_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:culpeper_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:italian_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:italian_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:linnaeus_items",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:linnaeus_items",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:linnaeus_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:linnaeus_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:pliny_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:pliny_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "line:GC_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "line:ZL_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "posclass:GC_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "posclass:ZL_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "samelen:GC_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "samelen:ZL_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "tmpl:GC_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "tmpl:ZL_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "ts2020:ZL_join",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "ts2020:ZL_split",
+      "kind": "null",
+      "n": 30
+    }
+  ],
+  "created": "2026-10-27 21:56:59",
+  "updated": "2026-10-27 21:57:33"
+}
