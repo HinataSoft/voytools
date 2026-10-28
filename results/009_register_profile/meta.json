@@ -1,0 +1,263 @@
+{
+  "name": "009_register_profile",
+  "params": {
+    "groups": {
+      "vocab": [
+        "hapax_share",
+        "n_types",
+        "top50_coverage",
+        "zipf_slope"
+      ],
+      "order": [
+        "token_mi_excess_share",
+        "edge_mi_excess"
+      ],
+      "position": [
+        "prefix__I_pos",
+        "prefix__I_sec",
+        "prefix__I_sec_g_pos",
+        "suffix__I_pos",
+        "suffix__I_sec",
+        "suffix__I_sec_g_pos",
+        "stem__I_pos",
+        "stem__I_sec",
+        "stem__I_sec_g_pos",
+        "length__I_pos",
+        "length__I_sec",
+        "length__I_sec_g_pos"
+      ],
+      "paradigm": [
+        "mean_suffixes_per_stem",
+        "frac_stems_multi_suffix",
+        "H_suffix_given_stem",
+        "mi_prefix_suffix",
+        "cmi_excess",
+        "stem_dispersion",
+        "jsd_stem_sections"
+      ],
+      "locality": [
+        "loc_log_dist",
+        "loc_same_section",
+        "loc_contrast_adj"
+      ],
+      "sequence": [
+        "mi_stem_d1",
+        "mi_stem_area",
+        "mi_affix_d1",
+        "mi_affix_area"
+      ],
+      "line": [
+        "first_top5_excess",
+        "last_top5_excess",
+        "jsd_first_mid",
+        "jsd_last_mid",
+        "I_first_rest"
+      ]
+    },
+    "shuffles": {
+      "point": {
+        "adj": 50,
+        "edge": 50,
+        "bias": 50,
+        "mi": 50,
+        "line": 50
+      },
+      "sub": {
+        "adj": 50,
+        "edge": 50,
+        "bias": 10,
+        "mi": 10,
+        "line": 20
+      }
+    },
+    "n_sub": 100,
+    "sub_frac": 0.8,
+    "n_null": 30,
+    "k_sections": 7,
+    "template": "ZL_split",
+    "nulls": {
+      "ts2020": [
+        "ZL_split",
+        "ZL_join"
+      ],
+      "tmpl": [
+        "ZL_split",
+        "GC_split"
+      ],
+      "ac86": [
+        "ZL_split",
+        "GC_split"
+      ],
+      "line": [
+        "ZL_split",
+        "GC_split"
+      ]
+    },
+    "ts2020_config": 21,
+    "interval": "real/controls: point + 2 x subsample quantile deviations; nulls: 2.5-97.5 % over seeds"
+  },
+  "runs": [
+    {
+      "source": "GC_split",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "GC_split",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ZL_join",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ZL_join",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ZL_split",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ZL_split",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ac86:GC_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "ac86:ZL_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "ctl:caesar_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:caesar_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:celsus_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:celsus_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:culpeper_items",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:culpeper_items",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:culpeper_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:culpeper_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:italian_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:italian_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:linnaeus_items",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:linnaeus_items",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:linnaeus_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:linnaeus_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:plinyP_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:plinyP_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "ctl:pliny_prose",
+      "kind": "point",
+      "n": 1
+    },
+    {
+      "source": "ctl:pliny_prose",
+      "kind": "sub",
+      "n": 100
+    },
+    {
+      "source": "line:GC_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "line:ZL_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "tmpl:GC_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "tmpl:ZL_split",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "ts2020:ZL_join",
+      "kind": "null",
+      "n": 30
+    },
+    {
+      "source": "ts2020:ZL_split",
+      "kind": "null",
+      "n": 30
+    }
+  ],
+  "created": "2026-10-27 21:33:56",
+  "updated": "2026-10-27 21:47:57"
+}

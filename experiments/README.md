@@ -46,8 +46,9 @@ Pravidla:
 | 001 | autocopy_calibration | hotovo (krit. 1 nesplněno: H2 nedosažitelné bigramovými editacemi; provizorní null p_new 0,5, loss 0,20) | kalibrace autokopírovacího generátoru na ZL; které vlastnosti textu zůstanou nevysvětlené |
 | 002 | paradigm_coherence | hotovo (kmeny: paradigma užší než šablona, širší než kopírování; varianty rozptýlené; cmi_excess sám nerozlišuje) | chovají se kmeny a afixy jako paradigma, nebo jako šablona? |
 | 003 | autocopy_strict | hotovo (krit. 1 nesplněno: loss 0,27, H2 3,3; žádná necílová vlastnost nereprodukována) | editace vázané gramatikou slova (trigram/slot): trefí generátor H2, a které necílové vlastnosti tím začne reprodukovat? |
-| 004 | selfcitation_port | zadáno | port generátoru Timm & Schinner (R&T 2026, MIT) jako kanonický kopírovací null; validace proti tab. 7; velikost slovníku jako konfound |
-| 005 | structured_template_null | zadáno | null „strukturovaný umělý jazyk“ s paradigmaty a tématem z konstrukce; kolik ingrediencí potřebuje k napodobení 002; robustnost afixů/parseru; A/B vs písař |
-| 006 | topic_at_distance | zadáno | sdílení kmenů mezi stránkami: sekce vs vzdálenost vs písař; popisky (ok-/ot-) a jejich stopa v textu |
-| 007 | position_vs_content | zadáno | rozklad informace o afixech/kmenech mezi pozici, sekci a písaře; reziduální MI(d) po odečtení pozice |
+| 004 | selfcitation_port | hotovo | port generátoru Timm & Schinner (R&T 2026, MIT) jako kanonický kopírovací null; validace proti tab. 7; velikost slovníku jako konfound |
+| 005 | structured_template_null | hotovo | null „strukturovaný umělý jazyk“ s paradigmaty a tématem z konstrukce; kolik ingrediencí potřebuje k napodobení 002; robustnost afixů/parseru; A/B vs písař |
+| 006 | topic_at_distance | hotovo | sdílení kmenů mezi stránkami: sekce vs vzdálenost vs písař; popisky (ok-/ot-) a jejich stopa v textu |
+| 007 | position_vs_content | hotovo | rozklad informace o afixech/kmenech mezi pozici, sekci a písaře; reziduální MI(d) po odečtení pozice |
 | 008 | ts2020_recheck | hotovo (ts2020 reprodukuje I(kmen; sekce \| písař) a „nic za d = 2“; pokles sdílení na hraně; A/B uvnitř písaře není poziční; poziční kmen není artefakt parseru) | kanonický null ts2020 a šablona 005 v 006/007; „poziční kmen“ třemi parsery; A/B podmíněně na pozici; doplněk syntézy |
+| 009 | register_profile | hotovo (7 kontrol + 2 položkové varianty; Voynich nejblíž próze/ts2020, ne katalogu; Voynich-specifické: poziční/sekční vazby afixů, šíře paradigmatu, konec řádku) | registrový profil Voynichu vs skutečné texty (narativ, lékařství, botanika, herbář, katalog) a nully |

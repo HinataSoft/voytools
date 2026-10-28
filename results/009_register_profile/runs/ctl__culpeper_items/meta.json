@@ -1,0 +1,81 @@
+{
+  "name": "009_register_profile",
+  "params": {
+    "source": "ctl:culpeper_items",
+    "prefixes": [
+      "al",
+      "th",
+      "a",
+      "b",
+      "d",
+      "f",
+      "h",
+      "m",
+      "p",
+      "s",
+      "t",
+      "w"
+    ],
+    "suffixes": [
+      "wort",
+      "ing",
+      "ed",
+      "er",
+      "es",
+      "ly",
+      "th",
+      "d",
+      "e",
+      "n",
+      "r",
+      "s",
+      "t",
+      "y"
+    ],
+    "glyph_units": null,
+    "shuffles": {
+      "point": {
+        "adj": 50,
+        "edge": 50,
+        "bias": 50,
+        "mi": 50,
+        "line": 50
+      },
+      "sub": {
+        "adj": 50,
+        "edge": 50,
+        "bias": 10,
+        "mi": 10,
+        "line": 20
+      }
+    },
+    "sub_frac": 0.8,
+    "n_sub": 100,
+    "n_null": 30,
+    "ts2020_config": 21,
+    "ac_seed0": 8600,
+    "tmpl_seed0": 9000,
+    "control": {
+      "name": "culpeper_items",
+      "mode": "items",
+      "strategy": "balanced",
+      "sections": [
+        "A+B+F+B",
+        "C+E+C+D",
+        "E+F+G+H",
+        "I+J+K+L+M+N",
+        "O+P+Q+R",
+        "S+T+V+W"
+      ],
+      "source_tokens": 128575,
+      "files": [
+        "voynich-units/data/voynich-units/herbal/culpeper_en.txt"
+      ]
+    }
+  },
+  "n_seeds_requested": 101,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 21:34:03",
+  "updated": "2026-10-27 21:36:54",
+  "n_seeds_done": 101
+}

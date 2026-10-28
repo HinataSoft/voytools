@@ -1,0 +1,65 @@
+{
+  "name": "009_register_profile",
+  "params": {
+    "source": "ZL_split",
+    "prefixes": [
+      "che",
+      "cho",
+      "ol",
+      "qo",
+      "ch",
+      "d",
+      "l",
+      "o",
+      "s",
+      "sh",
+      "t",
+      "y"
+    ],
+    "suffixes": [
+      "aiin",
+      "ain",
+      "al",
+      "am",
+      "ar",
+      "chy",
+      "dy",
+      "ol",
+      "or",
+      "d",
+      "l",
+      "r",
+      "s",
+      "y"
+    ],
+    "glyph_units": "extended",
+    "shuffles": {
+      "point": {
+        "adj": 50,
+        "edge": 50,
+        "bias": 50,
+        "mi": 50,
+        "line": 50
+      },
+      "sub": {
+        "adj": 50,
+        "edge": 50,
+        "bias": 10,
+        "mi": 10,
+        "line": 20
+      }
+    },
+    "sub_frac": 0.8,
+    "n_sub": 100,
+    "n_null": 30,
+    "ts2020_config": 21,
+    "ac_seed0": 8600,
+    "tmpl_seed0": 9000,
+    "control": null
+  },
+  "n_seeds_requested": 101,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 21:27:56",
+  "updated": "2026-10-27 21:30:47",
+  "n_seeds_done": 101
+}
