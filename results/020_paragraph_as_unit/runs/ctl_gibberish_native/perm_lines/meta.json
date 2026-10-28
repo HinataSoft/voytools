@@ -1,0 +1,82 @@
+{
+  "name": "020_ctl:gibberish_native_perm_lines",
+  "params": {
+    "combo": "ctl:gibberish_native",
+    "source": "perm_lines",
+    "variants": {
+      "st": {
+        "unit": "stem",
+        "min_count": 2
+      },
+      "st50": {
+        "unit": "stem",
+        "min_count": 2,
+        "drop_top": 50
+      },
+      "tok": {
+        "unit": "token",
+        "min_count": 2
+      },
+      "ng": {
+        "unit": "stem",
+        "min_count": 2,
+        "gallows": true
+      }
+    },
+    "n_pages": 88,
+    "n_lines": 1617,
+    "n_pars": 88,
+    "n_pages_2pars": 0,
+    "n_open_end": 0,
+    "control": {
+      "name": "gibberish_native",
+      "mode": "native",
+      "strategy": "own lines and pages",
+      "sections": [
+        "DA_01",
+        "DA_02",
+        "DC_01",
+        "DC_03",
+        "DC_04",
+        "DC_05",
+        "DC_06",
+        "DC_08",
+        "DC_09",
+        "DC_10",
+        "DC_11",
+        "DC_12",
+        "DC_15",
+        "DC_16",
+        "DC_18",
+        "DC_20",
+        "DC_21",
+        "DC_22",
+        "DC_23",
+        "DC_24",
+        "DC_25",
+        "DC_26",
+        "DC_27",
+        "DC_28",
+        "DC_29",
+        "DC_30",
+        "DC_31",
+        "DC_32",
+        "DC_33",
+        "DC_34",
+        "DC_35",
+        "DC_36",
+        "DC_37",
+        "DC_38",
+        "DC_39",
+        "DC_40",
+        "DC_41",
+        "DC_42"
+      ],
+      "source_tokens": 10032
+    }
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 19:48:25",
+  "updated": "2026-10-28 19:48:25"
+}
