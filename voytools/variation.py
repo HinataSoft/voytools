@@ -239,7 +239,7 @@ def crossval_explained(
     given: str = "stem",
     by: Mapping[str, str | Sequence[str]] | Sequence[str] | None = None,
     k: int = 5,
-    alpha: float = 2.0,
+    alpha: float | Sequence[float] = (1.0, 3.0, 10.0, 30.0, 100.0),
     min_count: int = 20,
     seed: int = 0,
 ) -> pd.DataFrame:
@@ -251,8 +251,11 @@ def crossval_explained(
     folds (``p(s)``: add-one smoothed marginal).  ``explained_cv`` = (CE0 - CE1) / CE0.  Unlike the
     permutation correction this is not conservative for covariates with many values, but it charges
     sparse cells through the smoothing; a covariate without information gives a value <= 0.
-    Returns one row per X with ``CE_given``, ``CE_cond``, ``explained_cv``.
+    With several ``alpha`` values each cross-entropy uses the value that minimises it (one
+    parameter chosen on the held-out folds: slightly optimistic for both terms).
+    Returns one row per X with ``CE_given``, ``CE_cond``, ``explained_cv``, ``alpha_given``, ``alpha_cond``.
     """
+    alphas = [float(alpha)] if np.isscalar(alpha) else [float(a) for a in alpha]
     gcol = given if isinstance(given, str) else _columns(given)[0]
     items = list(by.items()) if isinstance(by, Mapping) else [(c, c) for c in (by or [])]
     z0 = codes(dfd[gcol].to_numpy(dtype=object))
@@ -264,31 +267,43 @@ def crossval_explained(
     fold = np.random.default_rng(seed).integers(0, k, size=n)
     xs = {name: joint_codes(z, *[codes(sub[c].to_numpy(dtype=object)) for c in _columns(cols)])
           for name, cols in items}
-    ce0 = np.zeros(n)
-    ce1 = {name: np.zeros(n) for name in xs}
+    na = len(alphas)
+    ce0 = np.zeros((na, n))
+    ce1 = {name: np.zeros((na, na, n)) for name in xs}
     kz = int(z.max()) + 1 if n else 1
+    zof = {}
+    for name, zx in xs.items():
+        zof[name] = np.zeros(int(zx.max()) + 1, dtype=np.int64)
+        zof[name][zx] = z  # z of every (z, x) cell (zx is a refinement of z)
     for f in range(k):
         te, tr = fold == f, fold != f
         ps = (np.bincount(y[tr], minlength=ky) + 1.0) / (tr.sum() + ky)
         nzs = np.bincount(z[tr] * ky + y[tr], minlength=kz * ky).reshape(kz, ky).astype(float)
         nz = nzs.sum(axis=1)
-        p0 = (nzs + alpha * ps) / (nz[:, None] + alpha)
-        ce0[te] = -np.log2(p0[z[te], y[te]])
+        p0s = [(nzs + a * ps) / (nz[:, None] + a) for a in alphas]
+        for i, p0 in enumerate(p0s):
+            ce0[i, te] = -np.log2(p0[z[te], y[te]])
         for name, zx in xs.items():
             kzx = int(zx.max()) + 1
-            # z of every (z, x) cell (zx is a refinement of z)
-            zof = np.zeros(kzx, dtype=np.int64)
-            zof[zx] = z
             nzxs = np.bincount(zx[tr] * ky + y[tr], minlength=kzx * ky).reshape(kzx, ky).astype(float)
             nzx = nzxs.sum(axis=1)
             cell, yy = zx[te], y[te]
-            p1 = (nzxs[cell, yy] + alpha * p0[zof[cell], yy]) / (nzx[cell] + alpha)
-            ce1[name][te] = -np.log2(p1)
+            for i, p0 in enumerate(p0s):
+                back = p0[zof[name][cell], yy]
+                for j, a in enumerate(alphas):
+                    ce1[name][i, j, te] = -np.log2((nzxs[cell, yy] + a * back) / (nzx[cell] + a))
     rows = []
-    c0 = float(ce0.mean()) if n else float("nan")
+    if n == 0:
+        return pd.DataFrame(rows)
+    m0 = ce0.mean(axis=1)
+    i0 = int(np.argmin(m0))
+    c0 = float(m0[i0])
     for name in xs:
-        c1 = float(ce1[name].mean()) if n else float("nan")
-        rows.append({"X": name, "CE_given": c0, "CE_cond": c1, "explained_cv": (c0 - c1) / c0 if c0 > 0 else float("nan")})
+        m1 = ce1[name].mean(axis=2)
+        i, j = np.unravel_index(int(np.argmin(m1)), m1.shape)
+        c1 = float(m1[i, j])
+        rows.append({"X": name, "CE_given": c0, "CE_cond": c1, "explained_cv": (c0 - c1) / c0 if c0 > 0 else float("nan"),
+                     "alpha_given": alphas[i0], "alpha_cond": alphas[j]})
     return pd.DataFrame(rows)
 
 
