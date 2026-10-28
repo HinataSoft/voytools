@@ -1,0 +1,43 @@
+{
+  "name": "017_bootstrap",
+  "params": {
+    "tag": "ZL_split",
+    "n_boot": 100,
+    "unit": "page (with replacement, copies renamed)",
+    "profile_prefixes": [
+      "che",
+      "cho",
+      "ol",
+      "qo",
+      "ch",
+      "d",
+      "l",
+      "o",
+      "s",
+      "sh",
+      "t",
+      "y"
+    ],
+    "profile_suffixes": [
+      "aiin",
+      "ain",
+      "al",
+      "am",
+      "ar",
+      "chy",
+      "dy",
+      "ol",
+      "or",
+      "d",
+      "l",
+      "r",
+      "s",
+      "y"
+    ]
+  },
+  "n_seeds_requested": 1,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 18:48:05",
+  "updated": "2026-10-28 18:48:24",
+  "n_seeds_done": 1
+}
