@@ -449,6 +449,21 @@ def matched_excess(r: np.ndarray, w: np.ndarray, dist: np.ndarray, same: np.ndar
     return {"n_same": n_same, "same": val_same, "matched": matched, "excess": val_same - matched}
 
 
+def window_pooled(r: np.ndarray, w: np.ndarray, half: int = 3) -> np.ndarray:
+    """Pooled residual ``sum R / sum W`` over a ``(2 half + 1)``-page square window around every cell (NaN without weight)."""
+    n = r.shape[0]
+    pr = np.zeros((n + 1, n + 1))
+    pw = np.zeros((n + 1, n + 1))
+    pr[1:, 1:] = r.cumsum(axis=0).cumsum(axis=1)
+    pw[1:, 1:] = w.cumsum(axis=0).cumsum(axis=1)
+    i = np.arange(n)
+    lo, hi = np.maximum(i - half, 0), np.minimum(i + half + 1, n)
+    num = pr[hi[:, None], hi[None, :]] - pr[lo[:, None], hi[None, :]] - pr[hi[:, None], lo[None, :]] + pr[lo[:, None], lo[None, :]]
+    den = pw[hi[:, None], hi[None, :]] - pw[lo[:, None], hi[None, :]] - pw[hi[:, None], lo[None, :]] + pw[lo[:, None], lo[None, :]]
+    with np.errstate(invalid="ignore", divide="ignore"):
+        return np.where(den > 0, num / den, np.nan)
+
+
 def neighbours(score: np.ndarray, dist: np.ndarray, allowed: np.ndarray, k: int = 3,
                edges: Sequence[int] = NEAR_EDGES, far: int = 8) -> dict:
     """Top-``k`` most similar pages per page (by ``score``, among ``allowed`` pairs) and their distances.

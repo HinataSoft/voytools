@@ -485,7 +485,8 @@ def cmd_extras(args) -> None:
                 with np.errstate(invalid="ignore", divide="ignore"):
                     z = np.where(w_model > 0, r_full / np.where(w_model > 0, w_model, 1.0), np.nan)
                 mats[measure] = pd.DataFrame(z, index=folios, columns=folios)
-            segs = L.segment(r_full, K_MAX)
+                if measure == "rare":   # 7 x 7 page window pooled residual (sum R / sum fW): readable in a figure
+                    mats["rare_smooth"] = pd.DataFrame(L.window_pooled(r_full, w_model, 3), index=folios, columns=folios)
             for m in CP_MULT:
                 k = min(max(m * k_ref, 2), K_MAX)
                 for b in segs[k]:

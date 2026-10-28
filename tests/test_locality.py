@@ -178,3 +178,14 @@ def test_quire_matrix_and_order_metrics():
     assert met["adjacent_share"] == 1.0 and met["rho"] > 0.9
     assert L.spearman([1, 2, 3, 4], [10, 20, 30, 40]) == pytest.approx(1.0)
     assert L.spearman([1, 2, 3, 4], [4, 3, 2, 1]) == pytest.approx(-1.0)
+
+
+def test_window_pooled_matches_direct_sum():
+    rng = np.random.default_rng(2)
+    n = 15
+    r = rng.normal(size=(n, n))
+    w = rng.uniform(0.5, 1.5, size=(n, n))
+    out = L.window_pooled(r, w, 2)
+    i, j = 4, 9
+    assert out[i, j] == pytest.approx(r[2:7, 7:12].sum() / w[2:7, 7:12].sum())
+    assert out[0, 0] == pytest.approx(r[0:3, 0:3].sum() / w[0:3, 0:3].sum())
