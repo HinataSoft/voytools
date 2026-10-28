@@ -27,6 +27,16 @@ Combinations: {ZL3b, GC2a} x {split, join}.  Sources of the page part (``seed`` 
 
 ``voytools.selfcitation`` (experiment 004) is not merged, so the self-citation null is skipped.
 
+Sources added for experiment 008 (not part of ``--sources all``; ``--out-root`` sends their runs
+elsewhere, e.g. ``pages --combo ZL_split --sources selfcitation_21,template_005 --out-root
+results/008_ts2020_recheck/006``):
+
+* ``selfcitation_21`` - ``selfcitation_like`` with config 21 of 004 (row ``ts2020_calB`` of
+  ``results/004_selfcitation_port/best_configs.csv``), seed = 2100 + repetition (the 004 phase-B samples),
+  repetitions 0..29; Eva only (ZL);
+* ``template_005`` - the full model of 005 (configuration of the split ablation ``best`` of the file),
+  seed = 100000 + repetition, ``pool_seed`` = repetition (the 005 ablation samples), repetitions 0..29.
+
 Stems: ``decompose_table`` with affixes learned on the real P text of the combination; every sample is
 decomposed with the same lists.  Function stems: the K most frequent stems of the sample itself
 (K = 0, 30, 100; for the permutation nulls identical to the real list).  Similarities: cosine of
@@ -51,6 +61,7 @@ from voytools import filter_tokens, load_runs, load_tables, run_seeds, seed_rang
 from voytools.experiment import write_meta  # noqa: E402
 from voytools.morphology import decompose_table  # noqa: E402
 from voytools.nulls import autocopy_like, shuffle_within_lines  # noqa: E402
+from voytools.selfcitation import selfcitation_like  # noqa: E402
 from voytools.stats import (  # noqa: E402
     DISTANCE_BIN_EDGES,
     distance_bins,
@@ -59,6 +70,7 @@ from voytools.stats import (  # noqa: E402
     page_similarity,
     page_term_counts,
 )
+from voytools.templates import ParadigmTemplate  # noqa: E402
 from voytools.wordgrammar import learn_word_grammar  # noqa: E402
 
 DATA = ROOT / "data"
@@ -75,6 +87,12 @@ METRICS = ("cos", "jac")
 FAR, NEAR = 16, 3  # contrast: same section dist >= FAR minus other section dist <= NEAR
 SOURCES = {"real": range(1), "real_boot": range(200), "perm_global": range(100),
            "perm_section": range(100), "perm_hand": range(100), "autocopy_86": range(50)}
+# experiment 008: canonical copying null (004) and the 005 template; outside SOURCES so that 'all' is unchanged
+EXTRA_SOURCES = {"selfcitation_21": range(30), "template_005": range(30)}
+TS_BEST = ROOT / "results" / "004_selfcitation_port" / "best_configs.csv"
+TS_ROW, TS_SEED0 = "ts2020_calB", 2100
+TPL_ABLATION = ROOT / "results" / "005_structured_template_null" / "ablation"
+TPL_SEED0 = 100_000
 GEN_PARAMS = ("edit_model", "new_token_source", "p_new", "window", "p_copy_exact", "p_two_edits", "recency")
 LABEL_TYPES = ("Lz", "Lf", "Lc", "Ls", "Ln")
 LABEL_PERMS = 200
@@ -116,6 +134,21 @@ def autocopy_params() -> dict:
     p["window"] = int(p["window"])
     p["edit_type_probs"] = (0.6, 0.2, 0.2)
     return p
+
+
+def selfcitation_params() -> dict:
+    """``selfcitation_like`` keyword arguments of config 21 (row ``ts2020_calB`` of 004's best_configs.csv)."""
+    r = pd.read_csv(TS_BEST).set_index("source").loc[TS_ROW]
+    return {"p_copy": float(r["p_copy"]), "replace_weights": tuple(float(x) for x in str(r["replace_weights"]).split("/")),
+            "p_same_position": float(r["p_same_position"])}
+
+
+def template_config(key: str) -> dict:
+    """Full 005 template model of the file ``key`` ('ZL'/'GC'): configuration of the split ablation ``best``."""
+    c = json.loads((TPL_ABLATION / f"{key}_split" / "best" / "part0" / "meta.json").read_text())["params"]["config"]
+    return {"n_stems": int(c["inventory_n_stems"]), "zipf_s": float(c["zipf_s"]), "paradigm": c["paradigm"],
+            "prefix_dependence": c["prefix_dependence"], "topic_concentration": float(c["topic_concentration"]),
+            "page_locality": float(c["page_locality"]), "suffix_by": c["suffix_by"]}
 
 
 def classify(tokens, key: str) -> np.ndarray:
@@ -172,11 +205,17 @@ class Context:
         self.hand = self.meta["hand"].astype(str).to_numpy()
         self.iu, self.ju = np.triu_indices(n, 1)
         self.grammar = None
+        self._tpl = None
         if with_grammar:
             self.grammar = learn_word_grammar(self.real["token"].tolist(), self.real.attrs.get("glyph_preset"))
 
     def columns(self) -> dict:
         return {"combo": self.combo, "file": self.file, "space_policy": self.policy}
+
+    def template(self) -> ParadigmTemplate:
+        if self._tpl is None:
+            self._tpl = ParadigmTemplate.learn(self.real_d, **template_config(self.key))
+        return self._tpl
 
     def decompose(self, df: pd.DataFrame) -> pd.DataFrame:
         return decompose_table(df, prefixes=self.prefixes, suffixes=self.suffixes)
@@ -299,6 +338,16 @@ def make_runner(ctx: Context, source: str, real_sims: dict, ac_params: dict | No
                                    seed=10_000 + seed, **ac_params)
             sims = ctx.similarity(ctx.decompose(sample))
             return {**base, **all_metrics(ctx, sims, iu, ju, iu, ju)}
+        if source == "selfcitation_21":
+            if ctx.key != "ZL":
+                raise ValueError("selfcitation_like generates basic Eva; no null for a non-Eva file")
+            sample = selfcitation_like(ctx.real, seed=TS_SEED0 + seed, **selfcitation_params())
+            sims = ctx.similarity(ctx.decompose(sample))
+            return {**base, **all_metrics(ctx, sims, iu, ju, iu, ju)}
+        if source == "template_005":
+            sample = ctx.template().sample(ctx.real, seed=TPL_SEED0 + seed, pool_seed=seed)
+            sims = ctx.similarity(ctx.decompose(sample))
+            return {**base, **all_metrics(ctx, sims, iu, ju, iu, ju)}
         raise ValueError(source)
 
     return one
@@ -323,13 +372,20 @@ def cmd_pages(args) -> None:
         parts / "function_stems.csv", index=False)
     ctx.meta.reset_index().to_csv(parts / "pages.csv", index=False)
     for source in sources:
-        seeds = parse_seeds(args.seeds) if args.seeds else list(SOURCES[source])
+        seeds = parse_seeds(args.seeds) if args.seeds else list({**SOURCES, **EXTRA_SOURCES}[source])
         print(f"{args.combo} {source}: {len(seeds)} seeds", flush=True)
         params = {"combo": args.combo, "source": source, "min_tokens": MIN_TOKENS, "Ks": KS,
                   "prefixes": ctx.prefixes, "suffixes": ctx.suffixes, "n_pages": ctx.n}
         if source == "autocopy_86":
             params["autocopy"] = {k: (list(v) if isinstance(v, tuple) else v) for k, v in ac.items()}
             params["seed_offset"] = 10_000
+        if source == "selfcitation_21":
+            params["selfcitation_004"] = {"row": TS_ROW, **{k: (list(v) if isinstance(v, tuple) else v)
+                                                            for k, v in selfcitation_params().items()}}
+            params["seed_offset"] = TS_SEED0
+        if source == "template_005":
+            params["template_005"] = template_config(ctx.key)
+            params["seed_offset"], params["pool_seed"] = TPL_SEED0, "repetition"
         run_seeds(f"006_{args.combo}_{source}", seeds, make_runner(ctx, source, real_sims, ac),
                   parts / source, params=params, progress=progress)
 
@@ -809,6 +865,7 @@ def main(argv=None) -> None:
     p.add_argument("--combo", required=True, choices=COMBOS)
     p.add_argument("--sources", default="all")
     p.add_argument("--seeds", default=None)
+    p.add_argument("--out-root", default=None, help="write under this folder instead of results/006_...")
     for name in ("labels", "okot"):
         q = sub.add_parser(name)
         q.add_argument("--combo", default="all", choices=COMBOS + ["all"])
@@ -818,6 +875,9 @@ def main(argv=None) -> None:
     sub.add_parser("initials")
     sub.add_parser("summarize")
     args = ap.parse_args(argv)
+    global OUT
+    if getattr(args, "out_root", None):
+        OUT = Path(args.out_root).resolve()
     {"pages": cmd_pages, "pairs": cmd_pairs, "labels": cmd_labels, "okot": cmd_okot,
      "initials": cmd_initials, "summarize": cmd_summarize,
      "sections": cmd_sections}[args.cmd](args)

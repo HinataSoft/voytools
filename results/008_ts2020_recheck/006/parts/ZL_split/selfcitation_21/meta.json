@@ -1,0 +1,60 @@
+{
+  "name": "006_ZL_split_selfcitation_21",
+  "params": {
+    "combo": "ZL_split",
+    "source": "selfcitation_21",
+    "min_tokens": 40,
+    "Ks": [
+      0,
+      30,
+      100
+    ],
+    "prefixes": [
+      "che",
+      "cho",
+      "ol",
+      "qo",
+      "ch",
+      "d",
+      "l",
+      "o",
+      "s",
+      "sh",
+      "t",
+      "y"
+    ],
+    "suffixes": [
+      "aiin",
+      "ain",
+      "al",
+      "am",
+      "ar",
+      "chy",
+      "dy",
+      "ol",
+      "or",
+      "d",
+      "l",
+      "r",
+      "s",
+      "y"
+    ],
+    "n_pages": 201,
+    "selfcitation_004": {
+      "row": "ts2020_calB",
+      "p_copy": 0.1,
+      "replace_weights": [
+        20.0,
+        50.0,
+        30.0
+      ],
+      "p_same_position": 14.0
+    },
+    "seed_offset": 2100
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 21:32:44",
+  "updated": "2026-10-27 21:34:33",
+  "n_seeds_done": 30
+}

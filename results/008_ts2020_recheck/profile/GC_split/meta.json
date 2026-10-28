@@ -1,0 +1,20 @@
+{
+  "name": "008_profile",
+  "params": {
+    "tag": "GC_split",
+    "template_005": {
+      "n_stems": 4000,
+      "zipf_s": 1.3,
+      "paradigm": "fixed",
+      "prefix_dependence": "none",
+      "topic_concentration": 5.0,
+      "page_locality": 0.3,
+      "suffix_by": null
+    }
+  },
+  "n_seeds_requested": 31,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-27 21:45:34",
+  "updated": "2026-10-27 21:49:04",
+  "n_seeds_done": 31
+}
