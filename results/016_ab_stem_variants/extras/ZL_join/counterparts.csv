@@ -1,0 +1,2962 @@
+set,rep,direction,stem,units,tokens,counterpart,distance,counterpart_tokens,ops_A_to_B
+ZL_join,a,A_only,cthod,cth o d,10,od,1.0,49.0,del:cth@begin
+ZL_join,a,A_only,cthol,cth o l,10,ol,1.0,42.0,del:cth@begin
+ZL_join,a,A_only,cto,c t o,9,to,1.0,26.0,del:c@begin
+ZL_join,a,A_only,chol,ch o l,8,ol,1.0,42.0,del:ch@begin
+ZL_join,a,A_only,osh,o sh,8,o,1.0,621.0,del:sh@end
+ZL_join,a,A_only,keom,k e o m,7,keo,1.0,74.0,del:m@end
+ZL_join,a,A_only,cthom,cth o m,6,om,1.0,6.0,del:cth@begin
+ZL_join,a,A_only,kom,k o m,6,ko,1.0,20.0,del:m@end
+ZL_join,a,A_only,kok,k o k,5,ok,1.0,46.0,del:k@begin
+ZL_join,a,A_only,tsho,t sh o,5,teo,1.0,44.0,sub:sh>e@mid
+ZL_join,a,A_only,chocth,ch o cth,4,cho,1.0,15.0,del:cth@end
+ZL_join,a,A_only,chot,ch o t,4,ot,1.0,18.0,del:ch@begin
+ZL_join,a,A_only,chy,ch y,4,y,1.0,443.0,del:ch@begin
+ZL_join,a,A_only,cpheod,cph e o d,4,eod,1.0,10.0,del:cph@begin
+ZL_join,a,A_only,cthor,cth o r,4,or,1.0,30.0,del:cth@begin
+ZL_join,a,A_only,kchok,k ch o k,4,kcho,1.0,10.0,del:k@end
+ZL_join,a,A_only,kchol,k ch o l,4,kol,1.0,13.0,del:ch@mid
+ZL_join,a,A_only,kchor,k ch o r,4,kcho,1.0,10.0,del:r@end
+ZL_join,a,A_only,khe,k h e,4,ke,1.0,764.0,del:h@mid
+ZL_join,a,A_only,kold,k o l d,4,kol,1.0,13.0,del:d@end
+ZL_join,a,A_only,n,n,4,k,1.0,2283.0,sub:n>k@begin
+ZL_join,a,A_only,ockhe,o ckh e,4,ckhe,1.0,98.0,del:o@begin
+ZL_join,a,A_only,olo,o l o,4,ol,1.0,42.0,del:o@end
+ZL_join,a,A_only,tchor,t ch o r,4,tcho,1.0,8.0,del:r@end
+ZL_join,a,A_only,aiio,a i i o,3,aii,1.0,29.0,del:o@end
+ZL_join,a,A_only,airin,a i r in,3,air,1.0,26.0,del:in@end
+ZL_join,a,A_only,c',c ',3,ct,1.0,3.0,sub:'>t@end
+ZL_join,a,A_only,c'o,c ' o,3,o,2.0,621.0,del:c'@begin
+ZL_join,a,A_only,co,c o,3,o,1.0,621.0,del:c@begin
+ZL_join,a,A_only,chyk,ch y k,3,yk,1.0,18.0,del:ch@begin
+ZL_join,a,A_only,fcho,f ch o,3,fche,1.0,40.0,sub:o>e@end
+ZL_join,a,A_only,fchol,f ch o l,3,pchol,1.0,4.0,sub:f>p@begin
+ZL_join,a,A_only,kchod,k ch o d,3,keeod,1.0,12.0,sub:ch>ee@mid
+ZL_join,a,A_only,kchom,k ch o m,3,kcho,1.0,10.0,del:m@end
+ZL_join,a,A_only,kchy,k ch y,3,kche,1.0,176.0,sub:y>e@end
+ZL_join,a,A_only,keolche,k e o l ch e,3,kolche,1.0,9.0,del:e@mid
+ZL_join,a,A_only,ocph,o cph,3,o,1.0,621.0,del:cph@end
+ZL_join,a,A_only,okch,o k ch,3,kch,1.0,128.0,del:o@begin
+ZL_join,a,A_only,oro,o r o,3,or,1.0,30.0,del:o@end
+ZL_join,a,A_only,pchocth,p ch o cth,3,pcho,1.0,6.0,del:cth@end
+ZL_join,a,A_only,py,p y,3,y,1.0,443.0,del:p@begin
+ZL_join,a,A_only,q'o,q ' o,3,qo,1.0,17.0,del:'@mid
+ZL_join,a,A_only,so,s o,3,o,1.0,621.0,del:s@begin
+ZL_join,a,A_only,shol,sh o l,3,ol,1.0,42.0,del:sh@begin
+ZL_join,a,A_only,toee,t o ee,3,tee,1.0,371.0,del:o@mid
+ZL_join,a,A_only,u,u,3,k,1.0,2283.0,sub:u>k@begin
+ZL_join,a,A_only,'k,' k,2,k,1.0,2283.0,del:'@begin
+ZL_join,a,A_only,aiid,a i i d,2,aii,1.0,29.0,del:d@end
+ZL_join,a,A_only,aiino,a iin o,2,aiin,1.0,740.0,del:o@end
+ZL_join,a,A_only,aldal,a l d a l,2,alal,1.0,2.0,del:d@mid
+ZL_join,a,A_only,aldar,a l d a r,2,alar,1.0,2.0,del:d@mid
+ZL_join,a,A_only,cfhol,cfh o l,2,ol,1.0,42.0,del:cfh@begin
+ZL_join,a,A_only,cheockh,ch e o ckh,2,cheo,1.0,41.0,del:ckh@end
+ZL_join,a,A_only,cheorche,ch e o r ch e,2,orche,2.0,2.0,del:che@begin
+ZL_join,a,A_only,chockh,ch o ckh,2,cho,1.0,15.0,del:ckh@end
+ZL_join,a,A_only,choee,ch o ee,2,chee,1.0,91.0,del:o@mid
+ZL_join,a,A_only,chog,ch o g,2,cho,1.0,15.0,del:g@end
+ZL_join,a,A_only,chom,ch o m,2,cho,1.0,15.0,del:m@end
+ZL_join,a,A_only,chotch,ch o t ch,2,tch,2.0,69.0,del:cho@begin
+ZL_join,a,A_only,ckhod,ckh o d,2,od,1.0,49.0,del:ckh@begin
+ZL_join,a,A_only,ckhol,ckh o l,2,ol,1.0,42.0,del:ckh@begin
+ZL_join,a,A_only,ckhyd,ckh y d,2,pyd,1.0,2.0,sub:ckh>p@begin
+ZL_join,a,A_only,cphee,cph ee,2,kee,1.0,1156.0,sub:cph>k@begin
+ZL_join,a,A_only,cphod,cph o d,2,od,1.0,49.0,del:cph@begin
+ZL_join,a,A_only,cphol,cph o l,2,ol,1.0,42.0,del:cph@begin
+ZL_join,a,A_only,cthoiin,cth o iin,2,oiin,1.0,16.0,del:cth@begin
+ZL_join,a,A_only,cthosh,cth o sh,2,ctho,1.0,3.0,del:sh@end
+ZL_join,a,A_only,cthy,cth y,2,y,1.0,443.0,del:cth@begin
+ZL_join,a,A_only,dckh,d ckh,2,d,1.0,1106.0,del:ckh@end
+ZL_join,a,A_only,eal,e a l,2,al,1.0,103.0,del:e@begin
+ZL_join,a,A_only,eoikh,e o i k h,2,oikh,1.0,2.0,del:e@begin
+ZL_join,a,A_only,eold,e o l d,2,eod,1.0,10.0,del:l@mid
+ZL_join,a,A_only,eom,e o m,2,eo,1.0,94.0,del:m@end
+ZL_join,a,A_only,eeeb,ee e b,2,eee,1.0,39.0,del:b@end
+ZL_join,a,A_only,eeso,ee s o,2,eeo,1.0,20.0,del:s@mid
+ZL_join,a,A_only,fyd,f y d,2,fchd,1.0,4.0,sub:y>ch@mid
+ZL_join,a,A_only,kcha,k ch a,2,kche,1.0,176.0,sub:a>e@end
+ZL_join,a,A_only,kchan,k ch a n,2,kan,1.0,15.0,del:ch@mid
+ZL_join,a,A_only,kchoch,k ch o ch,2,kcho,1.0,10.0,del:ch@end
+ZL_join,a,A_only,kchon,k ch o n,2,kcho,1.0,10.0,del:n@end
+ZL_join,a,A_only,key,k e y,2,ke,1.0,764.0,del:y@end
+ZL_join,a,A_only,keea,k ee a,2,kee,1.0,1156.0,del:a@end
+ZL_join,a,A_only,khh,k h h,2,ckhhh,1.0,2.0,sub:k>ckh@begin
+ZL_join,a,A_only,koe,k o e,2,ke,1.0,764.0,del:o@mid
+ZL_join,a,A_only,koiiin,k o i iin,2,kaiiin,1.0,10.0,sub:o>a@mid
+ZL_join,a,A_only,kooiin,k o o iin,2,koiin,1.0,3.0,del:o@mid
+ZL_join,a,A_only,ksheod,k sh e o d,2,keod,1.0,8.0,del:sh@mid
+ZL_join,a,A_only,kyt,k y t,2,yt,1.0,9.0,del:k@begin
+ZL_join,a,A_only,ldan,l d a n,2,kan,2.0,15.0,del:l@begin;sub:d>k@mid
+ZL_join,a,A_only,ocho,o ch o,2,cho,1.0,15.0,del:o@begin
+ZL_join,a,A_only,ockho,o ckh o,2,ockh,1.0,9.0,del:o@end
+ZL_join,a,A_only,oek,o e k,2,ek,1.0,76.0,del:o@begin
+ZL_join,a,A_only,okeo,o k e o,2,keo,1.0,74.0,del:o@begin
+ZL_join,a,A_only,oloiin,o l o iin,2,ol,2.0,42.0,del:oiin@end
+ZL_join,a,A_only,ols,o l s,2,ol,1.0,42.0,del:s@end
+ZL_join,a,A_only,oroiin,o r o iin,2,roiin,1.0,3.0,del:o@begin
+ZL_join,a,A_only,oteo,o t e o,2,teo,1.0,44.0,del:o@begin
+ZL_join,a,A_only,podaii,p o d a i i,2,podai,1.0,2.0,del:i@mid
+ZL_join,a,A_only,poee,p o ee,2,pchee,1.0,19.0,sub:o>ch@mid
+ZL_join,a,A_only,saiiin,s a i iin,2,aiiin,1.0,46.0,del:s@begin
+ZL_join,a,A_only,shal,sh a l,2,al,1.0,103.0,del:sh@begin
+ZL_join,a,A_only,tchal,t ch a l,2,tal,1.0,30.0,del:ch@mid
+ZL_join,a,A_only,tchoiin,t ch o iin,2,tcho,1.0,8.0,del:iin@end
+ZL_join,a,A_only,tchol,t ch o l,2,tcho,1.0,8.0,del:l@end
+ZL_join,a,A_only,tchom,t ch o m,2,tcho,1.0,8.0,del:m@end
+ZL_join,a,A_only,tchot,t ch o t,2,tcho,1.0,8.0,del:t@end
+ZL_join,a,A_only,tchyt,t ch y t,2,tche,2.0,113.0,del:y@mid;sub:t>e@end
+ZL_join,a,A_only,teeeb,t ee e b,2,teee,1.0,20.0,del:b@end
+ZL_join,a,A_only,tolo,t o l o,2,tol,1.0,7.0,del:o@end
+ZL_join,a,A_only,tory,t o r y,2,or,2.0,30.0,del:t@begin;del:y@end
+ZL_join,a,A_only,ykch,y k ch,2,kch,1.0,128.0,del:y@begin
+ZL_join,a,A_only,yp,y p,2,y,1.0,443.0,del:p@end
+ZL_join,a,A_only,ypch,y p ch,2,pch,1.0,78.0,del:y@begin
+ZL_join,a,A_only,ysh,y sh,2,y,1.0,443.0,del:sh@end
+ZL_join,a,B_only,ked,k e d,58,ke,1.0,208.0,ins:d@end
+ZL_join,a,B_only,keed,k ee d,37,kee,1.0,177.0,ins:d@end
+ZL_join,a,B_only,ted,t e d,36,te,1.0,51.0,ins:d@end
+ZL_join,a,B_only,ched,ch e d,33,che,1.0,79.0,ins:d@end
+ZL_join,a,B_only,pched,p ch e d,30,pche,1.0,25.0,ins:d@end
+ZL_join,a,B_only,rshe,r sh e,20,she,1.0,17.0,ins:r@begin
+ZL_join,a,B_only,eed,ee d,19,d,1.0,284.0,ins:ee@begin
+ZL_join,a,B_only,keche,k e ch e,19,kche,1.0,49.0,ins:e@mid
+ZL_join,a,B_only,pchd,p ch d,17,pch,1.0,35.0,ins:d@end
+ZL_join,a,B_only,pshe,p sh e,14,pche,1.0,25.0,sub:ch>sh@mid
+ZL_join,a,B_only,alkee,a l k ee,13,olkee,1.0,3.0,sub:o>a@begin
+ZL_join,a,B_only,teed,t ee d,13,tee,1.0,38.0,ins:d@end
+ZL_join,a,B_only,kech,k e ch,11,ke,1.0,208.0,ins:ch@end
+ZL_join,a,B_only,olke,o l k e,11,olk,1.0,4.0,ins:e@end
+ZL_join,a,B_only,alshe,a l sh e,10,alche,1.0,2.0,sub:ch>sh@mid
+ZL_join,a,B_only,polche,p o l ch e,10,olche,1.0,4.0,ins:p@begin
+ZL_join,a,B_only,rai,r a i,9,ai,1.0,53.0,ins:r@begin
+ZL_join,a,B_only,lchee,l ch ee,8,chee,1.0,26.0,ins:l@begin
+ZL_join,a,B_only,pai,p a i,8,ai,1.0,53.0,ins:p@begin
+ZL_join,a,B_only,par,p a r,8,ar,1.0,34.0,ins:p@begin
+ZL_join,a,B_only,keeeo,k ee e o,7,keo,1.0,62.0,ins:ee@mid
+ZL_join,a,B_only,lshee,l sh ee,7,shee,1.0,6.0,ins:l@begin
+ZL_join,a,B_only,pal,p a l,7,al,1.0,63.0,ins:p@begin
+ZL_join,a,B_only,rol,r o l,7,ol,1.0,44.0,ins:r@begin
+ZL_join,a,B_only,shd,sh d,7,d,1.0,284.0,ins:sh@begin
+ZL_join,a,B_only,shed,sh e d,7,she,1.0,17.0,ins:d@end
+ZL_join,a,B_only,kched,k ch e d,6,kche,1.0,49.0,ins:d@end
+ZL_join,a,B_only,pair,p a i r,6,air,1.0,10.0,ins:p@begin
+ZL_join,a,B_only,pchdai,p ch d a i,6,dai,2.0,5.0,ins:pch@begin
+ZL_join,a,B_only,polsh,p o l sh,6,pol,1.0,3.0,ins:sh@end
+ZL_join,a,B_only,qee,q ee,6,kee,1.0,177.0,sub:k>q@begin
+ZL_join,a,B_only,qok,q o k,6,ok,1.0,36.0,ins:q@begin
+ZL_join,a,B_only,rshee,r sh ee,6,shee,1.0,6.0,ins:r@begin
+ZL_join,a,B_only,ta,t a,6,t,1.0,477.0,ins:a@end
+ZL_join,a,B_only,tech,t e ch,6,tch,1.0,108.0,ins:e@mid
+ZL_join,a,B_only,aiir,a i i r,5,aii,1.0,15.0,ins:r@end
+ZL_join,a,B_only,arche,a r ch e,5,orche,1.0,4.0,sub:o>a@begin
+ZL_join,a,B_only,arod,a r o d,5,aro,1.0,3.0,ins:d@end
+ZL_join,a,B_only,arshe,a r sh e,5,ar,2.0,34.0,ins:she@end
+ZL_join,a,B_only,dar,d a r,5,ar,1.0,34.0,ins:d@begin
+ZL_join,a,B_only,dche,d ch e,5,che,1.0,79.0,ins:d@begin
+ZL_join,a,B_only,kald,k a l d,5,kal,1.0,39.0,ins:d@end
+ZL_join,a,B_only,kalk,k a l k,5,kal,1.0,39.0,ins:k@end
+ZL_join,a,B_only,polch,p o l ch,5,pol,1.0,3.0,ins:ch@end
+ZL_join,a,B_only,q,q,5,o,1.0,741.0,sub:o>q@begin
+ZL_join,a,B_only,raiiin,r a i iin,5,aiiin,1.0,14.0,ins:r@begin
+ZL_join,a,B_only,ror,r o r,5,or,1.0,28.0,ins:r@begin
+ZL_join,a,B_only,sheckh,sh e ckh,5,she,1.0,17.0,ins:ckh@end
+ZL_join,a,B_only,sheod,sh e o d,5,sheo,1.0,11.0,ins:d@end
+ZL_join,a,B_only,talk,t a l k,5,tal,1.0,13.0,ins:k@end
+ZL_join,a,B_only,tched,t ch e d,5,tche,1.0,38.0,ins:d@end
+ZL_join,a,B_only,x,x,5,o,1.0,741.0,sub:o>x@begin
+ZL_join,a,B_only,ad,a d,4,aiin,1.0,668.0,sub:iin>d@end
+ZL_join,a,B_only,alod,a l o d,4,ald,1.0,7.0,ins:o@mid
+ZL_join,a,B_only,arai,a r a i,4,arar,1.0,2.0,sub:r>i@end
+ZL_join,a,B_only,as,a s,4,aiin,1.0,668.0,sub:iin>s@end
+ZL_join,a,B_only,checkh,ch e ckh,4,che,1.0,79.0,ins:ckh@end
+ZL_join,a,B_only,checkhe,ch e ckh e,4,che,2.0,79.0,ins:eckh@mid
+ZL_join,a,B_only,ef,e f,4,e,1.0,222.0,ins:f@end
+ZL_join,a,B_only,eekee,ee k ee,4,kee,1.0,177.0,ins:ee@begin
+ZL_join,a,B_only,eeol,ee o l,4,ol,1.0,44.0,ins:ee@begin
+ZL_join,a,B_only,fchd,f ch d,4,fch,1.0,10.0,ins:d@end
+ZL_join,a,B_only,fchee,f ch ee,4,chee,1.0,26.0,ins:f@begin
+ZL_join,a,B_only,kaim,k a i m,4,kai,1.0,11.0,ins:m@end
+ZL_join,a,B_only,kaiin,k a iin,4,aiin,1.0,668.0,ins:k@begin
+ZL_join,a,B_only,kedy,k e d y,4,key,1.0,2.0,ins:d@mid
+ZL_join,a,B_only,keeche,k ee ch e,4,kche,1.0,49.0,ins:ee@mid
+ZL_join,a,B_only,kolk,k o l k,4,kol,1.0,28.0,ins:k@end
+ZL_join,a,B_only,lkeee,l k ee e,4,keee,1.0,18.0,ins:l@begin
+ZL_join,a,B_only,olt,o l t,4,ol,1.0,44.0,ins:t@end
+ZL_join,a,B_only,palk,p a l k,4,al,2.0,63.0,ins:p@begin;ins:k@end
+ZL_join,a,B_only,pches,p ch e s,4,pche,1.0,25.0,ins:s@end
+ZL_join,a,B_only,pshd,p sh d,4,pyd,1.0,6.0,sub:y>sh@mid
+ZL_join,a,B_only,psheo,p sh e o,4,sheo,1.0,11.0,ins:p@begin
+ZL_join,a,B_only,qet,q e t,4,et,1.0,10.0,ins:q@begin
+ZL_join,a,B_only,qeee,q ee e,4,eee,1.0,19.0,ins:q@begin
+ZL_join,a,B_only,rolkee,r o l k ee,4,olkee,1.0,3.0,ins:r@begin
+ZL_join,a,B_only,sheed,sh ee d,4,shee,1.0,6.0,ins:d@end
+ZL_join,a,B_only,tair,t a i r,4,air,1.0,10.0,ins:t@begin
+ZL_join,a,B_only,talsh,t a l sh,4,tal,1.0,13.0,ins:sh@end
+ZL_join,a,B_only,tsheo,t sh e o,4,teo,1.0,18.0,ins:sh@mid
+ZL_join,a,B_only,cheolk,ch e o l k,3,cheok,1.0,3.0,ins:l@mid
+ZL_join,a,B_only,da,d a,3,a,1.0,337.0,ins:d@begin
+ZL_join,a,B_only,deee,d ee e,3,eee,1.0,19.0,ins:d@begin
+ZL_join,a,B_only,eche,e ch e,3,che,1.0,79.0,ins:e@begin
+ZL_join,a,B_only,ecph,e cph,3,e,1.0,222.0,ins:cph@end
+ZL_join,a,B_only,edy,e d y,3,ydy,1.0,2.0,sub:y>e@begin
+ZL_join,a,B_only,eolk,e o l k,3,olk,1.0,4.0,ins:e@begin
+ZL_join,a,B_only,eolkee,e o l k ee,3,olkee,1.0,3.0,ins:e@begin
+ZL_join,a,B_only,es,e s,3,e,1.0,222.0,ins:s@end
+ZL_join,a,B_only,eeek,ee e k,3,eee,1.0,19.0,ins:k@end
+ZL_join,a,B_only,ikh,i k h,3,oikh,1.0,4.0,del:o@begin
+ZL_join,a,B_only,kalsh,k a l sh,3,kal,1.0,39.0,ins:sh@end
+ZL_join,a,B_only,kalshe,k a l sh e,3,kolshe,1.0,2.0,sub:o>a@mid
+ZL_join,a,B_only,kede,k e d e,3,ke,2.0,208.0,ins:ed@mid
+ZL_join,a,B_only,keeolche,k ee o l ch e,3,keolche,1.0,3.0,sub:e>ee@mid
+ZL_join,a,B_only,keeshe,k ee sh e,3,keee,1.0,18.0,ins:sh@mid
+ZL_join,a,B_only,kiin,k iin,3,aiin,1.0,668.0,sub:a>k@begin
+ZL_join,a,B_only,kl,k l,3,k,1.0,633.0,ins:l@end
+ZL_join,a,B_only,klche,k l ch e,3,kche,1.0,49.0,ins:l@mid
+ZL_join,a,B_only,ody,o d y,3,od,1.0,62.0,ins:y@end
+ZL_join,a,B_only,paii,p a i i,3,aii,1.0,15.0,ins:p@begin
+ZL_join,a,B_only,pcholk,p ch o l k,3,pchol,1.0,3.0,ins:k@end
+ZL_join,a,B_only,pchs,p ch s,3,pch,1.0,35.0,ins:s@end
+ZL_join,a,B_only,poche,p o ch e,3,pche,1.0,25.0,ins:o@mid
+ZL_join,a,B_only,poiin,p o iin,3,oiin,1.0,29.0,ins:p@begin
+ZL_join,a,B_only,polar,p o l a r,3,por,2.0,3.0,ins:la@mid
+ZL_join,a,B_only,polkee,p o l k ee,3,olkee,1.0,3.0,ins:p@begin
+ZL_join,a,B_only,pshed,p sh e d,3,pche,2.0,25.0,sub:ch>sh@mid;ins:d@end
+ZL_join,a,B_only,qckh,q ckh,3,ckh,1.0,131.0,ins:q@begin
+ZL_join,a,B_only,qckhe,q ckh e,3,ckhe,1.0,63.0,ins:q@begin
+ZL_join,a,B_only,qcthh,q cth h,3,cthh,1.0,6.0,ins:q@begin
+ZL_join,a,B_only,qekch,q e k ch,3,kch,2.0,123.0,ins:qe@begin
+ZL_join,a,B_only,qekee,q e k ee,3,ekee,1.0,3.0,ins:q@begin
+ZL_join,a,B_only,rched,r ch e d,3,rche,1.0,2.0,ins:d@end
+ZL_join,a,B_only,rcheo,r ch e o,3,cheo,1.0,15.0,ins:r@begin
+ZL_join,a,B_only,rolk,r o l k,3,olk,1.0,4.0,ins:r@begin
+ZL_join,a,B_only,yte,y t e,3,te,1.0,51.0,ins:y@begin
+ZL_join,a,B_only,aiii,a i i i,2,aii,1.0,15.0,ins:i@mid
+ZL_join,a,B_only,aiiral,a i i r a l,2,airal,1.0,2.0,ins:i@mid
+ZL_join,a,B_only,ail,a i l,2,al,1.0,63.0,ins:i@mid
+ZL_join,a,B_only,airol,a i r o l,2,arol,1.0,2.0,ins:i@mid
+ZL_join,a,B_only,airom,a i r o m,2,airo,1.0,2.0,ins:m@end
+ZL_join,a,B_only,aiins,a iin s,2,aiin,1.0,668.0,ins:s@end
+ZL_join,a,B_only,aiinsh,a iin sh,2,aiin,1.0,668.0,ins:sh@end
+ZL_join,a,B_only,ainche,a in ch e,2,alche,1.0,2.0,sub:l>in@mid
+ZL_join,a,B_only,aind,a in d,2,ain,1.0,126.0,ins:d@end
+ZL_join,a,B_only,alaiiin,a l a i iin,2,aiiin,2.0,14.0,ins:al@begin
+ZL_join,a,B_only,alal,a l a l,2,alol,1.0,2.0,sub:o>a@mid
+ZL_join,a,B_only,alar,a l a r,2,arar,1.0,2.0,sub:r>l@mid
+ZL_join,a,B_only,alok,a l o k,2,alol,1.0,2.0,sub:l>k@end
+ZL_join,a,B_only,alolshe,a l o l sh e,2,kolshe,2.0,2.0,ins:a@begin;sub:k>l@begin
+ZL_join,a,B_only,alr,a l r,2,al,1.0,63.0,ins:r@end
+ZL_join,a,B_only,alshee,a l sh ee,2,al,2.0,63.0,ins:shee@end
+ZL_join,a,B_only,alte,a l t e,2,alche,1.0,2.0,sub:ch>t@mid
+ZL_join,a,B_only,araii,a r a i i,2,aii,2.0,15.0,ins:ar@begin
+ZL_join,a,B_only,arair,a r a i r,2,arar,1.0,2.0,ins:i@mid
+ZL_join,a,B_only,arak,a r a k,2,arar,1.0,2.0,sub:r>k@end
+ZL_join,a,B_only,aran,a r a n,2,arar,1.0,2.0,sub:r>n@end
+ZL_join,a,B_only,arolkee,a r o l k ee,2,olkee,2.0,3.0,ins:ar@begin
+ZL_join,a,B_only,ch'ee,ch ' ee,2,chee,1.0,26.0,ins:'@mid
+ZL_join,a,B_only,chedai,ch e d a i,2,dai,2.0,5.0,ins:che@begin
+ZL_join,a,B_only,chekee,ch e k ee,2,ekee,1.0,3.0,ins:ch@begin
+ZL_join,a,B_only,cheed,ch ee d,2,chee,1.0,26.0,ins:d@end
+ZL_join,a,B_only,cheeod,ch ee o d,2,chod,1.0,12.0,ins:ee@mid
+ZL_join,a,B_only,cholk,ch o l k,2,chol,1.0,8.0,ins:k@end
+ZL_join,a,B_only,ckhd,ckh d,2,d,1.0,284.0,ins:ckh@begin
+ZL_join,a,B_only,dalk,d a l k,2,dal,1.0,7.0,ins:k@end
+ZL_join,a,B_only,dalo,d a l o,2,dal,1.0,7.0,ins:o@end
+ZL_join,a,B_only,darshe,d a r sh e,2,,,,
+ZL_join,a,B_only,dk,d k,2,k,1.0,633.0,ins:d@begin
+ZL_join,a,B_only,dl,d l,2,l,1.0,368.0,ins:d@begin
+ZL_join,a,B_only,dyqok,d y q o k,2,,,,
+ZL_join,a,B_only,dys,d y s,2,y,2.0,374.0,ins:d@begin;ins:s@end
+ZL_join,a,B_only,dyt,d y t,2,yt,1.0,17.0,ins:d@begin
+ZL_join,a,B_only,ecthe,e cth e,2,cthe,1.0,61.0,ins:e@begin
+ZL_join,a,B_only,edai,e d a i,2,dai,1.0,5.0,ins:e@begin
+ZL_join,a,B_only,edal,e d a l,2,dal,1.0,7.0,ins:e@begin
+ZL_join,a,B_only,edyk,e d y k,2,yk,2.0,22.0,ins:ed@begin
+ZL_join,a,B_only,efch,e f ch,2,fch,1.0,10.0,ins:e@begin
+ZL_join,a,B_only,ekshe,e k sh e,2,kshe,1.0,10.0,ins:e@begin
+ZL_join,a,B_only,eop,e o p,2,eo,1.0,44.0,ins:p@end
+ZL_join,a,B_only,epch,e p ch,2,pch,1.0,35.0,ins:e@begin
+ZL_join,a,B_only,ete,e t e,2,te,1.0,51.0,ins:e@begin
+ZL_join,a,B_only,eeda,ee d a,2,a,2.0,337.0,ins:eed@begin
+ZL_join,a,B_only,eeeod,ee e o d,2,eod,1.0,9.0,ins:ee@begin
+ZL_join,a,B_only,ees,ee s,2,s,1.0,193.0,ins:ee@begin
+ZL_join,a,B_only,fa,f a,2,a,1.0,337.0,ins:f@begin
+ZL_join,a,B_only,fai,f a i,2,ai,1.0,53.0,ins:f@begin
+ZL_join,a,B_only,far,f a r,2,ar,1.0,34.0,ins:f@begin
+ZL_join,a,B_only,folche,f o l ch e,2,olche,1.0,4.0,ins:f@begin
+ZL_join,a,B_only,kairo,k a i r o,2,airo,1.0,2.0,ins:k@begin
+ZL_join,a,B_only,kain,k a in,2,ain,1.0,126.0,ins:k@begin
+ZL_join,a,B_only,kam,k a m,2,am,1.0,64.0,ins:k@begin
+ZL_join,a,B_only,karo,k a r o,2,kar,1.0,3.0,ins:o@end
+ZL_join,a,B_only,karshe,k a r sh e,2,kshe,2.0,10.0,ins:ar@mid
+ZL_join,a,B_only,kchdp,k ch d p,2,kch,2.0,123.0,ins:dp@end
+ZL_join,a,B_only,kcheeo,k ch ee o,2,kcho,1.0,41.0,ins:ee@mid
+ZL_join,a,B_only,keal,k e a l,2,kal,1.0,39.0,ins:e@mid
+ZL_join,a,B_only,kealshe,k e a l sh e,2,keolche,2.0,3.0,sub:o>a@mid;sub:ch>sh@mid
+ZL_join,a,B_only,kedai,k e d a i,2,kai,2.0,11.0,ins:ed@mid
+ZL_join,a,B_only,kedal,k e d a l,2,kal,2.0,39.0,ins:ed@mid
+ZL_join,a,B_only,kesho,k e sh o,2,keo,1.0,62.0,ins:sh@mid
+ZL_join,a,B_only,keede,k ee d e,2,keee,1.0,18.0,ins:d@mid
+ZL_join,a,B_only,keedyd,k ee d y d,2,keeod,2.0,5.0,ins:d@mid;sub:o>y@mid
+ZL_join,a,B_only,keedyke,k ee d y k e,2,keeyk,2.0,3.0,ins:d@mid;ins:e@end
+ZL_join,a,B_only,keedyl,k ee d y l,2,keeyk,2.0,3.0,ins:d@mid;sub:k>l@end
+ZL_join,a,B_only,keeed,k ee e d,2,keee,1.0,18.0,ins:d@end
+ZL_join,a,B_only,keeolkeeo,k ee o l k ee o,2,,,,
+ZL_join,a,B_only,keesho,k ee sh o,2,keeo,1.0,32.0,ins:sh@mid
+ZL_join,a,B_only,keeyl,k ee y l,2,keeyk,1.0,3.0,sub:k>l@end
+ZL_join,a,B_only,keeylk,k ee y l k,2,keeyk,1.0,3.0,ins:l@mid
+ZL_join,a,B_only,kii,k i i,2,aii,1.0,15.0,sub:a>k@begin
+ZL_join,a,B_only,kshd,k sh d,2,ksh,1.0,29.0,ins:d@end
+ZL_join,a,B_only,lf,l f,2,l,1.0,368.0,ins:f@end
+ZL_join,a,B_only,lkar,l k a r,2,kar,1.0,3.0,ins:l@begin
+ZL_join,a,B_only,lkshe,l k sh e,2,kshe,1.0,10.0,ins:l@begin
+ZL_join,a,B_only,ocfh,o cfh,2,o,1.0,741.0,ins:cfh@end
+ZL_join,a,B_only,odaiiin,o d a i iin,2,aiiin,2.0,14.0,ins:od@begin
+ZL_join,a,B_only,odeee,o d ee e,2,okeee,1.0,2.0,sub:k>d@mid
+ZL_join,a,B_only,okeeo,o k ee o,2,keeo,1.0,32.0,ins:o@begin
+ZL_join,a,B_only,oko,o k o,2,ko,1.0,45.0,ins:o@begin
+ZL_join,a,B_only,olkai,o l k a i,2,kai,2.0,11.0,ins:ol@begin
+ZL_join,a,B_only,orol,o r o l,2,oro,1.0,3.0,ins:l@end
+ZL_join,a,B_only,orshee,o r sh ee,2,orsh,1.0,3.0,ins:ee@end
+ZL_join,a,B_only,pad,p a d,2,pyd,1.0,6.0,sub:y>a@mid
+ZL_join,a,B_only,pch'e,p ch ' e,2,pche,1.0,25.0,ins:'@mid
+ZL_join,a,B_only,pcheodai,p ch e o d a i,2,pcheod,2.0,2.0,ins:ai@end
+ZL_join,a,B_only,pchet,p ch e t,2,pche,1.0,25.0,ins:t@end
+ZL_join,a,B_only,pcheeo,p ch ee o,2,pcho,1.0,7.0,ins:ee@mid
+ZL_join,a,B_only,pchof,p ch o f,2,pchod,1.0,8.0,sub:d>f@end
+ZL_join,a,B_only,pdalsh,p d a l sh,2,dal,2.0,7.0,ins:p@begin;ins:sh@end
+ZL_join,a,B_only,pesh,p e sh,2,psh,1.0,3.0,ins:e@mid
+ZL_join,a,B_only,podai,p o d a i,2,podaii,1.0,2.0,del:i@mid
+ZL_join,a,B_only,podk,p o d k,2,pod,1.0,3.0,ins:k@end
+ZL_join,a,B_only,pok,p o k,2,ok,1.0,36.0,ins:p@begin
+ZL_join,a,B_only,pold,p o l d,2,old,1.0,12.0,ins:p@begin
+ZL_join,a,B_only,polk,p o l k,2,olk,1.0,4.0,ins:p@begin
+ZL_join,a,B_only,porar,p o r a r,2,por,2.0,3.0,ins:ra@mid
+ZL_join,a,B_only,qa,q a,2,a,1.0,337.0,ins:q@begin
+ZL_join,a,B_only,qch,q ch,2,ch,1.0,190.0,ins:q@begin
+ZL_join,a,B_only,qcphhe,q cph h e,2,cphe,2.0,11.0,ins:q@begin;ins:h@mid
+ZL_join,a,B_only,qcth,q cth,2,cth,1.0,284.0,ins:q@begin
+ZL_join,a,B_only,qepche,q e p ch e,2,pche,2.0,25.0,ins:qe@begin
+ZL_join,a,B_only,qetch,q e t ch,2,tch,2.0,108.0,ins:qe@begin
+ZL_join,a,B_only,qoke,q o k e,2,oke,1.0,2.0,ins:q@begin
+ZL_join,a,B_only,qokee,q o k ee,2,okee,1.0,6.0,ins:q@begin
+ZL_join,a,B_only,ra,r a,2,r,1.0,341.0,ins:a@end
+ZL_join,a,B_only,raiin,r a iin,2,aiin,1.0,668.0,ins:r@begin
+ZL_join,a,B_only,ralch,r a l ch,2,alch,1.0,5.0,ins:r@begin
+ZL_join,a,B_only,rchcth,r ch cth,2,rch,1.0,6.0,ins:cth@end
+ZL_join,a,B_only,rchek,r ch e k,2,rche,1.0,2.0,ins:k@end
+ZL_join,a,B_only,rkch,r k ch,2,kch,1.0,123.0,ins:r@begin
+ZL_join,a,B_only,roii,r o i i,2,oii,1.0,5.0,ins:r@begin
+ZL_join,a,B_only,roiiin,r o i iin,2,oiiin,1.0,7.0,ins:r@begin
+ZL_join,a,B_only,sheckhe,sh e ckh e,2,ckhe,2.0,63.0,ins:she@begin
+ZL_join,a,B_only,shek,sh e k,2,she,1.0,17.0,ins:k@end
+ZL_join,a,B_only,shet,sh e t,2,she,1.0,17.0,ins:t@end
+ZL_join,a,B_only,shodai,sh o d a i,2,dai,2.0,5.0,ins:sho@begin
+ZL_join,a,B_only,taiiin,t a i iin,2,aiiin,1.0,14.0,ins:t@begin
+ZL_join,a,B_only,taim,t a i m,2,aim,1.0,6.0,ins:t@begin
+ZL_join,a,B_only,tain,t a in,2,ain,1.0,126.0,ins:t@begin
+ZL_join,a,B_only,talcheo,t a l ch e o,2,tcheo,2.0,2.0,ins:al@mid
+ZL_join,a,B_only,talchee,t a l ch ee,2,tal,2.0,13.0,ins:chee@end
+ZL_join,a,B_only,talke,t a l k e,2,tal,2.0,13.0,ins:ke@end
+ZL_join,a,B_only,tals,t a l s,2,tal,1.0,13.0,ins:s@end
+ZL_join,a,B_only,talshe,t a l sh e,2,tal,2.0,13.0,ins:she@end
+ZL_join,a,B_only,tcheod,t ch e o d,2,teod,1.0,7.0,ins:ch@mid
+ZL_join,a,B_only,tchs,t ch s,2,tch,1.0,108.0,ins:s@end
+ZL_join,a,B_only,tedai,t e d a i,2,dai,2.0,5.0,ins:te@begin
+ZL_join,a,B_only,tedshe,t e d sh e,2,tshe,2.0,6.0,ins:ed@mid
+ZL_join,a,B_only,tedy,t e d y,2,te,2.0,51.0,ins:dy@end
+ZL_join,a,B_only,tl,t l,2,t,1.0,477.0,ins:l@end
+ZL_join,a,B_only,tok,t o k,2,ok,1.0,36.0,ins:t@begin
+ZL_join,a,B_only,yl,y l,2,y,1.0,374.0,ins:l@end
+ZL_join,a,B_only,ylche,y l ch e,2,olche,1.0,4.0,sub:o>y@begin
+ZL_join,a,B_only,ypshe,y p sh e,2,pche,2.0,25.0,ins:y@begin;sub:ch>sh@mid
+ZL_join,a,B_only,yqok,y q o k,2,ok,2.0,36.0,ins:yq@begin
+ZL_join,b,A_only,osh,o sh,10,o,1.0,675.0,del:sh@end
+ZL_join,b,A_only,cto,c t o,9,to,1.0,26.0,del:c@begin
+ZL_join,b,A_only,chot,ch o t,5,cho,1.0,21.0,del:t@end
+ZL_join,b,A_only,chy,ch y,5,che,1.0,474.0,sub:y>e@end
+ZL_join,b,A_only,tsho,t sh o,5,teo,1.0,44.0,sub:sh>e@mid
+ZL_join,b,A_only,khe,k h e,4,ke,1.0,724.0,del:h@mid
+ZL_join,b,A_only,n,n,4,k,1.0,2163.0,sub:n>k@begin
+ZL_join,b,A_only,ockhe,o ckh e,4,ckhe,1.0,92.0,del:o@begin
+ZL_join,b,A_only,okch,o k ch,4,kch,1.0,108.0,del:o@begin
+ZL_join,b,A_only,shol,sh o l,4,ol,1.0,63.0,del:sh@begin
+ZL_join,b,A_only,tchor,t ch o r,4,tcho,1.0,8.0,del:r@end
+ZL_join,b,A_only,aiio,a i i o,3,aii,1.0,32.0,del:o@end
+ZL_join,b,A_only,airin,a i r in,3,air,1.0,36.0,del:in@end
+ZL_join,b,A_only,c',c ',3,ct,1.0,3.0,sub:'>t@end
+ZL_join,b,A_only,c'o,c ' o,3,o,2.0,675.0,del:c'@begin
+ZL_join,b,A_only,co,c o,3,o,1.0,675.0,del:c@begin
+ZL_join,b,A_only,eal,e a l,3,al,1.0,113.0,del:e@begin
+ZL_join,b,A_only,eold,e o l d,3,eod,1.0,14.0,del:l@mid
+ZL_join,b,A_only,kchod,k ch o d,3,keeod,1.0,9.0,sub:ch>ee@mid
+ZL_join,b,A_only,kok,k o k,3,ok,1.0,48.0,del:k@begin
+ZL_join,b,A_only,ocph,o cph,3,o,1.0,675.0,del:cph@end
+ZL_join,b,A_only,odaii,o d a i i,3,odaiiin,1.0,2.0,sub:i>iin@end
+ZL_join,b,A_only,ols,o l s,3,ol,1.0,63.0,del:s@end
+ZL_join,b,A_only,pchor,p ch o r,3,chor,1.0,4.0,del:p@begin
+ZL_join,b,A_only,py,p y,3,y,1.0,463.0,del:p@begin
+ZL_join,b,A_only,q'o,q ' o,3,qo,1.0,17.0,del:'@mid
+ZL_join,b,A_only,so,s o,3,o,1.0,675.0,del:s@begin
+ZL_join,b,A_only,tchol,t ch o l,3,tcho,1.0,8.0,del:l@end
+ZL_join,b,A_only,toee,t o ee,3,tee,1.0,372.0,del:o@mid
+ZL_join,b,A_only,u,u,3,k,1.0,2163.0,sub:u>k@begin
+ZL_join,b,A_only,ysh,y sh,3,y,1.0,463.0,del:sh@end
+ZL_join,b,A_only,'k,' k,2,k,1.0,2163.0,del:'@begin
+ZL_join,b,A_only,aiid,a i i d,2,aii,1.0,32.0,del:d@end
+ZL_join,b,A_only,aiis,a i i s,2,aii,1.0,32.0,del:s@end
+ZL_join,b,A_only,airod,a i r o d,2,airo,1.0,12.0,del:d@end
+ZL_join,b,A_only,aldal,a l d a l,2,aldai,1.0,2.0,sub:l>i@end
+ZL_join,b,A_only,aldar,a l d a r,2,aldai,1.0,2.0,sub:r>i@end
+ZL_join,b,A_only,az,a z,2,a,1.0,991.0,del:z@end
+ZL_join,b,A_only,chal,ch a l,2,al,1.0,113.0,del:ch@begin
+ZL_join,b,A_only,cheorche,ch e o r ch e,2,orche,2.0,3.0,del:che@begin
+ZL_join,b,A_only,choch,ch o ch,2,cho,1.0,21.0,del:ch@end
+ZL_join,b,A_only,chockh,ch o ckh,2,cho,1.0,21.0,del:ckh@end
+ZL_join,b,A_only,choee,ch o ee,2,chee,1.0,102.0,del:o@mid
+ZL_join,b,A_only,chotch,ch o t ch,2,tch,2.0,69.0,del:cho@begin
+ZL_join,b,A_only,ckhod,ckh o d,2,od,1.0,53.0,del:ckh@begin
+ZL_join,b,A_only,dcho,d ch o,2,cho,1.0,21.0,del:d@begin
+ZL_join,b,A_only,dckh,d ckh,2,d,1.0,1123.0,del:ckh@end
+ZL_join,b,A_only,eoikh,e o i k h,2,oikh,1.0,2.0,del:e@begin
+ZL_join,b,A_only,eolche,e o l ch e,2,olche,1.0,33.0,del:e@begin
+ZL_join,b,A_only,eoldai,e o l d a i,2,olkai,2.0,3.0,del:e@begin;sub:d>k@mid
+ZL_join,b,A_only,eos,e o s,2,eo,1.0,112.0,del:s@end
+ZL_join,b,A_only,eeeb,ee e b,2,eee,1.0,46.0,del:b@end
+ZL_join,b,A_only,eeee,ee ee,2,kee,1.0,1102.0,sub:ee>k@begin
+ZL_join,b,A_only,eeso,ee s o,2,eeo,1.0,25.0,del:s@mid
+ZL_join,b,A_only,fyd,f y d,2,fchd,1.0,3.0,sub:y>ch@mid
+ZL_join,b,A_only,kcha,k ch a,2,kche,1.0,153.0,sub:a>e@end
+ZL_join,b,A_only,kchan,k ch a n,2,kan,1.0,14.0,del:ch@mid
+ZL_join,b,A_only,kchon,k ch o n,2,kcho,1.0,7.0,del:n@end
+ZL_join,b,A_only,kchor,k ch o r,2,kcho,1.0,7.0,del:r@end
+ZL_join,b,A_only,kchy,k ch y,2,kche,1.0,153.0,sub:y>e@end
+ZL_join,b,A_only,key,k e y,2,ke,1.0,724.0,del:y@end
+ZL_join,b,A_only,keea,k ee a,2,kee,1.0,1102.0,del:a@end
+ZL_join,b,A_only,khh,k h h,2,k,2.0,2163.0,del:hh@end
+ZL_join,b,A_only,koiiin,k o i iin,2,kaiiin,1.0,9.0,sub:o>a@mid
+ZL_join,b,A_only,kold,k o l d,2,kol,1.0,9.0,del:d@end
+ZL_join,b,A_only,ldan,l d a n,2,dal,2.0,16.0,del:l@begin;sub:n>l@end
+ZL_join,b,A_only,oal,o a l,2,al,1.0,113.0,del:o@begin
+ZL_join,b,A_only,ocho,o ch o,2,cho,1.0,21.0,del:o@begin
+ZL_join,b,A_only,ockho,o ckh o,2,ockh,1.0,9.0,del:o@end
+ZL_join,b,A_only,odan,o d a n,2,odal,1.0,4.0,sub:n>l@end
+ZL_join,b,A_only,oek,o e k,2,ek,1.0,76.0,del:o@begin
+ZL_join,b,A_only,okeo,o k e o,2,keo,1.0,61.0,del:o@begin
+ZL_join,b,A_only,olee,o l ee,2,ol,1.0,63.0,del:ee@end
+ZL_join,b,A_only,oloiin,o l o iin,2,ol,2.0,63.0,del:oiin@end
+ZL_join,b,A_only,olsho,o l sh o,2,olshe,1.0,26.0,sub:o>e@end
+ZL_join,b,A_only,ooiin,o o iin,2,oiin,1.0,19.0,del:o@begin
+ZL_join,b,A_only,orshe,o r sh e,2,olshe,1.0,26.0,sub:r>l@mid
+ZL_join,b,A_only,oteo,o t e o,2,teo,1.0,44.0,del:o@begin
+ZL_join,b,A_only,po,p o,2,o,1.0,675.0,del:p@begin
+ZL_join,b,A_only,psho,p sh o,2,pshe,1.0,11.0,sub:o>e@end
+ZL_join,b,A_only,saiiin,s a i iin,2,aiiin,1.0,47.0,del:s@begin
+ZL_join,b,A_only,shal,sh a l,2,al,1.0,113.0,del:sh@begin
+ZL_join,b,A_only,shot,sh o t,2,ot,1.0,19.0,del:sh@begin
+ZL_join,b,A_only,tchal,t ch a l,2,tal,1.0,31.0,del:ch@mid
+ZL_join,b,A_only,tchoiin,t ch o iin,2,tcho,1.0,8.0,del:iin@end
+ZL_join,b,A_only,tchot,t ch o t,2,tcho,1.0,8.0,del:t@end
+ZL_join,b,A_only,tchyt,t ch y t,2,tche,2.0,113.0,del:y@mid;sub:t>e@end
+ZL_join,b,A_only,teeeb,t ee e b,2,teee,1.0,20.0,del:b@end
+ZL_join,b,A_only,tolo,t o l o,2,tol,1.0,7.0,del:o@end
+ZL_join,b,A_only,tory,t o r y,2,or,2.0,37.0,del:t@begin;del:y@end
+ZL_join,b,A_only,ychok,y ch o k,2,chok,1.0,3.0,del:y@begin
+ZL_join,b,A_only,ykch,y k ch,2,kch,1.0,108.0,del:y@begin
+ZL_join,b,A_only,yp,y p,2,y,1.0,463.0,del:p@end
+ZL_join,b,A_only,ypch,y p ch,2,pch,1.0,63.0,del:y@begin
+ZL_join,b,B_only,ched,ch e d,56,che,1.0,107.0,ins:d@end
+ZL_join,b,B_only,ked,k e d,53,ke,1.0,194.0,ins:d@end
+ZL_join,b,B_only,ted,t e d,36,te,1.0,53.0,ins:d@end
+ZL_join,b,B_only,keed,k ee d,32,kee,1.0,151.0,ins:d@end
+ZL_join,b,B_only,eed,ee d,24,d,1.0,286.0,ins:ee@begin
+ZL_join,b,B_only,rshe,r sh e,20,she,1.0,21.0,ins:r@begin
+ZL_join,b,B_only,keche,k e ch e,15,kche,1.0,30.0,ins:e@mid
+ZL_join,b,B_only,alkee,a l k ee,13,olkee,1.0,3.0,sub:o>a@begin
+ZL_join,b,B_only,shd,sh d,13,d,1.0,286.0,ins:sh@begin
+ZL_join,b,B_only,teed,t ee d,13,tee,1.0,38.0,ins:d@end
+ZL_join,b,B_only,pshe,p sh e,11,she,1.0,21.0,ins:p@begin
+ZL_join,b,B_only,alshe,a l sh e,10,olshe,1.0,3.0,sub:o>a@begin
+ZL_join,b,B_only,kech,k e ch,9,ke,1.0,194.0,ins:ch@end
+ZL_join,b,B_only,pched,p ch e d,9,pche,1.0,18.0,ins:d@end
+ZL_join,b,B_only,rai,r a i,9,ai,1.0,61.0,ins:r@begin
+ZL_join,b,B_only,shed,sh e d,9,she,1.0,21.0,ins:d@end
+ZL_join,b,B_only,kchd,k ch d,8,kch,1.0,83.0,ins:d@end
+ZL_join,b,B_only,kolche,k o l ch e,8,olche,1.0,6.0,ins:k@begin
+ZL_join,b,B_only,lchee,l ch ee,8,chee,1.0,29.0,ins:l@begin
+ZL_join,b,B_only,eche,e ch e,7,che,1.0,107.0,ins:e@begin
+ZL_join,b,B_only,keshe,k e sh e,7,kshe,1.0,6.0,ins:e@mid
+ZL_join,b,B_only,lshee,l sh ee,7,shee,1.0,7.0,ins:l@begin
+ZL_join,b,B_only,rol,r o l,7,ol,1.0,67.0,ins:r@begin
+ZL_join,b,B_only,arai,a r a i,6,arar,1.0,2.0,sub:r>i@end
+ZL_join,b,B_only,arshe,a r sh e,6,orshe,1.0,2.0,sub:o>a@begin
+ZL_join,b,B_only,dar,d a r,6,ar,1.0,39.0,ins:d@begin
+ZL_join,b,B_only,keeeo,k ee e o,6,keo,1.0,56.0,ins:ee@mid
+ZL_join,b,B_only,pal,p a l,6,al,1.0,69.0,ins:p@begin
+ZL_join,b,B_only,par,p a r,6,ar,1.0,39.0,ins:p@begin
+ZL_join,b,B_only,pchd,p ch d,6,pch,1.0,23.0,ins:d@end
+ZL_join,b,B_only,qee,q ee,6,kee,1.0,151.0,sub:k>q@begin
+ZL_join,b,B_only,qok,q o k,6,ok,1.0,38.0,ins:q@begin
+ZL_join,b,B_only,rshee,r sh ee,6,shee,1.0,7.0,ins:r@begin
+ZL_join,b,B_only,ta,t a,6,t,1.0,479.0,ins:a@end
+ZL_join,b,B_only,tech,t e ch,6,tch,1.0,111.0,ins:e@mid
+ZL_join,b,B_only,ad,a d,5,aiin,1.0,701.0,sub:iin>d@end
+ZL_join,b,B_only,arche,a r ch e,5,orche,1.0,5.0,sub:o>a@begin
+ZL_join,b,B_only,arod,a r o d,5,aro,1.0,3.0,ins:d@end
+ZL_join,b,B_only,chdai,ch d a i,5,dai,1.0,7.0,ins:ch@begin
+ZL_join,b,B_only,cholk,ch o l k,5,chol,1.0,14.0,ins:k@end
+ZL_join,b,B_only,dche,d ch e,5,che,1.0,107.0,ins:d@begin
+ZL_join,b,B_only,esh,e sh,5,e,1.0,342.0,ins:sh@end
+ZL_join,b,B_only,eeol,ee o l,5,ol,1.0,67.0,ins:ee@begin
+ZL_join,b,B_only,kched,k ch e d,5,kche,1.0,30.0,ins:d@end
+ZL_join,b,B_only,q,q,5,o,1.0,990.0,sub:o>q@begin
+ZL_join,b,B_only,raiiin,r a i iin,5,aiiin,1.0,16.0,ins:r@begin
+ZL_join,b,B_only,ror,r o r,5,or,1.0,38.0,ins:r@begin
+ZL_join,b,B_only,sheckh,sh e ckh,5,she,1.0,21.0,ins:ckh@end
+ZL_join,b,B_only,talk,t a l k,5,tal,1.0,14.0,ins:k@end
+ZL_join,b,B_only,tched,t ch e d,5,tche,1.0,38.0,ins:d@end
+ZL_join,b,B_only,x,x,5,o,1.0,990.0,sub:o>x@begin
+ZL_join,b,B_only,alod,a l o d,4,ald,1.0,7.0,ins:o@mid
+ZL_join,b,B_only,as,a s,4,aiin,1.0,701.0,sub:iin>s@end
+ZL_join,b,B_only,checkh,ch e ckh,4,che,1.0,107.0,ins:ckh@end
+ZL_join,b,B_only,checkhe,ch e ckh e,4,che,2.0,107.0,ins:eckh@mid
+ZL_join,b,B_only,cheolk,ch e o l k,4,cheok,1.0,3.0,ins:l@mid
+ZL_join,b,B_only,deee,d ee e,4,eee,1.0,24.0,ins:d@begin
+ZL_join,b,B_only,edy,e d y,4,ydy,1.0,2.0,sub:y>e@begin
+ZL_join,b,B_only,ef,e f,4,e,1.0,342.0,ins:f@end
+ZL_join,b,B_only,eekee,ee k ee,4,kee,1.0,151.0,ins:ee@begin
+ZL_join,b,B_only,kaiin,k a iin,4,aiin,1.0,701.0,ins:k@begin
+ZL_join,b,B_only,kald,k a l d,4,kal,1.0,39.0,ins:d@end
+ZL_join,b,B_only,lkeee,l k ee e,4,keee,1.0,15.0,ins:l@begin
+ZL_join,b,B_only,olar,o l a r,4,oar,1.0,2.0,ins:l@mid
+ZL_join,b,B_only,olt,o l t,4,ol,1.0,67.0,ins:t@end
+ZL_join,b,B_only,palk,p a l k,4,al,2.0,69.0,ins:p@begin;ins:k@end
+ZL_join,b,B_only,pches,p ch e s,4,pche,1.0,18.0,ins:s@end
+ZL_join,b,B_only,qet,q e t,4,et,1.0,10.0,ins:q@begin
+ZL_join,b,B_only,qeee,q ee e,4,eee,1.0,24.0,ins:q@begin
+ZL_join,b,B_only,rolkee,r o l k ee,4,olkee,1.0,3.0,ins:r@begin
+ZL_join,b,B_only,sheed,sh ee d,4,shee,1.0,7.0,ins:d@end
+ZL_join,b,B_only,tair,t a i r,4,air,1.0,11.0,ins:t@begin
+ZL_join,b,B_only,talsh,t a l sh,4,tal,1.0,14.0,ins:sh@end
+ZL_join,b,B_only,tsheo,t sh e o,4,teo,1.0,18.0,ins:sh@mid
+ZL_join,b,B_only,aiinsh,a iin sh,3,aiin,1.0,701.0,ins:sh@end
+ZL_join,b,B_only,chedai,ch e d a i,3,dai,2.0,7.0,ins:che@begin
+ZL_join,b,B_only,chede,ch e d e,3,che,2.0,107.0,ins:ed@mid
+ZL_join,b,B_only,da,d a,3,a,1.0,442.0,ins:d@begin
+ZL_join,b,B_only,ecph,e cph,3,e,1.0,342.0,ins:cph@end
+ZL_join,b,B_only,edai,e d a i,3,dai,1.0,7.0,ins:e@begin
+ZL_join,b,B_only,eolk,e o l k,3,eol,1.0,5.0,ins:k@end
+ZL_join,b,B_only,eolkee,e o l k ee,3,olkee,1.0,3.0,ins:e@begin
+ZL_join,b,B_only,eeek,ee e k,3,eee,1.0,24.0,ins:k@end
+ZL_join,b,B_only,ees,ee s,3,s,1.0,197.0,ins:ee@begin
+ZL_join,b,B_only,fchd,f ch d,3,fch,1.0,8.0,ins:d@end
+ZL_join,b,B_only,ikh,i k h,3,oikh,1.0,4.0,del:o@begin
+ZL_join,b,B_only,kalk,k a l k,3,kal,1.0,39.0,ins:k@end
+ZL_join,b,B_only,kalshe,k a l sh e,3,kal,2.0,39.0,ins:she@end
+ZL_join,b,B_only,kede,k e d e,3,ke,2.0,194.0,ins:ed@mid
+ZL_join,b,B_only,kedy,k e d y,3,key,1.0,2.0,ins:d@mid
+ZL_join,b,B_only,keeche,k ee ch e,3,kche,1.0,30.0,ins:ee@mid
+ZL_join,b,B_only,keeshe,k ee sh e,3,keee,1.0,15.0,ins:sh@mid
+ZL_join,b,B_only,kl,k l,3,k,1.0,567.0,ins:l@end
+ZL_join,b,B_only,klche,k l ch e,3,kche,1.0,30.0,ins:l@mid
+ZL_join,b,B_only,ody,o d y,3,od,1.0,82.0,ins:y@end
+ZL_join,b,B_only,olkai,o l k a i,3,kai,2.0,9.0,ins:ol@begin
+ZL_join,b,B_only,orar,o r a r,3,rar,1.0,2.0,ins:o@begin
+ZL_join,b,B_only,pchs,p ch s,3,pch,1.0,23.0,ins:s@end
+ZL_join,b,B_only,pol,p o l,3,ol,1.0,67.0,ins:p@begin
+ZL_join,b,B_only,psh,p sh,3,sh,1.0,70.0,ins:p@begin
+ZL_join,b,B_only,qckh,q ckh,3,ckh,1.0,70.0,ins:q@begin
+ZL_join,b,B_only,qckhe,q ckh e,3,ckhe,1.0,32.0,ins:q@begin
+ZL_join,b,B_only,qcthh,q cth h,3,cthh,1.0,4.0,ins:q@begin
+ZL_join,b,B_only,qekch,q e k ch,3,kch,2.0,83.0,ins:qe@begin
+ZL_join,b,B_only,qekee,q e k ee,3,ekee,1.0,3.0,ins:q@begin
+ZL_join,b,B_only,ra,r a,3,a,1.0,442.0,ins:r@begin
+ZL_join,b,B_only,raiin,r a iin,3,aiin,1.0,701.0,ins:r@begin
+ZL_join,b,B_only,rched,r ch e d,3,rche,1.0,2.0,ins:d@end
+ZL_join,b,B_only,rcheo,r ch e o,3,cheo,1.0,19.0,ins:r@begin
+ZL_join,b,B_only,rolk,r o l k,3,olk,1.0,4.0,ins:r@begin
+ZL_join,b,B_only,yte,y t e,3,te,1.0,53.0,ins:y@begin
+ZL_join,b,B_only,aiii,a i i i,2,aii,1.0,19.0,ins:i@mid
+ZL_join,b,B_only,aiiral,a i i r a l,2,airal,1.0,2.0,ins:i@mid
+ZL_join,b,B_only,aip,a i p,2,ai,1.0,61.0,ins:p@end
+ZL_join,b,B_only,airol,a i r o l,2,arol,1.0,2.0,ins:i@mid
+ZL_join,b,B_only,ais,a i s,2,ai,1.0,61.0,ins:s@end
+ZL_join,b,B_only,aiins,a iin s,2,aiin,1.0,701.0,ins:s@end
+ZL_join,b,B_only,ainche,a in ch e,2,alche,1.0,2.0,sub:l>in@mid
+ZL_join,b,B_only,aind,a in d,2,ain,1.0,132.0,ins:d@end
+ZL_join,b,B_only,ake,a k e,2,ke,1.0,194.0,ins:a@begin
+ZL_join,b,B_only,alaiiin,a l a i iin,2,aiiin,2.0,16.0,ins:al@begin
+ZL_join,b,B_only,alal,a l a l,2,alol,1.0,2.0,sub:o>a@mid
+ZL_join,b,B_only,alar,a l a r,2,arar,1.0,2.0,sub:r>l@mid
+ZL_join,b,B_only,aldai,a l d a i,2,aldar,1.0,2.0,sub:r>i@end
+ZL_join,b,B_only,alok,a l o k,2,alol,1.0,2.0,sub:l>k@end
+ZL_join,b,B_only,alolshe,a l o l sh e,2,olshe,2.0,3.0,ins:al@begin
+ZL_join,b,B_only,alr,a l r,2,al,1.0,69.0,ins:r@end
+ZL_join,b,B_only,alshee,a l sh ee,2,al,2.0,69.0,ins:shee@end
+ZL_join,b,B_only,alte,a l t e,2,alche,1.0,2.0,sub:ch>t@mid
+ZL_join,b,B_only,amd,a m d,2,ald,1.0,7.0,sub:l>m@mid
+ZL_join,b,B_only,ara,a r a,2,ar,1.0,39.0,ins:a@end
+ZL_join,b,B_only,araii,a r a i i,2,aii,2.0,19.0,ins:ar@begin
+ZL_join,b,B_only,arair,a r a i r,2,arar,1.0,2.0,ins:i@mid
+ZL_join,b,B_only,arak,a r a k,2,arar,1.0,2.0,sub:r>k@end
+ZL_join,b,B_only,aran,a r a n,2,arar,1.0,2.0,sub:r>n@end
+ZL_join,b,B_only,aroiin,a r o iin,2,aro,1.0,3.0,ins:iin@end
+ZL_join,b,B_only,arok,a r o k,2,aro,1.0,3.0,ins:k@end
+ZL_join,b,B_only,arolkee,a r o l k ee,2,olkee,2.0,3.0,ins:ar@begin
+ZL_join,b,B_only,ch'ee,ch ' ee,2,chee,1.0,29.0,ins:'@mid
+ZL_join,b,B_only,chdal,ch d a l,2,dal,1.0,8.0,ins:ch@begin
+ZL_join,b,B_only,chdl,ch d l,2,chol,1.0,14.0,sub:o>d@mid
+ZL_join,b,B_only,chekee,ch e k ee,2,ekee,1.0,3.0,ins:ch@begin
+ZL_join,b,B_only,chet,ch e t,2,che,1.0,107.0,ins:t@end
+ZL_join,b,B_only,cheykee,ch e y k ee,2,ykee,2.0,3.0,ins:che@begin
+ZL_join,b,B_only,cheyt,ch e y t,2,che,2.0,107.0,ins:yt@end
+ZL_join,b,B_only,cheed,ch ee d,2,chee,1.0,29.0,ins:d@end
+ZL_join,b,B_only,cheek,ch ee k,2,chee,1.0,29.0,ins:k@end
+ZL_join,b,B_only,cheeod,ch ee o d,2,chod,1.0,21.0,ins:ee@mid
+ZL_join,b,B_only,cheeolk,ch ee o l k,2,chol,2.0,14.0,ins:ee@mid;ins:k@end
+ZL_join,b,B_only,chof,ch o f,2,cho,1.0,56.0,ins:f@end
+ZL_join,b,B_only,ckhd,ckh d,2,d,1.0,286.0,ins:ckh@begin
+ZL_join,b,B_only,cpheo,cph e o,2,eo,1.0,74.0,ins:cph@begin
+ZL_join,b,B_only,dalk,d a l k,2,dal,1.0,8.0,ins:k@end
+ZL_join,b,B_only,dalo,d a l o,2,dal,1.0,8.0,ins:o@end
+ZL_join,b,B_only,dalsh,d a l sh,2,dal,1.0,8.0,ins:sh@end
+ZL_join,b,B_only,darshe,d a r sh e,2,orshe,2.0,2.0,ins:d@begin;sub:o>a@begin
+ZL_join,b,B_only,dk,d k,2,k,1.0,567.0,ins:d@begin
+ZL_join,b,B_only,dl,d l,2,l,1.0,370.0,ins:d@begin
+ZL_join,b,B_only,dyqok,d y q o k,2,ychok,2.0,2.0,ins:d@begin;sub:ch>q@mid
+ZL_join,b,B_only,dys,d y s,2,y,2.0,513.0,ins:d@begin;ins:s@end
+ZL_join,b,B_only,dyt,d y t,2,yt,1.0,18.0,ins:d@begin
+ZL_join,b,B_only,ecthe,e cth e,2,cthe,1.0,8.0,ins:e@begin
+ZL_join,b,B_only,edaiiin,e d a i iin,2,aiiin,2.0,16.0,ins:ed@begin
+ZL_join,b,B_only,edal,e d a l,2,dal,1.0,8.0,ins:e@begin
+ZL_join,b,B_only,edyk,e d y k,2,yk,2.0,24.0,ins:ed@begin
+ZL_join,b,B_only,efch,e f ch,2,fch,1.0,8.0,ins:e@begin
+ZL_join,b,B_only,ekshe,e k sh e,2,eke,1.0,7.0,ins:sh@mid
+ZL_join,b,B_only,eodk,e o d k,2,eod,1.0,16.0,ins:k@end
+ZL_join,b,B_only,eop,e o p,2,eo,1.0,74.0,ins:p@end
+ZL_join,b,B_only,epch,e p ch,2,pch,1.0,23.0,ins:e@begin
+ZL_join,b,B_only,ete,e t e,2,te,1.0,53.0,ins:e@begin
+ZL_join,b,B_only,eeda,ee d a,2,a,2.0,442.0,ins:eed@begin
+ZL_join,b,B_only,eeeod,ee e o d,2,eod,1.0,16.0,ins:ee@begin
+ZL_join,b,B_only,eesho,ee sh o,2,sho,1.0,34.0,ins:ee@begin
+ZL_join,b,B_only,fai,f a i,2,ai,1.0,61.0,ins:f@begin
+ZL_join,b,B_only,far,f a r,2,ar,1.0,39.0,ins:f@begin
+ZL_join,b,B_only,fo,f o,2,o,1.0,990.0,ins:f@begin
+ZL_join,b,B_only,fsh,f sh,2,sh,1.0,70.0,ins:f@begin
+ZL_join,b,B_only,kairo,k a i r o,2,airo,1.0,2.0,ins:k@begin
+ZL_join,b,B_only,kain,k a in,2,ain,1.0,132.0,ins:k@begin
+ZL_join,b,B_only,kalsh,k a l sh,2,kal,1.0,39.0,ins:sh@end
+ZL_join,b,B_only,karo,k a r o,2,aro,1.0,3.0,ins:k@begin
+ZL_join,b,B_only,kcheod,k ch e o d,2,kcheo,1.0,8.0,ins:d@end
+ZL_join,b,B_only,keal,k e a l,2,kal,1.0,39.0,ins:e@mid
+ZL_join,b,B_only,kealshe,k e a l sh e,2,,,,
+ZL_join,b,B_only,kedal,k e d a l,2,kal,2.0,39.0,ins:ed@mid
+ZL_join,b,B_only,kesho,k e sh o,2,keo,1.0,56.0,ins:sh@mid
+ZL_join,b,B_only,keedyd,k ee d y d,2,keeod,2.0,4.0,ins:d@mid;sub:o>y@mid
+ZL_join,b,B_only,keedyke,k ee d y k e,2,keeyk,2.0,3.0,ins:d@mid;ins:e@end
+ZL_join,b,B_only,keedyl,k ee d y l,2,keeyk,2.0,3.0,ins:d@mid;sub:k>l@end
+ZL_join,b,B_only,keedylche,k ee d y l ch e,2,,,,
+ZL_join,b,B_only,keeolche,k ee o l ch e,2,olche,2.0,6.0,ins:kee@begin
+ZL_join,b,B_only,keeolkeeo,k ee o l k ee o,2,,,,
+ZL_join,b,B_only,keeyl,k ee y l,2,keeyk,1.0,3.0,sub:k>l@end
+ZL_join,b,B_only,keeylk,k ee y l k,2,keeyk,1.0,3.0,ins:l@mid
+ZL_join,b,B_only,kii,k i i,2,aii,1.0,19.0,sub:a>k@begin
+ZL_join,b,B_only,kiin,k iin,2,aiin,1.0,701.0,sub:a>k@begin
+ZL_join,b,B_only,koee,k o ee,2,kee,1.0,151.0,ins:o@mid
+ZL_join,b,B_only,kolk,k o l k,2,kol,1.0,25.0,ins:k@end
+ZL_join,b,B_only,kolshe,k o l sh e,2,olshe,1.0,3.0,ins:k@begin
+ZL_join,b,B_only,lf,l f,2,l,1.0,370.0,ins:f@end
+ZL_join,b,B_only,lkar,l k a r,2,kar,1.0,2.0,ins:l@begin
+ZL_join,b,B_only,lkshe,l k sh e,2,kshe,1.0,6.0,ins:l@begin
+ZL_join,b,B_only,ocfh,o cfh,2,o,1.0,990.0,ins:cfh@end
+ZL_join,b,B_only,odaiiin,o d a i iin,2,odaii,1.0,3.0,sub:i>iin@end
+ZL_join,b,B_only,odee,o d ee,2,od,1.0,82.0,ins:ee@end
+ZL_join,b,B_only,odeee,o d ee e,2,okeee,1.0,2.0,sub:k>d@mid
+ZL_join,b,B_only,odk,o d k,2,od,1.0,82.0,ins:k@end
+ZL_join,b,B_only,okeeo,o k ee o,2,keeo,1.0,22.0,ins:o@begin
+ZL_join,b,B_only,orai,o r a i,2,odai,1.0,2.0,sub:d>r@mid
+ZL_join,b,B_only,orol,o r o l,2,oro,1.0,3.0,ins:l@end
+ZL_join,b,B_only,orshee,o r sh ee,2,orsh,1.0,3.0,ins:ee@end
+ZL_join,b,B_only,paii,p a i i,2,aii,1.0,19.0,ins:p@begin
+ZL_join,b,B_only,pair,p a i r,2,air,1.0,11.0,ins:p@begin
+ZL_join,b,B_only,pch'e,p ch ' e,2,pche,1.0,18.0,ins:'@mid
+ZL_join,b,B_only,pchet,p ch e t,2,pche,1.0,18.0,ins:t@end
+ZL_join,b,B_only,qa,q a,2,a,1.0,442.0,ins:q@begin
+ZL_join,b,B_only,qch,q ch,2,ch,1.0,273.0,ins:q@begin
+ZL_join,b,B_only,qcphhe,q cph h e,2,khe,2.0,4.0,ins:q@begin;sub:k>cph@begin
+ZL_join,b,B_only,qcth,q cth,2,cth,1.0,70.0,ins:q@begin
+ZL_join,b,B_only,qepche,q e p ch e,2,pche,2.0,18.0,ins:qe@begin
+ZL_join,b,B_only,qetch,q e t ch,2,tch,2.0,111.0,ins:qe@begin
+ZL_join,b,B_only,qoke,q o k e,2,oke,1.0,2.0,ins:q@begin
+ZL_join,b,B_only,qokee,q o k ee,2,okee,1.0,6.0,ins:q@begin
+ZL_join,b,B_only,ralch,r a l ch,2,alch,1.0,6.0,ins:r@begin
+ZL_join,b,B_only,rchcth,r ch cth,2,rch,1.0,6.0,ins:cth@end
+ZL_join,b,B_only,rchek,r ch e k,2,rche,1.0,2.0,ins:k@end
+ZL_join,b,B_only,rkch,r k ch,2,kch,1.0,83.0,ins:r@begin
+ZL_join,b,B_only,roii,r o i i,2,oii,1.0,6.0,ins:r@begin
+ZL_join,b,B_only,roiiin,r o i iin,2,oiiin,1.0,7.0,ins:r@begin
+ZL_join,b,B_only,sheckhe,sh e ckh e,2,ckhe,2.0,32.0,ins:she@begin
+ZL_join,b,B_only,shek,sh e k,2,she,1.0,21.0,ins:k@end
+ZL_join,b,B_only,sheol,sh e o l,2,sheo,1.0,18.0,ins:l@end
+ZL_join,b,B_only,shes,sh e s,2,she,1.0,21.0,ins:s@end
+ZL_join,b,B_only,shet,sh e t,2,she,1.0,21.0,ins:t@end
+ZL_join,b,B_only,shodai,sh o d a i,2,odai,1.0,2.0,ins:sh@begin
+ZL_join,b,B_only,shor,sh o r,2,or,1.0,38.0,ins:sh@begin
+ZL_join,b,B_only,taiiin,t a i iin,2,aiiin,1.0,16.0,ins:t@begin
+ZL_join,b,B_only,tain,t a in,2,ain,1.0,132.0,ins:t@begin
+ZL_join,b,B_only,talcheo,t a l ch e o,2,tcheo,2.0,2.0,ins:al@mid
+ZL_join,b,B_only,talchee,t a l ch ee,2,tal,2.0,14.0,ins:chee@end
+ZL_join,b,B_only,talke,t a l k e,2,tal,2.0,14.0,ins:ke@end
+ZL_join,b,B_only,tals,t a l s,2,tal,1.0,14.0,ins:s@end
+ZL_join,b,B_only,talshe,t a l sh e,2,tal,2.0,14.0,ins:she@end
+ZL_join,b,B_only,tcheod,t ch e o d,2,teod,1.0,7.0,ins:ch@mid
+ZL_join,b,B_only,tchs,t ch s,2,tch,1.0,111.0,ins:s@end
+ZL_join,b,B_only,tedai,t e d a i,2,dai,2.0,7.0,ins:te@begin
+ZL_join,b,B_only,tedshe,t e d sh e,2,tshe,2.0,6.0,ins:ed@mid
+ZL_join,b,B_only,tedy,t e d y,2,te,2.0,53.0,ins:dy@end
+ZL_join,b,B_only,tl,t l,2,t,1.0,479.0,ins:l@end
+ZL_join,b,B_only,tok,t o k,2,ok,1.0,38.0,ins:t@begin
+ZL_join,b,B_only,yl,y l,2,y,1.0,513.0,ins:l@end
+ZL_join,b,B_only,ylche,y l ch e,2,olche,1.0,6.0,sub:o>y@begin
+ZL_join,b,B_only,ypshe,y p sh e,2,she,2.0,21.0,ins:yp@begin
+ZL_join,b,B_only,yqok,y q o k,2,ychok,1.0,2.0,sub:ch>q@mid
+ZL_join,tok,A_only,d,d,16,dy,1.0,76.0,ins:y@end
+ZL_join,tok,A_only,cthody,cth o d y,14,chody,1.0,43.0,sub:cth>ch@begin
+ZL_join,tok,A_only,chom,ch o m,12,chol,1.0,78.0,sub:m>l@end
+ZL_join,tok,A_only,chory,ch o r y,12,chody,1.0,43.0,sub:r>d@mid
+ZL_join,tok,A_only,cthaiin,cth a iin,12,daiin,1.0,284.0,sub:cth>d@begin
+ZL_join,tok,A_only,qotchol,q o t ch o l,12,qotol,1.0,21.0,del:ch@mid
+ZL_join,tok,A_only,qotchor,q o t ch o r,12,qotor,1.0,8.0,del:ch@mid
+ZL_join,tok,A_only,chotchy,ch o t ch y,11,qotchy,1.0,12.0,sub:ch>q@begin
+ZL_join,tok,A_only,choiin,ch o iin,10,chol,1.0,78.0,sub:iin>l@end
+ZL_join,tok,A_only,dan,d a n,10,daiin,1.0,284.0,sub:n>iin@end
+ZL_join,tok,A_only,okchol,o k ch o l,10,okeol,1.0,19.0,sub:ch>e@mid
+ZL_join,tok,A_only,ytchor,y t ch o r,10,ytor,1.0,3.0,del:ch@mid
+ZL_join,tok,A_only,ctheol,cth e o l,9,cheol,1.0,80.0,sub:cth>ch@begin
+ZL_join,tok,A_only,doiin,d o iin,9,daiin,1.0,284.0,sub:o>a@mid
+ZL_join,tok,A_only,ctho,cth o,8,o,1.0,20.0,del:cth@begin
+ZL_join,tok,A_only,dsho,d sh o,8,sho,1.0,9.0,del:d@begin
+ZL_join,tok,A_only,qokchor,q o k ch o r,8,qokor,1.0,14.0,del:ch@mid
+ZL_join,tok,A_only,dom,d o m,7,dol,1.0,34.0,sub:m>l@end
+ZL_join,tok,A_only,dshy,d sh y,7,dy,1.0,76.0,del:sh@mid
+ZL_join,tok,A_only,cfhy,cfh y,6,dy,1.0,76.0,sub:cfh>d@begin
+ZL_join,tok,A_only,chokey,ch o k e y,6,qokey,1.0,84.0,sub:ch>q@begin
+ZL_join,tok,A_only,chyky,ch y k y,6,cheky,1.0,42.0,sub:y>e@mid
+ZL_join,tok,A_only,keor,k e o r,6,cheor,1.0,23.0,sub:k>ch@begin
+ZL_join,tok,A_only,ksho,k sh o,6,sho,1.0,9.0,del:k@begin
+ZL_join,tok,A_only,ykeor,y k e o r,6,ykeol,1.0,4.0,sub:r>l@end
+ZL_join,tok,A_only,cto,c t o,5,oty,2.0,58.0,sub:c>o@begin;sub:o>y@end
+ZL_join,tok,A_only,chkchy,ch k ch y,5,chky,1.0,12.0,del:ch@mid
+ZL_join,tok,A_only,chotol,ch o t o l,5,otol,1.0,23.0,del:ch@begin
+ZL_join,tok,A_only,ckheody,ckh e o d y,5,cheody,1.0,50.0,sub:ckh>ch@begin
+ZL_join,tok,A_only,ctheody,cth e o d y,5,cheody,1.0,50.0,sub:cth>ch@begin
+ZL_join,tok,A_only,ctheor,cth e o r,5,cheor,1.0,23.0,sub:cth>ch@begin
+ZL_join,tok,A_only,cthom,cth o m,5,om,1.0,5.0,del:cth@begin
+ZL_join,tok,A_only,dcho,d ch o,5,cho,1.0,6.0,del:d@begin
+ZL_join,tok,A_only,kcheol,k ch e o l,5,cheol,1.0,80.0,del:k@begin
+ZL_join,tok,A_only,qokchod,q o k ch o d,5,qokchd,1.0,5.0,del:o@mid
+ZL_join,tok,A_only,shan,sh a n,5,shar,1.0,16.0,sub:n>r@end
+ZL_join,tok,A_only,ykchor,y k ch o r,5,ykeeor,1.0,2.0,sub:ch>ee@mid
+ZL_join,tok,A_only,chetchy,ch e t ch y,4,chety,1.0,14.0,del:ch@mid
+ZL_join,tok,A_only,chochy,ch o ch y,4,chody,1.0,43.0,sub:ch>d@mid
+ZL_join,tok,A_only,chok,ch o k,4,chol,1.0,78.0,sub:k>l@end
+ZL_join,tok,A_only,chokchol,ch o k ch o l,4,qokchol,1.0,2.0,sub:ch>q@begin
+ZL_join,tok,A_only,choror,ch o r o r,4,oror,1.0,5.0,del:ch@begin
+ZL_join,tok,A_only,chykchy,ch y k ch y,4,ykchy,1.0,2.0,del:ch@begin
+ZL_join,tok,A_only,ckhody,ckh o d y,4,chody,1.0,43.0,sub:ckh>ch@begin
+ZL_join,tok,A_only,cthain,cth a in,4,dain,1.0,100.0,sub:cth>d@begin
+ZL_join,tok,A_only,cthod,cth o d,4,shod,1.0,7.0,sub:cth>sh@begin
+ZL_join,tok,A_only,ctholy,cth o l y,4,oly,1.0,42.0,del:cth@begin
+ZL_join,tok,A_only,dchaiin,d ch a iin,4,daiin,1.0,284.0,del:ch@mid
+ZL_join,tok,A_only,dcheor,d ch e o r,4,cheor,1.0,23.0,del:d@begin
+ZL_join,tok,A_only,dory,d o r y,4,dor,1.0,17.0,del:y@end
+ZL_join,tok,A_only,okchal,o k ch a l,4,okal,1.0,87.0,del:ch@mid
+ZL_join,tok,A_only,okeom,o k e o m,4,okeol,1.0,19.0,sub:m>l@end
+ZL_join,tok,A_only,oksho,o k sh o,4,okeeo,1.0,7.0,sub:sh>ee@mid
+ZL_join,tok,A_only,otshy,o t sh y,4,oteey,1.0,86.0,sub:sh>ee@mid
+ZL_join,tok,A_only,schol,s ch o l,4,chol,1.0,78.0,del:s@begin
+ZL_join,tok,A_only,sody,s o d y,4,chody,1.0,43.0,sub:s>ch@begin
+ZL_join,tok,A_only,shom,sh o m,4,shol,1.0,51.0,sub:m>l@end
+ZL_join,tok,A_only,shoty,sh o t y,4,oty,1.0,58.0,del:sh@begin
+ZL_join,tok,A_only,ysho,y sh o,4,sho,1.0,9.0,del:y@begin
+ZL_join,tok,A_only,ytchody,y t ch o d y,4,ytchedy,1.0,9.0,sub:o>e@mid
+ZL_join,tok,A_only,ytoldy,y t o l d y,4,ytody,1.0,4.0,del:l@mid
+ZL_join,tok,A_only,c'y,c ' y,3,chey,2.0,207.0,sub:c>ch@begin;sub:'>e@mid
+ZL_join,tok,A_only,cty,c t y,3,oty,1.0,58.0,sub:c>o@begin
+ZL_join,tok,A_only,chodaly,ch o d a l y,3,chodal,1.0,4.0,del:y@end
+ZL_join,tok,A_only,chokol,ch o k o l,3,qokol,1.0,44.0,sub:ch>q@begin
+ZL_join,tok,A_only,cholaiin,ch o l a iin,3,olaiin,1.0,39.0,del:ch@begin
+ZL_join,tok,A_only,choldam,ch o l d a m,3,oldam,1.0,3.0,del:ch@begin
+ZL_join,tok,A_only,cholol,ch o l o l,3,olol,1.0,8.0,del:ch@begin
+ZL_join,tok,A_only,chopy,ch o p y,3,chody,1.0,43.0,sub:p>d@mid
+ZL_join,tok,A_only,chotchey,ch o t ch e y,3,otchey,1.0,17.0,del:ch@begin
+ZL_join,tok,A_only,chotols,ch o t o l s,3,otol,2.0,23.0,del:ch@begin;del:s@end
+ZL_join,tok,A_only,chotor,ch o t o r,3,otor,1.0,20.0,del:ch@begin
+ZL_join,tok,A_only,ckhaiin,ckh a iin,3,daiin,1.0,284.0,sub:ckh>d@begin
+ZL_join,tok,A_only,ckham,ckh a m,3,am,1.0,36.0,del:ckh@begin
+ZL_join,tok,A_only,ckhos,ckh o s,3,chos,1.0,11.0,sub:ckh>ch@begin
+ZL_join,tok,A_only,cpheodar,cph e o d a r,3,keodar,1.0,2.0,sub:cph>k@begin
+ZL_join,tok,A_only,ctheod,cth e o d,3,sheod,1.0,7.0,sub:cth>sh@begin
+ZL_join,tok,A_only,cthodaiin,cth o d a iin,3,qodaiin,1.0,29.0,sub:cth>q@begin
+ZL_join,tok,A_only,dairin,d a i r in,3,dair,1.0,38.0,del:in@end
+ZL_join,tok,A_only,dalchy,d a l ch y,3,daly,1.0,15.0,del:ch@mid
+ZL_join,tok,A_only,dchar,d ch a r,3,dar,1.0,158.0,del:ch@mid
+ZL_join,tok,A_only,dchokchy,d ch o k ch y,3,chokchy,1.0,2.0,del:d@begin
+ZL_join,tok,A_only,doiir,d o i i r,3,daiir,1.0,6.0,sub:o>a@mid
+ZL_join,tok,A_only,doldaiin,d o l d a iin,3,oldaiin,1.0,4.0,del:d@begin
+ZL_join,tok,A_only,kchaiin,k ch a iin,3,kaiin,1.0,32.0,del:ch@mid
+ZL_join,tok,A_only,kchod,k ch o d,3,kchol,1.0,3.0,sub:d>l@end
+ZL_join,tok,A_only,kchos,k ch o s,3,chos,1.0,11.0,del:k@begin
+ZL_join,tok,A_only,keeo,k ee o,3,keey,1.0,14.0,sub:o>y@end
+ZL_join,tok,A_only,kodaiin,k o d a iin,3,qodaiin,1.0,29.0,sub:k>q@begin
+ZL_join,tok,A_only,kos,k o s,3,chos,1.0,11.0,sub:k>ch@begin
+ZL_join,tok,A_only,n,n,3,r,1.0,39.0,sub:n>r@begin
+ZL_join,tok,A_only,ochol,o ch o l,3,chol,1.0,78.0,del:o@begin
+ZL_join,tok,A_only,ochy,o ch y,3,oty,1.0,58.0,sub:ch>t@mid
+ZL_join,tok,A_only,oeeor,o ee o r,3,olor,1.0,23.0,sub:ee>l@mid
+ZL_join,tok,A_only,okeoly,o k e o l y,3,okeol,1.0,19.0,del:y@end
+ZL_join,tok,A_only,okoly,o k o l y,3,okol,1.0,16.0,del:y@end
+ZL_join,tok,A_only,okom,o k o m,3,okam,1.0,20.0,sub:o>a@mid
+ZL_join,tok,A_only,okoy,o k o y,3,okeey,1.0,117.0,sub:o>ee@mid
+ZL_join,tok,A_only,opydaiin,o p y d a iin,3,opdaiin,1.0,3.0,del:y@mid
+ZL_join,tok,A_only,pchocthy,p ch o cth y,3,chocthy,1.0,5.0,del:p@begin
+ZL_join,tok,A_only,q'o,q ' o,3,qo,1.0,15.0,del:'@mid
+ZL_join,tok,A_only,qotchar,q o t ch a r,3,qotar,1.0,60.0,del:ch@mid
+ZL_join,tok,A_only,qotoiin,q o t o iin,3,qotaiin,1.0,65.0,sub:o>a@mid
+ZL_join,tok,A_only,so,s o,3,s,1.0,37.0,del:o@end
+ZL_join,tok,A_only,shodal,sh o d a l,3,shedal,1.0,12.0,sub:o>e@mid
+ZL_join,tok,A_only,shodol,sh o d o l,3,sheol,2.0,60.0,del:o@mid;sub:d>e@mid
+ZL_join,tok,A_only,shokol,sh o k o l,3,qokol,1.0,44.0,sub:sh>q@begin
+ZL_join,tok,A_only,sholdaiin,sh o l d a iin,3,shodaiin,1.0,8.0,del:l@mid
+ZL_join,tok,A_only,sholy,sh o l y,3,shol,1.0,51.0,del:y@end
+ZL_join,tok,A_only,shoshy,sh o sh y,3,shody,1.0,27.0,sub:sh>d@mid
+ZL_join,tok,A_only,tos,t o s,3,tol,1.0,13.0,sub:s>l@end
+ZL_join,tok,A_only,toy,t o y,3,tol,1.0,13.0,sub:y>l@end
+ZL_join,tok,A_only,ycho,y ch o,3,ycheo,1.0,6.0,ins:e@mid
+ZL_join,tok,A_only,ykchody,y k ch o d y,3,ykchedy,1.0,7.0,sub:o>e@mid
+ZL_join,tok,A_only,ykhey,y k h e y,3,ykeeey,1.0,4.0,sub:h>ee@mid
+ZL_join,tok,A_only,ykoiin,y k o iin,3,ykaiin,1.0,34.0,sub:o>a@mid
+ZL_join,tok,A_only,ypchy,y p ch y,3,opchy,1.0,5.0,sub:y>o@begin
+ZL_join,tok,A_only,yteor,y t e o r,3,oteor,1.0,6.0,sub:y>o@begin
+ZL_join,tok,A_only,arary,a r a r y,2,arar,1.0,5.0,del:y@end
+ZL_join,tok,A_only,ctchy,c t ch y,2,otchy,1.0,11.0,sub:c>o@begin
+ZL_join,tok,A_only,ctos,c t o s,2,otol,2.0,23.0,sub:c>o@begin;sub:s>l@end
+ZL_join,tok,A_only,cfhaiin,cfh a iin,2,daiin,1.0,284.0,sub:cfh>d@begin
+ZL_join,tok,A_only,cfhey,cfh e y,2,chey,1.0,207.0,sub:cfh>ch@begin
+ZL_join,tok,A_only,cha,ch a,2,char,1.0,33.0,ins:r@end
+ZL_join,tok,A_only,chaldy,ch a l d y,2,daldy,1.0,9.0,sub:ch>d@begin
+ZL_join,tok,A_only,chcth,ch cth,2,chcthy,1.0,54.0,ins:y@end
+ZL_join,tok,A_only,cheain,ch e a in,2,chear,1.0,23.0,sub:in>r@end
+ZL_join,tok,A_only,chean,ch e a n,2,chear,1.0,23.0,sub:n>r@end
+ZL_join,tok,A_only,cheodam,ch e o d a m,2,cheodain,1.0,6.0,sub:m>in@end
+ZL_join,tok,A_only,cheokal,ch e o k a l,2,chekal,1.0,9.0,del:o@mid
+ZL_join,tok,A_only,cheokor,ch e o k o r,2,cheolor,1.0,3.0,sub:k>l@mid
+ZL_join,tok,A_only,cheols,ch e o l s,2,cheol,1.0,80.0,del:s@end
+ZL_join,tok,A_only,cheory,ch e o r y,2,cheody,1.0,50.0,sub:r>d@mid
+ZL_join,tok,A_only,cheotol,ch e o t o l,2,cheol,2.0,80.0,del:ot@mid
+ZL_join,tok,A_only,chkoldy,ch k o l d y,2,koldy,1.0,4.0,del:ch@begin
+ZL_join,tok,A_only,chkor,ch k o r,2,chor,1.0,27.0,del:k@mid
+ZL_join,tok,A_only,chochor,ch o ch o r,2,cholor,1.0,3.0,sub:ch>l@mid
+ZL_join,tok,A_only,chocphy,ch o cph y,2,chody,1.0,43.0,sub:cph>d@mid
+ZL_join,tok,A_only,chocthhy,ch o cth h y,2,chocthy,1.0,5.0,del:h@mid
+ZL_join,tok,A_only,chodchy,ch o d ch y,2,chody,1.0,43.0,del:ch@mid
+ZL_join,tok,A_only,chodey,ch o d e y,2,chody,1.0,43.0,del:e@mid
+ZL_join,tok,A_only,chodol,ch o d o l,2,chodal,1.0,4.0,sub:o>a@mid
+ZL_join,tok,A_only,choety,ch o e t y,2,chety,1.0,14.0,del:o@mid
+ZL_join,tok,A_only,chof,ch o f,2,chol,1.0,78.0,sub:f>l@end
+ZL_join,tok,A_only,chokan,ch o k a n,2,qokan,1.0,8.0,sub:ch>q@begin
+ZL_join,tok,A_only,chokcho,ch o k ch o,2,qokcho,1.0,3.0,sub:ch>q@begin
+ZL_join,tok,A_only,chokeo,ch o k e o,2,qokeo,1.0,4.0,sub:ch>q@begin
+ZL_join,tok,A_only,choko,ch o k o,2,choky,1.0,7.0,sub:o>y@end
+ZL_join,tok,A_only,chokody,ch o k o d y,2,qokody,1.0,4.0,sub:ch>q@begin
+ZL_join,tok,A_only,choldal,ch o l d a l,2,chodal,1.0,4.0,del:l@mid
+ZL_join,tok,A_only,choldan,ch o l d a n,2,chodaiin,2.0,16.0,del:l@mid;sub:n>iin@end
+ZL_join,tok,A_only,cholols,ch o l o l s,2,olol,2.0,8.0,del:ch@begin;del:s@end
+ZL_join,tok,A_only,choor,ch o o r,2,chor,1.0,27.0,del:o@mid
+ZL_join,tok,A_only,chorain,ch o r a in,2,orain,1.0,20.0,del:ch@begin
+ZL_join,tok,A_only,chorchy,ch o r ch y,2,korchy,1.0,2.0,sub:ch>k@begin
+ZL_join,tok,A_only,chordy,ch o r d y,2,chody,1.0,43.0,del:r@mid
+ZL_join,tok,A_only,choshy,ch o sh y,2,chody,1.0,43.0,sub:sh>d@mid
+ZL_join,tok,A_only,choteol,ch o t e o l,2,oteol,1.0,18.0,del:ch@begin
+ZL_join,tok,A_only,chotom,ch o t o m,2,otam,2.0,36.0,del:ch@begin;sub:o>a@mid
+ZL_join,tok,A_only,chotshol,ch o t sh o l,2,otol,2.0,23.0,del:ch@begin;del:sh@mid
+ZL_join,tok,A_only,chso,ch s o,2,cheo,1.0,17.0,sub:s>e@mid
+ZL_join,tok,A_only,chtor,ch t o r,2,chor,1.0,27.0,del:t@mid
+ZL_join,tok,A_only,chydy,ch y d y,2,chedy,1.0,432.0,sub:y>e@mid
+ZL_join,tok,A_only,chykey,ch y k e y,2,chekey,1.0,5.0,sub:y>e@mid
+ZL_join,tok,A_only,cpheol,cph e o l,2,cheol,1.0,80.0,sub:cph>ch@begin
+ZL_join,tok,A_only,cpholdy,cph o l d y,2,oldy,1.0,17.0,del:cph@begin
+ZL_join,tok,A_only,cphoy,cph o y,2,qoy,1.0,4.0,sub:cph>q@begin
+ZL_join,tok,A_only,cth,cth,2,r,1.0,39.0,sub:cth>r@begin
+ZL_join,tok,A_only,cthodal,cth o d a l,2,odal,1.0,5.0,del:cth@begin
+ZL_join,tok,A_only,cthodol,cth o d o l,2,qokol,2.0,44.0,sub:cth>q@begin;sub:d>k@mid
+ZL_join,tok,A_only,cthoiin,cth o iin,2,oiin,1.0,12.0,del:cth@begin
+ZL_join,tok,A_only,ctholdy,cth o l d y,2,oldy,1.0,17.0,del:cth@begin
+ZL_join,tok,A_only,cthols,cth o l s,2,ols,1.0,9.0,del:cth@begin
+ZL_join,tok,A_only,cthory,cth o r y,2,ory,1.0,10.0,del:cth@begin
+ZL_join,tok,A_only,cthyd,cth y d,2,cthy,1.0,5.0,del:d@end
+ZL_join,tok,A_only,daiinody,d a iin o d y,2,daiindy,1.0,2.0,del:o@mid
+ZL_join,tok,A_only,daky,d a k y,2,daly,1.0,15.0,sub:k>l@mid
+ZL_join,tok,A_only,darchor,d a r ch o r,2,daror,1.0,2.0,del:ch@mid
+ZL_join,tok,A_only,dchckhy,d ch ckh y,2,chckhy,1.0,114.0,del:d@begin
+ZL_join,tok,A_only,dchodaiin,d ch o d a iin,2,chodaiin,1.0,16.0,del:d@begin
+ZL_join,tok,A_only,dchog,d ch o g,2,dchol,1.0,4.0,sub:g>l@end
+ZL_join,tok,A_only,dchydy,d ch y d y,2,dchedy,1.0,25.0,sub:y>e@mid
+ZL_join,tok,A_only,ddy,d d y,2,chdy,1.0,117.0,sub:d>ch@begin
+ZL_join,tok,A_only,doaiin,d o a iin,2,daiin,1.0,284.0,del:o@mid
+ZL_join,tok,A_only,dolchey,d o l ch e y,2,olchey,1.0,21.0,del:d@begin
+ZL_join,tok,A_only,doroiin,d o r o iin,2,oraiin,2.0,45.0,del:d@begin;sub:o>a@mid
+ZL_join,tok,A_only,dsheor,d sh e o r,2,sheor,1.0,19.0,del:d@begin
+ZL_join,tok,A_only,dshody,d sh o d y,2,dshedy,1.0,31.0,sub:o>e@mid
+ZL_join,tok,A_only,du,d u,2,dy,1.0,76.0,sub:u>y@end
+ZL_join,tok,A_only,dykchy,d y k ch y,2,dyky,1.0,3.0,del:ch@mid
+ZL_join,tok,A_only,dytchy,d y t ch y,2,ytchy,1.0,3.0,del:d@begin
+ZL_join,tok,A_only,eeckhy,ee ckh y,2,chckhy,1.0,114.0,sub:ee>ch@begin
+ZL_join,tok,A_only,eeey,ee e y,2,chey,1.0,207.0,sub:ee>ch@begin
+ZL_join,tok,A_only,fcholdy,f ch o l d y,2,choldy,1.0,2.0,del:f@begin
+ZL_join,tok,A_only,foar,f o a r,2,oar,1.0,7.0,del:f@begin
+ZL_join,tok,A_only,kcho,k ch o,2,cho,1.0,6.0,del:k@begin
+ZL_join,tok,A_only,kchokchy,k ch o k ch y,2,chokchy,1.0,2.0,del:k@begin
+ZL_join,tok,A_only,keeos,k ee o s,2,cheeos,1.0,6.0,sub:k>ch@begin
+ZL_join,tok,A_only,kod,k o d,2,shod,1.0,7.0,sub:k>sh@begin
+ZL_join,tok,A_only,koiin,k o iin,2,kaiin,1.0,32.0,sub:o>a@mid
+ZL_join,tok,A_only,kokaiin,k o k a iin,2,qokaiin,1.0,241.0,sub:k>q@begin
+ZL_join,tok,A_only,koldal,k o l d a l,2,oldal,1.0,3.0,del:k@begin
+ZL_join,tok,A_only,kooiin,k o o iin,2,kaiin,2.0,32.0,del:o@mid;sub:o>a@mid
+ZL_join,tok,A_only,koraiin,k o r a iin,2,oraiin,1.0,45.0,del:k@begin
+ZL_join,tok,A_only,kshol,k sh o l,2,shol,1.0,51.0,del:k@begin
+ZL_join,tok,A_only,kshor,k sh o r,2,shor,1.0,26.0,del:k@begin
+ZL_join,tok,A_only,loiiin,l o i iin,2,oiiin,1.0,7.0,del:l@begin
+ZL_join,tok,A_only,octhos,o cth o s,2,olos,1.0,2.0,sub:cth>l@mid
+ZL_join,tok,A_only,odan,o d a n,2,odaiin,1.0,26.0,sub:n>iin@end
+ZL_join,tok,A_only,odol,o d o l,2,dol,1.0,34.0,del:o@begin
+ZL_join,tok,A_only,ofchar,o f ch a r,2,ofar,1.0,4.0,del:ch@mid
+ZL_join,tok,A_only,okchan,o k ch a n,2,okan,1.0,3.0,del:ch@mid
+ZL_join,tok,A_only,okchom,o k ch o m,2,okchor,1.0,2.0,sub:m>r@end
+ZL_join,tok,A_only,okeoy,o k e o y,2,okedy,1.0,107.0,sub:o>d@mid
+ZL_join,tok,A_only,okodaiin,o k o d a iin,2,otodaiin,1.0,4.0,sub:k>t@mid
+ZL_join,tok,A_only,okolol,o k o l o l,2,okalol,1.0,2.0,sub:o>a@mid
+ZL_join,tok,A_only,okos,o k o s,2,okol,1.0,16.0,sub:s>l@end
+ZL_join,tok,A_only,olaldy,o l a l d y,2,okaldy,1.0,5.0,sub:l>k@mid
+ZL_join,tok,A_only,olchor,o l ch o r,2,olor,1.0,23.0,del:ch@mid
+ZL_join,tok,A_only,oldain,o l d a in,2,olkain,1.0,35.0,sub:d>k@mid
+ZL_join,tok,A_only,oldor,o l d o r,2,olor,1.0,23.0,del:d@mid
+ZL_join,tok,A_only,oleees,o l ee e s,2,olchey,2.0,21.0,sub:ee>ch@mid;sub:s>y@end
+ZL_join,tok,A_only,olsheody,o l sh e o d y,2,olshedy,1.0,29.0,del:o@mid
+ZL_join,tok,A_only,opchordy,o p ch o r d y,2,opchody,1.0,2.0,del:r@mid
+ZL_join,tok,A_only,opydy,o p y d y,2,opchdy,1.0,17.0,sub:y>ch@mid
+ZL_join,tok,A_only,orchor,o r ch o r,2,oror,1.0,5.0,del:ch@mid
+ZL_join,tok,A_only,orshy,o r sh y,2,ory,1.0,10.0,del:sh@mid
+ZL_join,tok,A_only,otchaiin,o t ch a iin,2,otaiin,1.0,107.0,del:ch@mid
+ZL_join,tok,A_only,otchal,o t ch a l,2,otal,1.0,86.0,del:ch@mid
+ZL_join,tok,A_only,otchdal,o t ch d a l,2,otedal,1.0,3.0,sub:ch>e@mid
+ZL_join,tok,A_only,otcheor,o t ch e o r,2,oteor,1.0,6.0,del:ch@mid
+ZL_join,tok,A_only,oteodal,o t e o d a l,2,oteodaiin,1.0,4.0,sub:l>iin@end
+ZL_join,tok,A_only,oteeor,o t ee o r,2,otor,1.0,20.0,del:ee@mid
+ZL_join,tok,A_only,otorchy,o t o r ch y,2,otor,2.0,20.0,del:chy@end
+ZL_join,tok,A_only,otshol,o t sh o l,2,otol,1.0,23.0,del:sh@mid
+ZL_join,tok,A_only,oykeey,o y k ee y,2,okeey,1.0,117.0,del:y@mid
+ZL_join,tok,A_only,pchodol,p ch o d o l,2,pchdol,1.0,2.0,del:o@mid
+ZL_join,tok,A_only,pchy,p ch y,2,chy,1.0,26.0,del:p@begin
+ZL_join,tok,A_only,podaiir,p o d a i i r,2,podair,1.0,2.0,del:i@mid
+ZL_join,tok,A_only,pydaiin,p y d a iin,2,ydaiin,1.0,5.0,del:p@begin
+ZL_join,tok,A_only,qoaithy,q o a i t h y,2,aithy,2.0,3.0,del:qo@begin
+ZL_join,tok,A_only,qocphy,q o cph y,2,qoky,1.0,99.0,sub:cph>k@mid
+ZL_join,tok,A_only,qocthol,q o cth o l,2,qokol,1.0,44.0,sub:cth>k@mid
+ZL_join,tok,A_only,qodchy,q o d ch y,2,qokchy,1.0,24.0,sub:d>k@mid
+ZL_join,tok,A_only,qoekeey,q o e k ee y,2,qokeey,1.0,257.0,del:e@mid
+ZL_join,tok,A_only,qoekol,q o e k o l,2,qokol,1.0,44.0,del:e@mid
+ZL_join,tok,A_only,qoeor,q o e o r,2,qokor,1.0,14.0,sub:e>k@mid
+ZL_join,tok,A_only,qokchaiin,q o k ch a iin,2,qokaiin,1.0,241.0,del:ch@mid
+ZL_join,tok,A_only,qokcheo,q o k ch e o,2,qokchey,1.0,22.0,sub:o>y@end
+ZL_join,tok,A_only,qokchody,q o k ch o d y,2,qokchdy,1.0,49.0,del:o@mid
+ZL_join,tok,A_only,qokeom,q o k e o m,2,qokeol,1.0,14.0,sub:m>l@end
+ZL_join,tok,A_only,qokoiiin,q o k o i iin,2,qokaiin,2.0,241.0,del:o@mid;sub:i>a@mid
+ZL_join,tok,A_only,qokom,q o k o m,2,qokol,1.0,44.0,sub:m>l@end
+ZL_join,tok,A_only,qokorar,q o k o r a r,2,qokar,2.0,130.0,del:or@mid
+ZL_join,tok,A_only,qoos,q o o s,2,qool,1.0,3.0,sub:s>l@end
+ZL_join,tok,A_only,qopchor,q o p ch o r,2,qopchol,1.0,5.0,sub:r>l@end
+ZL_join,tok,A_only,qotchaiin,q o t ch a iin,2,qotaiin,1.0,65.0,del:ch@mid
+ZL_join,tok,A_only,qotcheaiin,q o t ch e a iin,2,qotaiin,2.0,65.0,del:che@mid
+ZL_join,tok,A_only,qotcheol,q o t ch e o l,2,qoteol,1.0,4.0,del:ch@mid
+ZL_join,tok,A_only,qotchod,q o t ch o d,2,qotched,1.0,5.0,sub:o>e@mid
+ZL_join,tok,A_only,qotchoiin,q o t ch o iin,2,qotcho,1.0,2.0,del:iin@end
+ZL_join,tok,A_only,qoteees,q o t ee e s,2,qotees,1.0,3.0,del:e@mid
+ZL_join,tok,A_only,qotod,q o t o d,2,qotol,1.0,21.0,sub:d>l@end
+ZL_join,tok,A_only,qotoeey,q o t o ee y,2,qoteey,1.0,32.0,del:o@mid
+ZL_join,tok,A_only,scheaiin,s ch e a iin,2,saiin,2.0,97.0,del:che@mid
+ZL_join,tok,A_only,scheey,s ch ee y,2,cheey,1.0,109.0,del:s@begin
+ZL_join,tok,A_only,schody,s ch o d y,2,chody,1.0,43.0,del:s@begin
+ZL_join,tok,A_only,som,s o m,2,sol,1.0,32.0,sub:m>l@end
+ZL_join,tok,A_only,sos,s o s,2,sol,1.0,32.0,sub:s>l@end
+ZL_join,tok,A_only,soshy,s o sh y,2,qoky,2.0,99.0,sub:s>q@begin;sub:sh>k@mid
+ZL_join,tok,A_only,sydy,s y d y,2,ydy,1.0,3.0,del:s@begin
+ZL_join,tok,A_only,sha,sh a,2,shy,1.0,27.0,sub:a>y@end
+ZL_join,tok,A_only,sheam,sh e a m,2,shear,1.0,15.0,sub:m>r@end
+ZL_join,tok,A_only,sheom,sh e o m,2,sheol,1.0,60.0,sub:m>l@end
+ZL_join,tok,A_only,sheear,sh ee a r,2,shar,1.0,16.0,del:ee@mid
+ZL_join,tok,A_only,shockhey,sh o ckh e y,2,shckhey,1.0,10.0,del:o@mid
+ZL_join,tok,A_only,shocthody,sh o cth o d y,2,shody,2.0,27.0,del:octh@mid
+ZL_join,tok,A_only,sholaiin,sh o l a iin,2,olaiin,1.0,39.0,del:sh@begin
+ZL_join,tok,A_only,sholar,sh o l a r,2,olar,1.0,8.0,del:sh@begin
+ZL_join,tok,A_only,shot,sh o t,2,shol,1.0,51.0,sub:t>l@end
+ZL_join,tok,A_only,shotol,sh o t o l,2,otol,1.0,23.0,del:sh@begin
+ZL_join,tok,A_only,shoy,sh o y,2,shey,1.0,166.0,sub:o>e@mid
+ZL_join,tok,A_only,shytchy,sh y t ch y,2,ytchy,1.0,3.0,del:sh@begin
+ZL_join,tok,A_only,tchodar,t ch o d a r,2,chodar,1.0,4.0,del:t@begin
+ZL_join,tok,A_only,tchos,t ch o s,2,chos,1.0,11.0,del:t@begin
+ZL_join,tok,A_only,teodar,t e o d a r,2,oteodar,1.0,2.0,ins:o@begin
+ZL_join,tok,A_only,tod,t o d,2,tol,1.0,13.0,sub:d>l@end
+ZL_join,tok,A_only,toiin,t o iin,2,taiin,1.0,22.0,sub:o>a@mid
+ZL_join,tok,A_only,torchy,t o r ch y,2,korchy,1.0,2.0,sub:t>k@begin
+ZL_join,tok,A_only,tsheody,t sh e o d y,2,sheody,1.0,27.0,del:t@begin
+ZL_join,tok,A_only,ychekchy,y ch e k ch y,2,chekchy,1.0,2.0,del:y@begin
+ZL_join,tok,A_only,ycheockhy,y ch e o ckh y,2,cheockhy,1.0,5.0,del:y@begin
+ZL_join,tok,A_only,ycheoky,y ch e o k y,2,cheoky,1.0,3.0,del:y@begin
+ZL_join,tok,A_only,ychocthy,y ch o cth y,2,chocthy,1.0,5.0,del:y@begin
+ZL_join,tok,A_only,ychody,y ch o d y,2,chody,1.0,43.0,del:y@begin
+ZL_join,tok,A_only,ychos,y ch o s,2,chos,1.0,11.0,del:y@begin
+ZL_join,tok,A_only,yd,y d,2,y,1.0,38.0,del:d@end
+ZL_join,tok,A_only,ydal,y d a l,2,dal,1.0,98.0,del:y@begin
+ZL_join,tok,A_only,yfolaiin,y f o l a iin,2,olaiin,2.0,39.0,del:yf@begin
+ZL_join,tok,A_only,ykody,y k o d y,2,ykeedy,1.0,26.0,sub:o>ee@mid
+ZL_join,tok,A_only,ykshy,y k sh y,2,ykeey,1.0,29.0,sub:sh>ee@mid
+ZL_join,tok,A_only,yokor,y o k o r,2,qokor,1.0,14.0,sub:y>q@begin
+ZL_join,tok,A_only,yol,y o l,2,ol,1.0,288.0,del:y@begin
+ZL_join,tok,A_only,ypchol,y p ch o l,2,ychol,1.0,3.0,del:p@mid
+ZL_join,tok,A_only,yshol,y sh o l,2,shol,1.0,51.0,del:y@begin
+ZL_join,tok,A_only,ytchoy,y t ch o y,2,ytchdy,1.0,7.0,sub:o>d@mid
+ZL_join,tok,A_only,yteodaiin,y t e o d a iin,2,oteodaiin,1.0,4.0,sub:y>o@begin
+ZL_join,tok,A_only,yto,y t o,2,yty,1.0,8.0,sub:o>y@end
+ZL_join,tok,A_only,ytsho,y t sh o,2,ytaiin,2.0,29.0,sub:sh>a@mid;sub:o>iin@end
+ZL_join,tok,A_only,ytshy,y t sh y,2,yteey,1.0,22.0,sub:sh>ee@mid
+ZL_join,tok,B_only,qokeedy,q o k ee d y,303,qokeey,1.0,40.0,ins:d@mid
+ZL_join,tok,B_only,otedy,o t e d y,136,otey,1.0,6.0,ins:d@mid
+ZL_join,tok,B_only,okedy,o k e d y,107,okey,1.0,19.0,ins:d@mid
+ZL_join,tok,B_only,qotedy,q o t e d y,86,qotody,1.0,4.0,sub:o>e@mid
+ZL_join,tok,B_only,qoteedy,q o t ee d y,74,qoteey,1.0,9.0,ins:d@mid
+ZL_join,tok,B_only,qokchdy,q o k ch d y,49,qokchy,1.0,38.0,ins:d@mid
+ZL_join,tok,B_only,opchedy,o p ch e d y,46,opchey,1.0,5.0,ins:d@mid
+ZL_join,tok,B_only,lkaiin,l k a iin,43,okaiin,1.0,33.0,sub:o>l@begin
+ZL_join,tok,B_only,lchey,l ch e y,42,chey,1.0,73.0,ins:l@begin
+ZL_join,tok,B_only,olchedy,o l ch e d y,42,olchey,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,olkeedy,o l k ee d y,42,olkeey,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,lkeedy,l k ee d y,39,okeedy,1.0,2.0,sub:o>l@begin
+ZL_join,tok,B_only,lshedy,l sh e d y,38,shedy,1.0,2.0,ins:l@begin
+ZL_join,tok,B_only,olkaiin,o l k a iin,35,okaiin,1.0,33.0,ins:l@mid
+ZL_join,tok,B_only,olkain,o l k a in,35,okain,1.0,6.0,ins:l@mid
+ZL_join,tok,B_only,keedy,k ee d y,34,keey,1.0,16.0,ins:d@mid
+ZL_join,tok,B_only,tedy,t e d y,33,tody,1.0,4.0,sub:o>e@mid
+ZL_join,tok,B_only,dshedy,d sh e d y,31,dshey,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,otchedy,o t ch e d y,31,otchey,1.0,11.0,ins:d@mid
+ZL_join,tok,B_only,sheckhy,sh e ckh y,31,shey,1.0,53.0,ins:ckh@mid
+ZL_join,tok,B_only,chedaiin,ch e d a iin,30,chodaiin,1.0,28.0,sub:o>e@mid
+ZL_join,tok,B_only,lkar,l k a r,30,okar,1.0,13.0,sub:o>l@begin
+ZL_join,tok,B_only,qopchedy,q o p ch e d y,30,qopchey,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,tchedy,t ch e d y,30,tchey,1.0,9.0,ins:d@mid
+ZL_join,tok,B_only,lkain,l k a in,29,okain,1.0,6.0,sub:o>l@begin
+ZL_join,tok,B_only,olshedy,o l sh e d y,29,olshey,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,pchedy,p ch e d y,29,pchody,1.0,2.0,sub:o>e@mid
+ZL_join,tok,B_only,kedy,k e d y,28,key,1.0,5.0,ins:d@mid
+ZL_join,tok,B_only,lkedy,l k e d y,28,okey,2.0,19.0,sub:o>l@begin;ins:d@mid
+ZL_join,tok,B_only,olkedy,o l k e d y,28,olkey,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,yteedy,y t ee d y,27,yteey,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,ykeedy,y k ee d y,26,ykeey,1.0,19.0,ins:d@mid
+ZL_join,tok,B_only,chedar,ch e d a r,25,chear,1.0,18.0,ins:d@mid
+ZL_join,tok,B_only,dchedy,d ch e d y,25,dchey,1.0,10.0,ins:d@mid
+ZL_join,tok,B_only,qotchedy,q o t ch e d y,24,qotchey,1.0,8.0,ins:d@mid
+ZL_join,tok,B_only,okchedy,o k ch e d y,21,okchey,1.0,13.0,ins:d@mid
+ZL_join,tok,B_only,ytedy,y t e d y,21,ytey,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,qotchdy,q o t ch d y,20,qotchy,1.0,47.0,ins:d@mid
+ZL_join,tok,B_only,rain,r a in,20,dain,1.0,90.0,sub:d>r@begin
+ZL_join,tok,B_only,lky,l k y,19,oky,1.0,38.0,sub:o>l@begin
+ZL_join,tok,B_only,lshey,l sh e y,18,shey,1.0,53.0,ins:l@begin
+ZL_join,tok,B_only,olkar,o l k a r,18,okar,1.0,13.0,ins:l@mid
+ZL_join,tok,B_only,qoeedy,q o ee d y,18,qody,1.0,5.0,ins:ee@mid
+ZL_join,tok,B_only,ykedy,y k e d y,18,ykeody,1.0,6.0,del:o@mid
+ZL_join,tok,B_only,araiin,a r a iin,17,oraiin,1.0,10.0,sub:o>a@begin
+ZL_join,tok,B_only,chdaiin,ch d a iin,17,daiin,1.0,466.0,ins:ch@begin
+ZL_join,tok,B_only,chdal,ch d a l,17,dal,1.0,67.0,ins:ch@begin
+ZL_join,tok,B_only,olky,o l k y,17,oky,1.0,38.0,ins:l@mid
+ZL_join,tok,B_only,opchdy,o p ch d y,17,opchey,1.0,5.0,sub:e>d@mid
+ZL_join,tok,B_only,lkchedy,l k ch e d y,16,okchey,2.0,13.0,sub:o>l@begin;ins:d@mid
+ZL_join,tok,B_only,qopchdy,q o p ch d y,16,qopchy,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,okchdy,o k ch d y,15,okchy,1.0,14.0,ins:d@mid
+ZL_join,tok,B_only,chdar,ch d a r,14,dar,1.0,84.0,ins:ch@begin
+ZL_join,tok,B_only,qolchey,q o l ch e y,14,qotchey,1.0,8.0,sub:t>l@mid
+ZL_join,tok,B_only,shed,sh e d,14,shey,1.0,53.0,sub:y>d@end
+ZL_join,tok,B_only,sheeky,sh ee k y,14,sheey,1.0,35.0,ins:k@mid
+ZL_join,tok,B_only,aiir,a i i r,13,daiir,1.0,5.0,del:d@begin
+ZL_join,tok,B_only,chckhdy,ch ckh d y,13,chody,1.0,41.0,sub:o>ckh@mid
+ZL_join,tok,B_only,cheeo,ch ee o,13,cho,1.0,35.0,ins:ee@mid
+ZL_join,tok,B_only,kchedy,k ch e d y,13,kchey,1.0,12.0,ins:d@mid
+ZL_join,tok,B_only,lcheey,l ch ee y,13,cheey,1.0,31.0,ins:l@begin
+ZL_join,tok,B_only,ral,r a l,13,dal,1.0,67.0,sub:d>r@begin
+ZL_join,tok,B_only,teedy,t ee d y,13,tody,1.0,4.0,sub:o>ee@mid
+ZL_join,tok,B_only,qolchedy,q o l ch e d y,12,qotchey,2.0,8.0,sub:t>l@mid;ins:d@mid
+ZL_join,tok,B_only,ror,r o r,12,chor,1.0,161.0,sub:ch>r@begin
+ZL_join,tok,B_only,shedain,sh e d a in,12,shodain,1.0,3.0,sub:o>e@mid
+ZL_join,tok,B_only,shedal,sh e d a l,12,shodal,1.0,3.0,sub:o>e@mid
+ZL_join,tok,B_only,tchdy,t ch d y,12,tchy,1.0,15.0,ins:d@mid
+ZL_join,tok,B_only,yshedy,y sh e d y,12,shedy,1.0,2.0,ins:y@begin
+ZL_join,tok,B_only,chckhedy,ch ckh e d y,11,chckhey,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,ched,ch e d,11,chey,1.0,73.0,sub:y>d@end
+ZL_join,tok,B_only,olkal,o l k a l,11,okal,1.0,29.0,ins:l@mid
+ZL_join,tok,B_only,olkeeey,o l k ee e y,11,okeeey,1.0,6.0,ins:l@mid
+ZL_join,tok,B_only,qokshedy,q o k sh e d y,11,qokey,2.0,17.0,ins:sh@mid;ins:d@mid
+ZL_join,tok,B_only,ychedy,y ch e d y,11,ychey,1.0,8.0,ins:d@mid
+ZL_join,tok,B_only,arody,a r o d y,10,chody,2.0,41.0,ins:a@begin;sub:ch>r@begin
+ZL_join,tok,B_only,chdam,ch d a m,10,dam,1.0,38.0,ins:ch@begin
+ZL_join,tok,B_only,laiin,l a iin,10,daiin,1.0,466.0,sub:d>l@begin
+ZL_join,tok,B_only,pchedar,p ch e d a r,10,chear,2.0,18.0,ins:p@begin;ins:d@mid
+ZL_join,tok,B_only,qolkeedy,q o l k ee d y,10,qokeey,2.0,40.0,ins:l@mid;ins:d@mid
+ZL_join,tok,B_only,rchedy,r ch e d y,10,chey,2.0,73.0,ins:r@begin;ins:d@mid
+ZL_join,tok,B_only,ary,a r y,9,ar,1.0,33.0,ins:y@end
+ZL_join,tok,B_only,chdor,ch d o r,9,chor,1.0,161.0,ins:d@mid
+ZL_join,tok,B_only,chkal,ch k a l,9,okal,1.0,29.0,sub:o>ch@begin
+ZL_join,tok,B_only,fchedy,f ch e d y,9,fcheody,1.0,2.0,del:o@mid
+ZL_join,tok,B_only,ochedy,o ch e d y,9,ochey,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,otedar,o t e d a r,9,otar,2.0,8.0,ins:ed@mid
+ZL_join,tok,B_only,qokl,q o k l,9,qokol,1.0,43.0,del:o@mid
+ZL_join,tok,B_only,shek,sh e k,9,shey,1.0,53.0,sub:y>k@end
+ZL_join,tok,B_only,tshedy,t sh e d y,9,tsheody,1.0,2.0,del:o@mid
+ZL_join,tok,B_only,ytchedy,y t ch e d y,9,ytchey,1.0,5.0,ins:d@mid
+ZL_join,tok,B_only,chekar,ch e k a r,8,chear,1.0,18.0,ins:k@mid
+ZL_join,tok,B_only,lcheedy,l ch ee d y,8,cheedy,1.0,3.0,ins:l@begin
+ZL_join,tok,B_only,lkchey,l k ch e y,8,okchey,1.0,13.0,sub:o>l@begin
+ZL_join,tok,B_only,lkeeey,l k ee e y,8,okeeey,1.0,6.0,sub:o>l@begin
+ZL_join,tok,B_only,okeeedy,o k ee e d y,8,okeeey,1.0,6.0,ins:d@mid
+ZL_join,tok,B_only,oram,o r a m,8,oraiin,1.0,10.0,sub:iin>m@end
+ZL_join,tok,B_only,otshedy,o t sh e d y,8,otchey,2.0,11.0,sub:ch>sh@mid;ins:d@mid
+ZL_join,tok,B_only,qofchedy,q o f ch e d y,8,qotchey,2.0,8.0,sub:t>f@mid;ins:d@mid
+ZL_join,tok,B_only,qokan,q o k a n,8,qokaiin,1.0,22.0,sub:iin>n@end
+ZL_join,tok,B_only,qokedar,q o k e d a r,8,qokar,2.0,14.0,ins:ed@mid
+ZL_join,tok,B_only,qokees,q o k ee s,8,qokeey,1.0,40.0,sub:y>s@end
+ZL_join,tok,B_only,shedar,sh e d a r,8,shear,1.0,6.0,ins:d@mid
+ZL_join,tok,B_only,tain,t a in,8,dain,1.0,90.0,sub:d>t@begin
+ZL_join,tok,B_only,alol,a l o l,7,olol,1.0,4.0,sub:o>a@begin
+ZL_join,tok,B_only,chcthdy,ch cth d y,7,chody,1.0,41.0,sub:o>cth@mid
+ZL_join,tok,B_only,cphedy,cph e d y,7,cphey,1.0,5.0,ins:d@mid
+ZL_join,tok,B_only,cthdy,cth d y,7,cthy,1.0,90.0,ins:d@mid
+ZL_join,tok,B_only,dchdy,d ch d y,7,dchy,1.0,22.0,ins:d@mid
+ZL_join,tok,B_only,lcheol,l ch e o l,7,cheol,1.0,59.0,ins:l@begin
+ZL_join,tok,B_only,lchy,l ch y,7,chy,1.0,86.0,ins:l@begin
+ZL_join,tok,B_only,lkey,l k e y,7,okey,1.0,19.0,sub:o>l@begin
+ZL_join,tok,B_only,lr,l r,7,or,1.0,82.0,sub:o>l@begin
+ZL_join,tok,B_only,okees,o k ee s,7,okeey,1.0,31.0,sub:y>s@end
+ZL_join,tok,B_only,olchdy,o l ch d y,7,oldy,1.0,5.0,ins:ch@mid
+ZL_join,tok,B_only,polchedy,p o l ch e d y,7,olchey,2.0,4.0,ins:p@begin;ins:d@mid
+ZL_join,tok,B_only,qoked,q o k e d,7,qokey,1.0,17.0,sub:y>d@end
+ZL_join,tok,B_only,qoly,q o l y,7,qoky,1.0,34.0,sub:k>l@mid
+ZL_join,tok,B_only,qopaiin,q o p a iin,7,qokaiin,1.0,22.0,sub:k>p@mid
+ZL_join,tok,B_only,rshedy,r sh e d y,7,shedy,1.0,2.0,ins:r@begin
+ZL_join,tok,B_only,schedy,s ch e d y,7,schey,1.0,5.0,ins:d@mid
+ZL_join,tok,B_only,solchedy,s o l ch e d y,7,olchey,2.0,4.0,ins:s@begin;ins:d@mid
+ZL_join,tok,B_only,solshedy,s o l sh e d y,7,olshey,2.0,2.0,ins:s@begin;ins:d@mid
+ZL_join,tok,B_only,shety,sh e t y,7,shey,1.0,53.0,ins:t@mid
+ZL_join,tok,B_only,ycheedy,y ch ee d y,7,ycheey,1.0,6.0,ins:d@mid
+ZL_join,tok,B_only,ykchedy,y k ch e d y,7,ykchody,1.0,3.0,sub:o>e@mid
+ZL_join,tok,B_only,alkain,a l k a in,6,okain,2.0,6.0,ins:a@begin;sub:o>l@begin
+ZL_join,tok,B_only,arol,a r o l,6,aral,1.0,5.0,sub:a>o@mid
+ZL_join,tok,B_only,chcthedy,ch cth e d y,6,chcthody,1.0,2.0,sub:o>e@mid
+ZL_join,tok,B_only,chedam,ch e d a m,6,cheodam,1.0,2.0,del:o@mid
+ZL_join,tok,B_only,cheeos,ch ee o s,6,chos,1.0,20.0,ins:ee@mid
+ZL_join,tok,B_only,cholkaiin,ch o l k a iin,6,chokaiin,1.0,8.0,ins:l@mid
+ZL_join,tok,B_only,dalchedy,d a l ch e d y,6,dalchdy,1.0,2.0,ins:e@mid
+ZL_join,tok,B_only,dalshedy,d a l sh e d y,6,daldy,2.0,7.0,ins:she@mid
+ZL_join,tok,B_only,lar,l a r,6,dar,1.0,84.0,sub:d>l@begin
+ZL_join,tok,B_only,lched,l ch e d,6,chey,2.0,73.0,ins:l@begin;sub:y>d@end
+ZL_join,tok,B_only,lkam,l k a m,6,okam,1.0,6.0,sub:o>l@begin
+ZL_join,tok,B_only,lkl,l k l,6,chol,2.0,238.0,sub:ch>l@begin;sub:o>k@mid
+ZL_join,tok,B_only,lsheedy,l sh ee d y,6,sheey,2.0,35.0,ins:l@begin;ins:d@mid
+ZL_join,tok,B_only,lsheey,l sh ee y,6,sheey,1.0,35.0,ins:l@begin
+ZL_join,tok,B_only,lteedy,l t ee d y,6,oteey,2.0,12.0,sub:o>l@begin;ins:d@mid
+ZL_join,tok,B_only,ockhedy,o ckh e d y,6,ockhey,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,oeedy,o ee d y,6,ody,1.0,7.0,ins:ee@mid
+ZL_join,tok,B_only,ofchedy,o f ch e d y,6,ofchey,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,okchd,o k ch d,6,okchy,1.0,14.0,sub:y>d@end
+ZL_join,tok,B_only,okedar,o k e d a r,6,okear,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,olkchedy,o l k ch e d y,6,okchey,2.0,13.0,ins:l@mid;ins:d@mid
+ZL_join,tok,B_only,oltedy,o l t e d y,6,otey,2.0,6.0,ins:l@mid;ins:d@mid
+ZL_join,tok,B_only,orair,o r a i r,6,orar,1.0,2.0,ins:i@mid
+ZL_join,tok,B_only,oteeey,o t ee e y,6,oteey,1.0,12.0,ins:e@mid
+ZL_join,tok,B_only,qochey,q o ch e y,6,qokey,1.0,17.0,sub:k>ch@mid
+ZL_join,tok,B_only,qokear,q o k e a r,6,qokar,1.0,14.0,ins:e@mid
+ZL_join,tok,B_only,qolkeey,q o l k ee y,6,qokeey,1.0,40.0,ins:l@mid
+ZL_join,tok,B_only,rchey,r ch e y,6,chey,1.0,73.0,ins:r@begin
+ZL_join,tok,B_only,sshedy,s sh e d y,6,shedy,1.0,2.0,ins:s@begin
+ZL_join,tok,B_only,shckhedy,sh ckh e d y,6,shedy,1.0,2.0,ins:ckh@mid
+ZL_join,tok,B_only,shdar,sh d a r,6,dar,1.0,84.0,ins:sh@begin
+ZL_join,tok,B_only,tshey,t sh e y,6,shey,1.0,53.0,ins:t@begin
+ZL_join,tok,B_only,ysheedy,y sh ee d y,6,sheey,2.0,35.0,ins:y@begin;ins:d@mid
+ZL_join,tok,B_only,alkaiin,a l k a iin,5,okaiin,2.0,33.0,ins:a@begin;sub:o>l@begin
+ZL_join,tok,B_only,arain,a r a in,5,aral,1.0,5.0,sub:l>in@end
+ZL_join,tok,B_only,arar,a r a r,5,aral,1.0,5.0,sub:l>r@end
+ZL_join,tok,B_only,chekedy,ch e k e d y,5,cheody,2.0,25.0,ins:k@mid;sub:o>e@mid
+ZL_join,tok,B_only,chekey,ch e k e y,5,cheky,1.0,12.0,ins:e@mid
+ZL_join,tok,B_only,chetain,ch e t a in,5,cheain,1.0,2.0,ins:t@mid
+ZL_join,tok,B_only,cheedaiin,ch ee d a iin,5,chodaiin,1.0,28.0,sub:o>ee@mid
+ZL_join,tok,B_only,cheedar,ch ee d a r,5,chodar,1.0,7.0,sub:o>ee@mid
+ZL_join,tok,B_only,chkedy,ch k e d y,5,chkey,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,chtal,ch t a l,5,otal,1.0,19.0,sub:o>ch@begin
+ZL_join,tok,B_only,dsheedy,d sh ee d y,5,dshody,1.0,2.0,sub:o>ee@mid
+ZL_join,tok,B_only,lain,l a in,5,dain,1.0,90.0,sub:d>l@begin
+ZL_join,tok,B_only,lchal,l ch a l,5,chal,1.0,12.0,ins:l@begin
+ZL_join,tok,B_only,lkchdy,l k ch d y,5,ykchdy,1.0,2.0,sub:y>l@begin
+ZL_join,tok,B_only,lkeeody,l k ee o d y,5,keeody,1.0,4.0,ins:l@begin
+ZL_join,tok,B_only,loly,l o l y,5,choly,1.0,12.0,sub:ch>l@begin
+ZL_join,tok,B_only,lpchedy,l p ch e d y,5,opchey,2.0,5.0,sub:o>l@begin;ins:d@mid
+ZL_join,tok,B_only,ltedy,l t e d y,5,otey,2.0,6.0,sub:o>l@begin;ins:d@mid
+ZL_join,tok,B_only,ofchdy,o f ch d y,5,ofchey,1.0,2.0,sub:e>d@mid
+ZL_join,tok,B_only,okaral,o k a r a l,5,okalal,1.0,2.0,sub:l>r@mid
+ZL_join,tok,B_only,okedal,o k e d a l,5,okeal,1.0,5.0,ins:d@mid
+ZL_join,tok,B_only,olal,o l a l,5,okal,1.0,29.0,sub:k>l@mid
+ZL_join,tok,B_only,olam,o l a m,5,olaiin,1.0,10.0,sub:iin>m@end
+ZL_join,tok,B_only,olcheedy,o l ch ee d y,5,olcheey,1.0,3.0,ins:d@mid
+ZL_join,tok,B_only,olkchdy,o l k ch d y,5,okchy,2.0,14.0,ins:l@mid;ins:d@mid
+ZL_join,tok,B_only,olpchedy,o l p ch e d y,5,opchey,2.0,5.0,ins:l@mid;ins:d@mid
+ZL_join,tok,B_only,oror,o r o r,5,okor,1.0,20.0,sub:k>r@mid
+ZL_join,tok,B_only,oshey,o sh e y,5,shey,1.0,53.0,ins:o@begin
+ZL_join,tok,B_only,oteed,o t ee d,5,oteey,1.0,12.0,sub:y>d@end
+ZL_join,tok,B_only,pchdair,p ch d a i r,5,dair,2.0,35.0,ins:pch@begin
+ZL_join,tok,B_only,pchedal,p ch e d a l,5,cheal,2.0,8.0,ins:p@begin;ins:d@mid
+ZL_join,tok,B_only,qoedy,q o e d y,5,qody,1.0,5.0,ins:e@mid
+ZL_join,tok,B_only,qokeechy,q o k ee ch y,5,qokeey,1.0,40.0,ins:ch@mid
+ZL_join,tok,B_only,qokeedar,q o k ee d a r,5,qokar,2.0,14.0,ins:eed@mid
+ZL_join,tok,B_only,qolkain,q o l k a in,5,qokain,1.0,4.0,ins:l@mid
+ZL_join,tok,B_only,qolshey,q o l sh e y,5,qotshey,1.0,4.0,sub:t>l@mid
+ZL_join,tok,B_only,qolsheedy,q o l sh ee d y,5,olsheey,2.0,2.0,ins:q@begin;ins:d@mid
+ZL_join,tok,B_only,qopar,q o p a r,5,qokar,1.0,14.0,sub:k>p@mid
+ZL_join,tok,B_only,qotaly,q o t a l y,5,qokaly,1.0,6.0,sub:k>t@mid
+ZL_join,tok,B_only,qotched,q o t ch e d,5,qotchey,1.0,8.0,sub:y>d@end
+ZL_join,tok,B_only,solkeedy,s o l k ee d y,5,olkeey,2.0,2.0,ins:s@begin;ins:d@mid
+ZL_join,tok,B_only,tshdy,t sh d y,5,tody,1.0,4.0,sub:o>sh@mid
+ZL_join,tok,B_only,aiiny,a iin y,4,aiin,1.0,51.0,ins:y@end
+ZL_join,tok,B_only,alchedy,a l ch e d y,4,olchey,2.0,4.0,sub:o>a@begin;ins:d@mid
+ZL_join,tok,B_only,alkeedy,a l k ee d y,4,aldy,2.0,3.0,ins:kee@mid
+ZL_join,tok,B_only,aror,a r o r,4,alor,1.0,2.0,sub:l>r@mid
+ZL_join,tok,B_only,chckhal,ch ckh a l,4,chal,1.0,12.0,ins:ckh@mid
+ZL_join,tok,B_only,chckhd,ch ckh d,4,chckhy,1.0,15.0,sub:y>d@end
+ZL_join,tok,B_only,chedol,ch e d o l,4,cheol,1.0,59.0,ins:d@mid
+ZL_join,tok,B_only,chekeedy,ch e k ee d y,4,chekeey,1.0,3.0,ins:d@mid
+ZL_join,tok,B_only,cheoar,ch e o a r,4,cheor,1.0,47.0,ins:a@mid
+ZL_join,tok,B_only,cheolkain,ch e o l k a in,4,chokain,2.0,2.0,ins:e@mid;ins:l@mid
+ZL_join,tok,B_only,cheoty,ch e o t y,4,choty,1.0,25.0,ins:e@mid
+ZL_join,tok,B_only,chep,ch e p,4,chey,1.0,73.0,sub:y>p@end
+ZL_join,tok,B_only,chetey,ch e t e y,4,chety,1.0,6.0,ins:e@mid
+ZL_join,tok,B_only,chokedy,ch o k e d y,4,chokey,1.0,6.0,ins:d@mid
+ZL_join,tok,B_only,cholky,ch o l k y,4,choky,1.0,26.0,ins:l@mid
+ZL_join,tok,B_only,dolshedy,d o l sh e d y,4,olshey,2.0,2.0,ins:d@begin;ins:d@mid
+ZL_join,tok,B_only,eeedy,ee e d y,4,shedy,1.0,2.0,sub:sh>ee@begin
+ZL_join,tok,B_only,fcheey,f ch ee y,4,cheey,1.0,31.0,ins:f@begin
+ZL_join,tok,B_only,kcheody,k ch e o d y,4,cheody,1.0,25.0,ins:k@begin
+ZL_join,tok,B_only,lal,l a l,4,dal,1.0,67.0,sub:d>l@begin
+ZL_join,tok,B_only,lam,l a m,4,dam,1.0,38.0,sub:d>l@begin
+ZL_join,tok,B_only,ldar,l d a r,4,dar,1.0,84.0,ins:l@begin
+ZL_join,tok,B_only,lkair,l k a i r,4,ykair,1.0,3.0,sub:y>l@begin
+ZL_join,tok,B_only,lkal,l k a l,4,okal,1.0,29.0,sub:o>l@begin
+ZL_join,tok,B_only,lkeody,l k e o d y,4,okeody,1.0,7.0,sub:o>l@begin
+ZL_join,tok,B_only,lkeol,l k e o l,4,okeol,1.0,38.0,sub:o>l@begin
+ZL_join,tok,B_only,lkeeedy,l k ee e d y,4,okeeey,2.0,6.0,sub:o>l@begin;ins:d@mid
+ZL_join,tok,B_only,lkeeol,l k ee o l,4,okeeol,1.0,7.0,sub:o>l@begin
+ZL_join,tok,B_only,lkshedy,l k sh e d y,4,ksheody,2.0,3.0,ins:l@begin;del:o@mid
+ZL_join,tok,B_only,loiin,l o iin,4,soiin,1.0,10.0,sub:s>l@begin
+ZL_join,tok,B_only,lom,l o m,4,chom,1.0,12.0,sub:ch>l@begin
+ZL_join,tok,B_only,loty,l o t y,4,oty,1.0,39.0,ins:l@begin
+ZL_join,tok,B_only,ofar,o f a r,4,okar,1.0,13.0,sub:k>f@mid
+ZL_join,tok,B_only,okalchedy,o k a l ch e d y,4,okaldy,2.0,5.0,ins:che@mid
+ZL_join,tok,B_only,okechedy,o k e ch e d y,4,okchey,2.0,13.0,ins:e@mid;ins:d@mid
+ZL_join,tok,B_only,okshedy,o k sh e d y,4,okshey,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,olfchedy,o l f ch e d y,4,olchey,2.0,4.0,ins:f@mid;ins:d@mid
+ZL_join,tok,B_only,olkair,o l k a i r,4,okar,2.0,13.0,ins:l@mid;ins:i@mid
+ZL_join,tok,B_only,olkeeo,o l k ee o,4,olkeey,1.0,2.0,sub:y>o@end
+ZL_join,tok,B_only,olr,o l r,4,or,1.0,82.0,ins:l@mid
+ZL_join,tok,B_only,olshdy,o l sh d y,4,oldy,1.0,5.0,ins:sh@mid
+ZL_join,tok,B_only,olsheedy,o l sh ee d y,4,olsheey,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,opchedaiin,o p ch e d a iin,4,pchodaiin,2.0,4.0,ins:o@begin;sub:o>e@mid
+ZL_join,tok,B_only,oraiiin,o r a i iin,4,oraiin,1.0,10.0,ins:i@mid
+ZL_join,tok,B_only,oroly,o r o l y,4,okoly,1.0,3.0,sub:k>r@mid
+ZL_join,tok,B_only,orshedy,o r sh e d y,4,shedy,2.0,2.0,ins:or@begin
+ZL_join,tok,B_only,otarain,o t a r a in,4,otar,2.0,8.0,ins:ain@end
+ZL_join,tok,B_only,otarar,o t a r a r,4,otar,2.0,8.0,ins:ar@mid
+ZL_join,tok,B_only,oteal,o t e a l,4,otal,1.0,19.0,ins:e@mid
+ZL_join,tok,B_only,otechdy,o t e ch d y,4,oteody,1.0,4.0,sub:o>ch@mid
+ZL_join,tok,B_only,oteeo,o t ee o,4,oteey,1.0,12.0,sub:y>o@end
+ZL_join,tok,B_only,otodaiin,o t o d a iin,4,todaiin,1.0,3.0,ins:o@begin
+ZL_join,tok,B_only,par,p a r,4,dar,1.0,84.0,sub:d>p@begin
+ZL_join,tok,B_only,pchdar,p ch d a r,4,pchar,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,pchedaiin,p ch e d a iin,4,pchodaiin,1.0,4.0,sub:o>e@mid
+ZL_join,tok,B_only,psheody,p sh e o d y,4,sheody,1.0,13.0,ins:p@begin
+ZL_join,tok,B_only,qoeedaiin,q o ee d a iin,4,qodaiin,1.0,14.0,ins:ee@mid
+ZL_join,tok,B_only,qoiiin,q o i iin,4,qoaiin,1.0,10.0,sub:a>i@mid
+ZL_join,tok,B_only,qokdy,q o k d y,4,qokeey,1.0,40.0,sub:ee>d@mid
+ZL_join,tok,B_only,qokechedy,q o k e ch e d y,4,qokeody,2.0,17.0,ins:ch@mid;sub:o>e@mid
+ZL_join,tok,B_only,qokedain,q o k e d a in,4,qokain,2.0,4.0,ins:ed@mid
+ZL_join,tok,B_only,qokeeedy,q o k ee e d y,4,qokeeody,1.0,3.0,sub:o>e@mid
+ZL_join,tok,B_only,qolky,q o l k y,4,qoky,1.0,34.0,ins:l@mid
+ZL_join,tok,B_only,qolshedy,q o l sh e d y,4,qotshey,2.0,4.0,sub:t>l@mid;ins:d@mid
+ZL_join,tok,B_only,qopshedy,q o p sh e d y,4,qotshey,2.0,4.0,sub:t>p@mid;ins:d@mid
+ZL_join,tok,B_only,raraiin,r a r a iin,4,oraiin,2.0,10.0,ins:r@begin;sub:o>a@begin
+ZL_join,tok,B_only,salchedy,s a l ch e d y,4,dalchdy,2.0,2.0,sub:d>s@begin;ins:e@mid
+ZL_join,tok,B_only,solkedy,s o l k e d y,4,olkey,2.0,2.0,ins:s@begin;ins:d@mid
+ZL_join,tok,B_only,solshey,s o l sh e y,4,olshey,1.0,2.0,ins:s@begin
+ZL_join,tok,B_only,shdal,sh d a l,4,dal,1.0,67.0,ins:sh@begin
+ZL_join,tok,B_only,sheckhedy,sh e ckh e d y,4,sheody,2.0,13.0,ins:ckh@mid;sub:o>e@mid
+ZL_join,tok,B_only,sheckhey,sh e ckh e y,4,checkhey,1.0,3.0,sub:ch>sh@begin
+ZL_join,tok,B_only,sheed,sh ee d,4,sheey,1.0,35.0,sub:y>d@end
+ZL_join,tok,B_only,sheeey,sh ee e y,4,shey,1.0,53.0,ins:ee@mid
+ZL_join,tok,B_only,sheet,sh ee t,4,sheey,1.0,35.0,sub:y>t@end
+ZL_join,tok,B_only,taraiin,t a r a iin,4,taiin,2.0,12.0,ins:ar@mid
+ZL_join,tok,B_only,tedain,t e d a in,4,dain,2.0,90.0,ins:te@begin
+ZL_join,tok,B_only,ychedar,y ch e d a r,4,ychear,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,ykeeedy,y k ee e d y,4,ykeeody,1.0,3.0,sub:o>e@mid
+ZL_join,tok,B_only,ykeeo,y k ee o,4,ykeey,1.0,19.0,sub:y>o@end
+ZL_join,tok,B_only,ypchdy,y p ch d y,4,ypchy,1.0,3.0,ins:d@mid
+ZL_join,tok,B_only,yteeey,y t ee e y,4,ytchey,1.0,5.0,sub:ch>ee@mid
+ZL_join,tok,B_only,ail,a i l,3,al,1.0,17.0,ins:i@mid
+ZL_join,tok,B_only,airody,a i r o d y,3,,,,
+ZL_join,tok,B_only,aky,a k y,3,oky,1.0,38.0,sub:o>a@begin
+ZL_join,tok,B_only,alain,a l a in,3,dain,2.0,90.0,ins:a@begin;sub:d>l@begin
+ZL_join,tok,B_only,alkam,a l k a m,3,okam,2.0,6.0,ins:a@begin;sub:o>l@begin
+ZL_join,tok,B_only,alky,a l k y,3,aldy,1.0,3.0,sub:d>k@mid
+ZL_join,tok,B_only,alody,a l o d y,3,aldy,1.0,3.0,ins:o@mid
+ZL_join,tok,B_only,als,a l s,3,al,1.0,17.0,ins:s@end
+ZL_join,tok,B_only,charam,ch a r a m,3,daram,1.0,2.0,sub:d>ch@begin
+ZL_join,tok,B_only,chckhaiin,ch ckh a iin,3,chaiin,1.0,32.0,ins:ckh@mid
+ZL_join,tok,B_only,chcphedy,ch cph e d y,3,chey,2.0,73.0,ins:cph@mid;ins:d@mid
+ZL_join,tok,B_only,chcphey,ch cph e y,3,chey,1.0,73.0,ins:cph@mid
+ZL_join,tok,B_only,chd,ch d,3,chy,1.0,86.0,sub:y>d@end
+ZL_join,tok,B_only,chdaly,ch d a l y,3,daly,1.0,6.0,ins:ch@begin
+ZL_join,tok,B_only,chealy,ch e a l y,3,cheal,1.0,8.0,ins:y@end
+ZL_join,tok,B_only,checthey,ch e cth e y,3,chocthey,1.0,3.0,sub:o>e@mid
+ZL_join,tok,B_only,chedor,ch e d o r,3,cheor,1.0,47.0,ins:d@mid
+ZL_join,tok,B_only,chefchy,ch e f ch y,3,chetchy,1.0,4.0,sub:t>f@mid
+ZL_join,tok,B_only,chek,ch e k,3,chey,1.0,73.0,sub:y>k@end
+ZL_join,tok,B_only,cheoaiin,ch e o a iin,3,cheodaiin,1.0,8.0,del:d@mid
+ZL_join,tok,B_only,cheokaiin,ch e o k a iin,3,chokaiin,1.0,8.0,ins:e@mid
+ZL_join,tok,B_only,cheokain,ch e o k a in,3,chokain,1.0,2.0,ins:e@mid
+ZL_join,tok,B_only,cheolor,ch e o l o r,3,cholor,1.0,2.0,ins:e@mid
+ZL_join,tok,B_only,chetedy,ch e t e d y,3,cheody,2.0,25.0,ins:t@mid;sub:o>e@mid
+ZL_join,tok,B_only,cheykain,ch e y k a in,3,chokain,2.0,2.0,ins:e@mid;sub:o>y@mid
+ZL_join,tok,B_only,cheytal,ch e y t a l,3,cheal,2.0,8.0,ins:yt@mid
+ZL_join,tok,B_only,cheekain,ch ee k a in,3,chokain,1.0,2.0,sub:o>ee@mid
+ZL_join,tok,B_only,cheeteey,ch ee t ee y,3,cheey,2.0,31.0,ins:eet@mid
+ZL_join,tok,B_only,cheety,ch ee t y,3,cheey,1.0,31.0,ins:t@mid
+ZL_join,tok,B_only,cholchedy,ch o l ch e d y,3,choldy,2.0,8.0,ins:che@mid
+ZL_join,tok,B_only,cholkar,ch o l k a r,3,qokar,2.0,14.0,sub:q>ch@begin;ins:l@mid
+ZL_join,tok,B_only,chpchy,ch p ch y,3,chkchy,1.0,5.0,sub:k>p@mid
+ZL_join,tok,B_only,ckhdy,ckh d y,3,dy,1.0,78.0,ins:ckh@begin
+ZL_join,tok,B_only,ckhedy,ckh e d y,3,ckhey,1.0,24.0,ins:d@mid
+ZL_join,tok,B_only,dairody,d a i r o d y,3,daiidy,2.0,3.0,ins:r@mid;sub:i>o@mid
+ZL_join,tok,B_only,darchedy,d a r ch e d y,3,dalchdy,2.0,2.0,sub:l>r@mid;ins:e@mid
+ZL_join,tok,B_only,dcheedy,d ch ee d y,3,dcheey,1.0,5.0,ins:d@mid
+ZL_join,tok,B_only,dolor,d o l o r,3,dalor,1.0,4.0,sub:a>o@mid
+ZL_join,tok,B_only,dshdy,d sh d y,3,dshy,1.0,7.0,ins:d@mid
+ZL_join,tok,B_only,dyteey,d y t ee y,3,yteey,1.0,4.0,ins:d@begin
+ZL_join,tok,B_only,eedy,ee d y,3,dy,1.0,78.0,ins:ee@begin
+ZL_join,tok,B_only,fchdy,f ch d y,3,chdy,1.0,8.0,ins:f@begin
+ZL_join,tok,B_only,fchor,f ch o r,3,chor,1.0,161.0,ins:f@begin
+ZL_join,tok,B_only,kcheo,k ch e o,3,cheo,1.0,15.0,ins:k@begin
+ZL_join,tok,B_only,kechedy,k e ch e d y,3,kchey,2.0,12.0,ins:e@mid;ins:d@mid
+ZL_join,tok,B_only,kedar,k e d a r,3,dar,2.0,84.0,ins:ke@begin
+ZL_join,tok,B_only,kshdy,k sh d y,3,kshy,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,kshedy,k sh e d y,3,ksheody,1.0,3.0,del:o@mid
+ZL_join,tok,B_only,lcheam,l ch e a m,3,chear,2.0,18.0,ins:l@begin;sub:r>m@end
+ZL_join,tok,B_only,lcheckhy,l ch e ckh y,3,checkhy,1.0,2.0,ins:l@begin
+ZL_join,tok,B_only,lcheo,l ch e o,3,cheo,1.0,15.0,ins:l@begin
+ZL_join,tok,B_only,ld,l d,3,d,1.0,16.0,ins:l@begin
+ZL_join,tok,B_only,lkeed,l k ee d,3,okeey,2.0,31.0,sub:o>l@begin;sub:y>d@end
+ZL_join,tok,B_only,lkol,l k o l,3,okol,1.0,36.0,sub:o>l@begin
+ZL_join,tok,B_only,lkor,l k o r,3,okor,1.0,20.0,sub:o>l@begin
+ZL_join,tok,B_only,lodaiin,l o d a iin,3,chodaiin,1.0,28.0,sub:ch>l@begin
+ZL_join,tok,B_only,lsheody,l sh e o d y,3,sheody,1.0,13.0,ins:l@begin
+ZL_join,tok,B_only,ltal,l t a l,3,otal,1.0,19.0,sub:o>l@begin
+ZL_join,tok,B_only,m,m,3,s,1.0,126.0,sub:s>m@begin
+ZL_join,tok,B_only,ocheey,o ch ee y,3,okeey,1.0,31.0,sub:k>ch@mid
+ZL_join,tok,B_only,oikhy,o i k h y,3,shoikhy,1.0,2.0,del:sh@begin
+ZL_join,tok,B_only,okchdar,o k ch d a r,3,okchar,1.0,3.0,ins:d@mid
+ZL_join,tok,B_only,okechdy,o k e ch d y,3,okeody,1.0,7.0,sub:o>ch@mid
+ZL_join,tok,B_only,okechy,o k e ch y,3,okey,1.0,19.0,ins:ch@mid
+ZL_join,tok,B_only,okedaiin,o k e d a iin,3,okodaiin,1.0,2.0,sub:o>e@mid
+ZL_join,tok,B_only,okedain,o k e d a in,3,okain,2.0,6.0,ins:ed@mid
+ZL_join,tok,B_only,okedam,o k e d a m,3,okeam,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,okeshy,o k e sh y,3,okey,1.0,19.0,ins:sh@mid
+ZL_join,tok,B_only,okeear,o k ee a r,3,okar,1.0,13.0,ins:ee@mid
+ZL_join,tok,B_only,okeed,o k ee d,3,okeey,1.0,31.0,sub:y>d@end
+ZL_join,tok,B_only,okeedal,o k ee d a l,3,okal,2.0,29.0,ins:eed@mid
+ZL_join,tok,B_only,olair,o l a i r,3,dair,2.0,35.0,ins:o@begin;sub:d>l@begin
+ZL_join,tok,B_only,oleeedy,o l ee e d y,3,okeeey,2.0,6.0,sub:k>l@mid;ins:d@mid
+ZL_join,tok,B_only,oleey,o l ee y,3,okeey,1.0,31.0,sub:k>l@mid
+ZL_join,tok,B_only,olkchey,o l k ch e y,3,okchey,1.0,13.0,ins:l@mid
+ZL_join,tok,B_only,olkeechy,o l k ee ch y,3,olkeey,1.0,2.0,ins:ch@mid
+ZL_join,tok,B_only,olteedy,o l t ee d y,3,oteey,2.0,12.0,ins:l@mid;ins:d@mid
+ZL_join,tok,B_only,opam,o p a m,3,otam,1.0,7.0,sub:t>p@mid
+ZL_join,tok,B_only,opary,o p a r y,3,opar,1.0,2.0,ins:y@end
+ZL_join,tok,B_only,opcheedy,o p ch ee d y,3,opchey,2.0,5.0,ins:ee@mid;sub:e>d@mid
+ZL_join,tok,B_only,opdaiin,o p d a iin,3,odaiin,1.0,27.0,ins:p@mid
+ZL_join,tok,B_only,otaraiin,o t a r a iin,3,otaiin,2.0,28.0,ins:ar@mid
+ZL_join,tok,B_only,otaram,o t a r a m,3,otar,2.0,8.0,ins:am@end
+ZL_join,tok,B_only,otedal,o t e d a l,3,oteodal,1.0,2.0,del:o@mid
+ZL_join,tok,B_only,otedam,o t e d a m,3,otam,2.0,7.0,ins:ed@mid
+ZL_join,tok,B_only,oteedaiin,o t ee d a iin,3,otaiin,2.0,28.0,ins:eed@mid
+ZL_join,tok,B_only,otshdy,o t sh d y,3,otshy,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,pchdaiin,p ch d a iin,3,pchodaiin,1.0,4.0,del:o@mid
+ZL_join,tok,B_only,pchodain,p ch o d a in,3,pchodaiin,1.0,4.0,sub:iin>in@end
+ZL_join,tok,B_only,poiin,p o iin,3,soiin,1.0,10.0,sub:s>p@begin
+ZL_join,tok,B_only,polarar,p o l a r a r,3,,,,
+ZL_join,tok,B_only,polshy,p o l sh y,3,olshy,1.0,2.0,ins:p@begin
+ZL_join,tok,B_only,qcthhy,q cth h y,3,cthhy,1.0,2.0,ins:q@begin
+ZL_join,tok,B_only,qekchdy,q e k ch d y,3,qokchy,2.0,38.0,sub:o>e@mid;ins:d@mid
+ZL_join,tok,B_only,qekeey,q e k ee y,3,qokeey,1.0,40.0,sub:o>e@mid
+ZL_join,tok,B_only,qeeey,q ee e y,3,qoeeey,1.0,2.0,del:o@mid
+ZL_join,tok,B_only,qeey,q ee y,3,sheey,1.0,35.0,sub:sh>q@begin
+ZL_join,tok,B_only,qockheey,q o ckh ee y,3,qokeey,1.0,40.0,sub:k>ckh@mid
+ZL_join,tok,B_only,qocthedy,q o cth e d y,3,qokey,2.0,17.0,sub:k>cth@mid;ins:d@mid
+ZL_join,tok,B_only,qodeedy,q o d ee d y,3,qokeey,2.0,40.0,sub:k>d@mid;ins:d@mid
+ZL_join,tok,B_only,qoedaiin,q o e d a iin,3,qodaiin,1.0,14.0,ins:e@mid
+ZL_join,tok,B_only,qoeeedy,q o ee e d y,3,qoeeey,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,qofchdy,q o f ch d y,3,qotchy,2.0,47.0,sub:t>f@mid;ins:d@mid
+ZL_join,tok,B_only,qoiin,q o iin,3,soiin,1.0,10.0,sub:s>q@begin
+ZL_join,tok,B_only,qokaiir,q o k a i i r,3,okaiir,1.0,5.0,ins:q@begin
+ZL_join,tok,B_only,qokas,q o k a s,3,qokaiin,1.0,22.0,sub:iin>s@end
+ZL_join,tok,B_only,qokechdy,q o k e ch d y,3,qokeody,1.0,17.0,sub:o>ch@mid
+ZL_join,tok,B_only,qokedaiin,q o k e d a iin,3,qokaiin,2.0,22.0,ins:ed@mid
+ZL_join,tok,B_only,qokeedal,q o k ee d a l,3,qokal,2.0,14.0,ins:eed@mid
+ZL_join,tok,B_only,qokeeodaiin,q o k ee o d a iin,3,qokeeody,2.0,3.0,ins:a@mid;sub:y>iin@end
+ZL_join,tok,B_only,qokolchedy,q o k o l ch e d y,3,qokoldy,2.0,3.0,ins:che@mid
+ZL_join,tok,B_only,qokshd,q o k sh d,3,qokod,1.0,5.0,sub:o>sh@mid
+ZL_join,tok,B_only,qokshdy,q o k sh d y,3,qokody,1.0,3.0,sub:o>sh@mid
+ZL_join,tok,B_only,qolcheey,q o l ch ee y,3,olcheey,1.0,3.0,ins:q@begin
+ZL_join,tok,B_only,qolkaiin,q o l k a iin,3,qokaiin,1.0,22.0,ins:l@mid
+ZL_join,tok,B_only,qopcheey,q o p ch ee y,3,qopchy,1.0,4.0,ins:ee@mid
+ZL_join,tok,B_only,qotcheedy,q o t ch ee d y,3,qotchody,1.0,2.0,sub:o>ee@mid
+ZL_join,tok,B_only,qotedaiin,q o t e d a iin,3,qodaiin,2.0,14.0,ins:te@mid
+ZL_join,tok,B_only,qotedal,q o t e d a l,3,qoteol,2.0,6.0,ins:d@mid;sub:o>a@mid
+ZL_join,tok,B_only,qotedar,q o t e d a r,3,qodar,2.0,7.0,ins:te@mid
+ZL_join,tok,B_only,qoteed,q o t ee d,3,qoteey,1.0,9.0,sub:y>d@end
+ZL_join,tok,B_only,qoteedar,q o t ee d a r,3,qodar,2.0,7.0,ins:tee@mid
+ZL_join,tok,B_only,qoteeedy,q o t ee e d y,3,qoteey,2.0,9.0,ins:ed@mid
+ZL_join,tok,B_only,qotshdy,q o t sh d y,3,qotshy,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,qotshedy,q o t sh e d y,3,qotshey,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,rair,r a i r,3,dair,1.0,35.0,sub:d>r@begin
+ZL_join,tok,B_only,raly,r a l y,3,daly,1.0,6.0,sub:d>r@begin
+ZL_join,tok,B_only,raram,r a r a m,3,daram,1.0,2.0,sub:d>r@begin
+ZL_join,tok,B_only,roiin,r o iin,3,soiin,1.0,10.0,sub:s>r@begin
+ZL_join,tok,B_only,rsheedy,r sh ee d y,3,sheey,2.0,35.0,ins:r@begin;ins:d@mid
+ZL_join,tok,B_only,sairol,s a i r o l,3,sair,2.0,4.0,ins:ol@end
+ZL_join,tok,B_only,sarain,s a r a in,3,sar,2.0,16.0,ins:ain@end
+ZL_join,tok,B_only,sarol,s a r o l,3,sar,2.0,16.0,ins:ol@end
+ZL_join,tok,B_only,schdy,s ch d y,3,chdy,1.0,8.0,ins:s@begin
+ZL_join,tok,B_only,sokeedy,s o k ee d y,3,okeedy,1.0,2.0,ins:s@begin
+ZL_join,tok,B_only,solkain,s o l k a in,3,okain,2.0,6.0,ins:s@begin;ins:l@mid
+ZL_join,tok,B_only,solkeey,s o l k ee y,3,olkeey,1.0,2.0,ins:s@begin
+ZL_join,tok,B_only,shecphy,sh e cph y,3,shey,1.0,53.0,ins:cph@mid
+ZL_join,tok,B_only,shedam,sh e d a m,3,sheam,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,shekaiin,sh e k a iin,3,sheaiin,1.0,6.0,ins:k@mid
+ZL_join,tok,B_only,shekain,sh e k a in,3,shear,2.0,6.0,ins:k@mid;sub:r>in@end
+ZL_join,tok,B_only,shekal,sh e k a l,3,sheal,1.0,2.0,ins:k@mid
+ZL_join,tok,B_only,shekchy,sh e k ch y,3,shokchy,1.0,5.0,sub:o>e@mid
+ZL_join,tok,B_only,shl,sh l,3,shol,1.0,108.0,del:o@mid
+ZL_join,tok,B_only,tarar,t a r a r,3,aral,2.0,5.0,ins:t@begin;sub:l>r@end
+ZL_join,tok,B_only,tedaiin,t e d a iin,3,todaiin,1.0,3.0,sub:o>e@mid
+ZL_join,tok,B_only,tedam,t e d a m,3,dam,2.0,38.0,ins:te@begin
+ZL_join,tok,B_only,teedar,t ee d a r,3,dar,2.0,84.0,ins:tee@begin
+ZL_join,tok,B_only,teeedy,t ee e d y,3,tchey,2.0,9.0,sub:ch>ee@mid;ins:d@mid
+ZL_join,tok,B_only,teeody,t ee o d y,3,tchody,1.0,6.0,sub:ch>ee@mid
+ZL_join,tok,B_only,aiiraly,a i i r a l y,2,,,,
+ZL_join,tok,B_only,aikhy,a i k h y,2,shoikhy,2.0,2.0,del:sh@begin;sub:o>a@mid
+ZL_join,tok,B_only,aildy,a i l d y,2,aldy,1.0,3.0,ins:i@mid
+ZL_join,tok,B_only,airal,a i r a l,2,aral,1.0,5.0,ins:i@mid
+ZL_join,tok,B_only,airod,a i r o d,2,air,2.0,5.0,ins:od@end
+ZL_join,tok,B_only,airoy,a i r o y,2,air,2.0,5.0,ins:oy@end
+ZL_join,tok,B_only,aiy,a i y,2,air,1.0,5.0,sub:r>y@end
+ZL_join,tok,B_only,aiinal,a iin a l,2,aral,1.0,5.0,sub:r>iin@mid
+ZL_join,tok,B_only,akain,a k a in,2,okain,1.0,6.0,sub:o>a@begin
+ZL_join,tok,B_only,alchdy,a l ch d y,2,aldy,1.0,3.0,ins:ch@mid
+ZL_join,tok,B_only,alched,a l ch e d,2,olchey,2.0,4.0,sub:o>a@begin;sub:y>d@end
+ZL_join,tok,B_only,alches,a l ch e s,2,olchey,2.0,4.0,sub:o>a@begin;sub:y>s@end
+ZL_join,tok,B_only,alkal,a l k a l,2,okal,2.0,29.0,ins:a@begin;sub:o>l@begin
+ZL_join,tok,B_only,alkey,a l k e y,2,olkey,1.0,2.0,sub:o>a@begin
+ZL_join,tok,B_only,alkeey,a l k ee y,2,olkeey,1.0,2.0,sub:o>a@begin
+ZL_join,tok,B_only,alod,a l o d,2,alor,1.0,2.0,sub:r>d@end
+ZL_join,tok,B_only,alodaiin,a l o d a iin,2,chodaiin,2.0,28.0,ins:a@begin;sub:ch>l@begin
+ZL_join,tok,B_only,araiiin,a r a i iin,2,daiiin,2.0,11.0,ins:a@begin;sub:d>r@begin
+ZL_join,tok,B_only,arl,a r l,2,ar,1.0,33.0,ins:l@end
+ZL_join,tok,B_only,arodl,a r o d l,2,aral,2.0,5.0,ins:o@mid;sub:a>d@mid
+ZL_join,tok,B_only,arshey,a r sh e y,2,shey,2.0,53.0,ins:ar@begin
+ZL_join,tok,B_only,ch,ch,2,s,1.0,126.0,sub:s>ch@begin
+ZL_join,tok,B_only,ch'eey,ch ' ee y,2,cheey,1.0,31.0,ins:'@mid
+ZL_join,tok,B_only,chady,ch a d y,2,chody,1.0,41.0,sub:o>a@mid
+ZL_join,tok,B_only,chalkar,ch a l k a r,2,dalar,2.0,4.0,sub:d>ch@begin;ins:k@mid
+ZL_join,tok,B_only,charaiin,ch a r a iin,2,choraiin,1.0,4.0,sub:o>a@mid
+ZL_join,tok,B_only,charain,ch a r a in,2,chorain,1.0,2.0,sub:o>a@mid
+ZL_join,tok,B_only,chcfhy,ch cfh y,2,chy,1.0,86.0,ins:cfh@mid
+ZL_join,tok,B_only,chcphdy,ch cph d y,2,chody,1.0,41.0,sub:o>cph@mid
+ZL_join,tok,B_only,chctham,ch cth a m,2,cham,1.0,9.0,ins:cth@mid
+ZL_join,tok,B_only,chcthhy,ch cth h y,2,chcthy,1.0,21.0,ins:h@mid
+ZL_join,tok,B_only,chechey,ch e ch e y,2,checkhey,1.0,3.0,sub:ckh>ch@mid
+ZL_join,tok,B_only,checkhed,ch e ckh e d,2,checkhey,1.0,3.0,sub:y>d@end
+ZL_join,tok,B_only,checkhol,ch e ckh o l,2,cheol,1.0,59.0,ins:ckh@mid
+ZL_join,tok,B_only,checphey,ch e cph e y,2,checkhey,1.0,3.0,sub:ckh>cph@mid
+ZL_join,tok,B_only,checthedy,ch e cth e d y,2,cheody,2.0,25.0,ins:cth@mid;sub:o>e@mid
+ZL_join,tok,B_only,chedysar,ch e d y s a r,2,,,,
+ZL_join,tok,B_only,chefaiin,ch e f a iin,2,chekaiin,1.0,2.0,sub:k>f@mid
+ZL_join,tok,B_only,chekchy,ch e k ch y,2,cheky,1.0,12.0,ins:ch@mid
+ZL_join,tok,B_only,cheokedy,ch e o k e d y,2,cheody,2.0,25.0,ins:ke@mid
+ZL_join,tok,B_only,cheokey,ch e o k e y,2,chokey,1.0,6.0,ins:e@mid
+ZL_join,tok,B_only,cheolchey,ch e o l ch e y,2,cheoldy,2.0,5.0,ins:ch@mid;sub:d>e@mid
+ZL_join,tok,B_only,cheolkaiin,ch e o l k a iin,2,chokaiin,2.0,8.0,ins:e@mid;ins:l@mid
+ZL_join,tok,B_only,cheolkeedy,ch e o l k ee d y,2,cheoldy,2.0,5.0,ins:kee@mid
+ZL_join,tok,B_only,chepchedy,ch e p ch e d y,2,,,,
+ZL_join,tok,B_only,chesy,ch e s y,2,chey,1.0,73.0,ins:s@mid
+ZL_join,tok,B_only,cheyky,ch e y k y,2,cheky,1.0,12.0,ins:y@mid
+ZL_join,tok,B_only,cheytain,ch e y t a in,2,ytain,2.0,2.0,ins:che@begin
+ZL_join,tok,B_only,cheeaiin,ch ee a iin,2,chaiin,1.0,32.0,ins:ee@mid
+ZL_join,tok,B_only,cheed,ch ee d,2,cheey,1.0,31.0,sub:y>d@end
+ZL_join,tok,B_only,cheedain,ch ee d a in,2,chodain,1.0,4.0,sub:o>ee@mid
+ZL_join,tok,B_only,chkeedy,ch k ee d y,2,chkeey,1.0,7.0,ins:d@mid
+ZL_join,tok,B_only,chlal,ch l a l,2,chal,1.0,12.0,ins:l@mid
+ZL_join,tok,B_only,chlar,ch l a r,2,char,1.0,29.0,ins:l@mid
+ZL_join,tok,B_only,chll,ch l l,2,chol,1.0,238.0,sub:o>l@mid
+ZL_join,tok,B_only,chokchedy,ch o k ch e d y,2,chokchey,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,chokeedy,ch o k ee d y,2,chokeey,1.0,6.0,ins:d@mid
+ZL_join,tok,B_only,cholchey,ch o l ch e y,2,olchey,1.0,4.0,ins:ch@begin
+ZL_join,tok,B_only,cholkain,ch o l k a in,2,chokain,1.0,2.0,ins:l@mid
+ZL_join,tok,B_only,cholkal,ch o l k a l,2,chokal,1.0,3.0,ins:l@mid
+ZL_join,tok,B_only,cholkedy,ch o l k e d y,2,choldy,2.0,8.0,ins:ke@mid
+ZL_join,tok,B_only,cholkeeey,ch o l k ee e y,2,okeeey,2.0,6.0,ins:ch@begin;ins:l@mid
+ZL_join,tok,B_only,chopchdy,ch o p ch d y,2,chopchy,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,chotchdy,ch o t ch d y,2,chotchy,1.0,11.0,ins:d@mid
+ZL_join,tok,B_only,chsdy,ch s d y,2,chody,1.0,41.0,sub:o>s@mid
+ZL_join,tok,B_only,chtedy,ch t e d y,2,chey,2.0,73.0,ins:t@mid;ins:d@mid
+ZL_join,tok,B_only,chtl,ch t l,2,chol,1.0,238.0,sub:o>t@mid
+ZL_join,tok,B_only,dag,d a g,2,daiin,1.0,466.0,sub:iin>g@end
+ZL_join,tok,B_only,daiiral,d a i i r a l,2,daiir,2.0,5.0,ins:al@end
+ZL_join,tok,B_only,dairar,d a i r a r,2,dairam,1.0,2.0,sub:m>r@end
+ZL_join,tok,B_only,dalaiin,d a l a iin,2,dalar,1.0,4.0,sub:r>iin@end
+ZL_join,tok,B_only,dalkar,d a l k a r,2,dalar,1.0,4.0,ins:k@mid
+ZL_join,tok,B_only,dalkedy,d a l k e d y,2,daldy,2.0,7.0,ins:ke@mid
+ZL_join,tok,B_only,dalky,d a l k y,2,daldy,1.0,7.0,sub:d>k@mid
+ZL_join,tok,B_only,dalom,d a l o m,2,dalor,1.0,4.0,sub:r>m@end
+ZL_join,tok,B_only,dchdar,d ch d a r,2,dchar,1.0,3.0,ins:d@mid
+ZL_join,tok,B_only,deedy,d ee d y,2,deey,1.0,4.0,ins:d@mid
+ZL_join,tok,B_only,deeedy,d ee e d y,2,dchey,2.0,10.0,sub:ch>ee@mid;ins:d@mid
+ZL_join,tok,B_only,dkedy,d k e d y,2,okey,2.0,19.0,sub:o>d@begin;ins:d@mid
+ZL_join,tok,B_only,dkshey,d k sh e y,2,dshey,1.0,4.0,ins:k@mid
+ZL_join,tok,B_only,dlar,d l a r,2,dar,1.0,84.0,ins:l@mid
+ZL_join,tok,B_only,dlchd,d l ch d,2,dchy,2.0,22.0,ins:l@mid;sub:y>d@end
+ZL_join,tok,B_only,dlshedy,d l sh e d y,2,dshey,2.0,4.0,ins:l@mid;ins:d@mid
+ZL_join,tok,B_only,dsheo,d sh e o,2,sheo,1.0,15.0,ins:d@begin
+ZL_join,tok,B_only,dshees,d sh ee s,2,shees,1.0,3.0,ins:d@begin
+ZL_join,tok,B_only,dychedy,d y ch e d y,2,dchey,2.0,10.0,ins:y@mid;ins:d@mid
+ZL_join,tok,B_only,dykedy,d y k e d y,2,ykeody,2.0,6.0,ins:d@begin;del:o@mid
+ZL_join,tok,B_only,dykeedy,d y k ee d y,2,ykeey,2.0,19.0,ins:d@begin;ins:d@mid
+ZL_join,tok,B_only,fshedy,f sh e d y,2,shedy,1.0,2.0,ins:f@begin
+ZL_join,tok,B_only,kairam,k a i r a m,2,dairam,1.0,2.0,sub:d>k@begin
+ZL_join,tok,B_only,kalchdy,k a l ch d y,2,dalchdy,1.0,2.0,sub:d>k@begin
+ZL_join,tok,B_only,kaldaiin,k a l d a iin,2,daldaiin,1.0,3.0,sub:d>k@begin
+ZL_join,tok,B_only,kalkal,k a l k a l,2,okalal,2.0,2.0,del:o@begin;ins:k@mid
+ZL_join,tok,B_only,kas,k a s,2,kaiin,1.0,10.0,sub:iin>s@end
+ZL_join,tok,B_only,kechdy,k e ch d y,2,keody,1.0,4.0,sub:o>ch@mid
+ZL_join,tok,B_only,keodar,k e o d a r,2,cpheodar,1.0,3.0,sub:cph>k@begin
+ZL_join,tok,B_only,keed,k ee d,2,keey,1.0,16.0,sub:y>d@end
+ZL_join,tok,B_only,keedal,k ee d a l,2,dal,2.0,67.0,ins:kee@begin
+ZL_join,tok,B_only,kshd,k sh d,2,ksho,1.0,6.0,sub:o>d@end
+ZL_join,tok,B_only,ksheeol,k sh ee o l,2,keeol,1.0,5.0,ins:sh@mid
+ZL_join,tok,B_only,laiiin,l a i iin,2,daiiin,1.0,11.0,sub:d>l@begin
+ZL_join,tok,B_only,lcheal,l ch e a l,2,cheal,1.0,8.0,ins:l@begin
+ZL_join,tok,B_only,lchedam,l ch e d a m,2,cheodam,2.0,2.0,ins:l@begin;del:o@mid
+ZL_join,tok,B_only,lchedar,l ch e d a r,2,chear,2.0,18.0,ins:l@begin;ins:d@mid
+ZL_join,tok,B_only,lcheod,l ch e o d,2,cheod,1.0,2.0,ins:l@begin
+ZL_join,tok,B_only,lcheody,l ch e o d y,2,cheody,1.0,25.0,ins:l@begin
+ZL_join,tok,B_only,lcheor,l ch e o r,2,cheor,1.0,47.0,ins:l@begin
+ZL_join,tok,B_only,lchg,l ch g,2,chy,2.0,86.0,ins:l@begin;sub:y>g@end
+ZL_join,tok,B_only,lchl,l ch l,2,chl,1.0,6.0,ins:l@begin
+ZL_join,tok,B_only,lchody,l ch o d y,2,chody,1.0,41.0,ins:l@begin
+ZL_join,tok,B_only,lchs,l ch s,2,chs,1.0,6.0,ins:l@begin
+ZL_join,tok,B_only,ldaiin,l d a iin,2,daiin,1.0,466.0,ins:l@begin
+ZL_join,tok,B_only,ldol,l d o l,2,dol,1.0,52.0,ins:l@begin
+ZL_join,tok,B_only,lfchy,l f ch y,2,chy,2.0,86.0,ins:lf@begin
+ZL_join,tok,B_only,lkaiir,l k a i i r,2,okaiir,1.0,5.0,sub:o>l@begin
+ZL_join,tok,B_only,lkchy,l k ch y,2,kchy,1.0,19.0,ins:l@begin
+ZL_join,tok,B_only,lkechedy,l k e ch e d y,2,,,,
+ZL_join,tok,B_only,lkedain,l k e d a in,2,,,,
+ZL_join,tok,B_only,lkedal,l k e d a l,2,okeal,2.0,5.0,sub:o>l@begin;ins:d@mid
+ZL_join,tok,B_only,lkeo,l k e o,2,okeo,1.0,2.0,sub:o>l@begin
+ZL_join,tok,B_only,lkeeor,l k ee o r,2,okeeor,1.0,6.0,sub:o>l@begin
+ZL_join,tok,B_only,lkshey,l k sh e y,2,okshey,1.0,2.0,sub:o>l@begin
+ZL_join,tok,B_only,lod,l o d,2,chod,1.0,5.0,sub:ch>l@begin
+ZL_join,tok,B_only,loeey,l o ee y,2,qoeey,1.0,4.0,sub:q>l@begin
+ZL_join,tok,B_only,lokam,l o k a m,2,okam,1.0,6.0,ins:l@begin
+ZL_join,tok,B_only,lokeedy,l o k ee d y,2,okeedy,1.0,2.0,ins:l@begin
+ZL_join,tok,B_only,lokeey,l o k ee y,2,qokeey,1.0,40.0,sub:q>l@begin
+ZL_join,tok,B_only,lolkaiin,l o l k a iin,2,okaiin,2.0,33.0,ins:l@begin;ins:l@mid
+ZL_join,tok,B_only,lolshedy,l o l sh e d y,2,olshey,2.0,2.0,ins:l@begin;ins:d@mid
+ZL_join,tok,B_only,lpchdy,l p ch d y,2,chdy,2.0,8.0,ins:lp@begin
+ZL_join,tok,B_only,lraiin,l r a iin,2,oraiin,1.0,10.0,sub:o>l@begin
+ZL_join,tok,B_only,lrain,l r a in,2,orain,1.0,3.0,sub:o>l@begin
+ZL_join,tok,B_only,lsaiin,l s a iin,2,saiin,1.0,42.0,ins:l@begin
+ZL_join,tok,B_only,lshdy,l sh d y,2,shdy,1.0,2.0,ins:l@begin
+ZL_join,tok,B_only,lsheckhy,l sh e ckh y,2,shey,2.0,53.0,ins:l@begin;ins:ckh@mid
+ZL_join,tok,B_only,lsheol,l sh e o l,2,sheol,1.0,35.0,ins:l@begin
+ZL_join,tok,B_only,lshety,l sh e t y,2,shey,2.0,53.0,ins:l@begin;ins:t@mid
+ZL_join,tok,B_only,lshor,l sh o r,2,shor,1.0,60.0,ins:l@begin
+ZL_join,tok,B_only,ltaiin,l t a iin,2,otaiin,1.0,28.0,sub:o>l@begin
+ZL_join,tok,B_only,ltain,l t a in,2,otain,1.0,3.0,sub:o>l@begin
+ZL_join,tok,B_only,ltary,l t a r y,2,otar,2.0,8.0,sub:o>l@begin;ins:y@end
+ZL_join,tok,B_only,lteey,l t ee y,2,oteey,1.0,12.0,sub:o>l@begin
+ZL_join,tok,B_only,lty,l t y,2,oty,1.0,39.0,sub:o>l@begin
+ZL_join,tok,B_only,octhdy,o cth d y,2,ody,1.0,7.0,ins:cth@mid
+ZL_join,tok,B_only,odaly,o d a l y,2,daly,1.0,6.0,ins:o@begin
+ZL_join,tok,B_only,odeeey,o d ee e y,2,okeeey,1.0,6.0,sub:k>d@mid
+ZL_join,tok,B_only,odr,o d r,2,or,1.0,82.0,ins:d@mid
+ZL_join,tok,B_only,oedy,o e d y,2,ody,1.0,7.0,ins:e@mid
+ZL_join,tok,B_only,oeedaiin,o ee d a iin,2,odaiin,1.0,27.0,ins:ee@mid
+ZL_join,tok,B_only,ofy,o f y,2,oty,1.0,39.0,sub:t>f@mid
+ZL_join,tok,B_only,oithy,o i t h y,2,oty,2.0,39.0,ins:i@mid;ins:h@mid
+ZL_join,tok,B_only,okalaiin,o k a l a iin,2,okolaiin,1.0,2.0,sub:o>a@mid
+ZL_join,tok,B_only,okalol,o k a l o l,2,okolol,1.0,2.0,sub:o>a@mid
+ZL_join,tok,B_only,okarar,o k a r a r,2,okar,2.0,13.0,ins:ar@mid
+ZL_join,tok,B_only,okarol,o k a r o l,2,okeol,2.0,38.0,ins:a@mid;sub:e>r@mid
+ZL_join,tok,B_only,okchaiin,o k ch a iin,2,okaiin,1.0,33.0,ins:ch@mid
+ZL_join,tok,B_only,okchedam,o k ch e d a m,2,okeam,2.0,2.0,ins:ch@mid;ins:d@mid
+ZL_join,tok,B_only,oked,o k e d,2,okey,1.0,19.0,sub:y>d@end
+ZL_join,tok,B_only,okedor,o k e d o r,2,okeor,1.0,13.0,ins:d@mid
+ZL_join,tok,B_only,okeechy,o k ee ch y,2,okeey,1.0,31.0,ins:ch@mid
+ZL_join,tok,B_only,okeedain,o k ee d a in,2,okain,2.0,6.0,ins:eed@mid
+ZL_join,tok,B_only,okeedar,o k ee d a r,2,okar,2.0,13.0,ins:eed@mid
+ZL_join,tok,B_only,okeeshy,o k ee sh y,2,okeey,1.0,31.0,ins:sh@mid
+ZL_join,tok,B_only,okiin,o k iin,2,oky,1.0,38.0,sub:y>iin@end
+ZL_join,tok,B_only,okolchedy,o k o l ch e d y,2,okoldy,2.0,4.0,ins:che@mid
+ZL_join,tok,B_only,olchckhy,o l ch ckh y,2,olchey,1.0,4.0,sub:e>ckh@mid
+ZL_join,tok,B_only,olchcthy,o l ch cth y,2,olchey,1.0,4.0,sub:e>cth@mid
+ZL_join,tok,B_only,olchdaiin,o l ch d a iin,2,oldaiin,1.0,9.0,ins:ch@mid
+ZL_join,tok,B_only,olched,o l ch e d,2,olchey,1.0,4.0,sub:y>d@end
+ZL_join,tok,B_only,olcheeey,o l ch ee e y,2,olchey,1.0,4.0,ins:ee@mid
+ZL_join,tok,B_only,oleedy,o l ee d y,2,oldy,1.0,5.0,ins:ee@mid
+ZL_join,tok,B_only,olfchey,o l f ch e y,2,olchey,1.0,4.0,ins:f@mid
+ZL_join,tok,B_only,olkechy,o l k e ch y,2,olkey,1.0,2.0,ins:ch@mid
+ZL_join,tok,B_only,olkedaiin,o l k e d a iin,2,oldaiin,2.0,9.0,ins:ke@mid
+ZL_join,tok,B_only,olkeear,o l k ee a r,2,okar,2.0,13.0,ins:l@mid;ins:ee@mid
+ZL_join,tok,B_only,olkeeedy,o l k ee e d y,2,okeeey,2.0,6.0,ins:l@mid;ins:d@mid
+ZL_join,tok,B_only,olkeeol,o l k ee o l,2,okeeol,1.0,7.0,ins:l@mid
+ZL_join,tok,B_only,olkol,o l k o l,2,okol,1.0,36.0,ins:l@mid
+ZL_join,tok,B_only,olkor,o l k o r,2,okor,1.0,20.0,ins:l@mid
+ZL_join,tok,B_only,oll,o l l,2,ol,1.0,70.0,ins:l@mid
+ZL_join,tok,B_only,ollchy,o l l ch y,2,olchy,1.0,2.0,ins:l@mid
+ZL_join,tok,B_only,oloky,o l o k y,2,oky,2.0,38.0,ins:ol@begin
+ZL_join,tok,B_only,oloraiin,o l o r a iin,2,okoraiin,1.0,2.0,sub:k>l@mid
+ZL_join,tok,B_only,olorol,o l o r o l,2,olol,2.0,4.0,ins:or@mid
+ZL_join,tok,B_only,olos,o l o s,2,ols,1.0,7.0,ins:o@mid
+ZL_join,tok,B_only,olshed,o l sh e d,2,olshey,1.0,2.0,sub:y>d@end
+ZL_join,tok,B_only,olsheor,o l sh e o r,2,olcheor,1.0,3.0,sub:ch>sh@mid
+ZL_join,tok,B_only,olsheed,o l sh ee d,2,olsheey,1.0,2.0,sub:y>d@end
+ZL_join,tok,B_only,oltain,o l t a in,2,otain,1.0,3.0,ins:l@mid
+ZL_join,tok,B_only,oltal,o l t a l,2,otal,1.0,19.0,ins:l@mid
+ZL_join,tok,B_only,olteody,o l t e o d y,2,oteody,1.0,4.0,ins:l@mid
+ZL_join,tok,B_only,oltydy,o l t y d y,2,otydy,1.0,2.0,ins:l@mid
+ZL_join,tok,B_only,oor,o o r,2,chor,1.0,161.0,sub:ch>o@begin
+ZL_join,tok,B_only,opair,o p a i r,2,opar,1.0,2.0,ins:i@mid
+ZL_join,tok,B_only,opalkaiin,o p a l k a iin,2,,,,
+ZL_join,tok,B_only,opched,o p ch e d,2,opchey,1.0,5.0,sub:y>d@end
+ZL_join,tok,B_only,opcholor,o p ch o l o r,2,opchol,2.0,3.0,ins:or@end
+ZL_join,tok,B_only,opchsd,o p ch s d,2,opchey,2.0,5.0,sub:e>s@mid;sub:y>d@end
+ZL_join,tok,B_only,opol,o p o l,2,otol,1.0,37.0,sub:t>p@mid
+ZL_join,tok,B_only,opoly,o p o l y,2,okoly,1.0,3.0,sub:k>p@mid
+ZL_join,tok,B_only,opshedy,o p sh e d y,2,opchey,2.0,5.0,sub:ch>sh@mid;ins:d@mid
+ZL_join,tok,B_only,oqokain,o q o k a in,2,qokain,1.0,4.0,ins:o@begin
+ZL_join,tok,B_only,orchedar,o r ch e d a r,2,,,,
+ZL_join,tok,B_only,oroiiin,o r o i iin,2,oraiin,2.0,10.0,ins:o@mid;sub:a>i@mid
+ZL_join,tok,B_only,orsheey,o r sh ee y,2,orshy,1.0,2.0,ins:ee@mid
+ZL_join,tok,B_only,oshedy,o sh e d y,2,shedy,1.0,2.0,ins:o@begin
+ZL_join,tok,B_only,ota,o t a,2,oty,1.0,39.0,sub:y>a@end
+ZL_join,tok,B_only,otairor,o t a i r o r,2,otaiir,2.0,2.0,ins:r@mid;sub:i>o@mid
+ZL_join,tok,B_only,otalaiin,o t a l a iin,2,otaiin,2.0,28.0,ins:al@mid
+ZL_join,tok,B_only,otalkedy,o t a l k e d y,2,,,,
+ZL_join,tok,B_only,otalshedy,o t a l sh e d y,2,,,,
+ZL_join,tok,B_only,otan,o t a n,2,otaiin,1.0,28.0,sub:iin>n@end
+ZL_join,tok,B_only,otaral,o t a r a l,2,otal,2.0,19.0,ins:ar@mid
+ZL_join,tok,B_only,otchod,o t ch o d,2,otchol,1.0,25.0,sub:l>d@end
+ZL_join,tok,B_only,oteaiin,o t e a iin,2,otaiin,1.0,28.0,ins:e@mid
+ZL_join,tok,B_only,oteain,o t e a in,2,otain,1.0,3.0,ins:e@mid
+ZL_join,tok,B_only,otear,o t e a r,2,otar,1.0,8.0,ins:e@mid
+ZL_join,tok,B_only,otedaiin,o t e d a iin,2,otaiin,2.0,28.0,ins:ed@mid
+ZL_join,tok,B_only,otedain,o t e d a in,2,otain,2.0,3.0,ins:ed@mid
+ZL_join,tok,B_only,oteodar,o t e o d a r,2,teodar,1.0,2.0,ins:o@begin
+ZL_join,tok,B_only,otes,o t e s,2,otey,1.0,6.0,sub:y>s@end
+ZL_join,tok,B_only,oteeam,o t ee a m,2,otam,1.0,7.0,ins:ee@mid
+ZL_join,tok,B_only,oteedal,o t ee d a l,2,otchdal,1.0,2.0,sub:ch>ee@mid
+ZL_join,tok,B_only,oteeedy,o t ee e d y,2,oteeody,1.0,2.0,sub:o>e@mid
+ZL_join,tok,B_only,paiir,p a i i r,2,daiir,1.0,5.0,sub:d>p@begin
+ZL_join,tok,B_only,pair,p a i r,2,dair,1.0,35.0,sub:d>p@begin
+ZL_join,tok,B_only,pairar,p a i r a r,2,dairam,2.0,2.0,sub:d>p@begin;sub:m>r@end
+ZL_join,tok,B_only,pchdol,p ch d o l,2,pcheol,1.0,4.0,sub:e>d@mid
+ZL_join,tok,B_only,pchedain,p ch e d a in,2,pchodaiin,2.0,4.0,sub:o>e@mid;sub:iin>in@end
+ZL_join,tok,B_only,pcholky,p ch o l k y,2,choky,2.0,26.0,ins:p@begin;ins:l@mid
+ZL_join,tok,B_only,pdaiin,p d a iin,2,daiin,1.0,466.0,ins:p@begin
+ZL_join,tok,B_only,pochedy,p o ch e d y,2,pchody,2.0,2.0,ins:o@mid;sub:o>e@mid
+ZL_join,tok,B_only,podair,p o d a i r,2,podaiir,1.0,2.0,del:i@mid
+ZL_join,tok,B_only,polar,p o l a r,2,sholar,1.0,2.0,sub:sh>p@begin
+ZL_join,tok,B_only,polchdy,p o l ch d y,2,choldy,2.0,8.0,sub:ch>p@begin;ins:ch@mid
+ZL_join,tok,B_only,polched,p o l ch e d,2,olchey,2.0,4.0,ins:p@begin;sub:y>d@end
+ZL_join,tok,B_only,polkeey,p o l k ee y,2,olkeey,1.0,2.0,ins:p@begin
+ZL_join,tok,B_only,polor,p o l o r,2,olor,1.0,2.0,ins:p@begin
+ZL_join,tok,B_only,pshdar,p sh d a r,2,dar,2.0,84.0,ins:psh@begin
+ZL_join,tok,B_only,pshedy,p sh e d y,2,shedy,1.0,2.0,ins:p@begin
+ZL_join,tok,B_only,psheoldy,p sh e o l d y,2,sheoldy,1.0,2.0,ins:p@begin
+ZL_join,tok,B_only,qaiin,q a iin,2,daiin,1.0,466.0,sub:d>q@begin
+ZL_join,tok,B_only,qckhedy,q ckh e d y,2,ckhey,2.0,24.0,ins:q@begin;ins:d@mid
+ZL_join,tok,B_only,qckhy,q ckh y,2,ckhy,1.0,25.0,ins:q@begin
+ZL_join,tok,B_only,qcphhedy,q cph h e d y,2,,,,
+ZL_join,tok,B_only,qcthy,q cth y,2,cthy,1.0,90.0,ins:q@begin
+ZL_join,tok,B_only,qekaiin,q e k a iin,2,qokaiin,1.0,22.0,sub:o>e@mid
+ZL_join,tok,B_only,qeedy,q ee d y,2,qody,1.0,5.0,sub:o>ee@mid
+ZL_join,tok,B_only,qkain,q k a in,2,okain,1.0,6.0,sub:o>q@begin
+ZL_join,tok,B_only,qochedy,q o ch e d y,2,qokey,2.0,17.0,sub:k>ch@mid;ins:d@mid
+ZL_join,tok,B_only,qocheol,q o ch e o l,2,qokeol,1.0,32.0,sub:k>ch@mid
+ZL_join,tok,B_only,qocphdy,q o cph d y,2,qody,1.0,5.0,ins:cph@mid
+ZL_join,tok,B_only,qodeey,q o d ee y,2,qokeey,1.0,40.0,sub:k>d@mid
+ZL_join,tok,B_only,qoekedy,q o e k e d y,2,qokey,2.0,17.0,ins:e@mid;ins:d@mid
+ZL_join,tok,B_only,qoeeda,q o ee d a,2,qodaiin,2.0,14.0,ins:ee@mid;del:iin@end
+ZL_join,tok,B_only,qoeeo,q o ee o,2,qokeeo,1.0,4.0,del:k@mid
+ZL_join,tok,B_only,qofcheol,q o f ch e o l,2,qotcheol,1.0,2.0,sub:t>f@mid
+ZL_join,tok,B_only,qoka,q o k a,2,qoky,1.0,34.0,sub:y>a@end
+ZL_join,tok,B_only,qokady,q o k a d y,2,qokaly,1.0,6.0,sub:l>d@mid
+ZL_join,tok,B_only,qokalchdy,q o k a l ch d y,2,qokaldy,1.0,2.0,ins:ch@mid
+ZL_join,tok,B_only,qokalchedy,q o k a l ch e d y,2,qokaldy,2.0,2.0,ins:che@mid
+ZL_join,tok,B_only,qokaral,q o k a r a l,2,qokar,2.0,14.0,ins:al@end
+ZL_join,tok,B_only,qokaram,q o k a r a m,2,qokar,2.0,14.0,ins:am@end
+ZL_join,tok,B_only,qokchar,q o k ch a r,2,qokar,1.0,14.0,ins:ch@mid
+ZL_join,tok,B_only,qokcheedy,q o k ch ee d y,2,qokchody,1.0,2.0,sub:o>ee@mid
+ZL_join,tok,B_only,qokeain,q o k e a in,2,qokain,1.0,4.0,ins:e@mid
+ZL_join,tok,B_only,qokedal,q o k e d a l,2,qokeol,2.0,32.0,ins:d@mid;sub:o>a@mid
+ZL_join,tok,B_only,qokeoy,q o k e o y,2,qokeol,1.0,32.0,sub:l>y@end
+ZL_join,tok,B_only,qokeeal,q o k ee a l,2,qokal,1.0,14.0,ins:ee@mid
+ZL_join,tok,B_only,qokeear,q o k ee a r,2,qokar,1.0,14.0,ins:ee@mid
+ZL_join,tok,B_only,qokeedaiin,q o k ee d a iin,2,qokaiin,2.0,22.0,ins:eed@mid
+ZL_join,tok,B_only,qokeedain,q o k ee d a in,2,qokain,2.0,4.0,ins:eed@mid
+ZL_join,tok,B_only,qokeeod,q o k ee o d,2,qokod,1.0,5.0,ins:ee@mid
+ZL_join,tok,B_only,qokeeodar,q o k ee o d a r,2,qokeeor,2.0,3.0,ins:da@mid
+ZL_join,tok,B_only,qokydy,q o k y d y,2,qokody,1.0,3.0,sub:o>y@mid
+ZL_join,tok,B_only,qolain,q o l a in,2,qokain,1.0,4.0,sub:k>l@mid
+ZL_join,tok,B_only,qolal,q o l a l,2,qokal,1.0,14.0,sub:k>l@mid
+ZL_join,tok,B_only,qolcheol,q o l ch e o l,2,olcheol,1.0,4.0,ins:q@begin
+ZL_join,tok,B_only,qolcheedy,q o l ch ee d y,2,olcheey,2.0,3.0,ins:q@begin;ins:d@mid
+ZL_join,tok,B_only,qolchy,q o l ch y,2,qotchy,1.0,47.0,sub:t>l@mid
+ZL_join,tok,B_only,qolkedy,q o l k e d y,2,qokey,2.0,17.0,ins:l@mid;ins:d@mid
+ZL_join,tok,B_only,qolsheey,q o l sh ee y,2,olsheey,1.0,2.0,ins:q@begin
+ZL_join,tok,B_only,qolshy,q o l sh y,2,qotshy,1.0,4.0,sub:t>l@mid
+ZL_join,tok,B_only,qopcheedy,q o p ch ee d y,2,qopchy,2.0,4.0,ins:eed@mid
+ZL_join,tok,B_only,qosain,q o s a in,2,qokain,1.0,4.0,sub:k>s@mid
+ZL_join,tok,B_only,qotainol,q o t a in o l,2,qotol,2.0,18.0,ins:ain@mid
+ZL_join,tok,B_only,qotalchedy,q o t a l ch e d y,2,,,,
+ZL_join,tok,B_only,qotarain,q o t a r a in,2,qotain,2.0,2.0,ins:ar@mid
+ZL_join,tok,B_only,qotchedar,q o t ch e d a r,2,qotchar,2.0,3.0,ins:ed@mid
+ZL_join,tok,B_only,qoteal,q o t e a l,2,qoteol,1.0,6.0,sub:o>a@mid
+ZL_join,tok,B_only,qotechy,q o t e ch y,2,qotchy,1.0,47.0,ins:e@mid
+ZL_join,tok,B_only,qoted,q o t e d,2,qotey,1.0,3.0,sub:y>d@end
+ZL_join,tok,B_only,qotedor,q o t e d o r,2,qotor,2.0,16.0,ins:ed@mid
+ZL_join,tok,B_only,qotl,q o t l,2,qoty,1.0,27.0,sub:y>l@end
+ZL_join,tok,B_only,qotsheod,q o t sh e o d,2,qoteol,2.0,6.0,ins:sh@mid;sub:l>d@end
+ZL_join,tok,B_only,qotydy,q o t y d y,2,qotody,1.0,4.0,sub:o>y@mid
+ZL_join,tok,B_only,rary,r a r y,2,sary,1.0,5.0,sub:s>r@begin
+ZL_join,tok,B_only,rcheky,r ch e k y,2,cheky,1.0,12.0,ins:r@begin
+ZL_join,tok,B_only,rodam,r o d a m,2,qodam,1.0,2.0,sub:q>r@begin
+ZL_join,tok,B_only,rody,r o d y,2,chody,1.0,41.0,sub:ch>r@begin
+ZL_join,tok,B_only,rolchy,r o l ch y,2,olchy,1.0,2.0,ins:r@begin
+ZL_join,tok,B_only,rolkeedy,r o l k ee d y,2,olkeey,2.0,2.0,ins:r@begin;ins:d@mid
+ZL_join,tok,B_only,rorol,r o r o l,2,qokol,2.0,43.0,sub:q>r@begin;sub:k>r@mid
+ZL_join,tok,B_only,rshey,r sh e y,2,shey,1.0,53.0,ins:r@begin
+ZL_join,tok,B_only,saiir,s a i i r,2,daiir,1.0,5.0,sub:d>s@begin
+ZL_join,tok,B_only,saino,s a in o,2,sain,1.0,7.0,ins:o@end
+ZL_join,tok,B_only,saly,s a l y,2,sal,1.0,15.0,ins:y@end
+ZL_join,tok,B_only,saraiir,s a r a i i r,2,,,,
+ZL_join,tok,B_only,ssheey,s sh ee y,2,sheey,1.0,35.0,ins:s@begin
+ZL_join,tok,B_only,shalky,sh a l k y,2,daldy,2.0,7.0,sub:d>sh@begin;sub:d>k@mid
+ZL_join,tok,B_only,shchy,sh ch y,2,chy,1.0,86.0,ins:sh@begin
+ZL_join,tok,B_only,shdair,sh d a i r,2,dair,1.0,35.0,ins:sh@begin
+ZL_join,tok,B_only,shechy,sh e ch y,2,shey,1.0,53.0,ins:ch@mid
+ZL_join,tok,B_only,sheckhal,sh e ckh a l,2,sheal,1.0,2.0,ins:ckh@mid
+ZL_join,tok,B_only,sheckhdy,sh e ckh d y,2,sheody,1.0,13.0,sub:o>ckh@mid
+ZL_join,tok,B_only,shedydy,sh e d y d y,2,sheody,2.0,13.0,ins:d@mid;sub:o>y@mid
+ZL_join,tok,B_only,shefchdy,sh e f ch d y,2,sheody,2.0,13.0,ins:f@mid;sub:o>ch@mid
+ZL_join,tok,B_only,shekam,sh e k a m,2,sheam,1.0,2.0,ins:k@mid
+ZL_join,tok,B_only,shekedy,sh e k e d y,2,sheody,2.0,13.0,ins:k@mid;sub:o>e@mid
+ZL_join,tok,B_only,shekshey,sh e k sh e y,2,sheky,2.0,5.0,ins:she@mid
+ZL_join,tok,B_only,sheokaiin,sh e o k a iin,2,shokaiin,1.0,2.0,ins:e@mid
+ZL_join,tok,B_only,sheolkain,sh e o l k a in,2,,,,
+ZL_join,tok,B_only,sheyky,sh e y k y,2,sheky,1.0,5.0,ins:y@mid
+ZL_join,tok,B_only,sheeckhy,sh ee ckh y,2,sheey,1.0,35.0,ins:ckh@mid
+ZL_join,tok,B_only,sheeeky,sh ee e k y,2,sheky,1.0,5.0,ins:ee@mid
+ZL_join,tok,B_only,sheek,sh ee k,2,sheey,1.0,35.0,sub:y>k@end
+ZL_join,tok,B_only,sheekar,sh ee k a r,2,sheear,1.0,2.0,ins:k@mid
+ZL_join,tok,B_only,sheekchy,sh ee k ch y,2,shokchy,1.0,5.0,sub:o>ee@mid
+ZL_join,tok,B_only,sheekeey,sh ee k ee y,2,qokeey,2.0,40.0,sub:q>sh@begin;sub:o>ee@mid
+ZL_join,tok,B_only,sheeodar,sh ee o d a r,2,shodaiin,2.0,16.0,ins:ee@mid;sub:iin>r@end
+ZL_join,tok,B_only,shkair,sh k a i r,2,ykair,1.0,3.0,sub:y>sh@begin
+ZL_join,tok,B_only,shkain,sh k a in,2,okain,1.0,6.0,sub:o>sh@begin
+ZL_join,tok,B_only,shkar,sh k a r,2,okar,1.0,13.0,sub:o>sh@begin
+ZL_join,tok,B_only,shkchedy,sh k ch e d y,2,okchey,2.0,13.0,sub:o>sh@begin;ins:d@mid
+ZL_join,tok,B_only,shocfhy,sh o cfh y,2,shody,1.0,25.0,sub:d>cfh@mid
+ZL_join,tok,B_only,sholkal,sh o l k a l,2,okal,2.0,29.0,ins:sh@begin;ins:l@mid
+ZL_join,tok,B_only,sholkeedy,sh o l k ee d y,2,sholdy,2.0,4.0,ins:kee@mid
+ZL_join,tok,B_only,shtol,sh t o l,2,shol,1.0,108.0,ins:t@mid
+ZL_join,tok,B_only,taral,t a r a l,2,aral,1.0,5.0,ins:t@begin
+ZL_join,tok,B_only,tarol,t a r o l,2,tol,2.0,13.0,ins:ar@mid
+ZL_join,tok,B_only,tchdaiin,t ch d a iin,2,todaiin,1.0,3.0,sub:o>ch@mid
+ZL_join,tok,B_only,tchdor,t ch d o r,2,tchor,1.0,13.0,ins:d@mid
+ZL_join,tok,B_only,tchedar,t ch e d a r,2,tchodar,1.0,2.0,sub:o>e@mid
+ZL_join,tok,B_only,tchedor,t ch e d o r,2,tcheor,1.0,2.0,ins:d@mid
+ZL_join,tok,B_only,teedal,t ee d a l,2,todal,1.0,2.0,sub:o>ee@mid
+ZL_join,tok,B_only,tokain,t o k a in,2,okain,1.0,6.0,ins:t@begin
+ZL_join,tok,B_only,tokar,t o k a r,2,qokar,1.0,14.0,sub:q>t@begin
+ZL_join,tok,B_only,toky,t o k y,2,oky,1.0,38.0,ins:t@begin
+ZL_join,tok,B_only,tolchedy,t o l ch e d y,2,olchey,2.0,4.0,ins:t@begin;ins:d@mid
+ZL_join,tok,B_only,tolkain,t o l k a in,2,okain,2.0,6.0,ins:t@begin;ins:l@mid
+ZL_join,tok,B_only,tolshey,t o l sh e y,2,olshey,1.0,2.0,ins:t@begin
+ZL_join,tok,B_only,totol,t o t o l,2,otol,1.0,37.0,ins:t@begin
+ZL_join,tok,B_only,tshed,t sh e d,2,shey,2.0,53.0,ins:t@begin;sub:y>d@end
+ZL_join,tok,B_only,tshedar,t sh e d a r,2,shear,2.0,6.0,ins:t@begin;ins:d@mid
+ZL_join,tok,B_only,tshod,t sh o d,2,tshol,1.0,5.0,sub:l>d@end
+ZL_join,tok,B_only,ycheain,y ch e a in,2,ychear,1.0,2.0,sub:r>in@end
+ZL_join,tok,B_only,yched,y ch e d,2,ychey,1.0,8.0,sub:y>d@end
+ZL_join,tok,B_only,ychedaiin,y ch e d a iin,2,chodaiin,2.0,28.0,ins:y@begin;sub:o>e@mid
+ZL_join,tok,B_only,ychedal,y ch e d a l,2,cheal,2.0,8.0,ins:y@begin;ins:d@mid
+ZL_join,tok,B_only,ycheod,y ch e o d,2,ycheor,1.0,8.0,sub:r>d@end
+ZL_join,tok,B_only,ycheodain,y ch e o d a in,2,cheodain,1.0,2.0,ins:y@begin
+ZL_join,tok,B_only,ycheody,y ch e o d y,2,cheody,1.0,25.0,ins:y@begin
+ZL_join,tok,B_only,yches,y ch e s,2,ychey,1.0,8.0,sub:y>s@end
+ZL_join,tok,B_only,ycheeody,y ch ee o d y,2,ykeeody,1.0,3.0,sub:k>ch@mid
+ZL_join,tok,B_only,ychees,y ch ee s,2,chees,1.0,10.0,ins:y@begin
+ZL_join,tok,B_only,yfchdy,y f ch d y,2,ykchdy,1.0,2.0,sub:k>f@mid
+ZL_join,tok,B_only,yfchey,y f ch e y,2,ychey,1.0,8.0,ins:f@mid
+ZL_join,tok,B_only,ykaiir,y k a i i r,2,okaiir,1.0,5.0,sub:o>y@begin
+ZL_join,tok,B_only,ykeos,y k e o s,2,ykeol,1.0,9.0,sub:l>s@end
+ZL_join,tok,B_only,ykeechy,y k ee ch y,2,ykeey,1.0,19.0,ins:ch@mid
+ZL_join,tok,B_only,ykshedy,y k sh e d y,2,ykeody,2.0,6.0,sub:e>sh@mid;sub:o>e@mid
+ZL_join,tok,B_only,yksheol,y k sh e o l,2,ykeol,1.0,9.0,ins:sh@mid
+ZL_join,tok,B_only,yl,y l,2,ol,1.0,70.0,sub:o>y@begin
+ZL_join,tok,B_only,ylkaiin,y l k a iin,2,ykaiin,1.0,11.0,ins:l@mid
+ZL_join,tok,B_only,ysair,y s a i r,2,sair,1.0,4.0,ins:y@begin
+ZL_join,tok,B_only,ysheeody,y sh ee o d y,2,ykeeody,1.0,3.0,sub:k>sh@mid
+ZL_join,tok,B_only,ytshedy,y t sh e d y,2,ytchey,2.0,5.0,sub:ch>sh@mid;ins:d@mid
+ZL_join,bpe,A_only,d,d,16,chedy,1.0,432.0,sub:d>chedy@begin
+ZL_join,bpe,A_only,cthody,cth ody,14,cheody,1.0,50.0,sub:cth>che@begin
+ZL_join,bpe,A_only,chom,cho m,12,chodaiin,1.0,16.0,sub:m>daiin@end
+ZL_join,bpe,A_only,chory,chor y,12,qoky,1.0,99.0,sub:chor>qok@begin
+ZL_join,bpe,A_only,cthaiin,cth aiin,12,aiin,1.0,227.0,del:cth@begin
+ZL_join,bpe,A_only,qotchol,qot chol,12,qotedy,1.0,86.0,sub:chol>edy@end
+ZL_join,bpe,A_only,qotchor,qot chor,12,qotedy,1.0,86.0,sub:chor>edy@end
+ZL_join,bpe,A_only,chotchy,ch ot chy,11,choty,1.0,12.0,sub:chy>y@end
+ZL_join,bpe,A_only,choiin,cho iin,10,aiiin,1.0,31.0,sub:cho>ai@begin
+ZL_join,bpe,A_only,dan,d a n,10,qokan,1.0,8.0,sub:d>qok@begin
+ZL_join,bpe,A_only,okchol,ok chol,10,okain,1.0,126.0,sub:chol>ain@end
+ZL_join,bpe,A_only,ytchor,yt chor,10,ytaiin,1.0,29.0,sub:chor>aiin@end
+ZL_join,bpe,A_only,ctheol,cth eol,9,okeol,1.0,19.0,sub:cth>ok@begin
+ZL_join,bpe,A_only,doiin,d o iin,9,oiin,1.0,12.0,del:d@begin
+ZL_join,bpe,A_only,ctho,cth o,8,o,1.0,20.0,del:cth@begin
+ZL_join,bpe,A_only,dsho,d sho,8,dair,1.0,38.0,sub:sho>air@end
+ZL_join,bpe,A_only,qokchor,qok chor,8,qokar,1.0,130.0,sub:chor>ar@end
+ZL_join,bpe,A_only,dom,d o m,7,om,1.0,5.0,del:d@begin
+ZL_join,bpe,A_only,dshy,d shy,7,dair,1.0,38.0,sub:shy>air@end
+ZL_join,bpe,A_only,cfhy,cfh y,6,qoky,1.0,99.0,sub:cfh>qok@begin
+ZL_join,bpe,A_only,chokey,ch ok ey,6,okey,1.0,33.0,del:ch@begin
+ZL_join,bpe,A_only,chyky,chy ky,6,cheky,1.0,42.0,sub:chy>che@begin
+ZL_join,bpe,A_only,keor,k e or,6,qokeor,1.0,8.0,sub:k>qok@begin
+ZL_join,bpe,A_only,ksho,k sho,6,keedy,1.0,34.0,sub:sho>eedy@end
+ZL_join,bpe,A_only,ykeor,yk e or,6,qokeor,1.0,8.0,sub:yk>qok@begin
+ZL_join,bpe,A_only,cto,c t o,5,tedy,2.0,33.0,del:c@begin;sub:o>edy@end
+ZL_join,bpe,A_only,chkchy,ch k chy,5,chkain,1.0,11.0,sub:chy>ain@end
+ZL_join,bpe,A_only,chotol,ch ot ol,5,otol,1.0,23.0,del:ch@begin
+ZL_join,bpe,A_only,ckheody,ckh eody,5,oteody,1.0,15.0,sub:ckh>ot@begin
+ZL_join,bpe,A_only,ctheor,cth e or,5,qokeor,1.0,8.0,sub:cth>qok@begin
+ZL_join,bpe,A_only,ctheody,cth eody,5,oteody,1.0,15.0,sub:cth>ot@begin
+ZL_join,bpe,A_only,cthom,cth o m,5,om,1.0,5.0,del:cth@begin
+ZL_join,bpe,A_only,dcho,d cho,5,dair,1.0,38.0,sub:cho>air@end
+ZL_join,bpe,A_only,kcheol,k cheol,5,cheol,1.0,80.0,del:k@begin
+ZL_join,bpe,A_only,qokchod,qok cho d,5,qokeed,1.0,12.0,sub:cho>ee@mid
+ZL_join,bpe,A_only,shan,sh a n,5,qokan,1.0,8.0,sub:sh>qok@begin
+ZL_join,bpe,A_only,ykchor,yk chor,5,ykaiin,1.0,34.0,sub:chor>aiin@end
+ZL_join,bpe,A_only,chok,ch ok,4,chckhy,1.0,114.0,sub:ok>ckhy@end
+ZL_join,bpe,A_only,chokchol,ch ok chol,4,choky,1.0,7.0,sub:chol>y@end
+ZL_join,bpe,A_only,chetchy,che t chy,4,chety,1.0,14.0,sub:chy>y@end
+ZL_join,bpe,A_only,chochy,cho chy,4,chy,1.0,26.0,del:cho@begin
+ZL_join,bpe,A_only,choror,chor or,4,or,1.0,167.0,del:chor@begin
+ZL_join,bpe,A_only,chykchy,chy k chy,4,shekchy,1.0,3.0,sub:chy>she@begin
+ZL_join,bpe,A_only,ckhody,ckh ody,4,cheody,1.0,50.0,sub:ckh>che@begin
+ZL_join,bpe,A_only,cthain,cth ain,4,okain,1.0,126.0,sub:cth>ok@begin
+ZL_join,bpe,A_only,cthod,cth od,4,cthedy,1.0,11.0,sub:od>edy@end
+ZL_join,bpe,A_only,ctholy,cth ol y,4,oly,1.0,42.0,del:cth@begin
+ZL_join,bpe,A_only,dchaiin,d ch aiin,4,chaiin,1.0,10.0,del:d@begin
+ZL_join,bpe,A_only,dcheor,d che or,4,cheor,1.0,23.0,del:d@begin
+ZL_join,bpe,A_only,dory,d or y,4,dor,1.0,17.0,del:y@end
+ZL_join,bpe,A_only,okchal,ok ch al,4,chal,1.0,26.0,del:ok@begin
+ZL_join,bpe,A_only,okeom,ok e o m,4,okeo,1.0,2.0,del:m@end
+ZL_join,bpe,A_only,oksho,ok sho,4,okain,1.0,126.0,sub:sho>ain@end
+ZL_join,bpe,A_only,otshy,ot shy,4,otedy,1.0,136.0,sub:shy>edy@end
+ZL_join,bpe,A_only,schol,s chol,4,saiin,1.0,97.0,sub:chol>aiin@end
+ZL_join,bpe,A_only,sody,s ody,4,saiin,1.0,97.0,sub:ody>aiin@end
+ZL_join,bpe,A_only,shoty,sh ot y,4,oty,1.0,58.0,del:sh@begin
+ZL_join,bpe,A_only,shom,sho m,4,sho,1.0,9.0,del:m@end
+ZL_join,bpe,A_only,ysho,y sho,4,y,1.0,38.0,del:sho@end
+ZL_join,bpe,A_only,ytchody,yt ch ody,4,chody,1.0,43.0,del:yt@begin
+ZL_join,bpe,A_only,ytoldy,yt ol dy,4,oldy,1.0,17.0,del:yt@begin
+ZL_join,bpe,A_only,c'y,c ' y,3,qoky,2.0,99.0,del:c@begin;sub:'>qok@mid
+ZL_join,bpe,A_only,cty,c t y,3,chety,1.0,14.0,sub:c>che@begin
+ZL_join,bpe,A_only,chokol,ch ok ol,3,okol,1.0,16.0,del:ch@begin
+ZL_join,bpe,A_only,chotchey,ch ot chey,3,otchey,1.0,17.0,del:ch@begin
+ZL_join,bpe,A_only,chotols,ch ot ol s,3,otol,2.0,23.0,del:ch@begin;del:s@end
+ZL_join,bpe,A_only,chotor,ch ot or,3,otor,1.0,20.0,del:ch@begin
+ZL_join,bpe,A_only,chodaly,cho dal y,3,daly,1.0,15.0,del:cho@begin
+ZL_join,bpe,A_only,chopy,cho p y,3,chepy,1.0,5.0,sub:cho>che@begin
+ZL_join,bpe,A_only,cholaiin,chol aiin,3,aiin,1.0,227.0,del:chol@begin
+ZL_join,bpe,A_only,choldam,chol d am,3,dam,1.0,26.0,del:chol@begin
+ZL_join,bpe,A_only,cholol,chol ol,3,ol,1.0,288.0,del:chol@begin
+ZL_join,bpe,A_only,ckhaiin,ckh aiin,3,aiin,1.0,227.0,del:ckh@begin
+ZL_join,bpe,A_only,ckham,ckh am,3,otam,1.0,36.0,sub:ckh>ot@begin
+ZL_join,bpe,A_only,ckhos,ckh os,3,sheos,1.0,6.0,sub:ckh>she@begin
+ZL_join,bpe,A_only,cpheodar,cph e o dar,3,oteodar,1.0,2.0,sub:cph>ot@begin
+ZL_join,bpe,A_only,ctheod,cth e od,3,qokeod,1.0,3.0,sub:cth>qok@begin
+ZL_join,bpe,A_only,cthodaiin,cth o daiin,3,odaiin,1.0,26.0,del:cth@begin
+ZL_join,bpe,A_only,dairin,d air in,3,dair,1.0,38.0,del:in@end
+ZL_join,bpe,A_only,dchar,d ch ar,3,char,1.0,33.0,del:d@begin
+ZL_join,bpe,A_only,dchokchy,d ch ok chy,3,chokchy,1.0,2.0,del:d@begin
+ZL_join,bpe,A_only,doiir,d o i i r,3,oiir,1.0,2.0,del:d@begin
+ZL_join,bpe,A_only,doldaiin,d ol daiin,3,dol,1.0,34.0,del:daiin@end
+ZL_join,bpe,A_only,dalchy,dal chy,3,dal,1.0,98.0,del:chy@end
+ZL_join,bpe,A_only,kchaiin,k ch aiin,3,kaiin,1.0,32.0,del:ch@mid
+ZL_join,bpe,A_only,kchod,k cho d,3,otchod,1.0,2.0,sub:k>ot@begin
+ZL_join,bpe,A_only,kchos,k cho s,3,chos,1.0,11.0,del:k@begin
+ZL_join,bpe,A_only,keeo,k ee o,3,qokeeo,1.0,11.0,sub:k>qok@begin
+ZL_join,bpe,A_only,kodaiin,k o daiin,3,odaiin,1.0,26.0,del:k@begin
+ZL_join,bpe,A_only,kos,k os,3,keedy,1.0,34.0,sub:os>eedy@end
+ZL_join,bpe,A_only,n,n,3,chedy,1.0,432.0,sub:n>chedy@begin
+ZL_join,bpe,A_only,ochol,o chol,3,chol,1.0,78.0,del:o@begin
+ZL_join,bpe,A_only,ochy,o chy,3,odaiin,1.0,26.0,sub:chy>daiin@end
+ZL_join,bpe,A_only,oeeor,o ee or,3,qokeeor,1.0,5.0,sub:o>qok@begin
+ZL_join,bpe,A_only,okeoly,ok eol y,3,oky,1.0,45.0,del:eol@mid
+ZL_join,bpe,A_only,okom,ok o m,3,om,1.0,5.0,del:ok@begin
+ZL_join,bpe,A_only,okoy,ok o y,3,oky,1.0,45.0,del:o@mid
+ZL_join,bpe,A_only,okoly,ok ol y,3,oky,1.0,45.0,del:ol@mid
+ZL_join,bpe,A_only,opydaiin,op y daiin,3,ydaiin,1.0,5.0,del:op@begin
+ZL_join,bpe,A_only,pchocthy,p cho cthy,3,chocthy,1.0,5.0,del:p@begin
+ZL_join,bpe,A_only,q'o,q ' o,3,o,2.0,20.0,del:q'@begin
+ZL_join,bpe,A_only,qotchar,qot ch ar,3,qotar,1.0,60.0,del:ch@mid
+ZL_join,bpe,A_only,qotoiin,qot o iin,3,oiin,1.0,12.0,del:qot@begin
+ZL_join,bpe,A_only,so,s o,3,saiin,1.0,97.0,sub:o>aiin@end
+ZL_join,bpe,A_only,shokol,sh ok ol,3,okol,1.0,16.0,del:sh@begin
+ZL_join,bpe,A_only,shodol,sho d ol,3,dol,1.0,34.0,del:sho@begin
+ZL_join,bpe,A_only,shodal,sho dal,3,dal,1.0,98.0,del:sho@begin
+ZL_join,bpe,A_only,shoshy,sho shy,3,shy,1.0,27.0,del:sho@begin
+ZL_join,bpe,A_only,sholdaiin,shol daiin,3,daiin,1.0,284.0,del:shol@begin
+ZL_join,bpe,A_only,sholy,shol y,3,qoky,1.0,99.0,sub:shol>qok@begin
+ZL_join,bpe,A_only,toy,t o y,3,todaiin,1.0,4.0,sub:y>daiin@end
+ZL_join,bpe,A_only,tos,t os,3,tedy,1.0,33.0,sub:os>edy@end
+ZL_join,bpe,A_only,ycho,y cho,3,y,1.0,38.0,del:cho@end
+ZL_join,bpe,A_only,ypchy,y p chy,3,ypchedy,1.0,11.0,sub:chy>chedy@end
+ZL_join,bpe,A_only,ykchody,yk ch ody,3,chody,1.0,43.0,del:yk@begin
+ZL_join,bpe,A_only,ykhey,yk h ey,3,ykeeey,1.0,4.0,sub:h>ee@mid
+ZL_join,bpe,A_only,ykoiin,yk o iin,3,oiin,1.0,12.0,del:yk@begin
+ZL_join,bpe,A_only,yteor,yt e or,3,qokeor,1.0,8.0,sub:yt>qok@begin
+ZL_join,bpe,A_only,arary,ar ar y,2,ary,1.0,9.0,del:ar@begin
+ZL_join,bpe,A_only,ctchy,c t chy,2,tchy,1.0,2.0,del:c@begin
+ZL_join,bpe,A_only,ctos,c t os,2,tedy,2.0,33.0,del:c@begin;sub:os>edy@end
+ZL_join,bpe,A_only,cfhaiin,cfh aiin,2,aiin,1.0,227.0,del:cfh@begin
+ZL_join,bpe,A_only,cfhey,cfh ey,2,qokey,1.0,84.0,sub:cfh>qok@begin
+ZL_join,bpe,A_only,cha,ch a,2,chckhy,1.0,114.0,sub:a>ckhy@end
+ZL_join,bpe,A_only,chaldy,ch al dy,2,chal,1.0,26.0,del:dy@end
+ZL_join,bpe,A_only,chcth,ch cth,2,chckhy,1.0,114.0,sub:cth>ckhy@end
+ZL_join,bpe,A_only,chkoldy,ch k ol dy,2,koldy,1.0,4.0,del:ch@begin
+ZL_join,bpe,A_only,chkor,ch k or,2,chkain,1.0,11.0,sub:or>ain@end
+ZL_join,bpe,A_only,chokan,ch ok a n,2,okan,1.0,3.0,del:ch@begin
+ZL_join,bpe,A_only,chokcho,ch ok cho,2,choky,1.0,7.0,sub:cho>y@end
+ZL_join,bpe,A_only,chokeo,ch ok e o,2,okeo,1.0,2.0,del:ch@begin
+ZL_join,bpe,A_only,choko,ch ok o,2,choky,1.0,7.0,sub:o>y@end
+ZL_join,bpe,A_only,chokody,ch ok ody,2,chody,1.0,43.0,del:ok@mid
+ZL_join,bpe,A_only,choteol,ch ot eol,2,oteol,1.0,18.0,del:ch@begin
+ZL_join,bpe,A_only,chotom,ch ot o m,2,choty,2.0,12.0,del:o@mid;sub:m>y@end
+ZL_join,bpe,A_only,chotshol,ch ot shol,2,choty,1.0,12.0,sub:shol>y@end
+ZL_join,bpe,A_only,chso,ch s o,2,chs,1.0,5.0,del:o@end
+ZL_join,bpe,A_only,chtor,ch t or,2,chdor,1.0,9.0,sub:t>d@mid
+ZL_join,bpe,A_only,chean,che a n,2,qokan,1.0,8.0,sub:che>qok@begin
+ZL_join,bpe,A_only,cheain,che ain,2,okain,1.0,126.0,sub:che>ok@begin
+ZL_join,bpe,A_only,cheokor,che ok or,2,cheor,1.0,23.0,del:ok@mid
+ZL_join,bpe,A_only,cheokal,che okal,2,okal,1.0,87.0,del:che@begin
+ZL_join,bpe,A_only,cheory,che or y,2,cheor,1.0,23.0,del:y@end
+ZL_join,bpe,A_only,cheotol,che ot ol,2,otol,1.0,23.0,del:che@begin
+ZL_join,bpe,A_only,cheodam,cheo d am,2,dam,1.0,26.0,del:cheo@begin
+ZL_join,bpe,A_only,cheols,cheol s,2,cheol,1.0,80.0,del:s@end
+ZL_join,bpe,A_only,chochor,cho chor,2,chor,1.0,27.0,del:cho@begin
+ZL_join,bpe,A_only,chocphy,cho cph y,2,chcphy,1.0,6.0,sub:cho>ch@begin
+ZL_join,bpe,A_only,chocthhy,cho cth h y,2,qcthhy,1.0,3.0,sub:cho>q@begin
+ZL_join,bpe,A_only,chodchy,cho d chy,2,chopchy,1.0,2.0,sub:d>p@mid
+ZL_join,bpe,A_only,chodey,cho d ey,2,qokey,2.0,84.0,del:cho@begin;sub:d>qok@mid
+ZL_join,bpe,A_only,chodol,cho d ol,2,dol,1.0,34.0,del:cho@begin
+ZL_join,bpe,A_only,choety,cho e t y,2,ety,1.0,3.0,del:cho@begin
+ZL_join,bpe,A_only,chof,cho f,2,chodaiin,1.0,16.0,sub:f>daiin@end
+ZL_join,bpe,A_only,choor,cho or,2,or,1.0,167.0,del:cho@begin
+ZL_join,bpe,A_only,choshy,cho shy,2,shy,1.0,27.0,del:cho@begin
+ZL_join,bpe,A_only,choldan,chol d a n,2,qokan,2.0,8.0,del:chol@begin;sub:d>qok@mid
+ZL_join,bpe,A_only,choldal,chol dal,2,dal,1.0,98.0,del:chol@begin
+ZL_join,bpe,A_only,cholols,chol ol s,2,ols,1.0,9.0,del:chol@begin
+ZL_join,bpe,A_only,chorain,chor ain,2,okain,1.0,126.0,sub:chor>ok@begin
+ZL_join,bpe,A_only,chorchy,chor chy,2,chor,1.0,27.0,del:chy@end
+ZL_join,bpe,A_only,chordy,chor dy,2,dy,1.0,76.0,del:chor@begin
+ZL_join,bpe,A_only,chydy,chy dy,2,dy,1.0,76.0,del:chy@begin
+ZL_join,bpe,A_only,chykey,chy k ey,2,chekey,1.0,5.0,sub:chy>che@begin
+ZL_join,bpe,A_only,cpheol,cph eol,2,okeol,1.0,19.0,sub:cph>ok@begin
+ZL_join,bpe,A_only,cphoy,cph o y,2,oy,1.0,2.0,del:cph@begin
+ZL_join,bpe,A_only,cpholdy,cph ol dy,2,oldy,1.0,17.0,del:cph@begin
+ZL_join,bpe,A_only,cth,cth,2,chedy,1.0,432.0,sub:cth>chedy@begin
+ZL_join,bpe,A_only,cthodal,cth o dal,2,odal,1.0,5.0,del:cth@begin
+ZL_join,bpe,A_only,cthoiin,cth o iin,2,oiin,1.0,12.0,del:cth@begin
+ZL_join,bpe,A_only,cthodol,cth od ol,2,cthol,1.0,3.0,del:od@mid
+ZL_join,bpe,A_only,ctholdy,cth ol dy,2,oldy,1.0,17.0,del:cth@begin
+ZL_join,bpe,A_only,cthols,cth ol s,2,ols,1.0,9.0,del:cth@begin
+ZL_join,bpe,A_only,cthory,cth or y,2,ory,1.0,10.0,del:cth@begin
+ZL_join,bpe,A_only,cthyd,cthy d,2,shed,1.0,14.0,sub:cthy>she@begin
+ZL_join,bpe,A_only,daky,d a ky,2,aky,1.0,3.0,del:d@begin
+ZL_join,bpe,A_only,dchckhy,d ch ckhy,2,chckhy,1.0,114.0,del:d@begin
+ZL_join,bpe,A_only,dchodaiin,d cho daiin,2,chodaiin,1.0,16.0,del:d@begin
+ZL_join,bpe,A_only,dchog,d cho g,2,dag,1.0,2.0,sub:cho>a@mid
+ZL_join,bpe,A_only,dchydy,d chy dy,2,dshdy,1.0,3.0,sub:chy>sh@mid
+ZL_join,bpe,A_only,ddy,d dy,2,dy,1.0,76.0,del:d@begin
+ZL_join,bpe,A_only,doaiin,d o aiin,2,oaiin,1.0,11.0,del:d@begin
+ZL_join,bpe,A_only,dolchey,d ol chey,2,dol,1.0,34.0,del:chey@end
+ZL_join,bpe,A_only,doroiin,d or o iin,2,dor,2.0,17.0,del:oiin@end
+ZL_join,bpe,A_only,dshody,d sh ody,2,shody,1.0,27.0,del:d@begin
+ZL_join,bpe,A_only,dsheor,d she or,2,sheor,1.0,19.0,del:d@begin
+ZL_join,bpe,A_only,du,d u,2,dair,1.0,38.0,sub:u>air@end
+ZL_join,bpe,A_only,daiinody,daiin ody,2,daiin,1.0,284.0,del:ody@end
+ZL_join,bpe,A_only,darchor,dar chor,2,dar,1.0,158.0,del:chor@end
+ZL_join,bpe,A_only,dykchy,dy k chy,2,shekchy,1.0,3.0,sub:dy>she@begin
+ZL_join,bpe,A_only,dytchy,dy t chy,2,dyteey,1.0,3.0,sub:chy>eey@end
+ZL_join,bpe,A_only,eeckhy,ee ckhy,2,chckhy,1.0,114.0,sub:ee>ch@begin
+ZL_join,bpe,A_only,eeey,ee ey,2,qokey,1.0,84.0,sub:ee>qok@begin
+ZL_join,bpe,A_only,fcholdy,f chol dy,2,choldy,1.0,2.0,del:f@begin
+ZL_join,bpe,A_only,foar,f o ar,2,oar,1.0,7.0,del:f@begin
+ZL_join,bpe,A_only,kchokchy,k ch ok chy,2,chokchy,1.0,2.0,del:k@begin
+ZL_join,bpe,A_only,kcho,k cho,2,keedy,1.0,34.0,sub:cho>eedy@end
+ZL_join,bpe,A_only,keeos,k ee os,2,keeey,1.0,5.0,sub:os>ey@end
+ZL_join,bpe,A_only,koiin,k o iin,2,oiin,1.0,12.0,del:k@begin
+ZL_join,bpe,A_only,kooiin,k o o iin,2,oiin,2.0,12.0,del:ko@begin
+ZL_join,bpe,A_only,kod,k od,2,keedy,1.0,34.0,sub:od>eedy@end
+ZL_join,bpe,A_only,kokaiin,k okaiin,2,okaiin,1.0,168.0,del:k@begin
+ZL_join,bpe,A_only,koldal,k ol dal,2,kol,1.0,5.0,del:dal@end
+ZL_join,bpe,A_only,koraiin,k or aiin,2,oraiin,1.0,45.0,del:k@begin
+ZL_join,bpe,A_only,kshor,k sh or,2,shor,1.0,26.0,del:k@begin
+ZL_join,bpe,A_only,kshol,k shol,2,shol,1.0,51.0,del:k@begin
+ZL_join,bpe,A_only,loiiin,l o i iin,2,oiiin,1.0,7.0,del:l@begin
+ZL_join,bpe,A_only,octhos,o cth os,2,octhey,1.0,3.0,sub:os>ey@end
+ZL_join,bpe,A_only,ofchar,o f ch ar,2,ofar,1.0,4.0,del:ch@mid
+ZL_join,bpe,A_only,oykeey,o yk eey,2,ykeey,1.0,29.0,del:o@begin
+ZL_join,bpe,A_only,odan,od a n,2,qokan,1.0,8.0,sub:od>qok@begin
+ZL_join,bpe,A_only,odol,od ol,2,ol,1.0,288.0,del:od@begin
+ZL_join,bpe,A_only,okchan,ok ch a n,2,okan,1.0,3.0,del:ch@mid
+ZL_join,bpe,A_only,okchom,ok cho m,2,okcho,1.0,2.0,del:m@end
+ZL_join,bpe,A_only,okeoy,ok e o y,2,qokeoy,1.0,2.0,sub:ok>qok@begin
+ZL_join,bpe,A_only,okodaiin,ok o daiin,2,odaiin,1.0,26.0,del:ok@begin
+ZL_join,bpe,A_only,okolol,ok ol ol,2,okol,1.0,16.0,del:ol@mid
+ZL_join,bpe,A_only,okos,ok os,2,okain,1.0,126.0,sub:os>ain@end
+ZL_join,bpe,A_only,olaldy,ol al dy,2,oldy,1.0,17.0,del:al@mid
+ZL_join,bpe,A_only,olchor,ol chor,2,ol,1.0,288.0,del:chor@end
+ZL_join,bpe,A_only,oldor,ol d or,2,olor,1.0,23.0,del:d@mid
+ZL_join,bpe,A_only,oldain,ol dain,2,ol,1.0,288.0,del:dain@end
+ZL_join,bpe,A_only,oleees,ol ee e s,2,eees,1.0,7.0,del:ol@begin
+ZL_join,bpe,A_only,olsheody,ol she ody,2,sheody,1.0,27.0,del:ol@begin
+ZL_join,bpe,A_only,opchordy,op chor dy,2,opchor,1.0,2.0,del:dy@end
+ZL_join,bpe,A_only,opydy,op y dy,2,opy,1.0,4.0,del:dy@end
+ZL_join,bpe,A_only,orchor,or chor,2,or,1.0,167.0,del:chor@end
+ZL_join,bpe,A_only,orshy,or shy,2,or,1.0,167.0,del:shy@end
+ZL_join,bpe,A_only,otchaiin,ot ch aiin,2,otaiin,1.0,107.0,del:ch@mid
+ZL_join,bpe,A_only,otchal,ot ch al,2,otal,1.0,86.0,del:ch@mid
+ZL_join,bpe,A_only,otchdal,ot ch dal,2,chdal,1.0,17.0,del:ot@begin
+ZL_join,bpe,A_only,otcheor,ot che or,2,cheor,1.0,23.0,del:ot@begin
+ZL_join,bpe,A_only,oteodal,ot e o dal,2,oteodaiin,1.0,4.0,sub:dal>daiin@end
+ZL_join,bpe,A_only,oteeor,ot ee or,2,otor,1.0,20.0,del:ee@mid
+ZL_join,bpe,A_only,otorchy,ot or chy,2,otor,1.0,20.0,del:chy@end
+ZL_join,bpe,A_only,otshol,ot shol,2,otedy,1.0,136.0,sub:shol>edy@end
+ZL_join,bpe,A_only,pchodol,p cho d ol,2,pchdol,1.0,2.0,sub:cho>ch@mid
+ZL_join,bpe,A_only,pchy,p chy,2,pchedy,1.0,29.0,sub:chy>chedy@end
+ZL_join,bpe,A_only,podaiir,p od ai i r,2,paiir,1.0,2.0,del:od@mid
+ZL_join,bpe,A_only,pydaiin,p y daiin,2,ydaiin,1.0,5.0,del:p@begin
+ZL_join,bpe,A_only,qoaithy,qo ai t h y,2,aithy,1.0,3.0,del:qo@begin
+ZL_join,bpe,A_only,qocphy,qo cph y,2,chcphy,1.0,6.0,sub:qo>ch@begin
+ZL_join,bpe,A_only,qocthol,qo cth ol,2,qopol,1.0,4.0,sub:cth>p@mid
+ZL_join,bpe,A_only,qodchy,qo d chy,2,qopchy,1.0,7.0,sub:d>p@mid
+ZL_join,bpe,A_only,qoekeey,qo e k eey,2,qekeey,1.0,3.0,sub:qo>q@begin
+ZL_join,bpe,A_only,qoekol,qo e k ol,2,qoekedy,1.0,2.0,sub:ol>edy@end
+ZL_join,bpe,A_only,qoeor,qo e or,2,qokeor,1.0,8.0,sub:qo>qok@begin
+ZL_join,bpe,A_only,qoos,qo os,2,qodaiin,1.0,29.0,sub:os>daiin@end
+ZL_join,bpe,A_only,qopchor,qo p chor,2,qopchedy,1.0,30.0,sub:chor>chedy@end
+ZL_join,bpe,A_only,qokchaiin,qok ch aiin,2,chaiin,1.0,10.0,del:qok@begin
+ZL_join,bpe,A_only,qokchody,qok ch ody,2,chody,1.0,43.0,del:qok@begin
+ZL_join,bpe,A_only,qokcheo,qok cheo,2,qokar,1.0,130.0,sub:cheo>ar@end
+ZL_join,bpe,A_only,qokeom,qok e o m,2,qokeo,1.0,4.0,del:m@end
+ZL_join,bpe,A_only,qokoiiin,qok o i iin,2,oiiin,1.0,7.0,del:qok@begin
+ZL_join,bpe,A_only,qokom,qok o m,2,om,1.0,5.0,del:qok@begin
+ZL_join,bpe,A_only,qokorar,qok or ar,2,qokar,1.0,130.0,del:or@mid
+ZL_join,bpe,A_only,qotchaiin,qot ch aiin,2,qotaiin,1.0,65.0,del:ch@mid
+ZL_join,bpe,A_only,qotcheaiin,qot che aiin,2,qotaiin,1.0,65.0,del:che@mid
+ZL_join,bpe,A_only,qotcheol,qot cheol,2,qotedy,1.0,86.0,sub:cheol>edy@end
+ZL_join,bpe,A_only,qotchod,qot cho d,2,qotched,1.0,5.0,sub:cho>che@mid
+ZL_join,bpe,A_only,qotchoiin,qot cho iin,2,qotcho,1.0,2.0,del:iin@end
+ZL_join,bpe,A_only,qoteees,qot ee e s,2,eees,1.0,7.0,del:qot@begin
+ZL_join,bpe,A_only,qotoeey,qot o eey,2,qoteey,1.0,32.0,del:o@mid
+ZL_join,bpe,A_only,qotod,qot od,2,qotedy,1.0,86.0,sub:od>edy@end
+ZL_join,bpe,A_only,schody,s ch ody,2,chody,1.0,43.0,del:s@begin
+ZL_join,bpe,A_only,scheaiin,s che aiin,2,saiin,1.0,97.0,del:che@mid
+ZL_join,bpe,A_only,scheey,s cheey,2,cheey,1.0,109.0,del:s@begin
+ZL_join,bpe,A_only,som,s o m,2,soiin,1.0,8.0,sub:m>iin@end
+ZL_join,bpe,A_only,soshy,s o shy,2,soiin,1.0,8.0,sub:shy>iin@end
+ZL_join,bpe,A_only,sos,s os,2,saiin,1.0,97.0,sub:os>aiin@end
+ZL_join,bpe,A_only,sydy,s y dy,2,sy,1.0,5.0,del:dy@end
+ZL_join,bpe,A_only,sha,sh a,2,sheedy,1.0,72.0,sub:a>eedy@end
+ZL_join,bpe,A_only,sheear,sh ee ar,2,shar,1.0,16.0,del:ee@mid
+ZL_join,bpe,A_only,shot,sh ot,2,sheedy,1.0,72.0,sub:ot>eedy@end
+ZL_join,bpe,A_only,shotol,sh ot ol,2,otol,1.0,23.0,del:sh@begin
+ZL_join,bpe,A_only,shytchy,sh yt chy,2,ytchy,1.0,3.0,del:sh@begin
+ZL_join,bpe,A_only,sheam,she am,2,sheol,1.0,60.0,sub:am>ol@end
+ZL_join,bpe,A_only,sheom,she o m,2,sheo,1.0,11.0,del:m@end
+ZL_join,bpe,A_only,shockhey,sho ckh ey,2,chckhey,1.0,26.0,sub:sho>ch@begin
+ZL_join,bpe,A_only,shocthody,sho cth ody,2,cheody,2.0,50.0,del:sho@begin;sub:cth>che@mid
+ZL_join,bpe,A_only,shoy,sho y,2,qoky,1.0,99.0,sub:sho>qok@begin
+ZL_join,bpe,A_only,sholaiin,shol aiin,2,aiin,1.0,227.0,del:shol@begin
+ZL_join,bpe,A_only,sholar,shol ar,2,ar,1.0,186.0,del:shol@begin
+ZL_join,bpe,A_only,tchodar,t cho dar,2,chodar,1.0,4.0,del:t@begin
+ZL_join,bpe,A_only,tchos,t cho s,2,chos,1.0,11.0,del:t@begin
+ZL_join,bpe,A_only,teodar,t e o dar,2,oteodar,1.0,2.0,sub:t>ot@begin
+ZL_join,bpe,A_only,toiin,t o iin,2,oiin,1.0,12.0,del:t@begin
+ZL_join,bpe,A_only,tod,t od,2,tedy,1.0,33.0,sub:od>edy@end
+ZL_join,bpe,A_only,torchy,t or chy,2,tor,1.0,6.0,del:chy@end
+ZL_join,bpe,A_only,tsheody,t she ody,2,sheody,1.0,27.0,del:t@begin
+ZL_join,bpe,A_only,ychody,y ch ody,2,chody,1.0,43.0,del:y@begin
+ZL_join,bpe,A_only,ychekchy,y che k chy,2,chekchy,1.0,2.0,del:y@begin
+ZL_join,bpe,A_only,ycheoky,y che ok y,2,cheoky,1.0,3.0,del:y@begin
+ZL_join,bpe,A_only,ycheockhy,y cheo ckhy,2,ycheo,1.0,6.0,del:ckhy@end
+ZL_join,bpe,A_only,ychocthy,y cho cthy,2,chocthy,1.0,5.0,del:y@begin
+ZL_join,bpe,A_only,ychos,y cho s,2,chos,1.0,11.0,del:y@begin
+ZL_join,bpe,A_only,yd,y d,2,y,1.0,38.0,del:d@end
+ZL_join,bpe,A_only,ydal,y dal,2,dal,1.0,98.0,del:y@begin
+ZL_join,bpe,A_only,yfolaiin,y f ol aiin,2,olaiin,2.0,39.0,del:yf@begin
+ZL_join,bpe,A_only,yokor,y ok or,2,okor,1.0,5.0,del:y@begin
+ZL_join,bpe,A_only,yol,y ol,2,ol,1.0,288.0,del:y@begin
+ZL_join,bpe,A_only,ypchol,y p chol,2,ypchedy,1.0,11.0,sub:chol>chedy@end
+ZL_join,bpe,A_only,yshol,y shol,2,shol,1.0,51.0,del:y@begin
+ZL_join,bpe,A_only,ykody,yk ody,2,cheody,1.0,50.0,sub:yk>che@begin
+ZL_join,bpe,A_only,ykshy,yk shy,2,ykaiin,1.0,34.0,sub:shy>aiin@end
+ZL_join,bpe,A_only,ytchoy,yt cho y,2,yty,1.0,8.0,del:cho@mid
+ZL_join,bpe,A_only,yteodaiin,yt e o daiin,2,oteodaiin,1.0,4.0,sub:yt>ot@begin
+ZL_join,bpe,A_only,yto,yt o,2,ytaiin,1.0,29.0,sub:o>aiin@end
+ZL_join,bpe,A_only,ytsho,yt sho,2,ytaiin,1.0,29.0,sub:sho>aiin@end
+ZL_join,bpe,A_only,ytshy,yt shy,2,ytaiin,1.0,29.0,sub:shy>aiin@end
+ZL_join,bpe,B_only,qokeedy,qokeedy,303,daiin,1.0,466.0,sub:daiin>qokeedy@begin
+ZL_join,bpe,B_only,otedy,ot edy,136,oty,1.0,39.0,sub:y>edy@end
+ZL_join,bpe,B_only,okedy,ok edy,107,oky,1.0,38.0,sub:y>edy@end
+ZL_join,bpe,B_only,qotedy,qot edy,86,qotchy,1.0,47.0,sub:chy>edy@end
+ZL_join,bpe,B_only,qoteedy,qot eedy,74,qotchy,1.0,47.0,sub:chy>eedy@end
+ZL_join,bpe,B_only,qokchdy,qok chdy,49,qokol,1.0,43.0,sub:ol>chdy@end
+ZL_join,bpe,B_only,opchedy,op chedy,46,opchey,1.0,5.0,sub:chey>chedy@end
+ZL_join,bpe,B_only,lkaiin,lk aiin,43,aiin,1.0,51.0,ins:lk@begin
+ZL_join,bpe,B_only,lchey,l chey,42,chey,1.0,73.0,ins:l@begin
+ZL_join,bpe,B_only,olchedy,ol chedy,42,ol,1.0,70.0,ins:chedy@end
+ZL_join,bpe,B_only,olkeedy,olk eedy,42,olkeol,1.0,3.0,sub:eol>eedy@end
+ZL_join,bpe,B_only,lkeedy,lk eedy,39,cheedy,1.0,3.0,sub:ch>lk@begin
+ZL_join,bpe,B_only,lshedy,l shedy,38,l,1.0,7.0,ins:shedy@end
+ZL_join,bpe,B_only,olkaiin,olk aiin,35,aiin,1.0,51.0,ins:olk@begin
+ZL_join,bpe,B_only,olkain,olk ain,35,chain,1.0,10.0,sub:ch>olk@begin
+ZL_join,bpe,B_only,keedy,k eedy,34,kchy,1.0,19.0,sub:chy>eedy@end
+ZL_join,bpe,B_only,tedy,t edy,33,tchy,1.0,15.0,sub:chy>edy@end
+ZL_join,bpe,B_only,dshedy,d shedy,31,dol,1.0,52.0,sub:ol>shedy@end
+ZL_join,bpe,B_only,otchedy,ot chedy,31,oty,1.0,39.0,sub:y>chedy@end
+ZL_join,bpe,B_only,sheckhy,she ckhy,31,sheol,1.0,35.0,sub:ol>ckhy@end
+ZL_join,bpe,B_only,chedaiin,che daiin,30,daiin,1.0,466.0,ins:che@begin
+ZL_join,bpe,B_only,lkar,lk ar,30,ar,1.0,33.0,ins:lk@begin
+ZL_join,bpe,B_only,qopchedy,qo p chedy,30,qopchy,1.0,4.0,sub:chy>chedy@end
+ZL_join,bpe,B_only,tchedy,t chedy,30,tchy,1.0,15.0,sub:chy>chedy@end
+ZL_join,bpe,B_only,lkain,lk ain,29,chain,1.0,10.0,sub:ch>lk@begin
+ZL_join,bpe,B_only,olshedy,ol shedy,29,ol,1.0,70.0,ins:shedy@end
+ZL_join,bpe,B_only,pchedy,p chedy,29,pchor,1.0,5.0,sub:chor>chedy@end
+ZL_join,bpe,B_only,kedy,k edy,28,kchy,1.0,19.0,sub:chy>edy@end
+ZL_join,bpe,B_only,lkedy,lk edy,28,daiin,2.0,466.0,ins:lk@begin;sub:daiin>edy@begin
+ZL_join,bpe,B_only,olkedy,olk edy,28,olkeol,1.0,3.0,sub:eol>edy@end
+ZL_join,bpe,B_only,yteedy,yt eedy,27,ytchy,1.0,13.0,sub:chy>eedy@end
+ZL_join,bpe,B_only,ykeedy,yk eedy,26,ykeey,1.0,19.0,sub:eey>eedy@end
+ZL_join,bpe,B_only,chedar,che dar,25,dar,1.0,84.0,ins:che@begin
+ZL_join,bpe,B_only,dchedy,d chedy,25,dol,1.0,52.0,sub:ol>chedy@end
+ZL_join,bpe,B_only,qotchedy,qot chedy,24,qotchy,1.0,47.0,sub:chy>chedy@end
+ZL_join,bpe,B_only,okchedy,ok chedy,21,oky,1.0,38.0,sub:y>chedy@end
+ZL_join,bpe,B_only,ytedy,yt edy,21,ytchy,1.0,13.0,sub:chy>edy@end
+ZL_join,bpe,B_only,qotchdy,qot chdy,20,qotchy,1.0,47.0,sub:chy>chdy@end
+ZL_join,bpe,B_only,rain,r ain,20,r,1.0,25.0,ins:ain@end
+ZL_join,bpe,B_only,lky,lk y,19,oty,1.0,39.0,sub:ot>lk@begin
+ZL_join,bpe,B_only,lshey,l shey,18,shey,1.0,53.0,ins:l@begin
+ZL_join,bpe,B_only,olkar,olk ar,18,ar,1.0,33.0,ins:olk@begin
+ZL_join,bpe,B_only,qoeedy,qo eedy,18,qodaiin,1.0,14.0,sub:daiin>eedy@end
+ZL_join,bpe,B_only,ykedy,yk edy,18,ykeey,1.0,19.0,sub:eey>edy@end
+ZL_join,bpe,B_only,araiin,ar aiin,17,aiin,1.0,51.0,ins:ar@begin
+ZL_join,bpe,B_only,chdaiin,ch daiin,17,daiin,1.0,466.0,ins:ch@begin
+ZL_join,bpe,B_only,chdal,ch dal,17,dal,1.0,67.0,ins:ch@begin
+ZL_join,bpe,B_only,olky,olk y,17,oty,1.0,39.0,sub:ot>olk@begin
+ZL_join,bpe,B_only,opchdy,op chdy,17,chdy,1.0,8.0,ins:op@begin
+ZL_join,bpe,B_only,lkchedy,lk chedy,16,daiin,2.0,466.0,ins:lk@begin;sub:daiin>chedy@begin
+ZL_join,bpe,B_only,qopchdy,qo p chdy,16,qopchy,1.0,4.0,sub:chy>chdy@end
+ZL_join,bpe,B_only,okchdy,ok chdy,15,oky,1.0,38.0,sub:y>chdy@end
+ZL_join,bpe,B_only,chdar,ch dar,14,dar,1.0,84.0,ins:ch@begin
+ZL_join,bpe,B_only,qolchey,qol chey,14,chey,1.0,73.0,ins:qol@begin
+ZL_join,bpe,B_only,sheeky,sh ee ky,14,sheeol,1.0,4.0,sub:ol>ky@end
+ZL_join,bpe,B_only,shed,she d,14,sheol,1.0,35.0,sub:ol>d@end
+ZL_join,bpe,B_only,aiir,ai i r,13,okaiir,1.0,5.0,del:ok@begin
+ZL_join,bpe,B_only,chckhdy,ch ckh dy,13,chckhey,1.0,4.0,sub:ey>dy@end
+ZL_join,bpe,B_only,cheeo,chee o,13,o,1.0,18.0,ins:chee@begin
+ZL_join,bpe,B_only,kchedy,k chedy,13,kchy,1.0,19.0,sub:chy>chedy@end
+ZL_join,bpe,B_only,lcheey,l cheey,13,cheey,1.0,31.0,ins:l@begin
+ZL_join,bpe,B_only,ral,r al,13,r,1.0,25.0,ins:al@end
+ZL_join,bpe,B_only,teedy,t eedy,13,tchy,1.0,15.0,sub:chy>eedy@end
+ZL_join,bpe,B_only,qolchedy,qol chedy,12,qol,1.0,5.0,ins:chedy@end
+ZL_join,bpe,B_only,ror,r or,12,or,1.0,82.0,ins:r@begin
+ZL_join,bpe,B_only,shedain,she dain,12,dain,1.0,90.0,ins:she@begin
+ZL_join,bpe,B_only,shedal,she dal,12,dal,1.0,67.0,ins:she@begin
+ZL_join,bpe,B_only,tchdy,t chdy,12,tchy,1.0,15.0,sub:chy>chdy@end
+ZL_join,bpe,B_only,yshedy,y shedy,12,y,1.0,27.0,ins:shedy@end
+ZL_join,bpe,B_only,chckhedy,ch ckh edy,11,chckhey,1.0,4.0,sub:ey>edy@end
+ZL_join,bpe,B_only,ched,che d,11,cheor,1.0,47.0,sub:or>d@end
+ZL_join,bpe,B_only,olkal,olk al,11,otal,1.0,19.0,sub:ot>olk@begin
+ZL_join,bpe,B_only,olkeeey,olk ee ey,11,okeeey,1.0,6.0,sub:ok>olk@begin
+ZL_join,bpe,B_only,qokshedy,qok shedy,11,qokol,1.0,43.0,sub:ol>shedy@end
+ZL_join,bpe,B_only,ychedy,y chedy,11,y,1.0,27.0,ins:chedy@end
+ZL_join,bpe,B_only,arody,ar ody,10,chody,1.0,41.0,sub:ch>ar@begin
+ZL_join,bpe,B_only,chdam,ch d am,10,dam,1.0,38.0,ins:ch@begin
+ZL_join,bpe,B_only,laiin,l aiin,10,aiin,1.0,51.0,ins:l@begin
+ZL_join,bpe,B_only,pchedar,p che dar,10,dar,2.0,84.0,ins:pche@begin
+ZL_join,bpe,B_only,qolkeedy,q olk eedy,10,qor,2.0,7.0,ins:olk@mid;sub:or>eedy@end
+ZL_join,bpe,B_only,rchedy,r chedy,10,r,1.0,25.0,ins:chedy@end
+ZL_join,bpe,B_only,ary,ar y,9,oty,1.0,39.0,sub:ot>ar@begin
+ZL_join,bpe,B_only,chdor,ch d or,9,dor,1.0,37.0,ins:ch@begin
+ZL_join,bpe,B_only,chkal,ch k al,9,chal,1.0,12.0,ins:k@mid
+ZL_join,bpe,B_only,fchedy,f chedy,9,daiin,2.0,466.0,ins:f@begin;sub:daiin>chedy@begin
+ZL_join,bpe,B_only,ochedy,o chedy,9,odaiin,1.0,27.0,sub:daiin>chedy@end
+ZL_join,bpe,B_only,otedar,ot e dar,9,oteos,1.0,4.0,sub:os>dar@end
+ZL_join,bpe,B_only,qokl,qok l,9,qokol,1.0,43.0,sub:ol>l@end
+ZL_join,bpe,B_only,shek,she k,9,sheol,1.0,35.0,sub:ol>k@end
+ZL_join,bpe,B_only,tshedy,t shedy,9,tchy,1.0,15.0,sub:chy>shedy@end
+ZL_join,bpe,B_only,ytchedy,yt chedy,9,ytchy,1.0,13.0,sub:chy>chedy@end
+ZL_join,bpe,B_only,chekar,che k ar,8,chear,1.0,18.0,ins:k@mid
+ZL_join,bpe,B_only,lcheedy,l ch eedy,8,cheedy,1.0,3.0,ins:l@begin
+ZL_join,bpe,B_only,lkchey,lk chey,8,chey,1.0,73.0,ins:lk@begin
+ZL_join,bpe,B_only,lkeeey,lk ee ey,8,okeeey,1.0,6.0,sub:ok>lk@begin
+ZL_join,bpe,B_only,okeeedy,ok ee edy,8,okeeol,1.0,7.0,sub:ol>edy@end
+ZL_join,bpe,B_only,oram,or am,8,or,1.0,82.0,ins:am@end
+ZL_join,bpe,B_only,otshedy,ot shedy,8,oty,1.0,39.0,sub:y>shedy@end
+ZL_join,bpe,B_only,qofchedy,qo f chedy,8,qodaiin,2.0,14.0,ins:f@mid;sub:daiin>chedy@end
+ZL_join,bpe,B_only,qokan,qok a n,8,dan,1.0,10.0,sub:d>qok@begin
+ZL_join,bpe,B_only,qokedar,qok e dar,8,qokeor,1.0,10.0,sub:or>dar@end
+ZL_join,bpe,B_only,qokees,qok ee s,8,qokeeol,1.0,4.0,sub:ol>s@end
+ZL_join,bpe,B_only,shedar,she dar,8,dar,1.0,84.0,ins:she@begin
+ZL_join,bpe,B_only,tain,t ain,8,tchy,1.0,15.0,sub:chy>ain@end
+ZL_join,bpe,B_only,alol,al ol,7,ol,1.0,70.0,ins:al@begin
+ZL_join,bpe,B_only,chcthdy,ch cth dy,7,chcthody,1.0,2.0,sub:ody>dy@end
+ZL_join,bpe,B_only,cphedy,cph edy,7,cphol,1.0,10.0,sub:ol>edy@end
+ZL_join,bpe,B_only,cthdy,cth dy,7,dy,1.0,78.0,ins:cth@begin
+ZL_join,bpe,B_only,dchdy,d chdy,7,dol,1.0,52.0,sub:ol>chdy@end
+ZL_join,bpe,B_only,lcheol,l cheol,7,cheol,1.0,59.0,ins:l@begin
+ZL_join,bpe,B_only,lchy,l chy,7,chy,1.0,86.0,ins:l@begin
+ZL_join,bpe,B_only,lr,l r,7,r,1.0,25.0,ins:l@begin
+ZL_join,bpe,B_only,lkey,lk ey,7,cthey,1.0,35.0,sub:cth>lk@begin
+ZL_join,bpe,B_only,okees,ok ee s,7,okeeol,1.0,7.0,sub:ol>s@end
+ZL_join,bpe,B_only,olchdy,ol chdy,7,ol,1.0,70.0,ins:chdy@end
+ZL_join,bpe,B_only,polchedy,p ol chedy,7,pol,1.0,2.0,ins:chedy@end
+ZL_join,bpe,B_only,qopaiin,qo p aiin,7,qoaiin,1.0,10.0,ins:p@mid
+ZL_join,bpe,B_only,qoked,qok e d,7,qokeor,1.0,10.0,sub:or>d@end
+ZL_join,bpe,B_only,qoly,qol y,7,oty,1.0,39.0,sub:ot>qol@begin
+ZL_join,bpe,B_only,rshedy,r shedy,7,r,1.0,25.0,ins:shedy@end
+ZL_join,bpe,B_only,schedy,s chedy,7,s,1.0,126.0,ins:chedy@end
+ZL_join,bpe,B_only,solchedy,s ol chedy,7,sol,1.0,15.0,ins:chedy@end
+ZL_join,bpe,B_only,solshedy,s ol shedy,7,sol,1.0,15.0,ins:shedy@end
+ZL_join,bpe,B_only,shety,she t y,7,chety,1.0,6.0,sub:che>she@begin
+ZL_join,bpe,B_only,ycheedy,y ch eedy,7,cheedy,1.0,3.0,ins:y@begin
+ZL_join,bpe,B_only,ykchedy,yk chedy,7,ykeey,1.0,19.0,sub:eey>chedy@end
+ZL_join,bpe,B_only,alkain,al k ain,6,kchy,2.0,19.0,ins:al@begin;sub:chy>ain@end
+ZL_join,bpe,B_only,arol,ar ol,6,ol,1.0,70.0,ins:ar@begin
+ZL_join,bpe,B_only,chcthedy,ch cth edy,6,chcthody,1.0,2.0,sub:ody>edy@end
+ZL_join,bpe,B_only,chedam,che d am,6,dam,1.0,38.0,ins:che@begin
+ZL_join,bpe,B_only,cheeos,chee os,6,chees,1.0,10.0,sub:s>os@end
+ZL_join,bpe,B_only,cholkaiin,chol k aiin,6,kaiin,1.0,10.0,ins:chol@begin
+ZL_join,bpe,B_only,dalchedy,dal chedy,6,dal,1.0,67.0,ins:chedy@end
+ZL_join,bpe,B_only,dalshedy,dal shedy,6,dal,1.0,67.0,ins:shedy@end
+ZL_join,bpe,B_only,lar,l ar,6,ar,1.0,33.0,ins:l@begin
+ZL_join,bpe,B_only,lched,l che d,6,cheor,2.0,47.0,ins:l@begin;sub:or>d@end
+ZL_join,bpe,B_only,lsheedy,l sh eedy,6,shor,2.0,60.0,ins:l@begin;sub:or>eedy@end
+ZL_join,bpe,B_only,lsheey,l sheey,6,sheey,1.0,35.0,ins:l@begin
+ZL_join,bpe,B_only,lteedy,l t eedy,6,tchy,2.0,15.0,ins:l@begin;sub:chy>eedy@end
+ZL_join,bpe,B_only,lkam,lk am,6,dam,1.0,38.0,sub:d>lk@begin
+ZL_join,bpe,B_only,lkl,lk l,6,l,1.0,7.0,ins:lk@begin
+ZL_join,bpe,B_only,ockhedy,o ckh edy,6,ockhey,1.0,4.0,sub:ey>edy@end
+ZL_join,bpe,B_only,oeedy,o eedy,6,odaiin,1.0,27.0,sub:daiin>eedy@end
+ZL_join,bpe,B_only,ofchedy,o f chedy,6,ofchey,1.0,2.0,sub:chey>chedy@end
+ZL_join,bpe,B_only,okchd,ok ch d,6,okchal,1.0,4.0,sub:al>d@end
+ZL_join,bpe,B_only,okedar,ok e dar,6,okeor,1.0,13.0,sub:or>dar@end
+ZL_join,bpe,B_only,oltedy,ol t edy,6,ol,2.0,70.0,ins:tedy@end
+ZL_join,bpe,B_only,olkchedy,olk chedy,6,olkeol,1.0,3.0,sub:eol>chedy@end
+ZL_join,bpe,B_only,orair,or air,6,or,1.0,82.0,ins:air@end
+ZL_join,bpe,B_only,oteeey,ot ee ey,6,otey,1.0,6.0,ins:ee@mid
+ZL_join,bpe,B_only,qolkeey,q olk eey,6,olkeey,1.0,2.0,ins:q@begin
+ZL_join,bpe,B_only,qochey,qo chey,6,chey,1.0,73.0,ins:qo@begin
+ZL_join,bpe,B_only,qokear,qok e ar,6,qokar,1.0,14.0,ins:e@mid
+ZL_join,bpe,B_only,rchey,r chey,6,chey,1.0,73.0,ins:r@begin
+ZL_join,bpe,B_only,sshedy,s shedy,6,s,1.0,126.0,ins:shedy@end
+ZL_join,bpe,B_only,shckhedy,sh ckh edy,6,shor,2.0,60.0,ins:ckh@mid;sub:or>edy@end
+ZL_join,bpe,B_only,shdar,sh dar,6,dar,1.0,84.0,ins:sh@begin
+ZL_join,bpe,B_only,tshey,t shey,6,shey,1.0,53.0,ins:t@begin
+ZL_join,bpe,B_only,ysheedy,y sh eedy,6,yshor,1.0,2.0,sub:or>eedy@end
+ZL_join,bpe,B_only,alkaiin,al k aiin,5,kaiin,1.0,10.0,ins:al@begin
+ZL_join,bpe,B_only,arain,ar ain,5,ar,1.0,33.0,ins:ain@end
+ZL_join,bpe,B_only,arar,ar ar,5,ar,1.0,33.0,ins:ar@begin
+ZL_join,bpe,B_only,chkedy,ch k edy,5,chkaiin,1.0,8.0,sub:aiin>edy@end
+ZL_join,bpe,B_only,chtal,ch t al,5,chal,1.0,12.0,ins:t@mid
+ZL_join,bpe,B_only,chekedy,che k edy,5,chekeey,1.0,3.0,sub:eey>edy@end
+ZL_join,bpe,B_only,chekey,che k ey,5,key,1.0,5.0,ins:che@begin
+ZL_join,bpe,B_only,chetain,che t ain,5,chety,1.0,6.0,sub:y>ain@end
+ZL_join,bpe,B_only,cheedaiin,chee daiin,5,daiin,1.0,466.0,ins:chee@begin
+ZL_join,bpe,B_only,cheedar,chee dar,5,dar,1.0,84.0,ins:chee@begin
+ZL_join,bpe,B_only,dsheedy,d sh eedy,5,dshor,1.0,10.0,sub:or>eedy@end
+ZL_join,bpe,B_only,lain,l ain,5,chain,1.0,10.0,sub:ch>l@begin
+ZL_join,bpe,B_only,lchal,l ch al,5,chal,1.0,12.0,ins:l@begin
+ZL_join,bpe,B_only,loly,l ol y,5,oly,1.0,8.0,ins:l@begin
+ZL_join,bpe,B_only,lpchedy,l p chedy,5,l,2.0,7.0,ins:pchedy@end
+ZL_join,bpe,B_only,ltedy,l t edy,5,tchy,2.0,15.0,ins:l@begin;sub:chy>edy@end
+ZL_join,bpe,B_only,lkchdy,lk chdy,5,chdy,1.0,8.0,ins:lk@begin
+ZL_join,bpe,B_only,lkeeody,lk ee ody,5,keeody,1.0,4.0,sub:k>lk@begin
+ZL_join,bpe,B_only,ofchdy,o f chdy,5,ofchey,1.0,2.0,sub:chey>chdy@end
+ZL_join,bpe,B_only,oshey,o shey,5,shey,1.0,53.0,ins:o@begin
+ZL_join,bpe,B_only,okaral,ok ar al,5,okar,1.0,13.0,ins:al@end
+ZL_join,bpe,B_only,okedal,ok e dal,5,okeor,1.0,13.0,sub:or>dal@end
+ZL_join,bpe,B_only,olal,ol al,5,ol,1.0,70.0,ins:al@end
+ZL_join,bpe,B_only,olam,ol am,5,ol,1.0,70.0,ins:am@end
+ZL_join,bpe,B_only,olcheedy,ol ch eedy,5,cheedy,1.0,3.0,ins:ol@begin
+ZL_join,bpe,B_only,olpchedy,ol p chedy,5,ol,2.0,70.0,ins:pchedy@end
+ZL_join,bpe,B_only,olkchdy,olk chdy,5,chdy,1.0,8.0,ins:olk@begin
+ZL_join,bpe,B_only,oror,or or,5,or,1.0,82.0,ins:or@begin
+ZL_join,bpe,B_only,oteed,ot ee d,5,oteeos,1.0,2.0,sub:os>d@end
+ZL_join,bpe,B_only,pchdair,p ch d air,5,dair,2.0,35.0,ins:pch@begin
+ZL_join,bpe,B_only,pchedal,p che dal,5,dal,2.0,67.0,ins:pche@begin
+ZL_join,bpe,B_only,qolkain,q olk ain,5,chain,2.0,10.0,ins:q@begin;sub:ch>olk@begin
+ZL_join,bpe,B_only,qoedy,qo edy,5,qodaiin,1.0,14.0,sub:daiin>edy@end
+ZL_join,bpe,B_only,qopar,qo p ar,5,qopchy,1.0,4.0,sub:chy>ar@end
+ZL_join,bpe,B_only,qokeechy,qok ee chy,5,qokchy,1.0,38.0,ins:ee@mid
+ZL_join,bpe,B_only,qokeedar,qok ee dar,5,qokeeol,1.0,4.0,sub:ol>dar@end
+ZL_join,bpe,B_only,qolsheedy,qol sh eedy,5,shor,2.0,60.0,ins:qol@begin;sub:or>eedy@end
+ZL_join,bpe,B_only,qolshey,qol shey,5,shey,1.0,53.0,ins:qol@begin
+ZL_join,bpe,B_only,qotaly,qot al y,5,qoty,1.0,27.0,ins:al@mid
+ZL_join,bpe,B_only,qotched,qot che d,5,qotchod,1.0,2.0,sub:cho>che@mid
+ZL_join,bpe,B_only,solkeedy,s olk eedy,5,s,2.0,126.0,ins:olkeedy@end
+ZL_join,bpe,B_only,tshdy,t sh dy,5,tshor,1.0,2.0,sub:or>dy@end
+ZL_join,bpe,B_only,aiiny,aiin y,4,aiin,1.0,51.0,ins:y@end
+ZL_join,bpe,B_only,alchedy,al chedy,4,al,1.0,17.0,ins:chedy@end
+ZL_join,bpe,B_only,alkeedy,al k eedy,4,kchy,2.0,19.0,ins:al@begin;sub:chy>eedy@end
+ZL_join,bpe,B_only,aror,ar or,4,or,1.0,82.0,ins:ar@begin
+ZL_join,bpe,B_only,chckhal,ch ckh al,4,chal,1.0,12.0,ins:ckh@mid
+ZL_join,bpe,B_only,chckhd,ch ckh d,4,chckhey,1.0,4.0,sub:ey>d@end
+ZL_join,bpe,B_only,chokedy,ch ok edy,4,choky,1.0,26.0,sub:y>edy@end
+ZL_join,bpe,B_only,chedol,che d ol,4,dol,1.0,52.0,ins:che@begin
+ZL_join,bpe,B_only,chekeedy,che k eedy,4,chekeey,1.0,3.0,sub:eey>eedy@end
+ZL_join,bpe,B_only,cheolkain,che olk ain,4,cheain,1.0,2.0,ins:olk@mid
+ZL_join,bpe,B_only,cheoty,che ot y,4,oty,1.0,39.0,ins:che@begin
+ZL_join,bpe,B_only,chep,che p,4,cheor,1.0,47.0,sub:or>p@end
+ZL_join,bpe,B_only,chetey,che t ey,4,chety,1.0,6.0,sub:y>ey@end
+ZL_join,bpe,B_only,cheoar,cheo ar,4,ar,1.0,33.0,ins:cheo@begin
+ZL_join,bpe,B_only,cholky,chol ky,4,chol,1.0,238.0,ins:ky@end
+ZL_join,bpe,B_only,dolshedy,d ol shedy,4,dol,1.0,52.0,ins:shedy@end
+ZL_join,bpe,B_only,eeedy,ee edy,4,eeey,1.0,2.0,sub:ey>edy@end
+ZL_join,bpe,B_only,fcheey,f cheey,4,cheey,1.0,31.0,ins:f@begin
+ZL_join,bpe,B_only,kcheody,k che ody,4,cheody,1.0,25.0,ins:k@begin
+ZL_join,bpe,B_only,lal,l al,4,otal,1.0,19.0,sub:ot>l@begin
+ZL_join,bpe,B_only,lam,l am,4,dam,1.0,38.0,sub:d>l@begin
+ZL_join,bpe,B_only,ldar,l dar,4,dar,1.0,84.0,ins:l@begin
+ZL_join,bpe,B_only,loiin,l o iin,4,soiin,1.0,10.0,sub:s>l@begin
+ZL_join,bpe,B_only,lom,l o m,4,om,1.0,7.0,ins:l@begin
+ZL_join,bpe,B_only,loty,l ot y,4,oty,1.0,39.0,ins:l@begin
+ZL_join,bpe,B_only,lkair,lk air,4,dair,1.0,35.0,sub:d>lk@begin
+ZL_join,bpe,B_only,lkal,lk al,4,otal,1.0,19.0,sub:ot>lk@begin
+ZL_join,bpe,B_only,lkeeedy,lk ee edy,4,okeeol,2.0,7.0,sub:ok>lk@begin;sub:ol>edy@end
+ZL_join,bpe,B_only,lkeeol,lk ee ol,4,okeeol,1.0,7.0,sub:ok>lk@begin
+ZL_join,bpe,B_only,lkeody,lk eody,4,qokeody,1.0,17.0,sub:qok>lk@begin
+ZL_join,bpe,B_only,lkeol,lk eol,4,okeol,1.0,38.0,sub:ok>lk@begin
+ZL_join,bpe,B_only,lkshedy,lk shedy,4,shedy,1.0,2.0,ins:lk@begin
+ZL_join,bpe,B_only,ofar,o f ar,4,oeear,1.0,3.0,sub:ee>f@mid
+ZL_join,bpe,B_only,okechedy,ok e chedy,4,okeor,1.0,13.0,sub:or>chedy@end
+ZL_join,bpe,B_only,okshedy,ok shedy,4,oky,1.0,38.0,sub:y>shedy@end
+ZL_join,bpe,B_only,okalchedy,okal chedy,4,okal,1.0,29.0,ins:chedy@end
+ZL_join,bpe,B_only,olfchedy,ol f chedy,4,ol,2.0,70.0,ins:fchedy@end
+ZL_join,bpe,B_only,olr,ol r,4,ol,1.0,70.0,ins:r@end
+ZL_join,bpe,B_only,olshdy,ol sh dy,4,oldy,1.0,5.0,ins:sh@mid
+ZL_join,bpe,B_only,olsheedy,ol sh eedy,4,ol,2.0,70.0,ins:sheedy@end
+ZL_join,bpe,B_only,olkair,olk air,4,dair,1.0,35.0,sub:d>olk@begin
+ZL_join,bpe,B_only,olkeeo,olk ee o,4,qokeeo,1.0,4.0,sub:qok>olk@begin
+ZL_join,bpe,B_only,opchedaiin,op che daiin,4,opydaiin,1.0,3.0,sub:y>che@mid
+ZL_join,bpe,B_only,oraiiin,or ai iin,4,daiiin,1.0,11.0,sub:d>or@begin
+ZL_join,bpe,B_only,oroly,or ol y,4,oly,1.0,8.0,ins:or@begin
+ZL_join,bpe,B_only,orshedy,or shedy,4,or,1.0,82.0,ins:shedy@end
+ZL_join,bpe,B_only,otarain,ot ar ain,4,otar,1.0,8.0,ins:ain@end
+ZL_join,bpe,B_only,otarar,ot ar ar,4,otar,1.0,8.0,ins:ar@mid
+ZL_join,bpe,B_only,oteal,ot e al,4,otal,1.0,19.0,ins:e@mid
+ZL_join,bpe,B_only,otechdy,ot e chdy,4,oteos,1.0,4.0,sub:os>chdy@end
+ZL_join,bpe,B_only,oteeo,ot ee o,4,qokeeo,1.0,4.0,sub:qok>ot@begin
+ZL_join,bpe,B_only,otodaiin,ot o daiin,4,odaiin,1.0,27.0,ins:ot@begin
+ZL_join,bpe,B_only,par,p ar,4,ar,1.0,33.0,ins:p@begin
+ZL_join,bpe,B_only,pchdar,p ch dar,4,pchody,1.0,2.0,sub:ody>dar@end
+ZL_join,bpe,B_only,pchedaiin,p che daiin,4,pchodaiin,1.0,4.0,sub:cho>che@mid
+ZL_join,bpe,B_only,psheody,p she ody,4,sheody,1.0,13.0,ins:p@begin
+ZL_join,bpe,B_only,qolky,q olk y,4,oty,2.0,39.0,ins:q@begin;sub:ot>olk@begin
+ZL_join,bpe,B_only,qoeedaiin,qo ee daiin,4,qodaiin,1.0,14.0,ins:ee@mid
+ZL_join,bpe,B_only,qoiiin,qo i iin,4,oiiin,1.0,3.0,sub:o>qo@begin
+ZL_join,bpe,B_only,qopshedy,qo p shedy,4,qopchy,1.0,4.0,sub:chy>shedy@end
+ZL_join,bpe,B_only,qokdy,qok dy,4,dy,1.0,78.0,ins:qok@begin
+ZL_join,bpe,B_only,qokechedy,qok e chedy,4,qokeor,1.0,10.0,sub:or>chedy@end
+ZL_join,bpe,B_only,qokedain,qok e dain,4,qokeor,1.0,10.0,sub:or>dain@end
+ZL_join,bpe,B_only,qokeeedy,qok ee edy,4,qokeeol,1.0,4.0,sub:ol>edy@end
+ZL_join,bpe,B_only,qolshedy,qol shedy,4,qol,1.0,5.0,ins:shedy@end
+ZL_join,bpe,B_only,raraiin,r ar aiin,4,raiin,1.0,5.0,ins:ar@mid
+ZL_join,bpe,B_only,salchedy,s al chedy,4,sal,1.0,15.0,ins:chedy@end
+ZL_join,bpe,B_only,solshey,s ol shey,4,sol,1.0,15.0,ins:shey@end
+ZL_join,bpe,B_only,solkedy,s olk edy,4,s,2.0,126.0,ins:olkedy@end
+ZL_join,bpe,B_only,shdal,sh dal,4,dal,1.0,67.0,ins:sh@begin
+ZL_join,bpe,B_only,sheed,sh ee d,4,sheeol,1.0,4.0,sub:ol>d@end
+ZL_join,bpe,B_only,sheeey,sh ee ey,4,okeeey,1.0,6.0,sub:ok>sh@begin
+ZL_join,bpe,B_only,sheet,sh ee t,4,sheeol,1.0,4.0,sub:ol>t@end
+ZL_join,bpe,B_only,sheckhedy,she ckh edy,4,sheol,2.0,35.0,ins:ckh@mid;sub:ol>edy@end
+ZL_join,bpe,B_only,sheckhey,she ckh ey,4,ckhey,1.0,24.0,ins:she@begin
+ZL_join,bpe,B_only,taraiin,t ar aiin,4,taiin,1.0,12.0,ins:ar@mid
+ZL_join,bpe,B_only,tedain,t e dain,4,teor,1.0,2.0,sub:or>dain@end
+ZL_join,bpe,B_only,ychedar,y che dar,4,ycheor,1.0,8.0,sub:or>dar@end
+ZL_join,bpe,B_only,ypchdy,y p chdy,4,ypchy,1.0,3.0,sub:chy>chdy@end
+ZL_join,bpe,B_only,ykeeedy,yk ee edy,4,ykeeol,1.0,4.0,sub:ol>edy@end
+ZL_join,bpe,B_only,ykeeo,yk ee o,4,ykeeol,1.0,4.0,sub:ol>o@end
+ZL_join,bpe,B_only,yteeey,yt ee ey,4,okeeey,1.0,6.0,sub:ok>yt@begin
+ZL_join,bpe,B_only,aky,a ky,3,cheky,1.0,12.0,sub:che>a@begin
+ZL_join,bpe,B_only,ail,ai l,3,l,1.0,7.0,ins:ai@begin
+ZL_join,bpe,B_only,airody,air ody,3,chody,1.0,41.0,sub:ch>air@begin
+ZL_join,bpe,B_only,alain,al ain,3,al,1.0,17.0,ins:ain@end
+ZL_join,bpe,B_only,alkam,al k am,3,dam,2.0,38.0,ins:al@begin;sub:d>k@begin
+ZL_join,bpe,B_only,alky,al ky,3,al,1.0,17.0,ins:ky@end
+ZL_join,bpe,B_only,alody,al ody,3,chody,1.0,41.0,sub:ch>al@begin
+ZL_join,bpe,B_only,als,al s,3,s,1.0,126.0,ins:al@begin
+ZL_join,bpe,B_only,charam,ch ar am,3,char,1.0,29.0,ins:am@end
+ZL_join,bpe,B_only,chckhaiin,ch ckh aiin,3,chaiin,1.0,32.0,ins:ckh@mid
+ZL_join,bpe,B_only,chcphedy,ch cph edy,3,chcphy,1.0,4.0,sub:y>edy@end
+ZL_join,bpe,B_only,chcphey,ch cph ey,3,chokey,1.0,6.0,sub:ok>cph@mid
+ZL_join,bpe,B_only,chd,ch d,3,chody,1.0,41.0,sub:ody>d@end
+ZL_join,bpe,B_only,chdaly,ch dal y,3,choky,1.0,26.0,sub:ok>dal@mid
+ZL_join,bpe,B_only,chpchy,ch p chy,3,chotchy,1.0,11.0,sub:ot>p@mid
+ZL_join,bpe,B_only,chealy,che al y,3,cheal,1.0,8.0,ins:y@end
+ZL_join,bpe,B_only,checthey,che cth ey,3,cthey,1.0,35.0,ins:che@begin
+ZL_join,bpe,B_only,chedor,che d or,3,cheor,1.0,47.0,ins:d@mid
+ZL_join,bpe,B_only,chefchy,che f chy,3,chetchy,1.0,4.0,sub:t>f@mid
+ZL_join,bpe,B_only,chek,che k,3,cheor,1.0,47.0,sub:or>k@end
+ZL_join,bpe,B_only,cheokain,che ok ain,3,okain,1.0,6.0,ins:che@begin
+ZL_join,bpe,B_only,cheokaiin,che okaiin,3,cheor,1.0,47.0,sub:or>okaiin@end
+ZL_join,bpe,B_only,chetedy,che t edy,3,chety,1.0,6.0,sub:y>edy@end
+ZL_join,bpe,B_only,cheekain,chee k ain,3,cheekey,1.0,3.0,sub:ey>ain@end
+ZL_join,bpe,B_only,cheeteey,chee t eey,3,teey,1.0,3.0,ins:chee@begin
+ZL_join,bpe,B_only,cheety,chee t y,3,chety,1.0,6.0,sub:che>chee@begin
+ZL_join,bpe,B_only,cheoaiin,cheo aiin,3,aiin,1.0,51.0,ins:cheo@begin
+ZL_join,bpe,B_only,cheolor,cheol or,3,or,1.0,82.0,ins:cheol@begin
+ZL_join,bpe,B_only,cheykain,chey k ain,3,chey,2.0,73.0,ins:kain@end
+ZL_join,bpe,B_only,cheytal,chey t al,3,tal,1.0,2.0,ins:chey@begin
+ZL_join,bpe,B_only,cholchedy,chol chedy,3,chol,1.0,238.0,ins:chedy@end
+ZL_join,bpe,B_only,cholkar,chol k ar,3,kar,1.0,6.0,ins:chol@begin
+ZL_join,bpe,B_only,ckhdy,ckh dy,3,dy,1.0,78.0,ins:ckh@begin
+ZL_join,bpe,B_only,ckhedy,ckh edy,3,ckhey,1.0,24.0,sub:ey>edy@end
+ZL_join,bpe,B_only,dairody,d air ody,3,dair,1.0,35.0,ins:ody@end
+ZL_join,bpe,B_only,dcheedy,d ch eedy,3,dchaiin,1.0,4.0,sub:aiin>eedy@end
+ZL_join,bpe,B_only,dolor,d ol or,3,dol,1.0,52.0,ins:or@end
+ZL_join,bpe,B_only,dshdy,d sh dy,3,dshor,1.0,10.0,sub:or>dy@end
+ZL_join,bpe,B_only,darchedy,dar chedy,3,dar,1.0,84.0,ins:chedy@end
+ZL_join,bpe,B_only,dyteey,dy t eey,3,teey,1.0,3.0,ins:dy@begin
+ZL_join,bpe,B_only,eedy,eedy,3,daiin,1.0,466.0,sub:daiin>eedy@begin
+ZL_join,bpe,B_only,fchdy,f chdy,3,chdy,1.0,8.0,ins:f@begin
+ZL_join,bpe,B_only,fchor,f chor,3,chor,1.0,161.0,ins:f@begin
+ZL_join,bpe,B_only,kcheo,k cheo,3,kchy,1.0,19.0,sub:chy>cheo@end
+ZL_join,bpe,B_only,kechedy,k e chedy,3,keor,1.0,6.0,sub:or>chedy@end
+ZL_join,bpe,B_only,kedar,k e dar,3,keor,1.0,6.0,sub:or>dar@end
+ZL_join,bpe,B_only,kshdy,k sh dy,3,shdy,1.0,2.0,ins:k@begin
+ZL_join,bpe,B_only,kshedy,k shedy,3,kchy,1.0,19.0,sub:chy>shedy@end
+ZL_join,bpe,B_only,lcheam,l che am,3,cheor,2.0,47.0,ins:l@begin;sub:or>am@end
+ZL_join,bpe,B_only,lcheckhy,l che ckhy,3,checkhy,1.0,2.0,ins:l@begin
+ZL_join,bpe,B_only,lcheo,l cheo,3,cheo,1.0,15.0,ins:l@begin
+ZL_join,bpe,B_only,ld,l d,3,d,1.0,16.0,ins:l@begin
+ZL_join,bpe,B_only,lodaiin,l o daiin,3,odaiin,1.0,27.0,ins:l@begin
+ZL_join,bpe,B_only,lsheody,l she ody,3,sheody,1.0,13.0,ins:l@begin
+ZL_join,bpe,B_only,ltal,l t al,3,tal,1.0,2.0,ins:l@begin
+ZL_join,bpe,B_only,lkeed,lk ee d,3,d,2.0,16.0,ins:lkee@begin
+ZL_join,bpe,B_only,lkol,lk ol,3,ol,1.0,70.0,ins:lk@begin
+ZL_join,bpe,B_only,lkor,lk or,3,or,1.0,82.0,ins:lk@begin
+ZL_join,bpe,B_only,m,m,3,daiin,1.0,466.0,sub:daiin>m@begin
+ZL_join,bpe,B_only,ocheey,o cheey,3,cheey,1.0,31.0,ins:o@begin
+ZL_join,bpe,B_only,oikhy,o i k h y,3,shoikhy,1.0,2.0,sub:sho>o@begin
+ZL_join,bpe,B_only,okchdar,ok ch dar,3,okchal,1.0,4.0,sub:al>dar@end
+ZL_join,bpe,B_only,okechdy,ok e chdy,3,okeor,1.0,13.0,sub:or>chdy@end
+ZL_join,bpe,B_only,okechy,ok e chy,3,okchy,1.0,14.0,ins:e@mid
+ZL_join,bpe,B_only,okedam,ok e d am,3,okeam,1.0,2.0,ins:d@mid
+ZL_join,bpe,B_only,okedaiin,ok e daiin,3,okeor,1.0,13.0,sub:or>daiin@end
+ZL_join,bpe,B_only,okedain,ok e dain,3,okeor,1.0,13.0,sub:or>dain@end
+ZL_join,bpe,B_only,okeshy,ok e shy,3,okeor,1.0,13.0,sub:or>shy@end
+ZL_join,bpe,B_only,okeear,ok ee ar,3,okar,1.0,13.0,ins:ee@mid
+ZL_join,bpe,B_only,okeed,ok ee d,3,okeeol,1.0,7.0,sub:ol>d@end
+ZL_join,bpe,B_only,okeedal,ok ee dal,3,okeeol,1.0,7.0,sub:ol>dal@end
+ZL_join,bpe,B_only,olair,ol air,3,ol,1.0,70.0,ins:air@end
+ZL_join,bpe,B_only,oleeedy,ol ee edy,3,ol,2.0,70.0,ins:eeedy@end
+ZL_join,bpe,B_only,oleey,ol eey,3,ol,1.0,70.0,ins:eey@end
+ZL_join,bpe,B_only,olteedy,ol t eedy,3,ol,2.0,70.0,ins:teedy@end
+ZL_join,bpe,B_only,olkchey,olk chey,3,chey,1.0,73.0,ins:olk@begin
+ZL_join,bpe,B_only,olkeechy,olk ee chy,3,chy,2.0,86.0,ins:olkee@begin
+ZL_join,bpe,B_only,opam,op am,3,dam,1.0,38.0,sub:d>op@begin
+ZL_join,bpe,B_only,opary,op ar y,3,sary,1.0,5.0,sub:s>op@begin
+ZL_join,bpe,B_only,opcheedy,op ch eedy,3,cheedy,1.0,3.0,ins:op@begin
+ZL_join,bpe,B_only,opdaiin,op daiin,3,daiin,1.0,466.0,ins:op@begin
+ZL_join,bpe,B_only,otaraiin,ot ar aiin,3,otaiin,1.0,28.0,ins:ar@mid
+ZL_join,bpe,B_only,otaram,ot ar am,3,otar,1.0,8.0,ins:am@end
+ZL_join,bpe,B_only,otedam,ot e d am,3,dam,2.0,38.0,ins:ote@begin
+ZL_join,bpe,B_only,otedal,ot e dal,3,oteos,1.0,4.0,sub:os>dal@end
+ZL_join,bpe,B_only,oteedaiin,ot ee daiin,3,oteeos,1.0,2.0,sub:os>daiin@end
+ZL_join,bpe,B_only,otshdy,ot sh dy,3,otoldy,1.0,4.0,sub:ol>sh@mid
+ZL_join,bpe,B_only,pchdaiin,p ch daiin,3,pchodaiin,1.0,4.0,sub:cho>ch@mid
+ZL_join,bpe,B_only,pchodain,p cho dain,3,pchodaiin,1.0,4.0,sub:daiin>dain@end
+ZL_join,bpe,B_only,poiin,p o iin,3,soiin,1.0,10.0,sub:s>p@begin
+ZL_join,bpe,B_only,polarar,p ol ar ar,3,pol,2.0,2.0,ins:arar@end
+ZL_join,bpe,B_only,polshy,p ol shy,3,pol,1.0,2.0,ins:shy@end
+ZL_join,bpe,B_only,qcthhy,q cth h y,3,cthhy,1.0,2.0,ins:q@begin
+ZL_join,bpe,B_only,qekchdy,q e k chdy,3,qoekol,2.0,2.0,sub:qo>q@begin;sub:ol>chdy@end
+ZL_join,bpe,B_only,qekeey,q e k eey,3,qoekeey,1.0,2.0,sub:qo>q@begin
+ZL_join,bpe,B_only,qeeey,q ee ey,3,okeeey,1.0,6.0,sub:ok>q@begin
+ZL_join,bpe,B_only,qeey,q eey,3,okeey,1.0,31.0,sub:ok>q@begin
+ZL_join,bpe,B_only,qolkaiin,q olk aiin,3,aiin,2.0,51.0,ins:qolk@begin
+ZL_join,bpe,B_only,qockheey,qo ckh eey,3,qockhey,1.0,10.0,sub:ey>eey@end
+ZL_join,bpe,B_only,qocthedy,qo cth edy,3,qocthol,1.0,2.0,sub:ol>edy@end
+ZL_join,bpe,B_only,qodeedy,qo d eedy,3,qod,1.0,3.0,ins:eedy@end
+ZL_join,bpe,B_only,qoedaiin,qo e daiin,3,qodaiin,1.0,14.0,ins:e@mid
+ZL_join,bpe,B_only,qoeeedy,qo ee edy,3,qoeeor,1.0,2.0,sub:or>edy@end
+ZL_join,bpe,B_only,qofchdy,qo f chdy,3,qodaiin,2.0,14.0,ins:f@mid;sub:daiin>chdy@end
+ZL_join,bpe,B_only,qoiin,qo iin,3,qodaiin,1.0,14.0,sub:daiin>iin@end
+ZL_join,bpe,B_only,qopcheey,qo p cheey,3,qopchy,1.0,4.0,sub:chy>cheey@end
+ZL_join,bpe,B_only,qokas,qok a s,3,s,2.0,126.0,ins:qoka@begin
+ZL_join,bpe,B_only,qokaiir,qok ai i r,3,okaiir,1.0,5.0,sub:ok>qok@begin
+ZL_join,bpe,B_only,qokechdy,qok e chdy,3,qokeor,1.0,10.0,sub:or>chdy@end
+ZL_join,bpe,B_only,qokedaiin,qok e daiin,3,qokeor,1.0,10.0,sub:or>daiin@end
+ZL_join,bpe,B_only,qokeedal,qok ee dal,3,qokeeol,1.0,4.0,sub:ol>dal@end
+ZL_join,bpe,B_only,qokeeodaiin,qok ee o daiin,3,qokeeo,1.0,4.0,ins:daiin@end
+ZL_join,bpe,B_only,qokolchedy,qok ol chedy,3,qokol,1.0,43.0,ins:chedy@end
+ZL_join,bpe,B_only,qokshd,qok sh d,3,qokchod,1.0,5.0,sub:cho>sh@mid
+ZL_join,bpe,B_only,qokshdy,qok sh dy,3,qokoldy,1.0,3.0,sub:ol>sh@mid
+ZL_join,bpe,B_only,qolcheey,qol cheey,3,cheey,1.0,31.0,ins:qol@begin
+ZL_join,bpe,B_only,qotcheedy,qot ch eedy,3,qotchar,1.0,3.0,sub:ar>eedy@end
+ZL_join,bpe,B_only,qotedaiin,qot e daiin,3,daiin,2.0,466.0,ins:qote@begin
+ZL_join,bpe,B_only,qotedal,qot e dal,3,dal,2.0,67.0,ins:qote@begin
+ZL_join,bpe,B_only,qotedar,qot e dar,3,dar,2.0,84.0,ins:qote@begin
+ZL_join,bpe,B_only,qoteed,qot ee d,3,qoteeol,1.0,2.0,sub:ol>d@end
+ZL_join,bpe,B_only,qoteedar,qot ee dar,3,qoteeol,1.0,2.0,sub:ol>dar@end
+ZL_join,bpe,B_only,qoteeedy,qot ee edy,3,qoteeol,1.0,2.0,sub:ol>edy@end
+ZL_join,bpe,B_only,qotshdy,qot sh dy,3,shdy,1.0,2.0,ins:qot@begin
+ZL_join,bpe,B_only,qotshedy,qot shedy,3,qotchy,1.0,47.0,sub:chy>shedy@end
+ZL_join,bpe,B_only,rair,r air,3,dair,1.0,35.0,sub:d>r@begin
+ZL_join,bpe,B_only,raly,r al y,3,ykaly,1.0,3.0,sub:yk>r@begin
+ZL_join,bpe,B_only,raram,r ar am,3,dam,2.0,38.0,ins:r@begin;sub:d>ar@begin
+ZL_join,bpe,B_only,roiin,r o iin,3,soiin,1.0,10.0,sub:s>r@begin
+ZL_join,bpe,B_only,rsheedy,r sh eedy,3,shor,2.0,60.0,ins:r@begin;sub:or>eedy@end
+ZL_join,bpe,B_only,sairol,s air ol,3,sol,1.0,15.0,ins:air@mid
+ZL_join,bpe,B_only,sarain,s ar ain,3,sar,1.0,16.0,ins:ain@end
+ZL_join,bpe,B_only,sarol,s ar ol,3,sar,1.0,16.0,ins:ol@end
+ZL_join,bpe,B_only,schdy,s chdy,3,s,1.0,126.0,ins:chdy@end
+ZL_join,bpe,B_only,sokeedy,s ok eedy,3,okeedy,1.0,2.0,ins:s@begin
+ZL_join,bpe,B_only,solkain,s olk ain,3,sain,1.0,7.0,ins:olk@mid
+ZL_join,bpe,B_only,solkeey,s olk eey,3,olkeey,1.0,2.0,ins:s@begin
+ZL_join,bpe,B_only,shl,sh l,3,shor,1.0,60.0,sub:or>l@end
+ZL_join,bpe,B_only,shecphy,she cph y,3,cphy,1.0,8.0,ins:she@begin
+ZL_join,bpe,B_only,shedam,she d am,3,dam,1.0,38.0,ins:she@begin
+ZL_join,bpe,B_only,shekaiin,she k aiin,3,kaiin,1.0,10.0,ins:she@begin
+ZL_join,bpe,B_only,shekain,she k ain,3,sheol,2.0,35.0,ins:k@mid;sub:ol>ain@end
+ZL_join,bpe,B_only,shekal,she k al,3,sheal,1.0,2.0,ins:k@mid
+ZL_join,bpe,B_only,shekchy,she k chy,3,kchy,1.0,19.0,ins:she@begin
+ZL_join,bpe,B_only,tarar,t ar ar,3,tar,1.0,3.0,ins:ar@mid
+ZL_join,bpe,B_only,tedam,t e d am,3,dam,2.0,38.0,ins:te@begin
+ZL_join,bpe,B_only,tedaiin,t e daiin,3,todaiin,1.0,3.0,sub:o>e@mid
+ZL_join,bpe,B_only,teedar,t ee dar,3,tchodar,1.0,2.0,sub:cho>ee@mid
+ZL_join,bpe,B_only,teeedy,t ee edy,3,tchy,2.0,15.0,ins:ee@mid;sub:chy>edy@end
+ZL_join,bpe,B_only,teeody,t ee ody,3,tchody,1.0,6.0,sub:ch>ee@mid
+ZL_join,bpe,B_only,akain,a k ain,2,kchy,2.0,19.0,ins:a@begin;sub:chy>ain@end
+ZL_join,bpe,B_only,aiiraly,ai i r al y,2,,,,
+ZL_join,bpe,B_only,aikhy,ai k h y,2,shoikhy,2.0,2.0,del:sho@begin;sub:i>ai@mid
+ZL_join,bpe,B_only,aildy,ai l dy,2,dy,2.0,78.0,ins:ail@begin
+ZL_join,bpe,B_only,aiy,ai y,2,oty,1.0,39.0,sub:ot>ai@begin
+ZL_join,bpe,B_only,aiinal,aiin al,2,aiin,1.0,51.0,ins:al@end
+ZL_join,bpe,B_only,airal,air al,2,otal,1.0,19.0,sub:ot>air@begin
+ZL_join,bpe,B_only,airoy,air o y,2,toy,1.0,3.0,sub:t>air@begin
+ZL_join,bpe,B_only,airod,air od,2,qokod,1.0,5.0,sub:qok>air@begin
+ZL_join,bpe,B_only,alchdy,al chdy,2,al,1.0,17.0,ins:chdy@end
+ZL_join,bpe,B_only,alched,al che d,2,cheor,2.0,47.0,ins:al@begin;sub:or>d@end
+ZL_join,bpe,B_only,alches,al che s,2,ches,1.0,4.0,ins:al@begin
+ZL_join,bpe,B_only,alkal,al k al,2,kal,1.0,2.0,ins:al@begin
+ZL_join,bpe,B_only,alkeey,al k eey,2,keey,1.0,16.0,ins:al@begin
+ZL_join,bpe,B_only,alkey,al k ey,2,key,1.0,5.0,ins:al@begin
+ZL_join,bpe,B_only,alodaiin,al o daiin,2,odaiin,1.0,27.0,ins:al@begin
+ZL_join,bpe,B_only,alod,al od,2,al,1.0,17.0,ins:od@end
+ZL_join,bpe,B_only,araiiin,ar ai iin,2,daiiin,1.0,11.0,sub:d>ar@begin
+ZL_join,bpe,B_only,arl,ar l,2,ar,1.0,33.0,ins:l@end
+ZL_join,bpe,B_only,arodl,ar od l,2,ar,2.0,33.0,ins:odl@end
+ZL_join,bpe,B_only,arshey,ar shey,2,shey,1.0,53.0,ins:ar@begin
+ZL_join,bpe,B_only,ch,ch,2,daiin,1.0,466.0,sub:daiin>ch@begin
+ZL_join,bpe,B_only,ch'eey,ch ' eey,2,chkeey,1.0,7.0,sub:k>'@mid
+ZL_join,bpe,B_only,chady,ch a dy,2,chan,1.0,10.0,sub:n>dy@end
+ZL_join,bpe,B_only,chalkar,ch al k ar,2,chkar,1.0,3.0,ins:al@mid
+ZL_join,bpe,B_only,charaiin,ch ar aiin,2,chaiin,1.0,32.0,ins:ar@mid
+ZL_join,bpe,B_only,charain,ch ar ain,2,char,1.0,29.0,ins:ain@end
+ZL_join,bpe,B_only,chcfhy,ch cfh y,2,choky,1.0,26.0,sub:ok>cfh@mid
+ZL_join,bpe,B_only,chcphdy,ch cph dy,2,chcphy,1.0,4.0,sub:y>dy@end
+ZL_join,bpe,B_only,chctham,ch cth am,2,cham,1.0,9.0,ins:cth@mid
+ZL_join,bpe,B_only,chcthhy,ch cth h y,2,cthhy,1.0,2.0,ins:ch@begin
+ZL_join,bpe,B_only,chkeedy,ch k eedy,2,chkaiin,1.0,8.0,sub:aiin>eedy@end
+ZL_join,bpe,B_only,chlal,ch l al,2,chal,1.0,12.0,ins:l@mid
+ZL_join,bpe,B_only,chlar,ch l ar,2,char,1.0,29.0,ins:l@mid
+ZL_join,bpe,B_only,chll,ch l l,2,chl,1.0,6.0,ins:l@mid
+ZL_join,bpe,B_only,chokchedy,ch ok chedy,2,choky,1.0,26.0,sub:y>chedy@end
+ZL_join,bpe,B_only,chokeedy,ch ok eedy,2,choky,1.0,26.0,sub:y>eedy@end
+ZL_join,bpe,B_only,chotchdy,ch ot chdy,2,choty,1.0,25.0,sub:y>chdy@end
+ZL_join,bpe,B_only,chsdy,ch s dy,2,chs,1.0,6.0,ins:dy@end
+ZL_join,bpe,B_only,chtedy,ch t edy,2,chty,1.0,6.0,sub:y>edy@end
+ZL_join,bpe,B_only,chtl,ch t l,2,chty,1.0,6.0,sub:y>l@end
+ZL_join,bpe,B_only,chechey,che chey,2,chey,1.0,73.0,ins:che@begin
+ZL_join,bpe,B_only,checkhed,che ckh e d,2,checkhey,2.0,3.0,ins:e@mid;sub:ey>d@end
+ZL_join,bpe,B_only,checkhol,che ckh ol,2,ckhol,1.0,19.0,ins:che@begin
+ZL_join,bpe,B_only,checphey,che cph ey,2,cphey,1.0,5.0,ins:che@begin
+ZL_join,bpe,B_only,checthedy,che cth edy,2,cthol,2.0,50.0,ins:che@begin;sub:ol>edy@end
+ZL_join,bpe,B_only,chefaiin,che f aiin,2,ofaiin,1.0,2.0,sub:o>che@begin
+ZL_join,bpe,B_only,chekchy,che k chy,2,kchy,1.0,19.0,ins:che@begin
+ZL_join,bpe,B_only,cheokedy,che ok edy,2,cheoky,1.0,4.0,sub:y>edy@end
+ZL_join,bpe,B_only,cheokey,che ok ey,2,okey,1.0,19.0,ins:che@begin
+ZL_join,bpe,B_only,cheolkaiin,che olk aiin,2,cheoraiin,1.0,2.0,sub:or>olk@mid
+ZL_join,bpe,B_only,cheolkeedy,che olk eedy,2,cheor,2.0,47.0,ins:olk@mid;sub:or>eedy@end
+ZL_join,bpe,B_only,chepchedy,che p chedy,2,cheor,2.0,47.0,ins:p@mid;sub:or>chedy@end
+ZL_join,bpe,B_only,chesy,che s y,2,sy,1.0,26.0,ins:che@begin
+ZL_join,bpe,B_only,chedysar,chedy s ar,2,sar,1.0,16.0,ins:chedy@begin
+ZL_join,bpe,B_only,cheeaiin,chee aiin,2,aiin,1.0,51.0,ins:chee@begin
+ZL_join,bpe,B_only,cheed,chee d,2,d,1.0,16.0,ins:chee@begin
+ZL_join,bpe,B_only,cheedain,chee dain,2,dain,1.0,90.0,ins:chee@begin
+ZL_join,bpe,B_only,cheolchey,cheol chey,2,chey,1.0,73.0,ins:cheol@begin
+ZL_join,bpe,B_only,cheyky,chey ky,2,chey,1.0,73.0,ins:ky@end
+ZL_join,bpe,B_only,cheytain,chey t ain,2,chey,2.0,73.0,ins:tain@end
+ZL_join,bpe,B_only,chopchdy,cho p chdy,2,chopy,1.0,3.0,sub:y>chdy@end
+ZL_join,bpe,B_only,cholchey,chol chey,2,chol,1.0,238.0,ins:chey@end
+ZL_join,bpe,B_only,cholkain,chol k ain,2,chol,2.0,238.0,ins:kain@end
+ZL_join,bpe,B_only,cholkal,chol k al,2,kal,1.0,2.0,ins:chol@begin
+ZL_join,bpe,B_only,cholkedy,chol k edy,2,chol,2.0,238.0,ins:kedy@end
+ZL_join,bpe,B_only,cholkeeey,chol k ee ey,2,keeey,1.0,2.0,ins:chol@begin
+ZL_join,bpe,B_only,dag,d a g,2,dan,1.0,10.0,sub:n>g@end
+ZL_join,bpe,B_only,daiiral,d ai i r al,2,daiir,1.0,5.0,ins:al@end
+ZL_join,bpe,B_only,dairar,d air ar,2,dair,1.0,35.0,ins:ar@end
+ZL_join,bpe,B_only,dchdar,d ch dar,2,dchaiin,1.0,4.0,sub:aiin>dar@end
+ZL_join,bpe,B_only,deeedy,d ee edy,2,dol,2.0,52.0,ins:ee@mid;sub:ol>edy@end
+ZL_join,bpe,B_only,deedy,d eedy,2,dol,1.0,52.0,sub:ol>eedy@end
+ZL_join,bpe,B_only,dkedy,d k edy,2,dol,2.0,52.0,ins:k@mid;sub:ol>edy@end
+ZL_join,bpe,B_only,dkshey,d k shey,2,dshey,1.0,4.0,ins:k@mid
+ZL_join,bpe,B_only,dlar,d l ar,2,dchar,1.0,3.0,sub:ch>l@mid
+ZL_join,bpe,B_only,dlchd,d l ch d,2,dchaiin,2.0,4.0,ins:l@mid;sub:aiin>d@end
+ZL_join,bpe,B_only,dlshedy,d l shedy,2,dl,1.0,2.0,ins:shedy@end
+ZL_join,bpe,B_only,dshees,d sh ee s,2,shees,1.0,3.0,ins:d@begin
+ZL_join,bpe,B_only,dsheo,d she o,2,sheo,1.0,15.0,ins:d@begin
+ZL_join,bpe,B_only,dalaiin,dal aiin,2,dal,1.0,67.0,ins:aiin@end
+ZL_join,bpe,B_only,dalkar,dal k ar,2,kar,1.0,6.0,ins:dal@begin
+ZL_join,bpe,B_only,dalkedy,dal k edy,2,dal,2.0,67.0,ins:kedy@end
+ZL_join,bpe,B_only,dalky,dal ky,2,dal,1.0,67.0,ins:ky@end
+ZL_join,bpe,B_only,dalom,dal o m,2,om,1.0,7.0,ins:dal@begin
+ZL_join,bpe,B_only,dychedy,dy chedy,2,dy,1.0,78.0,ins:chedy@end
+ZL_join,bpe,B_only,dykedy,dy k edy,2,dykchy,1.0,2.0,sub:chy>edy@end
+ZL_join,bpe,B_only,dykeedy,dy k eedy,2,dykchy,1.0,2.0,sub:chy>eedy@end
+ZL_join,bpe,B_only,fshedy,f shedy,2,shedy,1.0,2.0,ins:f@begin
+ZL_join,bpe,B_only,kas,k a s,2,kchos,1.0,3.0,sub:cho>a@mid
+ZL_join,bpe,B_only,kairam,k air am,2,kair,1.0,2.0,ins:am@end
+ZL_join,bpe,B_only,kalchdy,k al chdy,2,kal,1.0,2.0,ins:chdy@end
+ZL_join,bpe,B_only,kaldaiin,k al daiin,2,kodaiin,1.0,3.0,sub:o>al@mid
+ZL_join,bpe,B_only,kalkal,k al k al,2,kal,2.0,2.0,ins:kal@begin
+ZL_join,bpe,B_only,kechdy,k e chdy,2,keor,1.0,6.0,sub:or>chdy@end
+ZL_join,bpe,B_only,keodar,k e o dar,2,cpheodar,1.0,3.0,sub:cph>k@begin
+ZL_join,bpe,B_only,keed,k ee d,2,keeol,1.0,5.0,sub:ol>d@end
+ZL_join,bpe,B_only,keedal,k ee dal,2,keeol,1.0,5.0,sub:ol>dal@end
+ZL_join,bpe,B_only,kshd,k sh d,2,kchod,1.0,3.0,sub:cho>sh@mid
+ZL_join,bpe,B_only,ksheeol,k sh ee ol,2,keeol,1.0,5.0,ins:sh@mid
+ZL_join,bpe,B_only,laiiin,l ai iin,2,daiiin,1.0,11.0,sub:d>l@begin
+ZL_join,bpe,B_only,lchg,l ch g,2,chody,2.0,41.0,ins:l@begin;sub:ody>g@end
+ZL_join,bpe,B_only,lchl,l ch l,2,chl,1.0,6.0,ins:l@begin
+ZL_join,bpe,B_only,lchody,l ch ody,2,chody,1.0,41.0,ins:l@begin
+ZL_join,bpe,B_only,lchs,l ch s,2,chs,1.0,6.0,ins:l@begin
+ZL_join,bpe,B_only,lcheal,l che al,2,cheal,1.0,8.0,ins:l@begin
+ZL_join,bpe,B_only,lchedam,l che d am,2,dam,2.0,38.0,ins:lche@begin
+ZL_join,bpe,B_only,lchedar,l che dar,2,dar,2.0,84.0,ins:lche@begin
+ZL_join,bpe,B_only,lcheody,l che ody,2,cheody,1.0,25.0,ins:l@begin
+ZL_join,bpe,B_only,lcheor,l che or,2,cheor,1.0,47.0,ins:l@begin
+ZL_join,bpe,B_only,lcheod,l cheo d,2,cheod,1.0,2.0,ins:l@begin
+ZL_join,bpe,B_only,ldol,l d ol,2,dol,1.0,52.0,ins:l@begin
+ZL_join,bpe,B_only,ldaiin,l daiin,2,daiin,1.0,466.0,ins:l@begin
+ZL_join,bpe,B_only,lfchy,l f chy,2,chy,2.0,86.0,ins:lf@begin
+ZL_join,bpe,B_only,loeey,l o eey,2,qotoeey,1.0,2.0,sub:qot>l@begin
+ZL_join,bpe,B_only,lod,l od,2,l,1.0,7.0,ins:od@end
+ZL_join,bpe,B_only,lokam,l ok am,2,okam,1.0,6.0,ins:l@begin
+ZL_join,bpe,B_only,lokeedy,l ok eedy,2,okeedy,1.0,2.0,ins:l@begin
+ZL_join,bpe,B_only,lokeey,l ok eey,2,okeey,1.0,31.0,ins:l@begin
+ZL_join,bpe,B_only,lolshedy,l ol shedy,2,ol,2.0,70.0,ins:l@begin;ins:shedy@end
+ZL_join,bpe,B_only,lolkaiin,l olk aiin,2,aiin,2.0,51.0,ins:lolk@begin
+ZL_join,bpe,B_only,lpchdy,l p chdy,2,chdy,2.0,8.0,ins:lp@begin
+ZL_join,bpe,B_only,lraiin,l r aiin,2,raiin,1.0,5.0,ins:l@begin
+ZL_join,bpe,B_only,lrain,l r ain,2,r,2.0,25.0,ins:l@begin;ins:ain@end
+ZL_join,bpe,B_only,lsaiin,l s aiin,2,saiin,1.0,42.0,ins:l@begin
+ZL_join,bpe,B_only,lshdy,l sh dy,2,shdy,1.0,2.0,ins:l@begin
+ZL_join,bpe,B_only,lshor,l sh or,2,shor,1.0,60.0,ins:l@begin
+ZL_join,bpe,B_only,lsheckhy,l she ckhy,2,sheol,2.0,35.0,ins:l@begin;sub:ol>ckhy@end
+ZL_join,bpe,B_only,lsheol,l she ol,2,sheol,1.0,35.0,ins:l@begin
+ZL_join,bpe,B_only,lshety,l she t y,2,chety,2.0,6.0,ins:l@begin;sub:che>she@begin
+ZL_join,bpe,B_only,ltaiin,l t aiin,2,taiin,1.0,12.0,ins:l@begin
+ZL_join,bpe,B_only,ltain,l t ain,2,tchy,2.0,15.0,ins:l@begin;sub:chy>ain@end
+ZL_join,bpe,B_only,ltary,l t ar y,2,chety,2.0,6.0,sub:che>l@begin;ins:ar@mid
+ZL_join,bpe,B_only,lteey,l t eey,2,teey,1.0,3.0,ins:l@begin
+ZL_join,bpe,B_only,lty,l t y,2,chety,1.0,6.0,sub:che>l@begin
+ZL_join,bpe,B_only,lkaiir,lk ai i r,2,okaiir,1.0,5.0,sub:ok>lk@begin
+ZL_join,bpe,B_only,lkchy,lk chy,2,chy,1.0,86.0,ins:lk@begin
+ZL_join,bpe,B_only,lkechedy,lk e chedy,2,okeor,2.0,13.0,sub:ok>lk@begin;sub:or>chedy@end
+ZL_join,bpe,B_only,lkedain,lk e dain,2,dain,2.0,90.0,ins:lke@begin
+ZL_join,bpe,B_only,lkedal,lk e dal,2,dal,2.0,67.0,ins:lke@begin
+ZL_join,bpe,B_only,lkeo,lk e o,2,qokeo,1.0,3.0,sub:qok>lk@begin
+ZL_join,bpe,B_only,lkeeor,lk ee or,2,okeeor,1.0,6.0,sub:ok>lk@begin
+ZL_join,bpe,B_only,lkshey,lk shey,2,shey,1.0,53.0,ins:lk@begin
+ZL_join,bpe,B_only,octhdy,o cth dy,2,octhos,1.0,2.0,sub:os>dy@end
+ZL_join,bpe,B_only,odaly,o dal y,2,daly,1.0,6.0,ins:o@begin
+ZL_join,bpe,B_only,oedy,o edy,2,odaiin,1.0,27.0,sub:daiin>edy@end
+ZL_join,bpe,B_only,oeedaiin,o ee daiin,2,odaiin,1.0,27.0,ins:ee@mid
+ZL_join,bpe,B_only,ofy,o f y,2,ofchey,1.0,2.0,sub:chey>y@end
+ZL_join,bpe,B_only,oithy,o i t h y,2,shoikhy,2.0,2.0,sub:sho>o@begin;sub:k>t@mid
+ZL_join,bpe,B_only,oor,o or,2,or,1.0,82.0,ins:o@begin
+ZL_join,bpe,B_only,oqokain,o qokain,2,odaiin,1.0,27.0,sub:daiin>qokain@end
+ZL_join,bpe,B_only,oshedy,o shedy,2,odaiin,1.0,27.0,sub:daiin>shedy@end
+ZL_join,bpe,B_only,odeeey,od ee ey,2,okeeey,1.0,6.0,sub:ok>od@begin
+ZL_join,bpe,B_only,odr,od r,2,r,1.0,25.0,ins:od@begin
+ZL_join,bpe,B_only,okarar,ok ar ar,2,okar,1.0,13.0,ins:ar@mid
+ZL_join,bpe,B_only,okarol,ok ar ol,2,okol,1.0,36.0,ins:ar@mid
+ZL_join,bpe,B_only,okchaiin,ok ch aiin,2,chaiin,1.0,32.0,ins:ok@begin
+ZL_join,bpe,B_only,okchedam,ok che d am,2,dam,2.0,38.0,ins:okche@begin
+ZL_join,bpe,B_only,oked,ok e d,2,okeor,1.0,13.0,sub:or>d@end
+ZL_join,bpe,B_only,okedor,ok e d or,2,okeor,1.0,13.0,ins:d@mid
+ZL_join,bpe,B_only,okeechy,ok ee chy,2,okchy,1.0,14.0,ins:ee@mid
+ZL_join,bpe,B_only,okeedain,ok ee dain,2,okeeol,1.0,7.0,sub:ol>dain@end
+ZL_join,bpe,B_only,okeedar,ok ee dar,2,okeeol,1.0,7.0,sub:ol>dar@end
+ZL_join,bpe,B_only,okeeshy,ok ee shy,2,okeeol,1.0,7.0,sub:ol>shy@end
+ZL_join,bpe,B_only,okiin,ok iin,2,oky,1.0,38.0,sub:y>iin@end
+ZL_join,bpe,B_only,okolchedy,ok ol chedy,2,okol,1.0,36.0,ins:chedy@end
+ZL_join,bpe,B_only,okalaiin,okal aiin,2,aiin,1.0,51.0,ins:okal@begin
+ZL_join,bpe,B_only,okalol,okal ol,2,ol,1.0,70.0,ins:okal@begin
+ZL_join,bpe,B_only,olchckhy,ol ch ckhy,2,chckhy,1.0,15.0,ins:ol@begin
+ZL_join,bpe,B_only,olchcthy,ol ch cthy,2,chcthy,1.0,21.0,ins:ol@begin
+ZL_join,bpe,B_only,olchdaiin,ol ch daiin,2,oldaiin,1.0,9.0,ins:ch@mid
+ZL_join,bpe,B_only,olched,ol che d,2,olcheor,1.0,3.0,sub:or>d@end
+ZL_join,bpe,B_only,olcheeey,ol chee ey,2,cheeey,1.0,2.0,ins:ol@begin
+ZL_join,bpe,B_only,oleedy,ol eedy,2,ol,1.0,70.0,ins:eedy@end
+ZL_join,bpe,B_only,olfchey,ol f chey,2,olchey,1.0,4.0,ins:f@mid
+ZL_join,bpe,B_only,oll,ol l,2,ol,1.0,70.0,ins:l@end
+ZL_join,bpe,B_only,ollchy,ol l chy,2,olchy,1.0,2.0,ins:l@mid
+ZL_join,bpe,B_only,oloky,ol ok y,2,oky,1.0,38.0,ins:ol@begin
+ZL_join,bpe,B_only,oloraiin,ol or aiin,2,oraiin,1.0,10.0,ins:ol@begin
+ZL_join,bpe,B_only,olorol,ol or ol,2,olol,1.0,4.0,ins:or@mid
+ZL_join,bpe,B_only,olos,ol os,2,ol,1.0,70.0,ins:os@end
+ZL_join,bpe,B_only,olsheed,ol sh ee d,2,sheeol,2.0,4.0,ins:ol@begin;sub:ol>d@end
+ZL_join,bpe,B_only,olshed,ol she d,2,olsheody,1.0,2.0,sub:ody>d@end
+ZL_join,bpe,B_only,olsheor,ol she or,2,sheor,1.0,22.0,ins:ol@begin
+ZL_join,bpe,B_only,oltain,ol t ain,2,ol,2.0,70.0,ins:tain@end
+ZL_join,bpe,B_only,oltal,ol t al,2,tal,1.0,2.0,ins:ol@begin
+ZL_join,bpe,B_only,olteody,ol t eody,2,teody,1.0,2.0,ins:ol@begin
+ZL_join,bpe,B_only,oltydy,ol t y dy,2,oly,2.0,8.0,ins:t@mid;ins:dy@end
+ZL_join,bpe,B_only,olkechy,olk e chy,2,qokechy,1.0,3.0,sub:qok>olk@begin
+ZL_join,bpe,B_only,olkedaiin,olk e daiin,2,daiin,2.0,466.0,ins:olke@begin
+ZL_join,bpe,B_only,olkeear,olk ee ar,2,oeear,1.0,3.0,sub:o>olk@begin
+ZL_join,bpe,B_only,olkeeedy,olk ee edy,2,okeeol,2.0,7.0,sub:ok>olk@begin;sub:ol>edy@end
+ZL_join,bpe,B_only,olkeeol,olk ee ol,2,okeeol,1.0,7.0,sub:ok>olk@begin
+ZL_join,bpe,B_only,olkol,olk ol,2,ol,1.0,70.0,ins:olk@begin
+ZL_join,bpe,B_only,olkor,olk or,2,or,1.0,82.0,ins:olk@begin
+ZL_join,bpe,B_only,opair,op air,2,dair,1.0,35.0,sub:d>op@begin
+ZL_join,bpe,B_only,opalkaiin,op al k aiin,2,kaiin,2.0,10.0,ins:opal@begin
+ZL_join,bpe,B_only,opchsd,op ch s d,2,chs,2.0,6.0,ins:op@begin;ins:d@end
+ZL_join,bpe,B_only,opched,op che d,2,cheor,2.0,47.0,ins:op@begin;sub:or>d@end
+ZL_join,bpe,B_only,opcholor,op chol or,2,opchol,1.0,3.0,ins:or@end
+ZL_join,bpe,B_only,opol,op ol,2,ol,1.0,70.0,ins:op@begin
+ZL_join,bpe,B_only,opoly,op ol y,2,oly,1.0,8.0,ins:op@begin
+ZL_join,bpe,B_only,opshedy,op shedy,2,opchey,1.0,5.0,sub:chey>shedy@end
+ZL_join,bpe,B_only,orchedar,or che dar,2,dar,2.0,84.0,ins:orche@begin
+ZL_join,bpe,B_only,oroiiin,or o i iin,2,soiiin,1.0,3.0,sub:s>or@begin
+ZL_join,bpe,B_only,orsheey,or sheey,2,or,1.0,82.0,ins:sheey@end
+ZL_join,bpe,B_only,ota,ot a,2,oty,1.0,39.0,sub:y>a@end
+ZL_join,bpe,B_only,otan,ot a n,2,dan,1.0,10.0,sub:d>ot@begin
+ZL_join,bpe,B_only,otairor,ot air or,2,otor,1.0,11.0,ins:air@mid
+ZL_join,bpe,B_only,otalaiin,ot al aiin,2,otaiin,1.0,28.0,ins:al@mid
+ZL_join,bpe,B_only,otalkedy,ot al k edy,2,otal,2.0,19.0,ins:kedy@end
+ZL_join,bpe,B_only,otalshedy,ot al shedy,2,otal,1.0,19.0,ins:shedy@end
+ZL_join,bpe,B_only,otaral,ot ar al,2,otal,1.0,19.0,ins:ar@mid
+ZL_join,bpe,B_only,otchod,ot cho d,2,otcho,1.0,6.0,ins:d@end
+ZL_join,bpe,B_only,oteaiin,ot e aiin,2,otaiin,1.0,28.0,ins:e@mid
+ZL_join,bpe,B_only,oteain,ot e ain,2,oteos,1.0,4.0,sub:os>ain@end
+ZL_join,bpe,B_only,otear,ot e ar,2,otar,1.0,8.0,ins:e@mid
+ZL_join,bpe,B_only,otedaiin,ot e daiin,2,oteos,1.0,4.0,sub:os>daiin@end
+ZL_join,bpe,B_only,otedain,ot e dain,2,oteos,1.0,4.0,sub:os>dain@end
+ZL_join,bpe,B_only,oteodar,ot e o dar,2,cpheodar,1.0,3.0,sub:cph>ot@begin
+ZL_join,bpe,B_only,otes,ot e s,2,oteos,1.0,4.0,sub:os>s@end
+ZL_join,bpe,B_only,oteeam,ot ee am,2,otam,1.0,7.0,ins:ee@mid
+ZL_join,bpe,B_only,oteedal,ot ee dal,2,oteeos,1.0,2.0,sub:os>dal@end
+ZL_join,bpe,B_only,oteeedy,ot ee edy,2,oteeos,1.0,2.0,sub:os>edy@end
+ZL_join,bpe,B_only,paiir,p ai i r,2,okaiir,1.0,5.0,sub:ok>p@begin
+ZL_join,bpe,B_only,pair,p air,2,dair,1.0,35.0,sub:d>p@begin
+ZL_join,bpe,B_only,pairar,p air ar,2,pchar,1.0,2.0,sub:ch>air@mid
+ZL_join,bpe,B_only,pchdol,p ch d ol,2,pchodol,1.0,2.0,sub:cho>ch@mid
+ZL_join,bpe,B_only,pchedain,p che dain,2,dain,2.0,90.0,ins:pche@begin
+ZL_join,bpe,B_only,pcholky,p chol ky,2,pchol,1.0,3.0,ins:ky@end
+ZL_join,bpe,B_only,pdaiin,p daiin,2,daiin,1.0,466.0,ins:p@begin
+ZL_join,bpe,B_only,pochedy,p o chedy,2,podaiin,1.0,2.0,sub:daiin>chedy@end
+ZL_join,bpe,B_only,podair,p od air,2,dair,2.0,35.0,ins:p@begin;sub:d>od@begin
+ZL_join,bpe,B_only,polar,p ol ar,2,pol,1.0,2.0,ins:ar@end
+ZL_join,bpe,B_only,polchdy,p ol chdy,2,pol,1.0,2.0,ins:chdy@end
+ZL_join,bpe,B_only,polched,p ol che d,2,olcheor,2.0,3.0,ins:p@begin;sub:or>d@end
+ZL_join,bpe,B_only,polor,p ol or,2,pol,1.0,2.0,ins:or@end
+ZL_join,bpe,B_only,polkeey,p olk eey,2,olkeey,1.0,2.0,ins:p@begin
+ZL_join,bpe,B_only,pshdar,p sh dar,2,dar,2.0,84.0,ins:psh@begin
+ZL_join,bpe,B_only,psheoldy,p she ol dy,2,sheoldy,1.0,2.0,ins:p@begin
+ZL_join,bpe,B_only,pshedy,p shedy,2,pchor,1.0,5.0,sub:chor>shedy@end
+ZL_join,bpe,B_only,qaiin,q aiin,2,aiin,1.0,51.0,ins:q@begin
+ZL_join,bpe,B_only,qckhedy,q ckh edy,2,ckhey,2.0,24.0,ins:q@begin;sub:ey>edy@end
+ZL_join,bpe,B_only,qckhy,q ckhy,2,ckhy,1.0,25.0,ins:q@begin
+ZL_join,bpe,B_only,qcphhedy,q cph h edy,2,,,,
+ZL_join,bpe,B_only,qcthy,q cthy,2,cthy,1.0,90.0,ins:q@begin
+ZL_join,bpe,B_only,qekaiin,q e k aiin,2,kaiin,2.0,10.0,ins:qe@begin
+ZL_join,bpe,B_only,qeedy,q eedy,2,qor,1.0,7.0,sub:or>eedy@end
+ZL_join,bpe,B_only,qkain,q k ain,2,kchy,2.0,19.0,ins:q@begin;sub:chy>ain@end
+ZL_join,bpe,B_only,qolkedy,q olk edy,2,qor,2.0,7.0,ins:olk@mid;sub:or>edy@end
+ZL_join,bpe,B_only,qochedy,qo chedy,2,qodaiin,1.0,14.0,sub:daiin>chedy@end
+ZL_join,bpe,B_only,qocheol,qo cheol,2,cheol,1.0,59.0,ins:qo@begin
+ZL_join,bpe,B_only,qocphdy,qo cph dy,2,qocphy,1.0,2.0,sub:y>dy@end
+ZL_join,bpe,B_only,qodeey,qo d eey,2,qoeey,1.0,4.0,ins:d@mid
+ZL_join,bpe,B_only,qoekedy,qo e k edy,2,qoekol,1.0,2.0,sub:ol>edy@end
+ZL_join,bpe,B_only,qoeeda,qo ee d a,2,da,2.0,4.0,ins:qoee@begin
+ZL_join,bpe,B_only,qoeeo,qo ee o,2,qokeeo,1.0,4.0,sub:qok>qo@begin
+ZL_join,bpe,B_only,qofcheol,qo f cheol,2,cheol,2.0,59.0,ins:qof@begin
+ZL_join,bpe,B_only,qopcheedy,qo p ch eedy,2,qopchy,2.0,4.0,ins:ch@mid;sub:chy>eedy@end
+ZL_join,bpe,B_only,qosain,qo s ain,2,sain,1.0,7.0,ins:qo@begin
+ZL_join,bpe,B_only,qoka,qok a,2,qokol,1.0,43.0,sub:ol>a@end
+ZL_join,bpe,B_only,qokady,qok a dy,2,qokoldy,1.0,3.0,sub:ol>a@mid
+ZL_join,bpe,B_only,qokaral,qok ar al,2,qokar,1.0,14.0,ins:al@end
+ZL_join,bpe,B_only,qokaram,qok ar am,2,qokar,1.0,14.0,ins:am@end
+ZL_join,bpe,B_only,qokchar,qok ch ar,2,char,1.0,29.0,ins:qok@begin
+ZL_join,bpe,B_only,qokcheedy,qok ch eedy,2,cheedy,1.0,3.0,ins:qok@begin
+ZL_join,bpe,B_only,qokeain,qok e ain,2,qokeor,1.0,10.0,sub:or>ain@end
+ZL_join,bpe,B_only,qokedal,qok e dal,2,qokeor,1.0,10.0,sub:or>dal@end
+ZL_join,bpe,B_only,qokeoy,qok e o y,2,qokeo,1.0,3.0,ins:y@end
+ZL_join,bpe,B_only,qokeeal,qok ee al,2,qokeeol,1.0,4.0,sub:ol>al@end
+ZL_join,bpe,B_only,qokeear,qok ee ar,2,qokar,1.0,14.0,ins:ee@mid
+ZL_join,bpe,B_only,qokeedaiin,qok ee daiin,2,qokeeol,1.0,4.0,sub:ol>daiin@end
+ZL_join,bpe,B_only,qokeedain,qok ee dain,2,qokeeol,1.0,4.0,sub:ol>dain@end
+ZL_join,bpe,B_only,qokeeodar,qok ee o dar,2,qokeeo,1.0,4.0,ins:dar@end
+ZL_join,bpe,B_only,qokeeod,qok ee od,2,qokod,1.0,5.0,ins:ee@mid
+ZL_join,bpe,B_only,qokydy,qok y dy,2,qoky,1.0,34.0,ins:dy@end
+ZL_join,bpe,B_only,qokalchdy,qokal chdy,2,qokal,1.0,14.0,ins:chdy@end
+ZL_join,bpe,B_only,qokalchedy,qokal chedy,2,qokal,1.0,14.0,ins:chedy@end
+ZL_join,bpe,B_only,qolain,qol ain,2,chain,1.0,10.0,sub:ch>qol@begin
+ZL_join,bpe,B_only,qolal,qol al,2,otal,1.0,19.0,sub:ot>qol@begin
+ZL_join,bpe,B_only,qolcheedy,qol ch eedy,2,cheedy,1.0,3.0,ins:qol@begin
+ZL_join,bpe,B_only,qolcheol,qol cheol,2,cheol,1.0,59.0,ins:qol@begin
+ZL_join,bpe,B_only,qolchy,qol chy,2,chy,1.0,86.0,ins:qol@begin
+ZL_join,bpe,B_only,qolsheey,qol sheey,2,sheey,1.0,35.0,ins:qol@begin
+ZL_join,bpe,B_only,qolshy,qol shy,2,shy,1.0,48.0,ins:qol@begin
+ZL_join,bpe,B_only,qotainol,qot ain ol,2,qotol,1.0,18.0,ins:ain@mid
+ZL_join,bpe,B_only,qotalchedy,qot al chedy,2,qotal,1.0,4.0,ins:chedy@end
+ZL_join,bpe,B_only,qotarain,qot ar ain,2,qotain,1.0,2.0,ins:ar@mid
+ZL_join,bpe,B_only,qotchedar,qot che dar,2,qotcheaiin,1.0,2.0,sub:aiin>dar@end
+ZL_join,bpe,B_only,qoteal,qot e al,2,okeal,1.0,5.0,sub:ok>qot@begin
+ZL_join,bpe,B_only,qotechy,qot e chy,2,qotchy,1.0,47.0,ins:e@mid
+ZL_join,bpe,B_only,qoted,qot e d,2,qotchod,1.0,2.0,sub:cho>e@mid
+ZL_join,bpe,B_only,qotedor,qot e d or,2,dor,2.0,37.0,ins:qote@begin
+ZL_join,bpe,B_only,qotl,qot l,2,qotchy,1.0,47.0,sub:chy>l@end
+ZL_join,bpe,B_only,qotsheod,qot she od,2,sheod,1.0,3.0,ins:qot@begin
+ZL_join,bpe,B_only,qotydy,qot y dy,2,qoty,1.0,27.0,ins:dy@end
+ZL_join,bpe,B_only,rary,r ar y,2,sary,1.0,5.0,sub:s>r@begin
+ZL_join,bpe,B_only,rcheky,r che ky,2,cheky,1.0,12.0,ins:r@begin
+ZL_join,bpe,B_only,rodam,r od am,2,odam,1.0,2.0,ins:r@begin
+ZL_join,bpe,B_only,rody,r ody,2,chody,1.0,41.0,sub:ch>r@begin
+ZL_join,bpe,B_only,rolchy,r ol chy,2,olchy,1.0,2.0,ins:r@begin
+ZL_join,bpe,B_only,rolkeedy,r olk eedy,2,r,2.0,25.0,ins:olkeedy@end
+ZL_join,bpe,B_only,rorol,r or ol,2,or,2.0,82.0,ins:r@begin;ins:ol@end
+ZL_join,bpe,B_only,rshey,r shey,2,shey,1.0,53.0,ins:r@begin
+ZL_join,bpe,B_only,saiir,s ai i r,2,okaiir,1.0,5.0,sub:ok>s@begin
+ZL_join,bpe,B_only,saino,s ain o,2,sain,1.0,7.0,ins:o@end
+ZL_join,bpe,B_only,saly,s al y,2,sy,1.0,26.0,ins:al@mid
+ZL_join,bpe,B_only,saraiir,s ar ai i r,2,okaiir,2.0,5.0,ins:s@begin;sub:ok>ar@begin
+ZL_join,bpe,B_only,ssheey,s sheey,2,s,1.0,126.0,ins:sheey@end
+ZL_join,bpe,B_only,shalky,sh al ky,2,shor,2.0,60.0,ins:al@mid;sub:or>ky@end
+ZL_join,bpe,B_only,shchy,sh chy,2,chy,1.0,86.0,ins:sh@begin
+ZL_join,bpe,B_only,shdair,sh d air,2,dair,1.0,35.0,ins:sh@begin
+ZL_join,bpe,B_only,sheeckhy,sh ee ckhy,2,sheeol,1.0,4.0,sub:ol>ckhy@end
+ZL_join,bpe,B_only,sheeeky,sh ee e ky,2,oeees,2.0,5.0,sub:o>sh@begin;sub:s>ky@end
+ZL_join,bpe,B_only,sheek,sh ee k,2,sheeol,1.0,4.0,sub:ol>k@end
+ZL_join,bpe,B_only,sheekar,sh ee k ar,2,sheear,1.0,2.0,ins:k@mid
+ZL_join,bpe,B_only,sheekchy,sh ee k chy,2,kchy,2.0,19.0,ins:shee@begin
+ZL_join,bpe,B_only,sheekeey,sh ee k eey,2,keey,2.0,16.0,ins:shee@begin
+ZL_join,bpe,B_only,sheeodar,sh ee o dar,2,odar,2.0,6.0,ins:shee@begin
+ZL_join,bpe,B_only,shkain,sh k ain,2,shain,1.0,4.0,ins:k@mid
+ZL_join,bpe,B_only,shkair,sh k air,2,shkaiin,1.0,2.0,sub:aiin>air@end
+ZL_join,bpe,B_only,shkar,sh k ar,2,shar,1.0,8.0,ins:k@mid
+ZL_join,bpe,B_only,shkchedy,sh k chedy,2,shkaiin,1.0,2.0,sub:aiin>chedy@end
+ZL_join,bpe,B_only,sholkal,sh olk al,2,shor,2.0,60.0,ins:olk@mid;sub:or>al@end
+ZL_join,bpe,B_only,sholkeedy,sh olk eedy,2,shor,2.0,60.0,ins:olk@mid;sub:or>eedy@end
+ZL_join,bpe,B_only,shtol,sh t ol,2,tol,1.0,13.0,ins:sh@begin
+ZL_join,bpe,B_only,shechy,she chy,2,chy,1.0,86.0,ins:she@begin
+ZL_join,bpe,B_only,sheckhal,she ckh al,2,sheal,1.0,2.0,ins:ckh@mid
+ZL_join,bpe,B_only,sheckhdy,she ckh dy,2,sheoldy,1.0,2.0,sub:ol>ckh@mid
+ZL_join,bpe,B_only,shefchdy,she f chdy,2,sheol,2.0,35.0,ins:f@mid;sub:ol>chdy@end
+ZL_join,bpe,B_only,shekam,she k am,2,sheam,1.0,2.0,ins:k@mid
+ZL_join,bpe,B_only,shekedy,she k edy,2,sheol,2.0,35.0,ins:k@mid;sub:ol>edy@end
+ZL_join,bpe,B_only,shekshey,she k shey,2,kshey,1.0,2.0,ins:she@begin
+ZL_join,bpe,B_only,sheokaiin,she okaiin,2,sheol,1.0,35.0,sub:ol>okaiin@end
+ZL_join,bpe,B_only,sheolkain,she olk ain,2,sheol,2.0,35.0,ins:olk@mid;sub:ol>ain@end
+ZL_join,bpe,B_only,sheyky,she yk y,2,yky,1.0,8.0,ins:she@begin
+ZL_join,bpe,B_only,shedydy,shedy dy,2,dy,1.0,78.0,ins:shedy@begin
+ZL_join,bpe,B_only,shocfhy,sho cfh y,2,cfhy,1.0,6.0,ins:sho@begin
+ZL_join,bpe,B_only,taral,t ar al,2,aral,1.0,5.0,ins:t@begin
+ZL_join,bpe,B_only,tarol,t ar ol,2,tol,1.0,13.0,ins:ar@mid
+ZL_join,bpe,B_only,tchdor,t ch d or,2,dor,2.0,37.0,ins:tch@begin
+ZL_join,bpe,B_only,tchdaiin,t ch daiin,2,tchody,1.0,6.0,sub:ody>daiin@end
+ZL_join,bpe,B_only,tchedor,t che d or,2,tcheor,1.0,2.0,ins:d@mid
+ZL_join,bpe,B_only,tchedar,t che dar,2,tcheody,1.0,3.0,sub:ody>dar@end
+ZL_join,bpe,B_only,teedal,t ee dal,2,todal,1.0,2.0,sub:o>ee@mid
+ZL_join,bpe,B_only,tokain,t ok ain,2,okain,1.0,6.0,ins:t@begin
+ZL_join,bpe,B_only,tokar,t ok ar,2,okar,1.0,13.0,ins:t@begin
+ZL_join,bpe,B_only,toky,t ok y,2,oky,1.0,38.0,ins:t@begin
+ZL_join,bpe,B_only,tolchedy,t ol chedy,2,tol,1.0,13.0,ins:chedy@end
+ZL_join,bpe,B_only,tolshey,t ol shey,2,tol,1.0,13.0,ins:shey@end
+ZL_join,bpe,B_only,tolkain,t olk ain,2,tchy,2.0,15.0,ins:olk@mid;sub:chy>ain@end
+ZL_join,bpe,B_only,totol,t ot ol,2,otol,1.0,37.0,ins:t@begin
+ZL_join,bpe,B_only,tshed,t she d,2,tsheody,1.0,2.0,sub:ody>d@end
+ZL_join,bpe,B_only,tshedar,t she dar,2,tsheody,1.0,2.0,sub:ody>dar@end
+ZL_join,bpe,B_only,tshod,t sho d,2,tsho,1.0,4.0,ins:d@end
+ZL_join,bpe,B_only,ycheain,y che ain,2,ycheor,1.0,8.0,sub:or>ain@end
+ZL_join,bpe,B_only,yched,y che d,2,ycheor,1.0,8.0,sub:or>d@end
+ZL_join,bpe,B_only,ychedaiin,y che daiin,2,ydaiin,1.0,11.0,ins:che@mid
+ZL_join,bpe,B_only,ychedal,y che dal,2,ycheor,1.0,8.0,sub:or>dal@end
+ZL_join,bpe,B_only,ycheody,y che ody,2,cheody,1.0,25.0,ins:y@begin
+ZL_join,bpe,B_only,yches,y che s,2,ycheor,1.0,8.0,sub:or>s@end
+ZL_join,bpe,B_only,ycheeody,y chee ody,2,cheeody,1.0,3.0,ins:y@begin
+ZL_join,bpe,B_only,ychees,y chee s,2,chees,1.0,10.0,ins:y@begin
+ZL_join,bpe,B_only,ycheod,y cheo d,2,yd,1.0,2.0,ins:cheo@mid
+ZL_join,bpe,B_only,ycheodain,y cheo dain,2,ydain,1.0,4.0,ins:cheo@mid
+ZL_join,bpe,B_only,yfchdy,y f chdy,2,y,2.0,27.0,ins:fchdy@end
+ZL_join,bpe,B_only,yfchey,y f chey,2,ychey,1.0,8.0,ins:f@mid
+ZL_join,bpe,B_only,yl,y l,2,y,1.0,27.0,ins:l@end
+ZL_join,bpe,B_only,ylkaiin,y lk aiin,2,ysaiin,1.0,3.0,sub:s>lk@mid
+ZL_join,bpe,B_only,ysair,y s air,2,sair,1.0,4.0,ins:y@begin
+ZL_join,bpe,B_only,ysheeody,y sh ee ody,2,shody,2.0,25.0,ins:y@begin;ins:ee@mid
+ZL_join,bpe,B_only,ykaiir,yk ai i r,2,okaiir,1.0,5.0,sub:ok>yk@begin
+ZL_join,bpe,B_only,ykeos,yk e os,2,ykeor,1.0,6.0,sub:or>os@end
+ZL_join,bpe,B_only,ykeechy,yk ee chy,2,ykchy,1.0,18.0,ins:ee@mid
+ZL_join,bpe,B_only,yksheol,yk she ol,2,sheol,1.0,35.0,ins:yk@begin
+ZL_join,bpe,B_only,ykshedy,yk shedy,2,ykeey,1.0,19.0,sub:eey>shedy@end
+ZL_join,bpe,B_only,ytshedy,yt shedy,2,ytchy,1.0,13.0,sub:chy>shedy@end
