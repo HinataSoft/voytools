@@ -513,6 +513,30 @@ def profile_table(runs: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+ED_MARKER = {"ZL": r"ed", "GC": r"c[87]"}
+
+
+def new_stem_marker(classes: pd.DataFrame) -> pd.DataFrame:
+    """Share of the new-stem tokens (full text, per class) whose stem / form contains the ``ed`` glyph pair (v101 ``c8`` / ``c7``)."""
+    rows = []
+    for (st, dname), g in classes.groupby(["set", "direction"]):
+        pat = ED_MARKER.get(st.split("_")[0])
+        if pat is None:
+            continue
+        for grp, sel in (("only", g["cls"].isin(F.ONLY_CLASSES)), ("hapax", g["cls"] == "hapax")):
+            x = g[sel]
+            new = x[x["stem_new"] == True]  # noqa: E712
+            tot, tn = float(x["tokens"].sum()), float(new["tokens"].sum())
+            has_stem = new["stem"].astype(str).str.contains(pat, regex=True)
+            has_form = new["form"].astype(str).str.contains(pat, regex=True)
+            rows.append({"set": st, "direction": dname, "group": grp, "tokens": tot, "new_stem_tokens": tn,
+                         "new_stem_share": tn / tot if tot else np.nan,
+                         "stem_has_ed": float(new.loc[has_stem, "tokens"].sum() / tn) if tn else np.nan,
+                         "form_has_ed": float(new.loc[has_form, "tokens"].sum() / tn) if tn else np.nan,
+                         "n_new_stems": int(new["stem"].nunique())})
+    return pd.DataFrame(rows)
+
+
 def cmd_summarize(args) -> None:
     runs = []
     for d in sorted((OUT / "runs").glob("*__*")):
@@ -529,6 +553,9 @@ def cmd_summarize(args) -> None:
         parts = [pd.read_csv(f) for f in sorted((OUT / "extras").glob(f"*/{name}.csv"))]
         if parts:
             pd.concat(parts, ignore_index=True).to_csv(OUT / f"{name}.csv", index=False)
+    f = OUT / "classes.csv"
+    if f.exists():
+        new_stem_marker(pd.read_csv(f)).round(5).to_csv(OUT / "new_stems_ed.csv", index=False)
     sizes = runs.groupby(["set", "source"]).agg(n_runs=("seed", "size"), N=("N", "first"),
                                                  mean_elapsed_s=("elapsed_s", "mean"))
     sizes.to_csv(OUT / "summary.csv")
