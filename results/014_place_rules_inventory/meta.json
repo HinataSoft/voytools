@@ -1,0 +1,38 @@
+{
+  "name": "014_place_rules_inventory",
+  "params": {
+    "variants": {
+      "R1": [
+        "R1"
+      ],
+      "R12": [
+        "R1",
+        "R2"
+      ],
+      "R123": [
+        "R1",
+        "R2",
+        "R3"
+      ]
+    },
+    "tags": [
+      "ZL_split",
+      "ZL_join"
+    ],
+    "n_null": 30,
+    "ts2020_config": 21,
+    "n_rep_stability": 200,
+    "min_hand": 3000,
+    "min_section": 2000,
+    "min_count": 20,
+    "z_ok": 3.0,
+    "runs": {
+      "ts2020+R123:ZL_split": 1,
+      "ts2020+R1:ZL_join": 28,
+      "ts2020+R1:ZL_split": 26
+    },
+    "verdict_rule": "z0 = ts2020, z1 = variant; dozene |z0|>=3 & |z1|<3; pokazi |z0|<3 & |z1|>=3"
+  },
+  "created": "2026-10-28 16:50:27",
+  "updated": "2026-10-28 16:50:27"
+}

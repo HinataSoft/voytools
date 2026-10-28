@@ -1,0 +1,89 @@
+{
+  "name": "014_augment",
+  "params": {
+    "source": "ts2020+R12:ZL_join",
+    "rules": [
+      "R1",
+      "R2"
+    ],
+    "rule_lists": {
+      "prefixes": [
+        "che",
+        "cho",
+        "ol",
+        "qo",
+        "ch",
+        "d",
+        "l",
+        "o",
+        "s",
+        "sh",
+        "t",
+        "y",
+        "p",
+        "f",
+        "k",
+        "cph",
+        "cfh",
+        "cth",
+        "ckh"
+      ],
+      "suffixes": [
+        "aiin",
+        "ain",
+        "al",
+        "am",
+        "ar",
+        "chy",
+        "dy",
+        "ol",
+        "or",
+        "d",
+        "l",
+        "r",
+        "s",
+        "y",
+        "m",
+        "g",
+        "om"
+      ]
+    },
+    "min_context": 20,
+    "ts2020_config": 21,
+    "n_null": 30,
+    "profile_prefixes": [
+      "che",
+      "cho",
+      "ol",
+      "qo",
+      "ch",
+      "d",
+      "l",
+      "o",
+      "s",
+      "sh",
+      "t",
+      "y"
+    ],
+    "profile_suffixes": [
+      "aiin",
+      "ain",
+      "al",
+      "am",
+      "ar",
+      "chy",
+      "dy",
+      "ol",
+      "or",
+      "d",
+      "l",
+      "r",
+      "s",
+      "y"
+    ]
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 16:47:43",
+  "updated": "2026-10-28 16:47:43"
+}
