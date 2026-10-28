@@ -48,6 +48,36 @@ Three research directions (details in the owner's notes; summary here):
   kind of text (names and formulaic entries), not continuous prose. Tests target that frame
   (008 recheck with ts2020, 009 register profile vs real genres, 010 line as item).
 
+## Status after experiments 008–013 (see `results/SYNTHESIS.md`)
+
+* Voynich-specific after all controls (prose, catalogue, human gibberish, Naibbe cipher, ts2020, template):
+  place-bound properties only – affix–position binding, word-seam coupling, line-end convention, closed line –
+  plus A/B as two sharply separated vocabularies. Within-word form variation (wide, even paradigms, hapax-rich,
+  >90 % unexplained by position/register) is shared with human gibberish. No token-order, topic-at-distance or
+  item/catalogue structure. Treat earlier "paradigm" signals as system, not meaning.
+* Next round (014–016) asks whether place rules are a small set of conventions, whether rare stems recur at a
+  distance above chance (the one signal copying and gibberish cannot give), and whether B-only stems are glyph
+  variants of A stems.
+
+## Status after experiments 014–016 (see `results/SYNTHESIS.md`)
+
+* Place rules are a **small shared system**: ~10 glyph rules (8 prefixes / 4 seam pairs carry 80 %), same direction
+  across A/B, scribes and sections, different weights in A vs B; nothing beyond the glyph pair at the seam.
+  ts2020 + learned tables (`voytools/placerules.py`, R1–R3) reproduces position and 2/3 of the seam but breaks
+  prefix–suffix coupling and adds types: copying + local rewrite does not give position, seam and word cohesion
+  at once (open: 017).
+* Rare stems recur with a **gradual decay over 1–15 pages, like Latin prose**; generators and the template give
+  only a same-page peak and a flat remainder; far pairs are section/language/scribe-bound as in topic-structured
+  Latin; no far excess above chance; form of repetition is independent of distance. Drift vs topic is undecided
+  (open: 018, 020).
+* B-only forms are **1/5 of B tokens** and are not glyph variants of A (fewer close counterparts than halves of one
+  language); the only systematic operation is `-ey → -edy` (v101 `8`). Latin with another topic or register shows
+  the same pattern; generators give nothing. Content vs register vs scribal circle undecided (open: 019).
+* Working frame: the manuscript behaves like a fixed place-bound system with gibberish-like form variation, two
+  vocabularies and prose-like vocabulary locality. The three properties no generator or gibberish gave (locality
+  over pages, section-bound far pairs, new vocabulary in B) are each compatible with drift/register; the next
+  round separates drift from topic blocks and names from morphology.
+
 ## Conventions that every analysis follows
 
 * **Primary file `data/ZL3b-n.txt` (Eva), control `data/GC2a-n.txt` (v101).** A result counts
@@ -115,6 +145,11 @@ README.md        package manual (Czech); VERIFICATION.md measured numbers
   background with `nohup` and poll; never rely on a single multi-hour command.
 * `report.md` ends with: numbers (from `results/`), interpretation in two or three sentences,
   what the result does *not* show, and suggested next step. Czech is fine for reports.
+* When done, write `experiments/NNN_*/result.md` (template `experiments/_template/result.md`:
+  a `Stav:` line and a 2–4 sentence `Souhrn:`). **Do not edit `experiments/README.md`** or any
+  other experiment's folder – status lives only in `result.md`, so parallel PRs never conflict.
+  Shared files (`voytools/`, `tests/`) change only by addition. `python scripts/status.py` prints
+  the overview.
 * Do not fetch papers or web pages unless the spec asks; the literature is summarised in the
   owner's `papers/README.md` outside the repo and in the spec files.
 
