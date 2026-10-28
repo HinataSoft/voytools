@@ -71,3 +71,23 @@ hranicemi ZL a pro hranici stránky s vlastními stránkami.
 * První běh ukázal **Δ u ts2020 (0,23–0,25) nad reálem (0,146)** – port kopíruje první řádky odstavců z jiného
   zásobníku (`choose_source`, režim `paragraph_initial`) a přidává gallows, tj. skok z konstrukce přes první řádek.
   Proto přidána varianta Δ bez prvních řádků (`stepnf`) a `ng`.
+* Spec SOURCES obsahovaly `selfcitation_21` i pro GC; první verze `run.py` při něm vyhodila výjimku a pracovník přešel
+  na kontroly, takže `template_005` pro GC_split / GC_join běžela zvlášť (`--sources template_005`); `run.py` nyní
+  zdroj pro ne-Eva soubory přeskočí. Výsledky jsou úplné: 4 kombinace × (real, real_boot 200, shuffle_bounds 200,
+  perm_lines 200, template_005 30; ZL + selfcitation_21 30) a 8 kontrol × (real, real_boot, shuffle_bounds, perm_lines).
+* Celkový čas ≈ 2,5 h ve 4–5 procesech (šablona 005 ≈ 45 s na vzorek je nejdražší).
+
+## Pozorování mimo zadání
+
+* Globální očekávání dává u permutace řádků Δ(1) ≈ +0,05 (ZL) – stránky s mnoha krátkými odstavci mají jiný poměr
+  dvojic `same`/`diff` i jiné sdílení než stránky s jedním dlouhým odstavcem; stránkové očekávání tento konfound
+  odstraní (Δ ≈ 0). V reportu je proto hlavní stránkové očekávání.
+* Próza v layoutu ZL s hranicemi ZL (`pliny_prose`) dává Δ(1) **záporné** (−0,11): poslední řádek odstavce ZL je
+  krátký, takže dvojice „poslední–první“ přes hranici je v tokenech blíž než dvojice v témž odstavci; u souvislé prózy
+  tím sdílení přes hranici roste. Skok reálu (+0,15) je tedy spíš podhodnocený než nafouknutý rozložením délek.
+* Linnaeus po položkách má skok silně záporný (−0,74), nikoli nulový: položky téhož rodu sdílejí rodové jméno a
+  formule (`habitat`, citace), zatímco řádky jedné položky (diagnóza vs synonyma) se neopakují. Jako pozitivní kontrola
+  obsahové jednotky proto slouží kapitoly Celsa a Plinia.
+* Hranice stránky u ts2020: při d = 1 bez poklesu (0,99), při d = 2–3 pokles (0,82, 0,78) – port kopíruje první řádek
+  odstavce ze zásobníku prvních řádků (nezávislého na stránce) a ostatní řádky jen z téže stránky. Reál má tvar opačný
+  (0,74 → 0,82 → 0,89).

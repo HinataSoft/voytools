@@ -28,9 +28,10 @@
       "ctl:celsus_chap/real": 1,
       "ctl:celsus_chap/real_boot": 200,
       "ctl:celsus_chap/shuffle_bounds": 200,
+      "ctl:celsus_sent40/perm_lines": 200,
       "ctl:celsus_sent40/real": 1,
       "ctl:celsus_sent40/real_boot": 200,
-      "ctl:celsus_sent40/shuffle_bounds": 161,
+      "ctl:celsus_sent40/shuffle_bounds": 200,
       "ctl:gibberish_native/perm_lines": 200,
       "ctl:gibberish_native/real": 1,
       "ctl:gibberish_native/real_boot": 200,
@@ -2803,7 +2804,7 @@
       }
     }
   },
-  "n_rows": 7153,
+  "n_rows": 7392,
   "created": "2026-10-28 19:05:34",
-  "updated": "2026-10-28 20:17:08"
+  "updated": "2026-10-28 20:38:00"
 }

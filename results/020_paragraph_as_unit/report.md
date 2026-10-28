@@ -173,7 +173,7 @@ Podíl identických tokenů mezi dvojicemi výskytů společného kmene minus o�
 
 | zdroj | týž odstavec | přes hranici | rozdíl | n dvojic výskytů |
 |---|---|---|---|---|
-| **ZL split, reál** | 0,074 [0,062; 0,087] | 0,047 [0,038; 0,058] | **0,026** | 24 730 / 9 522 |
+| **ZL split, reál** | 0,074 [0,062; 0,087] | 0,047 [0,038; 0,058] | **0,027** | 24 730 / 9 522 |
 | GC split, reál | 0,069 [0,058; 0,079] | 0,045 [0,036; 0,055] | 0,024 | 21 746 / 10 674 |
 | ZL join / GC join | 0,073 / 0,069 | 0,048 / 0,051 | 0,025 / 0,019 | |
 | přelosování hranic (ZL / GC) | 0,073 / 0,067 | 0,053 / 0,050 | 0,020 / 0,016 | |
