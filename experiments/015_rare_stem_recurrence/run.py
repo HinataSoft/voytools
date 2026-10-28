@@ -19,7 +19,8 @@ cropped order).  Sources (``seed`` = repetition):
   of the same null is computed for every sample (columns ``e_*``, ``*_exp``), the sampled version gives
   the interval and checks the expectation;
 * ``perm_global`` / ``perm_section`` - whole pages permuted among page positions globally / inside the
-  section (006), 100 seeds each; metadata stay with the position;
+  section (006), 100 seeds each; metadata (rank, section, language, hand, quire) stay with the position,
+  the page size travels with the content and the exact expectations of the sample use the permuted sizes;
 * ``selfcitation_21`` - ts2020 config 21 (004), seeds 2100 + rep, 30 reps, Eva only;
 * ``template_005`` / ``template_005_notopic`` - the 005 template (configuration ``best`` of the file) with
   its topic and with ``topic_concentration = inf`` (variant ``no_topic``), seeds 100000 + rep, pool_seed
@@ -162,10 +163,15 @@ class Context:
         return self._tpl[notopic]
 
 
-def metrics(ctx: Context, occs: dict) -> dict:
+def metrics(ctx: Context, occs: dict, pages: pd.DataFrame | None = None) -> dict:
+    """Metrics of all (variant, band) occurrence tables; ``pages`` overrides the page table (page permutations)."""
+    if pages is None:
+        pages, es, ep = ctx.pages, ctx.expect_same, ctx.expect_profile
+    else:
+        es, ep = R.same_by_distance(pages), R.expected_profile(pages)
     out = {}
     for (var, band), occ in occs.items():
-        for k, v in R.recurrence_metrics(occ, ctx.pages, ctx.expect_same, ctx.expect_profile).items():
+        for k, v in R.recurrence_metrics(occ, pages, es, ep).items():
             out[f"{var}__{band}__{k}"] = round(v, 6) if isinstance(v, float) and np.isfinite(v) else v
     return out
 
@@ -212,8 +218,12 @@ def make_runner(ctx: Context, source: str, real_occs: dict, ac_params: dict | No
             within = {"perm_global": None, "perm_section": "section"}[source]
             target = page_permutation(ctx, within, seed)
             move = dict(zip(ctx.pages.index.to_numpy(), target))
-            occs = {k: R.relocate(o, ctx.pages, o["folio"].map(move).to_numpy()) for k, o in real_occs.items()}
-            return {**base, **metrics(ctx, occs)}
+            # page sizes travel with the content: the expectations of this sample use the permuted sizes
+            pages = ctx.pages.copy()
+            pages.loc[target, "size"] = ctx.pages["size"].to_numpy()
+            pages["weight"] = pages["size"] / pages["size"].sum()
+            occs = {k: R.relocate(o, pages, o["folio"].map(move).to_numpy()) for k, o in real_occs.items()}
+            return {**base, **metrics(ctx, occs, pages)}
         if source == "selfcitation_21":
             if ctx.key != "ZL" or ctx.is_control:
                 raise ValueError("selfcitation_like generates basic Eva; no null for a non-Eva file")
