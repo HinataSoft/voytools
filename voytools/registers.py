@@ -111,8 +111,8 @@ def transfer_matrix(
     labels = list(labels)
     if not shared:
         return pd.DataFrame(0.0, index=labels, columns=labels), 0
-    px = pd.crosstab(x["stem"], x["aff"]).reindex(index=shared, columns=labels, fill_value=0).to_numpy(dtype=float)
-    py = pd.crosstab(y["stem"], y["aff"]).reindex(index=shared, columns=labels, fill_value=0).to_numpy(dtype=float)
+    px = pd.crosstab(x["stem"], x["aff"]).reindex(index=shared, columns=labels, fill_value=0).to_numpy(dtype=float, copy=True)
+    py = pd.crosstab(y["stem"], y["aff"]).reindex(index=shared, columns=labels, fill_value=0).to_numpy(dtype=float, copy=True)
     px /= px.sum(axis=1, keepdims=True)
     py /= py.sum(axis=1, keepdims=True)
     return pd.DataFrame(px.T @ py, index=labels, columns=labels), len(shared)
@@ -221,8 +221,8 @@ def mapping_fit(M: pd.DataFrame, count_x: pd.Series, count_y: pd.Series) -> dict
             ent += s / tot * float(-(pr * np.log2(pr)).sum())
     col = max_weight_matching(w)
     matched = float(sum(w[i, j] for i, j in enumerate(col) if j >= 0) / tot)
-    cx = count_x.reindex(labels, fill_value=0).to_numpy(dtype=float)
-    cy = count_y.reindex(labels, fill_value=0).to_numpy(dtype=float)
+    cx = count_x.reindex(labels, fill_value=0).to_numpy(dtype=float, copy=True)
+    cy = count_y.reindex(labels, fill_value=0).to_numpy(dtype=float, copy=True)
     relab = np.zeros_like(cx)
     for i, j in enumerate(col):
         relab[j if j >= 0 else i] += cx[i]
