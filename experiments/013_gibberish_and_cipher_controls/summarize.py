@@ -10,7 +10,9 @@ Feature verdicts (``feature_lists.csv``): for every Voynich-specific property of
 section 1, f = (source - R) / (V - R), where V is the Voynich value and R the mean of the meaningful prose
 controls, both at the source's size (gibberish: ``voynich_crop`` and ``caesar_crop``/``celsus_crop``;
 Naibbe: ``ZL_split`` and Caesar/Celsus/Pliny of 009).  f >= 0.5: "ano" (the source has the property),
-0.2 <= f < 0.5: "částečně", f < 0.2: "ne"; f is also given at the ends of the source's interval.
+0.2 <= f < 0.5: "částečně", f < 0.2: "ne"; f > 1.5: "ano (silněji než Voynich)", f < -0.5: "ne (opačně)";
+|V - R| < 2 SD of the Voynich value: "nelze rozlišit".  Line metrics of sources with mechanically broken
+lines (Naibbe, pooled gibberish) are not judged.  f is also given at the ends of the source's interval.
 """
 
 from __future__ import annotations
@@ -171,8 +173,9 @@ def feature_lists(prof: pd.DataFrame) -> pd.DataFrame:
             if fam == "-":
                 rows.append({**base, "verdict": "nepočítáno"})
                 continue
-            if src == "ctl:gibberish_pooled" and fam == "010":
-                rows.append({**base, "verdict": "viz gibberish_native (řádky v layoutu ZL jsou mechanické)"})
+            if src != "ctl:gibberish_native" and (fam == "010" or m == "jsd_last_mid"):
+                rows.append({**base, "verdict": "nelze (řádky v layoutu ZL jsou mechanické)"
+                             + ("; viz gibberish_native" if "gibberish" in src else "")})
                 continue
             s, v = get(src, fam, m), get(vsrc, fam, m)
             refs = [get(p, fam, m) for p in prose]
@@ -186,7 +189,18 @@ def feature_lists(prof: pd.DataFrame) -> pd.DataFrame:
             flo = (s["lo"] - r0) / den if den else np.nan
             fhi = (s["hi"] - r0) / den if den else np.nan
             lo_f, hi_f = (min(flo, fhi), max(flo, fhi)) if np.isfinite(flo) and np.isfinite(fhi) else (np.nan, np.nan)
-            verdict = "ano" if f >= 0.5 else ("částečně" if f >= 0.2 else "ne")
+            if abs(den) < 2 * float(v["sd"]):
+                verdict = "nelze rozlišit (Voynich ≈ próza)"
+            elif f > 1.5:
+                verdict = "ano (silněji než Voynich)"
+            elif f >= 0.5:
+                verdict = "ano"
+            elif f >= 0.2:
+                verdict = "částečně"
+            elif f < -0.5:
+                verdict = "ne (opačně než Voynich)"
+            else:
+                verdict = "ne"
             rows.append({**base, "value": s["value"], "lo": s["lo"], "hi": s["hi"], "voynich_value": v["value"],
                          "prose_mean": r0, "f": f, "f_lo": lo_f, "f_hi": hi_f, "verdict": verdict})
     return pd.DataFrame(rows)

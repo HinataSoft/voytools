@@ -47,3 +47,12 @@
 * **Per pisatel** (`writers.csv`): slovník, hapax, H1/H2 glyfů (uvnitř tokenu), délka slova, sufixů na kmen a
   H(sufix | kmen) pro kmeny s ≥ 5 tokeny, rozdíl délky posledního slova řádku; totéž pro 38 souvislých úseků ZL
   stejných velikostí (začátky rovnoměrně přes rukopis) – rozptyl mezi pisateli vs mezi úseky Voynichu.
+
+## Průběh a uzavření
+
+* Všech 24 běhů (8 zdrojů × 009/010/011) doběhlo bez chyb (`runs/p009|p010|p011/<zdroj>/`).
+* Pravidlo seznamů dostalo dvě pojistky po prvním průchodu: Voynich ≈ próza (|V − R| < 2 SD Voynichu, např.
+  `loc_log_dist`) → „nelze rozlišit"; řádkové metriky u zdrojů s mechanickými řádky se neposuzují.
+* 011 je v této větvi hotové (není ještě v `main`); rozklad 011 jsem použil přímo (`M11.measure`), jak zadal
+  uživatel.
+* Stav: **hotovo**. Omezení dat (krátký blábol, mechanické řádky Naibbe) jsou popsána v reportu.
