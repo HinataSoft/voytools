@@ -1,0 +1,28 @@
+{
+  "name": "008_ts2020_recheck",
+  "params": {
+    "z_limit": 3.0,
+    "n_null": 30,
+    "nulls_007": [
+      "autocopy",
+      "selfcitation",
+      "template"
+    ],
+    "nulls_006": [
+      "autocopy_86",
+      "perm_global",
+      "perm_section",
+      "perm_hand",
+      "selfcitation_21",
+      "template_005"
+    ]
+  },
+  "n_rows": {
+    "decomp": 384,
+    "mi": 1056,
+    "pages": 3024,
+    "synthesis": 102
+  },
+  "created": "2026-10-27 21:55:43",
+  "updated": "2026-10-27 21:56:25"
+}
