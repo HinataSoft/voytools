@@ -38,8 +38,8 @@
     "seed_offset": 2300
   },
   "n_seeds_requested": 30,
-  "n_seeds_done_before": 0,
+  "n_seeds_done_before": 30,
   "created": "2026-10-28 19:18:14",
-  "updated": "2026-10-28 19:24:03",
+  "updated": "2026-10-28 19:47:13",
   "n_seeds_done": 30
 }
