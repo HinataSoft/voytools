@@ -94,9 +94,9 @@
     "generator": "tmpl",
     "tmpl_seed0": 9000
   },
-  "n_seeds_requested": 1,
-  "n_seeds_done_before": 0,
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 1,
   "created": "2026-10-28 18:48:27",
-  "updated": "2026-10-28 18:49:21",
+  "updated": "2026-10-28 19:35:52",
   "n_seeds_done": 1
 }
