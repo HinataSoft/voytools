@@ -1,0 +1,256 @@
+{
+  "name": "020_paragraph_as_unit",
+  "params": {
+    "runs": {
+      "GC_join/real": 1,
+      "GC_join/real_boot": 80,
+      "GC_split/real": 1,
+      "GC_split/real_boot": 78,
+      "ZL_join/real": 1,
+      "ZL_join/real_boot": 79,
+      "ZL_split/real": 1,
+      "ZL_split/real_boot": 83
+    },
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "per_source_params": {
+      "GC_join/real": {
+        "combo": "GC_join",
+        "source": "real",
+        "variants": {
+          "st": {
+            "unit": "stem",
+            "min_count": 2
+          },
+          "st50": {
+            "unit": "stem",
+            "min_count": 2,
+            "drop_top": 50
+          },
+          "tok": {
+            "unit": "token",
+            "min_count": 2
+          },
+          "ng": {
+            "unit": "stem",
+            "min_count": 2,
+            "gallows": true
+          }
+        },
+        "n_pages": 207,
+        "n_lines": 4128,
+        "n_pars": 775,
+        "n_pages_2pars": 159,
+        "n_open_end": 0
+      },
+      "GC_join/real_boot": {
+        "combo": "GC_join",
+        "source": "real_boot",
+        "variants": {
+          "st": {
+            "unit": "stem",
+            "min_count": 2
+          },
+          "st50": {
+            "unit": "stem",
+            "min_count": 2,
+            "drop_top": 50
+          },
+          "tok": {
+            "unit": "token",
+            "min_count": 2
+          },
+          "ng": {
+            "unit": "stem",
+            "min_count": 2,
+            "gallows": true
+          }
+        },
+        "n_pages": 207,
+        "n_lines": 4128,
+        "n_pars": 775,
+        "n_pages_2pars": 159,
+        "n_open_end": 0
+      },
+      "GC_split/real": {
+        "combo": "GC_split",
+        "source": "real",
+        "variants": {
+          "st": {
+            "unit": "stem",
+            "min_count": 2
+          },
+          "st50": {
+            "unit": "stem",
+            "min_count": 2,
+            "drop_top": 50
+          },
+          "tok": {
+            "unit": "token",
+            "min_count": 2
+          },
+          "ng": {
+            "unit": "stem",
+            "min_count": 2,
+            "gallows": true
+          }
+        },
+        "n_pages": 207,
+        "n_lines": 4128,
+        "n_pars": 775,
+        "n_pages_2pars": 159,
+        "n_open_end": 0
+      },
+      "GC_split/real_boot": {
+        "combo": "GC_split",
+        "source": "real_boot",
+        "variants": {
+          "st": {
+            "unit": "stem",
+            "min_count": 2
+          },
+          "st50": {
+            "unit": "stem",
+            "min_count": 2,
+            "drop_top": 50
+          },
+          "tok": {
+            "unit": "token",
+            "min_count": 2
+          },
+          "ng": {
+            "unit": "stem",
+            "min_count": 2,
+            "gallows": true
+          }
+        },
+        "n_pages": 207,
+        "n_lines": 4128,
+        "n_pars": 775,
+        "n_pages_2pars": 159,
+        "n_open_end": 0
+      },
+      "ZL_join/real": {
+        "combo": "ZL_join",
+        "source": "real",
+        "variants": {
+          "st": {
+            "unit": "stem",
+            "min_count": 2
+          },
+          "st50": {
+            "unit": "stem",
+            "min_count": 2,
+            "drop_top": 50
+          },
+          "tok": {
+            "unit": "token",
+            "min_count": 2
+          },
+          "ng": {
+            "unit": "stem",
+            "min_count": 2,
+            "gallows": true
+          }
+        },
+        "n_pages": 207,
+        "n_lines": 4128,
+        "n_pars": 741,
+        "n_pages_2pars": 159,
+        "n_open_end": 2
+      },
+      "ZL_join/real_boot": {
+        "combo": "ZL_join",
+        "source": "real_boot",
+        "variants": {
+          "st": {
+            "unit": "stem",
+            "min_count": 2
+          },
+          "st50": {
+            "unit": "stem",
+            "min_count": 2,
+            "drop_top": 50
+          },
+          "tok": {
+            "unit": "token",
+            "min_count": 2
+          },
+          "ng": {
+            "unit": "stem",
+            "min_count": 2,
+            "gallows": true
+          }
+        },
+        "n_pages": 207,
+        "n_lines": 4128,
+        "n_pars": 741,
+        "n_pages_2pars": 159,
+        "n_open_end": 2
+      },
+      "ZL_split/real": {
+        "combo": "ZL_split",
+        "source": "real",
+        "variants": {
+          "st": {
+            "unit": "stem",
+            "min_count": 2
+          },
+          "st50": {
+            "unit": "stem",
+            "min_count": 2,
+            "drop_top": 50
+          },
+          "tok": {
+            "unit": "token",
+            "min_count": 2
+          },
+          "ng": {
+            "unit": "stem",
+            "min_count": 2,
+            "gallows": true
+          }
+        },
+        "n_pages": 207,
+        "n_lines": 4128,
+        "n_pars": 741,
+        "n_pages_2pars": 159,
+        "n_open_end": 2
+      },
+      "ZL_split/real_boot": {
+        "combo": "ZL_split",
+        "source": "real_boot",
+        "variants": {
+          "st": {
+            "unit": "stem",
+            "min_count": 2
+          },
+          "st50": {
+            "unit": "stem",
+            "min_count": 2,
+            "drop_top": 50
+          },
+          "tok": {
+            "unit": "token",
+            "min_count": 2
+          },
+          "ng": {
+            "unit": "stem",
+            "min_count": 2,
+            "gallows": true
+          }
+        },
+        "n_pages": 207,
+        "n_lines": 4128,
+        "n_pars": 741,
+        "n_pages_2pars": 159,
+        "n_open_end": 2
+      }
+    }
+  },
+  "n_rows": 324,
+  "created": "2026-10-28 19:05:34",
+  "updated": "2026-10-28 19:05:34"
+}
