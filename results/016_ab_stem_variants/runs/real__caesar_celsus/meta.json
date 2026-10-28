@@ -1,0 +1,33 @@
+{
+  "name": "016_ab_stem_variants",
+  "params": {
+    "set": "caesar_celsus",
+    "source": "real",
+    "scopes": [
+      "all"
+    ],
+    "n_draw": 200,
+    "n_null": 30,
+    "min_count": 2,
+    "max_dist": 2,
+    "ks": [
+      "0",
+      "1",
+      "3",
+      "5",
+      "10",
+      "all"
+    ],
+    "bpe_merges_n": 64,
+    "pliny_A": [
+      "16",
+      "18",
+      "21"
+    ]
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 16:40:53",
+  "updated": "2026-10-28 16:50:35",
+  "n_seeds_done": 200
+}
