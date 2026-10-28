@@ -1,0 +1,34 @@
+{
+  "sources": [
+    "control",
+    "real",
+    "tmpl",
+    "ts2020"
+  ],
+  "sets": [
+    "GC_split",
+    "ZL_join",
+    "ZL_split",
+    "caesar_celsus",
+    "pliny"
+  ],
+  "n_runs": 535,
+  "min_count": 2,
+  "max_dist": 2,
+  "ks": [
+    "0",
+    "1",
+    "3",
+    "5",
+    "10",
+    "all"
+  ],
+  "bpe_merges": 64,
+  "n_inv_draws": 20,
+  "n_perm_sections": 500,
+  "pliny_A": [
+    "16",
+    "18",
+    "21"
+  ]
+}

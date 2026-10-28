@@ -1,0 +1,8 @@
+set,source,n_runs,N_all,N_herbal
+GC_split,real,33,5692,1754.0
+ZL_join,ts2020,30,5094,1571.0
+ZL_split,real,200,5497,1676.0
+ZL_split,tmpl,20,5497,1676.0
+ZL_split,ts2020,30,5497,1676.0
+caesar_celsus,control,22,17134,
+pliny,control,200,7392,

@@ -1,0 +1,11 @@
+set,rep,direction,kind,jsd_mean,perm_mean,perm_sd,p,z,n_pairs
+ZL_split,a,A_only,counterparts_le1,0.642806,0.639234,0.007317,0.698603,0.488109,96
+ZL_split,a,A_only,counterparts_le2,0.643102,0.639379,0.007142,0.718563,0.521213,97
+ZL_split,a,B_only,counterparts_le1,0.673858,0.686554,0.008302,0.051896,-1.529304,177
+ZL_split,a,B_only,counterparts_le2,0.683215,0.691178,0.007918,0.157685,-1.005599,209
+ZL_split,a,shared,same_stem_A_vs_B,0.642764,0.645309,0.005494,0.333333,-0.463352,222
+ZL_split,tok,A_only,counterparts_le1,0.693822,0.687496,0.004552,0.918164,1.389761,283
+ZL_split,tok,A_only,counterparts_le2,0.700342,0.692237,0.004123,0.976048,1.965866,306
+ZL_split,tok,B_only,counterparts_le1,0.689624,0.695019,0.005411,0.177645,-0.997153,584
+ZL_split,tok,B_only,counterparts_le2,0.691377,0.696632,0.004843,0.163673,-1.084969,777
+ZL_split,tok,shared,same_stem_A_vs_B,0.659623,0.656945,0.005358,0.700599,0.50001,515
