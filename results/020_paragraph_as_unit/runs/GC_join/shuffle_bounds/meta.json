@@ -1,0 +1,36 @@
+{
+  "name": "020_GC_join_shuffle_bounds",
+  "params": {
+    "combo": "GC_join",
+    "source": "shuffle_bounds",
+    "variants": {
+      "st": {
+        "unit": "stem",
+        "min_count": 2
+      },
+      "st50": {
+        "unit": "stem",
+        "min_count": 2,
+        "drop_top": 50
+      },
+      "tok": {
+        "unit": "token",
+        "min_count": 2
+      },
+      "ng": {
+        "unit": "stem",
+        "min_count": 2,
+        "gallows": true
+      }
+    },
+    "n_pages": 207,
+    "n_lines": 4128,
+    "n_pars": 775,
+    "n_pages_2pars": 159,
+    "n_open_end": 0
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 19:08:02",
+  "updated": "2026-10-28 19:08:02"
+}
