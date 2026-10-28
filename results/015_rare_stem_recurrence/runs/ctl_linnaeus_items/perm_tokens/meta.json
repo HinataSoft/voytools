@@ -1,0 +1,74 @@
+{
+  "name": "015_ctl:linnaeus_items_perm_tokens",
+  "params": {
+    "combo": "ctl:linnaeus_items",
+    "source": "perm_tokens",
+    "bands": {
+      "r": [
+        2,
+        5
+      ],
+      "c": [
+        6,
+        20
+      ]
+    },
+    "variants": {
+      "a": [
+        [
+          "con",
+          "sub",
+          "tri",
+          "al",
+          "bi",
+          "in",
+          "ob",
+          "se",
+          "a",
+          "c",
+          "e",
+          "s"
+        ],
+        [
+          "ibus",
+          "que",
+          "tis",
+          "tum",
+          "ia",
+          "is",
+          "ta",
+          "um",
+          "a",
+          "e",
+          "i",
+          "m",
+          "o",
+          "s"
+        ]
+      ]
+    },
+    "n_label_stems": {},
+    "n_pages": 207,
+    "control": {
+      "name": "linnaeus_items",
+      "mode": "items",
+      "strategy": "sequential",
+      "sections": [
+        "I MONOGYNIA+I DIGYNIA+II MONOGYNIA+II DIGYNIA+II TRIGYNIA+III MONOGYNIA",
+        "III DIGYNIA+III TRIGYNIA+IV MONOGYNIA",
+        "IV DIGYNIA+IV TETRAGYNIA+V MONOGYNIA",
+        "V DIGYNIA+V TRIGYNIA+V TETRAGYNIA+V PENTAGYNIA+V POLYGYNIA"
+      ],
+      "source_tokens": 56505,
+      "files": [
+        "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species1.txt",
+        "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species2.txt"
+      ]
+    }
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 17:12:52",
+  "updated": "2026-10-28 17:13:07",
+  "n_seeds_done": 200
+}

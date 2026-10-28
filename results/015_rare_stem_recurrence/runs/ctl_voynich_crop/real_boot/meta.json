@@ -1,0 +1,73 @@
+{
+  "name": "015_ctl:voynich_crop_real_boot",
+  "params": {
+    "combo": "ctl:voynich_crop",
+    "source": "real_boot",
+    "bands": {
+      "r": [
+        2,
+        5
+      ],
+      "c": [
+        6,
+        20
+      ]
+    },
+    "variants": {
+      "a": [
+        [
+          "che",
+          "cho",
+          "ol",
+          "qo",
+          "ch",
+          "d",
+          "l",
+          "o",
+          "s",
+          "sh",
+          "t",
+          "y"
+        ],
+        [
+          "aiin",
+          "ain",
+          "al",
+          "am",
+          "ar",
+          "chy",
+          "dy",
+          "ol",
+          "or",
+          "d",
+          "l",
+          "r",
+          "s",
+          "y"
+        ]
+      ]
+    },
+    "n_label_stems": {},
+    "n_pages": 60,
+    "control": {
+      "name": "voynich_crop",
+      "mode": "real",
+      "strategy": "evenly spaced pages",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "H",
+        "P",
+        "S",
+        "T"
+      ],
+      "source_tokens": 34268
+    }
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 17:14:37",
+  "updated": "2026-10-28 17:15:04",
+  "n_seeds_done": 200
+}

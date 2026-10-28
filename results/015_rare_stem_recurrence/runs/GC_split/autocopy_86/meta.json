@@ -1,0 +1,124 @@
+{
+  "name": "015_GC_split_autocopy_86",
+  "params": {
+    "combo": "GC_split",
+    "source": "autocopy_86",
+    "bands": {
+      "r": [
+        2,
+        5
+      ],
+      "c": [
+        6,
+        20
+      ]
+    },
+    "variants": {
+      "a": [
+        [
+          "1c",
+          "1o",
+          "4o",
+          "oe",
+          "ok",
+          "1",
+          "2",
+          "8",
+          "9",
+          "e",
+          "k",
+          "o"
+        ],
+        [
+          "79",
+          "89",
+          "ae",
+          "am",
+          "an",
+          "ay",
+          "oe",
+          "oy",
+          "8",
+          "9",
+          "e",
+          "o",
+          "s",
+          "y"
+        ]
+      ],
+      "b": [
+        [
+          "1c",
+          "1o",
+          "4o",
+          "oe",
+          "ok",
+          "1",
+          "2",
+          "8",
+          "9",
+          "e",
+          "k",
+          "o",
+          "g",
+          "j",
+          "f",
+          "u",
+          "h",
+          "G",
+          "J",
+          "F",
+          "U",
+          "K",
+          "H"
+        ],
+        [
+          "79",
+          "89",
+          "ae",
+          "am",
+          "an",
+          "ay",
+          "oe",
+          "oy",
+          "8",
+          "9",
+          "e",
+          "o",
+          "s",
+          "y",
+          "p",
+          "P",
+          "*",
+          "ap",
+          "op"
+        ]
+      ]
+    },
+    "n_label_stems": {
+      "a": 405,
+      "b": 379
+    },
+    "n_pages": 207,
+    "autocopy": {
+      "edit_model": "trigram",
+      "new_token_source": "seed",
+      "p_new": 0.3,
+      "window": 32,
+      "p_copy_exact": 0.35,
+      "p_two_edits": 0.5,
+      "recency": 0.0,
+      "edit_type_probs": [
+        0.6,
+        0.2,
+        0.2
+      ]
+    },
+    "seed_offset": 8600
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 16:44:49",
+  "updated": "2026-10-28 16:46:39",
+  "n_seeds_done": 30
+}

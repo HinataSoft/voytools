@@ -218,7 +218,7 @@ def mapping_fit(M: pd.DataFrame, count_x: pd.Series, count_y: pd.Series) -> dict
     (``count_x``, ``count_y``, indexed like M) before and after relabelling X by the assignment.
     The assignment itself is returned under ``matching`` (dict a -> b).
     """
-    w = M.to_numpy(dtype=float)
+    w = M.to_numpy(dtype=float, copy=True)
     tot = w.sum()
     labels = list(M.index)
     if tot <= 0:
@@ -232,8 +232,8 @@ def mapping_fit(M: pd.DataFrame, count_x: pd.Series, count_y: pd.Series) -> dict
             ent += s / tot * float(-(pr * np.log2(pr)).sum())
     col = max_weight_matching(w)
     matched = float(sum(w[i, j] for i, j in enumerate(col) if j >= 0) / tot)
-    cx = count_x.reindex(labels, fill_value=0).to_numpy(dtype=float)
-    cy = count_y.reindex(labels, fill_value=0).to_numpy(dtype=float)
+    cx = count_x.reindex(labels, fill_value=0).to_numpy(dtype=float, copy=True)
+    cy = count_y.reindex(labels, fill_value=0).to_numpy(dtype=float, copy=True)
     relab = np.zeros_like(cx)
     for i, j in enumerate(col):
         relab[j if j >= 0 else i] += cx[i]
@@ -266,11 +266,11 @@ def page_scores(
     pages = list(pd.unique(d["page"]))
     tab = tab.reindex(pages)
     lab = lab.reindex(pages)
-    ca = tab[lab == a].sum(axis=0).to_numpy(dtype=float)
-    cb = tab[lab == b].sum(axis=0).to_numpy(dtype=float)
+    ca = tab[lab == a].sum(axis=0).to_numpy(dtype=float, copy=True)
+    cb = tab[lab == b].sum(axis=0).to_numpy(dtype=float, copy=True)
     rows = []
     for p in pages:
-        c = tab.loc[p].to_numpy(dtype=float)
+        c = tab.loc[p].to_numpy(dtype=float, copy=True)
         n = c.sum()
         if n < min_tokens:
             continue

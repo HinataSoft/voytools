@@ -1,0 +1,78 @@
+{
+  "name": "015_ctl:pliny_prose_real",
+  "params": {
+    "combo": "ctl:pliny_prose",
+    "source": "real",
+    "bands": {
+      "r": [
+        2,
+        5
+      ],
+      "c": [
+        6,
+        20
+      ]
+    },
+    "variants": {
+      "a": [
+        [
+          "prae",
+          "ali",
+          "con",
+          "ad",
+          "de",
+          "ex",
+          "in",
+          "re",
+          "a",
+          "e",
+          "m",
+          "s"
+        ],
+        [
+          "sque",
+          "que",
+          "rum",
+          "tur",
+          "es",
+          "is",
+          "um",
+          "us",
+          "a",
+          "e",
+          "i",
+          "m",
+          "s",
+          "t"
+        ]
+      ]
+    },
+    "n_label_stems": {},
+    "n_pages": 207,
+    "control": {
+      "name": "pliny_prose",
+      "mode": "prose",
+      "strategy": "balanced",
+      "sections": [
+        "16",
+        "18",
+        "21",
+        "23",
+        "25",
+        "28",
+        "30"
+      ],
+      "source_tokens": 164848,
+      "files": [
+        "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.4.books_16-20.tess",
+        "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.5.books_21-25.tess",
+        "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.6.books_26-30.tess"
+      ]
+    }
+  },
+  "n_seeds_requested": 1,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 16:56:22",
+  "updated": "2026-10-28 16:56:22",
+  "n_seeds_done": 1
+}
