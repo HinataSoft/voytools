@@ -50,3 +50,4 @@ Pravidla:
 | 005 | structured_template_null | zadáno | null „strukturovaný umělý jazyk“ s paradigmaty a tématem z konstrukce; kolik ingrediencí potřebuje k napodobení 002; robustnost afixů/parseru; A/B vs písař |
 | 006 | topic_at_distance | zadáno | sdílení kmenů mezi stránkami: sekce vs vzdálenost vs písař; popisky (ok-/ot-) a jejich stopa v textu |
 | 007 | position_vs_content | zadáno | rozklad informace o afixech/kmenech mezi pozici, sekci a písaře; reziduální MI(d) po odečtení pozice |
+| 008 | ts2020_recheck | hotovo (ts2020 reprodukuje I(kmen; sekce \| písař) a „nic za d = 2“; pokles sdílení na hraně; A/B uvnitř písaře není poziční; poziční kmen není artefakt parseru) | kanonický null ts2020 a šablona 005 v 006/007; „poziční kmen“ třemi parsery; A/B podmíněně na pozici; doplněk syntézy |
