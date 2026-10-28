@@ -390,7 +390,12 @@ def is_currier_op(op: str) -> bool:
 
 
 def section_check(data: Data, tag: str, reps=("a", "tok")) -> pd.DataFrame:
-    """JSD of the section profiles (illustration) of counterpart pairs vs permuted pairs vs shared stems."""
+    """JSD of the section profiles of counterpart pairs vs permuted pairs vs shared stems (same stem in A and B).
+
+    Two profiles: ``sections`` = distribution over all illustration codes (A and B have different
+    section inventories, so this JSD is dominated by the language) and ``herbal_binary`` = share of
+    the stem's tokens in the herbal section vs the rest (the only section with real mass in both).
+    """
     secs = sorted(data.meta["sec"].astype(str).unique())
     sec_tok = data.df["illustration"].astype(str).to_numpy()
     pa, pb = data.pool("all", "A"), data.pool("all", "B")
@@ -399,28 +404,32 @@ def section_check(data: Data, tag: str, reps=("a", "tok")) -> pd.DataFrame:
     for rep in reps:
         units = data.units[rep]
 
-        def profiles(mask):
+        def profiles(mask, cats, key):
             prof: dict = {}
-            idx = {s: i for i, s in enumerate(secs)}
+            idx = {s: i for i, s in enumerate(cats)}
             for u, sec in zip(units[mask].tolist(), sec_tok[mask]):
                 if u == ():
                     continue
                 v = prof.get(u)
                 if v is None:
-                    v = prof[u] = np.zeros(len(secs))
-                v[idx[sec]] += 1
+                    v = prof[u] = np.zeros(len(cats))
+                v[idx[key(sec)]] += 1
             return prof
-        pA, pB = profiles(ma), profiles(mb)
         ca, cb = data.counts(rep, ma), data.counts(rep, mb)
-        for dname, cq, cc, pq, pc in (("A_only", ca, cb, pA, pB), ("B_only", cb, ca, pB, pA)):
-            r = G.counterpart_rates(cq, cc, MIN_COUNT, MAX_DIST)
-            for dmax in (1, 2):
-                pairs = {x: y for x, (y, d) in r["pairs"].items() if d <= dmax}
-                t = G.profile_test(pairs, pq, pc, N_PERM, seed=1)
-                rows.append({"set": tag, "rep": rep, "direction": dname, "kind": f"counterparts_le{dmax}", **t})
-        shared = {s: s for s in ca if ca[s] >= MIN_COUNT and cb.get(s, 0) >= MIN_COUNT}
-        t = G.profile_test(shared, pA, pB, N_PERM, seed=1)
-        rows.append({"set": tag, "rep": rep, "direction": "shared", "kind": "same_stem_A_vs_B", **t})
+        for profile, cats, key in (("sections", secs, lambda s: s),
+                                   ("herbal_binary", ["H", "other"], lambda s: "H" if s == "H" else "other")):
+            pA, pB = profiles(ma, cats, key), profiles(mb, cats, key)
+            for dname, cq, cc, pq, pc in (("A_only", ca, cb, pA, pB), ("B_only", cb, ca, pB, pA)):
+                r = G.counterpart_rates(cq, cc, MIN_COUNT, MAX_DIST)
+                for dmax in (1, 2):
+                    pairs = {x: y for x, (y, d) in r["pairs"].items() if d <= dmax}
+                    t = G.profile_test(pairs, pq, pc, N_PERM, seed=1)
+                    rows.append({"set": tag, "rep": rep, "profile": profile, "direction": dname,
+                                 "kind": f"counterparts_le{dmax}", **t})
+            shared = {s: s for s in ca if ca[s] >= MIN_COUNT and cb.get(s, 0) >= MIN_COUNT}
+            t = G.profile_test(shared, pA, pB, N_PERM, seed=1)
+            rows.append({"set": tag, "rep": rep, "profile": profile, "direction": "shared",
+                         "kind": "same_stem_A_vs_B", **t})
     return pd.DataFrame(rows)
 
 
