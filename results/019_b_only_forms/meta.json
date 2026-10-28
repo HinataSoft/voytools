@@ -1,0 +1,121 @@
+{
+  "sources": [
+    "control",
+    "real",
+    "tmpl",
+    "ts2020"
+  ],
+  "sets": [
+    "GC_join",
+    "GC_split",
+    "ZL_join",
+    "ZL_split",
+    "caesar_celsus",
+    "pliny"
+  ],
+  "n_runs": 1130,
+  "min_count": 2,
+  "max_dist": 2,
+  "n_shuf": 20,
+  "n_perm": 200,
+  "min_ctx": 5,
+  "classes": [
+    "shared",
+    "d_variant",
+    "other_le1",
+    "no_counterpart",
+    "hapax"
+  ],
+  "profile_metrics": [
+    "n_forms",
+    "n_tokens",
+    "paradigm_forms",
+    "H_suffix_given_stem",
+    "pages_per_token",
+    "gries_dp",
+    "top_page_share",
+    "section_entropy",
+    "label_share",
+    "label_any",
+    "first_share",
+    "last_share",
+    "par_first_share",
+    "cooc_ratio",
+    "bigram_ll",
+    "seam_jsd"
+  ],
+  "pairs": {
+    "extended": [
+      [
+        "ey_edy",
+        "ey",
+        "edy",
+        null
+      ],
+      [
+        "y_dy",
+        "y",
+        "dy",
+        "e"
+      ],
+      [
+        "ol_or",
+        "ol",
+        "or",
+        null
+      ]
+    ],
+    "v101": [
+      [
+        "c9_c89",
+        "c9",
+        "c89",
+        null
+      ],
+      [
+        "c9_c79",
+        "c9",
+        "c79",
+        null
+      ],
+      [
+        "9_89",
+        "9",
+        "89",
+        "c"
+      ],
+      [
+        "oe_oy",
+        "oe",
+        "oy",
+        null
+      ]
+    ],
+    "null": [
+      [
+        "us_um",
+        "us",
+        "um",
+        null
+      ],
+      [
+        "is_es",
+        "is",
+        "es",
+        null
+      ]
+    ]
+  },
+  "contexts": [
+    "prev_unit",
+    "prefix",
+    "line_pos",
+    "prev_token_last",
+    "prev_unit+prefix"
+  ],
+  "pliny_A": [
+    "16",
+    "18",
+    "21"
+  ]
+}
