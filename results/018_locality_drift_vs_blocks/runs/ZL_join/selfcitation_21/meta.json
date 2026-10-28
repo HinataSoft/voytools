@@ -1,0 +1,41 @@
+{
+  "name": "018_ZL_join_selfcitation_21",
+  "params": {
+    "combo": "ZL_join",
+    "source": "selfcitation_21",
+    "measures": [
+      "rare",
+      "cos",
+      "jac"
+    ],
+    "cuts": [
+      "all",
+      "within",
+      "herbalA"
+    ],
+    "k_max": 30,
+    "dmax": 40,
+    "n_splits_null": 5,
+    "n_pages": 207,
+    "cut_pages": {
+      "all": 207,
+      "within": 207,
+      "herbalA": 95
+    },
+    "selfcitation_004": {
+      "p_copy": 0.1,
+      "replace_weights": [
+        20.0,
+        50.0,
+        30.0
+      ],
+      "p_same_position": 14.0
+    },
+    "seed_offset": 2100
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 19:52:31",
+  "updated": "2026-10-28 19:57:11",
+  "n_seeds_done": 30
+}

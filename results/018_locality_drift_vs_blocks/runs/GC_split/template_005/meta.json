@@ -1,0 +1,42 @@
+{
+  "name": "018_GC_split_template_005",
+  "params": {
+    "combo": "GC_split",
+    "source": "template_005",
+    "measures": [
+      "rare",
+      "cos",
+      "jac"
+    ],
+    "cuts": [
+      "all",
+      "within",
+      "herbalA"
+    ],
+    "k_max": 30,
+    "dmax": 40,
+    "n_splits_null": 5,
+    "n_pages": 207,
+    "cut_pages": {
+      "all": 207,
+      "within": 207,
+      "herbalA": 95
+    },
+    "template_005": {
+      "n_stems": 4000,
+      "zipf_s": 1.3,
+      "paradigm": "fixed",
+      "prefix_dependence": "none",
+      "topic_concentration": 5.0,
+      "page_locality": 0.3,
+      "suffix_by": null
+    },
+    "seed_offset": 100000,
+    "pool_seed": "repetition"
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 19:28:33",
+  "updated": "2026-10-28 19:39:28",
+  "n_seeds_done": 30
+}

@@ -1,0 +1,46 @@
+{
+  "name": "018_ctl:linnaeus_items_real",
+  "params": {
+    "combo": "ctl:linnaeus_items",
+    "source": "real",
+    "measures": [
+      "rare",
+      "cos",
+      "jac"
+    ],
+    "cuts": [
+      "all",
+      "within",
+      "herbalA"
+    ],
+    "k_max": 30,
+    "dmax": 40,
+    "n_splits_null": 5,
+    "n_pages": 207,
+    "cut_pages": {
+      "all": 207,
+      "within": 207
+    },
+    "control": {
+      "name": "linnaeus_items",
+      "mode": "items",
+      "strategy": "sequential",
+      "sections": [
+        "I MONOGYNIA+I DIGYNIA+II MONOGYNIA+II DIGYNIA+II TRIGYNIA+III MONOGYNIA",
+        "III DIGYNIA+III TRIGYNIA+IV MONOGYNIA",
+        "IV DIGYNIA+IV TETRAGYNIA+V MONOGYNIA",
+        "V DIGYNIA+V TRIGYNIA+V TETRAGYNIA+V PENTAGYNIA+V POLYGYNIA"
+      ],
+      "source_tokens": 56505,
+      "files": [
+        "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species1.txt",
+        "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species2.txt"
+      ]
+    }
+  },
+  "n_seeds_requested": 50,
+  "n_seeds_done_before": 50,
+  "created": "2026-10-28 19:51:55",
+  "updated": "2026-10-28 19:54:28",
+  "n_seeds_done": 50
+}

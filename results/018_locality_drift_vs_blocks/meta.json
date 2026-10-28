@@ -1,0 +1,1084 @@
+{
+  "name": "018_locality_drift_vs_blocks",
+  "params": {
+    "runs": {
+      "GC_join/perm_global": 200,
+      "GC_join/perm_section": 200,
+      "GC_join/real": 50,
+      "GC_split/perm_global": 200,
+      "GC_split/perm_section": 200,
+      "GC_split/real": 50,
+      "GC_split/template_005": 30,
+      "ZL_join/perm_global": 200,
+      "ZL_join/perm_section": 200,
+      "ZL_join/real": 50,
+      "ZL_join/selfcitation_21": 30,
+      "ZL_join/selfcitation_mem": 30,
+      "ZL_split/perm_global": 200,
+      "ZL_split/perm_section": 200,
+      "ZL_split/real": 50,
+      "ZL_split/selfcitation_21": 30,
+      "ZL_split/selfcitation_mem": 30,
+      "ZL_split/template_005": 30,
+      "ctl_celsus_prose/perm_global": 200,
+      "ctl_celsus_prose/perm_section": 200,
+      "ctl_celsus_prose/real": 50,
+      "ctl_gibberish_pooled/perm_global": 200,
+      "ctl_gibberish_pooled/real": 50,
+      "ctl_linnaeus_items/perm_global": 200,
+      "ctl_linnaeus_items/perm_section": 200,
+      "ctl_linnaeus_items/real": 50,
+      "ctl_pliny_prose/perm_global": 200,
+      "ctl_pliny_prose/perm_section": 200,
+      "ctl_pliny_prose/real": 50,
+      "memory/base21": 30,
+      "memory/grid": 80,
+      "memory/winner": 30
+    },
+    "sources": {
+      "GC_join/perm_global": {
+        "combo": "GC_join",
+        "source": "perm_global",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        }
+      },
+      "GC_join/perm_section": {
+        "combo": "GC_join",
+        "source": "perm_section",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        }
+      },
+      "GC_join/real": {
+        "combo": "GC_join",
+        "source": "real",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        }
+      },
+      "GC_split/perm_global": {
+        "combo": "GC_split",
+        "source": "perm_global",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        }
+      },
+      "GC_split/perm_section": {
+        "combo": "GC_split",
+        "source": "perm_section",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        }
+      },
+      "GC_split/real": {
+        "combo": "GC_split",
+        "source": "real",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        }
+      },
+      "GC_split/template_005": {
+        "combo": "GC_split",
+        "source": "template_005",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        },
+        "template_005": {
+          "n_stems": 4000,
+          "zipf_s": 1.3,
+          "paradigm": "fixed",
+          "prefix_dependence": "none",
+          "topic_concentration": 5.0,
+          "page_locality": 0.3,
+          "suffix_by": null
+        },
+        "seed_offset": 100000,
+        "pool_seed": "repetition"
+      },
+      "ZL_join/perm_global": {
+        "combo": "ZL_join",
+        "source": "perm_global",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        }
+      },
+      "ZL_join/perm_section": {
+        "combo": "ZL_join",
+        "source": "perm_section",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        }
+      },
+      "ZL_join/real": {
+        "combo": "ZL_join",
+        "source": "real",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        }
+      },
+      "ZL_join/selfcitation_21": {
+        "combo": "ZL_join",
+        "source": "selfcitation_21",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        },
+        "selfcitation_004": {
+          "p_copy": 0.1,
+          "replace_weights": [
+            20.0,
+            50.0,
+            30.0
+          ],
+          "p_same_position": 14.0
+        },
+        "seed_offset": 2100
+      },
+      "ZL_join/selfcitation_mem": {
+        "combo": "ZL_join",
+        "source": "selfcitation_mem",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        },
+        "selfcitation_004": {
+          "p_copy": 0.1,
+          "replace_weights": [
+            20.0,
+            50.0,
+            30.0
+          ],
+          "p_same_position": 14.0
+        },
+        "memory": {
+          "p_prev_page": 0.3,
+          "page_memory": 8.0
+        },
+        "seed_offset": 2300
+      },
+      "ZL_split/perm_global": {
+        "combo": "ZL_split",
+        "source": "perm_global",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        }
+      },
+      "ZL_split/perm_section": {
+        "combo": "ZL_split",
+        "source": "perm_section",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        }
+      },
+      "ZL_split/real": {
+        "combo": "ZL_split",
+        "source": "real",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        }
+      },
+      "ZL_split/selfcitation_21": {
+        "combo": "ZL_split",
+        "source": "selfcitation_21",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        },
+        "selfcitation_004": {
+          "p_copy": 0.1,
+          "replace_weights": [
+            20.0,
+            50.0,
+            30.0
+          ],
+          "p_same_position": 14.0
+        },
+        "seed_offset": 2100
+      },
+      "ZL_split/selfcitation_mem": {
+        "combo": "ZL_split",
+        "source": "selfcitation_mem",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        },
+        "selfcitation_004": {
+          "p_copy": 0.1,
+          "replace_weights": [
+            20.0,
+            50.0,
+            30.0
+          ],
+          "p_same_position": 14.0
+        },
+        "memory": {
+          "p_prev_page": 0.3,
+          "page_memory": 8.0
+        },
+        "seed_offset": 2300
+      },
+      "ZL_split/template_005": {
+        "combo": "ZL_split",
+        "source": "template_005",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207,
+          "herbalA": 95
+        },
+        "template_005": {
+          "n_stems": 8000,
+          "zipf_s": 1.4,
+          "paradigm": "fixed",
+          "prefix_dependence": "none",
+          "topic_concentration": 5.0,
+          "page_locality": 0.3,
+          "suffix_by": null
+        },
+        "seed_offset": 100000,
+        "pool_seed": "repetition"
+      },
+      "ctl_celsus_prose/perm_global": {
+        "combo": "ctl:celsus_prose",
+        "source": "perm_global",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207
+        },
+        "control": {
+          "name": "celsus_prose",
+          "mode": "prose",
+          "strategy": "balanced",
+          "sections": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "source_tokens": 62410,
+          "files": [
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.1.tess",
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.2.tess",
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.3.tess",
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.4.tess",
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.5.tess"
+          ]
+        }
+      },
+      "ctl_celsus_prose/perm_section": {
+        "combo": "ctl:celsus_prose",
+        "source": "perm_section",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207
+        },
+        "control": {
+          "name": "celsus_prose",
+          "mode": "prose",
+          "strategy": "balanced",
+          "sections": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "source_tokens": 62410,
+          "files": [
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.1.tess",
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.2.tess",
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.3.tess",
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.4.tess",
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.5.tess"
+          ]
+        }
+      },
+      "ctl_celsus_prose/real": {
+        "combo": "ctl:celsus_prose",
+        "source": "real",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207
+        },
+        "control": {
+          "name": "celsus_prose",
+          "mode": "prose",
+          "strategy": "balanced",
+          "sections": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "source_tokens": 62410,
+          "files": [
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.1.tess",
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.2.tess",
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.3.tess",
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.4.tess",
+            "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.5.tess"
+          ]
+        }
+      },
+      "ctl_gibberish_pooled/perm_global": {
+        "combo": "ctl:gibberish_pooled",
+        "source": "perm_global",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 60,
+        "cut_pages": {
+          "all": 60,
+          "within": 60
+        },
+        "control": {
+          "name": "gibberish_pooled",
+          "mode": "prose",
+          "strategy": "stream",
+          "sections": [
+            "DC_34",
+            "DA_02",
+            "DC_25",
+            "DC_41",
+            "DC_03",
+            "DC_15",
+            "DA_01",
+            "DC_06",
+            "DC_38",
+            "DC_16",
+            "DC_22",
+            "DC_11",
+            "DC_18",
+            "DC_36",
+            "DC_01",
+            "DC_21",
+            "DC_39",
+            "DC_32",
+            "DC_27",
+            "DC_05",
+            "DC_20",
+            "DC_04",
+            "DC_42",
+            "DC_37",
+            "DC_28",
+            "DC_30",
+            "DC_23",
+            "DC_09",
+            "DC_29",
+            "DC_33",
+            "DC_08",
+            "DC_35",
+            "DC_26",
+            "DC_40",
+            "DC_12",
+            "DC_24",
+            "DC_31",
+            "DC_10"
+          ],
+          "source_tokens": 10032
+        }
+      },
+      "ctl_gibberish_pooled/real": {
+        "combo": "ctl:gibberish_pooled",
+        "source": "real",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 60,
+        "cut_pages": {
+          "all": 60,
+          "within": 60
+        },
+        "control": {
+          "name": "gibberish_pooled",
+          "mode": "prose",
+          "strategy": "stream",
+          "sections": [
+            "DC_34",
+            "DA_02",
+            "DC_25",
+            "DC_41",
+            "DC_03",
+            "DC_15",
+            "DA_01",
+            "DC_06",
+            "DC_38",
+            "DC_16",
+            "DC_22",
+            "DC_11",
+            "DC_18",
+            "DC_36",
+            "DC_01",
+            "DC_21",
+            "DC_39",
+            "DC_32",
+            "DC_27",
+            "DC_05",
+            "DC_20",
+            "DC_04",
+            "DC_42",
+            "DC_37",
+            "DC_28",
+            "DC_30",
+            "DC_23",
+            "DC_09",
+            "DC_29",
+            "DC_33",
+            "DC_08",
+            "DC_35",
+            "DC_26",
+            "DC_40",
+            "DC_12",
+            "DC_24",
+            "DC_31",
+            "DC_10"
+          ],
+          "source_tokens": 10032
+        }
+      },
+      "ctl_linnaeus_items/perm_global": {
+        "combo": "ctl:linnaeus_items",
+        "source": "perm_global",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207
+        },
+        "control": {
+          "name": "linnaeus_items",
+          "mode": "items",
+          "strategy": "sequential",
+          "sections": [
+            "I MONOGYNIA+I DIGYNIA+II MONOGYNIA+II DIGYNIA+II TRIGYNIA+III MONOGYNIA",
+            "III DIGYNIA+III TRIGYNIA+IV MONOGYNIA",
+            "IV DIGYNIA+IV TETRAGYNIA+V MONOGYNIA",
+            "V DIGYNIA+V TRIGYNIA+V TETRAGYNIA+V PENTAGYNIA+V POLYGYNIA"
+          ],
+          "source_tokens": 56505,
+          "files": [
+            "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species1.txt",
+            "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species2.txt"
+          ]
+        }
+      },
+      "ctl_linnaeus_items/perm_section": {
+        "combo": "ctl:linnaeus_items",
+        "source": "perm_section",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207
+        },
+        "control": {
+          "name": "linnaeus_items",
+          "mode": "items",
+          "strategy": "sequential",
+          "sections": [
+            "I MONOGYNIA+I DIGYNIA+II MONOGYNIA+II DIGYNIA+II TRIGYNIA+III MONOGYNIA",
+            "III DIGYNIA+III TRIGYNIA+IV MONOGYNIA",
+            "IV DIGYNIA+IV TETRAGYNIA+V MONOGYNIA",
+            "V DIGYNIA+V TRIGYNIA+V TETRAGYNIA+V PENTAGYNIA+V POLYGYNIA"
+          ],
+          "source_tokens": 56505,
+          "files": [
+            "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species1.txt",
+            "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species2.txt"
+          ]
+        }
+      },
+      "ctl_linnaeus_items/real": {
+        "combo": "ctl:linnaeus_items",
+        "source": "real",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207
+        },
+        "control": {
+          "name": "linnaeus_items",
+          "mode": "items",
+          "strategy": "sequential",
+          "sections": [
+            "I MONOGYNIA+I DIGYNIA+II MONOGYNIA+II DIGYNIA+II TRIGYNIA+III MONOGYNIA",
+            "III DIGYNIA+III TRIGYNIA+IV MONOGYNIA",
+            "IV DIGYNIA+IV TETRAGYNIA+V MONOGYNIA",
+            "V DIGYNIA+V TRIGYNIA+V TETRAGYNIA+V PENTAGYNIA+V POLYGYNIA"
+          ],
+          "source_tokens": 56505,
+          "files": [
+            "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species1.txt",
+            "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species2.txt"
+          ]
+        }
+      },
+      "ctl_pliny_prose/perm_global": {
+        "combo": "ctl:pliny_prose",
+        "source": "perm_global",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207
+        },
+        "control": {
+          "name": "pliny_prose",
+          "mode": "prose",
+          "strategy": "balanced",
+          "sections": [
+            "16",
+            "18",
+            "21",
+            "23",
+            "25",
+            "28",
+            "30"
+          ],
+          "source_tokens": 164848,
+          "files": [
+            "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.4.books_16-20.tess",
+            "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.5.books_21-25.tess",
+            "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.6.books_26-30.tess"
+          ]
+        }
+      },
+      "ctl_pliny_prose/perm_section": {
+        "combo": "ctl:pliny_prose",
+        "source": "perm_section",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207
+        },
+        "control": {
+          "name": "pliny_prose",
+          "mode": "prose",
+          "strategy": "balanced",
+          "sections": [
+            "16",
+            "18",
+            "21",
+            "23",
+            "25",
+            "28",
+            "30"
+          ],
+          "source_tokens": 164848,
+          "files": [
+            "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.4.books_16-20.tess",
+            "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.5.books_21-25.tess",
+            "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.6.books_26-30.tess"
+          ]
+        }
+      },
+      "ctl_pliny_prose/real": {
+        "combo": "ctl:pliny_prose",
+        "source": "real",
+        "measures": [
+          "rare",
+          "cos",
+          "jac"
+        ],
+        "cuts": [
+          "all",
+          "within",
+          "herbalA"
+        ],
+        "k_max": 30,
+        "dmax": 40,
+        "n_splits_null": 5,
+        "n_pages": 207,
+        "cut_pages": {
+          "all": 207,
+          "within": 207
+        },
+        "control": {
+          "name": "pliny_prose",
+          "mode": "prose",
+          "strategy": "balanced",
+          "sections": [
+            "16",
+            "18",
+            "21",
+            "23",
+            "25",
+            "28",
+            "30"
+          ],
+          "source_tokens": 164848,
+          "files": [
+            "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.4.books_16-20.tess",
+            "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.5.books_21-25.tess",
+            "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.6.books_26-30.tess"
+          ]
+        }
+      },
+      "memory/base21": {
+        "config21": {
+          "p_copy": 0.1,
+          "replace_weights": [
+            20.0,
+            50.0,
+            30.0
+          ],
+          "p_same_position": 14.0
+        },
+        "seed_offset": 2100
+      },
+      "memory/grid": {
+        "grid": {
+          "p_prev_page": [
+            0.1,
+            0.2,
+            0.3,
+            0.5
+          ],
+          "page_memory": [
+            2,
+            4,
+            8,
+            16
+          ]
+        },
+        "config21": {
+          "p_copy": 0.1,
+          "replace_weights": [
+            20.0,
+            50.0,
+            30.0
+          ],
+          "p_same_position": 14.0
+        },
+        "seeds_per_config": 5,
+        "seed_offset": 2400,
+        "loss": "sum of squared deviations of the bin ratios 1/2-3/4-7/8-15 from the real ZL split"
+      },
+      "memory/winner": {
+        "memory": {
+          "p_prev_page": 0.3,
+          "page_memory": 8.0
+        },
+        "config21": {
+          "p_copy": 0.1,
+          "replace_weights": [
+            20.0,
+            50.0,
+            30.0
+          ],
+          "p_same_position": 14.0
+        },
+        "seed_offset": 2300
+      }
+    }
+  },
+  "n_rows": 3580,
+  "created": "2026-10-28 19:00:37",
+  "updated": "2026-10-28 20:15:38"
+}
