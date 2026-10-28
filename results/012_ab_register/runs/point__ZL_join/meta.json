@@ -1,0 +1,13 @@
+{
+  "name": "012_ab_register",
+  "params": {
+    "set": "ZL_join",
+    "source": "real",
+    "kind": "point"
+  },
+  "n_seeds_requested": 1,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 07:53:43",
+  "updated": "2026-10-28 07:53:47",
+  "n_seeds_done": 1
+}

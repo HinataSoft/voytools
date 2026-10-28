@@ -79,7 +79,8 @@ def extras(name: str) -> pd.DataFrame:
         p = d / name
         if p.exists():
             f = pd.read_csv(p, keep_default_na=False, na_values=[""])
-            f.insert(0, "set", d.name)
+            if "set" not in f.columns:
+                f.insert(0, "set", d.name)
             frames.append(f)
     return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
 

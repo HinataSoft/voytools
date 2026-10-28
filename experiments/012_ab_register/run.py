@@ -18,7 +18,7 @@ Scopes: ``all`` (paragraph text), ``hand3`` (scribe 3, the only scribe writing b
 
 Usage (from the repository root)::
 
-    python experiments/012_ab_register/run.py measure --set ZL_split                 # -1 point + 200 draws
+    python experiments/012_ab_register/run.py measure --set ZL_split                 # point + 200 draws
     python experiments/012_ab_register/run.py measure --set ZL_split --source ts2020  # 30 seeds
     python experiments/012_ab_register/run.py extras --set ZL_split                  # mapping, gradient, ...
     python experiments/012_ab_register/run.py summarize
@@ -236,7 +236,9 @@ def cmd_measure(args) -> None:
             if seed < 0:
                 return {"set": tag, "source": source, "kind": "point", **point_measures(data)}
             return {"set": tag, "source": source, "kind": "draw", **draw_measures(data, seed)}
-        default = [-1] + list(range(N_DRAW))
+        default = list(range(N_DRAW))
+        point_dir = OUT / "runs" / f"point__{tag}"  # the point row has other columns than the draws
+        run_seeds("012_ab_register", [-1], one, point_dir, params={"set": tag, "source": source, "kind": "point"})
     else:
         def one(seed: int) -> dict:
             data = Data(cached_corpus(ctx, source, tag, seed), ctx, rank)
