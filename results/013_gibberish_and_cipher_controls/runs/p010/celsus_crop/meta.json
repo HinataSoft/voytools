@@ -1,0 +1,64 @@
+{
+  "name": "013_p010",
+  "params": {
+    "source": "celsus_crop",
+    "kind": "p010",
+    "prefixes": [
+      "ali",
+      "de",
+      "in",
+      "qu",
+      "re",
+      "a",
+      "e",
+      "i",
+      "m",
+      "p",
+      "s",
+      "v"
+    ],
+    "suffixes": [
+      "que",
+      "rum",
+      "tur",
+      "em",
+      "es",
+      "nt",
+      "um",
+      "us",
+      "a",
+      "e",
+      "i",
+      "m",
+      "s",
+      "t"
+    ],
+    "glyph_units": null,
+    "control": {
+      "name": "celsus_crop",
+      "mode": "prose",
+      "strategy": "balanced",
+      "sections": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "source_tokens": 62410,
+      "files": [
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.1.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.2.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.3.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.4.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.5.tess"
+      ]
+    },
+    "writer_seed": 13
+  },
+  "n_seeds_requested": 101,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 08:33:43",
+  "updated": "2026-10-28 08:34:50",
+  "n_seeds_done": 101
+}

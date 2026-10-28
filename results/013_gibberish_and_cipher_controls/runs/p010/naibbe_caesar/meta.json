@@ -1,0 +1,62 @@
+{
+  "name": "013_p010",
+  "params": {
+    "source": "naibbe_caesar",
+    "kind": "p010",
+    "prefixes": [
+      "ok",
+      "ol",
+      "qo",
+      "so",
+      "ch",
+      "d",
+      "k",
+      "l",
+      "o",
+      "s",
+      "t",
+      "y"
+    ],
+    "suffixes": [
+      "aiin",
+      "ain",
+      "al",
+      "am",
+      "ar",
+      "dy",
+      "ey",
+      "ol",
+      "d",
+      "l",
+      "o",
+      "r",
+      "s",
+      "y"
+    ],
+    "glyph_units": "extended",
+    "control": {
+      "name": "naibbe_caesar",
+      "mode": "prose",
+      "strategy": "stream",
+      "sections": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7"
+      ],
+      "source_tokens": 80877,
+      "files": [
+        "voynich-units/data/controls/naibbe/naibbe_caesar_ciphertext_lines.txt"
+      ]
+    },
+    "writer_seed": 13
+  },
+  "n_seeds_requested": 101,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 08:23:04",
+  "updated": "2026-10-28 08:26:04",
+  "n_seeds_done": 101
+}

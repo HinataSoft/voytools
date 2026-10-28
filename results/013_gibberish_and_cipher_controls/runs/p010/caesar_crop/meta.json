@@ -1,0 +1,63 @@
+{
+  "name": "013_p010",
+  "params": {
+    "source": "caesar_crop",
+    "kind": "p010",
+    "prefixes": [
+      "reli",
+      "com",
+      "con",
+      "per",
+      "pro",
+      "ab",
+      "ad",
+      "di",
+      "in",
+      "re",
+      "a",
+      "e"
+    ],
+    "suffixes": [
+      "sque",
+      "bus",
+      "que",
+      "rum",
+      "is",
+      "nt",
+      "um",
+      "us",
+      "a",
+      "e",
+      "i",
+      "m",
+      "s",
+      "t"
+    ],
+    "glyph_units": null,
+    "control": {
+      "name": "caesar_crop",
+      "mode": "prose",
+      "strategy": "balanced",
+      "sections": [
+        "PRIMUS",
+        "SECUNDUS",
+        "TERTIUS",
+        "V",
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "source_tokens": 51370,
+      "files": [
+        "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/caesar_la.txt",
+        "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/caesar_la2.txt"
+      ]
+    },
+    "writer_seed": 13
+  },
+  "n_seeds_requested": 101,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 08:33:08",
+  "updated": "2026-10-28 08:34:10",
+  "n_seeds_done": 101
+}

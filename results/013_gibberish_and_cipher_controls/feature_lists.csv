@@ -1,0 +1,101 @@
+feature,family,metric,source,voynich_ref,note,value,lo,hi,voynich_value,prose_mean,f,f_lo,f_hi,verdict
+pozicni_vazby_afixu,009,prefix__I_pos,ctl:gibberish_pooled,ctl:voynich_crop,,-0.0011239,-0.0056103,0.0034862,0.13021,0.00046545,-0.01225,-0.046827,0.023281,ne
+pozicni_vazby_afixu,009,prefix__I_pos,ctl:gibberish_native,ctl:voynich_crop,,0.0055922,5.3226e-05,0.011067,0.13021,0.00046545,0.039513,-0.003177,0.081711,ne
+pozicni_vazby_afixu,009,prefix__I_pos,ctl:naibbe_caesar,ZL_split,,0.00013343,-0.0015846,0.0017871,0.13372,0.00031985,-0.0013974,-0.014276,0.010999,ne
+pozicni_vazby_afixu,009,prefix__I_pos,ctl:naibbe_pliny,ZL_split,,-0.00015571,-0.001511,0.0011207,0.13372,0.00031985,-0.0035649,-0.013724,0.0060037,ne
+pozicni_vazby_afixu,009,prefix__I_pos,ctl:naibbe_plaintext,ZL_split,,0.000234,-0.0012928,0.0020784,0.13372,0.00031985,-0.0006435,-0.012089,0.013183,ne
+pozicni_vazby_afixu,009,suffix__I_pos,ctl:gibberish_pooled,ctl:voynich_crop,,-6.6561e-05,-0.0067926,0.0056171,0.052318,-0.0012874,0.022774,-0.1027,0.1288,ne
+pozicni_vazby_afixu,009,suffix__I_pos,ctl:gibberish_native,ctl:voynich_crop,,0.0024707,-0.0017767,0.0076087,0.052318,-0.0012874,0.070107,-0.0091288,0.16595,ne
+pozicni_vazby_afixu,009,suffix__I_pos,ctl:naibbe_caesar,ZL_split,,-0.00051391,-0.0018896,0.00090904,0.047844,0.00026365,-0.016342,-0.045256,0.013564,ne
+pozicni_vazby_afixu,009,suffix__I_pos,ctl:naibbe_pliny,ZL_split,,-0.0001261,-0.0018852,0.0015943,0.047844,0.00026365,-0.0081913,-0.045163,0.027966,ne
+pozicni_vazby_afixu,009,suffix__I_pos,ctl:naibbe_plaintext,ZL_split,,0.00076739,-0.00063344,0.0022945,0.047844,0.00026365,0.010587,-0.018854,0.042683,ne
+sekcni_vazby_afixu,009,prefix__I_sec_g_pos,ctl:gibberish_pooled,ctl:voynich_crop,blábol: sekce = pisatel,0.15282,0.12213,0.18296,0.11709,0.0088273,1.33,1.0465,1.6084,ano
+sekcni_vazby_afixu,009,prefix__I_sec_g_pos,ctl:gibberish_native,ctl:voynich_crop,blábol: sekce = pisatel,0.2449,0.20303,0.28557,0.11709,0.0088273,2.1806,1.7939,2.5563,ano (silněji než Voynich)
+sekcni_vazby_afixu,009,prefix__I_sec_g_pos,ctl:naibbe_caesar,ZL_split,blábol: sekce = pisatel,0.00013217,-0.003655,0.0032676,0.10382,0.0038583,-0.037275,-0.075162,-0.0059087,ne
+sekcni_vazby_afixu,009,prefix__I_sec_g_pos,ctl:naibbe_pliny,ZL_split,blábol: sekce = pisatel,-0.001611,-0.0055823,0.001829,0.10382,0.0038583,-0.054714,-0.094442,-0.020301,ne
+sekcni_vazby_afixu,009,prefix__I_sec_g_pos,ctl:naibbe_plaintext,ZL_split,blábol: sekce = pisatel,0.0017516,-0.0018219,0.0056418,0.10382,0.0038583,-0.021074,-0.056824,0.017842,ne
+sekcni_vazby_afixu,009,suffix__I_sec_g_pos,ctl:gibberish_pooled,ctl:voynich_crop,blábol: sekce = pisatel,0.22056,0.1835,0.26534,0.078365,0.020375,3.4521,2.8131,4.2244,ano (silněji než Voynich)
+sekcni_vazby_afixu,009,suffix__I_sec_g_pos,ctl:gibberish_native,ctl:voynich_crop,blábol: sekce = pisatel,0.38458,0.31942,0.45007,0.078365,0.020375,6.2806,5.1569,7.4099,ano (silněji než Voynich)
+sekcni_vazby_afixu,009,suffix__I_sec_g_pos,ctl:naibbe_caesar,ZL_split,blábol: sekce = pisatel,0.00068487,-0.0039446,0.0053197,0.080388,0.01143,-0.15582,-0.22295,-0.088605,ne
+sekcni_vazby_afixu,009,suffix__I_sec_g_pos,ctl:naibbe_pliny,ZL_split,blábol: sekce = pisatel,-0.0018574,-0.0057697,0.0019859,0.080388,0.01143,-0.19268,-0.24942,-0.13695,ne
+sekcni_vazby_afixu,009,suffix__I_sec_g_pos,ctl:naibbe_plaintext,ZL_split,blábol: sekce = pisatel,0.0011289,-0.0014853,0.0036743,0.080388,0.01143,-0.14938,-0.18729,-0.11246,ne
+registr_AB_uvnitr_pisare,011,a__suffix__hand__explained,ctl:gibberish_pooled,ctl:voynich_crop,A/B nelze přímo; analog: podíl H(sufix|kmen) vysvětlený písařem/pisatelem,0.2948,0.26661,0.33301,0.06117,0.015732,6.1417,5.5213,6.9826,ano (silněji než Voynich)
+registr_AB_uvnitr_pisare,011,a__suffix__hand__explained,ctl:gibberish_native,ctl:voynich_crop,A/B nelze přímo; analog: podíl H(sufix|kmen) vysvětlený písařem/pisatelem,0.35339,0.3107,0.39713,0.06117,0.015732,7.4311,6.4917,8.3937,ano (silněji než Voynich)
+registr_AB_uvnitr_pisare,011,a__suffix__hand__explained,ctl:naibbe_caesar,ZL_split,A/B nelze přímo; analog: podíl H(sufix|kmen) vysvětlený písařem/pisatelem,0.0006297,-0.0020294,0.0023865,0.067523,0.01996,-0.40642,-0.46233,-0.36948,ne
+registr_AB_uvnitr_pisare,011,a__suffix__hand__explained,ctl:naibbe_pliny,ZL_split,A/B nelze přímo; analog: podíl H(sufix|kmen) vysvětlený písařem/pisatelem,-6.1751e-05,-0.0019238,0.0020591,0.067523,0.01996,-0.42096,-0.4601,-0.37636,ne
+registr_AB_uvnitr_pisare,011,a__suffix__hand__explained,ctl:naibbe_plaintext,ZL_split,A/B nelze přímo; analog: podíl H(sufix|kmen) vysvětlený písařem/pisatelem,0.0020059,-0.00093221,0.0053086,0.067523,0.01996,-0.37748,-0.43926,-0.30804,ne
+sirka_paradigmatu,009,mean_suffixes_per_stem,ctl:gibberish_pooled,ctl:voynich_crop,,3.9602,3.3844,4.3565,4.9118,2.0933,0.66238,0.45808,0.80299,ano
+sirka_paradigmatu,009,mean_suffixes_per_stem,ctl:gibberish_native,ctl:voynich_crop,,3.9602,3.509,4.4095,4.9118,2.0933,0.66238,0.50228,0.8218,ano
+sirka_paradigmatu,009,mean_suffixes_per_stem,ctl:naibbe_caesar,ZL_split,,4.2857,4.1106,4.4626,5.25,2.166,0.68733,0.63054,0.74467,ano
+sirka_paradigmatu,009,mean_suffixes_per_stem,ctl:naibbe_pliny,ZL_split,,4.4966,4.3349,4.6998,5.25,2.166,0.75571,0.70326,0.8216,ano
+sirka_paradigmatu,009,mean_suffixes_per_stem,ctl:naibbe_plaintext,ZL_split,,3.871,3.4928,4.3592,5.25,2.166,0.55285,0.43024,0.71116,ano
+sirka_paradigmatu,009,H_suffix_given_stem,ctl:gibberish_pooled,ctl:voynich_crop,,1.8917,1.6409,2.0925,1.7742,0.844,1.1263,0.85669,1.3422,ano
+sirka_paradigmatu,009,H_suffix_given_stem,ctl:gibberish_native,ctl:voynich_crop,,1.8929,1.7099,2.0774,1.7742,0.844,1.1276,0.93092,1.326,ano
+sirka_paradigmatu,009,H_suffix_given_stem,ctl:naibbe_caesar,ZL_split,,1.9686,1.9498,1.989,1.817,0.79951,1.149,1.1305,1.169,ano
+sirka_paradigmatu,009,H_suffix_given_stem,ctl:naibbe_pliny,ZL_split,,1.987,1.9702,2.0062,1.817,0.79951,1.1671,1.1506,1.186,ano
+sirka_paradigmatu,009,H_suffix_given_stem,ctl:naibbe_plaintext,ZL_split,,0.45237,0.43975,0.46649,1.817,0.79951,-0.34118,-0.35358,-0.3273,ne
+sirka_paradigmatu,009,frac_stems_multi_suffix,ctl:gibberish_pooled,ctl:voynich_crop,,0.76119,0.66657,0.84334,0.91176,0.61229,0.49722,0.18126,0.77153,částečně
+sirka_paradigmatu,009,frac_stems_multi_suffix,ctl:gibberish_native,ctl:voynich_crop,,0.76119,0.68982,0.82983,0.91176,0.61229,0.49722,0.25891,0.72639,částečně
+sirka_paradigmatu,009,frac_stems_multi_suffix,ctl:naibbe_caesar,ZL_split,,0.70968,0.68297,0.74066,0.91234,0.62837,0.28634,0.1923,0.39545,částečně
+sirka_paradigmatu,009,frac_stems_multi_suffix,ctl:naibbe_pliny,ZL_split,,0.73923,0.70198,0.77357,0.91234,0.62837,0.3904,0.25922,0.51132,částečně
+sirka_paradigmatu,009,frac_stems_multi_suffix,ctl:naibbe_plaintext,ZL_split,,0.32258,0.29391,0.36303,0.91234,0.62837,-1.0768,-1.1778,-0.93437,ne (opačně než Voynich)
+hapax,009,hapax_share,ctl:gibberish_pooled,ctl:voynich_crop,,0.85114,0.8346,0.87041,0.67799,0.65317,7.9766,7.3102,8.753,ano (silněji než Voynich)
+hapax,009,hapax_share,ctl:gibberish_native,ctl:voynich_crop,,0.85104,0.82834,0.8688,0.67799,0.65317,7.9725,7.0577,8.6881,ano (silněji než Voynich)
+hapax,009,hapax_share,ctl:naibbe_caesar,ZL_split,,0.39767,0.37618,0.42181,0.67599,0.60977,-3.2029,-3.5276,-2.8384,ne (opačně než Voynich)
+hapax,009,hapax_share,ctl:naibbe_pliny,ZL_split,,0.41062,0.38565,0.43737,0.67599,0.60977,-3.0073,-3.3844,-2.6034,ne (opačně než Voynich)
+hapax,009,hapax_share,ctl:naibbe_plaintext,ZL_split,,0.091146,0.055655,0.11997,0.67599,0.60977,-7.8319,-8.3679,-7.3966,ne (opačně než Voynich)
+nizke_poradi_tokenu,009,token_mi_excess_share,ctl:gibberish_pooled,ctl:voynich_crop,Voynich pod textem,0.0183,0.006955,0.029196,-0.0037025,0.023281,0.1846,-0.21917,0.60504,ne
+nizke_poradi_tokenu,009,token_mi_excess_share,ctl:gibberish_native,ctl:voynich_crop,Voynich pod textem,0.020903,0.0094715,0.031777,-0.0037025,0.023281,0.088155,-0.31485,0.51178,ne
+nizke_poradi_tokenu,009,token_mi_excess_share,ctl:naibbe_caesar,ZL_split,Voynich pod textem,0.0115,0.0083519,0.014178,0.0090055,0.035438,0.90562,0.80431,1.0247,ano
+nizke_poradi_tokenu,009,token_mi_excess_share,ctl:naibbe_pliny,ZL_split,Voynich pod textem,0.011599,0.0090222,0.013872,0.0090055,0.035438,0.90189,0.81589,0.99937,ano
+nizke_poradi_tokenu,009,token_mi_excess_share,ctl:naibbe_plaintext,ZL_split,Voynich pod textem,0.089073,0.085196,0.09281,0.0090055,0.035438,-2.0292,-2.1706,-1.8825,ne (opačně než Voynich)
+nizke_poradi_tokenu,009,mi_stem_d1,ctl:gibberish_pooled,ctl:voynich_crop,Voynich pod textem,0.0088794,-0.0043104,0.017236,0.038564,0.065564,2.0994,1.7899,2.5879,ano (silněji než Voynich)
+nizke_poradi_tokenu,009,mi_stem_d1,ctl:gibberish_native,ctl:voynich_crop,Voynich pod textem,0.0043401,-0.0058323,0.014749,0.038564,0.065564,2.2675,1.882,2.6443,ano (silněji než Voynich)
+nizke_poradi_tokenu,009,mi_stem_d1,ctl:naibbe_caesar,ZL_split,Voynich pod textem,0.024418,0.01619,0.033221,0.050876,0.16765,1.2266,1.1512,1.297,ano
+nizke_poradi_tokenu,009,mi_stem_d1,ctl:naibbe_pliny,ZL_split,Voynich pod textem,0.028689,0.021156,0.035937,0.050876,0.16765,1.19,1.1279,1.2545,ano
+nizke_poradi_tokenu,009,mi_stem_d1,ctl:naibbe_plaintext,ZL_split,Voynich pod textem,0.12378,0.11582,0.13023,0.050876,0.16765,0.37567,0.32047,0.44388,částečně
+okrajova_MI,009,edge_mi_excess,ctl:gibberish_pooled,ctl:voynich_crop,"Voynich uvnitř rozpětí textů, nad generátory",0.0096904,-0.0019068,0.022169,0.19894,0.052086,-0.28869,-0.36766,-0.20371,ne
+okrajova_MI,009,edge_mi_excess,ctl:gibberish_native,ctl:voynich_crop,"Voynich uvnitř rozpětí textů, nad generátory",0.013443,0.0021154,0.025311,0.19894,0.052086,-0.26313,-0.34027,-0.18232,ne
+okrajova_MI,009,edge_mi_excess,ctl:naibbe_caesar,ZL_split,"Voynich uvnitř rozpětí textů, nad generátory",0.0052045,0.0031323,0.0074222,0.18601,0.040632,-0.24368,-0.25794,-0.22843,ne
+okrajova_MI,009,edge_mi_excess,ctl:naibbe_pliny,ZL_split,"Voynich uvnitř rozpětí textů, nad generátory",0.0045616,0.0028884,0.0063873,0.18601,0.040632,-0.24811,-0.25962,-0.23555,ne
+okrajova_MI,009,edge_mi_excess,ctl:naibbe_plaintext,ZL_split,"Voynich uvnitř rozpětí textů, nad generátory",0.46889,0.45932,0.47948,0.18601,0.040632,2.9458,2.8799,3.0186,ano (silněji než Voynich)
+konec_radku,010,end_enrich_max,ctl:gibberish_pooled,ctl:voynich_crop,blábol: vlastní řádky (gibberish_native),,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické); viz gibberish_native
+konec_radku,010,end_enrich_max,ctl:gibberish_native,ctl:voynich_crop,blábol: vlastní řádky (gibberish_native),2.1405,1.5432,3.7512,16.351,1.1882,0.062802,0.023415,0.16903,ne
+konec_radku,010,end_enrich_max,ctl:naibbe_caesar,ZL_split,blábol: vlastní řádky (gibberish_native),,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické)
+konec_radku,010,end_enrich_max,ctl:naibbe_pliny,ZL_split,blábol: vlastní řádky (gibberish_native),,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické)
+konec_radku,010,end_enrich_max,ctl:naibbe_plaintext,ZL_split,blábol: vlastní řádky (gibberish_native),,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické)
+konec_radku,009,jsd_last_mid,ctl:gibberish_pooled,ctl:voynich_crop,blábol: vlastní řádky jen v 010,,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické); viz gibberish_native
+konec_radku,009,jsd_last_mid,ctl:gibberish_native,ctl:voynich_crop,blábol: vlastní řádky jen v 010,0.025235,0.015385,0.034433,0.099403,0.014965,0.12162,0.0049739,0.23055,ne
+konec_radku,009,jsd_last_mid,ctl:naibbe_caesar,ZL_split,blábol: vlastní řádky jen v 010,,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické)
+konec_radku,009,jsd_last_mid,ctl:naibbe_pliny,ZL_split,blábol: vlastní řádky jen v 010,,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické)
+konec_radku,009,jsd_last_mid,ctl:naibbe_plaintext,ZL_split,blábol: vlastní řádky jen v 010,,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické)
+uzavreny_radek,010,bnd_edge_ratio_line,ctl:gibberish_pooled,ctl:voynich_crop,Voynich ~0; blábol: vlastní řádky,,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické); viz gibberish_native
+uzavreny_radek,010,bnd_edge_ratio_line,ctl:gibberish_native,ctl:voynich_crop,Voynich ~0; blábol: vlastní řádky,0.79058,-0.47538,2.001,0.019286,0.3984,-1.0345,-4.2272,2.3048,ne (opačně než Voynich)
+uzavreny_radek,010,bnd_edge_ratio_line,ctl:naibbe_caesar,ZL_split,Voynich ~0; blábol: vlastní řádky,,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické)
+uzavreny_radek,010,bnd_edge_ratio_line,ctl:naibbe_pliny,ZL_split,Voynich ~0; blábol: vlastní řádky,,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické)
+uzavreny_radek,010,bnd_edge_ratio_line,ctl:naibbe_plaintext,ZL_split,Voynich ~0; blábol: vlastní řádky,,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické)
+uzavreny_radek,010,bnd_affix_ratio_line,ctl:gibberish_pooled,ctl:voynich_crop,Voynich ~0; blábol: vlastní řádky,,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické); viz gibberish_native
+uzavreny_radek,010,bnd_affix_ratio_line,ctl:gibberish_native,ctl:voynich_crop,Voynich ~0; blábol: vlastní řádky,0.87844,-0.48574,2.4919,0.037328,0.82969,-0.061535,-2.0979,1.6601,ne
+uzavreny_radek,010,bnd_affix_ratio_line,ctl:naibbe_caesar,ZL_split,Voynich ~0; blábol: vlastní řádky,,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické)
+uzavreny_radek,010,bnd_affix_ratio_line,ctl:naibbe_pliny,ZL_split,Voynich ~0; blábol: vlastní řádky,,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické)
+uzavreny_radek,010,bnd_affix_ratio_line,ctl:naibbe_plaintext,ZL_split,Voynich ~0; blábol: vlastní řádky,,,,,,,,,nelze (řádky v layoutu ZL jsou mechanické)
+pokles_sdileni_se_vzdalenosti,009,loc_log_dist,ctl:gibberish_pooled,ctl:voynich_crop,na hraně i u Voynichu,-0.0030022,-0.0055624,-0.00051738,-0.0089942,-0.0092017,29.879,17.54,41.855,nelze rozlišit (Voynich ≈ próza)
+pokles_sdileni_se_vzdalenosti,009,loc_log_dist,ctl:gibberish_native,ctl:voynich_crop,na hraně i u Voynichu,-0.00068433,-0.0017224,0.0004112,-0.0089942,-0.0092017,41.05,36.047,46.33,nelze rozlišit (Voynich ≈ próza)
+pokles_sdileni_se_vzdalenosti,009,loc_log_dist,ctl:naibbe_caesar,ZL_split,na hraně i u Voynichu,-0.0031964,-0.0063587,-0.00049063,-0.0099253,-0.0077084,-2.0352,-3.2557,-0.6088,nelze rozlišit (Voynich ≈ próza)
+pokles_sdileni_se_vzdalenosti,009,loc_log_dist,ctl:naibbe_pliny,ZL_split,na hraně i u Voynichu,0.0014394,-0.0015223,0.0040269,-0.0099253,-0.0077084,-4.1262,-5.2934,-2.7903,nelze rozlišit (Voynich ≈ próza)
+pokles_sdileni_se_vzdalenosti,009,loc_log_dist,ctl:naibbe_plaintext,ZL_split,na hraně i u Voynichu,6.3585e-06,-0.0011932,0.0010163,-0.0099253,-0.0077084,-3.4798,-3.9354,-2.9388,nelze rozlišit (Voynich ≈ próza)
+paradigma_neni_pozicni,011,a__suffix__all-page__explained,ctl:gibberish_pooled,ctl:voynich_crop,011: Voynich 7–8 %,0.059088,0.035683,0.075571,0.063587,0.01083,0.91472,0.47109,1.2272,ano
+paradigma_neni_pozicni,011,a__suffix__all-page__explained,ctl:gibberish_native,ctl:voynich_crop,011: Voynich 7–8 %,0.13976,0.10847,0.17135,0.063587,0.01083,2.4438,1.8507,3.0426,ano (silněji než Voynich)
+paradigma_neni_pozicni,011,a__suffix__all-page__explained,ctl:naibbe_caesar,ZL_split,011: Voynich 7–8 %,-0.0019574,-0.0052908,0.0015582,0.079362,0.013416,-0.23312,-0.28367,-0.17981,ne
+paradigma_neni_pozicni,011,a__suffix__all-page__explained,ctl:naibbe_pliny,ZL_split,011: Voynich 7–8 %,-0.00099419,-0.0043048,0.0025059,0.079362,0.013416,-0.21851,-0.26871,-0.16544,ne
+paradigma_neni_pozicni,011,a__suffix__all-page__explained,ctl:naibbe_plaintext,ZL_split,011: Voynich 7–8 %,0.002888,-0.0045825,0.012938,0.079362,0.013416,-0.15964,-0.27293,-0.0072464,ne
+sufix_prefix_dalsiho_slova,011,a__nb_next_prefix__mi,ctl:gibberish_pooled,ctl:voynich_crop,"011: Voynich 0,038 bitu",0.0021877,-0.0046277,0.0070834,0.021917,0.005701,-0.21666,-0.63695,0.08525,ne
+sufix_prefix_dalsiho_slova,011,a__nb_next_prefix__mi,ctl:gibberish_native,ctl:voynich_crop,"011: Voynich 0,038 bitu",0.010909,0.0033269,0.020339,0.021917,0.005701,0.32116,-0.14641,0.90269,částečně
+sufix_prefix_dalsiho_slova,011,a__nb_next_prefix__mi,ctl:naibbe_caesar,ZL_split,"011: Voynich 0,038 bitu",0.0067276,0.00049887,0.011993,0.037845,0.0077902,-0.035357,-0.2426,0.13985,ne
+sufix_prefix_dalsiho_slova,011,a__nb_next_prefix__mi,ctl:naibbe_pliny,ZL_split,"011: Voynich 0,038 bitu",0.0010944,-0.0070546,0.006511,0.037845,0.0077902,-0.22279,-0.49393,-0.042562,ne
+sufix_prefix_dalsiho_slova,011,a__nb_next_prefix__mi,ctl:naibbe_plaintext,ZL_split,"011: Voynich 0,038 bitu",0.018488,0.013979,0.023497,0.037845,0.0077902,0.35596,0.20592,0.5226,částečně
+BPE_zlab,-,-,ctl:gibberish_pooled,ctl:voynich_crop,nepočítáno (není v profilech 009–011),,,,,,,,,nepočítáno
+BPE_zlab,-,-,ctl:gibberish_native,ctl:voynich_crop,nepočítáno (není v profilech 009–011),,,,,,,,,nepočítáno
+BPE_zlab,-,-,ctl:naibbe_caesar,ZL_split,nepočítáno (není v profilech 009–011),,,,,,,,,nepočítáno
+BPE_zlab,-,-,ctl:naibbe_pliny,ZL_split,nepočítáno (není v profilech 009–011),,,,,,,,,nepočítáno
+BPE_zlab,-,-,ctl:naibbe_plaintext,ZL_split,nepočítáno (není v profilech 009–011),,,,,,,,,nepočítáno
