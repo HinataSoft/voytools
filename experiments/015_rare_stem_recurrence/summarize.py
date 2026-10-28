@@ -1,7 +1,8 @@
 """Aggregation of experiment 015 runs into the spec's tables and figures (``run.py summarize``).
 
 Reads ``results/015_rare_stem_recurrence/runs/<combo>/<source>/runs.csv`` and writes, in the results
-folder: ``runs.csv`` (all runs), ``summary.csv`` (long table: combo x source x variant x band x metric,
+folder: ``runs.csv`` (all runs except the 200-seed ``real_boot`` / ``perm_tokens``, which stay in
+``runs/<combo>/<source>/``), ``summary.csv`` (long table: combo x source x variant x band x metric,
 value with 2.5 / 97.5 % interval), ``distance_profile.csv``, ``far_pairs_sections.csv``,
 ``form_by_distance.csv``, ``far_clusters.csv``, ``label_stems.csv``, ``meta.json`` and the figures
 ``distance_profile.png`` / ``form_by_distance.png``.
@@ -32,6 +33,10 @@ Q = (0.025, 0.975)
 COL = re.compile(r"^([ab])__([rcl])__(.+)$")
 SOURCE_ORDER = ["real", "perm_tokens", "perm_global", "perm_section", "selfcitation_21", "template_005",
                 "template_005_notopic", "autocopy_86"]
+COLORS = dict(zip(["real", "perm_global", "selfcitation_21", "template_005", "template_005_notopic", "autocopy_86",
+                   "ctl:pliny_prose", "ctl:celsus_prose", "ctl:linnaeus_items", "ctl:gibberish_pooled"],
+                  ["#1f77b4", "#ff7f0e", "#17becf", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2",
+                   "#7f7f7f", "#bcbd22"]))
 PLOT_SOURCES = ["real", "perm_global", "selfcitation_21", "template_005", "template_005_notopic", "autocopy_86",
                 "ctl:pliny_prose", "ctl:celsus_prose", "ctl:linnaeus_items", "ctl:gibberish_pooled"]
 
@@ -150,6 +155,15 @@ def label_stems() -> pd.DataFrame:
     return out[["combo", "variant", "stem", "count", "n_pages", "n_quires", "n_forms"]]
 
 
+def _shared_legend(fig, axes) -> None:
+    """One legend with every source of both panels, same colour per source in both."""
+    handles = {}
+    for ax in axes:
+        for h, l in zip(*ax.get_legend_handles_labels()):
+            handles.setdefault(l, h)
+    fig.legend(handles.values(), handles.keys(), fontsize=7, loc="lower center", ncol=5, frameon=False)
+
+
 def plots(prof: pd.DataFrame, form: pd.DataFrame) -> None:
     import matplotlib
     matplotlib.use("Agg")
@@ -164,7 +178,7 @@ def plots(prof: pd.DataFrame, form: pd.DataFrame) -> None:
             if dd.empty:
                 continue
             dd = dd.set_index("bin").loc[list(DISTANCE_LABELS)]
-            ax.plot(range(len(DISTANCE_LABELS)), dd["ratio"], marker="o", label=src,
+            ax.plot(range(len(DISTANCE_LABELS)), dd["ratio"], marker="o", label=src, color=COLORS[src],
                     lw=2.2 if src == "real" else 1.2)
         ax.axhline(1, color="k", lw=0.6)
         ax.set_xticks(range(len(DISTANCE_LABELS)))
@@ -173,8 +187,8 @@ def plots(prof: pd.DataFrame, form: pd.DataFrame) -> None:
         ax.set_title(f"{combo}: stems 2-5, share / expected per distance bin")
         ax.set_xlabel("page distance")
     axes[0].set_ylabel("observed / expected (page permutation)")
-    axes[1].legend(fontsize=7)
-    fig.tight_layout()
+    _shared_legend(fig, axes)
+    fig.tight_layout(rect=(0, 0.12, 1, 1))
     fig.savefig(OUT / "distance_profile.png", dpi=120)
     plt.close(fig)
 
@@ -187,22 +201,25 @@ def plots(prof: pd.DataFrame, form: pd.DataFrame) -> None:
             if dd.empty:
                 continue
             dd = dd.set_index("class").loc[list(FORM_LABELS)]
-            ax.plot(range(len(FORM_LABELS)), dd["diff"], marker="o", label=src, lw=2.2 if src == "real" else 1.2)
+            ax.plot(range(len(FORM_LABELS)), dd["diff"], marker="o", label=src, color=COLORS[src],
+                    lw=2.2 if src == "real" else 1.2)
         ax.axhline(0, color="k", lw=0.6)
         ax.set_xticks(range(len(FORM_LABELS)))
         ax.set_xticklabels(FORM_LABELS)
         ax.set_title(f"{combo}: identical form share - paradigm expectation")
         ax.set_xlabel("page distance class")
     axes[0].set_ylabel("same form - expected")
-    axes[1].legend(fontsize=7)
-    fig.tight_layout()
+    _shared_legend(fig, axes)
+    fig.tight_layout(rect=(0, 0.12, 1, 1))
     fig.savefig(OUT / "form_by_distance.png", dpi=120)
     plt.close(fig)
 
 
 def summarize() -> None:
     runs = load_all()
-    runs.to_csv(OUT / "runs.csv", index=False)
+    # runs.csv: everything except the 200-seed sources real_boot / perm_tokens (kept in runs/<combo>/<source>/),
+    # so that the file stays under 5 MB
+    runs[~runs["source"].isin(["real_boot", "perm_tokens"])].to_csv(OUT / "runs.csv", index=False)
     s = long_summary(runs)
     s.to_csv(OUT / "summary.csv", index=False)
     prof = distance_profile(s, runs)

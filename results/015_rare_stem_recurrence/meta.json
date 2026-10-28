@@ -1,0 +1,5041 @@
+{
+  "name": "015_rare_stem_recurrence",
+  "params": {
+    "runs": {
+      "GC_join/autocopy_86": 30,
+      "GC_join/perm_global": 100,
+      "GC_join/perm_section": 100,
+      "GC_join/perm_tokens": 200,
+      "GC_join/real": 1,
+      "GC_join/real_boot": 200,
+      "GC_join/template_005": 30,
+      "GC_join/template_005_notopic": 30,
+      "GC_split/autocopy_86": 30,
+      "GC_split/perm_global": 100,
+      "GC_split/perm_section": 100,
+      "GC_split/perm_tokens": 200,
+      "GC_split/real": 1,
+      "GC_split/real_boot": 200,
+      "GC_split/template_005": 30,
+      "GC_split/template_005_notopic": 30,
+      "ZL_join/autocopy_86": 30,
+      "ZL_join/perm_global": 100,
+      "ZL_join/perm_section": 100,
+      "ZL_join/perm_tokens": 200,
+      "ZL_join/real": 1,
+      "ZL_join/real_boot": 200,
+      "ZL_join/selfcitation_21": 30,
+      "ZL_join/template_005": 30,
+      "ZL_join/template_005_notopic": 30,
+      "ZL_split/autocopy_86": 30,
+      "ZL_split/perm_global": 100,
+      "ZL_split/perm_section": 100,
+      "ZL_split/perm_tokens": 200,
+      "ZL_split/real": 1,
+      "ZL_split/real_boot": 200,
+      "ZL_split/selfcitation_21": 30,
+      "ZL_split/template_005": 30,
+      "ZL_split/template_005_notopic": 30,
+      "ctl:celsus_prose/perm_tokens": 200,
+      "ctl:celsus_prose/real": 1,
+      "ctl:celsus_prose/real_boot": 200,
+      "ctl:gibberish_pooled/perm_tokens": 200,
+      "ctl:gibberish_pooled/real": 1,
+      "ctl:gibberish_pooled/real_boot": 200,
+      "ctl:linnaeus_items/perm_tokens": 200,
+      "ctl:linnaeus_items/real": 1,
+      "ctl:linnaeus_items/real_boot": 200,
+      "ctl:pliny_prose/perm_tokens": 200,
+      "ctl:pliny_prose/real": 1,
+      "ctl:pliny_prose/real_boot": 200,
+      "ctl:voynich_crop/perm_tokens": 200,
+      "ctl:voynich_crop/real": 1,
+      "ctl:voynich_crop/real_boot": 200
+    },
+    "parts": {
+      "GC_join/autocopy_86": {
+        "name": "015_GC_join_autocopy_86",
+        "params": {
+          "combo": "GC_join",
+          "source": "autocopy_86",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 417,
+            "b": 406
+          },
+          "n_pages": 207,
+          "autocopy": {
+            "edit_model": "trigram",
+            "new_token_source": "seed",
+            "p_new": 0.3,
+            "window": 32,
+            "p_copy_exact": 0.35,
+            "p_two_edits": 0.5,
+            "recency": 0.0,
+            "edit_type_probs": [
+              0.6,
+              0.2,
+              0.2
+            ]
+          },
+          "seed_offset": 8600
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:54:49",
+        "updated": "2026-10-28 16:56:19",
+        "n_seeds_done": 30
+      },
+      "GC_join/perm_global": {
+        "name": "015_GC_join_perm_global",
+        "params": {
+          "combo": "GC_join",
+          "source": "perm_global",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 417,
+            "b": 406
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 100,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:59:37",
+        "updated": "2026-10-28 17:00:05",
+        "n_seeds_done": 100
+      },
+      "GC_join/perm_section": {
+        "name": "015_GC_join_perm_section",
+        "params": {
+          "combo": "GC_join",
+          "source": "perm_section",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 417,
+            "b": 406
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 100,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:00:05",
+        "updated": "2026-10-28 17:00:33",
+        "n_seeds_done": 100
+      },
+      "GC_join/perm_tokens": {
+        "name": "015_GC_join_perm_tokens",
+        "params": {
+          "combo": "GC_join",
+          "source": "perm_tokens",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 417,
+            "b": 406
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:49:52",
+        "updated": "2026-10-28 16:50:15",
+        "n_seeds_done": 200
+      },
+      "GC_join/real": {
+        "name": "015_GC_join_real",
+        "params": {
+          "combo": "GC_join",
+          "source": "real",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 417,
+            "b": 406
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 1,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:46:43",
+        "updated": "2026-10-28 16:46:44",
+        "n_seeds_done": 1
+      },
+      "GC_join/real_boot": {
+        "name": "015_GC_join_real_boot",
+        "params": {
+          "combo": "GC_join",
+          "source": "real_boot",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 417,
+            "b": 406
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:46:44",
+        "updated": "2026-10-28 16:49:52",
+        "n_seeds_done": 200
+      },
+      "GC_join/template_005": {
+        "name": "015_GC_join_template_005",
+        "params": {
+          "combo": "GC_join",
+          "source": "template_005",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 417,
+            "b": 406
+          },
+          "n_pages": 207,
+          "template_005": {
+            "n_stems": 4000,
+            "zipf_s": 1.3,
+            "paradigm": "fixed",
+            "prefix_dependence": "none",
+            "topic_concentration": 5.0,
+            "page_locality": 0.3,
+            "suffix_by": null
+          },
+          "seed_offset": 100000,
+          "pool_seed": "repetition"
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:50:38",
+        "updated": "2026-10-28 16:52:43",
+        "n_seeds_done": 30
+      },
+      "GC_join/template_005_notopic": {
+        "name": "015_GC_join_template_005_notopic",
+        "params": {
+          "combo": "GC_join",
+          "source": "template_005_notopic",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "s",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ap",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 417,
+            "b": 406
+          },
+          "n_pages": 207,
+          "template_005": {
+            "n_stems": 4000,
+            "zipf_s": 1.3,
+            "paradigm": "fixed",
+            "prefix_dependence": "none",
+            "topic_concentration": "inf",
+            "page_locality": 0.3,
+            "suffix_by": null
+          },
+          "seed_offset": 100000,
+          "pool_seed": "repetition"
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:52:43",
+        "updated": "2026-10-28 16:54:49",
+        "n_seeds_done": 30
+      },
+      "GC_split/autocopy_86": {
+        "name": "015_GC_split_autocopy_86",
+        "params": {
+          "combo": "GC_split",
+          "source": "autocopy_86",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "ap",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 405,
+            "b": 379
+          },
+          "n_pages": 207,
+          "autocopy": {
+            "edit_model": "trigram",
+            "new_token_source": "seed",
+            "p_new": 0.3,
+            "window": 32,
+            "p_copy_exact": 0.35,
+            "p_two_edits": 0.5,
+            "recency": 0.0,
+            "edit_type_probs": [
+              0.6,
+              0.2,
+              0.2
+            ]
+          },
+          "seed_offset": 8600
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:44:49",
+        "updated": "2026-10-28 16:46:39",
+        "n_seeds_done": 30
+      },
+      "GC_split/perm_global": {
+        "name": "015_GC_split_perm_global",
+        "params": {
+          "combo": "GC_split",
+          "source": "perm_global",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "ap",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 405,
+            "b": 379
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 100,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:58:37",
+        "updated": "2026-10-28 16:59:05",
+        "n_seeds_done": 100
+      },
+      "GC_split/perm_section": {
+        "name": "015_GC_split_perm_section",
+        "params": {
+          "combo": "GC_split",
+          "source": "perm_section",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "ap",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 405,
+            "b": 379
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 100,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:59:05",
+        "updated": "2026-10-28 16:59:35",
+        "n_seeds_done": 100
+      },
+      "GC_split/perm_tokens": {
+        "name": "015_GC_split_perm_tokens",
+        "params": {
+          "combo": "GC_split",
+          "source": "perm_tokens",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "ap",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 405,
+            "b": 379
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:37:56",
+        "updated": "2026-10-28 16:38:19",
+        "n_seeds_done": 200
+      },
+      "GC_split/real": {
+        "name": "015_GC_split_real",
+        "params": {
+          "combo": "GC_split",
+          "source": "real",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "ap",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 405,
+            "b": 379
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 1,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:34:59",
+        "updated": "2026-10-28 16:34:59",
+        "n_seeds_done": 1
+      },
+      "GC_split/real_boot": {
+        "name": "015_GC_split_real_boot",
+        "params": {
+          "combo": "GC_split",
+          "source": "real_boot",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "ap",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 405,
+            "b": 379
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:34:59",
+        "updated": "2026-10-28 16:37:56",
+        "n_seeds_done": 200
+      },
+      "GC_split/template_005": {
+        "name": "015_GC_split_template_005",
+        "params": {
+          "combo": "GC_split",
+          "source": "template_005",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "ap",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 405,
+            "b": 379
+          },
+          "n_pages": 207,
+          "template_005": {
+            "n_stems": 4000,
+            "zipf_s": 1.3,
+            "paradigm": "fixed",
+            "prefix_dependence": "none",
+            "topic_concentration": 5.0,
+            "page_locality": 0.3,
+            "suffix_by": null
+          },
+          "seed_offset": 100000,
+          "pool_seed": "repetition"
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:38:43",
+        "updated": "2026-10-28 16:41:53",
+        "n_seeds_done": 30
+      },
+      "GC_split/template_005_notopic": {
+        "name": "015_GC_split_template_005_notopic",
+        "params": {
+          "combo": "GC_split",
+          "source": "template_005_notopic",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "1c",
+                "1o",
+                "4o",
+                "oe",
+                "ok",
+                "1",
+                "2",
+                "8",
+                "9",
+                "e",
+                "k",
+                "o",
+                "g",
+                "j",
+                "f",
+                "u",
+                "h",
+                "G",
+                "J",
+                "F",
+                "U",
+                "K",
+                "H"
+              ],
+              [
+                "79",
+                "89",
+                "ae",
+                "am",
+                "an",
+                "ay",
+                "oe",
+                "oy",
+                "8",
+                "9",
+                "e",
+                "o",
+                "s",
+                "y",
+                "p",
+                "P",
+                "*",
+                "ap",
+                "op"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 405,
+            "b": 379
+          },
+          "n_pages": 207,
+          "template_005": {
+            "n_stems": 4000,
+            "zipf_s": 1.3,
+            "paradigm": "fixed",
+            "prefix_dependence": "none",
+            "topic_concentration": "inf",
+            "page_locality": 0.3,
+            "suffix_by": null
+          },
+          "seed_offset": 100000,
+          "pool_seed": "repetition"
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:41:53",
+        "updated": "2026-10-28 16:44:49",
+        "n_seeds_done": 30
+      },
+      "ZL_join/autocopy_86": {
+        "name": "015_ZL_join_autocopy_86",
+        "params": {
+          "combo": "ZL_join",
+          "source": "autocopy_86",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 339,
+            "b": 330
+          },
+          "n_pages": 207,
+          "autocopy": {
+            "edit_model": "trigram",
+            "new_token_source": "seed",
+            "p_new": 0.3,
+            "window": 32,
+            "p_copy_exact": 0.35,
+            "p_two_edits": 0.5,
+            "recency": 0.0,
+            "edit_type_probs": [
+              0.6,
+              0.2,
+              0.2
+            ]
+          },
+          "seed_offset": 8600
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:11:00",
+        "updated": "2026-10-28 17:12:10",
+        "n_seeds_done": 30
+      },
+      "ZL_join/perm_global": {
+        "name": "015_ZL_join_perm_global",
+        "params": {
+          "combo": "ZL_join",
+          "source": "perm_global",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 339,
+            "b": 330
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 100,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:01:30",
+        "updated": "2026-10-28 17:01:58",
+        "n_seeds_done": 100
+      },
+      "ZL_join/perm_section": {
+        "name": "015_ZL_join_perm_section",
+        "params": {
+          "combo": "ZL_join",
+          "source": "perm_section",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 339,
+            "b": 330
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 100,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:01:58",
+        "updated": "2026-10-28 17:02:22",
+        "n_seeds_done": 100
+      },
+      "ZL_join/perm_tokens": {
+        "name": "015_ZL_join_perm_tokens",
+        "params": {
+          "combo": "ZL_join",
+          "source": "perm_tokens",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 339,
+            "b": 330
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:01:09",
+        "updated": "2026-10-28 17:01:30",
+        "n_seeds_done": 200
+      },
+      "ZL_join/real": {
+        "name": "015_ZL_join_real",
+        "params": {
+          "combo": "ZL_join",
+          "source": "real",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 339,
+            "b": 330
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 1,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:58:35",
+        "updated": "2026-10-28 16:58:35",
+        "n_seeds_done": 1
+      },
+      "ZL_join/real_boot": {
+        "name": "015_ZL_join_real_boot",
+        "params": {
+          "combo": "ZL_join",
+          "source": "real_boot",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 339,
+            "b": 330
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:58:35",
+        "updated": "2026-10-28 17:01:09",
+        "n_seeds_done": 200
+      },
+      "ZL_join/selfcitation_21": {
+        "name": "015_ZL_join_selfcitation_21",
+        "params": {
+          "combo": "ZL_join",
+          "source": "selfcitation_21",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 339,
+            "b": 330
+          },
+          "n_pages": 207,
+          "selfcitation_004": {
+            "row": "ts2020_calB",
+            "p_copy": 0.1,
+            "replace_weights": [
+              20.0,
+              50.0,
+              30.0
+            ],
+            "p_same_position": 14.0
+          },
+          "seed_offset": 2100
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:02:22",
+        "updated": "2026-10-28 17:03:45",
+        "n_seeds_done": 30
+      },
+      "ZL_join/template_005": {
+        "name": "015_ZL_join_template_005",
+        "params": {
+          "combo": "ZL_join",
+          "source": "template_005",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 339,
+            "b": 330
+          },
+          "n_pages": 207,
+          "template_005": {
+            "n_stems": 8000,
+            "zipf_s": 1.4,
+            "paradigm": "fixed",
+            "prefix_dependence": "none",
+            "topic_concentration": 5.0,
+            "page_locality": 0.3,
+            "suffix_by": null
+          },
+          "seed_offset": 100000,
+          "pool_seed": "repetition"
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:03:45",
+        "updated": "2026-10-28 17:07:20",
+        "n_seeds_done": 30
+      },
+      "ZL_join/template_005_notopic": {
+        "name": "015_ZL_join_template_005_notopic",
+        "params": {
+          "combo": "ZL_join",
+          "source": "template_005_notopic",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 339,
+            "b": 330
+          },
+          "n_pages": 207,
+          "template_005": {
+            "n_stems": 8000,
+            "zipf_s": 1.4,
+            "paradigm": "fixed",
+            "prefix_dependence": "none",
+            "topic_concentration": "inf",
+            "page_locality": 0.3,
+            "suffix_by": null
+          },
+          "seed_offset": 100000,
+          "pool_seed": "repetition"
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:07:20",
+        "updated": "2026-10-28 17:11:00",
+        "n_seeds_done": 30
+      },
+      "ZL_split/autocopy_86": {
+        "name": "015_ZL_split_autocopy_86",
+        "params": {
+          "combo": "ZL_split",
+          "source": "autocopy_86",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 328,
+            "b": 317
+          },
+          "n_pages": 207,
+          "autocopy": {
+            "edit_model": "trigram",
+            "new_token_source": "seed",
+            "p_new": 0.3,
+            "window": 32,
+            "p_copy_exact": 0.35,
+            "p_two_edits": 0.5,
+            "recency": 0.0,
+            "edit_type_probs": [
+              0.6,
+              0.2,
+              0.2
+            ]
+          },
+          "seed_offset": 8600
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:57:15",
+        "updated": "2026-10-28 16:58:32",
+        "n_seeds_done": 30
+      },
+      "ZL_split/perm_global": {
+        "name": "015_ZL_split_perm_global",
+        "params": {
+          "combo": "ZL_split",
+          "source": "perm_global",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 328,
+            "b": 317
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 100,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:57:42",
+        "updated": "2026-10-28 16:58:08",
+        "n_seeds_done": 100
+      },
+      "ZL_split/perm_section": {
+        "name": "015_ZL_split_perm_section",
+        "params": {
+          "combo": "ZL_split",
+          "source": "perm_section",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 328,
+            "b": 317
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 100,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:58:08",
+        "updated": "2026-10-28 16:58:35",
+        "n_seeds_done": 100
+      },
+      "ZL_split/perm_tokens": {
+        "name": "015_ZL_split_perm_tokens",
+        "params": {
+          "combo": "ZL_split",
+          "source": "perm_tokens",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 328,
+            "b": 317
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:37:06",
+        "updated": "2026-10-28 16:37:26",
+        "n_seeds_done": 200
+      },
+      "ZL_split/real": {
+        "name": "015_ZL_split_real",
+        "params": {
+          "combo": "ZL_split",
+          "source": "real",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 328,
+            "b": 317
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 1,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:34:58",
+        "updated": "2026-10-28 16:34:58",
+        "n_seeds_done": 1
+      },
+      "ZL_split/real_boot": {
+        "name": "015_ZL_split_real_boot",
+        "params": {
+          "combo": "ZL_split",
+          "source": "real_boot",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 328,
+            "b": 317
+          },
+          "n_pages": 207
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:34:58",
+        "updated": "2026-10-28 16:37:06",
+        "n_seeds_done": 200
+      },
+      "ZL_split/selfcitation_21": {
+        "name": "015_ZL_split_selfcitation_21",
+        "params": {
+          "combo": "ZL_split",
+          "source": "selfcitation_21",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 328,
+            "b": 317
+          },
+          "n_pages": 207,
+          "selfcitation_004": {
+            "row": "ts2020_calB",
+            "p_copy": 0.1,
+            "replace_weights": [
+              20.0,
+              50.0,
+              30.0
+            ],
+            "p_same_position": 14.0
+          },
+          "seed_offset": 2100
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:37:46",
+        "updated": "2026-10-28 16:39:28",
+        "n_seeds_done": 30
+      },
+      "ZL_split/template_005": {
+        "name": "015_ZL_split_template_005",
+        "params": {
+          "combo": "ZL_split",
+          "source": "template_005",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 328,
+            "b": 317
+          },
+          "n_pages": 207,
+          "template_005": {
+            "n_stems": 8000,
+            "zipf_s": 1.4,
+            "paradigm": "fixed",
+            "prefix_dependence": "none",
+            "topic_concentration": 5.0,
+            "page_locality": 0.3,
+            "suffix_by": null
+          },
+          "seed_offset": 100000,
+          "pool_seed": "repetition"
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:39:28",
+        "updated": "2026-10-28 16:48:43",
+        "n_seeds_done": 30
+      },
+      "ZL_split/template_005_notopic": {
+        "name": "015_ZL_split_template_005_notopic",
+        "params": {
+          "combo": "ZL_split",
+          "source": "template_005_notopic",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ],
+            "b": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y",
+                "p",
+                "f",
+                "k",
+                "cph",
+                "cfh",
+                "cth",
+                "ckh"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y",
+                "m",
+                "g",
+                "om"
+              ]
+            ]
+          },
+          "n_label_stems": {
+            "a": 328,
+            "b": 317
+          },
+          "n_pages": 207,
+          "template_005": {
+            "n_stems": 8000,
+            "zipf_s": 1.4,
+            "paradigm": "fixed",
+            "prefix_dependence": "none",
+            "topic_concentration": "inf",
+            "page_locality": 0.3,
+            "suffix_by": null
+          },
+          "seed_offset": 100000,
+          "pool_seed": "repetition"
+        },
+        "n_seeds_requested": 30,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:48:43",
+        "updated": "2026-10-28 16:57:15",
+        "n_seeds_done": 30
+      },
+      "ctl_celsus_prose/perm_tokens": {
+        "name": "015_ctl:celsus_prose_perm_tokens",
+        "params": {
+          "combo": "ctl:celsus_prose",
+          "source": "perm_tokens",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "ali",
+                "con",
+                "sub",
+                "ad",
+                "de",
+                "in",
+                "re",
+                "a",
+                "e",
+                "m",
+                "p",
+                "s"
+              ],
+              [
+                "sque",
+                "bus",
+                "que",
+                "rum",
+                "tur",
+                "is",
+                "um",
+                "us",
+                "a",
+                "e",
+                "i",
+                "m",
+                "s",
+                "t"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 207,
+          "control": {
+            "name": "celsus_prose",
+            "mode": "prose",
+            "strategy": "balanced",
+            "sections": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "source_tokens": 62410,
+            "files": [
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.1.tess",
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.2.tess",
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.3.tess",
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.4.tess",
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.5.tess"
+            ]
+          }
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:09:03",
+        "updated": "2026-10-28 17:09:20",
+        "n_seeds_done": 200
+      },
+      "ctl_celsus_prose/real": {
+        "name": "015_ctl:celsus_prose_real",
+        "params": {
+          "combo": "ctl:celsus_prose",
+          "source": "real",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "ali",
+                "con",
+                "sub",
+                "ad",
+                "de",
+                "in",
+                "re",
+                "a",
+                "e",
+                "m",
+                "p",
+                "s"
+              ],
+              [
+                "sque",
+                "bus",
+                "que",
+                "rum",
+                "tur",
+                "is",
+                "um",
+                "us",
+                "a",
+                "e",
+                "i",
+                "m",
+                "s",
+                "t"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 207,
+          "control": {
+            "name": "celsus_prose",
+            "mode": "prose",
+            "strategy": "balanced",
+            "sections": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "source_tokens": 62410,
+            "files": [
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.1.tess",
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.2.tess",
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.3.tess",
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.4.tess",
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.5.tess"
+            ]
+          }
+        },
+        "n_seeds_requested": 1,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:04:24",
+        "updated": "2026-10-28 17:04:24",
+        "n_seeds_done": 1
+      },
+      "ctl_celsus_prose/real_boot": {
+        "name": "015_ctl:celsus_prose_real_boot",
+        "params": {
+          "combo": "ctl:celsus_prose",
+          "source": "real_boot",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "ali",
+                "con",
+                "sub",
+                "ad",
+                "de",
+                "in",
+                "re",
+                "a",
+                "e",
+                "m",
+                "p",
+                "s"
+              ],
+              [
+                "sque",
+                "bus",
+                "que",
+                "rum",
+                "tur",
+                "is",
+                "um",
+                "us",
+                "a",
+                "e",
+                "i",
+                "m",
+                "s",
+                "t"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 207,
+          "control": {
+            "name": "celsus_prose",
+            "mode": "prose",
+            "strategy": "balanced",
+            "sections": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "source_tokens": 62410,
+            "files": [
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.1.tess",
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.2.tess",
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.3.tess",
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.4.tess",
+              "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.5.tess"
+            ]
+          }
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:04:24",
+        "updated": "2026-10-28 17:09:03",
+        "n_seeds_done": 200
+      },
+      "ctl_gibberish_pooled/perm_tokens": {
+        "name": "015_ctl:gibberish_pooled_perm_tokens",
+        "params": {
+          "combo": "ctl:gibberish_pooled",
+          "source": "perm_tokens",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "a",
+                "c",
+                "d",
+                "e",
+                "h",
+                "i",
+                "k",
+                "m",
+                "n",
+                "o",
+                "s",
+                "t"
+              ],
+              [
+                "a",
+                "e",
+                "h",
+                "i",
+                "k",
+                "l",
+                "m",
+                "n",
+                "o",
+                "p",
+                "r",
+                "s",
+                "t",
+                "u"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 60,
+          "control": {
+            "name": "gibberish_pooled",
+            "mode": "prose",
+            "strategy": "stream",
+            "sections": [
+              "DC_34",
+              "DA_02",
+              "DC_25",
+              "DC_41",
+              "DC_03",
+              "DC_15",
+              "DA_01",
+              "DC_06",
+              "DC_38",
+              "DC_16",
+              "DC_22",
+              "DC_11",
+              "DC_18",
+              "DC_36",
+              "DC_01",
+              "DC_21",
+              "DC_39",
+              "DC_32",
+              "DC_27",
+              "DC_05",
+              "DC_20",
+              "DC_04",
+              "DC_42",
+              "DC_37",
+              "DC_28",
+              "DC_30",
+              "DC_23",
+              "DC_09",
+              "DC_29",
+              "DC_33",
+              "DC_08",
+              "DC_35",
+              "DC_26",
+              "DC_40",
+              "DC_12",
+              "DC_24",
+              "DC_31",
+              "DC_10"
+            ],
+            "source_tokens": 10032
+          }
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:14:29",
+        "updated": "2026-10-28 17:14:36",
+        "n_seeds_done": 200
+      },
+      "ctl_gibberish_pooled/real": {
+        "name": "015_ctl:gibberish_pooled_real",
+        "params": {
+          "combo": "ctl:gibberish_pooled",
+          "source": "real",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "a",
+                "c",
+                "d",
+                "e",
+                "h",
+                "i",
+                "k",
+                "m",
+                "n",
+                "o",
+                "s",
+                "t"
+              ],
+              [
+                "a",
+                "e",
+                "h",
+                "i",
+                "k",
+                "l",
+                "m",
+                "n",
+                "o",
+                "p",
+                "r",
+                "s",
+                "t",
+                "u"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 60,
+          "control": {
+            "name": "gibberish_pooled",
+            "mode": "prose",
+            "strategy": "stream",
+            "sections": [
+              "DC_34",
+              "DA_02",
+              "DC_25",
+              "DC_41",
+              "DC_03",
+              "DC_15",
+              "DA_01",
+              "DC_06",
+              "DC_38",
+              "DC_16",
+              "DC_22",
+              "DC_11",
+              "DC_18",
+              "DC_36",
+              "DC_01",
+              "DC_21",
+              "DC_39",
+              "DC_32",
+              "DC_27",
+              "DC_05",
+              "DC_20",
+              "DC_04",
+              "DC_42",
+              "DC_37",
+              "DC_28",
+              "DC_30",
+              "DC_23",
+              "DC_09",
+              "DC_29",
+              "DC_33",
+              "DC_08",
+              "DC_35",
+              "DC_26",
+              "DC_40",
+              "DC_12",
+              "DC_24",
+              "DC_31",
+              "DC_10"
+            ],
+            "source_tokens": 10032
+          }
+        },
+        "n_seeds_requested": 1,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:13:09",
+        "updated": "2026-10-28 17:13:09",
+        "n_seeds_done": 1
+      },
+      "ctl_gibberish_pooled/real_boot": {
+        "name": "015_ctl:gibberish_pooled_real_boot",
+        "params": {
+          "combo": "ctl:gibberish_pooled",
+          "source": "real_boot",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "a",
+                "c",
+                "d",
+                "e",
+                "h",
+                "i",
+                "k",
+                "m",
+                "n",
+                "o",
+                "s",
+                "t"
+              ],
+              [
+                "a",
+                "e",
+                "h",
+                "i",
+                "k",
+                "l",
+                "m",
+                "n",
+                "o",
+                "p",
+                "r",
+                "s",
+                "t",
+                "u"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 60,
+          "control": {
+            "name": "gibberish_pooled",
+            "mode": "prose",
+            "strategy": "stream",
+            "sections": [
+              "DC_34",
+              "DA_02",
+              "DC_25",
+              "DC_41",
+              "DC_03",
+              "DC_15",
+              "DA_01",
+              "DC_06",
+              "DC_38",
+              "DC_16",
+              "DC_22",
+              "DC_11",
+              "DC_18",
+              "DC_36",
+              "DC_01",
+              "DC_21",
+              "DC_39",
+              "DC_32",
+              "DC_27",
+              "DC_05",
+              "DC_20",
+              "DC_04",
+              "DC_42",
+              "DC_37",
+              "DC_28",
+              "DC_30",
+              "DC_23",
+              "DC_09",
+              "DC_29",
+              "DC_33",
+              "DC_08",
+              "DC_35",
+              "DC_26",
+              "DC_40",
+              "DC_12",
+              "DC_24",
+              "DC_31",
+              "DC_10"
+            ],
+            "source_tokens": 10032
+          }
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:13:09",
+        "updated": "2026-10-28 17:14:29",
+        "n_seeds_done": 200
+      },
+      "ctl_linnaeus_items/perm_tokens": {
+        "name": "015_ctl:linnaeus_items_perm_tokens",
+        "params": {
+          "combo": "ctl:linnaeus_items",
+          "source": "perm_tokens",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "con",
+                "sub",
+                "tri",
+                "al",
+                "bi",
+                "in",
+                "ob",
+                "se",
+                "a",
+                "c",
+                "e",
+                "s"
+              ],
+              [
+                "ibus",
+                "que",
+                "tis",
+                "tum",
+                "ia",
+                "is",
+                "ta",
+                "um",
+                "a",
+                "e",
+                "i",
+                "m",
+                "o",
+                "s"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 207,
+          "control": {
+            "name": "linnaeus_items",
+            "mode": "items",
+            "strategy": "sequential",
+            "sections": [
+              "I MONOGYNIA+I DIGYNIA+II MONOGYNIA+II DIGYNIA+II TRIGYNIA+III MONOGYNIA",
+              "III DIGYNIA+III TRIGYNIA+IV MONOGYNIA",
+              "IV DIGYNIA+IV TETRAGYNIA+V MONOGYNIA",
+              "V DIGYNIA+V TRIGYNIA+V TETRAGYNIA+V PENTAGYNIA+V POLYGYNIA"
+            ],
+            "source_tokens": 56505,
+            "files": [
+              "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species1.txt",
+              "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species2.txt"
+            ]
+          }
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:12:52",
+        "updated": "2026-10-28 17:13:07",
+        "n_seeds_done": 200
+      },
+      "ctl_linnaeus_items/real": {
+        "name": "015_ctl:linnaeus_items_real",
+        "params": {
+          "combo": "ctl:linnaeus_items",
+          "source": "real",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "con",
+                "sub",
+                "tri",
+                "al",
+                "bi",
+                "in",
+                "ob",
+                "se",
+                "a",
+                "c",
+                "e",
+                "s"
+              ],
+              [
+                "ibus",
+                "que",
+                "tis",
+                "tum",
+                "ia",
+                "is",
+                "ta",
+                "um",
+                "a",
+                "e",
+                "i",
+                "m",
+                "o",
+                "s"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 207,
+          "control": {
+            "name": "linnaeus_items",
+            "mode": "items",
+            "strategy": "sequential",
+            "sections": [
+              "I MONOGYNIA+I DIGYNIA+II MONOGYNIA+II DIGYNIA+II TRIGYNIA+III MONOGYNIA",
+              "III DIGYNIA+III TRIGYNIA+IV MONOGYNIA",
+              "IV DIGYNIA+IV TETRAGYNIA+V MONOGYNIA",
+              "V DIGYNIA+V TRIGYNIA+V TETRAGYNIA+V PENTAGYNIA+V POLYGYNIA"
+            ],
+            "source_tokens": 56505,
+            "files": [
+              "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species1.txt",
+              "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species2.txt"
+            ]
+          }
+        },
+        "n_seeds_requested": 1,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:09:22",
+        "updated": "2026-10-28 17:09:22",
+        "n_seeds_done": 1
+      },
+      "ctl_linnaeus_items/real_boot": {
+        "name": "015_ctl:linnaeus_items_real_boot",
+        "params": {
+          "combo": "ctl:linnaeus_items",
+          "source": "real_boot",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "con",
+                "sub",
+                "tri",
+                "al",
+                "bi",
+                "in",
+                "ob",
+                "se",
+                "a",
+                "c",
+                "e",
+                "s"
+              ],
+              [
+                "ibus",
+                "que",
+                "tis",
+                "tum",
+                "ia",
+                "is",
+                "ta",
+                "um",
+                "a",
+                "e",
+                "i",
+                "m",
+                "o",
+                "s"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 207,
+          "control": {
+            "name": "linnaeus_items",
+            "mode": "items",
+            "strategy": "sequential",
+            "sections": [
+              "I MONOGYNIA+I DIGYNIA+II MONOGYNIA+II DIGYNIA+II TRIGYNIA+III MONOGYNIA",
+              "III DIGYNIA+III TRIGYNIA+IV MONOGYNIA",
+              "IV DIGYNIA+IV TETRAGYNIA+V MONOGYNIA",
+              "V DIGYNIA+V TRIGYNIA+V TETRAGYNIA+V PENTAGYNIA+V POLYGYNIA"
+            ],
+            "source_tokens": 56505,
+            "files": [
+              "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species1.txt",
+              "voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v5/latin_controls/species2.txt"
+            ]
+          }
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:09:22",
+        "updated": "2026-10-28 17:12:52",
+        "n_seeds_done": 200
+      },
+      "ctl_pliny_prose/perm_tokens": {
+        "name": "015_ctl:pliny_prose_perm_tokens",
+        "params": {
+          "combo": "ctl:pliny_prose",
+          "source": "perm_tokens",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "prae",
+                "ali",
+                "con",
+                "ad",
+                "de",
+                "ex",
+                "in",
+                "re",
+                "a",
+                "e",
+                "m",
+                "s"
+              ],
+              [
+                "sque",
+                "que",
+                "rum",
+                "tur",
+                "es",
+                "is",
+                "um",
+                "us",
+                "a",
+                "e",
+                "i",
+                "m",
+                "s",
+                "t"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 207,
+          "control": {
+            "name": "pliny_prose",
+            "mode": "prose",
+            "strategy": "balanced",
+            "sections": [
+              "16",
+              "18",
+              "21",
+              "23",
+              "25",
+              "28",
+              "30"
+            ],
+            "source_tokens": 164848,
+            "files": [
+              "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.4.books_16-20.tess",
+              "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.5.books_21-25.tess",
+              "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.6.books_26-30.tess"
+            ]
+          }
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:04:06",
+        "updated": "2026-10-28 17:04:22",
+        "n_seeds_done": 200
+      },
+      "ctl_pliny_prose/real": {
+        "name": "015_ctl:pliny_prose_real",
+        "params": {
+          "combo": "ctl:pliny_prose",
+          "source": "real",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "prae",
+                "ali",
+                "con",
+                "ad",
+                "de",
+                "ex",
+                "in",
+                "re",
+                "a",
+                "e",
+                "m",
+                "s"
+              ],
+              [
+                "sque",
+                "que",
+                "rum",
+                "tur",
+                "es",
+                "is",
+                "um",
+                "us",
+                "a",
+                "e",
+                "i",
+                "m",
+                "s",
+                "t"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 207,
+          "control": {
+            "name": "pliny_prose",
+            "mode": "prose",
+            "strategy": "balanced",
+            "sections": [
+              "16",
+              "18",
+              "21",
+              "23",
+              "25",
+              "28",
+              "30"
+            ],
+            "source_tokens": 164848,
+            "files": [
+              "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.4.books_16-20.tess",
+              "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.5.books_21-25.tess",
+              "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.6.books_26-30.tess"
+            ]
+          }
+        },
+        "n_seeds_requested": 1,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:56:22",
+        "updated": "2026-10-28 16:56:22",
+        "n_seeds_done": 1
+      },
+      "ctl_pliny_prose/real_boot": {
+        "name": "015_ctl:pliny_prose_real_boot",
+        "params": {
+          "combo": "ctl:pliny_prose",
+          "source": "real_boot",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "prae",
+                "ali",
+                "con",
+                "ad",
+                "de",
+                "ex",
+                "in",
+                "re",
+                "a",
+                "e",
+                "m",
+                "s"
+              ],
+              [
+                "sque",
+                "que",
+                "rum",
+                "tur",
+                "es",
+                "is",
+                "um",
+                "us",
+                "a",
+                "e",
+                "i",
+                "m",
+                "s",
+                "t"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 207,
+          "control": {
+            "name": "pliny_prose",
+            "mode": "prose",
+            "strategy": "balanced",
+            "sections": [
+              "16",
+              "18",
+              "21",
+              "23",
+              "25",
+              "28",
+              "30"
+            ],
+            "source_tokens": 164848,
+            "files": [
+              "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.4.books_16-20.tess",
+              "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.5.books_21-25.tess",
+              "voynich-units/data/voynich-units/herbal/pliny_the_elder.naturalis_historia.part.6.books_26-30.tess"
+            ]
+          }
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 16:56:22",
+        "updated": "2026-10-28 17:04:06",
+        "n_seeds_done": 200
+      },
+      "ctl_voynich_crop/perm_tokens": {
+        "name": "015_ctl:voynich_crop_perm_tokens",
+        "params": {
+          "combo": "ctl:voynich_crop",
+          "source": "perm_tokens",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 60,
+          "control": {
+            "name": "voynich_crop",
+            "mode": "real",
+            "strategy": "evenly spaced pages",
+            "sections": [
+              "A",
+              "B",
+              "C",
+              "H",
+              "P",
+              "S",
+              "T"
+            ],
+            "source_tokens": 34268
+          }
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:15:04",
+        "updated": "2026-10-28 17:15:10",
+        "n_seeds_done": 200
+      },
+      "ctl_voynich_crop/real": {
+        "name": "015_ctl:voynich_crop_real",
+        "params": {
+          "combo": "ctl:voynich_crop",
+          "source": "real",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 60,
+          "control": {
+            "name": "voynich_crop",
+            "mode": "real",
+            "strategy": "evenly spaced pages",
+            "sections": [
+              "A",
+              "B",
+              "C",
+              "H",
+              "P",
+              "S",
+              "T"
+            ],
+            "source_tokens": 34268
+          }
+        },
+        "n_seeds_requested": 1,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:14:37",
+        "updated": "2026-10-28 17:14:37",
+        "n_seeds_done": 1
+      },
+      "ctl_voynich_crop/real_boot": {
+        "name": "015_ctl:voynich_crop_real_boot",
+        "params": {
+          "combo": "ctl:voynich_crop",
+          "source": "real_boot",
+          "bands": {
+            "r": [
+              2,
+              5
+            ],
+            "c": [
+              6,
+              20
+            ]
+          },
+          "variants": {
+            "a": [
+              [
+                "che",
+                "cho",
+                "ol",
+                "qo",
+                "ch",
+                "d",
+                "l",
+                "o",
+                "s",
+                "sh",
+                "t",
+                "y"
+              ],
+              [
+                "aiin",
+                "ain",
+                "al",
+                "am",
+                "ar",
+                "chy",
+                "dy",
+                "ol",
+                "or",
+                "d",
+                "l",
+                "r",
+                "s",
+                "y"
+              ]
+            ]
+          },
+          "n_label_stems": {},
+          "n_pages": 60,
+          "control": {
+            "name": "voynich_crop",
+            "mode": "real",
+            "strategy": "evenly spaced pages",
+            "sections": [
+              "A",
+              "B",
+              "C",
+              "H",
+              "P",
+              "S",
+              "T"
+            ],
+            "source_tokens": 34268
+          }
+        },
+        "n_seeds_requested": 200,
+        "n_seeds_done_before": 0,
+        "created": "2026-10-28 17:14:37",
+        "updated": "2026-10-28 17:15:04",
+        "n_seeds_done": 200
+      }
+    }
+  },
+  "created": "2026-10-28 16:36:48",
+  "updated": "2026-10-28 17:20:04"
+}
