@@ -173,6 +173,12 @@ def _val(t: pd.DataFrame, combo: str, source: str, **kw) -> pd.DataFrame:
     return sub
 
 
+def _yerr(v, lo, hi):
+    """Error bar lengths (never negative: a point value may lie outside its bootstrap interval)."""
+    v, lo, hi = (np.asarray(x, dtype=float) for x in (v, lo, hi))
+    return [np.nan_to_num(np.maximum(v - lo, 0)), np.nan_to_num(np.maximum(hi - v, 0))]
+
+
 def plot_step(step: pd.DataFrame, share: pd.DataFrame, path: Path) -> None:
     import matplotlib
     matplotlib.use("Agg")
@@ -185,7 +191,7 @@ def plot_step(step: pd.DataFrame, share: pd.DataFrame, path: Path) -> None:
         if sub.empty:
             continue
         x = sub["d"].to_numpy() + (k - len(PLOT) / 2) * 0.03
-        ax.errorbar(x, sub["delta"], yerr=[sub["delta"] - sub["lo"], sub["hi"] - sub["delta"]], fmt="o-", ms=3, lw=1,
+        ax.errorbar(x, sub["delta"], yerr=_yerr(sub["delta"], sub["lo"], sub["hi"]), fmt="o-", ms=3, lw=1,
                     color=color, label=label, capsize=2)
     ax.axhline(0, color="k", lw=0.6)
     ax.set_xlabel("vzdálenost řádků d")
@@ -220,7 +226,7 @@ def plot_page(page: pd.DataFrame, path: Path) -> None:
         if sub.empty or sub["ratio_vs_within"].isna().all():
             continue
         x = sub["d"].to_numpy() + (k - len(rows) / 2) * 0.03
-        ax.errorbar(x, sub["ratio_vs_within"], yerr=[sub["ratio_vs_within"] - sub["ratio_lo"], sub["ratio_hi"] - sub["ratio_vs_within"]],
+        ax.errorbar(x, sub["ratio_vs_within"], yerr=_yerr(sub["ratio_vs_within"], sub["ratio_lo"], sub["ratio_hi"]),
                     fmt="o-", ms=3, lw=1, color=color, label=label, capsize=2)
     ax.axhline(1, color="k", lw=0.6)
     ax.set_xlabel("vzdálenost řádků přes hranici stránky d")
