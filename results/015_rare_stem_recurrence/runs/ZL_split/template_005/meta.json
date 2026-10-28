@@ -1,0 +1,113 @@
+{
+  "name": "015_ZL_split_template_005",
+  "params": {
+    "combo": "ZL_split",
+    "source": "template_005",
+    "bands": {
+      "r": [
+        2,
+        5
+      ],
+      "c": [
+        6,
+        20
+      ]
+    },
+    "variants": {
+      "a": [
+        [
+          "che",
+          "cho",
+          "ol",
+          "qo",
+          "ch",
+          "d",
+          "l",
+          "o",
+          "s",
+          "sh",
+          "t",
+          "y"
+        ],
+        [
+          "aiin",
+          "ain",
+          "al",
+          "am",
+          "ar",
+          "chy",
+          "dy",
+          "ol",
+          "or",
+          "d",
+          "l",
+          "r",
+          "s",
+          "y"
+        ]
+      ],
+      "b": [
+        [
+          "che",
+          "cho",
+          "ol",
+          "qo",
+          "ch",
+          "d",
+          "l",
+          "o",
+          "s",
+          "sh",
+          "t",
+          "y",
+          "p",
+          "f",
+          "k",
+          "cph",
+          "cfh",
+          "cth",
+          "ckh"
+        ],
+        [
+          "aiin",
+          "ain",
+          "al",
+          "am",
+          "ar",
+          "chy",
+          "dy",
+          "ol",
+          "or",
+          "d",
+          "l",
+          "r",
+          "s",
+          "y",
+          "m",
+          "g",
+          "om"
+        ]
+      ]
+    },
+    "n_label_stems": {
+      "a": 328,
+      "b": 317
+    },
+    "n_pages": 207,
+    "template_005": {
+      "n_stems": 8000,
+      "zipf_s": 1.4,
+      "paradigm": "fixed",
+      "prefix_dependence": "none",
+      "topic_concentration": 5.0,
+      "page_locality": 0.3,
+      "suffix_by": null
+    },
+    "seed_offset": 100000,
+    "pool_seed": "repetition"
+  },
+  "n_seeds_requested": 30,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 16:39:28",
+  "updated": "2026-10-28 16:39:28"
+}
