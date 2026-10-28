@@ -58,7 +58,8 @@ def _agg(g: pd.DataFrame, cols: list[str]) -> dict:
         s = pd.to_numeric(g[c], errors="coerce").dropna()
         if s.empty:
             continue
-        out[c] = (float(s.mean()), float(s.quantile(Q[0])), float(s.quantile(Q[1])), int(len(s)))
+        out[c] = (float(s.mean()), float(s.quantile(Q[0])), float(s.quantile(Q[1])), int(len(s)),
+                  float(s.std(ddof=1)) if len(s) > 1 else float("nan"))
     return out
 
 
@@ -68,7 +69,7 @@ def profile_table(runs: pd.DataFrame) -> pd.DataFrame:
         for m in MEASURES:
             for cut in CUTS:
                 cols = [c for c in g.columns if c.startswith(f"{m}__{cut}__prof_d")]
-                for c, (v, lo, hi, n) in _agg(g, cols).items():
+                for c, (v, lo, hi, n, sd) in _agg(g, cols).items():
                     d = int(c.rsplit("prof_d", 1)[1])
                     rows.append({"combo": combo, "source": source, "measure": m, "cut": cut, "d": d,
                                  "ratio": v, "lo": lo, "hi": hi, "n": n})
@@ -90,10 +91,10 @@ def gain_table(runs: pd.DataFrame) -> pd.DataFrame:
                     c = f"{m}__{cut}__cv_K{k}"
                     if c not in cv:
                         continue
-                    v, lo, hi, n = cv[c]
+                    v, lo, hi, n, sd = cv[c]
                     rows.append({"combo": combo, "source": source, "measure": m, "cut": cut, "K": k, "K_ref": kref,
-                                 "gain_cv": v, "lo": lo, "hi": hi, "gain_fit": fit.get(f"{m}__{cut}__fit_K{k}", (np.nan,))[0],
-                                 "n": n})
+                                 "gain_cv": v, "lo": lo, "hi": hi, "sd": sd, "se": sd / np.sqrt(n) if n > 1 else np.nan,
+                                 "gain_fit": fit.get(f"{m}__{cut}__fit_K{k}", (np.nan,))[0], "n": n})
     return pd.DataFrame(rows)
 
 
@@ -155,7 +156,7 @@ def physical_table(runs: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
             a = _agg(g, [f"{pre}qo_adjacent_share", f"{pre}qo_rho"])
             for k in ("adjacent_share", "rho"):
                 if f"{pre}qo_{k}" in a:
-                    v, lo, hi, n = a[f"{pre}qo_{k}"]
+                    v, lo, hi, n, _ = a[f"{pre}qo_{k}"]
                     phys.append({"combo": combo, "source": source, "measure": m, "unit": f"quire_order_{k}",
                                  "n_same_pairs": np.nan, "same": np.nan, "matched": np.nan, "excess": v, "lo": lo,
                                  "hi": hi, "n": n})
@@ -192,8 +193,8 @@ def summary_table(gain: pd.DataFrame, cp: pd.DataFrame, phys: pd.DataFrame, nb: 
     return pd.DataFrame(rows)
 
 
-def extras_tables() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    cps, nbs, qms = [], [], []
+def extras_tables() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    cps, nbs, qms, raw = [], [], [], []
     for d in sorted(RUNS.glob("*")):
         if (d / "changepoints.csv").exists():
             cps.append(pd.read_csv(d / "changepoints.csv"))
@@ -201,8 +202,10 @@ def extras_tables() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
             nbs.append(pd.read_csv(d / "neighbours.csv"))
         if (d / "quire_matrix.csv").exists():
             qms.append(pd.read_csv(d / "quire_matrix.csv"))
+        if (d / "neighbours_raw.csv").exists():
+            raw.append(pd.read_csv(d / "neighbours_raw.csv"))
     cat = lambda xs: pd.concat(xs, ignore_index=True) if xs else pd.DataFrame()  # noqa: E731
-    return cat(cps), cat(nbs), cat(qms)
+    return cat(cps), cat(nbs), cat(qms), cat(raw)
 
 
 # --------------------------------------------------------------------------- #
@@ -327,13 +330,15 @@ def summarize() -> None:
     cp = changepoint_table(runs)
     phys, nb = physical_table(runs)
     summ = summary_table(gain, cp, phys, nb)
-    cps, nbs, qms = extras_tables()
+    cps, nbs, qms, raw = extras_tables()
     prof.to_csv(OUT / "similarity_profile.csv", index=False)
     gain.to_csv(OUT / "segmentation_gain.csv", index=False)
     cv.to_csv(OUT / "crossval_blocks.csv", index=False)
     cp.to_csv(OUT / "changepoints.csv", index=False)
     cps.to_csv(OUT / "changepoints_list.csv", index=False)
     phys.to_csv(OUT / "physical_order.csv", index=False)
+    if not raw.empty:
+        nb = pd.concat([nb, raw], ignore_index=True)
     nb.to_csv(OUT / "neighbours.csv", index=False)
     nbs.to_csv(OUT / "neighbours_list.csv", index=False)
     qms.to_csv(OUT / "quire_matrix.csv", index=False)

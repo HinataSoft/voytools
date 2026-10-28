@@ -1,0 +1,31 @@
+{
+  "name": "018_ZL_join_real",
+  "params": {
+    "combo": "ZL_join",
+    "source": "real",
+    "measures": [
+      "rare",
+      "cos",
+      "jac"
+    ],
+    "cuts": [
+      "all",
+      "within",
+      "herbalA"
+    ],
+    "k_max": 30,
+    "dmax": 40,
+    "n_splits_null": 5,
+    "n_pages": 207,
+    "cut_pages": {
+      "all": 207,
+      "within": 207,
+      "herbalA": 95
+    }
+  },
+  "n_seeds_requested": 50,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 19:18:15",
+  "updated": "2026-10-28 19:20:48",
+  "n_seeds_done": 50
+}

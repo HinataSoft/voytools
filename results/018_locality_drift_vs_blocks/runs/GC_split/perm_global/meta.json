@@ -1,0 +1,31 @@
+{
+  "name": "018_GC_split_perm_global",
+  "params": {
+    "combo": "GC_split",
+    "source": "perm_global",
+    "measures": [
+      "rare",
+      "cos",
+      "jac"
+    ],
+    "cuts": [
+      "all",
+      "within",
+      "herbalA"
+    ],
+    "k_max": 30,
+    "dmax": 40,
+    "n_splits_null": 5,
+    "n_pages": 207,
+    "cut_pages": {
+      "all": 207,
+      "within": 207,
+      "herbalA": 95
+    }
+  },
+  "n_seeds_requested": 200,
+  "n_seeds_done_before": 34,
+  "created": "2026-10-28 18:59:44",
+  "updated": "2026-10-28 19:13:56",
+  "n_seeds_done": 200
+}

@@ -530,6 +530,46 @@ def cmd_extras(args) -> None:
             qm.insert(0, "measure", measure)
             qm.insert(0, "combo", args.combo)
             qms.append(qm)
+    # neighbours by the raw similarity (no distance model) and their page-permutation interval (200x)
+    raw_rows = []
+    idx, _, _ = ctx.cuts["all"]
+    labels = ctx.pages.iloc[idx]
+    lang = labels["language"].astype(str).to_numpy()
+    same_lang = lang[:, None] == lang[None, :]
+    for measure in MEASURES:
+        n_mat, w_mat = L.similarity_matrices(measure, counts[idx], weight[idx] / weight[idx].sum())
+        allowed = same_lang & (w_mat > 0)
+        with np.errstate(invalid="ignore", divide="ignore"):
+            score = np.where(w_mat > 0, n_mat / np.where(w_mat > 0, w_mat, 1.0), -np.inf)
+        nb = L.neighbours(score, ctx.dist[np.ix_(idx, idx)], allowed, 3, L.NEAR_EDGES, 8)
+        real_row = {k: nb[k] for k in ("n_pages", "share_le2", "share_le5", "share_gt16", "n_anomalous")}
+        nd = nb["neighbour_dist"]
+        for i in range(len(idx)):
+            if nd[i, 0] < 0:
+                continue
+            cand = np.flatnonzero(allowed[i])
+            cand = cand[cand != i]
+            top = cand[np.argsort(-score[i, cand], kind="stable")[:3]]
+            nbs.append({"combo": args.combo, "measure": f"{measure}_raw", "folio": labels.index[i],
+                        "rank": int(labels["rank"].iloc[i]), "section": labels["section"].iloc[i],
+                        "language": labels["language"].iloc[i], "hand": labels["hand"].iloc[i],
+                        "quire": labels["quire"].iloc[i], "neighbours": " ".join(labels.index.to_numpy()[top]),
+                        "distances": " ".join(str(int(x)) for x in nd[i]), "min_dist": int(nd[i].min()),
+                        "anomalous": int(nd[i].min() > 8)})
+        perm_rows = []
+        for seed in range(200):
+            perm = page_permutation(ctx, None, seed)
+            sp = score[np.ix_(perm, perm)]
+            nbp = L.neighbours(sp, ctx.dist[np.ix_(idx, idx)], same_lang & (w_mat[np.ix_(perm, perm)] > 0), 3, L.NEAR_EDGES, 8)
+            perm_rows.append({k: nbp[k] for k in ("n_pages", "share_le2", "share_le5", "share_gt16", "n_anomalous")})
+        pr = pd.DataFrame(perm_rows)
+        for src, vals in (("real", real_row), ("perm_global", pr.mean().to_dict())):
+            row = {"combo": args.combo, "source": src, "measure": f"{measure}_raw", **vals, "n": 1 if src == "real" else 200}
+            for k in ("share_le2", "share_le5", "share_gt16", "n_anomalous"):
+                row[f"{k}_lo"] = vals[k] if src == "real" else float(pr[k].quantile(0.025))
+                row[f"{k}_hi"] = vals[k] if src == "real" else float(pr[k].quantile(0.975))
+            raw_rows.append(row)
+    pd.DataFrame(raw_rows).to_csv(parts / "neighbours_raw.csv", index=False)
     pd.DataFrame(cps).to_csv(parts / "changepoints.csv", index=False)
     pd.DataFrame(nbs).to_csv(parts / "neighbours.csv", index=False)
     pd.concat(qms).to_csv(parts / "quire_matrix.csv", index=False)

@@ -1,0 +1,50 @@
+{
+  "name": "018_ctl:celsus_prose_real",
+  "params": {
+    "combo": "ctl:celsus_prose",
+    "source": "real",
+    "measures": [
+      "rare",
+      "cos",
+      "jac"
+    ],
+    "cuts": [
+      "all",
+      "within",
+      "herbalA"
+    ],
+    "k_max": 30,
+    "dmax": 40,
+    "n_splits_null": 5,
+    "n_pages": 207,
+    "cut_pages": {
+      "all": 207,
+      "within": 207
+    },
+    "control": {
+      "name": "celsus_prose",
+      "mode": "prose",
+      "strategy": "balanced",
+      "sections": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "source_tokens": 62410,
+      "files": [
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.1.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.2.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.3.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.4.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.5.tess"
+      ]
+    }
+  },
+  "n_seeds_requested": 50,
+  "n_seeds_done_before": 50,
+  "created": "2026-10-28 19:24:07",
+  "updated": "2026-10-28 19:30:49",
+  "n_seeds_done": 50
+}
