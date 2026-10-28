@@ -83,11 +83,21 @@
     "runs": {
       "ZL_split": 1,
       "tmpl+R12pA:ZL_split": 1,
+      "ts2020+R123:ZL_join": 30,
+      "ts2020+R123:ZL_split": 30,
+      "ts2020+R12:ZL_join": 30,
+      "ts2020+R12:ZL_split": 30,
+      "ts2020+R12pA3:ZL_join": 30,
+      "ts2020+R12pA3:ZL_split": 26,
+      "ts2020+R12pA3L:ZL_join": 2,
       "ts2020+R12pA3L:ZL_split": 1,
-      "ts2020+R12pB:ZL_join": 13,
-      "ts2020+R12pB:ZL_split": 13,
-      "ts2020:ZL_join": 14,
-      "ts2020:ZL_split": 14
+      "ts2020+R12pA:ZL_join": 8,
+      "ts2020+R12pB:ZL_join": 30,
+      "ts2020+R12pB:ZL_split": 30,
+      "ts2020+R12pC:ZL_join": 30,
+      "ts2020+R12pC:ZL_split": 30,
+      "ts2020:ZL_join": 30,
+      "ts2020:ZL_split": 30
     },
     "properties": {
       "pozicni_vazba_prefixu": [
@@ -165,5 +175,5 @@
     "verdict_rule": "z_strict = larger |z| of z_seed (SD over seeds) and z_boot (page-bootstrap SD of the real text); property reached = all its metrics |z_strict| < 3 in split and join"
   },
   "created": "2026-10-28 18:54:42",
-  "updated": "2026-10-28 18:54:42"
+  "updated": "2026-10-28 19:23:02"
 }
