@@ -1,0 +1,126 @@
+{
+  "name": "011_suffix_variation",
+  "params": {
+    "source": "ctl:celsus_prose",
+    "variants": {
+      "a": {
+        "prefixes": [
+          "ali",
+          "con",
+          "sub",
+          "ad",
+          "de",
+          "in",
+          "re",
+          "a",
+          "e",
+          "m",
+          "p",
+          "s"
+        ],
+        "suffixes": [
+          "sque",
+          "bus",
+          "que",
+          "rum",
+          "tur",
+          "is",
+          "um",
+          "us",
+          "a",
+          "e",
+          "i",
+          "m",
+          "s",
+          "t"
+        ]
+      }
+    },
+    "by": {
+      "pos": "cv_pos",
+      "relpos": "cv_relpos",
+      "place": "cv_place",
+      "lip": "cv_lip",
+      "lang": "cv_lang",
+      "hand": "cv_hand",
+      "sec": "cv_sec",
+      "page": "cv_page",
+      "pos+lang": [
+        "cv_pos",
+        "cv_lang"
+      ],
+      "pos+hand": [
+        "cv_pos",
+        "cv_hand"
+      ],
+      "pos+lang+sec": [
+        "cv_pos",
+        "cv_lang",
+        "cv_sec"
+      ],
+      "all-page": [
+        "cv_pos",
+        "cv_relpos",
+        "cv_place",
+        "cv_lip",
+        "cv_lang",
+        "cv_hand",
+        "cv_sec"
+      ],
+      "all": [
+        "cv_pos",
+        "cv_relpos",
+        "cv_place",
+        "cv_lip",
+        "cv_lang",
+        "cv_hand",
+        "cv_sec",
+        "cv_page"
+      ]
+    },
+    "cond_residual": [
+      "cv_pos",
+      "cv_lang",
+      "cv_hand"
+    ],
+    "n_perm": {
+      "point": 100,
+      "sub": 20,
+      "null": 20
+    },
+    "min_stem": 20,
+    "min_stem_check": 5,
+    "sub_frac": 0.8,
+    "n_sub": 100,
+    "n_sub_ctl": 30,
+    "n_null": 30,
+    "ts2020_config": 21,
+    "ac_seed0": 8600,
+    "tmpl_seed0": 9000,
+    "control": {
+      "name": "celsus_prose",
+      "mode": "prose",
+      "strategy": "balanced",
+      "sections": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "source_tokens": 62410,
+      "files": [
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.1.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.2.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.3.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.4.tess",
+        "voynich-units/data/voynich-units/latin/celsus.de_medicina.part.5.tess"
+      ]
+    }
+  },
+  "n_seeds_requested": 31,
+  "n_seeds_done_before": 0,
+  "created": "2026-10-28 07:25:23",
+  "updated": "2026-10-28 07:27:03",
+  "n_seeds_done": 31
+}
